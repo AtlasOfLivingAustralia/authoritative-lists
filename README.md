@@ -9,8 +9,8 @@ Each of the directories listed below has its own README.md file describing sourc
 | --------- | -----------|
 | historical-lists |ALA Historical Species Lists - as at 16/03/2022|
 | source-data|Organisation's Source Data|
-| conservation-lists |Processed/Extracted Conservation Lists|
-| sensitive-lists |Processed/Extracted Sensitive Lists|
+| conservation-lists |Conservation Lists processed/extracted from source|
+| sensitive-lists |Sensitive Lists processed/extracted from source|
 
 
 ## Conservation Lists 
