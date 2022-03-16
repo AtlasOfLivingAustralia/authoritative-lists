@@ -5,7 +5,7 @@ This repository is intended to document the collection and preparation of Conser
 ## Directories
 Each of the directories listed below has its own README.md file describing source content and processes used to create the datasets.
 
-| Directory | Description|
+| **Directory** | **Description**|
 | --------- | -----------|
 | historical-lists |ALA Historical Species Lists - as at 16/03/2022|
 | source-data|Organisation's Source Data|
