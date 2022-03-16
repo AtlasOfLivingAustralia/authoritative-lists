@@ -2,6 +2,17 @@
 
 This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
 
+## Directories
+Each of the directories listed below has its own **README.md** file describing source content and processes used to create the datasets.
+
+| **Directory** | **Description**|
+| --------- | -----------|
+| historical-lists |ALA Historical Conservation and Sensitive Species Lists - as at 16/03/2022|
+| source-data|Organisation's Source Data|
+| conservation-lists |Conservation Lists processed/extracted from source|
+| sensitive-lists |Sensitive Lists processed/extracted from source|
+
+
 ## Conservation Lists 
 Conservation lists are for each state plus the national EPBC list.
 
