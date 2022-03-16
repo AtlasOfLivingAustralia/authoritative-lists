@@ -7,7 +7,7 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | **State** | **URL**|**File Type(s)**|**Notes**|
 | --------- | -------|----------------|---------|
 | ACT|https://www.legislation.act.gov.au/ni/2020-300/|xxxxxxxxx|xxxxxxxx|
-| EPBC|Fauna: https://www.environment.gov.au/cgi-bin/sprat/public/publicthreatenedlist.pl <br> Flora:https://www.environment.gov.au/cgi-bin/sprat/public/publicthreatenedlist.pl?wanted=flora |xxxxxxxxx|xxxxxxxx|
+| EPBC|Fauna: https://www.environment.gov.au/cgi-bin/sprat/public/publicthreatenedlist.pl <br> Flora:https://www.environment.gov.au/cgi-bin/sprat/public/publicthreatenedlist.pl?wanted=flora |Web page|Copied to Excel|
 | NSW|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | NT|Fauna: https://nt.gov.au/environment/animals/threatened-animals <br> Flora: https://nt.gov.au/environment/native-plants/threatened-plants |xxxxxxxxx|xxxxxxxx|
 | Qld|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
