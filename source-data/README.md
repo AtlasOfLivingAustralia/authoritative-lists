@@ -24,7 +24,7 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | NSW|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | NT|Fauna: https://nt.gov.au/environment/animals/threatened-animals <br> Flora: https://nt.gov.au/environment/native-plants/threatened-plants |Web page|Copied to Excel|
 | Qld|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
-| SA|Fauna: https://www.environment.sa.gov.au/topics/science/information-and-data/census-of-sa-vertebrates <br> Flora:https://www.environment.sa.gov.au/topics/science/information-and-data/census-of-sa-plants-algae-fungi  |xxxxxxxxx|xxxxxxxx|
+| SA|Fauna: https://www.environment.sa.gov.au/topics/science/information-and-data/census-of-sa-vertebrates <br> Flora:https://www.environment.sa.gov.au/topics/science/information-and-data/census-of-sa-plants-algae-fungi  |Fauna: PDF <br> Flora: CSV |xxxxxxxx|
 |TAS|https://nre.tas.gov.au/conservation/threatened-species-and-communities/lists-of-threatened-species/full-list-of-threatened-species|CSV|Download|
 | Vic|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
