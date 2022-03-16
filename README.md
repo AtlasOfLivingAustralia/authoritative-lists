@@ -3,7 +3,7 @@
 This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
 
 ## Directories
-Each of the directories listed below has its own README.md file describing source content and processes used to create the datasets.
+Each of the directories listed below has its own **README.md** file describing source content and processes used to create the datasets.
 
 | **Directory** | **Description**|
 | --------- | -----------|
