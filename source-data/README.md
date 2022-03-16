@@ -1,6 +1,6 @@
-# source Data
+# Source Data
 
-This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
+Directory containing source data used to create new Conservation/Sensitive Species Lists
 
 ## Summary
 
