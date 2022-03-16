@@ -2,6 +2,19 @@
 
 Directory containing source data used to create new Conservation/Sensitive Species Lists
 
+## Sensitive
+
+| **State** | **URL**|**File Types(s)**|**Notes**|
+| --------- | -------|--------------|---------|
+| ACT|https://www.environment.act.gov.au/nature-conservation/conservation-and-ecological-communities/threatened-species-and-ecological-communities#threatened-species-act|Web Page|Copied to Excel/CSV|
+| NSW|https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames|xxxxxxxxx|xxxxxxxx|
+| NT|Fauna: https://nt.gov.au/environment/animals/threatened-animals <br> Flora:  https://nt.gov.au/environment/native-plants/threatened-plants |xxxxxxxxx|xxxxxxxx|
+| Qld|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
+| SA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
+| Tas|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
+| Vic|https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf|PDF|xxxxxxxx|
+| WA|https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-animals|xxxxxxxxx|xxxxxxxx|
+
 ## Conservation
 
 | **State** | **URL**|**File Type(s)**|**Notes**|
@@ -16,17 +29,4 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | Vic|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 
-
-## Sensitive
-
-| **State** | **URL**|**File Types(s)**|**Notes**|
-| --------- | -------|--------------|---------|
-| ACT|https://www.environment.act.gov.au/nature-conservation/conservation-and-ecological-communities/threatened-species-and-ecological-communities#threatened-species-act|Web Page|Copied to Excel/CSV|
-| NSW|https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames|xxxxxxxxx|xxxxxxxx|
-| NT|Fauna: https://nt.gov.au/environment/animals/threatened-animals <br> Flora:  https://nt.gov.au/environment/native-plants/threatened-plants |xxxxxxxxx|xxxxxxxx|
-| Qld|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
-| SA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
-| Tas|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
-| Vic|https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf|PDF|xxxxxxxx|
-| WA|https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-animals|xxxxxxxxx|xxxxxxxx|
 
