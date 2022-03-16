@@ -12,6 +12,22 @@ Each of the directories listed below has its own **README.md** file describing s
 | conservation-lists |Conservation Lists processed/extracted from source|
 | sensitive-lists |Sensitive Lists processed/extracted from source|
 
+## Sensitive Lists
+
+Sensitive lists are for each state used in the ALA's sensitive data service:
+1. [Sensitive Species List](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true)
+2. [Sensitive Species Webservice](https://lists.ala.org.au/ws/speciesList?isSDS=eq:true)
+
+| druid |list|
+|-------|---------|
+| dr2627 |[Australian Capital Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr2627)|
+| dr487 |[New South Wales : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr487)|
+| dr492 |[Northern Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr492)|
+| dr493 |[Queensland : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr493)|
+| dr884 |[South Australia : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr884)|
+| dr491 |[Tasmania: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr491)|
+| dr490 |[Victoria: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr490)|
+| dr467 |[Western Australia :Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr467)|
 
 ## Conservation Lists 
 Conservation lists are for each state plus the national EPBC list.
@@ -31,19 +47,3 @@ Conservation lists are for each state plus the national EPBC list.
 | dr655 |[Victoria: Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr655)|
 | dr2201 |[Western Australia : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr2201)|
 
-## Sensitive Lists
-
-Sensitive lists are for each state used in the ALA's sensitive data service:
-1. [Sensitive Species List](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true)
-2. [Sensitive Species Webservice](https://lists.ala.org.au/ws/speciesList?isSDS=eq:true)
-
-| druid |list|
-|-------|---------|
-| dr2627 |[Australian Capital Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr2627)|
-| dr487 |[New South Wales : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr487)|
-| dr492 |[Northern Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr492)|
-| dr493 |[Queensland : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr493)|
-| dr884 |[South Australia : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr884)|
-| dr491 |[Tasmania: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr491)|
-| dr490 |[Victoria: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr490)|
-| dr467 |[Western Australia :Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr467)|
