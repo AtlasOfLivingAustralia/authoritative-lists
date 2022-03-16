@@ -2,9 +2,8 @@
 
 This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
 
-## Conservation Lists
-
-Conservation lists are for each state plus the national EPBC list. 
+## Conservation Lists 
+Conservation lists are for each state plus the national EPBC list.
 
 1. [Conservation Species List](https://lists.ala.org.au/public/speciesLists?listType=eq:CONSERVATION_LIST&isAuthoritative=eq:true)
 2. [Conservation Species Webservice](https://lists.ala.org.au/ws/speciesList?isAuthoritative=eq:true&listType=eq:CONSERVATION_LIST)
