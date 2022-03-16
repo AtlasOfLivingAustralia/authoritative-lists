@@ -7,7 +7,7 @@ Each of the directories listed below has its own **README.md** file describing s
 
 | **Directory** | **Description**|
 | --------- | -----------|
-| historical-lists |ALA Historical Species Lists - as at 16/03/2022|
+| historical-lists |ALA Historical Conservation and Sensitive Species Lists - as at 16/03/2022|
 | source-data|Organisation's Source Data|
 | conservation-lists |Conservation Lists processed/extracted from source|
 | sensitive-lists |Sensitive Lists processed/extracted from source|
