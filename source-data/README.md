@@ -22,7 +22,6 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | **State** | **URL**|**File Types(s)**|**Notes**|
 | --------- | -------|--------------|---------|
 | ACT|https://www.environment.act.gov.au/nature-conservation/conservation-and-ecological-communities/threatened-species-and-ecological-communities#threatened-species-act|Web Page|Copied to CSV|
-| EPBC|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | NSW|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | NT|Fauna: https://nt.gov.au/environment/animals/threatened-animals <br> Flora:  https://nt.gov.au/environment/native-plants/threatened-plants |xxxxxxxxx|xxxxxxxx|
 | Qld|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
