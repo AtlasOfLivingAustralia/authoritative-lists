@@ -30,7 +30,8 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 
 # Status/Source Status Values
-The table below indicates the Source status values provided by State organisations and the values assigned 
+The table below indicates the Source status values provided by State organisations and the values assigned. <br>
+<br>**Note:** Status value is a minimum requirement for Species List records. Any records without a status were removed from the dataset prior to upload. 
 
 | **State** | **Source Status**|**Status Applied**|**Notes**|
 | --------- | ------------------|-----------------|---------|
@@ -55,6 +56,14 @@ The table below indicates the Source status values provided by State organisatio
 |	NT	|	Vulnerable (extinct in NT)	|	Vulnerable	| |
 |	NT	|	Endangered (extinct in wild in NT)	|	Endangered	| |
 |	NT	|	Critically endangered (possibly extinct)	|	Critically endangered	| |
+|	SA	|	SA:E	|	Endangered	|Fauna |
+|	SA	|	SA:R	|	Rare	| Fauna |
+|	SA	|	SA:V	|	Vulnerable	| Fauna |
+|	SA	|	SA:E	|	Endangered	| Fauna |
+|	SA	|	Declared	|	Declared	| Flora|
+|	SA	|	Endangered	|	Endangered	| Flora|
+|	SA	|	Rare	|	Rare	| Flora|
+|	SA	|	Vulnerable	|	Vulnerable	| Flora|
 | Tas| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
 
 
