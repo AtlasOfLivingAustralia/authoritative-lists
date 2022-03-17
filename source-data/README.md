@@ -34,6 +34,9 @@ The table below indicates the Source status values provided by State organisatio
 
 | **State** | **Source Status**|**Status Applied**|**Notes**|
 | --------- | ------------------|-----------------|---------|
+|	ACT	|	Critically endangered	|	Critically endangered	| |
+|	ACT	|	Endangered	|	Endangered	| |
+|	ACT	|	Vulnerable	|	Vulnerable	| |
 | ACT|Regionally Conservation Dependent| Regionally Conservation Dependent|No mapping available| 
 |	EPBC	|	Extinct in wild	|	Extinct	| |
 |	EPBC	|	Vulnerable	|	Vulnerable	| |
