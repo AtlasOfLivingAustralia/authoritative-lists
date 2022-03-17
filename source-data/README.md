@@ -64,6 +64,15 @@ The table below indicates the Source status values provided by State organisatio
 |	SA	|	Endangered	|	Endangered	| Flora|
 |	SA	|	Rare	|	Rare	| Flora|
 |	SA	|	Vulnerable	|	Vulnerable	| Flora|
+|	QLD	|	EX  |	Extinct	|
+|	QLD	|	E  |	Endangered	|
+|	QLD	|	PE	|	Extinct in the wild	|
+|	QLD	|	CR  |	Critically endangered	|
+|	QLD	|	V	|	Vulnerable	|
+|	QLD	|	NT  |	Near threatened wildlife	|
+|	QLD	|	SL	|	Special least concern	|
+|	QLD	|	C   |	least concern wildlife	|
+|	QLD	|	I	|	International wildlife	|
 | Tas| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
 
 
