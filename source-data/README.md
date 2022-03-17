@@ -73,6 +73,15 @@ The table below indicates the Source status values provided by State organisatio
 |	QLD	|	SL	|	Special least concern	|
 |	QLD	|	C   |	least concern wildlife	|
 |	QLD	|	I	|	International wildlife	|
-| Tas| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
+| TAS| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
+|	VIC|	EX and X  |Presumed	extinct	|
+|	VIC	|	E and EN |	Endangered	|
+| VIC	|	RX	|	Regionally extinct	|
+|	VIC|	WX |Extinct in the wild	|
+|	VIC	|	CR  |	Critically endangered	|
+|	VIC	|	VU	|	Vulnerable	|
+|	VIC	|	NT  |	Near threatened	wildlife|
+|	VIC	|	SL	|	Data deficient	|
+|	VIC	|	P   |	All ssp threatened	|
 
 
