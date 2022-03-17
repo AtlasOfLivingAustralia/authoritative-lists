@@ -29,4 +29,32 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | Vic|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 
+# Status/Source Status Values
+The table below indicates the Source status values provided by State organisations and the values assigned 
+
+| **State** | **Source Status**|**Status Applied**|**Notes**|
+| --------- | ------------------|-----------------|---------|
+|	ACT	|	Critically endangered	|	Critically endangered	| |
+|	ACT	|	Endangered	|	Endangered	| |
+|	ACT	|	Vulnerable	|	Vulnerable	| |
+| ACT|Regionally Conservation Dependent| Regionally Conservation Dependent|No mapping available| 
+|	EPBC	|	Extinct in wild	|	Extinct	| |
+|	EPBC	|	Vulnerable	|	Vulnerable	| |
+|	EPBC	|	Critically Endangered	|	Critically endangered	| |
+|	EPBC	|	Conservation dependent	|	Conservation dependent	| |
+|	EPBC	|	Endangered |	Endangered	| |
+|	EPBC	|	Extinct	|	Extinct	| |
+|	NT	|	Endangered	|	Endangered	| |
+|	NT	|	Vulnerable	|	Vulnerable	| |
+|	NT	|	Critically endangered	|	Critically endangered	| |
+|	NT	|	Listed nationally but not under NT legislation	|	<remove record - covered by EPBC>	| |
+|	NT	|	Endangered (extinct in NT)	|	Endangered	| |
+|	NT	|	Extinct	|	Extinct	| |
+|	NT	|	Listed nationally but not under NT legislation Bird	|	<remove record - covered by EPBC>	| |
+|	NT	|	Least concern (extinct in NT)	|	Least concern	| |
+|	NT	|	Vulnerable (extinct in NT)	|	Vulnerable	| |
+|	NT	|	Endangered (extinct in wild in NT)	|	Endangered	| |
+|	NT	|	Critically endangered (possibly extinct)	|	Critically endangered	| |
+| Tas| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
+
 
