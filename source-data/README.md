@@ -34,8 +34,13 @@ The table below indicates the Source status values provided by State organisatio
 
 | **State** | **Source Status**|**Status Applied**|**Notes**|
 | --------- | ------------------|-----------------|---------|
-| ACT|Regionally Conservation Depeendent| Regionally Conservation Dependent|No mapping available| 
-| Tas| 'e','x','v','r'| Presumed Extinct|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
+| ACT|Regionally Conservation Dependent| Regionally Conservation Dependent|No mapping available| 
+|	EPBC	|	Extinct in wild	|	Extinct	| |
+|	EPBC	|	Vulnerable	|	Vulnerable	| |
+|	EPBC	|	Critically Endangered	|	Critically endangered	| |
+|	EPBC	|	Conservation dependent	|	Conservation dependent	| |
+|	EPBC	|	Endangered |	Endangered	| |
+|	EPBC	|	Extinct	|	Extinct	| |
 |	NT	|	Endangered	|	Endangered	| |
 |	NT	|	Vulnerable	|	Vulnerable	| |
 |	NT	|	Critically endangered	|	Critically endangered	| |
@@ -47,5 +52,6 @@ The table below indicates the Source status values provided by State organisatio
 |	NT	|	Vulnerable (extinct in NT)	|	Vulnerable	| |
 |	NT	|	Endangered (extinct in wild in NT)	|	Endangered	| |
 |	NT	|	Critically endangered (possibly extinct)	|	Critically endangered	| |
+| Tas| 'e','x','v','r'|e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare |Based on Legend provided|
 
 
