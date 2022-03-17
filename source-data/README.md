@@ -30,7 +30,7 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 
 # Status/Source Status Values
-The table below indicates the Source status values provided by State organisations and the values assigned based on interpretation where an obvious mapping is not available. 
+The table below indicates the Source status values provided by State organisations and the values assigned 
 
 | **State** | **Source Status**|**Status Applied**|**Notes**|
 | --------- | ------------------|-----------------|---------|
