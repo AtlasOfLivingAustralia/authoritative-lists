@@ -1,4 +1,4 @@
-# authoritative-lists
+# Authoritative Conservation and Sensitive Species Lists
 
 This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
 
@@ -14,7 +14,7 @@ Each of the directories listed below has its own **README.md** file describing s
 
 ## Sensitive Lists
 
-Sensitive lists are for each state used in the ALA's sensitive data service:
+Sensitive lists are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). THe SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
 1. [Sensitive Species List](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true)
 2. [Sensitive Species Webservice](https://lists.ala.org.au/ws/speciesList?isSDS=eq:true)
 
@@ -29,6 +29,10 @@ Sensitive lists are for each state used in the ALA's sensitive data service:
 | dr490 |[Victoria: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr490)|
 | dr467 |[Western Australia :Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr467)|
 
+Use the `List info` link for metadata about each list. Some lists apply a single level of obsfucation to every species in the list, and other lists apply supplied obfuscation rules for each species. The rules are specified in the `generalisation` field.
+
+See https://github.com/AtlasOfLivingAustralia/sds for info about SDS processing.
+    
 ## Conservation Lists 
 Conservation lists are for each state plus the national EPBC list.
 
@@ -47,3 +51,4 @@ Conservation lists are for each state plus the national EPBC list.
 | dr655 |[Victoria: Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr655)|
 | dr2201 |[Western Australia : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr2201)|
 
+Conservation lists contain the fields `status` and `sourceStatus`, the former usually representing a final parsed IUCN like vocabulary to enable faceting, and the latter containing the raw values provided by the state jurisdiction.
