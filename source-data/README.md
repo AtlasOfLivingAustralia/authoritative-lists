@@ -35,7 +35,7 @@ The table below indicates the Source status values provided by State organisatio
 | **State** | **Source Status**|**Status Applied**|**Notes**|
 | --------- | ------------------|-----------------|---------|
 | ACT|Regionally Conservation Depeendent| Regionally Conservation Dependent|No mapping available| 
-| SA| 'x'| Presumed Extinct| Based on Legend provided:<br> e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare|
+| Tas| 'x'| Presumed Extinct| Based on Legend provided:<br> e - Endangered <br> x - Presumed Extinct <br> v - Vulnerable <br> r - Rare|
 |	NT	|	Endangered	|	Endangered	| |
 |	NT	|	Vulnerable	|	Vulnerable	| |
 |	NT	|	Critically endangered	|	Critically endangered	| |
