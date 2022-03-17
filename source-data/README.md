@@ -83,5 +83,6 @@ The table below indicates the Source status values provided by State organisatio
 |	VIC	|	NT  |	Near threatened	wildlife|
 |	VIC	|	SL	|	Data deficient	|
 |	VIC	|	P   |	All ssp threatened	|
+|	VIC	|	K   |	Poorly known	|
 
 
