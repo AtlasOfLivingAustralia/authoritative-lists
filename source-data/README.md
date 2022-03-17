@@ -30,7 +30,7 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | WA|xxxxxxxxxxx|xxxxxxxxx|xxxxxxxx|
 
 # Status/Source Status Values
-The table below indicates the Source status values provided by State organisations and the values assigned. <br>
+The table below indicates the Source status values provided by State organisations and the values assigned for ALA upload. <br>
 <br>**Note:** Status value is a minimum requirement for Species List records. Any records without a status were removed from the dataset prior to upload. 
 
 | **State** | **Source Status**|**Status Applied**|**Notes**|
