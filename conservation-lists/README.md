@@ -1,1 +1,0 @@
-This directory will contain conservation lists to be loaded into the lists tool.
