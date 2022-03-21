@@ -47,10 +47,10 @@ The table below indicates the Source status values provided by State organisatio
 |	QLD	|	SL	|	Special least concern	|
 |	QLD	|	C   |	least concern wildlife	|
 |	QLD	|	I	|	International wildlife	|
-| TAS| e |Endangered |Based on Legend provided|
-| TAS| x |Presumed Extinct  |Based on Legend provided|
-| TAS| v |Vulnerable|Based on Legend provided|
-| TAS| r |Rare |Based on Legend provided|
+| TAS| e |Endangered |Threatened Species Protection Act 1995 - Schedule 3.1|
+| TAS| x |Presumed Extinct  |Threatened Species Protection Act 1995 - Schedule 3.2|
+| TAS| v |Vulnerable|Threatened Species Protection Act 1995 - Schedule 4|
+| TAS| r |Rare |Threatened Species Protection Act 1995 - Schedule 5|
 |	VIC|	EX and X  |Presumed	extinct	|
 |	VIC	|	E and EN |	Endangered	|
 | VIC	|	RX	|	Regionally extinct	|
