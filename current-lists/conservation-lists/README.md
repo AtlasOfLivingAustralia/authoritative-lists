@@ -7,4 +7,6 @@ Field Conversion Information
 | **Source Field** | **New Field**|**Notes**|
 | --------- | ------------------|-----------------|---------|
 |	Origin|	higherGeography|	| |
+|end|endemic to Tasmania|
+|t| within Australia, occurs only in Tasmania|
 
