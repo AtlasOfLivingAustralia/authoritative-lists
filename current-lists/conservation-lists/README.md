@@ -3,9 +3,9 @@
 
 ## Tasmania
 ### Field Name Mappings
-| **Source Field**|**New Field**|
+| **Source Field Name**|**New Field Name**|
 |-----------------|-------------|
-|Origin|higherGeography|
+|Origin|sourceOrigin|
 |Species|scientificName|
 |Authority|scientificNameAuthorship|
 |Common Name|vernacularName|
@@ -13,8 +13,8 @@
 |Group|class|
 |sch|sourceStatus|
 |EPBCA|EPBCA_status|
-|Flora/Fauna|Flora/Fauna|
-|Classification|Classification|
+|Flora/Fauna|sourceKingdom|
+|Classification|speciesGroup|
 **Note:** records with null 'sch' value are excluded
 
 |  | **Source Field**|**New Field**|Legend Description|
@@ -29,3 +29,9 @@
 ||MI|Macquarie Island|Macquarie Island|
 ||eMI|endemic Macquarie Island|endemic to Macquarie Island|
 ||sa|sub-Antarctic Islands|sub-Antarctic Islands|
+|Field|**Flora/Fauna**|**kingdom**||
+|Data Value|Flora|Plantae|
+||Fauna|Animalia|
+|Field|**sch**|**status**||
+|Data Value|||Refer to current-lists/README.md|
+
