@@ -1,8 +1,21 @@
-Field Conversion Information
+# Field Conversion Information
 
 
-# Tasmania
-
+## Tasmania
+### Field Name Mappings
+| **Source Field**|**New Field**|
+|-----------------|-------------|
+|Origin|higherGeography|
+|Species|scientificName|
+|Authority|scientificNameAuthorship|
+|Common Name|vernacularName|
+|Family|family|
+|Group|class|
+|sch|sourceStatus|
+|EPBCA|EPBCA_status|
+|Flora/Fauna|Flora/Fauna|
+|Classification|Classification|
+**Note:** records with null 'sch' value are excluded
 
 |  | **Source Field**|**New Field**|Legend Description|
 | --------- | ------------------|-----------------|----|
@@ -13,6 +26,6 @@ Field Conversion Information
 ||#||sparingly naturalised or known from only one or two populations or collections|
 ||br end|migratory breeding endemic Tasmania|migratory, breeding endemic|
 ||mig|migratory|migratory|
-|Macquarie Island|MI||Macquarie Island|
+||MI|Macquarie Island|Macquarie Island|
 ||eMI|endemic Macquarie Island|endemic to Macquarie Island|
 ||sa|sub-Antarctic Islands|sub-Antarctic Islands|
