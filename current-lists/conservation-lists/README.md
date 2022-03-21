@@ -33,5 +33,5 @@
 |Data Value|Flora|Plantae|
 ||Fauna|Animalia|
 |Field|**sch**|**status**||
-|Data Value|Refer to Source Data README.md||
+|Data Value|||Refer to current-lists/README.md|
 
