@@ -2,21 +2,22 @@
 
 This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
 
-## Directories
+## Contents
 Each of the directories listed below has its own **README.md** file describing source content and processes used to create the datasets.
 
-| **Directory** | **Description**|
-| --------- | -----------|
-| historical-lists |ALA Historical Conservation and Sensitive Species Lists - as at 16/03/2022|
-| source-data|Organisation's Source Data|
-| conservation-lists |Conservation Lists processed/extracted from source|
-| sensitive-lists |Sensitive Lists processed/extracted from source|
+| **Directory** | **Description**                                                                 |
+| --------- |---------------------------------------------------------------------------------|
+| historical-lists | Conservation and Sensitive Species Lists in the ALA Lists tool as at 16/03/2022 |
+| source-data| Source data and translation information                                         |
+| current-lists | Lists processed/extracted from source |
 
 ## Sensitive Lists
 
-Sensitive lists are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). THe SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
-1. [Sensitive Species List](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true)
-2. [Sensitive Species Webservice](https://lists.ala.org.au/ws/speciesList?isSDS=eq:true)
+[Sensitive lists in the ALA's Lists tool](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true) are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). THe SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
+
+See the `List info` link for metadata about each list. Some lists apply a single level of obsfucation to every species in the list, and other lists apply supplied obfuscation rules for each species. The rules are specified in the `generalisation` field.
+
+See https://github.com/AtlasOfLivingAustralia/sds for info about SDS processing.
 
 | druid |list|
 |-------|---------|
@@ -29,15 +30,11 @@ Sensitive lists are provided by each state jurisdiction to supply data obfuscati
 | dr490 |[Victoria: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr490)|
 | dr467 |[Western Australia :Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr467)|
 
-Use the `List info` link for metadata about each list. Some lists apply a single level of obsfucation to every species in the list, and other lists apply supplied obfuscation rules for each species. The rules are specified in the `generalisation` field.
-
-See https://github.com/AtlasOfLivingAustralia/sds for info about SDS processing.
     
 ## Conservation Lists 
-Conservation lists are for each state plus the national EPBC list.
+[Conservation lists](https://lists.ala.org.au/public/speciesLists?listType=eq:CONSERVATION_LIST&isAuthoritative=eq:true) are for each state plus the national EPBC list.
 
-1. [Conservation Species List](https://lists.ala.org.au/public/speciesLists?listType=eq:CONSERVATION_LIST&isAuthoritative=eq:true)
-2. [Conservation Species Webservice](https://lists.ala.org.au/ws/speciesList?isAuthoritative=eq:true&listType=eq:CONSERVATION_LIST)
+Conservation lists contain the fields `status` and `sourceStatus`, the former usually representing a final parsed IUCN like vocabulary to enable faceting, and the latter containing the raw values provided by the state jurisdiction.
 
 | druid |list|
 |-------|---------|
@@ -51,4 +48,3 @@ Conservation lists are for each state plus the national EPBC list.
 | dr655 |[Victoria: Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr655)|
 | dr2201 |[Western Australia : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr2201)|
 
-Conservation lists contain the fields `status` and `sourceStatus`, the former usually representing a final parsed IUCN like vocabulary to enable faceting, and the latter containing the raw values provided by the state jurisdiction.
