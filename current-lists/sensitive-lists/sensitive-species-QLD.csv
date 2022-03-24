@@ -1,4 +1,4 @@
-Taxon Id,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,status,EPBCstatus,conservationSignificant,endemicity,sensitivityZoneId
+taxonId,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,status,EPBCstatus,conservationSignificant,endemicity,sensitivityZoneId
 969,animals,mammals,Rhinolophidae,Rhinolophus philippinensis,greater large-eared horseshoe bat,"Waterhouse, 1843",Endangered,Vulnerable,Y,QI,QLD
 1376,animals,birds,Estrildidae,Chloebia gouldiae,Gouldian finch,"(Gould, 1844)",Endangered,Endangered,Y,QA,QLD
 1378,animals,birds,Estrildidae,Erythrura trichroa,blue-faced parrot-finch,"(Kittlitz, 1835)",Near threatened wildlife,,Y,QAI,QLD
