@@ -1,7 +1,7 @@
 ﻿family,status,sourceStatus,vernacularName,scientificName,taxonRemarks
 Hymenophyllaceae,Endangered,Endangered,,Abrodictyum obscurum,
 Fabaceae,Critically endangered,Critically endangered,,Acacia equisetifolia,
-Fabaceae,Vulnerable,Vulnerable,Latz's wattle,Acacia latzii ,
+Fabaceae,Vulnerable,Vulnerable,Latz's wattle,Acacia latzii,
 Fabaceae,Endangered,Endangered,Waddy-wood,Acacia peuce,
 Fabaceae,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Birds nest wattle,Acacia pickardii,
 Fabaceae,Vulnerable,Vulnerable,,Acacia praetermissa,
@@ -101,7 +101,7 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Endangered,Endangered,Black-footed tree-rat (Kimberley and mainland NT),Mesembriomys gouldii gouldii,Mammal
 ,Vulnerable,Vulnerable,Black-footed tree-rat (Melville Island),Mesembriomys gouldii melvillensis,Mammal
 ,Endangered,Endangered,Bronzeback,Ophidiocephalus taeniatus,Reptile
-,Endangered ,Endangered (extinct in NT),Brush-tailed bettong,Bettongia penicillata,Mammal
+,Endangered,Endangered (extinct in NT),Brush-tailed bettong,Bettongia penicillata,Mammal
 ,Endangered,Endangered,Brush-tailed rabbit-rat,Conilurus penicillatus,Mammal
 ,Extinct,Extinct,Burrowing bettong (inland),Bettongia lesueur graii,Mammal
 ,Vulnerable,Vulnerable,Butler’s dunnart,Sminthopsis butleri,Mammal
@@ -126,10 +126,10 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Vulnerable,Vulnerable,Emily Gap squat snail ,Semotrachia emilia,Invertebrate
 ,Critically endangered,Critically endangered,Far eastern curlew ,Numenius madagascariensis,Bird
 ,Endangered,Endangered,Fawn Antechinus ,Antechinus bellus,Mammal
-,Least concern ,Least concern (extinct in NT),Fawn hopping-mouse ,Notomys cervinus,Mammal
-,Vulnerable,Vulnerable,Fenn Gap squat snail ,Semotrachia filixiana,Invertebrate
+,Least concern,Least concern (extinct in NT),Fawn hopping-mouse ,Notomys cervinus,Mammal
+,Vulnerable,Vulnerable,Fenn Gap squat snail,Semotrachia filixiana,Invertebrate
 ,Vulnerable,Vulnerable,Finke goby,Chlamydogobius japalpa,Fish
-,Vulnerable,Vulnerable,Finke Gorge rocksnail ,Granulomelon arcigerens,Invertebrate
+,Vulnerable,Vulnerable,Finke Gorge rocksnail,Granulomelon arcigerens,Invertebrate
 ,Critically endangered,Critically endangered,Fitzroy Station rocksnail ,Mesodontrachia fitzroyana,Invertebrate
 ,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Flatback turtle ,Natator depressus,Reptile
 ,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Ghost bat ,Macroderma gigas,Mammal
@@ -168,7 +168,7 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Vulnerable,Vulnerable,Loggerhead turtle ,Caretta caretta,Reptile
 ,Extinct,Extinct,Long-tailed hopping-mouse ,Notomys longicaudatus,Mammal
 ,Vulnerable,Vulnerable,Lorentz grunter,Pingalla lorentzi,Fish
-,Endangered ,Endangered (extinct in wild in NT),Mala ,Lagorchestes hirsutus Central Australian subspecies,Mammal
+,Endangered,Endangered (extinct in wild in NT),Mala ,Lagorchestes hirsutus Central Australian subspecies,Mammal
 ,Critically endangered,Critically endangered,Malleefowl ,Leipoa ocellata,Bird
 ,Vulnerable,Vulnerable,Masked owl (northern mainland) ,Tyto novaehollandiae kimberli,Bird
 ,Endangered,Endangered,Masked owl (Tiwi) ,Tyto novaehollandiae melvillensis,Bird
@@ -176,13 +176,13 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Vulnerable,Vulnerable,Merten’s water monitor ,Varanus mertensi,Reptile
 ,Vulnerable,Vulnerable,Mitchell’s water monitor ,Varanus mitchelli,Reptile
 ,Endangered,Endangered,Nabarlek (Top End) ,Petrogale concinna canescens,Mammal
-,Critically endangered ,Critically endangered (possibly extinct),Nabarlek (Victoria River district) ,Petrogale concinna concinna,Mammal
+,Critically endangered,Critically endangered (possibly extinct),Nabarlek (Victoria River district) ,Petrogale concinna concinna,Mammal
 ,Endangered,Endangered,Night parrot ,Pezoporus occidentalis,Bird
 ,Endangered,Endangered,Northern brush-tailed phascogale ,Phascogale pirata,Mammal
 ,Vulnerable,Vulnerable,Northern hopping-mouse ,Notomys aquilo,Mammal
 ,Critically endangered,Critically endangered,Northern quoll ,Dasyurus hallucatus,Mammal
 ,Endangered,Endangered,Northern river shark,Glyphis garricki,Fish  
-,Endangered ,Endangered (extinct in NT),Numbat ,Myrmecobius fasciatus,Mammal
+,Endangered,Endangered (extinct in NT),Numbat ,Myrmecobius fasciatus,Mammal
 ,Vulnerable,Vulnerable,Oenpelli python ,Simalia oenpelliensis,Reptile
 ,Vulnerable,Vulnerable,Olive ridley ,Lepidochelys olivacea,Reptile
 ,Vulnerable,Vulnerable,Painted honeyeater ,Grantiella picta,Bird
@@ -198,14 +198,14 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Vulnerable,Vulnerable,Red Centre pinwheel snail ,Tateropa aemula,Invertebrate
 ,Vulnerable,Vulnerable,Red goshawk ,Erythrotriorchis radiatus,Bird
 ,Endangered,Endangered,Red knot ,Calidris canutus,Bird
-,Vulnerable ,Vulnerable (extinct in NT),Red-tailed phascogale ,Phascogale calura,Mammal
+,Vulnerable,Vulnerable (extinct in NT),Red-tailed phascogale ,Phascogale calura,Mammal
 ,Endangered,Endangered,Rosewood keeled snail ,Ordtrachia septentrionalis,Invertebrate
 ,Vulnerable,Vulnerable,Ross River squat snail ,Semotrachia rossana,Invertebrate
 ,Vulnerable,Vulnerable,Runutjirbana Ridge squat snail ,Semotrachia runutjirbana,Invertebrate
 ,Critically endangered,Critically endangered,Saddle Creek rocksnail ,Vincentrachia desmonda,Invertebrate
 ,Endangered,Endangered,Sandhill dunnart ,Sminthopsis psammophila,Mammal
 ,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Scalloped hammerhead,Sphyrna lewini,Fish
-,Vulnerable ,Vulnerable (extinct in NT),Shark Bay mouse ,Pseudomys fieldi,Mammal
+,Vulnerable,Vulnerable (extinct in NT),Shark Bay mouse ,Pseudomys fieldi,Mammal
 ,Extinct,Extinct,Short-tailed hopping-mouse ,Notomys amplus,Mammal
 ,Vulnerable,Vulnerable,Slater’s skink ,Liopholis slateri,Reptile
 ,Vulnerable,Vulnerable,Speartooth shark,Glyphis glyphis,Fish
@@ -218,7 +218,7 @@ Orchidaceae,Vulnerable,Vulnerable,,Zeuxine oblonga,
 ,Vulnerable,Vulnerable,Victoria River squat snail ,Trachiopsis victoriana,Invertebrate
 ,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Water mouse ,Xeromys myoides,Mammal
 ,Vulnerable,Vulnerable,Watt’s multicoiled snail ,Vidumelon wattii,Invertebrate
-,Vulnerable ,Vulnerable (extinct in NT),Western quoll ,Dasyurus geoffroii,Mammal
+,Vulnerable,Vulnerable (extinct in NT),Western quoll ,Dasyurus geoffroii,Mammal
 ,Listed nationally but not under NT legislation,Listed nationally but not under NT legislation,Whale shark,Rhincodon typus,Fish
 ,Vulnerable,Vulnerable,White-throated grasswren ,Amytornis woodwardi,Bird
 ,Endangered,Endangered,Yellow chat (Alligator Rivers) ,Epthianura crocea tunneyi,Bird

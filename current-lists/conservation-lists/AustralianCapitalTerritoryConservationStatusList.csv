@@ -1,11 +1,11 @@
 scientificName,vernacularName,status,taxonRemarks,sourceStatus
-Anthochaera phrygia  ,Regent Honeyeater,Critically Endangered ,,Critically Endangered 
-Lathamus discolor,Swift Parrot,Critically Endangered ,,Critically Endangered 
-Pseudophryne pengilleyi,Northern Corroboree Frog,Critically Endangered ,,Critically Endangered 
-Caladenia actensis,Canberra Spider Orchid,Critically Endangered ,,Critically Endangered 
-Corunastylis ectopa,Brindabella Midge Orchid,Critically Endangered ,,Critically Endangered 
-Pterostylis oreophila,Kiandra Greenhood,Critically Endangered ,,Critically Endangered 
-Litoria castanea,Yellow-spotted Bell Frog,Critically Endangered ,locally extinct,Critically Endangered 
+Anthochaera phrygia,Regent Honeyeater,Critically Endangered,,Critically Endangered 
+Lathamus discolor,Swift Parrot,Critically Endangered,,Critically Endangered 
+Pseudophryne pengilleyi,Northern Corroboree Frog,Critically Endangered,,Critically Endangered 
+Caladenia actensis,Canberra Spider Orchid,Critically Endangered,,Critically Endangered 
+Corunastylis ectopa,Brindabella Midge Orchid,Critically Endangered,,Critically Endangered 
+Pterostylis oreophila,Kiandra Greenhood,Critically Endangered,,Critically Endangered 
+Litoria castanea,Yellow-spotted Bell Frog,Critically Endangered,locally extinct,Critically Endangered 
 Gentiana baeuerlenii,Baeuerlen's Gentian,Endangered,,Endangered
 Prasophyllum petilum,Tarengo Leek Orchid,Endangered,,Endangered
 Rutidosis leptorhynchoides,Button Wrinklewort,Endangered,,Endangered
@@ -38,7 +38,7 @@ Lalage tricolor,White-winged Triller,Vulnerable,,Vulnerable
 Hieraaetus morphnoides,Little Eagle,Vulnerable,,Vulnerable
 Aprasia parapulchella,Pink-tailed Worm-lizard,Vulnerable,,Vulnerable
 Calyptorhynchus lathami lathami,Glossy Black-cockatoo,Vulnerable,,Vulnerable
-Petroica boodang ,Scarlet Robin,Vulnerable,,Vulnerable
+Petroica boodang,Scarlet Robin,Vulnerable,,Vulnerable
 Mastacomys fuscus mordicus,Broad-toothed Rat (mainland),Vulnerable,,Vulnerable
 Petauroides volans,Greater Glider,Vulnerable,,Vulnerable
 Phascolarctos cinereus,Koala (QLD/NSW/ACT population),Vulnerable,,Vulnerable
