@@ -1,4 +1,4 @@
-WATaxonId,scientificName,vernacularName,class,status,WAStatus,WARank,EPBCStatus,EPBCDesc,sensitivityZoneId,county,municipality,verbatimLocality,taxonRemarks
+WATaxonId,scientificName,vernacularName,class,status,sourceStatus,WARank,EPBCStatus,EPBCDesc,sensitivityZoneId,county,municipality,verbatimLocality,taxonRemarks
 8244,Taraxacum cygnorum,,,Extinct,X,EX,VU,Vulnerable,WA,SCST,ESPERANCE,"Israelite Bay, TAS, VIC",
 3497,Acacia prismifolia,,,Extinct,X,EX,EX,Extinct,WA,SCST,ALBANY,"Albany, Stirling Range N.P.",
 6344,Coleanthera virgata,,,Extinct,X,EX,EX,Extinct,WA,SCST,ALBANY,Cape Riche,
