@@ -1,4 +1,4 @@
-scientificName,class,family,sourceStatus,status,vernacularName,vernacularName_alt
+ï»¿scientificName,class,family,sourceStatus,status,vernacularName,vernacularName_alt
 Abutilon oxycarpum,Angiospermae,Malvaceae,Rare,Rare,,
 Acacia alcockii,Angiospermae,Leguminosae,Rare,Rare,Alcock's Wattle,
 Acacia ammobia,Angiospermae,Leguminosae,Rare,Rare,,
@@ -53,24 +53,14 @@ Achnophora tatei,Angiospermae,Compositae,Rare,Rare,Kangaroo Island River Daisy,
 Acrobates pygmaeus,,,SA: E,Endangered,Feathertail Glider,
 Actitis hypoleucos,,,SA: R,Rare,Common ndpiper,
 Adiantum capillus-veneris,Pteridophyta,Adiantaceae,Vulnerable,Vulnerable,Dainty Maiden-hair,Limestone Maiden-hair
-Adonis microcarpa,Angiospermae,Ranunculaceae,Declared,Declared,Pheasant's Eye,Red Chamomile
 Allittia cardiocarpa,Angiospermae,Compositae,Rare,Rare,Swamp Daisy,
 Allittia uliginosa,Angiospermae,Compositae,Rare,Rare,Wet-heath Daisy,Small Swamp Daisy
-Allium triquetrum,Angiospermae,Liliaceae,Declared,Declared,Three-cornered Garlic,Angled Onion
-Allium vineale,Angiospermae,Liliaceae,Declared,Declared,Crow Garlic,Field Garlic
 Allocasuarina robusta,Angiospermae,Casuarinaceae,Endangered,Endangered,Mount Compass Oak-bush,
-Alternanthera pungens,Angiospermae,Amaranthaceae,Declared,Declared,Khaki Weed,
 Althaea australis,Angiospermae,Malvaceae,Vulnerable,Vulnerable,Australian Mallow,
-Ambrosia artemisiifolia,Angiospermae,Compositae,Declared,Declared,Annual Ragweed,Bitterweed
-Ambrosia confertiflora,Angiospermae,Compositae,Declared,Declared,Burr Ragweed,
-Ambrosia psilostachya,Angiospermae,Compositae,Declared,Declared,Perennial Ragweed,Western Ragweed
-Ambrosia tenuifolia,Angiospermae,Compositae,Declared,Declared,Lacy Ragweed,Lacy Ambrosia
 Amphibolurus muricatus,,,SA: R,Rare,Jacky Lizard ,
 Amphibromus archeri,Angiospermae,Gramineae,Rare,Rare,Pointed Swamp Wallaby-grass,
 Amphibromus macrorhinus,Angiospermae,Gramineae,Rare,Rare,Long-nosed Swamp Wallaby-grass,
 Amphibromus recurvatus,Angiospermae,Gramineae,Rare,Rare,Dark Swamp Wallaby-grass,
-Amsinckia calycina,Angiospermae,Boraginaceae,Declared,Declared,Hairy Fiddle-neck,
-Amsinckia lycopsoides,Angiospermae,Boraginaceae,Declared,Declared,Bugloss Fiddle-neck,
 Amytornis barbatus,,,SA: R,Rare,Grey Grasswren,
 Amytornis striatus,,,SA: R,Rare,Striated Grasswren,
 Anas rhynchotis,,,SA: R,Rare,Australasian Shoveler,
@@ -96,15 +86,11 @@ Arenaria interpres,,,SA: R,Rare,Ruddy Turnstone,
 Aristida arida,Angiospermae,Gramineae,Rare,Rare,,
 Aristida australis,Angiospermae,Gramineae,Rare,Rare,,
 Arthropodium milleflorum,Angiospermae,Liliaceae,Vulnerable,Vulnerable,Pale Vanilla-lily,
-Asparagus asparagoides,Angiospermae,Liliaceae,Declared,Declared,Bridal Creeper,Smilax Asparagus
-Asparagus asparagoides,Angiospermae,Liliaceae,Declared,Declared,Bridal Creeper,Smilax Asparagus
-Asparagus declinatus,Angiospermae,Liliaceae,Declared,Declared,,
 Asperula oblanceolata,Angiospermae,Rubiaceae,Rare,Rare,Water Woodruff,
 Asperula sp. A (A.B.Cashmore September 1933),Angiospermae,Rubiaceae,Endangered,Endangered,Alpine Woodruff,
 Asperula subsimplex,Angiospermae,Rubiaceae,Rare,Rare,Water Woodruff,
 Asperula syrticola,Angiospermae,Rubiaceae,Rare,Rare,Southern Flinders Woodruff,
 Asperula tetraphylla,Angiospermae,Rubiaceae,Vulnerable,Vulnerable,Mountain Woodruff,
-Asphodelus fistulosus,Angiospermae,Liliaceae,Declared,Declared,Onion Weed,Wild Onion
 Aspidites ramsayi,,,SA: R,Rare,Woma ,
 Asplenium bulbiferum,Pteridophyta,Aspleniaceae,Endangered,Endangered,Mother Spleenwort,Hens-and-chickens
 Asplenium trichomanes,Pteridophyta,Aspleniaceae,Rare,Rare,Common Spleenwort,
@@ -116,8 +102,6 @@ Atriplex humifusa,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,,
 Atriplex kochiana,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,Koch's Saltbush,
 Atriplex morrisii,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,,
 Atriplex papillata,Angiospermae,Chenopodiaceae,Endangered,Endangered,Coral Saltbush,
-Austrocylindropuntia cylindrica,Angiospermae,Cactaceae,Declared,Declared,Cane Cactus,
-Austrocylindropuntia subulata,Angiospermae,Cactaceae,Declared,Declared,Eve's-pin Cactus,
 Austrostipa breviglumis,Angiospermae,Gramineae,Rare,Rare,Cane Spear-grass,Bamboo Spear-grass
 Austrostipa densiflora,Angiospermae,Gramineae,Rare,Rare,Fox-tail Spear-grass,Dense Spear-grass
 Austrostipa echinata,Angiospermae,Gramineae,Rare,Rare,Spiny Spear-grass,
@@ -132,19 +116,17 @@ Austrostipa tuckeri,Angiospermae,Gramineae,Rare,Rare,Tucker's Spear-grass,
 Austrostipa vickeryana,Angiospermae,Gramineae,Rare,Rare,Vickery's Spear-grass,
 Balaenoptera acutorostrata,,,SA: R,Rare,Dwarf Minke Whale,
 Balaenoptera borealis,,,SA: V,Vulnerable,Sei Whale,
-Balaenoptera edeni,,,SA: R,Rare,Bryde’s Whale,
+Balaenoptera edeni,,,SA: R,Rare,Brydeâ€™s Whale,
 Balaenoptera musculus,,,SA: E,Endangered,Blue Whale,
 Balaenoptera physalus,,,SA: V,Vulnerable,Fin Whale,
 Baloskion tetraphyllum,Angiospermae,Restionaceae,Vulnerable,Vulnerable,Tassel Cord-rush,Feather Plant
 Basedowia tenerrima,Angiospermae,Compositae,Rare,Rare,,
-Bassia scoparia,Angiospermae,Chenopodiaceae,Declared,Declared,,
 Bassiana trilineata,,,SA: R,Rare,Western Three-lined Skink ,
 Bauera rubioides,Angiospermae,Baueraceae,Rare,Rare,Wiry Bauera,
-Berardius arnuxii,,,SA: R,Rare,Arnoux’s Beaked Whale,
+Berardius arnuxii,,,SA: R,Rare,Arnouxâ€™s Beaked Whale,
 Bergia occultipetala,Angiospermae,Elatinaceae,Vulnerable,Vulnerable,,
 Bettongia lesueur,,,SA: E,Endangered,Burrowing Bettong,
 Beyeria subtecta,Angiospermae,Euphorbiaceae,Endangered,Endangered,Kangaroo Island Turpentine Bush,
-Bifora testiculata,Angiospermae,Umbelliferae,Declared,Declared,Bifora,Carrot Weed
 Billardiera scandens,Angiospermae,Pittosporaceae,Rare,Rare,Eastern Apple-berry,Common Apple-berry
 Billardiera sp. Yorke Peninsula (P.C.Heyligers 80164),Angiospermae,Pittosporaceae,Endangered,Endangered,Lehmann's Apple-berry,
 Biziura lobata,,,SA: R,Rare,Musk Duck,
@@ -175,7 +157,7 @@ Brachyscome xanthocarpa,Angiospermae,Compositae,Rare,Rare,Yellow-fruit Daisy,
 Bulbostylis pyriformis,Angiospermae,Cyperaceae,Rare,Rare,,
 Bulbostylis turbinata,Angiospermae,Cyperaceae,Rare,Rare,,
 Burhinus grallarius,,,SA: R,Rare,Bush Stonecurlew,
-Cacatua leadbeateri,,,SA: R,Rare,Major Mitchell’s Cockatoo,
+Cacatua leadbeateri,,,SA: R,Rare,Major Mitchellâ€™s Cockatoo,
 Caesia parviflora,Angiospermae,Liliaceae,Rare,Rare,Pale Grass-lily,
 Caladenia argocalla,Angiospermae,Orchidaceae,Endangered,Endangered,White Beauty Spider-orchid,Large White Spider-orchid
 Caladenia behrii,Angiospermae,Orchidaceae,Endangered,Endangered,Pink-lip Spider-orchid,Behr's White Spider-orchid
@@ -249,12 +231,9 @@ Caperea marginata,,,SA: R,Rare,Pygmy Right Whale,
 Cardamine gunnii,Angiospermae,Cruciferae,Vulnerable,Vulnerable,Spade-leaf Bitter-cress,Common Bitter-cress
 Cardamine paucijuga,Angiospermae,Cruciferae,Rare,Rare,Annual Bitter-cress,
 Cardamine tenuifolia,Angiospermae,Cruciferae,Rare,Rare,Slender Bitter-cress,
-Carduus tenuiflorus,Angiospermae,Compositae,Declared,Declared,Slender Thistle,Winged Slender Thistle
 Caretta caretta,,,SA: E,Endangered,Loggerhead Turtle,
 Carex gunniana,Angiospermae,Cyperaceae,Rare,Rare,Mountain Sedge,
 Cassinia tegulata,Angiospermae,Compositae,Endangered,Endangered,Sticky Cassinia,
-Cenchrus longispinus,Angiospermae,Gramineae,Declared,Declared,Spiny Burr-grass,Innocent Weed
-Cenchrus spinifex,Angiospermae,Gramineae,Declared,Declared,Spiny Burr-grass,Coast Burr-grass
 Centella uniflora,Angiospermae,Umbelliferae,Vulnerable,Vulnerable,,
 Centrolepis cephaloformis,Angiospermae,Centrolepidaceae,Rare,Rare,Cushion Centrolepis,Dwarf Centrolepis
 Centrolepis cephaloformis,Angiospermae,Centrolepidaceae,Rare,Rare,Cushion Centrolepis,Dwarf Centrolepis
@@ -276,18 +255,14 @@ Chiloglottis cornuta,Angiospermae,Orchidaceae,Endangered,Endangered,Green Bird-o
 Chiloglottis trapeziformis,Angiospermae,Orchidaceae,Endangered,Endangered,Dainty Bird-orchid,
 Chlamydera guttata,,,SA: R,Rare,Western Bowerbird,
 Chlamydera maculata,,,SA: E,Endangered,Spotted Bowerbird,
-Chondrilla juncea,Angiospermae,Compositae,Declared,Declared,Skeleton Weed,Naked Weed
 Chondropyxis halophila,Angiospermae,Compositae,Rare,Rare,Salt Button-daisy,Salt Button-heads
 Choretrum chrysanthum,Angiospermae,Santalaceae,Rare,Rare,Yellow Sour-bush,
 Choretrum spicatum,Angiospermae,Santalaceae,Rare,Rare,Spiked Sour-bush,
 Choretrum spicatum,Angiospermae,Santalaceae,Rare,Rare,Spiked Sour-bush,
 Chorizandra australis,Angiospermae,Cyperaceae,Endangered,Endangered,Bristle-rush,Bristle-sedge
 Christella dentata,Pteridophyta,Thelypteridaceae,Rare,Rare,Soft Shield-fern,Binung
-Chrysanthemoides monilifera,Angiospermae,Compositae,Declared,Declared,Boneseed,Bitou Bush
 Cinclosoma punctatum anachoreta,,,SA:E,Endangered,Spotted Quailthrush,
 Cinclosoma punctatum punctatum,,,SA:E,Endangered,Spotted Quailthrush,
-Cirsium arvense,Angiospermae,Compositae,Declared,Declared,Perennial Thistle,Creeping Thistle
-Cirsium vulgare,Angiospermae,Compositae,Declared,Declared,Spear Thistle,Swamp Thistle
 Citrus glauca,Angiospermae,Rutaceae,Vulnerable,Vulnerable,Desert Lime,Wild Lime
 Cladium procerum,Angiospermae,Cyperaceae,Rare,Rare,Leafy Twig-rush,
 Cladorhynchus leucocephalus,,,SA: V,Vulnerable,Banded Stilt,
@@ -298,7 +273,6 @@ Colobanthus apetalus,Angiospermae,Caryophyllaceae,Vulnerable,Vulnerable,Coast Co
 Commersonia craurophylla,Angiospermae,Sterculiaceae,Vulnerable,Vulnerable,Brittle-leaf Rulingia,
 Conilurus albipes,,,SA: E,Endangered,White-footed Tree-rat,
 Conopophila whitei,,,SA: R,Rare,Grey Honeyeater,
-Convolvulus arvensis,Angiospermae,Convolvulaceae,Declared,Declared,Field Bindweed,Common Bindweed
 Coracina papuensis,,,SA: R,Rare,White-bellied Cuckooshrike,
 Corcorax melanorhamphos,,,SA: R,Rare,White-winged Chough,
 Coronidium adenophorum,Angiospermae,Compositae,Rare,Rare,Branched Everlasting,
@@ -320,34 +294,21 @@ Craspedia paludicola,Angiospermae,Compositae,Vulnerable,Vulnerable,Swamp Buttons
 Crassula exserta,Angiospermae,Crassulaceae,Rare,Rare,Large-fruit Crassula,
 Crassula peduncularis,Angiospermae,Crassulaceae,Rare,Rare,Purple Crassula,Purple Stonecrop
 Crassula sieberiana,Angiospermae,Crassulaceae,Endangered,Endangered,Sieber's Crassula,Australian Stonecrop
-Crataegus monogyna,Angiospermae,Rosaceae,Declared,Declared,Hawthorn,May
-Crataegus sinaica,Angiospermae,Rosaceae,Declared,Declared,Hawthorn,May
 Cryptandra campanulata,Angiospermae,Rhamnaceae,Rare,Rare,Long-flower Cryptandra,Bell-flower Cryptandra
 Cryptostylis subulata,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Moose Orchid,Large Tongue-orchid
 Ctenophorus maculatus,,,SA: R,Rare,Spotted Dragon ,
-Ctenophorus mckenziei,,,SA: R,Rare,McKenzie’s Dragon ,
+Ctenophorus mckenziei,,,SA: R,Rare,McKenzieâ€™s Dragon ,
 Ctenophorus salinarum,,,SA: R,Rare,Claypan Dragon ,
 Ctenotus astarte,,,SA: R,Rare,Ashy Downs Ctenotus ,
 Ctenotus grandis,,,SA: R,Rare,Giant Desert Ctenotus ,
-Ctenotus greeri,,,SA: R,Rare,Greer’s Ctenotus ,
+Ctenotus greeri,,,SA: R,Rare,Greerâ€™s Ctenotus ,
 Ctenotus joanae,,,SA: R,Rare,Blacksoil Ctenotus ,
 Ctenotus piankai,,,SA: R,Rare,Paleface Ctenotus ,
 Cullen microcephalum,Angiospermae,Leguminosae,Endangered,Endangered,Mountain Scurf-pea,Dusky Scurf-pea
 Cullen parvum,Angiospermae,Leguminosae,Vulnerable,Vulnerable,Small Scurf-pea,Small Psoralea
-Cuscuta campestris,Angiospermae,Convolvulaceae,Declared,Declared,Golden Dodder,Field Dodder
-Cuscuta planiflora,Angiospermae,Convolvulaceae,Declared,Declared,Small-seed Alfalfa-dodder,
-Cuscuta suaveolens,Angiospermae,Convolvulaceae,Declared,Declared,Fringed Dodder,
 Cuscuta tasmanica,Angiospermae,Convolvulaceae,Vulnerable,Vulnerable,Tasmanian Dodder,Golden Dodder
 Cyclorana cultripes,,,SA: R,Rare,Knife-footed Frog  ,
 Cycnogeton alcockiae,Angiospermae,Juncaginaceae,Rare,Rare,Alcock's Water-ribbons,
-Cylindropuntia fulgida,Angiospermae,Cactaceae,Declared,Declared,,
-Cylindropuntia imbricata,Angiospermae,Cactaceae,Declared,Declared,Devil's Rope Pear,Chain-link Cactus
-Cylindropuntia kleiniae,Angiospermae,Cactaceae,Declared,Declared,,
-Cylindropuntia pallida,Angiospermae,Cactaceae,Declared,Declared,,
-Cylindropuntia prolifera,Angiospermae,Cactaceae,Declared,Declared,,
-Cylindropuntia spinosior,Angiospermae,Cactaceae,Declared,Declared,,
-Cylindropuntia tunicata,Angiospermae,Cactaceae,Declared,Declared,,
-Cynara cardunculus,Angiospermae,Compositae,Declared,Declared,Artichoke Thistle,Spanish Artichoke
 Cyperus bifax,Angiospermae,Cyperaceae,Rare,Rare,Downs Flat-sedge,Downs Nut-grass
 Cyperus castaneus,Angiospermae,Cyperaceae,Rare,Rare,,
 Cyperus concinnus,Angiospermae,Cyperaceae,Rare,Rare,,
@@ -356,10 +317,8 @@ Cyperus flaccidus,Angiospermae,Cyperaceae,Rare,Rare,Flaccid Flat-sedge,
 Cyperus lhotskyanus,Angiospermae,Cyperaceae,Rare,Rare,,
 Cyperus lucidus,Angiospermae,Cyperaceae,Endangered,Endangered,Leafy Flat-sedge,
 Cyperus nervulosus,Angiospermae,Cyperaceae,Rare,Rare,,
-Cyperus rotundus,Angiospermae,Cyperaceae,Declared,Declared,Nut-grass,Nut-grass Flat-sedge
 Cyperus sanguinolentus,Angiospermae,Cyperaceae,Rare,Rare,Dark Flat-sedge,
 Cyperus sphaeroideus,Angiospermae,Cyperaceae,Rare,Rare,,
-Cytisus scoparius,Angiospermae,Leguminosae,Declared,Declared,English Broom,Common Broom
 Dampiera lanceolata,Angiospermae,Goodeniaceae,Endangered,Endangered,Aldinga Dampiera,
 Dampiera roycei,Angiospermae,Goodeniaceae,Rare,Rare,,
 Dasycercus blythi,,,SA: E,Endangered,Brush-tailed Mulgara (Mulgara),
@@ -368,7 +327,6 @@ Dasyuroides byrnei,,,SA: V,Vulnerable,Kowari,
 Dasyurus geoffroii,,,SA: E,Endangered,Western Quoll,
 Dasyurus maculatus,,,SA: E,Endangered,Spotted-tailed Quoll (Tiger Quoll),
 Dasyurus viverrinus,,,SA: E,Endangered,Eastern Quoll,
-Daucus carota,Angiospermae,Umbelliferae,Declared,Declared,Carrot,
 Daviesia devito,Angiospermae,Leguminosae,Rare,Rare,Mallee Bitter-pea,Spiny Bitter-pea
 Daviesia pectinata,Angiospermae,Leguminosae,Rare,Rare,Zig-zag Bitter-pea,Barbed-wire Bitter-pea
 Daviesia schwarzenegger,Angiospermae,Leguminosae,Rare,Rare,Mallee Bitter-pea,Spiny Bitter-pea
@@ -391,7 +349,6 @@ Dicksonia antarctica,Pteridophyta,Dicksoniaceae,Endangered,Endangered,Soft Tree-
 Dillwynia cinerascens,Angiospermae,Leguminosae,Endangered,Endangered,Grey Parrot-pea,
 Diomedea exulans,,,SA: V,Vulnerable,Wandering Albatross,
 Diplodactylus pulcher,,,SA: R,Rare,Patchwork Gecko ,
-Diplotaxis tenuifolia,Angiospermae,Cruciferae,Declared,Declared,Lincoln Weed,Sand Rocket
 Dipodium campanulatum,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Bell-flower Hyacinth Orchid,
 Dipodium pardalinum,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Leopard Hyacinth-orchid,Spotted Hyacinth-orchid
 Dipodium punctatum,Angiospermae,Orchidaceae,Endangered,Endangered,,
@@ -411,12 +368,9 @@ Duma horrida,Angiospermae,Polygonaceae,Rare,Rare,Spiny Lignum,
 Echinochloa lacunaria,Angiospermae,Gramineae,Endangered,Endangered,Lake Millet,
 Echinopogon ovatus,Angiospermae,Gramineae,Rare,Rare,Rough-beard Grass,Forest Hedgehog Grass
 Echiopsis curta,,,SA: R,Rare,Bardick ,
-Echium plantagineum,Angiospermae,Boraginaceae,Declared,Declared,Salvation Jane,Paterson's Curse
-Egeria densa,Angiospermae,Hydrocharitaceae,Declared,Declared,,
-Egernia cunninghami,,,SA: E,Endangered,Cunningham’s Skink ,
+Egernia cunninghami,,,SA: E,Endangered,Cunninghamâ€™s Skink ,
 Egretta cra,,,SA: R,Rare,Pacific Reef Heron (Eastern Reef Egret),
 Egretta garzetta,,,SA: R,Rare,Little Egret,
-Eichhornia crassipes,Angiospermae,Pontederiaceae,Declared,Declared,Water Hyacinth,
 Elachanthus glaber,Angiospermae,Compositae,Rare,Rare,Shiny Elachanth,
 Elacholoma prostrata,Angiospermae,Scrophulariaceae,Rare,Rare,Small Monkey-flower,
 Elanus scriptus,,,SA: R,Rare,Letter-winged Kite,
@@ -425,14 +379,12 @@ Eleocharis atricha,Angiospermae,Cyperaceae,Vulnerable,Vulnerable,Tuber Spike-rus
 Eleocharis geniculata,Angiospermae,Cyperaceae,Rare,Rare,Spike-rush,
 Eleocharis papillosa,Angiospermae,Cyperaceae,Rare,Rare,,
 Eleocharis plana,Angiospermae,Cyperaceae,Rare,Rare,Flat Spike-rush,Ribbed Spike-rush
-Elodea canadensis,Angiospermae,Hydrocharitaceae,Declared,Declared,,
 Embadium johnstonii,Angiospermae,Boraginaceae,Rare,Rare,Johnston's Slipper-plant,Johnston's Embadium
 Embadium stagnense,Angiospermae,Boraginaceae,Rare,Rare,Arcoona Slipper-plant,Arcoona Embadium
 Emblema pictum,,,SA: R,Rare,Painted Finch,
 Emydura macquarii,,,SA: V,Vulnerable,Macquarie Tortoise ,
 Entomyzon cyanotis,,,SA: R,Rare,Blue-faced Honeyeater,
 Epthianura crocea,,,SA: E,Endangered,Yellow Chat,
-Eragrostis curvula,Angiospermae,Gramineae,Declared,Declared,African Love-grass,Weeping Love-grass
 Eragrostis infecunda,Angiospermae,Gramineae,Rare,Rare,Barren Cane-grass,Infertile Love-grass
 Eragrostis lacunaria,Angiospermae,Gramineae,Rare,Rare,Purple Love-grass,Neverfail
 Eremiornis carteri,,,SA: E,Endangered,Spinifexbird,
@@ -476,7 +428,6 @@ Eucalyptus wimmerensis,Angiospermae,Myrtaceae,Rare,Rare,Wimmera Mallee Box,
 Eucalyptus wyolensis,Angiospermae,Myrtaceae,Rare,Rare,Wyola Mallee,
 Eulamprus heatwolei,,,SA: V,Vulnerable,Yellow-bellied Water Skink ,
 Eulamprus tympanum,,,SA: R,Rare,Southern Water Skink ,
-Euphorbia terracina,Angiospermae,Euphorbiaceae,Declared,Declared,False Caper,Terracina Spurge
 Euphrasia collina,Angiospermae,Scrophulariaceae,Vulnerable,Vulnerable,Purple Eyebright,
 Euphrasia collina,Angiospermae,Scrophulariaceae,Endangered,Endangered,Mueller's Eyebright,
 Euphrasia collina,Angiospermae,Scrophulariaceae,Endangered,Endangered,Osborn's Eyebright,
@@ -501,12 +452,10 @@ Gahnia hystrix,Angiospermae,Cyperaceae,Rare,Rare,Spiky Saw-sedge,Kangaroo Island
 Gahnia radula,Angiospermae,Cyperaceae,Rare,Rare,Thatch Saw-sedge,
 Galium curvihirtum,Angiospermae,Rubiaceae,Rare,Rare,Tight Bedstraw,
 Galium propinquum,Angiospermae,Rubiaceae,Endangered,Endangered,,
-Galium tricornutum,Angiospermae,Rubiaceae,Declared,Declared,Three-horned Bedstraw,Rough Corn Bedstraw
-Gallinago hardwickii,,,SA: R,Rare,Latham’s Snipe,
+Gallinago hardwickii,,,SA: R,Rare,Lathamâ€™s Snipe,
 Gastrodia sesamoides,Angiospermae,Orchidaceae,Rare,Rare,Potato Orchid,Cinnamon Bells
 Gastrodia vescula,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Lesser Potato Orchid,
 Geijera parviflora,Angiospermae,Rutaceae,Rare,Rare,Wilga,
-Genista monspessulana,Angiospermae,Leguminosae,Declared,Declared,Montpellier Broom,Cape Broom
 Genoplesium ciliatum,Angiospermae,Orchidaceae,Endangered,Endangered,Swamp Midge-orchid,
 Genoplesium despectans,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Sharp Midge-orchid,
 Genoplesium morrisii,Angiospermae,Orchidaceae,Endangered,Endangered,Bearded Midge-orchid,
@@ -573,7 +522,6 @@ Hibbertia glebosa,Angiospermae,Dilleniaceae,Rare,Rare,,
 Hibbertia obtusibracteata,Angiospermae,Dilleniaceae,Vulnerable,Vulnerable,Prickly Guinea-flower,
 Hibbertia sessiliflora,Angiospermae,Dilleniaceae,Endangered,Endangered,,
 Hibbertia tenuis,Angiospermae,Dilleniaceae,Endangered,Endangered,,
-Hirschfeldia incana,Angiospermae,Cruciferae,Declared,Declared,Hoary Mustard,Buchan Weed
 Histiopteris incisa,Pteridophyta,Dennstaedtiaceae,Endangered,Endangered,Bat's-wing Fern,
 Hovea heterophylla,Angiospermae,Leguminosae,Vulnerable,Vulnerable,Common Hovea,
 Hovea purpurea,Angiospermae,Leguminosae,Rare,Rare,Tall Hovea,Rusty Pods
@@ -583,7 +531,6 @@ Hydrocotyle comocarpa,Angiospermae,Umbelliferae,Rare,Rare,Fringe-fruit Pennywort
 Hydrocotyle crassiuscula,Angiospermae,Umbelliferae,Rare,Rare,Spreading Pennywort,
 Hydrocotyle diantha,Angiospermae,Umbelliferae,Endangered,Endangered,Kangaroo Island Pennywort,
 Hydrurga leptonyx,,,SA: R,Rare,Leopard Seal,
-Hyparrhenia hirta,Angiospermae,Gramineae,Declared,Declared,Tambookie Grass,
 Hypericum japonicum,Angiospermae,Guttiferae,Rare,Rare,Matted St John's Wort,
 Hyperoodon planifrons,,,SA: R,Rare,Southern Bottlenose Whale,
 Hypolepis rugosula,Pteridophyta,Dennstaedtiaceae,Rare,Rare,Ruddy Ground-fern,
@@ -597,7 +544,6 @@ Isotoma fluviatilis,Angiospermae,Campanulaceae,Rare,Rare,Swamp Isotome,
 Isotoma scapigera,Angiospermae,Campanulaceae,Rare,Rare,Salt Isotome,Erect Isotome
 Ixobrychus dubius,,,SA: E,Endangered,Australian Little Bittern [Black-backed Bittern],
 Ixodia achillaeoides,Angiospermae,Compositae,Endangered,Endangered,Sand Ixodia,
-Jarava plumosa,Angiospermae,Gramineae,Declared,Declared,,
 Juncus amabilis,Angiospermae,Juncaceae,Vulnerable,Vulnerable,,
 Juncus australis,Angiospermae,Juncaceae,Rare,Rare,Austral Rush,
 Juncus homalocaulis,Angiospermae,Juncaceae,Vulnerable,Vulnerable,Wiry Rush,
@@ -625,7 +571,6 @@ Leionema hillebrandii,Angiospermae,Rutaceae,Rare,Rare,Mount Lofty Phebalium,Hill
 Leionema microphyllum,Angiospermae,Rutaceae,Rare,Rare,Limestone Phebalium,Spreading Phebalium
 Leipoa ocellata,,,SA:V,Vulnerable,Malleefowl,
 Lepidium desvauxii,Angiospermae,Cruciferae,Rare,Rare,Bushy Peppercress,
-Lepidium draba,Angiospermae,Cruciferae,Declared,Declared,Hoary Cress,White Weed
 Lepidium monoplocoides,Angiospermae,Cruciferae,Endangered,Endangered,Winged Peppercress,
 Lepidium pseudopapillosum,Angiospermae,Cruciferae,Endangered,Endangered,Erect Peppercress,
 Lepidium pseudoruderale,Angiospermae,Cruciferae,Rare,Rare,,
@@ -653,7 +598,7 @@ Leucopogon hirsutus,Angiospermae,Epacridaceae,Rare,Rare,Hairy Beard-heath,
 Leucopogon obovatus,Angiospermae,Epacridaceae,Rare,Rare,,
 Levenhookia sonderi,Angiospermae,Stylidiaceae,Vulnerable,Vulnerable,Slender Stylewort,
 Levenhookia stipitata,Angiospermae,Stylidiaceae,Rare,Rare,,
-Lewinia pectoralis,,,SA: V,Vulnerable,Lewin’s Rail,
+Lewinia pectoralis,,,SA: V,Vulnerable,Lewinâ€™s Rail,
 Limosa lapponica,,,SA: R,Rare,Bar-tailed Godwit,
 Limosa limosa,,,SA: R,Rare,Black-tailedGodwit,
 Limosella granitica,Angiospermae,Scrophulariaceae,Vulnerable,Vulnerable,Granite Mudwort,
@@ -676,7 +621,6 @@ Lophoictinia isura,,,SA: E,Endangered,"(Gould, 1838)",
 Lucasium steindachneri,,,SA: R,Rare,Map Gecko ,
 Luzula flaccida,Angiospermae,Juncaceae,Vulnerable,Vulnerable,Pale Wood-rush,
 Luzula ovata,Angiospermae,Juncaceae,Rare,Rare,Clustered Wood-rush,Oval Wood-rush
-Lycium ferocissimum,Angiospermae,Solanaceae,Declared,Declared,African Boxthorn,
 Lycopodiella lateralis,Pteridophyta,Lycopodiaceae,Rare,Rare,Slender Clubmoss,
 Lycopodiella serpentina,Pteridophyta,Lycopodiaceae,Endangered,Endangered,Bog Clubmoss,
 Lycopodium deuterodensum,Pteridophyta,Lycopodiaceae,Endangered,Endangered,Bushy Clubmoss,
@@ -698,10 +642,7 @@ Maireana pentagona,Angiospermae,Chenopodiaceae,Rare,Rare,Slender Fissure-plant,H
 Maireana rohrlachii,Angiospermae,Chenopodiaceae,Rare,Rare,Rohrlach's Bluebush,
 Maireana suaedifolia,Angiospermae,Chenopodiaceae,Rare,Rare,Lax Bluebush,
 Malacocera gracilis,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,Slender Soft-horns,
-Malvella leprosa,Angiospermae,Malvaceae,Declared,Declared,Alkali Sida,Ivy-leaf Sida
 Manorina flavigula melanotis,,,SA: E,Endangered,Black-eared Miner,
-Marrubium vulgare,Angiospermae,Labiatae,Declared,Declared,Horehound,
-Matthiola longipetala,Angiospermae,Cruciferae,Declared,Declared,Two-horned Stock,Night Scented Stock
 Mazus pumilio,Angiospermae,Scrophulariaceae,Vulnerable,Vulnerable,Swamp Mazus,
 Megaptera novaeangliae,,,SA: V,Vulnerable,Humpback Whale,
 Meionectes brownii,Angiospermae,Haloragaceae,Rare,Rare,Swamp Raspwort,
@@ -718,9 +659,9 @@ Menkea lutea,Angiospermae,Cruciferae,Rare,Rare,,
 Mentha atrolilacina,Angiospermae,Labiatae,Rare,Rare,Slender Mint,
 Mentha diemenica,Angiospermae,Labiatae,Rare,Rare,Slender Mint,
 Mentha satureioides,Angiospermae,Labiatae,Rare,Rare,Native Pennyroyal,Creeping Mint
-Mesoplodon bowdoini,,,SA: R,Rare,Andrews’ Beaked Whale,
-Mesoplodon grayi,,,SA: R,Rare,Gray’s Beaked Whale (Scamperdown Whale),
-Mesoplodon hectori,,,SA: R,Rare,Hector’s Beaked Whale,
+Mesoplodon bowdoini,,,SA: R,Rare,Andrewsâ€™ Beaked Whale,
+Mesoplodon grayi,,,SA: R,Rare,Grayâ€™s Beaked Whale (Scamperdown Whale),
+Mesoplodon hectori,,,SA: R,Rare,Hectorâ€™s Beaked Whale,
 Microcorys macredieana,Angiospermae,Labiatae,Rare,Rare,,
 Microlepidium alatum,Angiospermae,Cruciferae,Vulnerable,Vulnerable,,
 Microlepidium pilosulum,Angiospermae,Cruciferae,Rare,Rare,Hairy Shepherd's-purse,
@@ -735,11 +676,8 @@ Mirounga leonina,,,SA: R,Rare,Southern Elephant Seal,
 Mitrasacme pilosa,Angiospermae,Loganiaceae,Vulnerable,Vulnerable,Hairy Mitrewort,
 Montia australasica,Angiospermae,Portulacaceae,Rare,Rare,White Purslane,Montia
 Montia fontana,Angiospermae,Portulacaceae,Vulnerable,Vulnerable,Waterblinks,
-Moraea flaccida,Angiospermae,Iridaceae,Declared,Declared,One-leaf Cape Tulip,
-Moraea miniata,Angiospermae,Iridaceae,Declared,Declared,Two-leaf Cape Tulip,
 Morelia spilota,,,SA: R,Rare,Carpet Python ,
 Mormopterus eleryi,,,SA: V,Vulnerable,Bristle-faced Free-tailed Bat,
-Myagrum perfoliatum,Angiospermae,Cruciferae,Declared,Declared,Musk Weed,Mitre-cress
 Myiagra cyanoleuca,,,SA: E,Endangered,Satin Flycatcher,
 Myiagra inquieta,,,SA: R,Rare,Restless Flycatcher,
 Myoporum parvifolium,Angiospermae,Myoporaceae,Rare,Rare,Creeping Boobialla,Dwarf Native Myrtle
@@ -753,9 +691,6 @@ Myriophyllum variifolium,Angiospermae,Haloragaceae,Rare,Rare,Varied Milfoil,
 Myrmecobius fasciatus,,,SA: E,Endangered,Numbat,
 Najas tenuifolia,Angiospermae,Najadaceae,Endangered,Endangered,Water Nymph,Australian Naiad
 Nannoscincus maccoyi,,,SA: E,Endangered,Salamander Skink ,
-Nassella leucotricha,Angiospermae,Gramineae,Declared,Declared,,
-Nassella neesiana,Angiospermae,Gramineae,Declared,Declared,,
-Nassella tenuissima,Angiospermae,Gramineae,Declared,Declared,,
 Neelaps bimaculatus,,,SA: R,Rare,Western Black-naped Snake ,
 Neobatrachus sutor,,,SA: V,Vulnerable,Shoemaker Frog,
 Neophema chrysogaster,,,SA: E,Endangered,Orange-bellied Parrot,
@@ -780,15 +715,12 @@ Notoryctes typhlops,,,SA: V,Vulnerable,Southern Marsupial Mole (Itjaritjara),
 Notoscincus ornatus,,,SA: R,Rare,Desert Glossy Skink ,
 Numenius madagascariensis,,,SA: V,Vulnerable,Far Eastern Curlew,
 Numenius phaeopus,,,SA: R,Rare,Whimbrel,
-Nyctophilus corbeni,,,SA: V,Vulnerable,Corben’s Long-eared Bat,
-Nyctophilus gouldi,,,SA:  E,Endangered,Gould’s Long-eared Bat,
+Nyctophilus corbeni,,,SA: V,Vulnerable,Corbenâ€™s Long-eared Bat,
+Nyctophilus gouldi,,,SA:  E,Endangered,Gouldâ€™s Long-eared Bat,
 Nymphoides crenata,Angiospermae,Menyanthaceae,Rare,Rare,Wavy Marshwort,
 Nymphoides geminata,Angiospermae,Menyanthaceae,Vulnerable,Vulnerable,Entire Marshwort,Open Marshwort
 Oedura marmorata,,,SA: R,Rare,Marbled Velvet Gecko ,
-Oenanthe pimpinelloides,Angiospermae,Umbelliferae,Declared,Declared,Water Dropwort,Corky-fruit Water Dropwort
 Olax obcordata,Angiospermae,Olacaceae,Rare,Rare,,
-Olea europaea,Angiospermae,Oleaceae,Declared,Declared,African Olive,
-Olea europaea,Angiospermae,Oleaceae,Declared,Declared,Olive,
 Olearia adenolasia,Angiospermae,Compositae,Rare,Rare,Musk Daisy-bush,Woolly-glandular Daisy-bush
 Olearia arckaringensis,Angiospermae,Compositae,Endangered,Endangered,Arckaringa Daisy,
 Olearia arida,Angiospermae,Compositae,Vulnerable,Vulnerable,Desert Daisy-bush,
@@ -801,49 +733,27 @@ Olearia pannosa,Angiospermae,Compositae,Rare,Rare,Velvet Daisy-bush,Mount Remark
 Olearia passerinoides,Angiospermae,Compositae,Rare,Rare,Sticky Daisy-bush,
 Olearia picridifolia,Angiospermae,Compositae,Rare,Rare,Rasp Daisy-bush,
 Olearia suffruticosa,Angiospermae,Compositae,Endangered,Endangered,Clustered Daisy-bush,
-Oncosiphon suffruticosum,Angiospermae,Compositae,Declared,Declared,Calomba Daisy,Yellow Top
 Onychogalea lunata,,,SA: E,Endangered,Crescent Nailtail Wallaby,
 Ophidiocephalus taeniatus,,,SA: R,Rare,Bronzeback Legless Lizard ,
 Ophioglossum polyphyllum,Pteridophyta,Ophioglossaceae,Rare,Rare,Large Adder's-tongue,
-Opuntia aurantiaca,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia elata,Angiospermae,Cactaceae,Declared,Declared,Riverina Pear,
-Opuntia elatior,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia engelmannii,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia ficus-indica,Angiospermae,Cactaceae,Declared,Declared,Indian Fig,
-Opuntia leoglossa,Angiospermae,Cactaceae,Declared,Declared,Lion's Tongue,Chicken Dance Cactus
-Opuntia linguiformis,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia microdasys,Angiospermae,Cactaceae,Declared,Declared,Bunny-ears,Rabbit-ears
-Opuntia monacantha,Angiospermae,Cactaceae,Declared,Declared,Drooping Prickly Pear,Barbary Fig
-Opuntia polyacantha,Angiospermae,Cactaceae,Declared,Declared,Grizzly Bear Cactus,
-Opuntia polyacantha,Angiospermae,Cactaceae,Declared,Declared,Grizzly Bear Cactus,
-Opuntia puberula,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia robusta,Angiospermae,Cactaceae,Declared,Declared,Wheel Pear,Wheel Cactus
-Opuntia sp. A (C.Schrank s.n. AD98351226),Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia streptacantha,Angiospermae,Cactaceae,Declared,Declared,,
-Opuntia stricta,Angiospermae,Cactaceae,Declared,Declared,Erect Prickly Pear,Common Prickly Pear
-Opuntia tomentosa,Angiospermae,Cactaceae,Declared,Declared,Velvet Pear,Velvety Tree Pear
 Oreomyrrhis eriopoda,Angiospermae,Umbelliferae,Endangered,Endangered,Australian Carraway,
 Oriolus gittatus,,,SA: R,Rare,Olive-backed Oriole,
 Ornduffia umbricola,Angiospermae,Menyanthaceae,Vulnerable,Vulnerable,Beauglehole's Marsh-flower,Lax Marsh-flower
 Ornithorhynchus anatinus,,,SA: E,Endangered,Platypus,
 Orobanche cernua,Angiospermae,Orobanchaceae,Rare,Rare,Australian Broomrape,
-Orobanche ramosa,Angiospermae,Orobanchaceae,Declared,Declared,Branched Broomrape,
 Osteocarpum acropterum,Angiospermae,Chenopodiaceae,Rare,Rare,Wingless Bonefruit,Water Weed
 Osteocarpum pentapterum,Angiospermae,Chenopodiaceae,Endangered,Endangered,Five-wing Bonefruit,
 Ottelia ovalifolia,Angiospermae,Hydrocharitaceae,Rare,Rare,Swamp Lily,
-Oxalis pes-caprae,Angiospermae,Oxalidaceae,Declared,Declared,Soursob,Soursop
 Oxyura australis,,,SA: R,Rare,Blue-billed Duck,
 Ozothamnus pholidotus,Angiospermae,Compositae,Vulnerable,Vulnerable,Scaly Haeckeria,
 Ozothamnus scaber,Angiospermae,Compositae,Vulnerable,Vulnerable,Rough Bush-everlasting,Rough Everlasting
-Pachycephala inornata,,,SA: R,Rare,Gilbert’s Whistler,
+Pachycephala inornata,,,SA: R,Rare,Gilbertâ€™s Whistler,
 Pachycephala olivacea,,,SA: E,Endangered,Olive Whistler,
 Pachycephala rufogularis,,,SA: R,Rare,Red-lored Whistler,
 Pandion haliaetus,,,SA: E,Endangered,Osprey,
 Paracaleana disjuncta,Angiospermae,Orchidaceae,Endangered,Endangered,Black-beak Duck-orchid,
 Paracaleana minor,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Small Duck-orchid,
-Parkinsonia aculeata,Angiospermae,Leguminosae,Declared,Declared,Jerusalem Thorn,Parkinsonia
 Pedionomus torquatus,,,SA:E,Endangered,Plains-wanderer,
-Peganum harmala,Angiospermae,Zygophyllaceae,Declared,Declared,African Rue,Harmal
 Pentapogon quadrifidus,Angiospermae,Gramineae,Rare,Rare,Five-awn Spear-grass,
 Perameles eremiana,,,SA: E,Endangered,Desert Bandicoot,
 Perameles gunnii,,,SA: E,Endangered,Eastern Barred Bandicoot,
@@ -874,14 +784,12 @@ Phyllangium sulcatum,Angiospermae,Loganiaceae,Vulnerable,Vulnerable,,
 Phyllanthus calycinus,Angiospermae,Euphorbiaceae,Rare,Rare,Snowdrop Spurge,False Boronia
 Phylloglossum drummondii,Pteridophyta,Lycopodiaceae,Rare,Rare,Pigmy Clubmoss,
 Physeter macrocephalus,,,SA: R,Rare,Sperm Whale,
-Picnomon acarna,Angiospermae,Compositae,Declared,Declared,Soldier Thistle,Yellow-plumed Thistle
 Picris squarrosa,Angiospermae,Compositae,Rare,Rare,Squat Picris,Hawkweed Picris
 Pilularia novae-hollandiae,Pteridophyta,Marsileaceae,Rare,Rare,Austral Pillwort,
 Pimelea hewardiana,Angiospermae,Thymelaeaceae,Vulnerable,Vulnerable,,
 Pimelea ligustrina,Angiospermae,Thymelaeaceae,Endangered,Endangered,Tall Riceflower,
 Pimelea penicillaris,Angiospermae,Thymelaeaceae,Rare,Rare,Sandhill Riceflower,
 Pimelea williamsonii,Angiospermae,Thymelaeaceae,Rare,Rare,Williamson's Riceflower,
-Pinus halepensis,Gymnospermae,Pinaceae,Declared,Declared,Aleppo Pine,
 Plagiobothrys orthostatus,Angiospermae,Boraginaceae,Vulnerable,Vulnerable,,
 Plantago multiscapa,Angiospermae,Plantaginaceae,Vulnerable,Vulnerable,Many-stem Plantain,
 Plantago sp. A (A.C.Robinson 704),Angiospermae,Plantaginaceae,Rare,Rare,Pearson Island Plantain,
@@ -932,7 +840,6 @@ Prasophyllum spicatum,Angiospermae,Orchidaceae,Endangered,Endangered,Dense Leek-
 Prasophyllum tortilis,Angiospermae,Orchidaceae,Endangered,Endangered,Goldsack's Leek-orchid,
 Prasophyllum validum,Angiospermae,Orchidaceae,Vulnerable,Vulnerable,Mount Remarkable Leek-orchid,Robust Leek-orchid
 Proablepharus kinghorni,,,SA: R,Rare,Blacksoil Skink ,
-Prosopis juliflora,Angiospermae,Leguminosae,Declared,Declared,Mesquite,
 Prostanthera calycina,Angiospermae,Labiatae,Vulnerable,Vulnerable,West Coast Mintbush,Limestone Mintbush
 Prostanthera chlorantha,Angiospermae,Labiatae,Rare,Rare,Green Mintbush,
 Prostanthera eurybioides,Angiospermae,Labiatae,Endangered,Endangered,Monarto Mintbush,
@@ -942,7 +849,7 @@ Pseudemoia baudini,,,SA: R,Rare,Bight Coast Skink ,
 Pseudemoia pagenstecheri,,,SA: R,Rare,Tussock Skink ,
 Pseudemoia rawlinsoni,,,SA: V,Vulnerable,Glossy Grass Skink ,
 Pseudomys australis,,,SA: V,Vulnerable,Plains Mouse,
-Pseudomys gouldii,,,SA: E,Endangered,Gould’s Mouse,
+Pseudomys gouldii,,,SA: E,Endangered,Gouldâ€™s Mouse,
 Pseudomys shortridgei,,,SA: E,Endangered,Heath Mouse,
 Pseudonaja guttata,,,SA: R,Rare,Spotted Brown Snake ,
 Pseudophryne bibronii,,,SA: R,Rare,Brown Toadlet  ,
@@ -1007,14 +914,9 @@ Ranunculus inundatus,Angiospermae,Ranunculaceae,Rare,Rare,River Buttercup,
 Ranunculus papulentus,Angiospermae,Ranunculaceae,Vulnerable,Vulnerable,Large River Buttercup,
 Ranunculus pumilio,Angiospermae,Ranunculaceae,Vulnerable,Vulnerable,Smooth-fruit Ferny Buttercup,Small-flower Buttercup
 Ranunculus robertsonii,Angiospermae,Ranunculaceae,Rare,Rare,Slender Buttercup,
-Ranunculus sceleratus,Angiospermae,Ranunculaceae,Declared,Declared,Celery Buttercup,
 Ranunculus sessiliflorus,Angiospermae,Ranunculaceae,Vulnerable,Vulnerable,Annual Buttercup,Small-flower Buttercup
 Rattus lutreolus,,,SA: R,Rare,Swamp Rat,
 Rattus tunneyi,,,SA: E,Endangered,Pale Field-rat,
-Reseda lutea,Angiospermae,Resedaceae,Declared,Declared,Cut-leaf Mignonette,Yellow Mignonette
-Reseda phyteuma,Angiospermae,Resedaceae,Declared,Declared,Rampion Mignonette,
-Rhamnus alaternus,Angiospermae,Rhamnaceae,Declared,Declared,Blowfly Bush,Buckthorn
-Rhaponticum repens,Angiospermae,Compositae,Declared,Declared,Creeping Knapweed,Hard-head Thistle
 Rhodanthe anthemoides,Angiospermae,Compositae,Endangered,Endangered,Chamomile Everlasting,Chamomile Sunray
 Rhodanthe oppositifolia,Angiospermae,Compositae,Vulnerable,Vulnerable,Twin-leaf Everlasting,Twin-leaf Sunray
 Rhytidosporum procumbens,Angiospermae,Pittosporaceae,Rare,Rare,White Rhytidosporum,White Marianth
@@ -1023,32 +925,11 @@ Roepera humillima,Angiospermae,Zygophyllaceae,Rare,Rare,Small-fruit Twinleaf,
 Roepera hybrida,Angiospermae,Zygophyllaceae,Rare,Rare,,
 Rorippa dictyosperma,Angiospermae,Cruciferae,Rare,Rare,Forest Bitter-cress,
 Rorippa laciniata,Angiospermae,Cruciferae,Rare,Rare,Jagged Bitter-cress,Perennial Marsh Cress
-Rosa canina,Angiospermae,Rosaceae,Declared,Declared,Dog Rose,
-Rosa rubiginosa,Angiospermae,Rosaceae,Declared,Declared,Sweet Briar,
 Rostratula australis,,,SA:V,Vulnerable,Australian Painted-snipe,
-Rubus anglocandicans,Angiospermae,Rosaceae,Declared,Declared,,
-Rubus erythrops,Angiospermae,Rosaceae,Declared,Declared,,
-Rubus laciniatus,Angiospermae,Rosaceae,Declared,Declared,Cut-leaf Blackberry,Cut-leaf Bramble
-Rubus leucostachys,Angiospermae,Rosaceae,Declared,Declared,Blackberry,
-Rubus phaeocarpus,Angiospermae,Rosaceae,Declared,Declared,,
-Rubus riddelsdellii,Angiospermae,Rosaceae,Declared,Declared,,
-Rubus rubritinctus,Angiospermae,Rosaceae,Declared,Declared,,
-Rubus ulmifolius,Angiospermae,Rosaceae,Declared,Declared,Thornless Blackberry,
-Rubus ulmifolius,Angiospermae,Rosaceae,Declared,Declared,Blackberry,
-Rubus vestitus,Angiospermae,Rosaceae,Declared,Declared,Blackberry,
 Rumex dumosus,Angiospermae,Polygonaceae,Rare,Rare,Wiry Dock,
 Rytidosperma laeve,Angiospermae,Gramineae,Rare,Rare,Smooth Wallaby-grass,
 Rytidosperma tenuius,Angiospermae,Gramineae,Rare,Rare,Short-awn Wallaby-grass,Purplish Wallaby-grass
 Saccolaimus flaviventris,,,SA:R,Rare,Yellow-bellied Sheath-tailed Bat,
-Salix alba,Angiospermae,Salicaceae,Declared,Declared,White Willow,
-Salix cinerea,Angiospermae,Salicaceae,Declared,Declared,Grey Sallow,Common Sallow
-Salix fragilis,Angiospermae,Salicaceae,Declared,Declared,White Crack Willow,
-Salix matsudana,Angiospermae,Salicaceae,Declared,Declared,,
-Salix pendulina,Angiospermae,Salicaceae,Declared,Declared,Weeping Willow,Willow
-Salix rubens,Angiospermae,Salicaceae,Declared,Declared,White Crack Willow,
-Salix sepulcralis,Angiospermae,Salicaceae,Declared,Declared,Weeping Willow,Willow
-Salix sepulcralis,Angiospermae,Salicaceae,Declared,Declared,Weeping Willow,Willow
-Salvinia molesta,Pteridophyta,Salviniaceae,Declared,Declared,,
 Samolus eremaeus,Angiospermae,Primulaceae,Rare,Rare,Desert Samolus,
 Santalum spicatum,Angiospermae,Santalaceae,Vulnerable,Vulnerable,Sandalwood,Australian Sandalwood
 Sarcozona bicarinata,Angiospermae,Aizoaceae,Vulnerable,Vulnerable,Ridged Noon-flower,
@@ -1065,7 +946,6 @@ Schoenus lepidosperma,Angiospermae,Cyperaceae,Rare,Rare,Slender Bog-rush,
 Schoenus sculptus,Angiospermae,Cyperaceae,Rare,Rare,Gimlet Bog-rush,Gimlet Bog-sedge
 Schoenus tesquorum,Angiospermae,Cyperaceae,Rare,Rare,Grassy Bog-rush,Soft Bog-sedge
 Scleranthus diander,Angiospermae,Caryophyllaceae,Endangered,Endangered,Tufted Knawel,
-Sclerolaena birchii,Angiospermae,Chenopodiaceae,Declared,Declared,Galvanised Burr,Galvanised Bindyi
 Sclerolaena blackiana,Angiospermae,Chenopodiaceae,Rare,Rare,Black's Bindyi,Black's Copperburr
 Sclerolaena fontinalis,Angiospermae,Chenopodiaceae,Rare,Rare,Mound Spring Bindyi,
 Sclerolaena fusiformis,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,,
@@ -1076,19 +956,15 @@ Senecio behrianus,Angiospermae,Compositae,Endangered,Endangered,Behr's Groundsel
 Senecio gawlerensis,Angiospermae,Compositae,Rare,Rare,Gawler Ranges Groundsel,
 Senecio gypsicola,Angiospermae,Compositae,Rare,Rare,Gypsum Groundsel,Gypsum Othonna
 Senecio helichrysoides,Angiospermae,Compositae,Endangered,Endangered,George's Groundsel,Grey Groundsel
-Senecio jacobaea,Angiospermae,Compositae,Declared,Declared,Ragwort,St Jame's Wort
 Senecio laceratus,Angiospermae,Compositae,Rare,Rare,Cut-leaf Groundsel,Coarse-tooth Groundsel
 Senecio macrocarpus,Angiospermae,Compositae,Vulnerable,Vulnerable,Large-fruit Groundsel,
 Senecio megaglossus,Angiospermae,Compositae,Endangered,Endangered,Large-flower Groundsel,Superb Groundsel
 Senecio pinnatifolius,Angiospermae,Compositae,Rare,Rare,,
 Senecio psilocarpus,Angiospermae,Compositae,Vulnerable,Vulnerable,,
 Sida sp. Wakaya Desert (C.Dunlop 1984),Angiospermae,Malvaceae,Rare,Rare,,
-Silene vulgaris,Angiospermae,Caryophyllaceae,Declared,Declared,Bladder Campion,Blue Root
-Silybum marianum,Angiospermae,Compositae,Declared,Declared,Variegated Thistle,Cabbage Thistle
 Sminthopsis aitkeni,,,SA: E,Endangered,Kangaroo Island Dunnart,
 Sminthopsis psammophila,,,SA: V,Vulnerable,Sandhill Dunnart,
 Sminthopsis youngsoni,,,SA: R,Rare,Lesser Hairy-footed Dunnart,
-Solanum elaeagnifolium,Angiospermae,Solanaceae,Declared,Declared,Silver-leaf Nightshade,Silver Nightshade
 Solanum eremophilum,Angiospermae,Solanaceae,Rare,Rare,Rare Nightshade,
 Sphaerolobium minus,Angiospermae,Leguminosae,Rare,Rare,Leafless Globe-pea,
 Spiranthes australis,Angiospermae,Orchidaceae,Rare,Rare,Austral Lady's Tresses,Ladies Tresses
@@ -1144,21 +1020,20 @@ Swainsona sericea,Angiospermae,Leguminosae,Endangered,Endangered,Silky Swainson-
 Swainsona vestita,Angiospermae,Leguminosae,Vulnerable,Vulnerable,,
 Swainsona viridis,Angiospermae,Leguminosae,Vulnerable,Vulnerable,Creeping Darling Pea,
 Synostemon ramosissimus,Angiospermae,Euphorbiaceae,Rare,Rare,,
-Taphozous hilli,,,SA:R,Rare,Hill’s Sheath-tailed Bat,
-Tasmacetus shepherdi,,,SA: R,Rare,Shepherd’s Beaked Whale (Tasman Beaked Whale),
+Taphozous hilli,,,SA:R,Rare,Hillâ€™s Sheath-tailed Bat,
+Tasmacetus shepherdi,,,SA: R,Rare,Shepherdâ€™s Beaked Whale (Tasman Beaked Whale),
 Tecticornia cupuliformis,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,,
 Tecticornia flabelliformis,Angiospermae,Chenopodiaceae,Vulnerable,Vulnerable,Bead Samphire,Bead Glasswort
 Tecticornia lepidosperma,Angiospermae,Chenopodiaceae,Rare,Rare,,
 Templetonia battii,Angiospermae,Leguminosae,Rare,Rare,Spiny Templetonia,
 Templetonia stenophylla,Angiospermae,Leguminosae,Vulnerable,Vulnerable,Leafy Templetonia,
-Tephrocactus articulatus,Angiospermae,Cactaceae,Declared,Declared,Paper-spine Cactus,Paper-spine Cholla
 Tetrarrhena distichophylla,Angiospermae,Gramineae,Vulnerable,Vulnerable,Hairy Rice-grass,
 Teucrium grandiusculum,Angiospermae,Labiatae,Vulnerable,Vulnerable,,
 Teucrium grandiusculum,Angiospermae,Labiatae,Endangered,Endangered,,
-Thalassarche bulleri,,,SA:V,Vulnerable,Buller’s Albatross,
+Thalassarche bulleri,,,SA:V,Vulnerable,Bullerâ€™s Albatross,
 Thalassarche cauta,,,SA:V,Vulnerable,Shy Albatross,
 Thalassarche chrysostoma,,,SA:V,Vulnerable,Grey-headed Albatross,
-Thalassarche lvini,,,SA:V,Vulnerable,Salvin’s Albatross,
+Thalassarche lvini,,,SA:V,Vulnerable,Salvinâ€™s Albatross,
 Thelionema caespitosum,Angiospermae,Liliaceae,Vulnerable,Vulnerable,Tufted Lily,Tufted Blue-lily
 Thelymitra aristata,Angiospermae,Orchidaceae,Endangered,Endangered,Great Sun-orchid,Giant Sun-orchid
 Thelymitra batesii,Angiospermae,Orchidaceae,Rare,Rare,,
@@ -1192,7 +1067,6 @@ Thysanotus wangariensis,Angiospermae,Liliaceae,Rare,Rare,Eyre Peninsula Fringe-l
 Tiliqua adelaidensis,,,SA: E,Endangered,Pygmy Bluetongue ,
 Todea barbara,Pteridophyta,Osmundaceae,Endangered,Endangered,King Fern,Austral King-fern
 Trachymene thysanocarpa,Angiospermae,Umbelliferae,Rare,Rare,Native Parsnip,Parsnip Trachymene
-Tribulus terrestris,Angiospermae,Zygophyllaceae,Declared,Declared,Caltrop,Cat-head
 Trichosurus vulpecula,,,SA: R,Rare,Common Brushtail Possum,
 Tricostularia pauciflora,Angiospermae,Cyperaceae,Endangered,Endangered,Needle Bog-rush,Needle Bog-sedge
 Triglochin minutissima,Angiospermae,Juncaginaceae,Rare,Rare,Tiny Arrowgrass,
@@ -1205,7 +1079,6 @@ Turnix varius,,,SA: R,Rare,Painted Buttonquail,
 Typhonium alismifolium,Angiospermae,Araceae,Rare,Rare,,
 Tyto longimembris,,,SA: R,Rare,Eastern Grass Owl,
 Tyto novaehollandiae,,,SA: E,Endangered,Australian Masked Owl,
-Ulex europaeus,Angiospermae,Leguminosae,Declared,Declared,Gorse,Furze
 Uperoleia capitulata,,,SA: R,Rare,Small-headed Toadlet  ,
 Utricularia australis,Angiospermae,Lentibulariaceae,Rare,Rare,Yellow Bladderwort,
 Utricularia beaugleholei,Angiospermae,Lentibulariaceae,Vulnerable,Vulnerable,Beauglehole's Bladderwort,
@@ -1228,7 +1101,6 @@ Vittadinia australasica,Angiospermae,Compositae,Vulnerable,Vulnerable,New Hollan
 Vombatus ursinus,,,SA: R,Rare,Common Wombat,
 Wahlenbergia gymnoclada,Angiospermae,Campanulaceae,Vulnerable,Vulnerable,Naked Bluebell,
 Wallabia bicolor,,,SA: V,Vulnerable,Swamp Wallaby,
-Watsonia meriana,Angiospermae,Iridaceae,Declared,Declared,Bulbil Watsonia,Wild Watsonia
 Wurmbea decumbens,Angiospermae,Liliaceae,Rare,Rare,Trailing Nancy,Trailing Star-lily
 Wurmbea deserticola,Angiospermae,Liliaceae,Rare,Rare,Desert Nancy,Desert Star-lily
 Wurmbea dioica,Angiospermae,Liliaceae,Endangered,Endangered,Lagoon Nancy,Lagoon Star-lily
@@ -1238,8 +1110,6 @@ Wurmbea nilpinna,Angiospermae,Liliaceae,Vulnerable,Vulnerable,,
 Wurmbea sinora,Angiospermae,Liliaceae,Endangered,Endangered,,
 Wurmbea stellata,Angiospermae,Liliaceae,Rare,Rare,Star Nancy,Star-lily
 Wurmbea uniflora,Angiospermae,Liliaceae,Endangered,Endangered,One-flower Nancy,Single-flower Star-lily
-Xanthium spinosum,Angiospermae,Compositae,Declared,Declared,Bathurst Burr,Spiny Cocklebur
-Xanthium strumarium,Angiospermae,Compositae,Declared,Declared,Californian Burr,
 Xanthorrhoea minor,Angiospermae,Liliaceae,Endangered,Endangered,Little Yacca,Little Grass-tree
 Xanthorrhoea semiplana,Angiospermae,Liliaceae,Rare,Rare,Tate's Grass-tree,
 Xanthorrhoea thorntonii,Angiospermae,Liliaceae,Rare,Rare,Desert Grass-tree,
@@ -1250,7 +1120,7 @@ Xyris operculata,Angiospermae,Xyridaceae,Rare,Rare,Tall Yellow-eye,
 Zannichellia palustris,Angiospermae,Zannichelliaceae,Rare,Rare,,
 Zieria veronicea,Angiospermae,Rutaceae,Rare,Rare,Pink Zieria,
 Zieria veronicea,Angiospermae,Rutaceae,Rare,Rare,Pink Zieria,
-Ziphius cavirostris,,,SA: R,Rare,Cuvier’s Beaked Whale (Goose-beaked Whale),
+Ziphius cavirostris,,,SA: R,Rare,Cuvierâ€™s Beaked Whale (Goose-beaked Whale),
 Zoothera lunulata,,,SA: R,Rare,Bassian Thrush,
 Zostera muelleri,Angiospermae,Zosteraceae,Rare,Rare,Garweed,
 Zoysia macrantha,Angiospermae,Gramineae,Rare,Rare,Manila Grass,
