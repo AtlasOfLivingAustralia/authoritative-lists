@@ -62,4 +62,10 @@ The table below indicates the Source status values provided by State organisatio
 |	VIC	|	P   |	All ssp threatened	|
 |	VIC	|	K   |	Poorly known	|
 
-
+# Data Updates/ETL rules by State
+The table below highlights the rules/updates required for processing source data for ALA upload. <br>
+<br>**Note:** 
+| **State** | **List Type**| **Updates/ETL Rules**|
+| --------- | ------------------|--------------|
+|	Qld	|	Conservation	|		| 
+|	Tas	|	Conservation	|	|
