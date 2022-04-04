@@ -1,0 +1,38 @@
+id,job,dir,inputDir,configDir,datasetID,nomenclaturalCode,defaultOrganisation,geographicCoverage,taxonomicCoverage,sourceUrl,defaultVernacularStatus,defaultTaxonomicStatus
+afd,afd,AFD,,,dr2699,ICZN,Australian Biological Resources Study,Australia,Animalia,,,inferredAccepted
+apni,additional_nsl,APNI,APC,"APNI,NSL",dr2700,ICN,Australian Biological Resources Study,Australia,Plantae,,,inferredAccepted
+apc,nsl,APC,,"APC,NSL",dr5214,ICN,Australian Biological Resources Study,Australia,Plantae,,,inferredAccepted
+ausfungi,nsl,AusFungi,,"AusFungi,NSL",dr2702,ICN,Royal Botanic Gardens Victoria,Australia,Fungi,,,inferredAccepted
+ausmoss,nsl,AusMoss,,"AusMoss,NSL",dr2703,ICN,Royal Botanic Gardens Victoria,Australia,Bryophytes,,,inferredAccepted
+lichens,nsl,Lichens,,"Lichens,NSL",dr17664,ICN,Australian Biological Resources Study,Australia,"Ascomycota, Basidiomycota",,,inferredAccepted
+caab,caab,CAAB,,,dr2704,,CSIRO,Australia,,https://www.marine.csiro.au/data/caab/taxon_report.cfm?caab_code=,,inferredAccepted
+nzor,nzor,NZOR,,,dr2707,,Landcare Research,New Zealand,,,,inferredAccepted
+col,col,CoL,,,dr2705,,The Catalogue of Life,,"Archaea, Bacteria, Protozoa, Chromista, Virusesm Fungi",,,inferredAccepted
+dr656,ala,dr656,,,dr656,,,Australia,,,common,miscellaneousLiterature
+dr649,ala,dr649,,,dr649,,,"Australian Captal Territory, Australia",,,common,miscellaneousLiterature
+dr650,ala,dr650,,,dr650,,,"New South Wales, Australia",,,common,miscellaneousLiterature
+dr652,ala,dr652,,,dr652,,,"Queensland, Australia",,,common,miscellaneousLiterature
+dr655,ala,dr655,,,dr655,,,"Victoria, Australia",,,common,miscellaneousLiterature
+dr654,ala,dr654,,,dr654,,,"Tasmania, Australia",,,common,miscellaneousLiterature
+dr653,ala,dr653,,,dr653,,,"South Australia, Australia",,,common,miscellaneousLiterature
+dr2201,ala,dr2201,,,dr2201,,,"Western Australia, Australia",,,common,miscellaneousLiterature
+dr651,ala,dr651,,,dr651,,,"Northern Territory, Australia",,,common,miscellaneousLiterature
+dr2627,ala,dr2627,,,dr2627,,,Australia-Pacific Region,,,common,miscellaneousLiterature
+dr494,ala,dr494,,,dr494,,,Australia,,,common,miscellaneousLiterature
+dr487,ala,dr487,,,dr487,ICZN,Birds Australia,Australia,Aves,,common,miscellaneousLiterature
+dr2285,ala,dr2285,,,dr2285,ICN,,New Zealand,Plantae,,common,miscellaneousLiterature
+dr492,ala,dr492,,,dr492,,,"Northern Territory, Australia",,,common,miscellaneousLiterature
+dr493,ala,dr493,,,dr493,,,"Queensland, Australia",,,common,miscellaneousLiterature
+dr884,ala,dr884,,,dr884,,,"South Australia, Australia",,,common,miscellaneousLiterature
+dr467,ala,dr467,,,dr467,,,"Western Australia, Australia",,,common,miscellaneousLiterature
+dr1782,ala,dr1782,,,dr1782,ICN,Department of Environment & Primary Industries,"Victoria, Australia",Plantae,,common,miscellaneousLiterature
+dr967,ala,dr967,,,dr967,ICZN,Department of Environment & Primary Industries,"Victoria, Australia",Animalia,,common,miscellaneousLiterature
+dr7933,ala,dr7933,,,dr7933,,Atlas of Living Australia,Australia,,,common,miscellaneousLiterature
+dr18234,ala,dr18234,,,dr18234,,"Department of Agriculture, Water and the Environment",Australia,,,common,miscellaneousLiterature
+dr17825,ala,dr17825,,,dr17825,,"Department of Agriculture, Water and the Environment",Australia,,,common,miscellaneousLiterature
+dr16496,ala,dr16496,,,dr16496,,"Department of Agriculture, Water and the Environment",Australia,,,common,miscellaneousLiterature
+dr13266,ala_vernacular_list,dr13266,,,dr13266,,"Senior knowledge holders from the Gamilaraay, Yuwaalaraay & Yuwaalayaay languages",Australia,,,indigenousKnowledge,inferredAccepted
+dr17880,ala_vernacular_list,dr17880,,,dr17880,,,Australia,,,indigenousKnowledge,inferredAccepted
+dr17886,ala_vernacular_list,dr17886,,,dr17886,,,Australia,,,indigenousKnowledge,inferredAccepted
+ala-vernacular,ala_vernacular,ALA,,,dr7933,,Atlas of Living Australia,Australia,,,common,inferredAccepted
+Collapse,,,,,,,,,,,,
