@@ -62,10 +62,14 @@ The table below indicates the Source status values provided by State organisatio
 |	VIC	|	P   |	All ssp threatened	|
 |	VIC	|	K   |	Poorly known	|
 
-# Data Updates/ETL rules by State
-The table below highlights the rules/updates required for processing source data for ALA upload. <br>
-<br>**Note:** 
-| **State** | **List Type**| **Updates/ETL Rules**|
-| --------- | ------------------|--------------|
-|	Qld	|	Conservation	|		| 
-|	Tas	|	Conservation	|	|
+# Data Processing
+Datasets provided have been in a variety of formats requiring extensive manual processing to format for upload to ALA. <br> 
+The table below highlights the types of data received and the effort required for processing source data for ALA upload. <br>
+<br>
+| **State** | **List Type**| **Extract source**|**Processing/Rules**|
+| --------- | ------------------|--------------|--------------------|
+|	ACT	|	Conservation	|MS Word|<ol><li> Website has MS WORD, PDF and HTML format</li><li>Downloaded MS Word document</li><li>Manual copy and paste to to Excel spreadsheet</li><li>Data processed using Jupyter notebook including: </li><ul><li>Mapping DWC terms</li></ul></ol> |
+|	EPBC	|	Sensitive	|Webpage|<ol><li> Two separate flora and fauna lists were available on the website</li><li>These lists were copied from webpage to a CSV file along with hyperlinks and separate categories i.e. frogs, birds, reptiles etc</li><li>Data was cleaned and processed using Jupyter notebook including: </li><ul> Extracting hyperlinks from the text </li> <li>Mapping DWC terms </li> <li>Date format conversion </li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files</li> </ul></ol> |
+|	NT	|	Conservation	|Webpage	|<ol><li> Two separate flora and fauna lists were available on the website</li> <li>Lists text copied from webpage to a CSV file</li> <li>Data was cleaned and processed using Jupyter notebook including: </li><li>Splitting single species name column into 2 separate columns for *vernacularName* and *scientificName* <li>Mapping DWC terms</li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files together</li></ul></ol> |
+|	QLD	|	Sensitive	|Webpage/Excel	|<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms</li> <li>Deleting data without a status</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>|
+|	QLD	|	Conservation	|Webpage/Excel	|<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms <li>Deleting data without a status</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>|
