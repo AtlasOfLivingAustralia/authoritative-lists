@@ -3,9 +3,8 @@ Directory containing new:
 2. Sensitive Lists
 
 Information relating to processing of data can be found at:
-1. [Status/Source status mapping (xlsx)](https://github.com/AtlasOfLivingAustralia/authoritative-lists/tree/master/analysis/Status-SourceStatus-Mapping.xlsx)
-2. [Status/Source status mapping (csv)](https://github.com/AtlasOfLivingAustralia/authoritative-lists/tree/master/analysis/Status-SourceStatus-Mapping.csv)
-3. Data Processing
+1. [Status/Source status mapping (csv)](https://raw.githubusercontent.com/AtlasOfLivingAustralia/authoritative-lists/master/analysis/Status-SourceStatus-Mapping.csv)
+2. Data Processing
 
 # Data Processing
 Datasets provided have been in a variety of formats requiring extensive manual processing to format for upload to ALA, in addition to the status mappings described above. The table below summarises the types of data received and the effort required to format the data for upload. <br>
