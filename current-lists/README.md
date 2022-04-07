@@ -3,7 +3,7 @@ Directory containing new:
 2. Sensitive Lists
 
 Information relating to processing of data can be found at:
-1. [Status/Source status mapping (csv)](https://raw.githubusercontent.com/AtlasOfLivingAustralia/authoritative-lists/master/analysis/Status-SourceStatus-Mapping.csv)
+1. [Status/Source status mapping by State](https://raw.githubusercontent.com/AtlasOfLivingAustralia/authoritative-lists/master/analysis/Status-SourceStatus-Mapping.csv)
 2. Data Processing
 
 # Data Processing
