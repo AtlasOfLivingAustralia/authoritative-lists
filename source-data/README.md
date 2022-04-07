@@ -29,3 +29,19 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | Vic|https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf|PDF|xxxxxxxx|
 | WA|June 2021 List: https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-animals <br> <br>Fauna:   https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Fauna%20List.xlsx <br> <br> Flora:https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Flora%20List%205%20December%202018.xlsx <br><br>[WA Conservation Codes](https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Conservation%20code%20definitions.pdf) |Excel|Download|
 
+## Data Processing
+#### ACT
+
+#### NSW 
+
+#### NT 
+
+#### Qld
+
+#### SA
+
+#### Tas
+
+#### Vic
+
+#### WA
