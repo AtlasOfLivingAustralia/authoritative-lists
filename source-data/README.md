@@ -29,19 +29,35 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 | Vic|https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf|PDF|xxxxxxxx|
 | WA|June 2021 List: https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-animals <br> <br>Fauna:   https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Fauna%20List.xlsx <br> <br> Flora:https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Flora%20List%205%20December%202018.xlsx <br><br>[WA Conservation Codes](https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Conservation%20code%20definitions.pdf) |Excel|Download|
 
-## Data Processing
+# Data Processing
 #### ACT
+**Conservation**	<ol><li> Website has MS WORD PDF and HTML format</li><li>Downloaded MS Word document</li><li>Manual copy and paste to to Excel spreadsheet</li><li>Data processed using Jupyter notebook including: </li><ul><li>Mapping DWC terms</li></ul></ol>
 
+#### EPBC
+**Conservation**	<ol><li> Two separate flora and fauna lists were available on the website</li><li>These lists were copied from webpage to a CSV file along with hyperlinks and separate categories i.e. frogs birds reptiles etc</li><li>Data was cleaned and processed using Jupyter notebook including: </li><ul> Extracting hyperlinks from the text </li> <li>Mapping DWC terms </li> <li>Date format conversion </li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files</li> </ul></ol> 
+ 
 #### NSW 
+**Sensitive**	<ol> <li> Webpage</li> <li>JSON files available for download</li> <li>Data cleaned and processed using Jupyter notebook including: </li> <ul> <li> JSON loaded into Python Dataframe </li> <li> Dataframe saved to CSV file </li> <li>Data arrangement/reformat</li> <li>Mapping DWC terms</li> <li>Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences</li> <li>Creating additional columns with appropriate values</li> </ul></ol>
+**Conservation** <ol> <li> Webpage</li> <li>JSON files available for download</li> <li>Data cleaned and processed using Jupyter notebook including: </li> <ul> <li> JSON loaded into Python Dataframe </li> <li> Dataframe saved to CSV file </li> <li>Data arrangement/reformat</li> <li>Mapping DWC terms</li> <li>Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences</li> <li>Creating additional columns with appropriate values</li> </ul></ol>
 
 #### NT 
+**Conservation**	<ol><li> Two separate flora and fauna lists were available on the website</li> <li>Lists text copied from webpage to a CSV file</li> <li>Data was cleaned and processed using Jupyter notebook including: </li><li>Splitting single species name column into 2 separate columns for *vernacularName* and *scientificName* <li>Mapping DWC terms</li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files together</li></ul></ol>
 
-#### Qld
+#### QLD
+**Sensitive**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms</li> <li>Deleting data without a status</li> <li>Mapping provided status to status codes</li><li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
+**Conservation**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms <li>Deleting data without a status</li> <li>Mapping provided status to status codes</li> <li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
 
 #### SA
+SA **Sensitive**/**Conservation** <ol> <li> Fauna/Flora in separate files</li> <li>Read Excel files into dataframes from these sources:</li> <ul> <li>Fauna: metadata and BDBSA taxonomy</li> <li>Flora: metadata and BDBSA taxonomy</li> </ul> <li>Data processed using Jupyter notebook including: </li> <ul> <li>Fauna file</li> <ul> <li> set dataframe names to line 2</li> <li> remove first 3 lines</li> <li> filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li> rename the columns to DwC friendly names</li> <li> remove some unwanted columns</li> </ul> <li>Flora file</li> <ul> <li>filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li>rename the columns to DwC friendly names</li> <li>remove some unwanted columns</li> </ul> <li>Concatenate dataframes</li> <li>Save to single CSV file</li> </ul> </li> </ol>
 
-#### Tas
+#### TAS
+**Conservation**	<ol><li> Downloaded Excel spreadsheet</li> <li>Data processed including: </li> <ul> <li>Mapping DWC terms</li> <li>Deleting data without a status</li> <li>Mapping provided status to status codes</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
 
-#### Vic
+#### VIC
+**Sensitive**	<ol><li>Data in  .SHP file sensitive and **Conservation** combined</li> <li>Data processed including: </li><ul> <li>Extract .SHP data to dataframe</li> <li>Save to CSV</li> <li>Remove/Save conservation data to CSV</li><li>Deleting data without a status</li> <li>Mapping DWC terms</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+**Conservation**	<ol><li>Data in  .SHP file **Sensitive** and conservation combined</li> <li>Data processed including: </li><ul> <li>Extract .SHP data to dataframe</li> <li>Save to CSV</li><li>Use Conservation data saved from Sensitive List</li> <li>Deleting data without a status</li> <li>Mapping DWC terms</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
 
 #### WA
+**Sensitive**	<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+**Conservation**	<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+
