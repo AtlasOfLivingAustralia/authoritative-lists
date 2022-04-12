@@ -1,133 +1,133 @@
 ﻿taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,status,EPBCstatus,conservationSignificant,confidential,endemicity
-655,Animalia,Amphibia,Myobatrachidae,Taudactylus pleione,Kroombit tinkerfrog,"Czechura, 1986",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-656,Animalia,Amphibia,Myobatrachidae,Taudactylus rheophilus,northern tinkerfrog,"Liem & Hosmer, 1973",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-18279,Animalia,Amphibia,Hylidae,Litoria kroombitensis,Kroombit treefrog,"Hoskin, Hines, Meyer, Clarke & Cunningham, 2013",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-602,Animalia,Amphibia,Hylidae,Litoria lorica,little waterfall frog,"Davies & McDonald, 1979",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-31630,Animalia,Amphibia,Hylidae,Litoria myola,Kuranda treefrog,"Hoskin, 2007",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-606,Animalia,Amphibia,Hylidae,Litoria nyakalensis,mountain mistfrog,"Liem, 1974",Critically endangered,Critically endangered,Yes,No,Queensland endemic
-29399,Animalia,Amphibia,Microhylidae,Cophixalus concinnus,beautiful nurseryfrog,"Tyler, 1979",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-707,Animalia,Amphibia,Microhylidae,Cophixalus hosmeri,rattling nurseryfrog,"Zweifel, 1985",Critically endangered,Critically endangered,Yes,No,Queensland endemic
-709,Animalia,Amphibia,Microhylidae,Cophixalus mcdonaldi,Mount Elliot nurseryfrog,"Zweifel, 1985",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-710,Animalia,Amphibia,Microhylidae,Cophixalus monticola,mountain nurseryfrog,"Richards, Dennis, Trenerry & Werren, 1994",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-711,Animalia,Amphibia,Microhylidae,Cophixalus neglectus,Bellenden Ker nurseryfrog,"Zweifel, 1962",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-22453,Animalia,Aves,Procellariidae,Pterodroma heraldica,Herald petrel,"Salvin, 1888",Critically endangered,Critically endangered,Yes,No,Naturally occurs in Australia and overseas
-1892,Animalia,Aves,Pedionomidae,Pedionomus torquatus,plains-wanderer,"Gould, 1841",Critically endangered,Critically endangered,Yes,No,Australian endemic
-1878,Animalia,Aves,Scolopacidae,Calidris ferruginea,curlew sandpiper,"(Pontoppidan, 1763)",Critically endangered,Critically endangered,Yes,No,Naturally occurs in Australia and overseas
-1856,Animalia,Aves,Scolopacidae,Calidris tenuirostris,great knot,"(Horsfield, 1821)",Critically endangered,Critically endangered,Yes,No,Naturally occurs in Australia and overseas
-1478,Animalia,Aves,Meliphagidae,Anthochaera phrygia,regent honeyeater,"(Shaw, 1794)",Critically endangered,Critically endangered,Yes,Yes,Australian endemic
-6,Animalia,Insecta,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",Critically endangered,,Yes,Yes,Queensland endemic
-33590,Animalia,Malacostraca,Parastacidae,Euastacus bindal,Mt Elliot crayfish,"Morgan, 1989",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-36167,Animalia,Malacostraca,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",Critically endangered,,Yes,No,Queensland endemic
-33594,Animalia,Malacostraca,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",Critically endangered,,Yes,Yes,Queensland endemic
-33595,Animalia,Malacostraca,Parastacidae,Euastacus maidae,,"(Riek, 1956)",Critically endangered,,Yes,Yes,Queensland endemic
-828,Animalia,Mammalia,Vombatidae,Lasiorhinus krefftii,northern hairy-nosed wombat,"(Owen, 1872)",Critically endangered,Critically endangered,Yes,No,Australian endemic
-30272,Animalia,Reptilia Laurenti,Chelidae,Elseya albagula,southern snapping turtle,"Thomson, Georges & Limpus, 2006",Critically endangered,Critically endangered,Yes,No,Queensland endemic
-29733,Animalia,Reptilia Laurenti,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",Critically endangered,,Yes,Yes,Queensland endemic
-40991,Animalia,Reptilia Laurenti,Diplodactylidae,Oedura lineata,Arcadia velvet gecko,"Hoskin, 2019",Critically endangered,,Yes,No,Queensland endemic
-389,Animalia,Reptilia Laurenti,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",Critically endangered,,Yes,Yes,Queensland endemic
-27779,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus gulbaru,Gulbaru gecko,"Hoskin, Couper & Schneider 2003",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-31986,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus kabikabi,Oakview leaf-tailed gecko,"Couper, Hamley & Hoskin 2008",Critically endangered,,Yes,Yes,Queensland endemic
-40916,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus pinnaclensis,Pinnacles leaf-tailed gecko,"Hoskin, Bertola & Higgie, 2019",Critically endangered,,Yes,No,Queensland endemic
-34950,Animalia,Reptilia Laurenti,Carphodactylidae,Saltuarius eximius,Cape Melville leaf-tailed gecko,"Hoskin & Couper, 2013",Critically endangered,,Yes,Yes,Queensland endemic
-238,Animalia,Reptilia Laurenti,Scincidae,Ctenotus serotinus,gravel-downs ctenotus,"Czechura, 1986",Critically endangered,,Yes,No,Queensland endemic
-125,Animalia,Reptilia Laurenti,Scincidae,Nangura spinosa,Nangur skink,"Covacevich, Couper & James, 1993",Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-100,Animalia,Reptilia Laurenti,Scincidae,Techmarscincus jigurru,Bartle Frere cool-skink,"(Covacevich, 1984)",Critically endangered,,Yes,No,Queensland endemic
-35645,Animalia,Reptilia Laurenti,Typhlopidae,Anilios insperatus,Fassifern blind snake,"Venchi, Wilson & Borsboom, 2015",Critically endangered,,Yes,No,Queensland endemic
-41668,Plantae,Magnoiopsida,Apocynaceae,Leichhardtia araujacea,,(F.Muell.) P.I.Forst.,Critically endangered,Extinct,Yes,No,Queensland endemic
-8847,Plantae,Magnoiopsida,Asteraceae,Calotis glabrescens,,C.T.White,Critically endangered,,Yes,No,Queensland endemic
-31728,Plantae,Magnoiopsida,Asteraceae,Trioncinia patens,,A.E.Holland & D.W.Butler,Critically endangered,,Yes,No,Queensland endemic
-34929,Plantae,Magnoiopsida,Athyriaceae,Diplazium squamuligerum,,(Rosenst.) Parris,Critically endangered,,Yes,Yes,Queensland endemic
-2265,Plantae,Magnoiopsida,Boryaceae,Borya inopinata,Stewart Range pincushion lily,P.I.Forst. & E.J.Thomps.,Critically endangered,,Yes,No,Queensland endemic
-30590,Plantae,Magnoiopsida,Byttneriaceae,Commersonia beeronensis,,Guymer,Critically endangered,,Yes,No,Queensland endemic
-31105,Plantae,Magnoiopsida,Byttneriaceae,Commersonia inglewoodensis,,Guymer,Critically endangered,,Yes,No,Queensland endemic
-30649,Plantae,Magnoiopsida,Byttneriaceae,Commersonia pearnii,,Guymer,Critically endangered,,Yes,No,Queensland endemic
-31104,Plantae,Magnoiopsida,Byttneriaceae,Commersonia perkinsiana,headland commersonia,Guymer,Critically endangered,,Yes,No,Queensland endemic
-41357,Plantae,Magnoiopsida,Campanulaceae,Lobelia fontana,,Albr. & N.G.Walsh,Critically endangered,,Yes,No,Queensland endemic
-26374,Plantae,Magnoiopsida,Celastraceae,Apatophyllum flavovirens,,A.R.Bean & Jessup,Critically endangered,,Yes,No,Queensland endemic
-35014,Plantae,Magnoiopsida,Clusiaceae,Garcinia russellii,Rupert's mangosteen,W.E.Cooper,Critically endangered,,Yes,No,Queensland endemic
-19354,Plantae,Magnoiopsida,Cunoniaceae,Eucryphia jinksii,Springbrook leatherwood,P.I.Forst.,Critically endangered,,Yes,No,Australian endemic
-18195,Plantae,Magnoiopsida,Cunoniaceae,Eucryphia wilkiei,Wilkie's leatherwood,B.Hyland,Critically endangered,Vulnerable,Yes,No,Queensland endemic
-41407,Plantae,Magnoiopsida,Droseraceae,Drosera buubugujin,,M.T.Mathieson,Critically endangered,,Yes,Yes,Queensland endemic
-31864,Plantae,Magnoiopsida,Eriocaulaceae,Eriocaulon aloefolium,,R.J.Davies,Critically endangered,,Yes,No,Queensland endemic
-31863,Plantae,Magnoiopsida,Eriocaulaceae,Eriocaulon giganticum,,R.J.Davies,Critically endangered,,Yes,No,Queensland endemic
-34716,Plantae,Magnoiopsida,Euphorbiaceae,Croton lucens,,P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-28906,Plantae,Magnoiopsida,Euphorbiaceae,Croton mamillatus,Bahrs scrub croton,P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-30717,Plantae,Magnoiopsida,Gyrostemonaceae,Gyrostemon osmus,,Halford,Critically endangered,,Yes,No,Queensland endemic
-21854,Plantae,Magnoiopsida,Hymenophyllaceae,Crepidomanes aphlebioides,,(Christ) I.M.Turner,Critically endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
-41411,Plantae,Magnoiopsida,Hymenophyllaceae,Hymenophyllum reinwardtii,,Bosch,Critically endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
-13883,Plantae,Magnoiopsida,Hymenophyllaceae,Hymenophyllum whitei,,Goy,Critically endangered,Extinct,Yes,Yes,Queensland endemic
-40987,Plantae,Magnoiopsida,Lamiaceae,Coleus acariformis,Mt Emu mint bush,(P.I.Forst.) P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-41025,Plantae,Magnoiopsida,Lamiaceae,Coleus insularis,Millmerran mint bush,(P.I.Forst.) P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-41031,Plantae,Magnoiopsida,Lamiaceae,Coleus minutus,Mt Mulligan mint bush,(P.I.Forst.) P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-9727,Plantae,Magnoiopsida,Lamiaceae,Prostanthera albohirta,,C.T.White,Critically endangered,Critically endangered,Yes,No,Queensland endemic
-35582,Plantae,Magnoiopsida,Lamiaceae,Prostanthera athertoniana,,B.J.Conn & T.C.Wilson,Critically endangered,,Yes,No,Queensland endemic
-35828,Plantae,Magnoiopsida,Lamiaceae,Prostanthera eungella,,B.J.Conn & K.M.Proft,Critically endangered,,Yes,No,Queensland endemic
-35580,Plantae,Magnoiopsida,Lamiaceae,Prostanthera mulliganensis,Mount Mulligan prostanthera,B.J.Conn & T.C.Wilson,Critically endangered,,Yes,No,Queensland endemic
-33258,Plantae,Magnoiopsida,Lamiaceae,Prostanthera tozerana,Mount Tozer prostanthera,B.J.Conn & T.C.Wilson,Critically endangered,,Yes,No,Queensland endemic
-41056,Plantae,Magnoiopsida,Leguminosae,Acacia castorum,Peak Range wattle,Pedley,Critically endangered,,Yes,No,Queensland endemic
-14906,Plantae,Magnoiopsida,Leguminosae,Acacia deuteroneura,,Pedley,Critically endangered,Vulnerable,Yes,No,Queensland endemic
-40993,Plantae,Magnoiopsida,Leguminosae,Acacia forsteri,Forster's wattle,Pedley,Critically endangered,,Yes,No,Queensland endemic
-36080,Plantae,Magnoiopsida,Leguminosae,Cynometra roseiflora,,W.E.Cooper,Critically endangered,,Yes,No,Queensland endemic
-36500,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus creber,rat-tail tassel-fern,(Alderw.) A.R.Field & Bostock,Critically endangered,,Yes,Yes,Queensland endemic
-34757,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus dalhousieanus,blue tassel-fern,(Spring) A.R.Field & Bostock,Critically endangered,Endangered,Yes,Yes,Naturally occurs in Queensland and overseas
-34780,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus squarrosus,water tassel-fern,(G.Forst.) A.Love & D.Love,Critically endangered,Critically endangered,Yes,Yes,Naturally occurs in Australia and overseas
-28807,Plantae,Magnoiopsida,Myrtaceae,Backhousia oligantha,,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-34783,Plantae,Magnoiopsida,Myrtaceae,Backhousia tetraptera,,Jackes,Critically endangered,,Yes,No,Queensland endemic
-27465,Plantae,Magnoiopsida,Myrtaceae,Decaspermum struckoilicum,Mount Morgan myrtle,N.Snow & Guymer,Critically endangered,Endangered,Yes,No,Queensland endemic
-12508,Plantae,Magnoiopsida,Myrtaceae,Eucalyptus argophloia,Queensland western white gum,Blakely,Critically endangered,Vulnerable,Yes,No,Queensland endemic
-40899,Plantae,Magnoiopsida,Myrtaceae,Eucalyptus dalveenica,,"T.L.Collins, R.L.Andrew & J.J.Bruhl",Critically endangered,,Yes,No,Queensland endemic
-27386,Plantae,Magnoiopsida,Myrtaceae,Gossia gonoclada,,(F.Muell. ex Benth.) N.Snow & Guymer,Critically endangered,Endangered,Yes,No,Queensland endemic
-34763,Plantae,Magnoiopsida,Myrtaceae,Homoranthus brevistylis,,L.M.Copel.,Critically endangered,,Yes,No,Queensland endemic
-26372,Plantae,Magnoiopsida,Myrtaceae,Homoranthus coracinus,,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-34765,Plantae,Magnoiopsida,Myrtaceae,Homoranthus cummingii,,L.M.Copel.,Critically endangered,,Yes,No,Queensland endemic
-34988,Plantae,Magnoiopsida,Myrtaceae,Homoranthus inopinatus,,"L.M.Copel., J.Holmes & G.Holmes",Critically endangered,,Yes,No,Queensland endemic
-8991,Plantae,Magnoiopsida,Myrtaceae,Homoranthus montanus,,Craven & S.R.Jones,Critically endangered,Vulnerable,Yes,No,Queensland endemic
-16918,Plantae,Magnoiopsida,Myrtaceae,Homoranthus papillatus,mouse bush,Byrnes,Critically endangered,,Yes,No,Queensland endemic
-33038,Plantae,Magnoiopsida,Myrtaceae,Homoranthus tricolor,,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-31444,Plantae,Magnoiopsida,Myrtaceae,Homoranthus vagans,,L.M.Copel.,Critically endangered,,Yes,No,Queensland endemic
-8919,Plantae,Magnoiopsida,Myrtaceae,Kunzea calida,Mount Stewart kunzea,F.Muell.,Critically endangered,,Yes,No,Queensland endemic
-28334,Plantae,Magnoiopsida,Myrtaceae,Lenwebbia sp. (Main Range P.R.Sharpe+ 4877),Main Range lenwebbia,,Critically endangered,,Yes,No,Queensland endemic
-35418,Plantae,Magnoiopsida,Myrtaceae,Melaleuca lophocoracorum,,"A.J.Ford, Craven & Brophy",Critically endangered,,Yes,No,Queensland endemic
-22496,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia angustifolia,narrow-leaved malletwood,N.Snow & Guymer,Critically endangered,,Yes,No,Queensland endemic
-27480,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia longisepala,,N.Snow & A.J.Ford,Critically endangered,,Yes,No,Queensland endemic
-13407,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia maideniana,smooth scrub turpentine,C.T.White,Critically endangered,,Yes,No,Australian endemic
-14255,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia rubescens,scrub turpentine,(Benth.) Miq.,Critically endangered,Critically endangered,Yes,No,Australian endemic
-16290,Plantae,Magnoiopsida,Myrtaceae,Rhodomyrtus psidioides,native guava,(G.Don) Benth.,Critically endangered,Critically endangered,Yes,No,Australian endemic
-28903,Plantae,Magnoiopsida,Myrtaceae,Syzygium fratris,brotherly love lilly pilly,Craven,Critically endangered,,Yes,No,Queensland endemic
-2180,Plantae,Magnoiopsida,Oleaceae,Notelaea ipsviciensis,Cooneana olive,W.K.Harris,Critically endangered,Critically endangered,Yes,No,Queensland endemic
-10517,Plantae,Magnoiopsida,Orchidaceae,Oberonia attenuata,Mossman fairy orchid,Dockrill,Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-34709,Plantae,Magnoiopsida,Poaceae,Calyptochloa gracillima subsp. ipsviciensis,,E.J.Thomps.,Critically endangered,,Yes,No,Queensland endemic
-6389,Plantae,Magnoiopsida,Proteaceae,Grevillea hodgei,Coochin Hills grevillea,Olde & Marriott,Critically endangered,Critically endangered,Yes,No,Queensland endemic
-17042,Plantae,Magnoiopsida,Proteaceae,Grevillea scortechinii subsp. scortechinii,black grevillea,F.Muell.,Critically endangered,Critically endangered,Yes,No,Queensland endemic
-34711,Plantae,Magnoiopsida,Proteaceae,Hollandaea porphyrocarpa,,A.J.Ford & P.H.Weston,Critically endangered,,Yes,No,Queensland endemic
-8185,Plantae,Magnoiopsida,Proteaceae,Macadamia jansenii,,C.L.Gross & P.H.Weston,Critically endangered,Endangered,Yes,Yes,Queensland endemic
-2427,Plantae,Magnoiopsida,Pteridaceae,Antrophyum austroqueenslandicum,,D.L.Jones,Critically endangered,Critically endangered,Yes,Yes,Queensland endemic
-34656,Plantae,Magnoiopsida,Rhamnaceae,Emmenosperma pancherianum,,Baill.,Critically endangered,,Yes,No,Naturally occurs in Australia and overseas
-35848,Plantae,Magnoiopsida,Rhizophoraceae,Bruguiera x hainesii,Haines's orange mangrove,C.G.Rogers,Critically endangered,Critically endangered,Yes,No,Naturally occurs in Queensland and overseas
-28273,Plantae,Magnoiopsida,Rutaceae,Boronia grimshawii,Grimshaw's boronia,Duretto,Critically endangered,,Yes,No,Queensland endemic
-28656,Plantae,Magnoiopsida,Rutaceae,Zieria actites,Mt Larcom stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31689,Plantae,Magnoiopsida,Rutaceae,Zieria alata,Mt Lewis stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31684,Plantae,Magnoiopsida,Rutaceae,Zieria boolbunda,Boolbunda stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31683,Plantae,Magnoiopsida,Rutaceae,Zieria cephalophila,Sydney Heads stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31682,Plantae,Magnoiopsida,Rutaceae,Zieria eungellaensis,Eungella stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-28663,Plantae,Magnoiopsida,Rutaceae,Zieria exsul,banished stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-41055,Plantae,Magnoiopsida,Rutaceae,Zieria fordii,Ford's stink bush,Duretto,Critically endangered,,Yes,No,Queensland endemic
-41601,Plantae,Magnoiopsida,Rutaceae,Zieria gymnocarpa,,(J.A.Armstr.) P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31681,Plantae,Magnoiopsida,Rutaceae,Zieria hydroscopica,Coominglah stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-31685,Plantae,Magnoiopsida,Rutaceae,Zieria madida,Thornton Peak stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-2321,Plantae,Magnoiopsida,Rutaceae,Zieria montana,Mt Barney stink bush,J.A.Armstr.,Critically endangered,,Yes,No,Queensland endemic
-31680,Plantae,Magnoiopsida,Rutaceae,Zieria scopulus,Flinders Peak stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-28217,Plantae,Magnoiopsida,Rutaceae,Zieria vagans,Gurgeena stink bush,Duretto & P.I.Forst.,Critically endangered,,Yes,No,Queensland endemic
-41054,Plantae,Magnoiopsida,Rutaceae,Zieria wilhelminae,Mt Jukes stink bush,Duretto,Critically endangered,,Yes,No,Queensland endemic
-35541,Plantae,Magnoiopsida,Solanaceae,Solanum adoxum,,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-22296,Plantae,Magnoiopsida,Solanaceae,Solanum angustum,,Domin,Critically endangered,,Yes,No,Queensland endemic
-33795,Plantae,Magnoiopsida,Solanaceae,Solanum orgadophilum,Capella potato bush,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-41063,Plantae,Magnoiopsida,Sterculiaceae,Brachychiton guymeri,,"J.A.Bever., Fensham & P.I.Forst.",Critically endangered,,Yes,No,Queensland endemic
-7389,Plantae,Magnoiopsida,Sterculiaceae,Brachychiton sp. (Ormeau L.H.Bird AQ435851),Ormeau bottle tree,,Critically endangered,Critically endangered,Yes,No,Queensland endemic
-41350,Plantae,Magnoiopsida,Thelypteridaceae,Amblovenatum immersum,,(Blume) Parris,Critically endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
-41354,Plantae,Magnoiopsida,Thelypteridaceae,Amblovenatum tildeniae,,(Holttum) T.E.Almeida & A.R.Field,Critically endangered,,Yes,Yes,Queensland endemic
-36389,Plantae,Magnoiopsida,Thymelaeaceae,Pimelea fugiens,,A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
-36428,Plantae,Magnoiopsida,Thymelaeaceae,Pimelea leptospermoides subsp. bowmanni,,(Benth.) A.R.Bean,Critically endangered,,Yes,No,Queensland endemic
+655,Animalia,Amphibia,Myobatrachidae,Taudactylus pleione,Kroombit tinkerfrog,"Czechura, 1986",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+656,Animalia,Amphibia,Myobatrachidae,Taudactylus rheophilus,northern tinkerfrog,"Liem & Hosmer, 1973",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+18279,Animalia,Amphibia,Hylidae,Litoria kroombitensis,Kroombit treefrog,"Hoskin, Hines, Meyer, Clarke & Cunningham, 2013",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+602,Animalia,Amphibia,Hylidae,Litoria lorica,little waterfall frog,"Davies & McDonald, 1979",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+31630,Animalia,Amphibia,Hylidae,Litoria myola,Kuranda treefrog,"Hoskin, 2007",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+606,Animalia,Amphibia,Hylidae,Litoria nyakalensis,mountain mistfrog,"Liem, 1974",Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+29399,Animalia,Amphibia,Microhylidae,Cophixalus concinnus,beautiful nurseryfrog,"Tyler, 1979",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+707,Animalia,Amphibia,Microhylidae,Cophixalus hosmeri,rattling nurseryfrog,"Zweifel, 1985",Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+709,Animalia,Amphibia,Microhylidae,Cophixalus mcdonaldi,Mount Elliot nurseryfrog,"Zweifel, 1985",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+710,Animalia,Amphibia,Microhylidae,Cophixalus monticola,mountain nurseryfrog,"Richards, Dennis, Trenerry & Werren, 1994",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+711,Animalia,Amphibia,Microhylidae,Cophixalus neglectus,Bellenden Ker nurseryfrog,"Zweifel, 1962",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+22453,Animalia,Aves,Procellariidae,Pterodroma heraldica,Herald petrel,"Salvin, 1888",Critically Endangered,Critically Endangered,Yes,No,Naturally occurs in Australia and overseas
+1892,Animalia,Aves,Pedionomidae,Pedionomus torquatus,plains-wanderer,"Gould, 1841",Critically Endangered,Critically Endangered,Yes,No,Australian endemic
+1878,Animalia,Aves,Scolopacidae,Calidris ferruginea,curlew sandpiper,"(Pontoppidan, 1763)",Critically Endangered,Critically Endangered,Yes,No,Naturally occurs in Australia and overseas
+1856,Animalia,Aves,Scolopacidae,Calidris tenuirostris,great knot,"(Horsfield, 1821)",Critically Endangered,Critically Endangered,Yes,No,Naturally occurs in Australia and overseas
+1478,Animalia,Aves,Meliphagidae,Anthochaera phrygia,regent honeyeater,"(Shaw, 1794)",Critically Endangered,Critically Endangered,Yes,Yes,Australian endemic
+6,Animalia,Insecta,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",Critically Endangered,,Yes,Yes,Queensland endemic
+33590,Animalia,Malacostraca,Parastacidae,Euastacus bindal,Mt Elliot crayfish,"Morgan, 1989",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+36167,Animalia,Malacostraca,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",Critically Endangered,,Yes,No,Queensland endemic
+33594,Animalia,Malacostraca,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",Critically Endangered,,Yes,Yes,Queensland endemic
+33595,Animalia,Malacostraca,Parastacidae,Euastacus maidae,,"(Riek, 1956)",Critically Endangered,,Yes,Yes,Queensland endemic
+828,Animalia,Mammalia,Vombatidae,Lasiorhinus krefftii,northern hairy-nosed wombat,"(Owen, 1872)",Critically Endangered,Critically Endangered,Yes,No,Australian endemic
+30272,Animalia,Reptilia Laurenti,Chelidae,Elseya albagula,southern snapping turtle,"Thomson, Georges & Limpus, 2006",Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+29733,Animalia,Reptilia Laurenti,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",Critically Endangered,,Yes,Yes,Queensland endemic
+40991,Animalia,Reptilia Laurenti,Diplodactylidae,Oedura lineata,Arcadia velvet gecko,"Hoskin, 2019",Critically Endangered,,Yes,No,Queensland endemic
+389,Animalia,Reptilia Laurenti,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",Critically Endangered,,Yes,Yes,Queensland endemic
+27779,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus gulbaru,Gulbaru gecko,"Hoskin, Couper & Schneider 2003",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+31986,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus kabikabi,Oakview leaf-tailed gecko,"Couper, Hamley & Hoskin 2008",Critically Endangered,,Yes,Yes,Queensland endemic
+40916,Animalia,Reptilia Laurenti,Carphodactylidae,Phyllurus pinnaclensis,Pinnacles leaf-tailed gecko,"Hoskin, Bertola & Higgie, 2019",Critically Endangered,,Yes,No,Queensland endemic
+34950,Animalia,Reptilia Laurenti,Carphodactylidae,Saltuarius eximius,Cape Melville leaf-tailed gecko,"Hoskin & Couper, 2013",Critically Endangered,,Yes,Yes,Queensland endemic
+238,Animalia,Reptilia Laurenti,Scincidae,Ctenotus serotinus,gravel-downs ctenotus,"Czechura, 1986",Critically Endangered,,Yes,No,Queensland endemic
+125,Animalia,Reptilia Laurenti,Scincidae,Nangura spinosa,Nangur skink,"Covacevich, Couper & James, 1993",Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+100,Animalia,Reptilia Laurenti,Scincidae,Techmarscincus jigurru,Bartle Frere cool-skink,"(Covacevich, 1984)",Critically Endangered,,Yes,No,Queensland endemic
+35645,Animalia,Reptilia Laurenti,Typhlopidae,Anilios insperatus,Fassifern blind snake,"Venchi, Wilson & Borsboom, 2015",Critically Endangered,,Yes,No,Queensland endemic
+41668,Plantae,Magnoiopsida,Apocynaceae,Leichhardtia araujacea,,(F.Muell.) P.I.Forst.,Critically Endangered,Extinct,Yes,No,Queensland endemic
+8847,Plantae,Magnoiopsida,Asteraceae,Calotis glabrescens,,C.T.White,Critically Endangered,,Yes,No,Queensland endemic
+31728,Plantae,Magnoiopsida,Asteraceae,Trioncinia patens,,A.E.Holland & D.W.Butler,Critically Endangered,,Yes,No,Queensland endemic
+34929,Plantae,Magnoiopsida,Athyriaceae,Diplazium squamuligerum,,(Rosenst.) Parris,Critically Endangered,,Yes,Yes,Queensland endemic
+2265,Plantae,Magnoiopsida,Boryaceae,Borya inopinata,Stewart Range pincushion lily,P.I.Forst. & E.J.Thomps.,Critically Endangered,,Yes,No,Queensland endemic
+30590,Plantae,Magnoiopsida,Byttneriaceae,Commersonia beeronensis,,Guymer,Critically Endangered,,Yes,No,Queensland endemic
+31105,Plantae,Magnoiopsida,Byttneriaceae,Commersonia inglewoodensis,,Guymer,Critically Endangered,,Yes,No,Queensland endemic
+30649,Plantae,Magnoiopsida,Byttneriaceae,Commersonia pearnii,,Guymer,Critically Endangered,,Yes,No,Queensland endemic
+31104,Plantae,Magnoiopsida,Byttneriaceae,Commersonia perkinsiana,headland commersonia,Guymer,Critically Endangered,,Yes,No,Queensland endemic
+41357,Plantae,Magnoiopsida,Campanulaceae,Lobelia fontana,,Albr. & N.G.Walsh,Critically Endangered,,Yes,No,Queensland endemic
+26374,Plantae,Magnoiopsida,Celastraceae,Apatophyllum flavovirens,,A.R.Bean & Jessup,Critically Endangered,,Yes,No,Queensland endemic
+35014,Plantae,Magnoiopsida,Clusiaceae,Garcinia russellii,Rupert's mangosteen,W.E.Cooper,Critically Endangered,,Yes,No,Queensland endemic
+19354,Plantae,Magnoiopsida,Cunoniaceae,Eucryphia jinksii,Springbrook leatherwood,P.I.Forst.,Critically Endangered,,Yes,No,Australian endemic
+18195,Plantae,Magnoiopsida,Cunoniaceae,Eucryphia wilkiei,Wilkie's leatherwood,B.Hyland,Critically Endangered,Vulnerable,Yes,No,Queensland endemic
+41407,Plantae,Magnoiopsida,Droseraceae,Drosera buubugujin,,M.T.Mathieson,Critically Endangered,,Yes,Yes,Queensland endemic
+31864,Plantae,Magnoiopsida,Eriocaulaceae,Eriocaulon aloefolium,,R.J.Davies,Critically Endangered,,Yes,No,Queensland endemic
+31863,Plantae,Magnoiopsida,Eriocaulaceae,Eriocaulon giganticum,,R.J.Davies,Critically Endangered,,Yes,No,Queensland endemic
+34716,Plantae,Magnoiopsida,Euphorbiaceae,Croton lucens,,P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+28906,Plantae,Magnoiopsida,Euphorbiaceae,Croton mamillatus,Bahrs scrub croton,P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+30717,Plantae,Magnoiopsida,Gyrostemonaceae,Gyrostemon osmus,,Halford,Critically Endangered,,Yes,No,Queensland endemic
+21854,Plantae,Magnoiopsida,Hymenophyllaceae,Crepidomanes aphlebioides,,(Christ) I.M.Turner,Critically Endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
+41411,Plantae,Magnoiopsida,Hymenophyllaceae,Hymenophyllum reinwardtii,,Bosch,Critically Endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
+13883,Plantae,Magnoiopsida,Hymenophyllaceae,Hymenophyllum whitei,,Goy,Critically Endangered,Extinct,Yes,Yes,Queensland endemic
+40987,Plantae,Magnoiopsida,Lamiaceae,Coleus acariformis,Mt Emu mint bush,(P.I.Forst.) P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+41025,Plantae,Magnoiopsida,Lamiaceae,Coleus insularis,Millmerran mint bush,(P.I.Forst.) P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+41031,Plantae,Magnoiopsida,Lamiaceae,Coleus minutus,Mt Mulligan mint bush,(P.I.Forst.) P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+9727,Plantae,Magnoiopsida,Lamiaceae,Prostanthera albohirta,,C.T.White,Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+35582,Plantae,Magnoiopsida,Lamiaceae,Prostanthera athertoniana,,B.J.Conn & T.C.Wilson,Critically Endangered,,Yes,No,Queensland endemic
+35828,Plantae,Magnoiopsida,Lamiaceae,Prostanthera eungella,,B.J.Conn & K.M.Proft,Critically Endangered,,Yes,No,Queensland endemic
+35580,Plantae,Magnoiopsida,Lamiaceae,Prostanthera mulliganensis,Mount Mulligan prostanthera,B.J.Conn & T.C.Wilson,Critically Endangered,,Yes,No,Queensland endemic
+33258,Plantae,Magnoiopsida,Lamiaceae,Prostanthera tozerana,Mount Tozer prostanthera,B.J.Conn & T.C.Wilson,Critically Endangered,,Yes,No,Queensland endemic
+41056,Plantae,Magnoiopsida,Leguminosae,Acacia castorum,Peak Range wattle,Pedley,Critically Endangered,,Yes,No,Queensland endemic
+14906,Plantae,Magnoiopsida,Leguminosae,Acacia deuteroneura,,Pedley,Critically Endangered,Vulnerable,Yes,No,Queensland endemic
+40993,Plantae,Magnoiopsida,Leguminosae,Acacia forsteri,Forster's wattle,Pedley,Critically Endangered,,Yes,No,Queensland endemic
+36080,Plantae,Magnoiopsida,Leguminosae,Cynometra roseiflora,,W.E.Cooper,Critically Endangered,,Yes,No,Queensland endemic
+36500,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus creber,rat-tail tassel-fern,(Alderw.) A.R.Field & Bostock,Critically Endangered,,Yes,Yes,Queensland endemic
+34757,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus dalhousieanus,blue tassel-fern,(Spring) A.R.Field & Bostock,Critically Endangered,Endangered,Yes,Yes,Naturally occurs in Queensland and overseas
+34780,Plantae,Magnoiopsida,Lycopodiaceae,Phlegmariurus squarrosus,water tassel-fern,(G.Forst.) A.Love & D.Love,Critically Endangered,Critically Endangered,Yes,Yes,Naturally occurs in Australia and overseas
+28807,Plantae,Magnoiopsida,Myrtaceae,Backhousia oligantha,,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+34783,Plantae,Magnoiopsida,Myrtaceae,Backhousia tetraptera,,Jackes,Critically Endangered,,Yes,No,Queensland endemic
+27465,Plantae,Magnoiopsida,Myrtaceae,Decaspermum struckoilicum,Mount Morgan myrtle,N.Snow & Guymer,Critically Endangered,Endangered,Yes,No,Queensland endemic
+12508,Plantae,Magnoiopsida,Myrtaceae,Eucalyptus argophloia,Queensland western white gum,Blakely,Critically Endangered,Vulnerable,Yes,No,Queensland endemic
+40899,Plantae,Magnoiopsida,Myrtaceae,Eucalyptus dalveenica,,"T.L.Collins, R.L.Andrew & J.J.Bruhl",Critically Endangered,,Yes,No,Queensland endemic
+27386,Plantae,Magnoiopsida,Myrtaceae,Gossia gonoclada,,(F.Muell. ex Benth.) N.Snow & Guymer,Critically Endangered,Endangered,Yes,No,Queensland endemic
+34763,Plantae,Magnoiopsida,Myrtaceae,Homoranthus brevistylis,,L.M.Copel.,Critically Endangered,,Yes,No,Queensland endemic
+26372,Plantae,Magnoiopsida,Myrtaceae,Homoranthus coracinus,,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+34765,Plantae,Magnoiopsida,Myrtaceae,Homoranthus cummingii,,L.M.Copel.,Critically Endangered,,Yes,No,Queensland endemic
+34988,Plantae,Magnoiopsida,Myrtaceae,Homoranthus inopinatus,,"L.M.Copel., J.Holmes & G.Holmes",Critically Endangered,,Yes,No,Queensland endemic
+8991,Plantae,Magnoiopsida,Myrtaceae,Homoranthus montanus,,Craven & S.R.Jones,Critically Endangered,Vulnerable,Yes,No,Queensland endemic
+16918,Plantae,Magnoiopsida,Myrtaceae,Homoranthus papillatus,mouse bush,Byrnes,Critically Endangered,,Yes,No,Queensland endemic
+33038,Plantae,Magnoiopsida,Myrtaceae,Homoranthus tricolor,,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+31444,Plantae,Magnoiopsida,Myrtaceae,Homoranthus vagans,,L.M.Copel.,Critically Endangered,,Yes,No,Queensland endemic
+8919,Plantae,Magnoiopsida,Myrtaceae,Kunzea calida,Mount Stewart kunzea,F.Muell.,Critically Endangered,,Yes,No,Queensland endemic
+28334,Plantae,Magnoiopsida,Myrtaceae,Lenwebbia sp. (Main Range P.R.Sharpe+ 4877),Main Range lenwebbia,,Critically Endangered,,Yes,No,Queensland endemic
+35418,Plantae,Magnoiopsida,Myrtaceae,Melaleuca lophocoracorum,,"A.J.Ford, Craven & Brophy",Critically Endangered,,Yes,No,Queensland endemic
+22496,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia angustifolia,narrow-leaved malletwood,N.Snow & Guymer,Critically Endangered,,Yes,No,Queensland endemic
+27480,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia longisepala,,N.Snow & A.J.Ford,Critically Endangered,,Yes,No,Queensland endemic
+13407,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia maideniana,smooth scrub turpentine,C.T.White,Critically Endangered,,Yes,No,Australian endemic
+14255,Plantae,Magnoiopsida,Myrtaceae,Rhodamnia rubescens,scrub turpentine,(Benth.) Miq.,Critically Endangered,Critically Endangered,Yes,No,Australian endemic
+16290,Plantae,Magnoiopsida,Myrtaceae,Rhodomyrtus psidioides,native guava,(G.Don) Benth.,Critically Endangered,Critically Endangered,Yes,No,Australian endemic
+28903,Plantae,Magnoiopsida,Myrtaceae,Syzygium fratris,brotherly love lilly pilly,Craven,Critically Endangered,,Yes,No,Queensland endemic
+2180,Plantae,Magnoiopsida,Oleaceae,Notelaea ipsviciensis,Cooneana olive,W.K.Harris,Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+10517,Plantae,Magnoiopsida,Orchidaceae,Oberonia attenuata,Mossman fairy orchid,Dockrill,Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+34709,Plantae,Magnoiopsida,Poaceae,Calyptochloa gracillima subsp. ipsviciensis,,E.J.Thomps.,Critically Endangered,,Yes,No,Queensland endemic
+6389,Plantae,Magnoiopsida,Proteaceae,Grevillea hodgei,Coochin Hills grevillea,Olde & Marriott,Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+17042,Plantae,Magnoiopsida,Proteaceae,Grevillea scortechinii subsp. scortechinii,black grevillea,F.Muell.,Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+34711,Plantae,Magnoiopsida,Proteaceae,Hollandaea porphyrocarpa,,A.J.Ford & P.H.Weston,Critically Endangered,,Yes,No,Queensland endemic
+8185,Plantae,Magnoiopsida,Proteaceae,Macadamia jansenii,,C.L.Gross & P.H.Weston,Critically Endangered,Endangered,Yes,Yes,Queensland endemic
+2427,Plantae,Magnoiopsida,Pteridaceae,Antrophyum austroqueenslandicum,,D.L.Jones,Critically Endangered,Critically Endangered,Yes,Yes,Queensland endemic
+34656,Plantae,Magnoiopsida,Rhamnaceae,Emmenosperma pancherianum,,Baill.,Critically Endangered,,Yes,No,Naturally occurs in Australia and overseas
+35848,Plantae,Magnoiopsida,Rhizophoraceae,Bruguiera x hainesii,Haines's orange mangrove,C.G.Rogers,Critically Endangered,Critically Endangered,Yes,No,Naturally occurs in Queensland and overseas
+28273,Plantae,Magnoiopsida,Rutaceae,Boronia grimshawii,Grimshaw's boronia,Duretto,Critically Endangered,,Yes,No,Queensland endemic
+28656,Plantae,Magnoiopsida,Rutaceae,Zieria actites,Mt Larcom stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31689,Plantae,Magnoiopsida,Rutaceae,Zieria alata,Mt Lewis stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31684,Plantae,Magnoiopsida,Rutaceae,Zieria boolbunda,Boolbunda stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31683,Plantae,Magnoiopsida,Rutaceae,Zieria cephalophila,Sydney Heads stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31682,Plantae,Magnoiopsida,Rutaceae,Zieria eungellaensis,Eungella stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+28663,Plantae,Magnoiopsida,Rutaceae,Zieria exsul,banished stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+41055,Plantae,Magnoiopsida,Rutaceae,Zieria fordii,Ford's stink bush,Duretto,Critically Endangered,,Yes,No,Queensland endemic
+41601,Plantae,Magnoiopsida,Rutaceae,Zieria gymnocarpa,,(J.A.Armstr.) P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31681,Plantae,Magnoiopsida,Rutaceae,Zieria hydroscopica,Coominglah stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+31685,Plantae,Magnoiopsida,Rutaceae,Zieria madida,Thornton Peak stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+2321,Plantae,Magnoiopsida,Rutaceae,Zieria montana,Mt Barney stink bush,J.A.Armstr.,Critically Endangered,,Yes,No,Queensland endemic
+31680,Plantae,Magnoiopsida,Rutaceae,Zieria scopulus,Flinders Peak stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+28217,Plantae,Magnoiopsida,Rutaceae,Zieria vagans,Gurgeena stink bush,Duretto & P.I.Forst.,Critically Endangered,,Yes,No,Queensland endemic
+41054,Plantae,Magnoiopsida,Rutaceae,Zieria wilhelminae,Mt Jukes stink bush,Duretto,Critically Endangered,,Yes,No,Queensland endemic
+35541,Plantae,Magnoiopsida,Solanaceae,Solanum adoxum,,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+22296,Plantae,Magnoiopsida,Solanaceae,Solanum angustum,,Domin,Critically Endangered,,Yes,No,Queensland endemic
+33795,Plantae,Magnoiopsida,Solanaceae,Solanum orgadophilum,Capella potato bush,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+41063,Plantae,Magnoiopsida,Sterculiaceae,Brachychiton guymeri,,"J.A.Bever., Fensham & P.I.Forst.",Critically Endangered,,Yes,No,Queensland endemic
+7389,Plantae,Magnoiopsida,Sterculiaceae,Brachychiton sp. (Ormeau L.H.Bird AQ435851),Ormeau bottle tree,,Critically Endangered,Critically Endangered,Yes,No,Queensland endemic
+41350,Plantae,Magnoiopsida,Thelypteridaceae,Amblovenatum immersum,,(Blume) Parris,Critically Endangered,,Yes,Yes,Naturally occurs in Queensland and overseas
+41354,Plantae,Magnoiopsida,Thelypteridaceae,Amblovenatum tildeniae,,(Holttum) T.E.Almeida & A.R.Field,Critically Endangered,,Yes,Yes,Queensland endemic
+36389,Plantae,Magnoiopsida,Thymelaeaceae,Pimelea fugiens,,A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
+36428,Plantae,Magnoiopsida,Thymelaeaceae,Pimelea leptospermoides subsp. bowmanni,,(Benth.) A.R.Bean,Critically Endangered,,Yes,No,Queensland endemic
 687,Animalia,Amphibia,Limnodynastidae,Philoria kundagungan,red-and-yellow mountainfrog,"(Ingram & Corben, 1975)",Endangered,Endangered,Yes,Yes,Australian endemic
 675,Animalia,Amphibia,Myobatrachidae,Mixophyes fleayi,Fleay's barred frog,"Corben & Ingram, 1987",Endangered,Endangered,Yes,Yes,Australian endemic
 650,Animalia,Amphibia,Myobatrachidae,Rheobatrachus vitellinus,northern gastric brooding frog,"Mahony, Tyler & Davies, 1984",Endangered,Extinct,Yes,No,Queensland endemic
@@ -144,25 +144,25 @@
 1936,Animalia,Aves,Charadriidae,Charadrius mongolus,lesser sand plover,"Pallas, 1776",Endangered,Endangered,Yes,No,Naturally occurs in Australia and overseas
 1883,Animalia,Aves,Rostratulidae,Rostratula australis,Australian painted-snipe,"(Gould, 1838)",Endangered,Endangered,Yes,No,Australian endemic
 1877,Animalia,Aves,Scolopacidae,Calidris canutus,red knot,"(Linnaeus, 1758)",Endangered,Endangered,Yes,No,Naturally occurs in Australia and overseas
-1843,Animalia,Aves,Scolopacidae,Numenius madagascariensis,eastern curlew,"(Linnaeus, 1766)",Endangered,Critically endangered,Yes,No,Naturally occurs in Australia and overseas
+1843,Animalia,Aves,Scolopacidae,Numenius madagascariensis,eastern curlew,"(Linnaeus, 1766)",Endangered,Critically Endangered,Yes,No,Naturally occurs in Australia and overseas
 1093,Animalia,Aves,Turnicidae,Turnix olivii,buff-breasted button-quail,"Robinson, 1900",Endangered,Endangered,Yes,Yes,Queensland endemic
 1900,Animalia,Aves,Laridae,Sternula nereis exsul,New Caledonian fairy tern,"Mathews, 1912",Endangered,,Yes,No,International vagrant
 1175,Animalia,Aves,Cacatuidae,Probosciger aterrimus macgillivrayi,palm cockatoo,"(Mathews, 1912)",Endangered,Vulnerable,Yes,No,Naturally occurs in Queensland and overseas
 1164,Animalia,Aves,Psittacidae,Cyclopsitta diophthalma coxeni,Coxen's fig-parrot,"Gould, 1867",Endangered,Endangered,Yes,No,Australian endemic
-1149,Animalia,Aves,Psittacidae,Lathamus discolor,swift parrot,"(Shaw, 1790)",Endangered,Critically endangered,Yes,No,Australian endemic
+1149,Animalia,Aves,Psittacidae,Lathamus discolor,swift parrot,"(Shaw, 1790)",Endangered,Critically Endangered,Yes,No,Australian endemic
 1133,Animalia,Aves,Psittacidae,Pezoporus occidentalis,night parrot,"Gould, 1861",Endangered,Endangered,Yes,Yes,Australian endemic
 1117,Animalia,Aves,Psittacidae,Psephotus chrysopterygius,golden-shouldered parrot,"Gould, 1858",Endangered,Endangered,Yes,No,Queensland endemic
 29885,Animalia,Aves,Maluridae,Amytornis barbatus barbatus,grey grasswren (Bulloo),"Favaloro & McEvey, 1968",Endangered,Endangered,Yes,Yes,Australian endemic
 1564,Animalia,Aves,Maluridae,Amytornis dorotheae,Carpentarian grasswren,"(Mathews, 1914)",Endangered,Endangered,Yes,Yes,Australian endemic
 1405,Animalia,Aves,Dasyornithidae,Dasyornis brachypterus,eastern bristlebird,"(Latham, 1801)",Endangered,Endangered,Yes,Yes,Australian endemic
-22459,Animalia,Aves,Meliphagidae,Epthianura crocea macgregori,yellow chat (Dawson),"Keast, 1958",Endangered,Critically endangered,Yes,Yes,Queensland endemic
+22459,Animalia,Aves,Meliphagidae,Epthianura crocea macgregori,yellow chat (Dawson),"Keast, 1958",Endangered,Critically Endangered,Yes,Yes,Queensland endemic
 1376,Animalia,Aves,Estrildidae,Chloebia gouldiae,Gouldian finch,"(Gould, 1844)",Endangered,Endangered,Yes,Yes,Australian endemic
 1370,Animalia,Aves,Estrildidae,Neochmia phaeton evangelinae,crimson finch (white-bellied subspecies),"(Hombron & Jacquinot, 1841)",Endangered,Endangered,Yes,Yes,Naturally occurs in Queensland and overseas
 18452,Animalia,Aves,Estrildidae,Neochmia ruficauda ruficauda,star finch (eastern subspecies),"(Gould, 1837)",Endangered,Endangered,Yes,No,Australian endemic
 1365,Animalia,Aves,Estrildidae,Poephila cincta cincta,black-throated finch (white-rumped subspecies),"Gould, 1837",Endangered,Endangered,Yes,Yes,Australian endemic
-22531,Animalia,Chondrichthyes,Odontaspididae,Carcharias taurus,greynurse shark,"Rafinesque, 1810",Endangered,Critically endangered,Yes,No,Naturally occurs in Australia and overseas
+22531,Animalia,Chondrichthyes,Odontaspididae,Carcharias taurus,greynurse shark,"Rafinesque, 1810",Endangered,Critically Endangered,Yes,No,Naturally occurs in Australia and overseas
 32708,Animalia,Insecta,Oecophoridae,Trisyntopa scatophaga,antbed moth,"(White, 1922)",Endangered,Endangered,Yes,No,Queensland endemic
-2008,Animalia,Insecta,Nymphalidae,Argynnis hyperbius inconstans,Australian fritillary,"Butler, 1873",Endangered,Critically endangered,Yes,Yes,Australian endemic
+2008,Animalia,Insecta,Nymphalidae,Argynnis hyperbius inconstans,Australian fritillary,"Butler, 1873",Endangered,Critically Endangered,Yes,Yes,Australian endemic
 33591,Animalia,Malacostraca,Parastacidae,Euastacus eungella,,"Morgan, 1988",Endangered,,Yes,No,Queensland endemic
 33593,Animalia,Malacostraca,Parastacidae,Euastacus hystricosus,,"Riek, 1951",Endangered,,Yes,No,Queensland endemic
 33596,Animalia,Malacostraca,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",Endangered,,Yes,Yes,Queensland endemic
@@ -204,7 +204,7 @@
 18839,Animalia,Reptilia Laurenti,Scincidae,Karma tryoni,Tryon's skink,"(Longman, 1918)",Endangered,,Yes,Yes,Australian endemic
 161,Animalia,Reptilia Laurenti,Scincidae,Lerista allanae,Allan's lerista,"(Longman, 1937)",Endangered,Endangered,Yes,Yes,Queensland endemic
 476,Animalia,Reptilia Laurenti,Elapidae,Hemiaspis damelii,grey snake,"(Günther, 1876)",Endangered,,Yes,No,Australian endemic
-29496,Animalia,Gastropoda,Camaenidae,Adclarkia dawsonensis,boggomoss snail,"Stanisic, 1996",Endangered,Critically endangered,Yes,No,Queensland endemic
+29496,Animalia,Gastropoda,Camaenidae,Adclarkia dawsonensis,boggomoss snail,"Stanisic, 1996",Endangered,Critically Endangered,Yes,No,Queensland endemic
 33650,Animalia,Gastropoda,Camaenidae,Adclarkia dulacca,Dulacca woodland snail,"Stanisic, 2010",Endangered,Endangered,Yes,No,Queensland endemic
 9161,Plantae,Magnoiopsida,Acanthaceae,Graptophyllum reticulatum,reticulated holly,A.R.Bean & Sharpe,Endangered,Endangered,Yes,No,Queensland endemic
 9736,Plantae,Magnoiopsida,Acanthaceae,Xerothamnella herbacea,,R.M.Barker,Endangered,Endangered,Yes,No,Queensland endemic
@@ -240,7 +240,7 @@
 12083,Plantae,Magnoiopsida,Athyriaceae,Diplazium pallidum,,(Blume) T.Moore,Endangered,Endangered,Yes,Yes,Naturally occurs in Queensland and overseas
 17868,Plantae,Magnoiopsida,Blandfordiaceae,Blandfordia grandiflora,christmas bells,R.Br.,Endangered,,Yes,No,Australian endemic
 30581,Plantae,Magnoiopsida,Byttneriaceae,Commersonia leiperi,Leiper's commersonia,Guymer,Endangered,,Yes,No,Queensland endemic
-7361,Plantae,Magnoiopsida,Byttneriaceae,Lasiopetalum sp. (Proston J.A.Baker 17),Proston velvet bush,,Endangered,Critically endangered,Yes,No,Queensland endemic
+7361,Plantae,Magnoiopsida,Byttneriaceae,Lasiopetalum sp. (Proston J.A.Baker 17),Proston velvet bush,,Endangered,Critically Endangered,Yes,No,Queensland endemic
 41358,Plantae,Magnoiopsida,Campanulaceae,Lobelia fenshamii,,N.G.Walsh & Albr.,Endangered,,Yes,No,Queensland endemic
 9497,Plantae,Magnoiopsida,Capparaceae,Capparis humistrata,,(F.Muell.) F.Muell.,Endangered,,Yes,No,Queensland endemic
 9786,Plantae,Magnoiopsida,Casuarinaceae,Allocasuarina emuina,Mt. Emu she-oak,L.A.S.Johnson,Endangered,Endangered,Yes,No,Queensland endemic
@@ -279,7 +279,7 @@
 41033,Plantae,Magnoiopsida,Lamiaceae,Coleus nitidus,,(P.I.Forst.) P.I.Forst.,Endangered,Endangered,Yes,No,Australian endemic
 41034,Plantae,Magnoiopsida,Lamiaceae,Coleus omissus,,(P.I.Forst.) P.I.Forst.,Endangered,Endangered,Yes,No,Queensland endemic
 41041,Plantae,Magnoiopsida,Lamiaceae,Coleus torrenticola,,(P.I.Forst.) P.I.Forst.,Endangered,Endangered,Yes,No,Queensland endemic
-26381,Plantae,Magnoiopsida,Lamiaceae,Prostanthera clotteniana,,(F.M.Bailey) A.R.Bean,Endangered,Critically endangered,Yes,No,Queensland endemic
+26381,Plantae,Magnoiopsida,Lamiaceae,Prostanthera clotteniana,,(F.M.Bailey) A.R.Bean,Endangered,Critically Endangered,Yes,No,Queensland endemic
 11779,Plantae,Magnoiopsida,Lamiaceae,Westringia grandifolia,,F.Muell. ex Benth.,Endangered,,Yes,No,Queensland endemic
 8942,Plantae,Magnoiopsida,Lauraceae,Endiandra cooperana,,B.Hyland,Endangered,Endangered,Yes,No,Queensland endemic
 41803,Plantae,Magnoiopsida,Lauraceae,Endiandra wongawallanensis,,L.Weber,Endangered,,Yes,No,Queensland endemic
@@ -379,7 +379,7 @@
 3491,Plantae,Magnoiopsida,Rutaceae,Dinosperma longifolium,,T.G.Hartley,Endangered,,Yes,No,Queensland endemic
 41828,Plantae,Magnoiopsida,Rutaceae,Leionema beckleri,,(F.Muell.) I.Telford & J.J.Bruhl,Endangered,,Yes,No,Australian endemic
 36199,Plantae,Magnoiopsida,Rutaceae,Murraya crenulata,,Oliv.,Endangered,,Yes,No,Naturally occurs in Queensland and overseas
-27676,Plantae,Magnoiopsida,Rutaceae,Phebalium distans,Mt Berryman phebalium,P.I.Forst.,Endangered,Critically endangered,Yes,No,Queensland endemic
+27676,Plantae,Magnoiopsida,Rutaceae,Phebalium distans,Mt Berryman phebalium,P.I.Forst.,Endangered,Critically Endangered,Yes,No,Queensland endemic
 28662,Plantae,Magnoiopsida,Rutaceae,Zieria bifida,,Duretto & P.I.Forst.,Endangered,Endangered,Yes,No,Queensland endemic
 2322,Plantae,Magnoiopsida,Rutaceae,Zieria graniticola,,J.A.Armstr. ex Duretto & P.I.Forst.,Endangered,,Yes,No,Queensland endemic
 28426,Plantae,Magnoiopsida,Rutaceae,Zieria inexpectata,,Duretto & P.I.Forst.,Endangered,,Yes,No,Queensland endemic
@@ -760,7 +760,7 @@
 8381,Plantae,Magnoiopsida,Leguminosae,Acacia pedleyi,,Tindale & Kodela,Vulnerable,,Yes,No,Queensland endemic
 14870,Plantae,Magnoiopsida,Leguminosae,Acacia peuce,waddy,F.Muell.,Vulnerable,Vulnerable,Yes,No,Australian endemic
 14081,Plantae,Magnoiopsida,Leguminosae,Acacia pubifolia,Wyberba wattle,Pedley,Vulnerable,Vulnerable,Yes,No,Australian endemic
-14873,Plantae,Magnoiopsida,Leguminosae,Acacia purpureopetala,purple-flowered wattle,F.M.Bailey,Vulnerable,Critically endangered,Yes,No,Queensland endemic
+14873,Plantae,Magnoiopsida,Leguminosae,Acacia purpureopetala,purple-flowered wattle,F.M.Bailey,Vulnerable,Critically Endangered,Yes,No,Queensland endemic
 3362,Plantae,Magnoiopsida,Leguminosae,Acacia solenota,,Pedley,Vulnerable,,Yes,No,Queensland endemic
 6393,Plantae,Magnoiopsida,Leguminosae,Acacia sp. (Castletower N.Gibson TOI345),,,Vulnerable,,Yes,No,Queensland endemic
 21785,Plantae,Magnoiopsida,Leguminosae,Acacia tingoorensis,,Pedley,Vulnerable,,Yes,No,Queensland endemic
