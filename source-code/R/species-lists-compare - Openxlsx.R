@@ -7,8 +7,8 @@ options(java.parameters = "-Xmx8000m") # for extra memory for xlsx which uses th
 library(dplyr)
 library(jsonlite)
 library(tidyr) 
-#library(xlsx)
 library(openxlsx)
+source("./source-code/R/config.R")
 
 
 # function to unwrap kvp
@@ -121,39 +121,7 @@ writeListComparison <- function(s, asIsListId, toBeListId) {
 
 }
 
-#globals
-
-env <- "PROD"
-
-if (env == "PROD") {
-  listsUrl <<- "https://lists.ala.org.au/ws/speciesListItems/"
-  directory <<- "data/prod/"
-  xlsxfile <<- paste0(directory,"conservation-list-compare.xlsx")
-  conservationLists <- data.frame(t(data.frame(c("EPBC","dr656","dr18735"),
-                                               c("ACT","dr649","dr18718"),
-                                               c("NSW","dr650","dr18736"),
-                                               c("NT","dr651","dr18704"),
-                                               c("QLD","dr652","dr18703"),
-                                               c("SA","dr653","dr18701"),
-                                               c("TAS","dr654","dr18705"),
-                                               c("VIC","dr655","dr18706"),
-                                               c("WA","dr2201","dr18714"))),row.names = NULL,stringsAsFactors = FALSE)
-  conservationLists <- setNames(conservationLists,c("stateCodes","asIsListIds","toBeListIds"))
-} else if (env == "TEST") {
-  listsUrl <<- "https://lists-test.ala.org.au/ws/speciesListItems/"
-  directory <<- "data/test/"
-  xlsxfile <<- paste0(directory,"conservation-list-compare.xlsx")
-  conservationLists <- data.frame(t(data.frame(c("EPBC","dr656","dr18397"),
-                                               c("ACT","dr649","dr18396"),
-                                               c("NSW","dr650","dr18437"),
-                                               c("NT","dr651","dr18398"),
-                                               c("QLD","dr652","dr18399"),
-                                               c("SA","dr653","dr18400"),
-                                               c("TAS","dr654","dr18401"),
-                                               c("VIC","dr655","dr18402"),
-                                               c("WA","dr2201","dr18456"))),row.names = NULL,stringsAsFactors = FALSE)
-  conservationLists <- setNames(conservationLists,c("stateCodes","asIsListIds","toBeListIds"))
-}
+conservationLists <- setNames(conservationLists,c("stateCodes","asIsListIds","toBeListIds"))
 
 for(i in 1:nrow(conservationLists)) {
   downloadLists(conservationLists[i,1],conservationLists[i,2],conservationLists[i,3])
