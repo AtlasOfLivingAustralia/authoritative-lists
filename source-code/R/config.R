@@ -1,5 +1,5 @@
-#env <- "PROD"
-env <- "TEST"
+env <- "PROD"
+#env <- "TEST"
 
 if (env == "PROD") {
   listsUrl <<- "https://lists.ala.org.au/ws/speciesListItems/"
