@@ -1,5 +1,5 @@
 #species-list-compare.R
-#downloadsets of lists from the list tool and compare them
+#downloadsets lists from the list tool and compare them
 
 
 options(java.parameters = "-Xmx8000m") # for extra memory for xlsx which uses the java poi libraries
@@ -121,7 +121,7 @@ writeListComparison <- function(s, asIsListId, toBeListId) {
 
 #globals
 
-env <- "PROD"
+env <- "TEST"
 
 if (env == "PROD") {
   listsUrl <<- "https://lists.ala.org.au/ws/speciesListItems/"
@@ -159,7 +159,9 @@ for(i in 1:nrow(conservationLists)) {
 }
 
 # debugging - for line by line walk through function
-#asIsListId <- "dr653"
-#toBeListId <- "dr18701"
-#s = "SA"
+# asIsListId <- "dr652"
+# toBeListId <- "dr18703"
+# s = "QLD"
+# downloadLists(s,asIsListId,toBeListId)
+# writeListComparison(s,asIsListId,toBeListId)
 

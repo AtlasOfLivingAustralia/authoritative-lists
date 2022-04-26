@@ -81,9 +81,17 @@ Directory containing source data used to create new Conservation/Sensitive Speci
   * Merging processed flora and fauna files together
 * Manually updated the misspelled `Amperia spicata` to`Amperea spicata`
 * Manually updated the misspelled `Acanthophsis hawkei` to `Acanthophis hawkei`
+
 #### QLD
 **Sensitive Lists**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms</li> <li>Delete data without a status</li> <li>Mapping provided status to status codes</li><li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
-**Conservation Lists**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms <li>Delete data without a status</li> <li>Mapping provided status to status codes</li> <li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
+
+**Conservation Lists**	
+Downloaded Excel spreadsheet and processed using Jupyter notebook including
+* Mapping DWC terms 
+* Delete data without a status or without a threatened status
+* Mapping provided status to status codes
+* Mapping Kingdom/Class data to correct taxonomy
+* Rearranging data and encoding-decoding formatting
 
 #### SA
 **Sensitive**/**Conservation Lists** <ol> <li> Fauna/Flora in separate files</li> <li>Read Excel files into dataframes from these sources:</li> <ul> <li>Fauna: metadata and BDBSA taxonomy</li> <li>Flora: metadata and BDBSA taxonomy</li> </ul> <li>Data processed using Jupyter notebook including: </li> <ul> <li>Fauna file</li> <ul> <li> set dataframe names to line 2</li> <li> remove first 3 lines</li> <li> filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li> rename the columns to DwC friendly names</li> <li> remove some unwanted columns</li> </ul> <li>Flora file</li> <ul> <li>filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li>rename the columns to DwC friendly names</li> <li>remove some unwanted columns</li> </ul> <li>Concatenate dataframes</li> <li>Save to single CSV file</li> </ul> </li> </ol>
