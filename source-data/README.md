@@ -29,8 +29,37 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 # Data Processing
 
 #### EPBC
-**Conservation Lists**	<ol><li> Two separate flora and fauna lists were available on the website</li><li>These lists were copied from webpage to a CSV file along with hyperlinks and separate categories i.e. frogs birds reptiles etc</li><li>Data was cleaned and processed using Jupyter notebook including: </li><ul> Extracting hyperlinks from the text </li> <li>Mapping DWC terms </li> <li>Date format conversion </li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files</li> </ul></ol> 
- 
+**Conservation Lists**	
+1. Two separate flora and fauna lists were available on the website
+2. These lists were copied from webpage to a CSV file along with hyperlinks and separate categories i.e. frogs birds reptiles etc
+3. Data was cleaned and processed using Jupyter notebook including:
+   * Extracting hyperlinks from the text
+   * Mapping DWC terms
+   * Date format conversion
+   * Creating additional DWC columns for known values
+   * Merging processed flora and fauna files
+4. Manually cleaned up NBSP characters
+5. These values were replaced for the provided scientificName with guidance:
+
+| previous name | replaced name | 
+|---------------| --------------|
+|Acanthiza pusilla archibaldi�=�Acanthiza pusilla magnirostris|Acanthiza pusilla magnirostris|
+|Budawangia gnidioides�=�Epacris gnidioides|Epacris gnidioides|
+|Calamanthus cautus halmaturinus�=�Hylacola cauta halmaturina|Hylacola cauta halmaturina|
+|Calamanthus pyrrhopygius parkeri�=�Hylacola pyrrhopygia parkeri|Hylacola pyrrhopygia parkeri|
+|Calyptorhynchus baudinii�=�Zanda baudinii|Calyptorhynchus baudinii|
+|Calyptorhynchus latirostris�=�Zanda latirostris|Calyptorhynchus latirostris|
+|Hibbertia�sp. Toolbrunup (J.R.Wheeler 2504)�=�Hibbertia barrettiae|Hibbertia barrettiae|
+|Lycopodium volubile�=�Pseudodiphasium volubile|Pseudodiphasium volubile|
+|Marattia salicina�=�Ptisana salicina|Ptisana salicina|
+|Perameles bougainville bougainville�=�Perameles bougainville|Perameles bougainville|
+|Perameles bougainville fasciata�=�Perameles fasciata|Perameles fasciata|
+|Perameles myosurus�=�Perameles myosuros|Perameles myosuros|
+|Phalaenopsis amabilis�subsp.�rosenstromii�=�Phalaenopsis rosenstromii|Phalaenopsis rosenstromii|
+|Pleuropappus phyllocalymmeus�=�Angianthus phyllocalymmeus|Angianthus phyllocalymmeus|
+|Psophodes nigrogularis lashmari�=� Psophodes leucogaster lashmari|Psophodes leucogaster lashmari|
+
+
 #### ACT
 **Conservation Lists**	<ol><li> Website has MS WORD PDF and HTML format</li><li>Downloaded MS Word document</li><li>Manual copy and paste to to Excel spreadsheet</li><li>Data processed using Jupyter notebook including: </li><ul><li>Mapping DWC terms</li></ul></ol>
 
@@ -39,8 +68,19 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 **Conservation Lists** <ol> <li> Webpage</li> <li>JSON files available for download</li> <li>Data cleaned and processed using Jupyter notebook including: </li> <ul> <li> JSON loaded into Python Dataframe </li> <li> Dataframe saved to CSV file </li> <li>Data arrangement/reformat</li> <li>Mapping DWC terms</li> <li>Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences</li> <li>Creating additional columns with appropriate values</li> </ul></ol>
 
 #### NT 
-**Conservation Lists**	<ol><li> Two separate flora and fauna lists were available on the website</li> <li>Lists text copied from webpage to a CSV file</li> <li>Data was cleaned and processed using Jupyter notebook including: </li><li>Splitting single species name column into 2 separate columns for *vernacularName* and *scientificName* <li>Mapping DWC terms</li><li>Remove 'Least Concern' Species</li><li>Exclude 'Listed nationally but not under NT Legislation' species</li> <li>Creating additional DWC columns for known values</li> <li>Merging processed flora and fauna files together</li></ul></ol>
+**Conservation Lists**	
 
+* Two separate flora and fauna lists were available on the website
+* Lists text copied from webpage to a CSV file
+* Data was cleaned and processed using Jupyter notebook including: 
+  * Splitting single species name column into 2 separate columns for *vernacularName* and *scientificName* 
+  * Mapping DWC terms
+  * Remove 'Least Concern' Species
+  * Exclude 'Listed nationally but not under NT Legislation' species
+  * Creating additional DWC columns for known values
+  * Merging processed flora and fauna files together
+* Manually updated the misspelled `Amperia spicata` to`Amperea spicata`
+* Manually updated the misspelled `Acanthophsis hawkei` to `Acanthophis hawkei`
 #### QLD
 **Sensitive Lists**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms</li> <li>Delete data without a status</li> <li>Mapping provided status to status codes</li><li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
 **Conservation Lists**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms <li>Delete data without a status</li> <li>Mapping provided status to status codes</li> <li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
