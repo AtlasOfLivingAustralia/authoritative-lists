@@ -20,16 +20,16 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 
 | **State** | **Links to Source**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | **Authority**                                                                          | **Source date** | **ALA List date** | **Source format** |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-----------------|-------------------|-------------------|
-| ACT       |                                                                                                                 |                                                       | 2020-05-20      | 2017-03-23        | HTML              |
+| ACT       | n/a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                       | 2020-05-20      | 2017-03-23        | HTML              |
 | NSW       | [BioNet Species Names web service](https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |         | current date    | 2022-03-16        | API/JSON          |
-| QLD       | List [metadata](https://www.data.qld.gov.au/dataset/queensland-confidential-species) and [data](https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv)                                                                                                                                                                                                                                                                                                                                                 |                                                 | current date    | 2021-05-28        | CSV               |
-| VIC       | List [data](https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf) | Victorian Dept Land, Environment, Water and Planning |Current|  2013-06-24  |  PDF     |
+| QLD       | List [metadata](https://www.data.qld.gov.au/dataset/queensland-confidential-species) and [data](https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv)                                                                                                                                                                                                                                                                                                                                                                                         |                                                 | current date    | 2021-05-28        | CSV               |
+| VIC       | List [data](https://www.environment.vic.gov.au/__data/assets/pdf_file/0024/48831/VBA-Restricted-Taxa.pdf)                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Victorian Dept Land, Environment, Water and Planning |Current|  2013-06-24  |  PDF     |
 | WA        | Fauna [metadata](https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-animals) and [data](https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Fauna%20List.xlsx)  <br> Flora [metadata](https://www.dpaw.wa.gov.au/plants-and-animals/threatened-species-and-communities/threatened-plants) and [data](https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Flora%20List%205%20December%202018.xlsx) | Biodiversity Conservation Act 2016                                                     | 2019-01-03|   2016-06-14  | XLSX  |
 
 # Data Processing
 
-#### EPBC
-**Conservation Lists**	
+## EPBC
+###Conservation Lists
 1. Two separate flora and fauna lists were available on the website
 2. These lists were copied from webpage to a CSV file along with hyperlinks and separate categories i.e. frogs birds reptiles etc
 3. Data was cleaned and processed using Jupyter notebook including:
@@ -60,15 +60,41 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 |Psophodes nigrogularis lashmari�=� Psophodes leucogaster lashmari|Psophodes leucogaster lashmari|
 
 
-#### ACT
-**Conservation Lists**	<ol><li> Website has MS WORD PDF and HTML format</li><li>Downloaded MS Word document</li><li>Manual copy and paste to to Excel spreadsheet</li><li>Data processed using Jupyter notebook including: </li><ul><li>Mapping DWC terms</li></ul></ol>
+## ACT
+###Conservation Lists
+Website has MS WORD PDF and HTML format</li><li>Downloaded MS Word document</li><li>Manual copy and paste to to Excel spreadsheet</li><li>Data processed using Jupyter notebook including: </li><ul><li>Mapping DWC terms</li></ul></ol>
 
-#### NSW 
-**Sensitive Lists**	<ol> <li> Webpage</li> <li>JSON files available for download</li> <li>Data cleaned and processed using Jupyter notebook including: </li> <ul> <li> JSON loaded into Python Dataframe </li> <li> Dataframe saved to CSV file </li> <li>Data arrangement/reformat</li> <li>Mapping DWC terms</li> <li>Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences</li> <li>Creating additional columns with appropriate values</li> </ul></ol>
-**Conservation Lists** <ol> <li> Webpage</li> <li>JSON files available for download</li> <li>Data cleaned and processed using Jupyter notebook including: </li> <ul> <li> JSON loaded into Python Dataframe </li> <li> Dataframe saved to CSV file </li> <li>Data arrangement/reformat</li> <li>Mapping DWC terms</li> <li>Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences</li> <li>Creating additional columns with appropriate values</li> </ul></ol>
+## NSW 
 
-#### NT 
-**Conservation Lists**	
+The NSW list is available for download via the [BioNet Species Names web service](https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames).
+
+###Sensitive Lists	
+Sensitive data is identified in the list by applying these rules:
+
+```
+df['speciesID'] == df['taxonID']
+df['sensitivityClass'].isin(['Category 3','Category 2','Category 1'])
+```
+Data cleaned and processed using Jupyter notebook including: 
+* JSON loaded into Python Dataframe
+* Dataframe saved to CSV file
+* Data arrangement/reformat
+* Mapping DWC terms
+* Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences
+* Creating additional columns with appropriate values
+
+###Conservation Lists 
+
+Data cleaned and processed using Jupyter notebook including:
+* JSON loaded into Python Dataframe
+* Dataframe saved to CSV file
+* Data arrangement/reformat
+* Mapping DWC terms
+* Refining data with certain conditions such as omitting 'not listed' data and identifying matching occurrences
+* Creating additional columns with appropriate values
+
+## NT 
+###Conservation Lists
 
 * Two separate flora and fauna lists were available on the website
 * Lists text copied from webpage to a CSV file
@@ -82,28 +108,71 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 * Manually updated the misspelled `Amperia spicata` to`Amperea spicata`
 * Manually updated the misspelled `Acanthophsis hawkei` to `Acanthophis hawkei`
 
-#### QLD
-**Sensitive Lists**	<ol><li> Downloaded Excel spreadsheet and processed using Jupyter notebook including: </li><ul> <li>Mapping DWC terms</li> <li>Delete data without a status</li> <li>Mapping provided status to status codes</li><li>Mapping Kingdom/Class data to correct taxonomy</li> <li>Rearanging data and encoding-decoding formatting</li></ul></ol>
+## QLD
 
-**Conservation Lists**	
-Downloaded Excel spreadsheet and processed using Jupyter notebook including
+### Sensitive Lists	
+Downloaded spreadsheet and processed using Jupyter notebook including: 
+* Mapping DWC terms
+* Delete data without a status
+* Mapping provided status to status codes
+* Mapping Kingdom/Class data to correct taxonomy
+* Rearranging data and encoding-decoding formatting
+
+### Conservation Lists
+Downloaded spreadsheet and processed using Jupyter notebook including
 * Mapping DWC terms 
 * Delete data without a status or without a threatened status
 * Mapping provided status to status codes
 * Mapping Kingdom/Class data to correct taxonomy
 * Rearranging data and encoding-decoding formatting
 
-#### SA
-**Sensitive**/**Conservation Lists** <ol> <li> Fauna/Flora in separate files</li> <li>Read Excel files into dataframes from these sources:</li> <ul> <li>Fauna: metadata and BDBSA taxonomy</li> <li>Flora: metadata and BDBSA taxonomy</li> </ul> <li>Data processed using Jupyter notebook including: </li> <ul> <li>Fauna file</li> <ul> <li> set dataframe names to line 2</li> <li> remove first 3 lines</li> <li> filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li> rename the columns to DwC friendly names</li> <li> remove some unwanted columns</li> </ul> <li>Flora file</li> <ul> <li>filter by NPW ACT Status is one of : E V or R. Expand this value to the status field</li> <li>rename the columns to DwC friendly names</li> <li>remove some unwanted columns</li> </ul> <li>Concatenate dataframes</li> <li>Save to single CSV file</li> </ul> </li> </ol>
+## SA
+**Sensitive**/**Conservation Lists** 
 
-#### TAS
-**Conservation Lists**	<ol><li> Downloaded Excel spreadsheet</li> <li>Data processed including: </li> <ul> <li>Mapping DWC terms</li> <li>Delete data without a status</li> <li>Mapping provided status to status codes</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+Fauna/Flora in separate files - Read files into dataframes from these sources and processed using Jupyter notebook including: 
+* clean header rows
+* filter by NPW ACT Status is one of : E V or R. Expand this value to the status field - `Endangered | Vulnerable | Rare`
+* map to DwC
+* Concatenate 
 
-#### VIC
-**Sensitive Lists**	<ol><li>Data in  .SHP file sensitive and **Conservation** combined</li> <li>Data processed including: </li><ul> <li>Extract .SHP data to dataframe</li> <li>Save to CSV</li> <li>Remove/Save conservation data to CSV</li><li>Delete data without a status</li> <li>Mapping DWC terms</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
-**Conservation Lists**	<ol><li>Data in  .SHP file **Sensitive** and conservation combined</li> <li>Data processed including: </li><ul> <li>Extract .SHP data to dataframe</li> <li>Save to CSV</li><li>Use Conservation data saved from Sensitive List</li> <li>Delete data without a status</li> <li>Exclude 'Poorly Known' species</li><li>Mapping DWC terms</li> <li>Mapping provided status to status codes</li> <li>Rearanging data and encoding-decoding formatting</li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+## TAS
+**Conservation Lists**	
+* Downloaded Excel spreadsheet
+* Data processed including:
+  * Mapping DWC terms
+  * Delete data without a status
+  * Mapping provided status to status codes
+  * Creating additional DWC columns for known values
 
-#### WA
-**Sensitive Lists**	<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Remove Migratory species</li><li>Creating additional DWC columns for known values</li> </ul></ol>
-**Conservation Lists**	<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Creating additional DWC columns for known values</li> </ul></ol>
+## VIC
+###Sensitive Lists
+Data in  .SHP file sensitive and **Conservation** combined
+Data processed including:
+* Extract .SHP data to dataframe
+* Save to CSV
+* Remove/Save conservation data to CSV
+* Delete data without a status
+* Mapping DWC terms
+* Mapping provided status to status codes
+* Rearranging data and encoding-decoding formatting
+* Creating additional DWC columns for known values
+
+###Conservation Lists	
+Data in  .SHP file **Sensitive** and conservation combined 
+* Data processed including: 
+* Extract .SHP data to dataframe & save to CSV
+* Use Conservation data saved from Sensitive List
+* Delete data without a status
+* Exclude 'Poorly Known' species
+* Mapping DWC terms
+* Mapping provided status to status codes
+* Rearanging data and encoding-decoding formatting
+* Creating additional DWC columns for known values
+
+## WA
+###Sensitive Lists
+<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Remove Migratory species</li><li>Creating additional DWC columns for known values</li> </ul></ol>
+
+###Conservation Lists	
+<ol><li>Separate Fauna/Flora Lists provided different formats</li> <li>Downloaded Excel </li> <li>Data processed including: </li> <ul> <li>Reformat files to consistent format</li> <li>Restructure location indicators for consistency between Fauna/Flora</li> <li>Save to CSV</li> <li>Mapping DWC terms</li> <li>Removing non-required columns </li> <li>Creating additional DWC columns for known values</li> </ul></ol>
 
