@@ -43,23 +43,23 @@ Directory containing source data used to create new Conservation/Sensitive Speci
 4. Manually cleaned up NBSP characters
 5. These values were replaced for the provided scientificName with guidance:
 
-| previous name | replaced name | 
-|---------------| --------------|
-|Acanthiza pusilla archibaldi�=�Acanthiza pusilla magnirostris|Acanthiza pusilla magnirostris|
-|Budawangia gnidioides�=�Epacris gnidioides|Epacris gnidioides|
-|Calamanthus cautus halmaturinus�=�Hylacola cauta halmaturina|Hylacola cauta halmaturina|
-|Calamanthus pyrrhopygius parkeri�=�Hylacola pyrrhopygia parkeri|Hylacola pyrrhopygia parkeri|
-|Calyptorhynchus baudinii�=�Zanda baudinii|Calyptorhynchus baudinii|
-|Calyptorhynchus latirostris�=�Zanda latirostris|Calyptorhynchus latirostris|
-|Hibbertia�sp. Toolbrunup (J.R.Wheeler 2504)�=�Hibbertia barrettiae|Hibbertia barrettiae|
-|Lycopodium volubile�=�Pseudodiphasium volubile|Pseudodiphasium volubile|
-|Marattia salicina�=�Ptisana salicina|Ptisana salicina|
-|Perameles bougainville bougainville�=�Perameles bougainville|Perameles bougainville|
-|Perameles bougainville fasciata�=�Perameles fasciata|Perameles fasciata|
-|Perameles myosurus�=�Perameles myosuros|Perameles myosuros|
-|Phalaenopsis amabilis�subsp.�rosenstromii�=�Phalaenopsis rosenstromii|Phalaenopsis rosenstromii|
-|Pleuropappus phyllocalymmeus�=�Angianthus phyllocalymmeus|Angianthus phyllocalymmeus|
-|Psophodes nigrogularis lashmari�=� Psophodes leucogaster lashmari|Psophodes leucogaster lashmari|
+| previous name                                                         | replaced name                  | 
+|-----------------------------------------------------------------------|--------------------------------|
+| Acanthiza pusilla archibaldi�=�Acanthiza pusilla magnirostris         | Acanthiza pusilla magnirostris |
+| Budawangia gnidioides�=�Epacris gnidioides                            | Epacris gnidioides             |
+| Calamanthus cautus halmaturinus�=�Hylacola cauta halmaturina          | Hylacola cauta halmaturina     |
+| Calamanthus pyrrhopygius parkeri�=�Hylacola pyrrhopygia parkeri       | Hylacola pyrrhopygia parkeri   |
+| Calyptorhynchus baudinii�=�Zanda baudinii                             | Calyptorhynchus baudinii       |
+| Calyptorhynchus latirostris�=�Zanda latirostris                       | Calyptorhynchus latirostris    |
+| Hibbertia�sp. Toolbrunup (J.R.Wheeler 2504)�=�Hibbertia barrettiae    | Hibbertia barrettiae           |
+| Lycopodium volubile�=�Pseudodiphasium volubile                        | Pseudodiphasium volubile       |
+| Marattia salicina�=�Ptisana salicina                                  | Ptisana salicina               |
+| Perameles bougainville bougainville�=�Perameles bougainville          | Perameles bougainville         |
+| Perameles bougainville fasciata�=�Perameles fasciata                  | Perameles fasciata             |
+| Perameles myosurus�=�Perameles myosuros                               | Perameles myosuros             |
+| Phalaenopsis amabilis�subsp.�rosenstromii�=�Phalaenopsis rosenstromii | Phalaenopsis rosenstromii      |
+| Pleuropappus phyllocalymmeus�=�Angianthus phyllocalymmeus             | Angianthus phyllocalymmeus     |
+| Psophodes nigrogularis lashmari�=� Psophodes leucogaster lashmari     | Psophodes leucogaster lashmari |
 
 
 ## ACT
@@ -112,21 +112,23 @@ Data cleaned and processed using Jupyter notebook including:
 
 ## QLD
 
-### Sensitive Lists	
-Downloaded spreadsheet and processed using Jupyter notebook including: 
-* Mapping DWC terms
-* Delete data without a status
-* Mapping provided status to status codes
-* Mapping Kingdom/Class data to correct taxonomy
-* Rearranging data and encoding-decoding formatting
+CSVs are available via the WildNet website and updated weekly (see the sources table above) along with codes for status, endemicity and EPBC statues.
 
 ### Conservation Lists
-Downloaded spreadsheet and processed using Jupyter notebook including
-* Mapping DWC terms 
-* Delete data without a status or without a threatened status
+
+* File encoding/decoding
+* Mapping DWC terms
+* Remove data without a status or without a threatened status
 * Mapping provided status to status codes
-* Mapping Kingdom/Class data to correct taxonomy
-* Rearranging data and encoding-decoding formatting
+* Mapping Kingdom/Class field values to correct scientific names
+
+### Sensitive Lists	
+
+Downloaded spreadsheet and processed using Jupyter notebook including: 
+* Mapping DWC terms
+* Remove data without a status
+* Mapping provided status to status codes
+* Mapping Kingdom/Class field values to correct scientific names
 
 ## SA
 **Sensitive**/**Conservation Lists** 
