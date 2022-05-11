@@ -22,7 +22,7 @@ epbc = epbc.rename(columns=
     'EPBC Threat Status':'status'
 })
 epbc.columns = epbc.columns.str.replace(r"[().: ]", "", regex=True) # remove all spaces and : () from column names
-epbc.drop(['Unnamed65'],axis=1)
+epbc=epbc.drop(['Unnamed65'],axis=1)
 coltuple = np.where(epbc.columns.str.contains(r'ListedName\d'))
 colIdx = coltuple[0]
 epbc.columns.values[colIdx] = epbc.columns.values[colIdx] + epbc.columns.values[colIdx-1]
