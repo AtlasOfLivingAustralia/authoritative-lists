@@ -39,25 +39,18 @@
 ### Field Name Mappings
 | **Source Field Name**|**New Field Name**|
 |-----------------|-------------|
-|TAXON_MOD|modified|
-|TAXON_ID|VBA_TaxonId|
-|SCI_NAME|scientificName|
-|COMM_NAME|vernacularName|
-|AUTHORITY|scientificNameAuthoritiy|
-|FAMILY|family|
-|FFG|FFG_status|
-|FFG_DESC|FFG_desc|
-|EPBC|EPBC_status|
-|EPBC_DESC|EPBC_desc|
-|VICADV|sourceStatus|
-|VICADVDESC|status|
-|RESTRICTN|generalisation|
-|ORIGIN|VBA_origin|
+|TAXON_ID|taxonId|
+|SCIENTIFIC_NAME|scientificName|
+|VIC_ADVISORY_STATUS|status|
 |TAXON_TYPE|speciesGroup|
-|VIC_LF|identificationRemarks|
-|DISCIPLINE|VBA_discipline|
-||kingdom|
-|TAXN_LEV|taxonRank|
-|Field|**Flora/Fauna**|**kingdom**||
-|Data Value|Flora|Plantae|
-||Fauna|Animalia|
+|AUTHORITY|scientificNameAuthoritiy|
+|FFG_ACT_STATUS|ffgactStatus|
+|EPBC_ACT_STATUS|epbcStatus|
+|TAXON_LEVEL_CD|taxonRank|
+|ORIGIN|establismentMeans|
+|COMMON_NME_SYNONYM|taxonRemarks|
+|COMMON_NAME|vernacularName|
+|PRIMARY_DISCIPLINE|primaryDiscipline|
+|RESTRICTED_FLAG|restrictedFlag|
+|EXTRACT_DATE|extractDate|
+|LAST_MOD|modified|
