@@ -1,4 +1,4 @@
-scientificName,scientificNameAuthorship,vernacularName,family,class,sourceStatus,status,EPBCA_status,sourceKingdom,kingdom,speciesGroup,,sourceOrigin,higherGeography
+scientificName,scientificNameAuthorship,vernacularName,family,class,sourceStatus,status,EPBCA_status,sourceKingdom,kingdom,speciesGroup,Unnamed: 11,sourceOrigin,higherGeography
 Costora iena ,Mosely,Caddis Fly (Great Lakes),Trichoptera,Invertebrates,x,Presumed Extinct,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Hadronyche pulvinator ,Hickman,Cascade Funnel-web Spider,Araneae,Invertebrates,x,Presumed Extinct,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Hypolimnus pedderensis ,(Jamieson),Lake Pedder Earthworm,Haplotaxida,Invertebrates,x,Presumed Extinct,EX,Fauna,Animalia,invertebrate,,end,endemic Tasmania
@@ -109,7 +109,7 @@ Tasimia drepana ,Neboiss,Caddis Fly (Huon & Picton Rivers),Trichoptera,Invertebr
 Tasmanipatus barretti ,Ruhberg,Giant Velvet Worm,Onychophora,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Tasmanotrechus cockerilli ,Moore,Cave Beetle (Mole Creek),Coleoptera,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Tasniphargus tyleri ,Williams & Barnard,Amphipod (Great Lake),Amphipoda,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
-Theclinesthes serpentata lavara,(Herrich-Schäffer),Chequered blue,Lepidoptera,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
+Theclinesthes serpentata lavara,(Herrich-SchÃ¤ffer),Chequered blue,Lepidoptera,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Uramphisopus pearsoni ,Nicholls,Isopod (Great Lake),Isopoda,Invertebrates,r,Rare,,Fauna,Animalia,invertebrate,,end,endemic Tasmania
 Galaxias auratus ,Johnston,Golden Galaxias,Fish,Vertebrates,r,Rare,EN,Fauna,Animalia,vertebrate,,end,endemic Tasmania
 Paragalaxias julianus ,McDowall and Fulton,Western Paragalaxias,Fish,Vertebrates,r,Rare,,Fauna,Animalia,vertebrate,,end,endemic Tasmania
@@ -293,7 +293,7 @@ Crassula moschata,G.Forst.,musky stonecrop,Crassulaceae,Dicotyledonae,r,Rare,,Fl
 Deschampsia gracillima,Kirk,slender hairgrass,Poaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
 Lepidium flexicaule,Kirk,springy peppercress,Brassicaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
 Ranunculus acaulis,Banks & Sol. ex DC.,dune buttercup,Ranunculaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
-Uncinia elegans,(Kük.) Hamlin,handsome hooksedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
+Uncinia elegans,(KÃ¼k.) Hamlin,handsome hooksedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
 Viola cunninghamii,Hook.f.,alpine violet,Violaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,t,Tasmania
 Calycidium cuneatum,Stirt.,,Calycidiaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,t,Tasmania
 Calycidium polycarpum,(Colenso) Wedin,,Calycidiaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,t,Tasmania
@@ -372,8 +372,8 @@ Austrostipa blackii,(C.E.Hubb.) S.W.L.Jacobs & J.Everett ,crested speargrass,Poa
 Banksia serrata,L.f.,saw banksia,Proteaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Baumea articulata,(R.Br.) S.T.Blake,jointed twigsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Baumea gunnii,(Hook.f.) S.T.Blake,slender twigsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
-Bolboschoenus caldwellii,(V.J.Cook) Soják ,sea clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
-Bolboschoenus medianus,(V.J.Cook) Soják ,marsh clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
+Bolboschoenus caldwellii,(V.J.Cook) SojÃ¡k ,sea clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
+Bolboschoenus medianus,(V.J.Cook) SojÃ¡k ,marsh clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Brachyloma depressum,(F.Muell.) Benth.,spreading heath,Ericaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Brachyscome perpusilla,(Steetz) J.M.Black,tiny daisy,Asteraceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Brunonia australis,Sm. ex R.Br.,blue pincushion,Goodeniaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
@@ -434,7 +434,7 @@ Hydrocotyle comocarpa,F.Muell.,fringefruit pennywort,Araliaceae,Dicotyledonae,r,
 Hydrorchis orbicularis,(R.S.Rogers) D.L.Jones & M.A.Clem.,swamp onion-orchid,Orchidaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Hypolepis muelleri,N.A.Wakef.,harsh groundfern,Dennstaedtiaceae,Pteridophyta,r,Rare,,Flora,Plantae,vascular,,,
 Isoetes drummondii subsp. drummondii,A.Braun,plain quillwort,Isoetaceae,Pteridophyta,r,Rare,,Flora,Plantae,vascular,,,
-Isolepis habra,(Edgar) Soják ,wispy clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
+Isolepis habra,(Edgar) SojÃ¡k ,wispy clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Isolepis stellata,(C.B.Clarke) K.L.Wilson,star clubsedge,Cyperaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Juncus fockei,Buchenau,slender jointleaf rush,Juncaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Juncus prismatocarpus,R.Br.,branching rush,Juncaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
@@ -497,7 +497,7 @@ Siloxerus multiflorus,Nees,small wrinklewort,Asteraceae,Dicotyledonae,r,Rare,,Fl
 Spyridium parvifolium var. parvifolium,(Hook.) F.Muell.,coast dustymiller,Rhamnaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Spyridium vexilliferum var. vexilliferum,(Hook.) Reissek,helicopter bush,Rhamnaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Stellaria multiflora subsp. nebulosa,C.H.Mill. & J.G.West,nebulous rayless starwort,Caryophyllaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
-Stuckenia pectinata,(L.) Börner,fennel pondweed,Potamogetonaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
+Stuckenia pectinata,(L.) BÃ¶rner,fennel pondweed,Potamogetonaceae,Monocotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Stylidium beaugleholei,J.H.Willis,blushing triggerplant,Stylidiaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Stylidium despectum,R.Br.,small triggerplant,Stylidiaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Stylidium perpusillum,Hook.f.,tiny triggerplant,Stylidiaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
@@ -522,7 +522,7 @@ Wilsonia rotundifolia,Hook.,roundleaf wilsonia,Convolvulaceae,Dicotyledonae,r,Ra
 Xerochrysum bicolor,(Lindl.) R.J.Bayer,eastcoast paperdaisy,Asteraceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Zieria littoralis,J.A.Armstr.,downy zieria,Rutaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
 Zygophyllum billardierei,DC.,coast twinleaf,Zygophyllaceae,Dicotyledonae,r,Rare,,Flora,Plantae,vascular,,,
-Cetraria islandica subsp. antarctica,Kärnefelt,,Parmeliaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,,
+Cetraria islandica subsp. antarctica,KÃ¤rnefelt,,Parmeliaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,,
 Hypotrachyna immaculata,(Kurok.) Hale,,Parmeliaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,,
 Parmeliopsis ambigua,(Wulf.) Nyl.,,Parmeliaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,,
 Parmotrema crinitum,(Ach.) M.Choisy,,Parmeliaceae,Lichen,r,Rare,,Flora,Plantae,non-vascular,,,
@@ -537,7 +537,7 @@ Bunodophoron notatum,(Tibell) Wedin,,Sphaerophoraceae,Lichen,e,Endangered,,Flora
 Roccellinastrum neglectum,Henssen & Vobis,,Roccellinastraceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,t,Tasmania
 Poa cookii,(Hook.f.) Hook.f. ,cooks tussockgrass,Poaceae,Monocotyledonae,e,Endangered,,Flora,Plantae,vascular,,sa,sub-Antarctic Islands
 Barbarea australis,Hook.f.,riverbed wintercress,Brassicaceae,Dicotyledonae,e,Endangered,EN,Flora,Plantae,vascular,,end,endemic Tasmania
-Bertya tasmanica subsp. tasmanica,(Sond. & F.Muell.) Müll.Arg.,tasmanian bertya,Euphorbiaceae,Dicotyledonae,e,Endangered,EN,Flora,Plantae,vascular,,end,endemic Tasmania
+Bertya tasmanica subsp. tasmanica,(Sond. & F.Muell.) MÃ¼ll.Arg.,tasmanian bertya,Euphorbiaceae,Dicotyledonae,e,Endangered,EN,Flora,Plantae,vascular,,end,endemic Tasmania
 Boronia hemichiton,Duretto,mt arthur boronia,Rutaceae,Dicotyledonae,e,Endangered,VU,Flora,Plantae,vascular,,end,endemic Tasmania
 Caladenia anthracina,D.L.Jones,blacktip spider-orchid,Orchidaceae,Monocotyledonae,e,Endangered,CR,Flora,Plantae,vascular,,end,endemic Tasmania
 Caladenia campbellii,D.L.Jones,thickstem fairy fingers,Orchidaceae,Monocotyledonae,e,Endangered,CR,Flora,Plantae,vascular,,end,endemic Tasmania
@@ -655,10 +655,10 @@ Pterostylis tunstallii,D.L.Jones & M.A.Clem.,tunstalls greenhood,Orchidaceae,Mon
 Ranunculus diminutus,B.G.Briggs,brackish buttercup,Ranunculaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Rhytidosporum inconspicuum,"L.W.Cayzer, Crisp & I.Telford ",alpine appleberry,Pittosporaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Scaevola aemula,R.Br.,fairy fanflower,Goodeniaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
-Schoenus latelaminatus,Kük.,medusa bog sedge,Cyperaceae,Monocotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
+Schoenus latelaminatus,KÃ¼k.,medusa bog sedge,Cyperaceae,Monocotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Senecio extensus,I.Thomps.,subalpine fireweed,Asteraceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Senecio psilocarpus,Belcher & Albr.,swamp fireweed,Asteraceae,Dicotyledonae,e,Endangered,VU,Flora,Plantae,vascular,,,
-Solanum opacum,A.Braun & Bouché,greenberry nightshade,Solanaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
+Solanum opacum,A.Braun & BouchÃ©,greenberry nightshade,Solanaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Spyridium eriocephalum var. eriocephalum,Fenzl,heath dustymiller,Rhamnaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Stackhousia subterranea,W.R.Barker,grassland candles,Celastraceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Stenopetalum lineare,R.Br. ex DC.,narrow threadpetal,Brassicaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
@@ -677,8 +677,8 @@ Viminaria juncea,(Schrad. & J.Wendl.) Hoffmanns.,golden spray,Fabaceae,Dicotyled
 Vittadinia australasica var. oricola,N.T.Burb.,coast new-holland-daisy,Asteraceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Wurmbea latifolia subsp. vanessae,R.J.Bates,broadleaf early nancy,Colchicaceae,Monocotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
 Zieria veronicea subsp. veronicea,(F.Muell.) Benth.,pink zieria,Rutaceae,Dicotyledonae,e,Endangered,,Flora,Plantae,vascular,,,
-Erioderma sorediatum,D.J.Galloway & P.M.Jørg.,,Pannariaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
-Xanthoparmelia amphixantha,(Müll.Arg.) Hale ,,Parmeliaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
+Erioderma sorediatum,D.J.Galloway & P.M.JÃ¸rg.,,Pannariaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
+Xanthoparmelia amphixantha,(MÃ¼ll.Arg.) Hale ,,Parmeliaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
 Xanthoparmelia molliuscula,(Ach.) Hale,,Parmeliaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
 Xanthoparmelia subloxodella,"(Elix & Kantvilas) O.Blanco, A.Crespo, Elix, D.Hawksw. & Lumbsch",,Parmeliaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
 Xanthoparmelia willisii,(Kurok. & Filson) Elix & J.Johnst.,,Parmeliaceae,Lichen,e,Endangered,,Flora,Plantae,non-vascular,,,
