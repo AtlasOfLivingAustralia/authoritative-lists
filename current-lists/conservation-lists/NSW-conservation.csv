@@ -1,4 +1,4 @@
-taxonRank,kingdom,class,order,family,genus,scientificName,specificEpithet,vernacularName,establishmentMeans,sourceStatus,protectedInNSW,sensitivityClass,TSProfileID,countryConservation,dcterms_modified,speciesID,taxonID,status
+taxonRank,kingdom,class,order,family,genus,scientificName,specificEpithet,vernacularName,establishmentMeans,sourceStatus,protectedInNsw,sensitivityClass,tsProfileId,countryConservation,dctermsModified,speciesId,taxonId,status
 Species,Animalia,Reptilia,Squamata,Pygopodidae,Delma,Delma impar,impar,Striped Legless Lizard,"Alive in NSW, Native",Vulnerable,True,Not Sensitive,10211.0,Vulnerable,2013-12-20T15:06:07.13+11:00,1,1,Vulnerable
 Species,Animalia,Aves,Psittaciformes,Cacatuidae,Callocephalon,Callocephalon fimbriatum,fimbriatum,Gang-gang Cockatoo,"Alive in NSW, Native",Vulnerable,True,Category 3,10975.0,Endangered,2011-11-11T11:23:09+11:00,6,6,Vulnerable
 Species,Animalia,Reptilia,Squamata,Elapidae,Cacophis,Cacophis harriettae,harriettae,White-crowned Snake,"Alive in NSW, Native",Vulnerable,True,Not Sensitive,10117.0,Not Listed,2015-05-28T10:14:29.083+10:00,31,31,Vulnerable
