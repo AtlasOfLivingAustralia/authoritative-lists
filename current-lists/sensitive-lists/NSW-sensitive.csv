@@ -1,4 +1,4 @@
-﻿taxonRank,kingdom,class,order,family,genus,scientificName,specificEpithet,vernacularName,establishmentMeans,sourceStatus,protectedInNSW,sensitivityClass,TSProfileID,countryConservation,dcterms_modified,speciesID,taxonID,generalisation,status
+taxonRank,kingdom,class,order,family,genus,scientificName,specificEpithet,vernacularName,establishmentMeans,sourceStatus,protectedInNsw,sensitivityClass,tsProfileId,countryConservation,dctermsModified,speciesId,taxonId,generalisation,status
 Species,Animalia,Aves,Psittaciformes,Cacatuidae,Callocephalon,Callocephalon fimbriatum,fimbriatum,Gang-gang Cockatoo,"Alive in NSW, Native",Vulnerable,True,Category 3,10975.0,Endangered,2011-11-11T11:23:09+11:00,6,6,1km,Vulnerable
 Species,Animalia,Aves,Strigiformes,Strigidae,Ninox,Ninox strenua,strenua,Powerful Owl,"Alive in NSW, Native",Vulnerable,True,Category 3,10562.0,Not Listed,2011-11-11T11:23:06+11:00,162,162,1km,Vulnerable
 Species,Animalia,Aves,Strigiformes,Tytonidae,Tyto,Tyto tenebricosa,tenebricosa,Sooty Owl,"Alive in NSW, Native",Vulnerable,True,Category 3,10821.0,Not Listed,2012-07-23T18:04:52.683+10:00,333,333,1km,Vulnerable

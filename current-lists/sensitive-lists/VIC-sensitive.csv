@@ -1,4 +1,4 @@
-VBATaxonId,scientificName,vernacularName,scientificNameAuthoritiy,family,FFGStatus,FFGDesc,EPBCStatus,EPBCDesc,sourceStatus,status,sensiivityZoneId,VBARestriction,VBA_origin,speciesGroup,identificationRemarks,VBATreaty,VBA_discipline,kingdom,taxonRank,modified
+vbaTaxonId,scientificName,vernacularName,scientificNameAuthoritiy,family,ffgStatus,ffgDesc,epbcStatus,epbcDesc,sourceStatus,status,sensiivityZoneId,vbaRestriction,vbaOrigin,speciesGroup,identificationRemarks,vbaTreaty,vbaDiscipline,kingdom,taxonRank,modified
 1674,Engaeus fultoni,Otway Burrowing Crayfish,"Smith & Schuster, 1913",Parastacidae,vu,Vulnerable,,,vu,Vulnerable,VIC,Restricted viewing taxon,,"Mussels, decopod crustacea",,,Aquatic fauna,Animalia,Species,23/06/2021
 1692,Engaeus sericatus,Hairy Burrowing Crayfish,"Clark, 1936",Parastacidae,vu,Vulnerable,,,vu,Vulnerable,VIC,Restricted viewing taxon,,"Mussels, decopod crustacea",,,Aquatic fauna,Animalia,Species,23/06/2021
 1633,Euastacus bidawalus,East Gippsland Spiny Crayfish,"Morgan, 1986",Parastacidae,vu,Vulnerable,,,vu,Vulnerable,VIC,Restricted viewing taxon,,"Mussels, decopod crustacea",,,Aquatic fauna,Animalia,Species,23/06/2021

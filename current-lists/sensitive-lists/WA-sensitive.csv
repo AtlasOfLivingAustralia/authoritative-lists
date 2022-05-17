@@ -1,4 +1,4 @@
-WATaxonId,scientificName,vernacularName,class,status,sourceStatus,WAStatus,WARank,EPBCStatus,EPBCDesc,sensitivityZoneId,county,municipality,verbatimLocality,taxonRemarks
+waTaxonId,scientificName,vernacularName,class,status,sourceStatus,waStatus,waRank,epbcStatus,epbcDesc,sensitivityZoneId,county,municipality,verbatimLocality,taxonRemarks
 29489.0,Tetratheca aphylla subsp. aphylla,,,Vulnerable,Vulnerable,T,VU,VU,Vulnerable,WA,GOLD,KALGOORLIE,Helena & Aurora Ranges,
 4534.0,Tetratheca harperi,,,Vulnerable,Vulnerable,T,VU,VU,Vulnerable,WA,GOLD,KALGOORLIE,Mt Jackson,
 46173.0,Atriplex yeelirrie,,,Vulnerable,Vulnerable,T,VU,EN,Endangered,WA,GOLD,KALGOORLIE,Yeelirrie Stn.,
