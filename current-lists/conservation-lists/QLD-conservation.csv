@@ -1,4 +1,4 @@
-taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,sourceStatus,significant,confidential,Endemicity,status,endemicity,epbcStatus
+taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,sourceStatus,Significant,confidential,Endemicity Code,status,endemicity,epbc Status
 706,Animalia,Amphibia,Limnodynastidae,Adelotus brevis,tusked frog,"(Günther, 1863)",V,Y,N,QA,Vulnerable,Australian endemic,
 687,Animalia,Amphibia,Limnodynastidae,Philoria kundagungan,red-and-yellow mountainfrog,"(Ingram & Corben, 1975)",E,Y,Y,QA,Endangered,Australian endemic,Endangered
 686,Animalia,Amphibia,Myobatrachidae,Crinia tinnula,wallum froglet,"Straughan & Main, 1966",V,Y,N,QA,Vulnerable,Australian endemic,
