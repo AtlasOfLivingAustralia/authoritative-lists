@@ -14,7 +14,7 @@ dataDir = "/current-lists/sensitive-lists/"
 
 #%% Define Mapping fields
 
-mappings = {'Category 1':'C1','Category 2':'C2','Category 3': 'C3',
+mappings = {'Category 1':'1','Category 2':'2','Category 3': '3',
             ' WA Priority 4': 'P4', ' WA Priority 3': 'P3',
             ' WA Priority 2': 'P2',' WA Priority 1': 'P1',
             'Priority': 'PX',
