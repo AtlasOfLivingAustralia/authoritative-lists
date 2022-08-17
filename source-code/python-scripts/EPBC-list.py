@@ -39,6 +39,8 @@ epbcreport = epbcreport.rename(columns=
     'Family': 'family',
     'Genus': 'genus'
 })
+epbcreport['sourceStatus'] = epbcreport['status']
+
 epbcreport=epbcreport.drop(['Unnamed: 65',
                 'Listed Name Bonn', 'Listed Name Camba',
                 'Listed Name Jamba', 'Listed Name Rokamba',
@@ -57,7 +59,10 @@ epbcreport.columns = epbcreport.columns.str.strip()
 #%% create an epbc list: should be 1955 species (with EPBC Threat Status)
 # epbc = epbcreport[epbcreport[\"EPBC Threat Status\"].notna()]
 epbc= epbcreport[epbcreport["status"].notna()]
-epbc.to_csv(projectDir + dataDir + "EPBC-new-conservation.csv",index=False)
+# convert dates
+epbc['Threatened Species Date Effective'] = pd.to_datetime(epbc['Threatened Species Date Effective'])
+epbc['Threatened Species Date Effective'] = epbc['Threatened Species Date Effective'].dt.strftime('%Y-%m-%d')
+# epbc.to_csv(projectDir + dataDir + "EPBC-new-conservation.csv",index=False)
 
 #%% create Bonn list
 bonn = epbcreport[epbcreport["Bonn"].notna()]

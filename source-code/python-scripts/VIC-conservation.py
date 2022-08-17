@@ -21,9 +21,9 @@ conservationList = conservationList.rename(columns=
 {
     'TAXON_ID':'taxonID',
     'SCIENTIFIC_NAME':'scientificName',
-    'VIC_ADVISORY_STATUS':'status',
+    'VIC_ADVISORY_STATUS':'vicadvisorystatus',
     'TAXON_TYPE':'speciesGroup',
-    'FFG_ACT_STATUS':'ffgactStatus',
+    'FFG_ACT_STATUS':'ffgactstatus',
     'EPBC_ACT_STATUS': 'epbcactStatus',
     'TAXON_LEVEL_CDE': 'taxonRank',
     'ORIGIN': 'establishmentMeans',
@@ -36,9 +36,20 @@ conservationList = conservationList.rename(columns=
     'LAST_MOD':'modified'
 })
 conservationList['taxonRank'] = 'species'
+conservationList['status'] = conservationList['ffgactstatus']
+conservationList['sourceStatus'] = conservationList['ffgactstatus']
+
 # conservationList.columns = conservationList.columns.str.replace(r"[().: ]", "", regex=True) # remove all spaces and : () from column names
 # conservationList.columns = conservationList.columns.str.replace(r"[_ ]", "", regex=True) # remove all spaces and : () from column names
 # conservationList=conservationList.drop(['Unnamed65'],axis=1)
 
-conservationList = conservationList[conservationList["ffgactStatus"].notna()]
+conservationList = conservationList[conservationList["status"].notna()]
+# reformat date
+conservationList['extractDate'] = pd.to_datetime(conservationList['extractDate'])
+conservationList['extractDate'] = conservationList['extractDate'].dt.strftime('%Y-%m-%d')
+conservationList['modified'] = pd.to_datetime(conservationList['modified'])
+conservationList['modified'] = conservationList['modified'].dt.strftime('%Y-%m-%d')
+
+#Write to CSV
 conservationList.to_csv(projectDir + dataDir + "VIC-new-conservation.csv",index=False)
+print('Finished processing')

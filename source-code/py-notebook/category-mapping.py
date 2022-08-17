@@ -8,9 +8,9 @@ dataDir = "/current-lists/sensitive-lists/"
 
 #%%  Function Definitions
 # function Read sensitive data file
-    def readData(state,stateFile):
-        outData  = pd.read_csv(projectDir + dataDir + stateFile)
-        return outData
+def readdata(state,stateFile):
+    outData  = pd.read_csv(projectDir + dataDir + stateFile)
+    return outData
 
 #%% Define Mapping fields
 
@@ -34,7 +34,7 @@ mappings = {'Category 1':'1','Category 2':'2','Category 3': '3',
 listData = [['WA','WA-sensitive.csv'],['NSW','NSW-sensitive.csv'],['QLD','QLD-sensitive.csv']]
 dfList = pd.DataFrame(listData, columns=['State', 'Fname'])
 for index, row in dfList.iterrows():
-    outVals = readData(row['State'],row['Fname'])
+    outVals = readdata(row['State'],row['Fname'])
     # newData = processState(row['State'], outVals)
     if row['State'] == 'NSW':
         status = outVals['sensitivityClass'].tolist()
