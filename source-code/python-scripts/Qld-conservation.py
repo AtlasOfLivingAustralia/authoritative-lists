@@ -18,8 +18,8 @@ import io
 from ftfy import fix_encoding
 #%%
 # top level directory
-projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/"
-basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/QLD-2022-10/"
+# basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 
 #Species List and Species codes URLS
 listurl = "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"
@@ -83,7 +83,8 @@ conservationlist = conservationlist.rename(columns=
     'Taxon_author':'scientificNameAuthorship',
     'NCA_status':'sourceStatus',
     'EPBC_status_description':'epbcStatus',
-    'Endemicity_description':'endemicity',
+    'Endemicity_description':'endemicityDesc',
+    'Endemicity': 'endemicity',
     'Significant':'significant',
     'Confidential':'confidential'
 })
@@ -108,5 +109,5 @@ conservationlist.groupby(["kingdom","class"]).size()
 #%%
 #Write to CSV
 print("Writing to CSV")
-conservationlist.to_csv(projectdir + "current-lists/conservation-lists/QLD-conservation.csv",encoding="UTF-8",index=False)
+conservationlist.to_csv(projectdir + "current-lists/conservation-lists/QLD-conservation-2022-10.csv",encoding="UTF-8",index=False)
 print("Processing finished")

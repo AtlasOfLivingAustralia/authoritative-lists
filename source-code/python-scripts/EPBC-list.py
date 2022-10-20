@@ -17,8 +17,8 @@ dataDir = "current-lists/conservation-lists/"
 epbcreport = pd.read_csv(projectDir + "source-data/EPBCA/10052022-123645-report.csv",skiprows=1)
 epbcreport.columns
 
-#%% to do - including all columns
-# DWC where obvious, otherwise retain fieldnames in camelCase
+#%%
+# Rename columns
 
 epbcreport = epbcreport.rename(columns=
 {

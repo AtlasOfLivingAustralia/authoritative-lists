@@ -10,13 +10,13 @@ import numpy as np
 # from ftfy import fix_encoding
 #%%
 # top level directory
-projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/"
+projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/WA-2022-10/"
 basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 # Species List and Species codes URLS
     # faunalisturl = "https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Fauna%20List.xlsx"
     # floralisturl = "https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Flora%20List%205%20December%202018.xlsx"
-faunafile = projectdir + "source-data/Threatened and Priority Fauna List.xlsx"
-florafile = projectdir + "source-data/Threatened and Priority Flora List.xlsx"
+faunafile = projectdir + "source-data/Threatened and Priority Fauna List 7 October 2022-fixed.xlsx"
+florafile = projectdir + "source-data/Threatened and Priority Flora List 6 October 2022-fixed.xlsx"
 dfsightings = pd.DataFrame()
 
 #%%
@@ -31,9 +31,14 @@ def processfauna(dframe):
         'Scientific name': 'scientificName',
         'Common name': 'vernacularName',
         'Class': 'class',
-        'WA Status \n(ranking)': 'sourceStatus',
-        'EPBC Status \n(ranking)': 'EPBC Status',
-        'WA list name': 'taxonRemarks',
+        'WA listing': 'sourceStatus',
+        'National listing': 'epbc status',
+        'WA listing note': 'wa listing note',
+        'Notes': 'taxonRemarks',
+                    
+        # 'WA Status \n(ranking)': 'sourceStatus',
+        # 'EPBC Status \n(ranking)': 'EPBC Status',
+        # 'WA list name': 'taxonRemarks',
         'Kimberley': 'KIMB',
         'Pilbara': 'PILB',
         'Goldfields': 'GOLD',
@@ -50,7 +55,7 @@ def processfauna(dframe):
     df = dframe[['KIMB', 'PILB', 'GOLD',
                 'MWST', 'WHTB', 'SCST', 'SWAN', 'SWST', 'WARR']].copy()
     v = np.where(df == "X")
-    dframe['DBCA Region'] = (pd.DataFrame(
+    dframe['dbca region'] = (pd.DataFrame(
         df.columns[v[1]], index=df.index[v[0]], columns=['result']
     ).groupby(level=0).agg(','.join).reindex(df.index)
                             )
@@ -98,10 +103,9 @@ def processfauna(dframe):
 def processflora(dframe):
     print('Transforming flora')
 
-    dframe = dframe.drop(['Name ID',
-                        'DBCA District',
-                        'Flowering Period',
-                        'IUCN Criteria',
+    # dframe = dframe.drop(['Name ID',
+    dframe = dframe.drop(['Flowering Period',
+                        'WA IUCN Criteria',
                         'Recovery Plan'
                         ], axis=1)
 
@@ -129,9 +133,13 @@ def processflora(dframe):
     dframe = dframe.rename(columns=
                          {'Name ID': 'taxonId',
                           'Taxon': 'scientificName',
-                          'Status': 'sourceStatus',
+                          'WA Status': 'sourceStatus',
+                          'WA Rank': 'wa rank',
+                          'DBCA Region': 'dbca region',
+                          'DBCA District': 'dbca district',
                           'Distribution': 'verbatimLocality',
-                          'EPBC': 'EPBC Status'
+                          'EPBC': 'epbc status',
+                          'Notes': 'taxonRemarks'
                           })
     dframe['status'] = dframe['sourceStatus'].replace(['T', 'X', 1, 2, 3, 4],
                                                     ['Threatened Flora', 'Presumed Extinct',
@@ -145,8 +153,6 @@ def builddf(df1,df2):
     # Concatenate dataframes
     dfsightings = pd.DataFrame()
     dfsightings = pd.concat([df1, dfsightings], axis=0, ignore_index=True, sort=False)
-    dfsightings['Rank'] = ""
-    dfsightings['DBCA Region'] = ""
     dfsightings['verbatimLocality'] = ""
     dfsightings['sensitivityZoneId'] = "WA"
     dfsightings = pd.concat([df2, dfsightings], axis=0, ignore_index=True, sort=False)
@@ -157,7 +163,7 @@ print("Downloading WA Fauna List")
 fauna = readsource(faunafile, 0)
 print("Finished Fauna download")
 print("Downloading WA Flora List")
-flora = readsource(florafile, 1)
+flora = readsource(florafile, 0)
 print("Finished Flora download")
 
 #%% Process Dataframes
@@ -170,8 +176,8 @@ dfsightings = builddf(fauna,flora)
 
 #%% Write to CSV
 print('writing Flora')
-dfsightings.to_csv(projectdir + "current-lists/conservation-lists/WA-conservation-fn.csv",encoding="UTF-8",index=False)
-dfsightings.to_csv(projectdir + "current-lists/sensitive-lists/WA-sensitive-fn.csv",encoding="UTF-8",index=False)
+dfsightings.to_csv(projectdir + "current-lists/conservation-lists/WA-conservation-2022-10.csv",encoding="UTF-8",index=False)
+dfsightings.to_csv(projectdir + "current-lists/sensitive-lists/WA-sensitive-2022-10.csv",encoding="UTF-8",index=False)
 print('Completed writing')
 
 # update the encoding on the final file / conservation is same as sensitive

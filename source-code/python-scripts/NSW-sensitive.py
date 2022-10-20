@@ -5,21 +5,14 @@ import pandas as pd
 
 #%%
 # top level directory
-projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/"
-basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/NSW-2022-10/"
+# basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 
 #%%
 with urllib.request.urlopen("https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames") as url:
     data = json.loads(url.read().decode())
 
-data = pd.json_normalize(data, record_path =['value'])
-
-#%% Not sure why this needs to happen
-
-# data.to_csv('testNSW.csv', index= None)
-#%%
-# df = pd.read_csv("testNSW.csv")
-df = data
+df = pd.json_normalize(data, record_path =['value'])
 dictn = {"Category 3": "1km",
        "Category 2": "10km",
        "Category 1": "WITHHOLD"
@@ -41,7 +34,7 @@ sensitive = sensitive.rename(columns={"stateConservation": "sourceStatus"})
 #%%
 #Write to CSV
 print("Writing to CSV")
-sensitive.to_csv(projectdir + "current-lists/sensitive-lists/NSW-sensitive.csv",encoding="UTF-8",index=False)
+sensitive.to_csv(projectdir + "current-lists/sensitive-lists/NSW-sensitive-2022-10.csv",encoding="UTF-8",index=False)
 print('Finished processing')
 
 

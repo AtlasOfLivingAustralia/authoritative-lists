@@ -17,8 +17,8 @@ import io
 from ftfy import fix_encoding
 #%%
 # top level directory
-projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/"
-basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/QLD-2022-10/"
+# basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 
 #Species List and Species codes URLS
 listurl = "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"
@@ -99,5 +99,5 @@ confidentiallist.groupby(["kingdom","class"]).size()
 #%%
 #Write to CSV
 print("Writing to CSV")
-confidentiallist.to_csv(projectdir + "current-lists/sensitive-lists/QLD-sensitive.csv",encoding="UTF-8",index=False)
+confidentiallist.to_csv(projectdir + "current-lists/sensitive-lists/QLD-sensitive-2022-10.csv",encoding="UTF-8",index=False)
 print("Processing finished")
