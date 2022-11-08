@@ -13,17 +13,23 @@ import numpy as np
 projectdir = "/Users/oco115/PycharmProjects/auth-lists-updates/WA-2022-10/"
 basedir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 # Species List and Species codes URLS
-    # faunalisturl = "https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Fauna%20List.xlsx"
-    # floralisturl = "https://www.dpaw.wa.gov.au/images/documents/plants-animals/threatened-species/Listings/Threatened%20and%20Priority%20Flora%20List%205%20December%202018.xlsx"
-faunafile = projectdir + "source-data/Threatened and Priority Fauna List 7 October 2022-fixed.xlsx"
-florafile = projectdir + "source-data/Threatened and Priority Flora List 6 October 2022-fixed.xlsx"
+faunafile = "https://www.dpaw.wa.gov.au/images/Threatened%20and%20Priority%20Fauna%20List%207%20October%202022.xlsx"
+florafile = "https://www.dpaw.wa.gov.au/images/Threatened%20and%20Priority%20Flora%20List%206%20October%202022.xlsx"
+# faunafile = projectdir + "source-data/Threatened and Priority Fauna List 7 October 2022-fixed.xlsx"
+# florafile = projectdir + "source-data/Threatened and Priority Flora List 6 October 2022-fixed.xlsx"
+
 dfsightings = pd.DataFrame()
 
 #%%
 def readsource(sourceurl,rskip):
+    skiprows=1
     dframe = pd.read_excel(sourceurl,skiprows=rskip)
     return dframe
 
+#%%
+# Process Fauna
+#
+print("Downloading WA Fauna Conservation List")
 #%%
 def processfauna(dframe):
     dframe = dframe.rename(columns=
@@ -35,7 +41,6 @@ def processfauna(dframe):
         'National listing': 'epbc status',
         'WA listing note': 'wa listing note',
         'Notes': 'taxonRemarks',
-                    
         # 'WA Status \n(ranking)': 'sourceStatus',
         # 'EPBC Status \n(ranking)': 'EPBC Status',
         # 'WA list name': 'taxonRemarks',
@@ -160,10 +165,10 @@ def builddf(df1,df2):
 
 #%%
 print("Downloading WA Fauna List")
-fauna = readsource(faunafile, 0)
+fauna = readsource(faunafile, 1)
 print("Finished Fauna download")
 print("Downloading WA Flora List")
-flora = readsource(florafile, 0)
+flora = readsource(florafile, 1)
 print("Finished Flora download")
 
 #%% Process Dataframes
