@@ -1,10 +1,10 @@
-taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,sourceStatus,significant,status,endemicity,epbcStatus
+taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthorship,sourceStatus,Significant,status,Endemicity,EPBC Status
 969,Animalia,Mammalia,Rhinolophidae,Rhinolophus philippinensis,greater large-eared horseshoe bat,"Waterhouse, 1843",E,Y,Endangered,Regional Endemic,Vulnerable
 1376,Animalia,Aves,Estrildidae,Chloebia gouldiae,Gouldian finch,"(Gould, 1844)",E,Y,Endangered,Intranational,Endangered
 1378,Animalia,Aves,Estrildidae,Erythrura trichroa,blue-faced parrot-finch,"(Kittlitz, 1835)",NT,Y,Near Threatened,Not Endemic to Australia,
 1370,Animalia,Aves,Estrildidae,Neochmia phaeton evangelinae,crimson finch (white-bellied subspecies),"(Hombron & Jacquinot, 1841)",E,Y,Endangered,Regional Endemic,Endangered
 1365,Animalia,Aves,Estrildidae,Poephila cincta cincta,black-throated finch (white-rumped subspecies),"Gould, 1837",E,Y,Endangered,Intranational,Endangered
-1355,Animalia,Aves,Estrildidae,Stagonopleura guttata,diamond firetail,"(Shaw, 1796)",C,N,Least concern,Intranational,
+1355,Animalia,Aves,Estrildidae,Stagonopleura guttata,diamond firetail,"(Shaw, 1796)",V,Y,Vulnerable,Intranational,
 1435,Animalia,Aves,Pachycephalidae,Pachycephala olivacea,olive whistler,"Vigors & Horsfield, 1827",C,N,Least concern,Intranational,
 1478,Animalia,Aves,Meliphagidae,Anthochaera phrygia,regent honeyeater,"(Shaw, 1794)",CR,Y,Critically Endangered,Intranational,Critically Endangered
 1528,Animalia,Aves,Meliphagidae,Epthianura crocea,yellow chat,"Castelnau & Ramsay, 1877",V,Y,Vulnerable,Intranational,
@@ -22,7 +22,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 1549,Animalia,Aves,Maluridae,Stipiturus malachurus,southern emu-wren,"(Shaw, 1798)",V,Y,Vulnerable,Intranational,
 1632,Animalia,Aves,Atrichornithidae,Atrichornis rufescens,rufous scrub-bird,"(Ramsay, 1867)",V,Y,Vulnerable,Intranational,Endangered
 1133,Animalia,Aves,Psittacidae,Pezoporus occidentalis,night parrot,"Gould, 1861",E,Y,Endangered,Intranational,Endangered
-1093,Animalia,Aves,Turnicidae,Turnix olivii,buff-breasted button-quail,"Robinson, 1900",E,Y,Endangered,Queensland Endemic,Endangered
+1093,Animalia,Aves,Turnicidae,Turnix olivii,buff-breasted button-quail,"Robinson, 1900",CR,Y,Critically Endangered,Queensland Endemic,Endangered
 1705,Animalia,Aves,Falconidae,Falco hypoleucos,grey falcon,"Gould, 1841",V,Y,Vulnerable,Intranational,Vulnerable
 481,Animalia,Reptilia,Elapidae,Hoplocephalus stephensii,Stephens' banded snake,"Krefft, 1869",C,N,Least concern,Intranational,
 541,Animalia,Reptilia,Boidae,Aspidites ramsayi,woma,"(Macleay, 1882)",NT,Y,Near Threatened,Intranational,
@@ -80,7 +80,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 18164,Animalia,Actinopterygii,Gobiidae,Chlamydogobius squamigenus,Edgbaston goby,"Larson, 1995",E,Y,Endangered,Queensland Endemic,Vulnerable
 32228,Animalia,Actinopterygii,Gobiidae,Stiphodon pelewensis,Daintree cling goby,"Herre, 1936",V,Y,Vulnerable,Not Endemic to Australia,
 18167,Animalia,Actinopterygii,Percichthyidae,Nannoperca oxleyana,Oxleyan pygmy perch,"Whitley, 1940",V,Y,Vulnerable,Intranational,Endangered
-18166,Animalia,Actinopterygii,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",V,Y,Vulnerable,Queensland Endemic,Vulnerable
+18166,Animalia,Actinopterygii,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,Y,Endangered,Queensland Endemic,Vulnerable
 18165,Animalia,Actinopterygii,Pseudomugilidae,Scaturiginichthys vermeilipinnis,redfin blue eye,"Ivantsoff, Unmack, Saeed & Crowley, 1991",E,Y,Endangered,Queensland Endemic,Endangered
 27032,Animalia,Actinopterygii,Melanotaeniidae,Rhadinocentrus ornatus,ornate rainbowfish,"(Regan, 1914)",,N,,Intranational,
 18,Animalia,Insecta,Lycaenidae,Hypochrysops apollo apollo,Apollo jewel (Wet Tropics subspecies),"Miskin, 1891",V,Y,Vulnerable,Queensland Endemic,
@@ -223,7 +223,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 17790,Plantae,Equisetopsida,Orchidaceae,Caladenia catenata,,(Sm.) Druce,SL,Y,Special least concern,Intranational,
 2326,Plantae,Equisetopsida,Orchidaceae,Caladenia chamaephylla,,D.L.Jones,SL,Y,Special least concern,Queensland Endemic,
 14021,Plantae,Equisetopsida,Orchidaceae,Caladenia dilatata,,R.Br.,,N,,,
-19764,Plantae,Equisetopsida,Orchidaceae,Caladenia filamentosa,,,C,N,Least concern,Unknown,
+19764,Plantae,Equisetopsida,Orchidaceae,Caladenia filamentosa,,R.Br.,C,N,Least concern,Intranational,
 13445,Plantae,Equisetopsida,Orchidaceae,Caladenia filamentosa var. filamentosa,daddy long legs,R.Br.,C,N,Least concern,Intranational,
 7977,Plantae,Equisetopsida,Orchidaceae,Caladenia flaccida,,D.L.Jones,SL,Y,Special least concern,Queensland Endemic,
 8247,Plantae,Equisetopsida,Orchidaceae,Caladenia fuscata,,(Rchb.f.) M.A.Clem. & D.L.Jones,SL,Y,Special least concern,Intranational,
@@ -432,7 +432,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 9062,Plantae,Equisetopsida,Orchidaceae,Diuris alba,,R.Br.,SL,Y,Special least concern,Intranational,
 6215,Plantae,Equisetopsida,Orchidaceae,Diuris alba x Diuris chrysantha,,,C,N,Least concern,Queensland Endemic,
 9276,Plantae,Equisetopsida,Orchidaceae,Diuris chrysantha,double yellow tails,D.L.Jones & M.A.Clem.,SL,Y,Special least concern,Intranational,
-34632,Plantae,Equisetopsida,Orchidaceae,Diuris curta,,D.L.Jones,SL,Y,Special least concern,Intranational,
+34632,Plantae,Equisetopsida,Orchidaceae,Diuris curta,,D.L.Jones,E,Y,Endangered,Intranational,
 7943,Plantae,Equisetopsida,Orchidaceae,Diuris exitela,,D.L.Jones,SL,Y,Special least concern,Queensland Endemic,
 7944,Plantae,Equisetopsida,Orchidaceae,Diuris lanceolata,snake orchid,Lindl.,C,Y,Least concern,,Endangered
 7945,Plantae,Equisetopsida,Orchidaceae,Diuris luteola,northern yellow donkeys tails,D.L.Jones & B.Gray,SL,Y,Special least concern,Queensland Endemic,
@@ -563,6 +563,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 10464,Plantae,Equisetopsida,Orchidaceae,Oberonia carnosa,,Lavarack,V,Y,Vulnerable,Queensland Endemic,
 9017,Plantae,Equisetopsida,Orchidaceae,Oberonia complanata,,(A.Cunn.) M.A.Clem. & D.L.Jones,SL,Y,Special least concern,Queensland Endemic,
 36250,Plantae,Equisetopsida,Orchidaceae,Oberonia crateriformis,,D.L.Jones & M.A.Clem.,SL,Y,Special least concern,Queensland Endemic,
+35334,Plantae,Equisetopsida,Orchidaceae,Oberonia flavescens,,D.L.Jones & M.A.Clem.,,N,,Queensland Endemic,
 4988,Plantae,Equisetopsida,Orchidaceae,Oberonia palmicola,,F.Muell.,SL,Y,Special least concern,Intranational,
 21161,Plantae,Equisetopsida,Orchidaceae,Octarrhena,,,,N,,,
 7920,Plantae,Equisetopsida,Orchidaceae,Octarrhena pusilla,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,Y,Special least concern,Queensland Endemic,
@@ -889,6 +890,7 @@ taxonID,kingdom,class,family,scientificName,vernacularName,scientificNameAuthors
 41411,Plantae,Equisetopsida,Hymenophyllaceae,Hymenophyllum reinwardtii,,Bosch,CR,Y,Critically Endangered,Regional Endemic,
 13883,Plantae,Equisetopsida,Hymenophyllaceae,Hymenophyllum whitei,,Goy,CR,Y,Critically Endangered,Queensland Endemic,Extinct
 33350,Plantae,Equisetopsida,Hymenophyllaceae,Polyphlebium endlicherianum,,(C.Presl) Ebihara & K.Iwats.,V,Y,Vulnerable,Not Endemic to Australia,Endangered
+37837,Plantae,Equisetopsida,Orobanchaceae,Striga asiatica,,(L.) Kuntze,,N,,,
 8163,Plantae,Equisetopsida,Lycopodiaceae,Huperzia,,,,N,,Unknown,
 12357,Plantae,Equisetopsida,Lycopodiaceae,Huperzia serrata,,(Thunb. ex Murray) Trevis.,PE,Y,Extinct in the wild,Regional Endemic,Extinct
 40994,Plantae,Equisetopsida,Lycopodiaceae,Phlegmariurus,,,,N,,Unknown,

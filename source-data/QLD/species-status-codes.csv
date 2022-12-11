@@ -1,27 +1,27 @@
-Field,Code,Code_description
-Endemicity,IA,Naturalised from elsewhere in Australia
-Endemicity,II,Naturalised from overseas
-Endemicity,IU,Naturalised species - origin not defined
-Endemicity,Q,Queensland endemic
-Endemicity,QA,Australian endemic
-Endemicity,QAI,Naturally occurs in Australia and overseas
-Endemicity,QI,Naturally occurs in Queensland and overseas
-Endemicity,U,Native to Queensland - endemicity not defined 
-Endemicity,VA,Australian vagrant
-Endemicity,VI,International vagrant
-Endemicity,VU,Vagrant - origin not defined
-EPBC_status,CD,Conservation dependent
-EPBC_status,CE,Critically endangered
-EPBC_status,E,Endangered
-EPBC_status,EX,Extinct
-EPBC_status,XW,Extinct in the wild
-EPBC_status,V,Vulnerable
-NCA_status,C,Least concern wildlife
-NCA_status,CR,Critically endangered wildlife
-NCA_status,E,Endangered wildlife
-NCA_status,EX,Extinct wildlife
-NCA_status,NT,Near threatened wildlife
-NCA_status,PE,Extinct in the wild wildlife
-NCA_status,SL,Special least concern wildlife
-NCA_status,V,Vulnerable wildlife
-NCA_status,I,International wildlife
+,Field,Code,Code_description
+0,EPBC_status,CD,Conservation Dependent
+1,EPBC_status,CE,Critically Endangered
+2,EPBC_status,E,Endangered
+3,EPBC_status,EX,Extinct
+4,EPBC_status,V,Vulnerable
+5,EPBC_status,XW,Extinct in the Wild
+6,Endemicity,IA,Introduced (Intranational)
+7,Endemicity,II,Introduced (International)
+8,Endemicity,IU,Introduced (Unknown)
+9,Endemicity,Q,Queensland Endemic
+10,Endemicity,QA,Intranational
+11,Endemicity,QAI,Not Endemic to Australia
+12,Endemicity,QI,Regional Endemic
+13,Endemicity,U,Unknown
+14,Endemicity,VA,Vagrant (Intranational)
+15,Endemicity,VI,Vagrant (International)
+16,Endemicity,VU,Vagrant (Unknown)
+17,NCA_status,C,Least concern
+18,NCA_status,CR,Critically endangered
+19,NCA_status,E,Endangered
+20,NCA_status,EX,Extinct
+21,NCA_status,I,International
+22,NCA_status,NT,Near threatened
+23,NCA_status,PE,Extinct in the wild
+24,NCA_status,SL,Special least concern
+25,NCA_status,V,Vulnerable
