@@ -10,7 +10,7 @@ outcsv = "/Users/oco115/PycharmProjects/iNaturalist-lists/data/inaturalist-austr
 usercsv = "/Users/oco115/PycharmProjects/iNaturalist-lists/data/inaturalist-708886-update-statuses.csv"
 apiurlbase = "https://api.inaturalist.org/v1/taxa/"
 
-## Read inaturalist conservation statuses file
+## Read inaturalist conservation statuses file first up
 df = pd.read_csv(inatcsv,encoding='UTF-8')
 
 # Retrieve all Australian records
