@@ -7,6 +7,7 @@ import urllib.request
 import json
 import certifi
 import ssl
+import requests
 
 
 def download_ala_list(url: str):
@@ -55,9 +56,13 @@ def get_changelist(newListUrl: str, oldListUrl: str):
     #changeList = changeList[['listUpdate','name', 'scientificName_x','commonName_x','status_x','status_y']].sort_values('name')
     return changeList
 
-def testout(value,fname):
-    import pandas as pd
-    # for testing only read first 500 rows of each file
-    dfout = pd.read_csv(fname)
-    print('testout value ' + value)
-    return dfout
+def gbifparse(indf):
+    # GBIF Parser - returns binomial and trinomial names for scientificName
+    namesonly = indf['name']
+    url = "https://api.gbif.org/v1/parser/name"
+    headers = {'content-type': 'application/json'}
+    data = namesonly.to_json(orient="values")
+    params = {'name': data}
+    r = requests.post(url=url, data=data, headers=headers)
+    results = pd.read_json(r.text)
+    return results
