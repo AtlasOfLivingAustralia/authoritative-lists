@@ -20,6 +20,7 @@ def download_ala_list(url: str):
 def kvp_to_columns(df):
     d0 = pd.DataFrame()
     for i in df.index:
+    # if len(sensitivelist['kvpValues'][i]) > 0:
         kvpdf = pd.json_normalize(df.kvpValues[i])
         kvpdf = kvpdf.transpose()
         kvpdf.columns = kvpdf.loc['key']   # rename columns to the keys
