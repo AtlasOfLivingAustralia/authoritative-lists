@@ -1,54 +1,55 @@
-scientificName,vernacularName,status,taxonRemarks,sourceStatus
-Anthochaera phrygia,Regent Honeyeater,Critically Endangered,,Critically Endangered 
-Lathamus discolor,Swift Parrot,Critically Endangered,,Critically Endangered 
-Pseudophryne pengilleyi,Northern Corroboree Frog,Critically Endangered,,Critically Endangered 
-Caladenia actensis,Canberra Spider Orchid,Critically Endangered,,Critically Endangered 
-Corunastylis ectopa,Brindabella Midge Orchid,Critically Endangered,,Critically Endangered 
-Pterostylis oreophila,Kiandra Greenhood,Critically Endangered,,Critically Endangered 
-Litoria castanea,Yellow-spotted Bell Frog,Critically Endangered,locally extinct,Critically Endangered 
-Gentiana baeuerlenii,Baeuerlen's Gentian,Endangered,,Endangered
-Prasophyllum petilum,Tarengo Leek Orchid,Endangered,,Endangered
-Rutidosis leptorhynchoides,Button Wrinklewort,Endangered,,Endangered
-Swainsona recta,Small Purple Pea,Endangered,,Endangered
-Synemon plana,Golden Sun Moth,Endangered,,Endangered
-Tympanocryptis pinguicolla,Grassland Earless Dragon,Endangered,,Endangered
-Macquaria australasica,Macquarie Perch,Endangered,,Endangered
-Maccullochella macquariensis,Trout Cod,Endangered,,Endangered
-Petrogale penicillata,Brush-tailed Rock-wallaby,Endangered,,Endangered
-Pseudomys fumeus,Smoky Mouse,Endangered,,Endangered
-Muehlenbeckia tuggeranong,Tuggeranong Lignum,Endangered,,Endangered
-Lepidium ginninderrense,Ginninderra Peppercress,Endangered,,Endangered
-Bidyanus bidyanus,Silver Perch,Endangered,,Endangered
-Bossiaea grayi,Murrumbidgee Bossiaea,Endangered,,Endangered
-Botaurus poiciloptilus,Australasian Bittern,Endangered,,Endangered
-Dasyurus viverrinus,Eastern Quoll,Endangered,,Endangered
-Isoodon obesulus obesulus,Southern Brown Bandicoot (Eastern),Endangered,,Endangered
-Rostratula australis,Australian Painted Snipe,Endangered,,Endangered
-Delma impar,Striped Legless Lizard,Vulnerable,,Vulnerable
-Gadopsis bispinosus,Two-spined Blackfish,Vulnerable,,Vulnerable
-Euastacus armatus,Murray River Crayfish,Vulnerable,,Vulnerable
-Perunga ochracea,Perunga Grasshopper,Vulnerable,,Vulnerable
-Melanodryas cucullata cucullata,Hooded Robin,Vulnerable,,Vulnerable
-Polytelis swainsonii,Superb Parrot,Vulnerable,,Vulnerable
-Climacteris picumnus victoriae,Brown Treecreeper,Vulnerable,,Vulnerable
-Grantiella picta,Painted Honeyeater,Vulnerable,,Vulnerable
-Dasyurus maculatus maculatus,Spotted-tailed Quoll,Vulnerable,,Vulnerable
-Daphoenositta chrysoptera,Varied Sittella,Vulnerable,,Vulnerable
-Lalage tricolor,White-winged Triller,Vulnerable,,Vulnerable
-Hieraaetus morphnoides,Little Eagle,Vulnerable,,Vulnerable
-Aprasia parapulchella,Pink-tailed Worm-lizard,Vulnerable,,Vulnerable
-Calyptorhynchus lathami lathami,Glossy Black-cockatoo,Vulnerable,,Vulnerable
-Petroica boodang,Scarlet Robin,Vulnerable,,Vulnerable
-Mastacomys fuscus mordicus,Broad-toothed Rat (mainland),Vulnerable,,Vulnerable
-Petauroides volans,Greater Glider,Vulnerable,,Vulnerable
-Phascolarctos cinereus,Koala (QLD/NSW/ACT population),Vulnerable,,Vulnerable
-Pseudomys novaehollandiae,New Holland Mouse,Vulnerable,,Vulnerable
-Pteropus poliocephalus,Grey-headed Flying-fox,Vulnerable,,Vulnerable
-Litoria aurea,Green and Golden Bell Frog,Vulnerable,locally extinct,Vulnerable
-Litoria raniformis,Southern Bell Frog,Vulnerable,locally extinct,Vulnerable
-Litoria verreauxii alpina,Alpine Tree Frog,Vulnerable,,Vulnerable
-Eucalyptus aggregata,Black Gum,Vulnerable,,Vulnerable
-Pomaderris pallida,Pale Pomaderris,Vulnerable,,Vulnerable
-Thesium australe,Austral Toadflax,Vulnerable,,Vulnerable
-Hirundapus caudacutus,White-throated Needletail,Vulnerable,,Vulnerable
-Bettongia gaimardi,Eastern Bettong,Conservation Dependent,,Regionally Conservation Dependent
+category,scientificname,vernacularname,taxonrank,taxonomicstatus,kingdom,phylum,class,order,family,sourcestatus,status,authority,ngunnawal,comments,synonym,taxonremarks
+Bird,Anthochaera phrygia,Regent Honeyeater,species,accepted,Animalia,Chordata,Aves,Passeriformes,Meliphagidae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,,,
+Reptile,Aprasia parapulchella,Pink-tailed Worm-lizard,species,accepted,Animalia,Chordata,Reptilia,Squamata,Pygopodidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Banburung,,,
+Mammal,Bettongia gaimardi,Eastern Bettong,species,accepted,Animalia,Chordata,Mammalia,Diprotodontia,Potoroidae,Regionally Conservation Dependent,Regionally Conservation Dependent,Nature Conservation Act 2014 (ACT),Ngaluda,Regionally Conservation Dependent,,
+Fish,Bidyanus bidyanus,Silver Perch,species,accepted,Animalia,Chordata,Actinopterygii,Perciformes,Terapontidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Dhingur,,,
+Plant,Bossiaea grayi,Murrumbidgee Bossiaea,species,accepted,Plantae,Charophyta,Equisetopsida,Fabales,Fabaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Bird,Botaurus poiciloptilus,Australasian Bittern,species,accepted,Animalia,Chordata,Aves,Ciconiiformes,Ardeidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,included in ACT Migratory Species Action Plan,,
+Plant,Caladenia actensis,Canberra Spider Orchid,species,accepted,Plantae,Charophyta,Equisetopsida,Asparagales,Orchidaceae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,,Arachnorchis actensis,
+Bird,Calyptorhynchus lathami lathami,Glossy Black-cockatoo,subspecies,accepted,Animalia,Chordata,Aves,Psittaciformes,Cacatuidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,Calyptorhynchus lathami species rank considered to be this subspecies when occurring in the ACT,,
+Bird,Climacteris picumnus victoriae,Brown Treecreeper,subspecies,accepted,Animalia,Chordata,Aves,Passeriformes,Climacteridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Plant,Corunastylis ectopa,Brindabella Midge Orchid,species,accepted,Plantae,Charophyta,Equisetopsida,Asparagales,Orchidaceae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,,,
+Bird,Daphoenositta chrysoptera,Varied Sittella,species,accepted,Animalia,Chordata,Aves,Passeriformes,Neosittidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Mammal,Dasyurus maculatus maculatus,Spotted-tailed Quoll,subspecies,accepted,Animalia,Chordata,Mammalia,Dasyuromorphia,Dasyuridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Murunguny,,,
+Mammal,Dasyurus viverrinus,Eastern Quoll,species,accepted,Animalia,Chordata,Mammalia,Dasyuromorphia,dasyuridae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Murunguny,,,
+Reptile,Delma impar,Striped Legless Lizard,species,accepted,Animalia,Chordata,Reptilia,Squamata,Pygopodidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Narung or Gandi,,,
+Fish,Euastacus armatus,Murray River Crayfish,species,accepted,Animalia,Arthropoda,Malacostraca,Decapoda,Parastacidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Murunung,,,
+Plant,Eucalyptus aggregata,Black Gum,species,accepted,Plantae,Charophyta,Equisetopsida,Myrtales,Myrtaceae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Fish,Gadopsis bispinosus,Two-spined Blackfish,species,accepted,Animalia,Chordata,Actinopterygii,Perciformes,Percichthyidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Wagar,,,
+Plant,Gentiana baeuerlenii,Baeuerlen's Gentian,species,accepted,Plantae,Charophyta,Equisetopsida,Gentianales,Gentianaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Bird,Grantiella picta,Painted Honeyeater,species,accepted,Animalia,Chordata,Aves,Passeriformes,Meliphagidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Bird,Hieraaetus morphnoides,Little Eagle,species,accepted,Animalia,Chordata,Aves,Falconiformes,Accipitridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Bird,Hirundapus caudacutus,White-throated Needletail,species,accepted,Animalia,Chordata,Aves,Apodiformes,Apodidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Mammal,Isoodon obesulus obesulus,Southern Brown Bandicoot,subspecies,accepted,Animalia,Chordata,Mammalia,Peramelemorphia,Peramelidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Mandawari,,,
+Bird,Lalage tricolor,White-winged Triller,species,accepted,Animalia,Chordata,Aves,Passeriformes,Campephagidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Bird,Lathamus discolor,Swift Parrot,species,accepted,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,,,
+Plant,Lepidium ginninderrense,Ginninderra Peppercress,species,accepted,Plantae,Charophyta,Equisetopsida,Brassicales,Brassicaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Frog,Litoria aurea,Green and Golden Bell Frog,species,accepted,Animalia,Chordata,Amphibia,Anura,Hylidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,Locally extinct,,
+Frog,Litoria castanea,Yellow-spotted Bell Frog,species,accepted,Animalia,Chordata,Amphibia,Anura,Hylidae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,Locally extinct,,
+Frog,Litoria raniformis,Southern Bell Frog,species,accepted,Animalia,Chordata,Amphibia,Anura,Hylidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,Locally extinct,,
+Frog,Litoria verreauxii alpina,Alpine Tree Frog,subspecies,accepted,Animalia,Chordata,Amphibia,Anura,Hylidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Fish,Maccullochella macquariensis,Trout Cod,species,accepted,Animalia,Chordata,Actinopterygii,Perciformes,Percichthyidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Gudu,,,
+Fish,Macquaria australasica,Macquarie Perch,species,accepted,Animalia,Chordata,Actinopterygii,Perciformes,Percichthyidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Gubay,,,
+Mammal,Mastacomys fuscus mordicus,Broad-toothed Rat,subspecies,accepted,Animalia,Chordata,Mammalia,Rodentia,Muridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Luda,,,
+Bird,Melanodryas cucullata cucullata,Hooded Robin,subspecies,accepted,Animalia,Chordata,Aves,Passeriformes,Petroicidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Plant,Muehlenbeckia tuggeranong,Tuggeranong Lignum,species,accepted,Plantae,Charophyta,Equisetopsida,Caryophyllales,Polygonaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Invertebrate,Perunga ochracea,Perunga Grasshopper,species,accepted,Animalia,Arthropoda,invertibratea,Orthoptera,Acrididae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Baaman,,,
+Mammal,Petauroides volans,Greater Glider,species,accepted,Animalia,Chordata,Mammalia,Diprotodontia,Pseudocheiridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Banguu,,,
+Mammal,Petrogale penicillata,Brush-tailed Rock-wallaby,species,accepted,Animalia,Chordata,Mammalia,Diprotodontia,Macropodidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Baray,,,
+Bird,Petroica boodang,Scarlet Robin,species,accepted,Animalia,Chordata,Aves,Passeriformes,Petroicidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Mammal,Phascolarctos cinereus,Koala,species,accepted,Animalia,Chordata,Mammalia,Diprotodontia,Phascolarctidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),Gula,,,
+Bird,Polytelis swainsonii,Superb Parrot,species,accepted,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Plant,Pomaderris pallida,Pale Pomaderris,species,accepted,Plantae,Charophyta,Equisetopsida,Rosales,Rhamnaceae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Plant,Prasophyllum petilum,Tarengo Leek Orchid,species,accepted,Plantae,Charophyta,Equisetopsida,Asparagales,Orchidaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Mammal,Pseudomys fumeus,Smoky Mouse,species,accepted,Animalia,Chordata,Mammalia,Rodentia,Muridae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Ganimang,,,
+Mammal,Pseudomys novaehollandiae,New Holland Mouse,species,accepted,Animalia,Chordata,Mammalia,Rodentia,Muridae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Frog,Pseudophryne pengilleyi,Northern Corroboree Frog,species,accepted,Animalia,Chordata,Amphibia,Anura,Myobatrachidae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),Galaangga,,,
+Mammal,Pteropus poliocephalus,Grey-headed Flying-fox,species,accepted,Animalia,Chordata,Mammalia,Chiroptera,Pteropodidae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Plant,Pterostylis oreophila,Kiandra Greenhood,species,accepted,Plantae,Charophyta,Equisetopsida,Asparagales,Orchidaceae,Critically Endangered,Critically Endangered,Nature Conservation Act 2014 (ACT),,,,
+Bird,Rostratula australis,Australian Painted Snipe,species,accepted,Animalia,Chordata,Aves,Charadriiformes,Rostratulidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,included in ACT Migratory Species Action Plan,,
+Plant,Rutidosis leptorhynchoides,Button Wrinklewort,species,accepted,Plantae,Charophyta,Equisetopsida,Asterales,Asteraceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Plant,Swainsona recta,Small Purple Pea,species,accepted,Plantae,Charophyta,Equisetopsida,Fabales,Fabaceae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Invertebrate,Synemon plana,Golden Sun Moth,species,accepted,Animalia,Arthropoda,invertibratea,Lepidoptera,Castniidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),,,,
+Plant,Thesium australe,Austral Toadflax,species,accepted,Plantae,Charophyta,Equisetopsida,Malpighiales,Santalaceae,Vulnernable,Vulnernable,Nature Conservation Act 2014 (ACT),,,,
+Reptile,Tympanocryptis lineata,Grassland Earless Dragon,species,accepted,Animalia,Chordata,Reptilia,Squamata,Agamidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Bidjiwang,"Recent taxonomic changes to the species, from Tympanocryptis pinguicolla to Tympanocryptis lineata, are documented in Melville et al. 2019. but the species name has not yet updated in the NCA List",Tympanocryptis pinguicolla,
+Reptile,Tympanocryptis pinguicolla,Grassland Earless Dragon,species,homotypic synonym,Animalia,Chordata,Reptilia,Squamata,Agamidae,Endangered,Endangered,Nature Conservation Act 2014 (ACT),Bidjiwang,Homotypic synonym of Tympanocryptis lineata,Tympanocryptis lineata,Homotypic synonym of Tympanocryptis lineata

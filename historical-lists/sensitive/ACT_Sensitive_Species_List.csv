@@ -1,4 +1,4 @@
-"Supplied Name","guid","scientificName","family","kingdom","conservation status","vernacular name","Authority","category","generalisation","generalisation description","Reason"
+"scientificName","guid","scientificNameMatched","family","kingdom","conservation status","vernacular name","Authority","category","generalisation","generalisation description","Reason"
 "Bossiaea grayi","https://id.biodiversity.org.au/node/apni/2910201","Bossiaea grayi","Fabaceae",,"Endangered","Murrumbidgee Bossiaea","ACT Nature Conservation Act 2014","High","1km","Generalise to 0.01 or 1km","Disturbance and collection"
 "Aprasia parapulchella","urn:lsid:biodiversity.org.au:afd.taxon:0d74fa05-7039-4f1e-9147-ca3927124532","Aprasia parapulchella","Pygopodidae",,"Vulnerable",,"ACT Nature Conservation Act 2014","Very High","1km","Generalise to 0.01 or 1km","Disturbance and collection"
 "Pseudophryne pengilleyi","urn:lsid:biodiversity.org.au:afd.taxon:cc5315bf-6682-44d9-809c-139afaddf7c8","Pseudophryne pengilleyi","Myobatrachidae",,"Critically endangered",,"ACT Nature Conservation Act 2014","Very High","1km","Generalise to 0.01 or 1km","Disturbance and collection"
