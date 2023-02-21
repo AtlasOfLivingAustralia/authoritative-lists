@@ -3,5 +3,6 @@ This directory contains utility scripts used for wrangling species list datasets
 
 | **Directory**| **Description**|
 |----------------|----------------|
-| SelectFileSaveToCSV| Simple script to read data file (.tab,.shp,.json) <br> write to CSV|
-| py-notebook | Python notebook scripts|
+| includes| Function scripts for common tasks|
+| py-notebook | Python notebook scripts for List extraction and processing|
+| R | Archive - R scripts for analysing Species Lists|
