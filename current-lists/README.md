@@ -4,23 +4,44 @@ Directory containing:
 2. Sensitive Lists
 3. GRIIS invasive List
 4. Migratory Bird Agreement Lists
+  
 
 ## List Update dates
 
-c("EPBC","dr656","dr18735"),
-c("ACT","dr649","dr18718"),
-c("NSW","dr650","dr18736"),
-c("NT","dr651","dr18704"),
-c("QLD","dr652","dr18703"),
-c("SA","dr653","dr18701"),
-c("TAS","dr654","dr18705"),
-c("VIC","dr655","dr18706"),
-c("WA","dr2201","dr18714"))),
+### Conservation Lists
 
-Conservation
-ACT, dr649,"Australian Capital Territory : Conservation Status"
-EPBC, dr656, "EPBC Act Threatened Species"
-NSW, dr650, "New South Wales : Conservation Status"
+| **State** | DR Prod/Test  | **Source date** | **ALA Upload date** | **Source date origin**    |
+|-----------|---------------|-----------------|---------------------|---------------------------|
+| EPBC      | dr656/dr656   | 2022-05-10      | 2020-06-04          | No Date. Reg update reqd  |
+| ACT       | dr649/dr649   | 2023-01-05      | 2017-03-23          | Website. Reg check reqd   |
+| NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
+| NT        | dr651/dr651   | current date    | 2017-03-23          |                           |
+| QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
+| SA        | dr653/dr653   | 2023-02-13      | 2016-06-14          | Website. Reg update reqd  |
+| TAS       | der654/dr654  | 2022-12-21      | 2016-06-14          |                           |
+| VIC       | dr655/dr655   | 2023-01-19      | 2016-06-14          | Website. Reg check reqd   |
+| WA        | dr2201/dr2201 | 2022-10-07      | 2016-06-14          | File name. Reg check reqd |
+| BONN      | dr18987/18505 | 2022-05-10      | 2020-06-04          | See EPBC                  |
+| CAMBA     | dr18989/18504 | 2022-05-10      | 2020-06-04          | See EPBC                  |
+| JAMBA     | dr18988/18503 | 2022-05-10      | 2020-06-04          | See EPBC                  |
+| ROKAMBA   | dr18990/18502 | 2022-05-10      | 2020-06-04          | See EPBC                  |
+
+### Sensitive Lists
+
+| **State** | **DR Prod/Test** | **Source date** | **ALA Upload date** | **Source date origin**         |
+|-----------|------------------|-----------------|---------------------|--------------------------------|
+| ACT       | dr2627/dr2627    | 2022-10-05      | 2023-02-21          | No date. Email Cam/Tania Laity |
+| NSW       | dr487/dr18957    | current date    | 2022-03-16          | No Date. Reg update reqd       |
+| NT        | dr492/dr18690    | 2022-03-22      | 2023-02-22          | No date. Email Cam/Tania Laity |
+| QLD       | dr493/dr18404    | current date    | 2021-05-28          | No Date. Reg update reqd       |
+| SA        | dr884/           | 2023-02-13      |                     | Website. Reg update reqd       |
+| TAS       | dr491/18692      | 2022-09-21      | 2023-02-22          | No date. Email Cam/Tania Laity |
+| VIC       | dr490/dr18669    | current date    | 2013-06-24          | Website. Reg check reqd        |
+| WA        | dr467/dr18406    | 2019-01-03      | 2016-06-14          | File name. Reg check reqd      |
+
+## Sensitive List XML
+**SDS XML:** https://sds.ala.org.au/sensitive-species-data.xml
+
 
 __haven't done metadata on these__
 NT, dr651, " Northern Territory : Conservation Status "
