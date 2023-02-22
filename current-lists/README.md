@@ -18,7 +18,7 @@ Directory containing:
 | NT        | dr651/dr651   | current date    | 2017-03-23          |                           |
 | QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
 | SA        | dr653/dr653   | 2023-02-13      | 2016-06-14          | Website. Reg update reqd  |
-| TAS       | der654/dr654  | 2022-12-21      | 2016-06-14          |                           |
+| TAS       | dr654/dr654   | 2022-12-21      | 2016-06-14          |                           |
 | VIC       | dr655/dr655   | 2023-01-19      | 2016-06-14          | Website. Reg check reqd   |
 | WA        | dr2201/dr2201 | 2022-10-07      | 2016-06-14          | File name. Reg check reqd |
 | BONN      | dr18987/18505 | 2022-05-10      | 2020-06-04          | See EPBC                  |
