@@ -31,7 +31,7 @@ Directory containing:
 | **State** | **DR Prod/Test** | **Source date** | **ALA Upload date** | **Source date origin**         |
 |-----------|------------------|-----------------|---------------------|--------------------------------|
 | ACT       | dr2627/dr2627    | 2022-10-05      | 2023-02-21          | No date. Email Cam/Tania Laity |
-| NSW       | dr487/dr18957    | current date    | 2022-03-16          | No Date. Reg update reqd       |
+| NSW       | dr487/dr18457    | current date    | 2022-03-16          | No Date. Reg update reqd       |
 | NT        | dr492/dr18690    | 2022-03-22      | 2023-02-22          | No date. Email Cam/Tania Laity |
 | QLD       | dr493/dr18404    | current date    | 2021-05-28          | No Date. Reg update reqd       |
 | SA        | dr884/           | 2023-02-13      |                     | Website. Reg update reqd       |
