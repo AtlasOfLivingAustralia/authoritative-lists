@@ -16,7 +16,7 @@ Directory containing:
 | ACT       | dr649/dr649   | 2023-01-05      | 2023-02-28          | Website. Reg check reqd       |
 | NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd      |
 | NT        | dr651/dr651   | current date    | 2022-05-18          | No date. Email Cam/Tania Laity|
-| QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
+| QLD       | dr652/dr652   | 2023-02-01      | 2023-01-17          | No Date. Reg update reqd  |
 | SA        | dr653/dr653   | 2023-02-13      | not current         | Website. Reg update reqd  |
 | TAS       | dr654/dr654   | 2022-12-21      | not current         |                           |
 | VIC       | dr655/dr655   | 2023-01-19      | not current         | Website. Reg check reqd   |
