@@ -12,19 +12,19 @@ Directory containing:
 
 | **State** | DR Prod/Test  | **Source date** | **ALA Upload date** | **Source date origin**    |
 |-----------|---------------|-----------------|---------------------|---------------------------|
-| EPBC      | dr656/dr656   | 2022-05-10      |           | No Date. Reg update reqd  |
-| ACT       | dr649/dr649   | 2023-01-05      |           | Website. Reg check reqd   |
+| EPBC      | dr656/dr656   | 2022-05-10      | 2022-11-            | No Date. Reg update reqd  |
+| ACT       | dr649/dr649   | 2023-01-05      |                     | Website. Reg check reqd   |
 | NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
-| NT        | dr651/dr651   | current date    |           |                           |
+| NT        | dr651/dr651   | current date    |                     |                           |
 | QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
-| SA        | dr653/dr653   | 2023-02-13      |          | Website. Reg update reqd  |
-| TAS       | dr654/dr654   | 2022-12-21      |           |                           |
-| VIC       | dr655/dr655   | 2023-01-19      |          | Website. Reg check reqd   |
+| SA        | dr653/dr653   | 2023-02-13      |                     | Website. Reg update reqd  |
+| TAS       | dr654/dr654   | 2022-12-21      |                     |                           |
+| VIC       | dr655/dr655   | 2023-01-19      |                     | Website. Reg check reqd   |
 | WA        | dr2201/dr2201 | 2022-10-07      | 2016-06-14          | File name. Reg check reqd |
-| BONN      | dr18987/18505 | 2022-05-10      |           | See EPBC                  |
-| CAMBA     | dr18989/18504 | 2022-05-10      |           | See EPBC                  |
-| JAMBA     | dr18988/18503 | 2022-05-10      |           | See EPBC                  |
-| ROKAMBA   | dr18990/18502 | 2022-05-10      |           | See EPBC                  |
+| BONN      | dr18987/18505 | 2022-05-10      | 2022-12-09          | See EPBC                  |
+| CAMBA     | dr18989/18504 | 2022-05-10      | 2022-12-09          | See EPBC                  |
+| JAMBA     | dr18988/18503 | 2022-05-10      | 2022-12-09          | See EPBC                  |
+| ROKAMBA   | dr18990/18502 | 2022-05-10      | 2022-12-09          | See EPBC                  |
 
 ### Sensitive Lists
 
