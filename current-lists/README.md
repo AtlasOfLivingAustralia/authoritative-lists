@@ -12,19 +12,19 @@ Directory containing:
 
 | **State** | DR Prod/Test  | **Source date** | **ALA Upload date** | **Source date origin**    |
 |-----------|---------------|-----------------|---------------------|---------------------------|
-| EPBC      | dr656/dr656   | 2022-05-10      | 2020-06-04          | No Date. Reg update reqd  |
-| ACT       | dr649/dr649   | 2023-01-05      | 2017-03-23          | Website. Reg check reqd   |
+| EPBC      | dr656/dr656   | 2022-05-10      |           | No Date. Reg update reqd  |
+| ACT       | dr649/dr649   | 2023-01-05      |           | Website. Reg check reqd   |
 | NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
-| NT        | dr651/dr651   | current date    | 2017-03-23          |                           |
+| NT        | dr651/dr651   | current date    |           |                           |
 | QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
-| SA        | dr653/dr653   | 2023-02-13      | 2016-06-14          | Website. Reg update reqd  |
-| TAS       | dr654/dr654   | 2022-12-21      | 2016-06-14          |                           |
-| VIC       | dr655/dr655   | 2023-01-19      | 2016-06-14          | Website. Reg check reqd   |
+| SA        | dr653/dr653   | 2023-02-13      |          | Website. Reg update reqd  |
+| TAS       | dr654/dr654   | 2022-12-21      |           |                           |
+| VIC       | dr655/dr655   | 2023-01-19      |          | Website. Reg check reqd   |
 | WA        | dr2201/dr2201 | 2022-10-07      | 2016-06-14          | File name. Reg check reqd |
-| BONN      | dr18987/18505 | 2022-05-10      | 2020-06-04          | See EPBC                  |
-| CAMBA     | dr18989/18504 | 2022-05-10      | 2020-06-04          | See EPBC                  |
-| JAMBA     | dr18988/18503 | 2022-05-10      | 2020-06-04          | See EPBC                  |
-| ROKAMBA   | dr18990/18502 | 2022-05-10      | 2020-06-04          | See EPBC                  |
+| BONN      | dr18987/18505 | 2022-05-10      |           | See EPBC                  |
+| CAMBA     | dr18989/18504 | 2022-05-10      |           | See EPBC                  |
+| JAMBA     | dr18988/18503 | 2022-05-10      |           | See EPBC                  |
+| ROKAMBA   | dr18990/18502 | 2022-05-10      |           | See EPBC                  |
 
 ### Sensitive Lists
 
@@ -33,11 +33,11 @@ Directory containing:
 | ACT       | dr2627/dr2627    | 2022-10-05      | 2023-02-21          | No date. Email Cam/Tania Laity |
 | NSW       | dr487/dr18457    | current date    | 2022-03-16          | No Date. Reg update reqd       |
 | NT        | dr492/dr18690    | 2022-03-22      | 2023-02-22          | No date. Email Cam/Tania Laity |
-| QLD       | dr493/dr18404    | current date    | 2021-05-28          | No Date. Reg update reqd       |
+| QLD       | dr493/dr18404    | current date    |           | No Date. Reg update reqd       |
 | SA        | dr884/           | 2023-02-13      |                     | Website. Reg update reqd       |
 | TAS       | dr491/18692      | 2022-09-21      | 2023-02-22          | No date. Email Cam/Tania Laity |
-| VIC       | dr490/dr18669    | current date    | 2013-06-24          | Website. Reg check reqd        |
-| WA        | dr467/dr18406    | 2019-01-03      | 2016-06-14          | File name. Reg check reqd      |
+| VIC       | dr490/dr18669    | current date    |           | Website. Reg check reqd        |
+| WA        | dr467/dr18406    | 2019-01-03      |           | File name. Reg check reqd      |
 
 ## Sensitive List XML
 **SDS XML:** https://sds.ala.org.au/sensitive-species-data.xml
