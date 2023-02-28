@@ -12,10 +12,10 @@ Directory containing:
 
 | **State** | DR Prod/Test  | **Source date** | **ALA Upload date** | **Source date origin**    |
 |-----------|---------------|-----------------|---------------------|---------------------------|
-| EPBC      | dr656/dr656   | 2022-05-10      | 2022-11-            | No Date. Reg update reqd  |
-| ACT       | dr649/dr649   | 2023-01-05      |                     | Website. Reg check reqd   |
-| NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
-| NT        | dr651/dr651   | current date    |                     |                           |
+| EPBC      | dr656/dr656   | 2022-05-10      | 2022-11-            | No Date. Reg update reqd      |
+| ACT       | dr649/dr649   | 2023-01-05      | 2023-02-28          | Website. Reg check reqd       |
+| NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd      |
+| NT        | dr651/dr651   | current date    | 2022-05-18          | No date. Email Cam/Tania Laity|
 | QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
 | SA        | dr653/dr653   | 2023-02-13      | not current         | Website. Reg update reqd  |
 | TAS       | dr654/dr654   | 2022-12-21      | not current         |                           |
@@ -34,7 +34,7 @@ Directory containing:
 | NSW       | dr487/dr18457    | current date    | 2022-03-16          | No Date. Reg update reqd       |
 | NT        | dr492/dr18690    | 2022-03-22      | 2023-02-22          | No date. Email Cam/Tania Laity |
 | QLD       | dr493/dr18404    | current date    | not current         | No Date. Reg update reqd       |
-| SA        | dr884/           | 2023-02-13      | not cur             | Website. Reg update reqd       |
+| SA        | dr884/           | 2023-02-13      | not current         | Website. Reg update reqd       |
 | TAS       | dr491/18692      | 2022-09-21      | 2023-02-22          | No date. Email Cam/Tania Laity |
 | VIC       | dr490/dr18669    | current date    | not current         | Website. Reg check reqd        |
 | WA        | dr467/dr18406    | 2019-01-03      | not current         | File name. Reg check reqd      |
