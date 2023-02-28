@@ -33,11 +33,11 @@ Directory containing:
 | ACT       | dr2627/dr2627    | 2022-10-05      | 2023-02-21          | No date. Email Cam/Tania Laity |
 | NSW       | dr487/dr18457    | current date    | 2022-03-16          | No Date. Reg update reqd       |
 | NT        | dr492/dr18690    | 2022-03-22      | 2023-02-22          | No date. Email Cam/Tania Laity |
-| QLD       | dr493/dr18404    | current date    |           | No Date. Reg update reqd       |
-| SA        | dr884/           | 2023-02-13      |                     | Website. Reg update reqd       |
+| QLD       | dr493/dr18404    | current date    | not current         | No Date. Reg update reqd       |
+| SA        | dr884/           | 2023-02-13      | not cur             | Website. Reg update reqd       |
 | TAS       | dr491/18692      | 2022-09-21      | 2023-02-22          | No date. Email Cam/Tania Laity |
-| VIC       | dr490/dr18669    | current date    |           | Website. Reg check reqd        |
-| WA        | dr467/dr18406    | 2019-01-03      |           | File name. Reg check reqd      |
+| VIC       | dr490/dr18669    | current date    | not current         | Website. Reg check reqd        |
+| WA        | dr467/dr18406    | 2019-01-03      | not current         | File name. Reg check reqd      |
 
 ## Sensitive List XML
 **SDS XML:** https://sds.ala.org.au/sensitive-species-data.xml
