@@ -17,10 +17,10 @@ Directory containing:
 | NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
 | NT        | dr651/dr651   | current date    |                     |                           |
 | QLD       | dr652/dr652   | 2023-02-01      | 2021-05-28          | No Date. Reg update reqd  |
-| SA        | dr653/dr653   | 2023-02-13      |                     | Website. Reg update reqd  |
-| TAS       | dr654/dr654   | 2022-12-21      |                     |                           |
-| VIC       | dr655/dr655   | 2023-01-19      |                     | Website. Reg check reqd   |
-| WA        | dr2201/dr2201 | 2022-10-07      | 2016-06-14          | File name. Reg check reqd |
+| SA        | dr653/dr653   | 2023-02-13      | not current         | Website. Reg update reqd  |
+| TAS       | dr654/dr654   | 2022-12-21      | not current         |                           |
+| VIC       | dr655/dr655   | 2023-01-19      | not current         | Website. Reg check reqd   |
+| WA        | dr2201/dr2201 | 2022-10-07      | not current         | File name. Reg check reqd |
 | BONN      | dr18987/18505 | 2022-05-10      | 2022-12-09          | See EPBC                  |
 | CAMBA     | dr18989/18504 | 2022-05-10      | 2022-12-09          | See EPBC                  |
 | JAMBA     | dr18988/18503 | 2022-05-10      | 2022-12-09          | See EPBC                  |
