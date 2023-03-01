@@ -12,9 +12,9 @@ Directory containing:
 
 | **State** | DR Prod/Test  | **Source date** | **ALA Upload date** | **Source date origin**    |
 |-----------|---------------|-----------------|---------------------|---------------------------|
-| EPBC      | dr656/dr656   | 2022-05-10      | 2022-11-            | No Date. Reg update reqd      |
-| ACT       | dr649/dr649   | 2023-01-05      | 2023-02-28          | Website. Reg check reqd       |
-| NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd      |
+| EPBC      | dr656/dr656   | 2022-05-10      | 2022-11-            | No Date. Reg update reqd  |
+| ACT       | dr649/dr649   | 2023-01-05      | 2023-02-28          | Website. Reg check reqd   |
+| NSW       | dr650/dr650   | current date    | 2022-03-16          | No Date. Reg update reqd  |
 | NT        | dr651/dr651   | current date    | 2022-05-18          | No date. Email Cam/Tania Laity|
 | QLD       | dr652/dr652   | 2023-02-01      | 2023-01-17          | No Date. Reg update reqd  |
 | SA        | dr653/dr653   | 2023-02-13      | not current         | Website. Reg update reqd  |
@@ -41,33 +41,6 @@ Directory containing:
 
 ## Sensitive List XML
 **SDS XML:** https://sds.ala.org.au/sensitive-species-data.xml
-
-
-__haven't done metadata on these__
-NT, dr651, " Northern Territory : Conservation Status "
-QLD, dr652, "Queensland : Conservation Status"
-SA, dr653, "South Australia : Conservation Status"
-TAS, dr654, "Tasmania : Conservation Status  "
-VIC,dr655
-WA, dr2201
-BONN, dr18987, "Bonn Convention Migratory Taxa"
-CAMBA, dr18989
-JAMBA, dr18988
-ROKAMBA,dr18990
-
-Sensitive
-NSW, dr487
-QLD, dr493
-VIC, dr490
-WA, dr2201
-
-(c("NSW","dr487","dr18782"),
-c("QLD","dr493","dr18712"),
-c("VIC","dr490","dr18713"),
-c("WA","dr2201","dr18714")))
-
-    
-
 
 Information relating to processing of data can be found at:
 1. [Data Processing](https://github.com/AtlasOfLivingAustralia/authoritative-lists/tree/master/source-data#data-processing)
