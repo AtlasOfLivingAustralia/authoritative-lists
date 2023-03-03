@@ -30,28 +30,46 @@ def kvp_to_columns(df):
         d0 = pd.concat([d0, kvpdf])
     return d0
 
+def build_list_url(drstr: str):
+    url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
+    return url
 
-def get_changelist(newListUrl: str, oldListUrl: str):
+
+def get_changelist(newListUrl: str, oldListUrl: str, ltype: str):
     oldList = download_ala_list(oldListUrl)
     oldList = kvp_to_columns(oldList)
     newList = download_ala_list(newListUrl)
     newList = kvp_to_columns(newList)
+    if ltype=='S':    # sensitive list
+        collist_new = ['name', 'commonName_new','scientificName_new']
+        collist_old = ['name', 'commonName_old','scientificName_old']
+    else: # conservation list
+        collist_new = ['name', 'commonName_new','scientificName_new', 'status_new']
+        collist_old = ['name', 'commonName_old','scientificName_old', 'status_old']
+        collist_status = ['name', 'commonName_new','scientificName_new', 'status_new',  'status_old']
+        # status changes - only check status changes for conservation list
+        statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
+        statusChanges = statusChanges[statusChanges['status_new'] !=
+                                      statusChanges['status_old']][collist_status]
+        statusChanges['listUpdate'] = 'status change'
+
     # new names
     newVsOld = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
-    newVsOld = newVsOld[newVsOld['scientificName_old'].isna()][['name', 'commonName_new',
-                                                                'scientificName_new', 'status_new']]
+    newVsOld = newVsOld[newVsOld['scientificName_old'].isna()][collist_new]
     newVsOld['listUpdate'] = 'added'
+
     # removed names
     oldVsNew = pd.merge(oldList, newList, how='left', on='name', suffixes=('_old', '_new'))
-    oldVsNew = oldVsNew[oldVsNew['scientificName_new'].isna()][['name', 'commonName_old',
-                                                                'scientificName_old', 'status_old']]
+    oldVsNew = oldVsNew[oldVsNew['scientificName_new'].isna()][collist_old]
     oldVsNew['listUpdate'] = 'removed'
-    # status changes
-    statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
-    statusChanges = statusChanges[statusChanges['status_new'] !=
-                                  statusChanges['status_old']][['name', 'commonName_new',
-                                                                'scientificName_new', 'status_new', 'status_old']]
-    statusChanges['listUpdate'] = 'status change'
+
+    # # status changes
+    # statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
+    # statusChanges = statusChanges[statusChanges['status_new'] !=
+    #                               statusChanges['status_old']][['name', 'commonName_new',
+    #                                                             'scientificName_new', 'status_new', 'status_old']]
+    # statusChanges['listUpdate'] = 'status change'
+
     # union and display in alphabetical order and save locally
     changeList = pd.concat([newVsOld, oldVsNew])
     #changeList = changeList[['listUpdate','name', 'scientificName_x','commonName_x','status_x','status_y']].sort_values('name')
