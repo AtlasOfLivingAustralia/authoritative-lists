@@ -21,17 +21,17 @@ def download_ala_list(url: str):
     return data
 
 def kvp_to_columns(df):
-    print('kvp_to_columns')
+    print(df.columns)
     d0 = pd.DataFrame()
     for i in df.index:
-    # if len(sensitivelist['kvpValues'][i]) > 0:
-        kvpdf = pd.json_normalize(df.kvpValues[i])
-        kvpdf = kvpdf.transpose()
-        kvpdf.columns = kvpdf.loc['key']   # rename columns to the keys
-        kvpdf.drop(['key'], inplace=True)  # drop the keys row
-        kvpdf['id'] = df.id[i]
-        kvpdf = pd.merge(df, kvpdf, "inner", on="id")
-        d0 = pd.concat([d0, kvpdf])
+        if len(df['kvpValues'][i]) > 0:
+            kvpdf = pd.json_normalize(df.kvpValues[i])
+            kvpdf = kvpdf.transpose()
+            kvpdf.columns = kvpdf.loc['key']   # rename columns to the keys
+            kvpdf.drop(['key'], inplace=True)  # drop the keys row
+            kvpdf['id'] = df.id[i]
+            kvpdf = pd.merge(df, kvpdf, "inner", on="id")
+            d0 = pd.concat([d0, kvpdf])
     return d0
 
 def build_list_url(drstr: str):
