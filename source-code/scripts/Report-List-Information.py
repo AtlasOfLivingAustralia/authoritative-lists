@@ -17,6 +17,26 @@ import configuration as cfg
 
 # monthStr = datetime.datetime.now().strftime('%Y%m%d')
 ##############################################################################################
+drList = {"TAS":"dr491"}
+# drList = {"ACT":"dr2627", "NSW":"dr487", "NT":"dr492", "QLD":"dr493", "SA":"dr884","TAS":"dr491", "VIC":"dr490", "WA":"dr467"}
+# drList = {"ACT":"dr2627", "NSW":"dr487", "NT":"dr492", "QLD":"dr493", "SA":"dr884", "VIC":"dr490", "WA":"dr467"}
+for state, dr in drList.items():
+    filename = state + "-" + dr + "-sensitive.csv"
+    print(dr)
+    prodListUrl = "https://lists.ala.org.au/ws/speciesListItems/" + dr + "?max=10000&includeKVP=true"
+    prodList = lf.download_ala_list(prodListUrl)  # save the prod list to the historical lists directory
+    prodList = lf.kvp_to_columns(prodList)
+    prodList.to_csv(projectdir + "historical-lists/sensitive/" + filename, encoding="UTF-8", index=False)
+print('Finished downloading sensitive historical list')
+
+
+
+
+
+
+
+
+
 # Retrieve Lists information
 
 # Production
