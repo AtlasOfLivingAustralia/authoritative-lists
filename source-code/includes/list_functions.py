@@ -1,23 +1,27 @@
 #%%
 # Common functions for Authoritative Lists
 #
-#
 import pandas as pd
 import urllib.request
 import json
 import certifi
 import ssl
 import requests
-
+import datetime
 
 def download_ala_list(url: str):
+    print("download_ala_list: ", url)
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
-        data = json.loads(url.read().decode())
-        data = pd.json_normalize(data)
-        return data
-
+        if url.status == 200:
+            data = json.loads(url.read().decode())
+            data = pd.json_normalize(data)
+        else:
+            # Handle the error
+            print('Error in download_ala_list:', url.status)
+    return data
 
 def kvp_to_columns(df):
+    print('kvp_to_columns')
     d0 = pd.DataFrame()
     for i in df.index:
     # if len(sensitivelist['kvpValues'][i]) > 0:
@@ -31,11 +35,18 @@ def kvp_to_columns(df):
     return d0
 
 def build_list_url(drstr: str):
+    print("build_list_url: ", drstr)
     url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
     return url
 
+def get_changelist(testdr: str, proddr: str, ltype: str):
+    print("get_changelist: Test - ", testdr, "Prod - ", proddr)
+    oldListPref = "https://lists.ala.org.au/ws/speciesListItems/"
+    newListPref = "https://lists-test.ala.org.au/ws/speciesListItems/"
+    urlSuffix = "?max=10000&includeKVP=true"
+    oldListUrl = oldListPref + proddr + urlSuffix
+    newListUrl = newListPref + testdr + urlSuffix
 
-def get_changelist(newListUrl: str, oldListUrl: str, ltype: str):
     oldList = download_ala_list(oldListUrl)
     oldList = kvp_to_columns(oldList)
     newList = download_ala_list(newListUrl)
@@ -76,6 +87,7 @@ def get_changelist(newListUrl: str, oldListUrl: str, ltype: str):
     return changeList
 
 def gbifparse(indf):
+    print('gbifparse')
     # GBIF Parser - returns binomial and trinomial names for scientificName
     namesonly = indf['name']
     url = "https://api.gbif.org/v1/parser/name"
@@ -85,3 +97,68 @@ def gbifparse(indf):
     r = requests.post(url=url, data=data, headers=headers)
     results = pd.read_json(r.text)
     return results
+
+# list_information_report functions
+
+def get_listDataframe(listurl:str):
+    print("get_listDataframe: ", listurl)
+    limit = 1000
+    offset = 0
+    fulldf = pd.DataFrame()
+    results_list = []
+
+    while True:
+        urlSuffix = "?max=" + str(limit) + "&offset=" + str(offset)
+        listUrl = listurl + urlSuffix
+        pList = download_ala_list(listUrl)
+        for item in pList['lists']:
+            listdf = pd.DataFrame(columns=item[0].keys())
+            for subitem in item:
+                listdf.loc[len(listdf)] = [subitem[column] for column in listdf.columns]
+        fulldf = pd.concat([fulldf, listdf], ignore_index=True)
+        # Check if there are more results to fetch
+        nrecs = pList['listCount'][0]
+        if (offset + limit) < nrecs:
+            # Update the offset for the next page
+            offset += limit
+        else:
+           break
+    return fulldf
+
+
+def filterDataframe(fulldf, filter_dict):
+    print('filterDataframe')
+    # Create a boolean mask based on the key-value pair
+    # drvals = filter_dict.values()
+    filtered_df = fulldf[fulldf['dataResourceUid'].isin(filter_dict.values())]
+    # Apply the mask to the DataFrame to get the filtered rows
+    return filtered_df
+
+def df_to_markdown(df, y_index=False):
+    from tabulate import tabulate
+    blob = tabulate(df, headers='keys', tablefmt='pipe')
+    if not y_index:
+        # Remove the index with some creative splicing and iteration
+        return '\n'.join(['| {}'.format(row.split('|', 2)[-1]) for row in blob.split('\n')])
+    return blob
+
+def list_to_markdown(ltype, cdf, sdf, mfile):
+    # Output dataframe to markdown
+    today = datetime.datetime.now().strftime('%Y-%m-%d')
+    if ltype=='P':
+        fheader = "## Authoritative Lists - Production:   " + today + "  \n"
+    else:
+        fheader = "## Authoritative Lists - Test:   " + today + "  \n"
+
+    # Conservation List
+    ltypeheader = "### Conservation Lists" + "  \n"
+    mdcdf = df_to_markdown(cdf)
+    mdcdf = fheader + ltypeheader + mdcdf
+
+    # Sensitive List
+    ltypeheader = "### Sensitive Lists" + "  \n"
+    mdsdf = df_to_markdown(sdf)
+    mdsdf = fheader + ltypeheader + mdsdf
+    with open(mfile, 'w') as f:
+        f.write(mdcdf)
+        f.write(mdsdf)
