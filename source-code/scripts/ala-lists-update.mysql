@@ -1,0 +1,7 @@
+UPDATE species_list
+SET species_list.is_private = True
+WHERE species_list.data_resource_uid IN (
+    SELECT data_resource_uid
+    FROM temp_list
+);
+
