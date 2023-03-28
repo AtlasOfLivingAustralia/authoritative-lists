@@ -1,15 +1,17 @@
+
+--  Script to recheck data in species_list is updated as expected by extracting same data into a check_list then examining is_private flag
 USE specieslist
-CREATE TABLE temp_list AS
+CREATE TABLE check_list AS
 SELECT * 
 FROM species_list
 WHERE list_type like "test%";
 
-INSERT INTO temp_list
+INSERT INTO check_list
    SELECT * FROM species_list
    WHERE list_name like "test%"
    AND NOT list_type like "Test%";
 
-INSERT INTO temp_list
+INSERT INTO check_list
 SELECT * FROM species_list
 WHERE data_resource_uid IN (
     SELECT data_resource_uid
@@ -19,7 +21,7 @@ WHERE data_resource_uid IN (
 );
 
 
-INSERT INTO temp_list
+INSERT INTO check_list
 SELECT *
 FROM species_list
 WHERE data_resource_uid NOT IN (
@@ -27,5 +29,7 @@ WHERE data_resource_uid NOT IN (
   FROM species_list_item
 );
 
-delete from temp_list 
+DELETE from check_list 
 WHERE is_authoritative;
+
+SELECT is_private from check_list;

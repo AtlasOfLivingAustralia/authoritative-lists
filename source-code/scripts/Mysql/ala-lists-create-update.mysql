@@ -1,0 +1,59 @@
+/* Mysql script to extract records with following conditions to temporary table temp_list
+MYSQL script to query lists and bulk update. List must be non-authoritative and meet the following criteria:
+   1. Lists with zero records
+   2. Lists with only 1 record
+   3. Lists marked with list type – “Test%”
+   4. Lists NOT marked with list type “Test%” and List name contains "test%"
+Process:
+   1. Query data
+   2. Populate temp table
+   3. Update all recods - set is_private flag = true
+   4. Remove temp table after testing
+*/
+
+USE specieslist
+CREATE TABLE temp_list LIKE species_list;
+
+-- Lists with zero records
+INSERT INTO temp_list
+SELECT *
+FROM species_list
+WHERE data_resource_uid NOT IN (
+  SELECT data_resource_uid
+  FROM species_list_item
+);
+
+-- Lists with only 1 record
+INSERT INTO temp_list
+SELECT * FROM species_list
+WHERE data_resource_uid IN (
+    SELECT data_resource_uid
+    FROM species_list_item
+    GROUP BY species_list_item.data_resource_uid
+    HAVING COUNT(*) = 1
+);
+
+-- Lists marked with list type – “Test%”
+INSERT INTO temp_list
+    SELECT *
+    FROM species_list
+    WHERE list_type like "test%";
+
+-- Lists NOT marked with list type “Test%” and List name contains "test%"
+INSERT INTO temp_list
+   SELECT * FROM species_list
+   WHERE list_name like "test%"
+   AND NOT list_type like "Test%";
+
+-- Remove authoritative lists from temp table
+delete from temp_list 
+WHERE is_authoritative;
+
+-- Update is_private flag in species_list
+
+UPDATE species_list
+SET species_list.is_private = True
+WHERE species_list.data_resource_uid IN (
+    SELECT data_resource_uid
+    FROM temp_list
+);
