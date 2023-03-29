@@ -15,7 +15,7 @@ USE specieslist
 CREATE TABLE temp_list LIKE species_list;
 
 -- Lists with zero records
-INSERT INTO temp_list
+INSERT IGNORE INTO temp_list
 SELECT *
 FROM species_list
 WHERE data_resource_uid NOT IN (
@@ -24,7 +24,7 @@ WHERE data_resource_uid NOT IN (
 );
 
 -- Lists with only 1 record
-INSERT INTO temp_list
+INSERT IGNORE INTO temp_list
 SELECT * FROM species_list
 WHERE data_resource_uid IN (
     SELECT data_resource_uid
@@ -33,27 +33,28 @@ WHERE data_resource_uid IN (
     HAVING COUNT(*) = 1
 );
 
--- Lists marked with list type – “Test%”
-INSERT INTO temp_list
+-- Lists marked with list type contains “test”
+INSERT IGNORE INTO temp_list
     SELECT *
     FROM species_list
-    WHERE list_type like "test%";
+    WHERE list_type like "%test%";
 
--- Lists NOT marked with list type “Test%” and List name contains "test%"
-INSERT INTO temp_list
+-- Lists with List name contains "test"
+INSERT IGNORE INTO temp_list
    SELECT * FROM species_list
-   WHERE list_name like "test%"
-   AND NOT list_type like "Test%";
+   WHERE list_name like "%test%";
+-- AND NOT list_type like "%test%";
 
 -- Remove authoritative lists from temp table
-delete from temp_list 
+DELETE from temp_list
 WHERE is_authoritative;
 
 -- Update is_private flag in species_list
-
+/*
 UPDATE species_list
 SET species_list.is_private = True
 WHERE species_list.data_resource_uid IN (
     SELECT data_resource_uid
     FROM temp_list
 );
+*/

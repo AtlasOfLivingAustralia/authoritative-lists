@@ -29,15 +29,18 @@ for state, dr in drList.items():
     prodList.to_csv(projectdir + "historical-lists/sensitive/" + filename, encoding="UTF-8", index=False)
 print('Finished downloading sensitive historical list')
 
-
-
-
-
-
-
-
-
-# Retrieve Lists information
+# Retrieve Lists information via Lists API from specieslist
+# currently API only returns the following information:
+#   "dataResourceUid": "dr1820",
+#   "listName": "Training project 2",
+#   "dateCreated": "2014-11-13T04:11:27Z",
+#   "username": "zarni.bear@environment.gov.au",
+#   "fullName": null,
+#   "itemCount": 0,
+#   "isAuthoritative": false,
+#   "isInvasive": false,
+#   "isThreatened": false,
+#   "listType": "LOCAL_LIST"
 
 # Production
 listsUrl = cfg.listsProd
