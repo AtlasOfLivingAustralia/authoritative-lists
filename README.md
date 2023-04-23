@@ -11,6 +11,8 @@ Each of the directories listed below has its own **README.md** file describing s
 | source-data| Source data and translation information                                         |
 | current-lists | Lists processed/extracted from source |
 
+Information regarding Conservation statuses for jurisdictions can be found here: https://github.com/AtlasOfLivingAustralia/authoritative-lists/blob/master/All%20Threatened%20species%20codes.xlsx
+
 ## Sensitive Lists
 
 [Sensitive lists in the ALA's Lists tool](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true) are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). THe SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
