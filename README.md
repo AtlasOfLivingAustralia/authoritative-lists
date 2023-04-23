@@ -11,7 +11,9 @@ Each of the directories listed below has its own **README.md** file describing s
 | source-data| Source data and translation information                                         |
 | current-lists | Lists processed/extracted from source |
 
-Information regarding Conservation statuses for jurisdictions can be found here: https://github.com/AtlasOfLivingAustralia/authoritative-lists/blob/master/All%20Threatened%20species%20codes.xlsx
+Information regarding Conservation statuses for jurisdictions can be found downloaded from here:
+
+[All Threatened Species Codes](https://github.com/AtlasOfLivingAustralia/authoritative-lists/blob/master/All%20Threatened%20species%20codes.xlsx)
 
 ## Sensitive Lists
 
