@@ -1,0 +1,35 @@
+SELECT list_name, list_type, user_id, username, date_created, COUNT(*) as count FROM species_list
+GROUP BY list_name, list_type, user_id, username, date_created
+HAVING count > 1;
+
+/*
+The following query uses a subquery to select all rows with identical values in list_name, list_type, user_id,
+username and date_created, except for the one with the highest id value.
+The subquery uses the ROW_NUMBER() function to assign a
+unique number to each row within each group of identical values, and then selects all rows with a row
+number greater than 1.
+The outer UPDATE statement then sets the value of is_private to 'True' for all rows with an id value in
+the subquery's result set.
+*/
+
+UPDATE species_list SET is_private = TRUE
+SELECT id, is_private, last_updated, data_resource_uid, list_name, list_type, user_id, username, date_created from species_list
+WHERE id IN (
+  SELECT id FROM (
+    SELECT id, ROW_NUMBER() OVER (PARTITION BY list_name, list_type, user_id, username, date_created ORDER BY id DESC) as row_num
+    FROM species_list
+  ) subquery
+  WHERE row_num > 1
+);
+
+SELECT id, is_private, last_updated, data_resource_uid, list_name, list_type, user_id, username, date_created from species_list_backup1
+WHERE id IN (
+  SELECT id FROM (
+    SELECT id, ROW_NUMBER() OVER (PARTITION BY list_name, list_type, user_id, username, date_created ORDER BY id DESC) as row_num
+    FROM species_list_backup1
+  ) subquery
+  WHERE row_num > 1
+);
+
+
+

@@ -1,0 +1,308 @@
+mysql> SELECT id, data_resource_uid, list_name, list_type, user_id, username, date_created from species_list
+    -> WHERE id IN (
+    ->   SELECT id FROM (
+    ->     SELECT id, ROW_NUMBER() OVER (PARTITION BY list_name, list_type, user_id, username, date_created ORDER BY id DESC) as row_num
+    ->     FROM species_list
+    ->   ) subquery
+    ->   WHERE row_num > 1
+    -> );
++------+-------------------+----------------------------------------------------------------------------------+-------------------+---------+-----------------------------------------+---------------------+
+| id   | data_resource_uid | list_name                                                                        | list_type         | user_id | username                                | date_created        |
++------+-------------------+----------------------------------------------------------------------------------+-------------------+---------+-----------------------------------------+---------------------+
+| 1006 | dr4243            | Connecting high conservation areas in subtropical eastern Australia through link | LOCAL_LIST        | 8584    | tmoffat@gmail.com                       | 2016-02-25 06:18:44 |
+| 1279 | dr6946            | Establishing disease free field enclosures for the Southern Corroboree Frog      | LOCAL_LIST        | 6332    | laura.ealing@environment.gov.au         | 2017-03-02 01:22:55 |
+| 1602 | dr8039            | Flora of the Sydney Basin Region                                                 | CONSERVATION_LIST | 1409    | kurtis.lindsay@gmail.com                | 2018-01-25 17:55:24 |
+| 1694 | dr8135            | My species list                                                                  | SPATIAL_PORTAL    | 48604   | qifeng.bai@csiro.au                     | 2018-05-16 14:11:54 |
+| 1705 | dr8146            | My species list                                                                  | SPATIAL_PORTAL    | 48604   | qifeng.bai@csiro.au                     | 2018-05-16 14:46:50 |
+| 1707 | dr8149            | My species list                                                                  | SPATIAL_PORTAL    | 48604   | qifeng.bai@csiro.au                     | 2018-05-16 14:46:51 |
+| 1809 | dr8300            | My species list                                                                  | SPATIAL_PORTAL    | 36409   | charlotte.birkmanis@research.uwa.edu.au | 2018-07-14 18:59:58 |
+| 1810 | dr8302            | My species list                                                                  | SPATIAL_PORTAL    | 36409   | charlotte.birkmanis@research.uwa.edu.au | 2018-07-14 18:59:58 |
+| 2016 | dr10871           | My species list                                                                  | SPATIAL_PORTAL    | 51443   | shandiyab@gmail.com                     | 2019-02-22 14:47:23 |
+| 2064 | dr11067           | Duboisia specimens                                                               | SPATIAL_PORTAL    | 73125   | pattymoy1990@gmail.com                  | 2019-03-12 22:31:41 |
+| 2065 | dr11066           | Duboisia specimens                                                               | SPATIAL_PORTAL    | 73125   | pattymoy1990@gmail.com                  | 2019-03-12 22:31:41 |
+| 2066 | dr11068           | Duboisia specimens                                                               | SPATIAL_PORTAL    | 73125   | pattymoy1990@gmail.com                  | 2019-03-12 22:31:41 |
+| 2084 | dr11086           | My species list                                                                  | SPATIAL_PORTAL    | 53514   | paul.oliver@anu.edu.au                  | 2019-03-13 15:21:15 |
+| 2090 | dr11092           | My species list                                                                  | SPATIAL_PORTAL    | 73216   | natalie.m.robertson@tmr.qld.gov.au      | 2019-03-13 15:23:40 |
+| 2092 | dr11094           | My species list                                                                  | SPATIAL_PORTAL    | 73216   | natalie.m.robertson@tmr.qld.gov.au      | 2019-03-13 15:23:41 |
+| 2101 | dr11103           | albsidmel                                                                        | SPATIAL_PORTAL    | 59342   | kevin@kdmurray.id.au                    | 2019-03-13 17:19:15 |
+| 2102 | dr11104           | albsidmel                                                                        | SPATIAL_PORTAL    | 59342   | kevin@kdmurray.id.au                    | 2019-03-13 17:19:15 |
+| 2109 | dr11111           | albsidmel                                                                        | SPATIAL_PORTAL    | 59342   | kevin@kdmurray.id.au                    | 2019-03-14 11:32:58 |
+| 2110 | dr11112           | albsidmel                                                                        | SPATIAL_PORTAL    | 59342   | kevin@kdmurray.id.au                    | 2019-03-14 11:32:58 |
+| 2129 | dr11135           | My species list                                                                  | SPATIAL_PORTAL    | 64053   | maddy1343@bigpond.com                   | 2019-03-15 11:45:58 |
+| 2140 | dr11148           | My species list                                                                  | SPATIAL_PORTAL    | 73411   | ismailmesbah4@gmail.com                 | 2019-03-15 15:21:44 |
+| 2144 | dr11152           | My species list                                                                  | SPATIAL_PORTAL    | 73411   | ismailmesbah4@gmail.com                 | 2019-03-15 15:22:20 |
+| 2146 | dr11154           | My species list                                                                  | SPATIAL_PORTAL    | 73411   | ismailmesbah4@gmail.com                 | 2019-03-15 15:22:21 |
+| 2200 | dr11225           | midge orchids                                                                    | SPATIAL_PORTAL    | 48440   | envirodiddy@gmail.com                   | 2019-03-21 19:23:46 |
+| 2204 | dr11229           | midge orchids                                                                    | SPATIAL_PORTAL    | 48440   | envirodiddy@gmail.com                   | 2019-03-21 19:24:01 |
+| 2213 | dr11243           | My species list                                                                  | SPATIAL_PORTAL    | 74105   | linklez3@hotmail.com                    | 2019-03-23 20:46:08 |
+| 2223 | dr11253           | My species list                                                                  | SPATIAL_PORTAL    | 66007   | rorippa@bigpond.net.au                  | 2019-03-24 13:30:56 |
+| 2224 | dr11254           | My species list                                                                  | SPATIAL_PORTAL    | 66007   | rorippa@bigpond.net.au                  | 2019-03-24 13:30:56 |
+| 2225 | dr11255           | My species list                                                                  | SPATIAL_PORTAL    | 66007   | rorippa@bigpond.net.au                  | 2019-03-24 13:30:56 |
+| 2253 | dr11284           | My species list                                                                  | SPATIAL_PORTAL    | 10106   | margotl@npansw.org.au                   | 2019-03-25 16:52:15 |
+| 2271 | dr11307           | Lygo Cairns                                                                      | SPATIAL_PORTAL    | 4619    | mak014@csiro.au                         | 2019-03-26 15:37:45 |
+| 2273 | dr11310           | Lygo Cairns                                                                      | SPATIAL_PORTAL    | 4619    | mak014@csiro.au                         | 2019-03-26 15:37:46 |
+| 2274 | dr11309           | Lygo Cairns                                                                      | SPATIAL_PORTAL    | 4619    | mak014@csiro.au                         | 2019-03-26 15:37:46 |
+| 2276 | dr11311           | Lygo Cairns                                                                      | SPATIAL_PORTAL    | 4619    | mak014@csiro.au                         | 2019-03-26 15:37:47 |
+| 2279 | dr11313           | Lygo Cairns                                                                      | SPATIAL_PORTAL    | 4619    | mak014@csiro.au                         | 2019-03-26 15:37:49 |
+| 2314 | dr11348           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 60981   | robinson.biol@gmail.com                 | 2019-03-27 19:00:35 |
+| 2315 | dr11349           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 60981   | robinson.biol@gmail.com                 | 2019-03-27 19:00:35 |
+| 2335 | dr11369           | CRA_bat_list                                                                     | SPATIAL_PORTAL    | 74249   | jillian.thonell@environment.nsw.gov.au  | 2019-03-28 13:24:21 |
+| 2391 | dr11451           | Listed fish species                                                              | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:34:28 |
+| 2396 | dr11455           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:20 |
+| 2398 | dr11457           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:21 |
+| 2400 | dr11461           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:22 |
+| 2401 | dr11459           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:22 |
+| 2402 | dr11460           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:22 |
+| 2404 | dr11463           | NCC Fish                                                                         | SPATIAL_PORTAL    | 75068   | nirvana.searle@smec.com                 | 2019-04-03 10:37:23 |
+| 2425 | dr11484           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:06 |
+| 2429 | dr11488           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:34 |
+| 2432 | dr11493           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:36 |
+| 2433 | dr11494           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:36 |
+| 2434 | dr11492           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:36 |
+| 2436 | dr11495           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:37 |
+| 2439 | dr11497           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:39 |
+| 2440 | dr11498           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:39 |
+| 2441 | dr11501           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:39 |
+| 2444 | dr11502           | My species list                                                                  | SPATIAL_PORTAL    | 36651   | nicholas.baker@wildenvironmental.com    | 2019-04-03 22:36:41 |
+| 2468 | dr11528           | My species list1111111                                                           | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-04-04 15:39:58 |
+| 2469 | dr11529           | My species list1111111                                                           | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-04-04 15:39:58 |
+| 2470 | dr11530           | My species list1111111                                                           | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-04-04 15:39:58 |
+| 2472 | dr11532           | My species list1111111                                                           | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-04-04 15:39:59 |
+| 2480 | dr11558           | My species list                                                                  | SPATIAL_PORTAL    | 65522   | craign@unimelb.edu.au                   | 2019-04-05 15:31:59 |
+| 2523 | dr11615           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:09:32 |
+| 2551 | dr11643           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:44 |
+| 2552 | dr11648           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:44 |
+| 2555 | dr11645           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:46 |
+| 2556 | dr11646           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:46 |
+| 2559 | dr11651           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:48 |
+| 2561 | dr11653           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:49 |
+| 2562 | dr11655           | My species list                                                                  | SPATIAL_PORTAL    | 73557   | lrbain98@gmail.com                      | 2019-04-10 19:34:49 |
+| 2571 | dr11669           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:31:51 |
+| 2572 | dr11670           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:31:51 |
+| 2573 | dr11671           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:31:51 |
+| 2575 | dr11673           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:31:52 |
+| 2578 | dr11676           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:32:06 |
+| 2580 | dr11678           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:32:07 |
+| 2582 | dr11682           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:33:31 |
+| 2583 | dr11680           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:33:31 |
+| 2585 | dr11683           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:35:31 |
+| 2586 | dr11684           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:35:31 |
+| 2587 | dr11684           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:35:31 |
+| 2588 | dr11685           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:35:31 |
+| 2590 | dr11687           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:42:48 |
+| 2591 | dr11688           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:42:48 |
+| 2593 | dr11690           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:47:09 |
+| 2594 | dr11689           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:47:09 |
+| 2595 | dr11691           | wildnet_export_20190308041019.txt                                                | SPATIAL_PORTAL    | 51133   | lgrimato@gmail.com                      | 2019-04-12 11:47:09 |
+| 2601 | dr11699           | RTBC                                                                             | SPATIAL_PORTAL    | 68587   | jerome@windprojectsaustralia.com.au     | 2019-04-12 17:05:50 |
+| 2612 | dr11719           | My species list                                                                  | SPATIAL_PORTAL    | 0       | amberacosta08@tamu.edu                  | 2019-04-16 23:52:30 |
+| 2613 | dr11720           | My species list                                                                  | SPATIAL_PORTAL    | 0       | amberacosta08@tamu.edu                  | 2019-04-16 23:52:30 |
+| 2633 | dr11743           | species                                                                          | SPATIAL_PORTAL    | 68056   | jamesrobertbevan@gmail.com              | 2019-04-18 17:51:25 |
+| 2634 | dr11744           | species                                                                          | SPATIAL_PORTAL    | 68056   | jamesrobertbevan@gmail.com              | 2019-04-18 17:51:25 |
+| 2635 | dr11745           | species                                                                          | SPATIAL_PORTAL    | 68056   | jamesrobertbevan@gmail.com              | 2019-04-18 17:51:25 |
+| 2637 | dr11747           | species                                                                          | SPATIAL_PORTAL    | 68056   | jamesrobertbevan@gmail.com              | 2019-04-18 17:51:26 |
+| 2642 | dr11752           | species                                                                          | SPATIAL_PORTAL    | 68056   | jamesrobertbevan@gmail.com              | 2019-04-18 17:51:37 |
+| 2671 | dr11786           | My species list                                                                  | SPATIAL_PORTAL    | 59522   | cweerasena@emmconsulting.com.au         | 2019-04-23 10:10:04 |
+| 2672 | dr11788           | My species list                                                                  | SPATIAL_PORTAL    | 59522   | cweerasena@emmconsulting.com.au         | 2019-04-23 10:10:04 |
+| 2724 | dr11864           | My species list                                                                  | SPATIAL_PORTAL    | 50423   | scharasc@gmail.com                      | 2019-04-30 14:24:22 |
+| 2731 | dr11875           | My species list                                                                  | SPATIAL_PORTAL    | 0       | rubysoin@gmail.com                      | 2019-05-01 11:47:38 |
+| 2732 | dr11876           | My species list                                                                  | SPATIAL_PORTAL    | 0       | rubysoin@gmail.com                      | 2019-05-01 11:47:38 |
+| 2733 | dr11877           | My species list                                                                  | SPATIAL_PORTAL    | 0       | rubysoin@gmail.com                      | 2019-05-01 11:47:38 |
+| 2752 | dr11897           | Curlew List                                                                      | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-05-01 14:40:28 |
+| 2766 | dr11917           | My species list                                                                  | SPATIAL_PORTAL    | 63803   | andrea@jabawok.net                      | 2019-05-02 17:45:46 |
+| 2795 | dr11963           | My species list                                                                  | SPATIAL_PORTAL    | 48284   | lorena@ecoaus.com.au                    | 2019-05-08 13:37:32 |
+| 2838 | dr12032           | Echidna                                                                          | SPATIAL_PORTAL    | 51923   | ngillexternal@iinet.net.au              | 2019-05-14 14:13:41 |
+| 2840 | dr12034           | Echidna                                                                          | SPATIAL_PORTAL    | 51923   | ngillexternal@iinet.net.au              | 2019-05-14 14:13:42 |
+| 2841 | dr12035           | Echidna                                                                          | SPATIAL_PORTAL    | 51923   | ngillexternal@iinet.net.au              | 2019-05-14 14:13:42 |
+| 2847 | dr12041           | Nick's List                                                                      | SPATIAL_PORTAL    | 51923   | ngillexternal@iinet.net.au              | 2019-05-14 14:15:17 |
+| 2848 | dr12042           | Nick's List                                                                      | SPATIAL_PORTAL    | 51923   | ngillexternal@iinet.net.au              | 2019-05-14 14:15:17 |
+| 2885 | dr12143           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:08 |
+| 2888 | dr12146           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:10 |
+| 2889 | dr12147           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:10 |
+| 2890 | dr12148           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:10 |
+| 2892 | dr12150           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:11 |
+| 2893 | dr12151           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:11 |
+| 2894 | dr12152           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:11 |
+| 2895 | dr12153           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:11 |
+| 2896 | dr12154           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:11 |
+| 2898 | dr12156           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:12 |
+| 2899 | dr12157           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:12 |
+| 2900 | dr12158           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:12 |
+| 2901 | dr12159           | Asterias amurensis                                                               | SPATIAL_PORTAL    | 0       | isabella.raulings@gmail.com             | 2019-05-21 11:19:12 |
+| 2908 | dr12166           | ch3                                                                              | SPATIAL_PORTAL    | 21097   | 17498438@student.uws.edu.au             | 2019-05-21 17:58:05 |
+| 2921 | dr12179           | My species list                                                                  | SPATIAL_PORTAL    | 36077   | m.mayfield@uq.edu.au                    | 2019-05-21 22:38:43 |
+| 2952 | dr12215           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:54 |
+| 2953 | dr12216           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:54 |
+| 2954 | dr12217           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:54 |
+| 2955 | dr12218           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:54 |
+| 2956 | dr12219           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:54 |
+| 2958 | dr12221           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:55 |
+| 2959 | dr12222           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:55 |
+| 2960 | dr12223           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:55 |
+| 2961 | dr12224           | Macadamia tetra                                                                  | SPATIAL_PORTAL    | 0       | mackenzieaitken@hotmail.com             | 2019-05-23 10:01:55 |
+| 2988 | dr12254           | Bats                                                                             | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-05-27 17:01:09 |
+| 2993 | dr12265           | MUNGI                                                                            | SPATIAL_PORTAL    | 0       | ajolly@slrconsulting.com                | 2019-05-28 11:46:58 |
+| 2995 | dr12267           | MUNGI                                                                            | SPATIAL_PORTAL    | 0       | ajolly@slrconsulting.com                | 2019-05-28 11:46:59 |
+| 2996 | dr12268           | MUNGI                                                                            | SPATIAL_PORTAL    | 0       | ajolly@slrconsulting.com                | 2019-05-28 11:46:59 |
+| 2997 | dr12269           | MUNGI                                                                            | SPATIAL_PORTAL    | 0       | ajolly@slrconsulting.com                | 2019-05-28 11:46:59 |
+| 2998 | dr12270           | MUNGI                                                                            | SPATIAL_PORTAL    | 0       | ajolly@slrconsulting.com                | 2019-05-28 11:46:59 |
+| 3010 | dr12282           | My species list                                                                  | SPATIAL_PORTAL    | 5566    | Megan.Hirst@rbg.vic.gov.au              | 2019-05-28 15:07:43 |
+| 3025 | dr12306           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:48 |
+| 3026 | dr12307           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:48 |
+| 3028 | dr12309           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3029 | dr12310           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3030 | dr12311           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3031 | dr12312           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3032 | dr12313           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3033 | dr12314           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:49 |
+| 3035 | dr12316           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3036 | dr12317           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3037 | dr12318           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3038 | dr12319           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3039 | dr12320           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3040 | dr12321           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:19:50 |
+| 3046 | dr12327           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:02 |
+| 3048 | dr12329           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3049 | dr12330           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3050 | dr12331           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3051 | dr12332           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3052 | dr12333           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3053 | dr12334           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:03 |
+| 3055 | dr12336           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:04 |
+| 3056 | dr12337           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:04 |
+| 3057 | dr12338           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:04 |
+| 3058 | dr12339           | My Mirbelia                                                                      | SPATIAL_PORTAL    | 72386   | joeking2499@gmail.com                   | 2019-05-29 12:22:04 |
+| 3066 | dr12347           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:38:59 |
+| 3067 | dr12348           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:38:59 |
+| 3069 | dr12350           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:39:00 |
+| 3070 | dr12351           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:39:00 |
+| 3071 | dr12352           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:39:00 |
+| 3072 | dr12353           | Pt Cook                                                                          | SPATIAL_PORTAL    | 73182   | phoebe.worth@erm.com                    | 2019-05-29 15:39:00 |
+| 3080 | dr12361           | Native Hibiscus Chris                                                            | SPATIAL_PORTAL    | 0       | ctothdsn243@gmail.com                   | 2019-05-29 16:45:27 |
+| 3090 | dr12371           | Rosa                                                                             | SPATIAL_PORTAL    | 9087    | mhirst@student.unimelb.edu.au           | 2019-05-29 17:16:00 |
+| 3099 | dr12380           | My species list                                                                  | SPATIAL_PORTAL    | 0       | jvamosi@ucalgary.ca                     | 2019-05-30 00:37:47 |
+| 3118 | dr12405           | My species list                                                                  | SPATIAL_PORTAL    | 0       | ctothdsn243@gmail.com                   | 2019-06-02 16:07:08 |
+| 3121 | dr12408           | My species list                                                                  | SPATIAL_PORTAL    | 0       | ctothdsn243@gmail.com                   | 2019-06-02 16:07:14 |
+| 3125 | dr12415           | My species list                                                                  | SPATIAL_PORTAL    | 53795   | katharina.nargar@csiro.au               | 2019-06-03 08:04:00 |
+| 3129 | dr12419           | My species list                                                                  | SPATIAL_PORTAL    | 53795   | katharina.nargar@csiro.au               | 2019-06-03 08:04:09 |
+| 3131 | dr12421           | My species list                                                                  | SPATIAL_PORTAL    | 53795   | katharina.nargar@csiro.au               | 2019-06-03 08:04:10 |
+| 3138 | dr12431           | My species list                                                                  | SPATIAL_PORTAL    | 0       | amelia.westerman@brisbane.qld.gov.au    | 2019-06-04 10:31:30 |
+| 3147 | dr12456           | Sydney June list                                                                 | SPATIAL_PORTAL    | 55391   | lukas.clews@jacobs.com                  | 2019-06-07 08:35:04 |
+| 3151 | dr12460           | Sydney June list                                                                 | SPATIAL_PORTAL    | 55391   | lukas.clews@jacobs.com                  | 2019-06-07 08:35:12 |
+| 3164 | dr12496           | My species list                                                                  | SPATIAL_PORTAL    | 73707   | daangus01@gmail.com                     | 2019-06-10 11:07:02 |
+| 3165 | dr12497           | My species list                                                                  | SPATIAL_PORTAL    | 73707   | daangus01@gmail.com                     | 2019-06-10 11:07:02 |
+| 3166 | dr12498           | My species list                                                                  | SPATIAL_PORTAL    | 73707   | daangus01@gmail.com                     | 2019-06-10 11:07:02 |
+| 3189 | dr12568           | My species list                                                                  | SPATIAL_PORTAL    | 34732   | s.wawrzyczek@gazeta.pl                  | 2019-06-11 22:38:52 |
+| 3195 | dr12579           | My species list                                                                  | SPATIAL_PORTAL    | 0       | josh_bennett1996@hotmail.com            | 2019-06-12 14:07:04 |
+| 3204 | dr12648           | Jsdm list                                                                        | SPATIAL_PORTAL    | 39806   | shane.morris@utas.edu.au                | 2019-06-18 12:48:58 |
+| 3208 | dr12652           | Jsdm list                                                                        | SPATIAL_PORTAL    | 39806   | shane.morris@utas.edu.au                | 2019-06-18 12:51:57 |
+| 3211 | dr12656           | Jsdm list                                                                        | SPATIAL_PORTAL    | 39806   | shane.morris@utas.edu.au                | 2019-06-18 12:55:48 |
+| 3212 | dr12656           | Jsdm list                                                                        | SPATIAL_PORTAL    | 39806   | shane.morris@utas.edu.au                | 2019-06-18 12:55:48 |
+| 3224 | dr12668           | My species list2                                                                 | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:09:48 |
+| 3226 | dr12670           | My species list2                                                                 | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:09:49 |
+| 3227 | dr12671           | My species list2                                                                 | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:09:49 |
+| 3228 | dr12672           | My species list2                                                                 | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:09:49 |
+| 3231 | dr12676           | My species list2                                                                 | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:10:01 |
+| 3233 | dr12677           | My species list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:10:24 |
+| 3234 | dr12678           | My species list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:10:24 |
+| 3236 | dr12680           | My species list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:10:25 |
+| 3237 | dr12681           | My species list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:10:25 |
+| 3240 | dr12684           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3241 | dr12684           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3242 | dr12685           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3243 | dr12686           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3244 | dr12687           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3245 | dr12688           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3246 | dr12689           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:33 |
+| 3248 | dr12691           | christians list                                                                  | SPATIAL_PORTAL    | 53203   | ancientkittens@gmail.com                | 2019-06-18 18:15:34 |
+| 3261 | dr12712           | My species list                                                                  | SPATIAL_PORTAL    | 0       | crack_pot@hotmail.com                   | 2019-06-20 16:41:28 |
+| 3263 | dr12714           | My species list                                                                  | SPATIAL_PORTAL    | 0       | crack_pot@hotmail.com                   | 2019-06-20 16:41:29 |
+| 3264 | dr12715           | My species list                                                                  | SPATIAL_PORTAL    | 0       | crack_pot@hotmail.com                   | 2019-06-20 16:41:29 |
+| 3267 | dr12719           | My species list.                                                                 | SPATIAL_PORTAL    | 0       | crack_pot@hotmail.com                   | 2019-06-20 16:44:36 |
+| 3269 | dr12721           | My species list.                                                                 | SPATIAL_PORTAL    | 0       | crack_pot@hotmail.com                   | 2019-06-20 16:44:37 |
+| 3277 | dr12766           | My species list                                                                  | SPATIAL_PORTAL    | 64026   | mitchell.whitten@lls.nsw.gov.au         | 2019-06-24 11:28:37 |
+| 3281 | dr12770           | My species list                                                                  | SPATIAL_PORTAL    | 64026   | mitchell.whitten@lls.nsw.gov.au         | 2019-06-24 11:29:25 |
+| 3282 | dr12771           | My species list                                                                  | SPATIAL_PORTAL    | 64026   | mitchell.whitten@lls.nsw.gov.au         | 2019-06-24 11:29:25 |
+| 3283 | dr12772           | My species list                                                                  | SPATIAL_PORTAL    | 64026   | mitchell.whitten@lls.nsw.gov.au         | 2019-06-24 11:29:25 |
+| 3284 | dr12773           | My species list                                                                  | SPATIAL_PORTAL    | 64026   | mitchell.whitten@lls.nsw.gov.au         | 2019-06-24 11:29:25 |
+| 3309 | dr12814           | My species list                                                                  | SPATIAL_PORTAL    | 0       | klowe@ecosure.com.au                    | 2019-06-25 13:20:59 |
+| 3310 | dr12815           | My species list                                                                  | SPATIAL_PORTAL    | 0       | klowe@ecosure.com.au                    | 2019-06-25 13:20:59 |
+| 3341 | dr12848           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:45:08 |
+| 3342 | dr12847           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:45:08 |
+| 3345 | dr12850           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:54:56 |
+| 3346 | dr12851           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:54:56 |
+| 3347 | dr12852           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:54:56 |
+| 3348 | dr12853           | Australia's Pharmacologically Important Plants and Entheogens                    | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 17:54:56 |
+| 3353 | dr12858           | My species list                                                                  | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 18:00:24 |
+| 3357 | dr12861           | My species list                                                                  | SPATIAL_PORTAL    | 15211   | ddecurtins@gmail.com                    | 2019-06-26 18:03:00 |
+| 3375 | dr12886           | My orchid list                                                                   | SPATIAL_PORTAL    | 0       | mejiyeong95@gmail.com                   | 2019-07-03 07:20:54 |
+| 3415 | dr12929           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 44140   | netor47@hotmail.com                     | 2019-07-10 22:02:37 |
+| 3417 | dr12931           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 44140   | netor47@hotmail.com                     | 2019-07-10 22:02:39 |
+| 3418 | dr12932           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 44140   | netor47@hotmail.com                     | 2019-07-10 22:02:39 |
+| 3420 | dr12934           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 44140   | netor47@hotmail.com                     | 2019-07-10 22:02:41 |
+| 3422 | dr12936           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 44140   | netor47@hotmail.com                     | 2019-07-10 22:02:43 |
+| 3429 | dr12943           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 60981   | robinson.biol@gmail.com                 | 2019-07-10 22:07:21 |
+| 3430 | dr12944           | sp_list.csv                                                                      | SPATIAL_PORTAL    | 60981   | robinson.biol@gmail.com                 | 2019-07-10 22:07:21 |
+| 3454 | dr12968           | My species list                                                                  | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-07-11 15:35:20 |
+| 3455 | dr12969           | My species list                                                                  | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-07-11 15:35:20 |
+| 3457 | dr12971           | My species list                                                                  | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-07-11 15:35:24 |
+| 3458 | dr12972           | My species list                                                                  | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-07-11 15:35:24 |
+| 3460 | dr12974           | My species list                                                                  | SPATIAL_PORTAL    | 38148   | dkw1981wkw2013@gmail.com                | 2019-07-11 15:35:25 |
+| 3482 | dr12999           | Ficus species                                                                    | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-15 22:06:04 |
+| 3483 | dr13000           | Ficus species                                                                    | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-15 22:06:04 |
+| 3484 | dr13001           | Ficus species                                                                    | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-15 22:06:04 |
+| 3485 | dr13002           | Ficus species                                                                    | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-15 22:06:04 |
+| 3496 | dr13013           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-16 08:46:24 |
+| 3497 | dr13014           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-16 08:46:24 |
+| 3504 | dr13032           | My species list                                                                  | SPATIAL_PORTAL    | 44      | leebelbin@gmail.com                     | 2019-07-17 07:58:13 |
+| 3505 | dr13033           | My species list                                                                  | SPATIAL_PORTAL    | 44      | leebelbin@gmail.com                     | 2019-07-17 07:58:13 |
+| 3506 | dr13034           | My species list                                                                  | SPATIAL_PORTAL    | 44      | leebelbin@gmail.com                     | 2019-07-17 07:58:13 |
+| 3545 | dr13081           | My species list                                                                  | SPATIAL_PORTAL    | 48284   | lorena@ecoaus.com.au                    | 2019-07-22 15:59:34 |
+| 3564 | dr13101           | My species list                                                                  | SPATIAL_PORTAL    | 82744   | lex.thomson@gmail.com                   | 2019-07-28 09:14:49 |
+| 3588 | dr13127           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-31 12:15:45 |
+| 3590 | dr13129           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-07-31 12:15:46 |
+| 3632 | dr13182           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:21:04 |
+| 3635 | dr13185           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:21:12 |
+| 3639 | dr13189           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:22:09 |
+| 3640 | dr13191           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:22:09 |
+| 3643 | dr13195           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:25:59 |
+| 3644 | dr13194           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:25:59 |
+| 3648 | dr13198           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:26:05 |
+| 3650 | dr13200           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:26:06 |
+| 3651 | dr13201           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:26:06 |
+| 3652 | dr13202           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:26:06 |
+| 3653 | dr13203           | My species list                                                                  | SPATIAL_PORTAL    | 0       | clle5474@uni.sydney.edu.au              | 2019-08-06 16:26:06 |
+| 3665 | dr13223           | My species list                                                                  | SPATIAL_PORTAL    | 0       | Talia.Jenner@ecoaus.com.au              | 2019-08-07 11:53:18 |
+| 3666 | dr13224           | My species list                                                                  | SPATIAL_PORTAL    | 0       | Talia.Jenner@ecoaus.com.au              | 2019-08-07 11:53:18 |
+| 3669 | dr13227           | My species list                                                                  | SPATIAL_PORTAL    | 0       | Talia.Jenner@ecoaus.com.au              | 2019-08-07 11:53:49 |
+| 3679 | dr13239           | My species list                                                                  | SPATIAL_PORTAL    | 0       | misarimehta@gmail.com                   | 2019-08-08 16:50:11 |
+| 3689 | dr13252           | Polychaeta                                                                       | SPATIAL_PORTAL    | 0       | diakom86@yahoo.com                      | 2019-08-10 02:38:19 |
+| 3693 | dr13256           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-08-12 11:28:21 |
+| 3695 | dr13258           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-08-12 11:28:22 |
+| 3696 | dr13259           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-08-12 11:28:22 |
+| 3697 | dr13260           | My species list                                                                  | SPATIAL_PORTAL    | 73702   | shannon@redleafenv.com.au               | 2019-08-12 11:28:22 |
+| 3746 | dr13361           | My species list                                                                  | SPATIAL_PORTAL    | 80292   | josiestyles@gmail.com                   | 2019-08-21 21:26:41 |
+| 3766 | dr13423           | Tree                                                                             | SPATIAL_PORTAL    | 85209   | 0249570@schoolsnet.act.edu.au           | 2019-09-02 10:28:36 |
+| 3843 | dr13581           | My species list                                                                  | SPATIAL_PORTAL    | 82744   | lex.thomson@gmail.com                   | 2019-09-22 12:29:33 |
++------+-------------------+----------------------------------------------------------------------------------+-------------------+---------+-----------------------------------------+---------------------+
+275 rows in set (0.07 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-name,commonName,scientificName
-Lomatia tasmanica,King's Lomatia,Lomatia tasmanica
-,,Prasophyllum taphanyx
-,,Caladenia vulgaris var. nunguensis
+name,commonName,scientificName,lsid
+Lomatia tasmanica,King's Lomatia,Lomatia tasmanica,https://id.biodiversity.org.au/node/apni/2903191
+Prasophyllum taphanyx,Graveside Leek-orchid,Prasophyllum taphanyx,https://id.biodiversity.org.au/taxon/apni/51409980
+Caladenia vulgaris var. nunguensis,Summer Fingers,Caladenia vulgaris,https://id.biodiversity.org.au/taxon/apni/51399454

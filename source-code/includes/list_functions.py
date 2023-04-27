@@ -98,6 +98,16 @@ def gbifparse(indf):
     results = pd.read_json(r.text)
     return results
 
+def map_status(state, fname, dframe):
+    codeslist = pd.read_csv(fname, dtype=str)
+    codeslist['sourceStatus'] = codeslist['sourceStatus'].str.strip()
+    codeslist['Status'] = codeslist['Status'].str.strip()
+    code_status_dict = dict(zip(codeslist['sourceStatus'], codeslist['Status']))
+    if 'sourcestatus' in dframe.columns:
+        dframe = dframe.rename(columns={'sourcestatus' : 'sourceStatus'})
+    dframe['status'] = dframe['sourceStatus'].map(code_status_dict)
+    return dframe
+
 # list_information_report functions
 
 def get_listDataframe(listurl:str):
