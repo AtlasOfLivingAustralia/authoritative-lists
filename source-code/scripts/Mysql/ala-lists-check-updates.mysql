@@ -1,4 +1,3 @@
-
 --  Script to recheck data in species_list is updated as expected by extracting same data into a check_list then examining is_private flag
 USE specieslist
 CREATE TABLE check_list AS

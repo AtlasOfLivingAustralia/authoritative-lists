@@ -7,7 +7,7 @@ MYSQL script to query lists and bulk update. List must be non-authoritative and 
 Process:
    1. Query data
    2. Populate temp table
-   3. Update all recods - set is_private flag = true
+   3. Update all records - set is_private flag = true
    4. Remove temp table after testing
 */
 
@@ -50,11 +50,9 @@ DELETE from temp_list
 WHERE is_authoritative;
 
 -- Update is_private flag in species_list
-/*
 UPDATE species_list
 SET species_list.is_private = True
 WHERE species_list.data_resource_uid IN (
     SELECT data_resource_uid
     FROM temp_list
 );
-*/
