@@ -1,10 +1,10 @@
-name,commonName,scientificName,vernacular name,Criteria,Denature level,generalisation
-Macroderma gigas,Ghost Bat,Macroderma gigas,Ghost Bat,cave roost related records,Round coordinate value to 0.05 decimal degrees (approximately 5 km2),10km
-Hipposideros stenotis,Northern Leaf-nosed Bat,Hipposideros stenotis,Northern Leaf-nosed bat,cave roost related records,Round coordinate value to 0.05 decimal degrees (approximately 5 km2),10km
-Hipposideros inornata,Arnhem Leaf-nosed Bat,Hipposideros inornatus,Arnhem Leaf-nosed Bat,cave roost related records,Round coordinate value to 0.05 decimal degrees (approximately 5 km2),10km
-Pezoporus occidentalis,Night Parrot,Pezoporus occidentalis,Night Parrot,,Round coordinate value to 0.5 decimal degrees (approximately 50 km2),100km
-Polytelis alexandrae,Alexandra's Parrot,Polytelis alexandrae,Princess Parrot,nesting records,Round coordinate value to 0.1 decimal degrees (approximately 10 km2),10km
-Falco hypoleucos,Grey Falcon,Falco (Hierofalco) hypoleucos,Grey Falcon,nesting records,Round coordinate value to 0.1 decimal degrees (approximately 10 km2),10km
-Bellatorias obiri,Arnhem Land Egernia,Bellatorias obiri,Arnhemland Egernia,,Round coordinate value to 0.1 decimal degrees (approximately 10 km2),10km
-Attacus wardi,Atlas Moth,Attacus wardi,Atlas Moth,,Round coordinate value to 0.1 decimal degrees (approximately 10 km2),10km
-Ogyris iphis doddi,Dodd’s Azure,Ogyris iphis doddi,Dodd’s Azure,,Round coordinate value to 0.1 decimal degrees (approximately 10 km2),10km
+scientificName,commonName,generalisation
+Macroderma gigas,Ghost Bat,10km
+Hipposideros stenotis,Northern Leaf-nosed Bat,10km
+Hipposideros inornatus,Arnhem Leaf-nosed Bat,10km
+Pezoporus occidentalis,Night Parrot,100km
+Polytelis alexandrae,Alexandra's Parrot,10km
+Falco (Hierofalco) hypoleucos,Grey Falcon,10km
+Bellatorias obiri,Arnhem Land Egernia,10km
+Attacus wardi,Atlas Moth,10km
+Ogyris iphis doddi,Dodd’s Azure,10km

@@ -1,209 +1,223 @@
-dateListed,faunaFlora,speciesType,subGrouping,saSpeciesCode,scientificName,vernacularName,clarifier
-2013-05,Fauna,Birds,Cockatoo,Y09312,Calyptorhynchus banksii graptogyne,Red-tailed Black Cockatoo (south-east),nesting related records
-2013-05,Fauna,Birds,Cockatoo,C00265,Calyptorhynchus lathami halmaturinus,Glossy Black-Cockatoo (Kangaroo Island subspecies),nesting related records
-2013-05,Fauna,Birds,Raptor,K00233,Elanus scriptus,Letter-winged Kite,nesting related records
-2013-05,Fauna,Birds,Raptor,Q00236,Falco hypoleucos,Grey Falcon,nesting related records
-2013-05,Fauna,Birds,Raptor,S00237,Falco peregrinus macropus,Peregrine Falcon,nesting related records
-2013-05,Fauna,Birds,Raptor,M00226,Haliaeetus leucogaster,White-bellied Sea Eagle,nesting related records & breeding territories
-2013-05,Fauna,Birds,Cockatoo,U00270,Lophochroa leadbeateri,Major Mitchell's Cockatoo,nesting related records
-2013-05,Fauna,Birds,Raptor,E00230,Lophoictinia isura,Square-tailed Kite,nesting related records
-2013-05,Fauna,Birds,Parrot,G00303,Neophema splendida,Scarlet-chested Parrot,nesting related records
-2013-05,Fauna,Birds,Raptor,K00241,Pandion haliaetus cristatus,Eastern Osprey,nesting related records & breeding territories
-2013-05,Fauna,Birds,Parrot,Z00279,Polytelis alexandrae,Princess Parrot,nesting related records
-2013-05,Fauna,Birds,Parrot,C04381,Polytelis anthopeplus monarchoides,Regent Parrot,nesting related records
-2013-05,Fauna,Birds,Cockatoo,G00267,Zanda funerea whiteae,Yellow-tailed Black Cockatoo,nesting related records
-2013-05,Fauna,Invertebrate,,W05623,Euastacus bispinosus,Glenelg Spiny Freshwater Crayfish,all records
-2013-05,Fauna,Reptiles,,U02102,Nephrurus deleani,Pernatty Knob-tailed Gecko,all records
-2013-05,Fauna,Reptiles,,Y02572,Tiliqua adelaidensis,Pygmy Bluetongue,all records
-2013-05,Flora,Plants,Ferns & Allies,A00036,Adiantum capillus-veneris,Dainty Maiden-hair,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,A00660,Arthropodium milleflorum,Pale Vanilla-lily,all records
-2013-05,Flora,Plants,Ferns & Allies,Y00048,Asplenium bulbiferum ssp. gracillimum,Mother Spleenwort,all records
-2013-05,Flora,Plants,Ferns & Allies,C00053,Blechnum chambersii,Lance Water-fern,all records
-2013-05,Flora,Plants,Ferns & Allies,K00057,Blechnum rupestre,Small Rasp-fern,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,K04837,Brachyscome diversifolia,Tall Daisy,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,G02979,Brachyscome melanocarpa ssp. melanocarpa,Black-fruit Daisy,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Q02980,Brachyscome muelleri,Corunna Daisy,all records
-2013-05,Flora,Plants,Orchids,U05146,Caladenia argocalla,White Beauty Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,Y05140,Caladenia behrii,Pink-lip Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,W05147,Caladenia brumalis,Winter Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,S04361,Caladenia calcicola,Limestone Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,A00768,Caladenia clavigera,Plain-lip Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,A05148,Caladenia colorata,Coloured Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,M32654 ,Caladenia conferta,Coast Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,Q06260,Caladenia dilatata,Late Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,M05142,Caladenia flaccida,Drooping Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,M05150,Caladenia formosa,Elegant Spider Orchid,all records
-2013-05,Flora,Plants,Orchids,C04365,Caladenia fragrantissima,Scented Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,C05165,Caladenia fulva,Tawny Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,U00774,Caladenia gladiolata,Bayonet Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,C06265,Caladenia intuta,Ghost Spider Orchid,all records
-2013-05,Flora,Plants,Orchids,Y05168,Caladenia lowanensis,Wimmera Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,Z32727 ,Caladenia macroclavia,Large-club Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,U00766,Caladenia moschata,Musky Caladenia,all records
-2013-05,Flora,Plants,Orchids,Y06080,Caladenia ornata,Ornate Pink Fingers,all records
-2013-05,Flora,Plants,Orchids,G00779,Caladenia ovata,Kangaroo Island Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,Z05151,Caladenia parva,Small Green-comb Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,E04366,Caladenia richardsiorum,Little Dip Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,S00781,Caladenia rigida,Stiff White Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,E06266,Caladenia sp. Monarto South (H.Goldsack 163 AD97708605A),,all records
-2013-05,Flora,Plants,Orchids,W06263,Caladenia sp. Southeast (R.Bates 66283),Sand Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,A05384,Caladenia tensa,Inland Green-comb Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,S04265,Caladenia valida,Robust Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,C05149,Caladenia venusta,Large White Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,W05163,Caladenia woolcockiorum,Woolcock's Spider-orchid,all records
-2013-05,Flora,Plants,Orchids,C04841,Caladenia xantholeuca,Flinders Ranges White Caladenia,all records
-2013-05,Flora,Plants,Orchids,A00784,Caleana major,Large Duck-orchid,all records
-2013-05,Flora,Plants,Aquatics,G03419,Callitriche umbonata,Water Starwort,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,E02994,Calocephalus lacteus,Milky Beauty-heads,all records
-2013-05,Flora,Plants,Orchids,A05172,Calochilus cupreus,Copper Beard-orchid,all records
-2013-05,Flora,Plants,Orchids,G00787,Calochilus paludosus,Red Beard-orchid,all records
-2013-05,Flora,Plants,Orchids,K00789,Chiloglottis cornuta,Green Bird-orchid,all records
-2013-05,Flora,Plants,Orchids,U00790,Chiloglottis trapeziformis,Dainty Bird-orchid,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,M03162,Coronidium gunnianum,Pale Everlasting,all records
-2013-05,Flora,Plants,Orchids,S04389,Corybas expansus,Dune Helmet-orchid,all records
-2013-05,Flora,Plants,Orchids,E00794,Corybas fordhamii,Swamp Helmet-orchid,all records
-2013-05,Flora,Plants,Orchids,G06267,Corybas X dentatus,Finniss Helmet-orchid,all records
-2013-05,Flora,Plants,Aquatics,A05560,Craspedia paludicola,Swamp Buttons,all records
-2013-05,Flora,Plants,Orchids,Y00796,Cryptostylis subulata,Moose Orchid,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,C04373,Dampiera lanceolata var. intermedia,Aldinga Dampiera,all records
-2013-05,Flora,Plants,Ferns & Allies,E04242,Dennstaedtia davallioides,Lacy Ground-fern,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,A05544,Dianella callicarpa,Swamp Flax-lily,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,E04826,Dianella porracea,Pale Flax-lily,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,C05545,Dianella tarda,Late-flowered Flax-lily,all records
-2013-05,Flora,Plants,Ferns & Allies,U00034,Dicksonia antarctica,Soft Tree-fern,all records
-2013-05,Flora,Plants,Orchids,M05178,Dipodium campanulatum,Bell-flower Hyacinth Orchid,all records
-2013-05,Flora,Plants,Orchids,M05574,Dipodium pardalinum,Leopard Hyacinth-orchid,all records
-2013-05,Flora,Plants,Orchids,Y05176,Dipodium punctatum,,all records
-2013-05,Flora,Plants,Orchids,G04391,Diuris behrii,Behr's Cowslip Orchid,all records
-2013-05,Flora,Plants,Orchids,W03951,Diuris brevifolia,Short-leaf Donkey-orchid,all records
-2013-05,Flora,Plants,Orchids,Y04392,Diuris chryseopsis,Cowslip Orchid,all records
-2013-05,Flora,Plants,Orchids,S06113,Eriochilus paludosus,,all records
-2013-05,Flora,Plants,Orchids,G05387,Gastrodia vescula,Lesser Potato Orchid,all records
-2013-05,Flora,Plants,Orchids,K00817,Genoplesium ciliatum,Swamp Midge-orchid,all records
-2013-05,Flora,Plants,Orchids,Z00819,Genoplesium despectans,Sharp Midge-orchid,all records
-2013-05,Flora,Plants,Orchids,K00825,Genoplesium morrisii,Bearded Midge-orchid,all records
-2013-05,Flora,Plants,Aquatics,C02473,Gentianella gunniana,Mountain Gentian,all records
-2013-05,Flora,Plants,Ferns & Allies,M00058,Histiopteris incisa,Bat's-wing Fern,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,A03564,Ixodia achillaeoides ssp. arenicola,Sand Ixodia,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z03083,Lagenophora sublyrata,Slender Bottle-daisy,all records
-2013-05,Flora,Plants,Ferns & Allies,E00046,Lastreopsis acuminata,Shiny Shield-fern,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,S05701,Leptorhynchos melanocarpus,Lake Acraman Button-daisy,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,E02846,Lobelia beaugleholei,Showy Lobelia,all records
-2013-05,Flora,Plants,Aquatics,K00021,Lycopodiella serpentina,Bog Clubmoss,all records
-2013-05,Flora,Plants,Aquatics,W00019,Lycopodium deuterodensum,Bushy Clubmoss,all records
-2013-05,Flora,Plants,Orchids,S06333,Microtis eremaea,Slender Onion-orchid,all records
-2013-05,Flora,Plants,Orchids,A00812,Microtis orbicularis,Swamp Onion-orchid,all records
-2013-05,Flora,Plants,Aquatics,E01058,Montia fontana ssp. chondrosperma,Waterblinks,all records
-2013-05,Flora,Plants,Aquatics,E00098,Najas tenuifolia,Water Nymph,all records
-2013-05,Flora,Plants,Aquatics,E03946,Nertera granadensis,Matted Nertera,all records
-2013-05,Flora,Plants,Aquatics,K02477,Nymphoides geminata,Entire Marshwort,all records
-2013-05,Flora,Plants,Daisy,E05926,Olearia arckaringensis,Arckaringa Daisy,all records
-2013-05,Flora,Plants,Aquatics,U03618,Ornduffia umbricola var. beaugleholei,Beauglehole's Marsh-flower,all records
-2013-05,Flora,Plants,Orchids,U03950,Paracaleana disjuncta,Black-beak Duck-orchid,all records
-2013-05,Flora,Plants,Orchids,Y00816,Paracaleana minor,Small Duck-orchid,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,E03282,Podolepis muelleri,Button Podolepis,all records
-2013-05,Flora,Plants,Ferns & Allies,G00047,Polystichum proliferum,Mother Shield-fern,all records
-2013-05,Flora,Plants,Aquatics,M00090,Potamogeton australiensis,Thin Pondweed,all records
-2013-05,Flora,Plants,Orchids,S00985,Prasophyllum calcicola,Limestone Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,S06289,Prasophyllum catenemum,,all records
-2013-05,Flora,Plants,Orchids,S06069,Prasophyllum frenchii,Maroon Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,G06291,Prasophyllum goldsackii,Goldsack's Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,Q06068,Prasophyllum murfetii,Maroon Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,Z00827,Prasophyllum pallidum,Pale Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,E04746,Prasophyllum pruinosum,Plum Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,Q06288,Prasophyllum sp. Waterholes (R.Bates 9037),,all records
-2013-05,Flora,Plants,Orchids,K05185,Prasophyllum spicatum,Dense Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,Y06292,Prasophyllum tortilis,Goldsack's Leek-orchid,all records
-2013-05,Flora,Plants,Orchids,W04399,Prasophyllum validum,Mount Remarkable Leek-orchid,all records
-2013-05,Flora,Plants,Ferns & Allies,U05218,Psilotum nudum,Skeleton Fork-fern,all records
-2013-05,Flora,Plants,Orchids,Y04404,Pterostylis arenicola,Sandhill Greenhood,all records
-2013-05,Flora,Plants,Orchids,S00845,Pterostylis bryophila,Hindmarsh Greenhood,all records
-2013-05,Flora,Plants,Orchids,C05749,Pterostylis chlorogramma,,all records
-2013-05,Flora,Plants,Orchids,K00833,Pterostylis concinna,Trim Greenhood,all records
-2013-05,Flora,Plants,Orchids,E04914,Pterostylis corpulenta,Tiny Greenhood,all records
-2013-05,Flora,Plants,Orchids,E30118,Pterostylis cucullata ssp. cucullata,Leafy Greenhood,all records
-2013-05,Flora,Plants,Orchids,G30119,Pterostylis cucullata ssp. sylvicola,Leafy Greenhood,all records
-2013-05,Flora,Plants,Orchids,U05462,Pterostylis despectans,Mt Bryan Greenhood,all records
-2013-05,Flora,Plants,Orchids,Q30120,Pterostylis falcata,Forked Greenhood,all records
-2013-05,Flora,Plants,Orchids,W04719,Pterostylis ferruginea,Bangham Rustyhood,all records
-2013-05,Flora,Plants,Orchids,K05645,Pterostylis lepida,Halbury Rustyhood,all records
-2013-05,Flora,Plants,Orchids,K06293,Pterostylis lingua,,all records
-2013-05,Flora,Plants,Orchids,S30121,Pterostylis lustra,Forked Greenhood,all records
-2013-05,Flora,Plants,Orchids,W05747,Pterostylis melagramma,Tall Greenhood,all records
-2013-05,Flora,Plants,Orchids,K04405,Pterostylis mirabilis,Mount Olinthus Greenhood,all records
-2013-05,Flora,Plants,Orchids,W30079,Pterostylis parviflora,,all records
-2013-05,Flora,Plants,Orchids,Y04412,Pterostylis setifera,Bristly Greenhood,all records
-2013-05,Flora,Plants,Orchids,W05463,Pterostylis sp. Hale (R.Bates 21725),Hale Greenhood,all records
-2013-05,Flora,Plants,Orchids,G04403,"Pterostylis sp. Rock ledges (pl. 185, Bates & Weber 1990)",Rock-ledge rufoushood,all records
-2013-05,Flora,Plants,Orchids,C05465,Pterostylis tasmanica,,all records
-2013-05,Flora,Plants,Orchids,M00850,Pterostylis tenuissima,Swamp Greenhood,all records
-2013-05,Flora,Plants,Orchids,W05675,Pterostylis uliginosa,,all records
-2013-05,Flora,Plants,Orchids,K04413,Pterostylis xerophila,Desert Greenhood,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Y05484,Pycnosorus chrysanthes,,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,W03051,Pycnosorus globosus,Drumsticks,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,W03167,Rhodanthe anthemoides,Chamomile Everlasting,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,U03182,Rhodanthe oppositifolia ssp. oppositifolia,Twin-leaf Everlasting,all records
-2013-05,Flora,Plants,Santalum,W00951,Santalum lanceolatum,Plumbush,all records
-2013-05,Flora,Plants,Santalum,C00953,Santalum spicatum,Sandalwood,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,A02908,Scaevola calendulacea,Dune Fanflower,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Q02004,Scaevola hookeri,Creeping Fanflower,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,C05041,Scaevola obovata,,all records
-2013-05,Flora,Plants,Ferns & Allies,Q00032,Schizaea bifida,Forked Comb-fern,all records
-2013-05,Flora,Plants,Ferns & Allies,S00033,Schizaea fistulosa,Narrow Comb-fern,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,K00701,Stypandra glauca,Nodding Grass-lily,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Q05320,Swainsona behriana,Behr's Swainson-pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,W01787,Swainsona dictyocarpa,,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Y15260,Swainsona kingii,,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,W01795,Swainsona minutiflora,Small-flower Swainson-pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z20191,Swainsona murrayana,Murray Swainson-pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,K01801,Swainsona procumbens,Broughton Pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z01791,Swainsona pyrophila,Yellow Swainson-pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,K05557,Swainsona vestita,,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,A01808,Swainsona viridis,Creeping Darling Pea,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z04839,Thelionema caespitosum,Tufted Lily,all records
-2013-05,Flora,Plants,Orchids,E04138,Thelymitra circumsepta,Naked Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,M06162,Thelymitra crenulata,,all records
-2013-05,Flora,Plants,Orchids,Q06040,Thelymitra cyanapicata,,all records
-2013-05,Flora,Plants,Orchids,C00873,Thelymitra cyanea,Veined Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,Q00860,Thelymitra epipactoides,Metallic Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,Z32207,Thelymitra holmesii,Blue Star Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,Q32208,Thelymitra hygrophila,Blue Star Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,C06045,Thelymitra inflata,Plum Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,E32210,Thelymitra latifolia,Blue Star Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,U05470,Thelymitra malvina,Mauve-tufted Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,K00869,Thelymitra matthewsii,Spiral Sun-orchid,all records
-2013-05,Flora,Plants,Orchids,S32209,Thelymitra peniculata,Blue Star Sun-orchid,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,U00706,Thysanotus nudicaulis,,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,U04302,Thysanotus tuberosus ssp. parviflorus,Tuber Fringe-lily,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Q04716,Thysanotus tuberosus ssp. tuberosus,Tuber Fringe-lily,all records
-2013-05,Flora,Plants,Ferns & Allies,M00030,Todea barbara,King Fern,all records
-2013-05,Flora,Plants,Aquatics,Q05400,Utricularia beaugleholei,Beauglehole's Bladderwort,all records
-2013-05,Flora,Plants,Aquatics,Q02760,Utricularia lateriflora,Small Bladderwort,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z02151,Viola betonicifolia ssp. betonicifolia,Showy Violet,all records
-2013-05,Flora,Plants,Aquatics,G05475,Wurmbea dioica ssp. lacunaria,Lagoon Nancy,all records
-2013-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,E04894,Xanthorrhoea minor ssp. lutea,Little Yacca,all records
-2014-04,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,Z20051,Dampiera lanceolata var.,Grooved Dampiera,all records
-2014-04,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,G20111,Ixodia achillaeoides ssp.,Ixodia,all records
-2018-05,Fauna,Birds,Cockatoo,A00264,Calyptorhynchus banksii,Red-tailed Black Cockatoo,nesting related records
-2018-05,Flora,Plants,Orchids,M00834,Pterostylis cucullata (NC),Leafy Greenhood,all records
-2018-05,Flora,Plants,Orchids,M32046,Pterostylis cucullata ssp.,,all records
-2018-05,Flora,Plants,Orchids,C32069,Pterostylis psammophila,Two-bristle Greenhood,all records
-2018-05,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,W20259,Rhodanthe oppositifolia (NC),,
-2018-07,Fauna,Birds,Cockatoo,Z04483,Calyptorhynchus lathami  (NC),Glossy Black Cockatoo,nesting related records
-2018-12,Fauna,Birds,,C00513,Amytornis striatus striatus  (NC),Striated Grasswren,all records
-2018-12,Fauna,Birds,,M00402,Pachycephala rufogularis,Red-lored Whistler,all records
-2019-04,Fauna,Birds,,M00138,Thinornis cucullatus cucullatus,Hooded Plover,nesting related records
-2020-02,Flora,Plants,Garden Trade -Other Ornamental Horticulture plants,S20193,Thysanotus tuberosus ssp.,Tuber Fringe-lily,all records
-2020-12,Flora,Plants,Orchids,Y32052,Prasophyllum laxum,Lax Leek-orchid,all records
-2021-02,Fauna,Birds,Cockatoo,S21049,Lophochroa leadbeateri leadbeateri,"Major Mitchell's Cockatoo (LNE, MM)",nesting related records
-2021-02,Fauna,Birds,Cockatoo,E21050,Lophochroa leadbeateri mollis,"Major Mitchell's Cockatoo (NW, EP)",nesting related records
-2021-02,Fauna,Reptiles,,Y02660,Denisonia devisi,De Vis' Banded Snake (Mud Adder),all records
-2021-02,Flora,Plants,Orchids,G32203,Caladenia fuliginosa,,all records
-2021-03,Fauna,Birds,,A21180,Amytornis striatus howei,Striated Grasswren,all records
-2021-03,Fauna,Birds,Parrot,U04206,Polytelis anthopeplus  (NC),Regent Parrot,nesting related records
-2021-04,Fauna,Birds,,M11286,Amytornis whitei  (NC),Rufous Grasswren,all records
-2021-05,Fauna,Birds,,C21181,Amytornis whitei aenigma,Yellabinna Rufous Grasswren,all records
-2021-06,Fauna,Birds,,E21182,Amytornis whitei oweni,Sandhill Rufous Grasswren,all records
-2021-07,Flora,Plants,Shrub,E04842,Phebalium calcicola,Limestone Phebalium,all records
-2021-08,Flora,Plants,Orchids,E04382,Caladenia White spider orchid group,White Spider-orchid,all records
-2021-08,Flora,Plants,Ferns & Allies,ALA concept,Doodia caudata,,all records
+scientificName,vernacularName,generalisation
+Calyptorhynchus banksii graptogyne,Red-tailed Black Cockatoo (south-east),10 km
+Calyptorhynchus lathami halmaturinus,Glossy Black-Cockatoo (Kangaroo Island subspecies),10 km
+Lophochroa leadbeateri leadbeateri,"Major Mitchell's Cockatoo (LNE, MM)",10 km
+Lophochroa leadbeateri mollis,"Major Mitchell's Cockatoo (NW, EP)",10 km
+Zanda funerea whiteae,Yellow-tailed Black Cockatoo,10 km
+Neophema chrysogaster,Orange-bellied Parrot,10 km
+Neophema splendida,Scarlet-chested Parrot,10 km
+Polytelis alexandrae,Princess Parrot,10 km
+Polytelis anthopeplus monarchoides,Regent Parrot,10 km
+Amytornis striatus howei,Striated Grasswren,10 km
+Amytornis whitei aenigma,Yellabinna Rufous Grasswren,10 km
+Amytornis whitei oweni,Sandhill Rufous Grasswren,10 km
+Amytornis whitei,Rufous Grasswren,10 km
+Pachycephala rufogularis,Red-lored Whistler,10 km
+Thinornis cucullatus cucullatus,Hooded Plover,10 km
+Elanus scriptus,Letter-winged Kite,10 km
+Falco hypoleucos,Grey Falcon,10 km
+Falco peregrinus macropus,Peregrine Falcon,10 km
+Haliaeetus leucogaster,White-bellied Sea Eagle,10 km
+Lophoictinia isura,Square-tailed Kite,10 km
+Pandion haliaetus cristatus,Eastern Osprey,10 km
+Euastacus bispinosus,Glenelg Spiny Freshwater Crayfish,10 km
+Nephrurus deleani,Pernatty Knob-tailed Gecko,10 km
+Tiliqua adelaidensis,Pygmy Bluetongue,10 km
+Denisonia devisi,De Vis' Banded Snake (Mud Adder),10 km
+Callitriche umbonata,Water Starwort,10 km
+Craspedia paludicola,Swamp Buttons,10 km
+Gentianella gunniana,Mountain Gentian,10 km
+Lycopodiella serpentina,Bog Clubmoss,10 km
+Lycopodium deuterodensum,Bushy Clubmoss,10 km
+Montia fontana ssp. chondrosperma,Waterblinks,10 km
+Najas tenuifolia,Water Nymph,10 km
+Nertera granadensis,Matted Nertera,10 km
+Nymphoides geminata,Entire Marshwort,10 km
+Ornduffia umbricola var. beaugleholei,Beauglehole's Marsh-flower,10 km
+Potamogeton australiensis,Thin Pondweed,10 km
+Utricularia beaugleholei,Beauglehole's Bladderwort,10 km
+Utricularia lateriflora,Small Bladderwort,10 km
+Wurmbea dioica ssp. lacunaria,Lagoon Nancy,10 km
+Olearia arckaringensis,Arckaringa Daisy,10 km
+Adiantum capillus-veneris,Dainty Maiden-hair,10 km
+Asplenium gracillimum,Mother Spleenwort,10 km
+Blechnum chambersii,Lance Water-fern,10 km
+Blechnum rupestre,Small Rasp-fern,10 km
+Dennstaedtia davallioides,Lacy Ground-fern,10 km
+Dicksonia antarctica,Soft Tree-fern,10 km
+Histiopteris incisa,Bat's-wing Fern,10 km
+Lastreopsis acuminata,Shiny Shield-fern,10 km
+Polystichum proliferum,Mother Shield-fern,10 km
+Psilotum nudum,Skeleton Fork-fern,10 km
+Schizaea bifida,Forked Comb-fern,10 km
+Schizaea fistulosa,Narrow Comb-fern,10 km
+Todea barbara,King Fern,10 km
+Amanita phalloides,,10 km
+Amanita rubescens,,10 km
+Boletus edulis,,10 km
+Laetiporus sulphureus,,10 km
+Morchella elata,,10 km
+Morchella esculenta,,10 km
+Psilocybe argentina,,10 km
+Psilocybe coprophila,,10 km
+Psilocybe inquilina,,10 km
+Psilocybe kolya,,10 km
+Psilocybe korra,,10 km
+Psilocybe kramburkicola,,10 km
+Psilocybe musci,,10 km
+Psilocybe,,10 km
+Psilocybe stercicola,,10 km
+Psilocybe subaeruginosa,,10 km
+Psilocybe thrausta,,10 km
+Psilocybe toogaadyalis,,10 km
+Arthropodium milleflorum,Pale Vanilla-lily,10 km
+Brachyscome diversifolia,Tall Daisy,10 km
+Brachyscome melanocarpa ssp. melanocarpa,Black-fruit Daisy,10 km
+Brachyscome muelleri,Corunna Daisy,10 km
+Calocephalus lacteus,Milky Beauty-heads,10 km
+Coronidium gunnianum,Pale Everlasting,10 km
+Dampiera lanceolata var. intermedia,Aldinga Dampiera,10 km
+Dianella callicarpa,Swamp Flax-lily,10 km
+Dianella porracea,Pale Flax-lily,10 km
+Dianella tarda,Late-flowered Flax-lily,10 km
+Ixodia achillaeoides ssp. arenicola,Sand Ixodia,10 km
+Lagenophora sublyrata,Slender Bottle-daisy,10 km
+Leptorhynchos melanocarpus,Lake Acraman Button-daisy,10 km
+Lobelia beaugleholei,Showy Lobelia,10 km
+Podolepis muelleri,Button Podolepis,10 km
+Pycnosorus chrysanthes,Yellow Drumsticks,10 km
+Pycnosorus globosus,Drumsticks,10 km
+Rhodanthe anthemoides,Chamomile Everlasting,10 km
+Rhodanthe oppositifolia ssp. oppositifolia,Twin-leaf Everlasting,10 km
+Scaevola calendulacea,Dune Fanflower,10 km
+Scaevola hookeri,Creeping Fanflower,10 km
+Scaevola obovata,,10 km
+Stypandra glauca,Nodding Grass-lily,10 km
+Swainsona behriana,Behr's Swainson-pea,10 km
+Swainsona dictyocarpa,,10 km
+Swainsona kingii,,10 km
+Swainsona minutiflora,Small-flower Swainson-pea,10 km
+Swainsona murrayana,Murray Swainson-pea,10 km
+Swainsona procumbens,Broughton Pea,10 km
+Swainsona pyrophila,Yellow Swainson-pea,10 km
+Swainsona vestita,,10 km
+Swainsona viridis,Creeping Darling Pea,10 km
+Thelionema caespitosum,Tufted Lily,10 km
+Thysanotus nudicaulis,,10 km
+Thysanotus tuberosus ssp. parviflorus,Tuber Fringe-lily,10 km
+Thysanotus tuberosus ssp. tuberosus,Tuber Fringe-lily,10 km
+Viola betonicifolia ssp. betonicifolia,Showy Violet,10 km
+Xanthorrhoea minor ssp. lutea,Little Yacca,10 km
+Caladenia argocalla,White Beauty Spider-orchid,10 km
+Caladenia behrii,Pink-lip Spider-orchid,10 km
+Caladenia brumalis,Winter Spider-orchid,10 km
+Caladenia calcicola,Limestone Spider-orchid,10 km
+Caladenia clavigera,Plain-lip Spider-orchid,10 km
+Caladenia colorata,Coloured Spider-orchid,10 km
+Caladenia conferta,Coast Spider-orchid,10 km
+Caladenia dilatata,Late Spider-orchid,10 km
+Caladenia flaccida,Drooping Spider-orchid,10 km
+Caladenia formosa,Elegant Spider Orchid,10 km
+Caladenia fragrantissima,Scented Spider-orchid,10 km
+Caladenia fuliginosa,,10 km
+Caladenia fulva,Tawny Spider-orchid,10 km
+Caladenia gladiolata,Bayonet Spider-orchid,10 km
+Caladenia intuta,Ghost Spider Orchid,10 km
+Caladenia lowanensis,Wimmera Spider-orchid,10 km
+Caladenia macroclavia,Large-club Spider-orchid,10 km
+Caladenia moschata,Musky Caladenia,10 km
+Caladenia ornata,Ornate Pink Fingers,10 km
+Caladenia ovata,Kangaroo Island Spider-orchid,10 km
+Caladenia parva,Small Green-comb Spider-orchid,10 km
+Caladenia richardsiorum,Little Dip Spider-orchid,10 km
+Caladenia rigida,Stiff White Spider-orchid,10 km
+Caladenia sp. Monarto South (H.Goldsack 163 AD97708605A),,10 km
+Caladenia sp. Southeast (R.Bates 66283),Sand Spider-orchid,10 km
+Caladenia tensa,Inland Green-comb Spider-orchid,10 km
+Caladenia valida,Robust Spider-orchid,10 km
+Caladenia venusta,Large White Spider-orchid,10 km
+Caladenia woolcockiorum,Woolcock's Spider-orchid,10 km
+Caladenia xantholeuca,Flinders Ranges White Caladenia,10 km
+Caleana major,Large Duck-orchid,10 km
+Calochilus cupreus,Copper Beard-orchid,10 km
+Calochilus paludosus,Red Beard-orchid,10 km
+Chiloglottis cornuta,Green Bird-orchid,10 km
+Chiloglottis trapeziformis,Dainty Bird-orchid,10 km
+Corybas expansus,Dune Helmet-orchid,10 km
+Corybas fordhamii,Swamp Helmet-orchid,10 km
+Corybas X dentatus,Finniss Helmet-orchid,10 km
+Cryptostylis subulata,Moose Orchid,10 km
+Dipodium campanulatum,Bell-flower Hyacinth Orchid,10 km
+Dipodium pardalinum,Leopard Hyacinth-orchid,10 km
+Dipodium punctatum,,10 km
+Diuris behrii,Behr's Cowslip Orchid,10 km
+Diuris brevifolia,Short-leaf Donkey-orchid,10 km
+Diuris chryseopsis,Cowslip Orchid,10 km
+Eriochilus paludosus,,10 km
+Gastrodia vescula,Lesser Potato Orchid,10 km
+Genoplesium ciliatum,Swamp Midge-orchid,10 km
+Genoplesium despectans,Sharp Midge-orchid,10 km
+Genoplesium morrisii,Bearded Midge-orchid,10 km
+Microtis eremaea,Slender Onion-orchid,10 km
+Microtis orbicularis,Swamp Onion-orchid,10 km
+Paracaleana disjuncta,Black-beak Duck-orchid,10 km
+Paracaleana minor,Small Duck-orchid,10 km
+Prasophyllum calcicola,Limestone Leek-orchid,10 km
+Prasophyllum catenemum,,10 km
+Prasophyllum frenchii,Maroon Leek-orchid,10 km
+Prasophyllum goldsackii,Goldsack's Leek-orchid,10 km
+Prasophyllum laxum,Lax Leek-orchid,10 km
+Prasophyllum murfetii,Maroon Leek-orchid,10 km
+Prasophyllum pallidum,Pale Leek-orchid,10 km
+Prasophyllum pruinosum,Plum Leek-orchid,10 km
+Prasophyllum sp. Waterholes (R.Bates 9037),,10 km
+Prasophyllum spicatum,Dense Leek-orchid,10 km
+Prasophyllum tortilis,Goldsack's Leek-orchid,10 km
+Prasophyllum validum,Mount Remarkable Leek-orchid,10 km
+Pterostylis arenicola,Sandhill Greenhood,10 km
+Pterostylis bryophila,Hindmarsh Greenhood,10 km
+Pterostylis chlorogramma,,10 km
+Pterostylis concinna,Trim Greenhood,10 km
+Pterostylis corpulenta,Tiny Greenhood,10 km
+Pterostylis cucullata ssp. cucullata,Leafy Greenhood,10 km
+Pterostylis cucullata ssp. sylvicola,Leafy Greenhood,10 km
+Pterostylis despectans,Mt Bryan Greenhood,10 km
+Pterostylis falcata,Forked Greenhood,10 km
+Pterostylis ferruginea,Bangham Rustyhood,10 km
+Pterostylis lepida,Halbury Rustyhood,10 km
+Pterostylis lingua,,10 km
+Pterostylis lustra,Forked Greenhood,10 km
+Pterostylis melagramma,Tall Greenhood,10 km
+Pterostylis mirabilis,Mount Olinthus Greenhood,10 km
+Pterostylis parviflora,,10 km
+Pterostylis psammophila,Two-bristle Greenhood,10 km
+Pterostylis setifera,Bristly Greenhood,10 km
+Pterostylis sp. Hale (R.Bates 21725),Hale Greenhood,10 km
+"Pterostylis sp. Rock ledges (pl. 185, Bates & Weber 1990)",Rock-ledge rufoushood,10 km
+Pterostylis tasmanica,,10 km
+Pterostylis tenuissima,Swamp Greenhood,10 km
+Pterostylis uliginosa,,10 km
+Pterostylis xerophila,Desert Greenhood,10 km
+Thelymitra circumsepta,Naked Sun-orchid,10 km
+Thelymitra crenulata,,10 km
+Thelymitra cyanapicata,,10 km
+Thelymitra cyanea,Veined Sun-orchid,10 km
+Thelymitra epipactoides,Metallic Sun-orchid,10 km
+Thelymitra holmesii,Blue Star Sun-orchid,10 km
+Thelymitra hygrophila,Blue Star Sun-orchid,10 km
+Thelymitra inflata,Plum Sun-orchid,10 km
+Thelymitra latifolia,Blue Star Sun-orchid,10 km
+Thelymitra malvina,Mauve-tufted Sun-orchid,10 km
+Thelymitra matthewsii,Spiral Sun-orchid,10 km
+Thelymitra peniculata,Blue Star Sun-orchid,10 km
+Santalum lanceolatum,Plumbush,10 km
+Santalum spicatum,Sandalwood,10 km
+Phebalium calcicola,Limestone Phebalium,10 km
+,,10 km
+,,10 km
+,,10 km
+,,10 km
+,,10 km
+,,10 km
+,,10 km
+,,10 km

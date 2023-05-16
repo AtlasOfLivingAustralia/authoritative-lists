@@ -1,137 +1,137 @@
-taxonID,scientificName,vernacularName,scientificNameAuthority,primaryDiscipline,establishmentMeans,taxonRank,speciesGroup,ffgactstatus,epbcactStatus,vicadvisorystatus,restrictedFlag,modified,extractDate,status,sourceStatus
-1686,Engaeus australis,Lilly Pilly Burrowing Crayfish,"Riek, 1969",Aquatic fauna,,species,"Mussels, decapod crustacea",Critically Endangered,,Vulnerable,rest,18/12/2013,16/01/2023,Critically Endangered,Critically Endangered
-1674,Engaeus fultoni,Otway Burrowing Crayfish,"Smith & Schuster, 1913",Aquatic fauna,,species,"Mussels, decapod crustacea",Vulnerable,,Vulnerable,rest,18/12/2013,16/01/2023,Vulnerable,Vulnerable
-1694,Engaeus mallacoota,Mallacoota Burrowing Crayfish,"Horwitz, 1990",Aquatic fauna,,species,"Mussels, decapod crustacea",Critically Endangered,,Vulnerable,rest,17/12/2013,16/01/2023,Critically Endangered,Critically Endangered
-1695,Engaeus phyllocercus,Narracan Burrowing Crayfish,"Smith & Schuster, 1913",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Endangered,rest,7/11/2012,16/01/2023,Endangered,Endangered
-1683,Engaeus rostrogaleatus,Strzelecki Burrowing Crayfish,"Horwitz, 1990",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Endangered,rest,7/11/2012,16/01/2023,Endangered,Endangered
-1692,Engaeus sericatus,Hairy Burrowing Crayfish,"Clark, 1936",Aquatic fauna,,species,"Mussels, decapod crustacea",Vulnerable,,Vulnerable,rest,18/12/2013,16/01/2023,Vulnerable,Vulnerable
-1693,Engaeus sternalis,Warragul Burrowing Crayfish,"(Clark, 1936)",Aquatic fauna,,species,"Mussels, decapod crustacea",Critically Endangered,,Critically endangered,rest,7/11/2012,16/01/2023,Critically Endangered,Critically Endangered
-1690,Engaeus strictifrons,Portland Burrowing Crayfish,"(Clark, 1936)",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Vulnerable,rest,18/12/2013,16/01/2023,Endangered,Endangered
-1685,Engaeus urostrictus,Dandenong Burrowing Crayfish,"Riek, 1969",Aquatic fauna,,species,"Mussels, decapod crustacea",Critically Endangered,,Critically endangered,rest,7/11/2012,16/01/2023,Critically Endangered,Critically Endangered
-1633,Euastacus bidawalus,East Gippsland Spiny Crayfish,"Morgan, 1986",Aquatic fauna,,species,"Mussels, decapod crustacea",Vulnerable,,Vulnerable,rest,18/12/2013,16/01/2023,Vulnerable,Vulnerable
-1643,Euastacus claytoni,Claytons Spiny Crayfish,"Riek, 1969",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Vulnerable,rest,18/12/2013,16/01/2023,Endangered,Endangered
-1634,Euastacus crassus,Alpine Spiny Crayfish,"Riek, 1951",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Endangered,rest,7/11/2012,16/01/2023,Endangered,Endangered
-528521,Galaxias aequipinnis,East Gippsland Galaxias,"Gunther, 1871",Aquatic fauna,,species,Fish,Critically Endangered,,Endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528524,Galaxias gunaikurnai,Shaw Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Critically endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528525,Galaxias lanceolatus,Tapered Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Critically endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528526,Galaxias longifundus,West Gippsland Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Critically endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528522,Galaxias mcdowalli,McDowall's Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Critically endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528523,Galaxias mungadhan,Dargo Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Critically endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-528520,Galaxias terenasus,Roundsnout Galaxias,"Raadik, 2014",Aquatic fauna,,species,Fish,Critically Endangered,,Endangered,rest,12/09/2016,16/01/2023,Critically Endangered,Critically Endangered
-1671,Gramastacus insolitus,Western Swamp Crayfish,"Riek, 1972",Aquatic fauna,,species,"Mussels, decapod crustacea",Endangered,,Critically endangered,rest,19/07/2019,16/01/2023,Endangered,Endangered
-1464,Austrogammarus australis,Dandenong Freshwater Amphipod,"(Sayce, 1901)",Aquatic invertebrates,,species,Aquatic inverts,Critically Endangered,,Endangered,rest,16/09/2010,16/01/2023,Critically Endangered,Critically Endangered
-1467,Austrogammarus haasei,Sherbrooke Amphipod,"(Sayce, 1902)",Aquatic invertebrates,,species,Aquatic inverts,Endangered,,Vulnerable,rest,16/09/2010,16/01/2023,Endangered,Endangered
-75160,Colubotelson joyneri,freshwater isopod,"(Nicholls, 1926)",Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,20/11/2012,16/01/2023,Critically Endangered,Critically Endangered
-75161,Colubotelson searli,freshwater isopod,"Nicholls, 1944",Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,20/11/2012,16/01/2023,Critically Endangered,Critically Endangered
-75163,Gariwerdeus beehivensis,freshwater isopod,"Wilson & Keable, 2002",Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,2/12/2010,16/01/2023,Critically Endangered,Critically Endangered
-75164,Gariwerdeus ingletonensis,freshwater isopod,"Wilson & Keable, 2002",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,2/12/2010,16/01/2023,Vulnerable,Vulnerable
-75165,Gariwerdeus turretensis,freshwater isopod,"Wilson & Keable, 2002",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,2/12/2010,16/01/2023,Vulnerable,Vulnerable
-1887,Hemiphlebia mirabilis,Ancient Greenling Damselfly,"Selys, 1869",Aquatic invertebrates,,species,Invertebrates,Endangered,,Endangered,rest,5/05/2017,16/01/2023,Endangered,Endangered
-621,Hyridella glenelgensis,Glenelg Freshwater Mussel / Bocara Timbonn,"(Dennant, 1898)",Aquatic invertebrates,,species,"Mussels, decapod crustacea",Critically Endangered,Critically Endangered,Critically endangered,rest,6/10/2020,16/01/2023,Critically Endangered,Critically Endangered
-2455,Leptoperla kallistae,Kallista Flightless Stonefly,Hynes 1974,Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Critically endangered,rest,22/02/2013,16/01/2023,Critically Endangered,Critically Endangered
-75166,Naiopegia xiphagrostis,freshwater isopod,"Wilson & Keable, 2002",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,2/12/2010,16/01/2023,Vulnerable,Vulnerable
-517,Notopala sublineata,River Snail,"(Conrad, 1850)",Aquatic invertebrates,,species,Aquatic inverts,,,Critically endangered,rest,24/11/2011,16/01/2023,,
-3120,Notoperata sparsa,Caddisfly,"(Kimmins, 1953)",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,16/09/2010,16/01/2023,Vulnerable,Vulnerable
-15255,Pseudocalliax tooradin,Ghost shrimp,"(Poore & Griffin, 1979)",Aquatic invertebrates,,species,Aquatic inverts,Endangered,,Vulnerable,rest,2/12/2010,16/01/2023,Endangered,Endangered
-3058,Ramiheithrus virgatus,Caddisfly,"Neboiss, 1974",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,16/09/2010,16/01/2023,Vulnerable,Vulnerable
-2512,Riekoperla darlingtoni,Mt Donna Buang Wingless Stonefly,"(Illies, 1968)",Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Critically endangered,rest,5/05/2017,16/01/2023,Critically Endangered,Critically Endangered
-2496,Riekoperla intermedia,Stonefly,"Theischinger, 1985",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Endangered,rest,6/08/2014,16/01/2023,Vulnerable,Vulnerable
-2495,Riekoperla isosceles,Stonefly,"Theischinger, 1985",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Critically endangered,rest,17/12/2013,16/01/2023,Vulnerable,Vulnerable
-3023,Tamasia furcilla,Caddisfly,"Neboiss, 1984",Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,16/09/2010,16/01/2023,Critically Endangered,Critically Endangered
-3040,Taskiria otwayensis,Caddisfly,"Neboiss, 1984",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,17/12/2013,16/01/2023,Vulnerable,Vulnerable
-2365,Thaumatoperla alpina,Alpine Stonefly,Burns and Neboiss 1957,Aquatic invertebrates,,species,Invertebrates,Endangered,Endangered,Vulnerable,rest,21/02/2013,16/01/2023,Endangered,Endangered
-2366,Thaumatoperla flaveola,Mount Stirling stonefly,Burns and Neboiss 1957,Aquatic invertebrates,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,11/02/2016,16/01/2023,Critically Endangered,Critically Endangered
-2367,Thaumatoperla robusta,Stonefly,"Burns & Neboiss, 1957",Aquatic invertebrates,,species,Invertebrates,,,Data deficient,rest,16/09/2010,16/01/2023,,
-2368,Thaumatoperla timmsi,Stonefly,"Zwick, 1979",Aquatic invertebrates,,species,Invertebrates,,,Data deficient,rest,16/09/2010,16/01/2023,,
-75193,Triaenodes resima,Caddisfly,"Neboiss & Wells, 1998",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,20/11/2012,16/01/2023,Vulnerable,Vulnerable
-75194,Triaenodes uvida,Caddisfly,"Neboiss & Wells, 1998",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,20/11/2012,16/01/2023,Vulnerable,Vulnerable
-3186,Westriplectes angelae,Caddisfly,"Neboiss, 1979",Aquatic invertebrates,,species,Invertebrates,,,Vulnerable,rest,16/09/2010,16/01/2023,,
-3187,Westriplectes pedderensis,Caddisfly,"Neboiss, 1977",Aquatic invertebrates,,species,Invertebrates,Vulnerable,,Vulnerable,rest,16/09/2010,16/01/2023,Vulnerable,Vulnerable
-1845,Wundacaenis flabellum,Mayfly,"Suter, 1993",Aquatic invertebrates,,species,Invertebrates,,,Vulnerable,rest,16/09/2010,16/01/2023,,
-500431,Borya mirabilis,Grampians Pincushion-lily,Churchill,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,16/09/2010,16/01/2023,Critically Endangered,Critically Endangered
-505970,Bossiaea vombata,Wombat Bossiaea,J.H. Ross,Flora,,species,Dicotyledons,Critically Endangered,,Endangered,rest,31/10/2014,16/01/2023,Critically Endangered,Critically Endangered
-503726,Caladenia amoena,Charming Spider-orchid,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-528650,Caladenia arenaria,Sandhill Spider-orchid,Fitzg.,Flora,,species,Monocotyledons,,Endangered,,rest,20/01/2017,16/01/2023,,
-503664,Caladenia audasii,McIvor Spider-orchid,R.S. Rogers,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,16/09/2010,16/01/2023,Critically Endangered,Critically Endangered
-500525,Caladenia calcicola,Limestone Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,Vulnerable,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-503729,Caladenia colorata,Colourful Spider-orchid,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-504347,Caladenia concolor,Crimson Spider-orchid,Fitzg.,Flora,,species,Monocotyledons,Endangered,Vulnerable,Endangered,rest,19/08/2020,16/01/2023,Endangered,Endangered
-507766,Caladenia cremna,Whitfield Spider-orchid,(D.L. Jones) G.N. Backh.,Flora,,species,Monocotyledons,Critically Endangered,Critically Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-505592,Caladenia cretacea,Stuart Mill Spider-orchid,(D.L. Jones) G.N. Backh.,Flora,,species,Monocotyledons,Endangered,,Endangered,rest,18/01/2019,16/01/2023,Endangered,Endangered
-505499,Caladenia cruciformis,Red-cross Spider-orchid,D.L. Jones,Flora,,species,Monocotyledons,Endangered,,Endangered,rest,19/08/2020,16/01/2023,Endangered,Endangered
-500541,Caladenia flavovirens,Christmas Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,,Rare,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-504486,Caladenia formosa,Elegant Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,Vulnerable,Vulnerable,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-504498,Caladenia fulva,Tawny Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Endangered,Endangered
-504348,Caladenia hastata,Mellblom's Spider-orchid,(Nicholls) Rupp,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-500676,Caladenia lowanensis,Wimmera Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-505501,Caladenia pilotensis,Mount Pilot Spider-orchid,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-500544,Caladenia pumila,Dwarf Spider-orchid,R.S. Rogers,Flora,,species,Monocotyledons,Critically Endangered,Critically Endangered,Endangered,rest,23/01/2017,16/01/2023,Critically Endangered,Critically Endangered
-500586,Caladenia robinsonii,Frankston Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-503669,Caladenia rosella,Little Pink Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-505589,Caladenia sp. aff. fragrantissima (Central Victoria),Bendigo Spider-orchid,sensu Bishop (1996),Flora,,species,Monocotyledons,Critically Endangered,,Endangered,rest,16/09/2010,16/01/2023,Critically Endangered,Critically Endangered
-505431,Caladenia sp. aff. venusta (Kilsyth South),Kilsyth South Spider-orchid,sensu Ross (2000),Flora,,species,Monocotyledons,Critically Endangered,Critically Endangered,Endangered,rest,23/01/2017,16/01/2023,Critically Endangered,Critically Endangered
-500338,Caladenia tensa,Rigid Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,,Endangered,Vulnerable,rest,18/01/2019,16/01/2023,,
-501022,Caladenia valida,Robust Spider-orchid,(Nicholls) M.A. Clem. & D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-500522,Caladenia versicolor,Candy Spider-orchid,G.W. Carr,Flora,,species,Monocotyledons,Endangered,Vulnerable,Endangered,rest,18/01/2019,16/01/2023,Endangered,Endangered
-504691,Caladenia xanthochila,Yellow-lip Spider-orchid,D. Beards. & C. Beards.,Flora,,species,Monocotyledons,Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Endangered,Endangered
-500588,Calochilus richiae,Bald-tip Beard-orchid,Nicholls,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,14/02/2017,16/01/2023,Critically Endangered,Critically Endangered
-501473,Diuris basaltica,Small Golden Moths,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-504414,Diuris fragrantissima,Sunshine Diuris,D.L. Jones & M.A. Clem.,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-504434,Gaultheria hispida,Snow-berry,R. Br.,Flora,,species,Dicotyledons,Critically Endangered,,Endangered,rest,6/05/2021,16/01/2023,Critically Endangered,Critically Endangered
-504850,Prasophyllum correctum,Gaping Leek-orchid,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-502706,Prasophyllum diversiflorum,Gorae Leek-orchid,Nicholls,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-505632,Prasophyllum fosteri,Shelford Leek-orchid,D.L. Jones,Flora,,species,Monocotyledons,Critically Endangered,,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-502709,Prasophyllum frenchii,Maroon Leek-orchid,F. Muell.,Flora,,species,Monocotyledons,Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Endangered,Endangered
-502722,Prasophyllum niphopedium,Marsh Leek-orchid,D.L. Jones,Flora,,species,Monocotyledons,Endangered,,Endangered,rest,19/08/2020,16/01/2023,Endangered,Endangered
-507735,Prasophyllum retroflexum,Curled Leek-orchid,D.L. Jones,Flora,,species,Monocotyledons,,,,rest,19/08/2020,16/01/2023,,
-504565,Prasophyllum roseum,Pink-lip Leek-orchid,D.L. Jones & R.J. Bates,Flora,,species,Monocotyledons,Critically Endangered,,Endangered,rest,30/09/2020,16/01/2023,Critically Endangered,Critically Endangered
-504567,Prasophyllum suaveolens,Fragrant Leek-orchid,D.L. Jones & R.J. Bates,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-502724,Prasophyllum subbisectum,Pomonal Leek-orchid,Nicholls,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-504156,Pterostylis basaltica,Basalt Rustyhood,D.L. Jones & M.A. Clem.,Flora,,species,Monocotyledons,Critically Endangered,Endangered,Endangered,rest,19/08/2020,16/01/2023,Critically Endangered,Critically Endangered
-503916,Pterostylis cheraphila,Floodplain Rustyhood,D.L. Jones & M.A. Clem.,Flora,,species,Monocotyledons,Endangered,Vulnerable,Vulnerable,rest,18/01/2019,16/01/2023,Endangered,Endangered
-503957,Pterostylis despectans,Lowly Greenhood,(Nicholls) M.A. Clem. & D.L. Jones,Flora,,species,Monocotyledons,Endangered,Endangered,Endangered,rest,20/11/2017,16/01/2023,Endangered,Endangered
-502819,Pterostylis tenuissima,Swamp Greenhood,Nicholls,Flora,,species,Monocotyledons,,Vulnerable,Vulnerable,rest,19/08/2020,16/01/2023,,
-504854,Pterostylis valida,Robust Greenhood,(Nicholls) D.L. Jones,Flora,,species,Monocotyledons,Endangered,Critically Endangered,Endangered,rest,20/11/2017,16/01/2023,Endangered,Endangered
-503936,Pterostylis xerophila,Desert Greenhood,M.A. Clem.,Flora,,species,Monocotyledons,Critically Endangered,Vulnerable,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-503367,Thelymitra epipactoides,Metallic Sun-orchid,F. Muell.,Flora,,species,Monocotyledons,Endangered,Endangered,Endangered,rest,18/01/2019,16/01/2023,Endangered,Endangered
-503376,Thelymitra mackibbinii,Brilliant Sun-orchid,F. Muell.,Flora,,species,Monocotyledons,Critically Endangered,Vulnerable,Endangered,rest,18/01/2019,16/01/2023,Critically Endangered,Critically Endangered
-12141,Aprasia aurita,Mallee Worm-Lizard,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-12144,Aprasia parapulchella,Pink-tailed Worm-Lizard,,Terrestrial fauna,,species,Reptiles,Endangered,Vulnerable,Endangered,rest,3/08/2018,16/01/2023,Endangered,Endangered
-75154,Austropyrgus grampianensis,Dairy Creek Austropyrgus Snail,"(Gabriel, 1939)",Terrestrial fauna,,species,Aquatic inverts,Critically Endangered,,Critically endangered,rest,2/12/2010,16/01/2023,Critically Endangered,Critically Endangered
-10268,Callocephalon fimbriatum,Gang-gang Cockatoo,,Terrestrial fauna,,species,Other Non-passerine birds,,Endangered,,breed,7/03/2022,16/01/2023,,
-10264,Calyptorhynchus banksii graptogyne,Red-tailed Black-Cockatoo (south-eastern),,Terrestrial fauna,,species,Other Non-passerine birds,Endangered,Endangered,Endangered,breed,17/10/2018,16/01/2023,Endangered,Endangered
-10265,Calyptorhynchus lathami,Glossy Black-Cockatoo,"(Temminck, 1807)",Terrestrial fauna,,species,Other Non-passerine birds,Critically Endangered,Vulnerable,Vulnerable,breed,10/08/2022,16/01/2023,Critically Endangered,Critically Endangered
-12987,Cyclodomorphus praealtus,Alpine She-oak Skink,,Terrestrial fauna,,species,Reptiles,Critically Endangered,Endangered,Critically endangered,rest,3/08/2018,16/01/2023,Critically Endangered,Critically Endangered
-75214,Dinotoperla walkeri,Stonefly,"Dean & St Clair, 2006",Terrestrial fauna,,species,Invertebrates,Endangered,,Vulnerable,rest,20/11/2012,16/01/2023,Endangered,Endangered
-12669,Furina diadema,Red-naped Snake,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-10226,Haliaeetus leucogaster,White-bellied Sea-Eagle,,Terrestrial fauna,,species,Other Non-passerine birds,Endangered,,Vulnerable,breed,2/12/2010,16/01/2023,Endangered,Endangered
-13042,Heleioporus australiacus,Giant Burrowing Frog,,Terrestrial fauna,,species,Amphibians,Critically Endangered,Vulnerable,Critically endangered,rest,29/03/2021,16/01/2023,Critically Endangered,Critically Endangered
-12432,Liopholis guthega,Guthega Skink,,Terrestrial fauna,,species,Reptiles,Critically Endangered,Endangered,Critically endangered,rest,4/08/2021,16/01/2023,Critically Endangered,Critically Endangered
-12407,Lissolepis coventryi,Swamp Skink,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-13168,Litoria booroolongensis,Booroolong Tree Frog,,Terrestrial fauna,,species,Amphibians,Critically Endangered,Endangered,Critically endangered,rest,14/04/2020,16/01/2023,Critically Endangered,Critically Endangered
-13195,Litoria spenceri,Spotted Tree Frog,,Terrestrial fauna,,species,Amphibians,Critically Endangered,Critically Endangered,Critically endangered,rest,14/04/2020,16/01/2023,Critically Endangered,Critically Endangered
-13936,Litoria watsoni,Watson's Tree Frog,,Terrestrial fauna,,species,Amphibians,Critically Endangered,Endangered,Endangered,rest,16/07/2021,16/01/2023,Critically Endangered,Critically Endangered
-10270,Lophochroa leadbeateri,Major Mitchell's Cockatoo,,Terrestrial fauna,,species,Other Non-passerine birds,Critically Endangered,,Vulnerable,breed,9/08/2019,16/01/2023,Critically Endangered,Critically Endangered
-15256,Michelea microphylla,Michelea Species 5256,"Poore, 1997",Terrestrial fauna,,species,Invertebrates,Critically Endangered,,Vulnerable,rest,2/12/2010,16/01/2023,Critically Endangered,Critically Endangered
-61343,Miniopterus orianae bassanii,Southern Bent-winged Bat (southern ssp.),,Terrestrial fauna,,species,Bats,Critically Endangered,Critically Endangered,Critically endangered,breed,21/01/2022,16/01/2023,Critically Endangered,Critically Endangered
-62969,Morelia spilota metcalfei,Carpet Python,,Terrestrial fauna,,species,Reptiles,Endangered,,Endangered,breed,10/02/2022,16/01/2023,Endangered,Endangered
-62968,Morelia spilota spilota,Diamond Python,,Terrestrial fauna,,species,Reptiles,Critically Endangered,,Endangered,breed,10/02/2022,16/01/2023,Critically Endangered,Critically Endangered
-12525,Morethia adelaidensis,Samphire Skink,,Terrestrial fauna,,species,Reptiles,Endangered,,Endangered,rest,3/08/2018,16/01/2023,Endangered,Endangered
-10246,Ninox connivens,Barking Owl,,Terrestrial fauna,,species,Other Non-passerine birds,Critically Endangered,,Endangered,breed,16/10/2018,16/01/2023,Critically Endangered,Critically Endangered
-75190,Oecetis quadrula,Caddisfly,"Wells, 2006",Terrestrial fauna,,species,Invertebrates,,,Vulnerable,rest,20/11/2012,16/01/2023,,
-12813,Parasuta spectabilis,Port Lincoln Snake,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-10020,Pedionomus torquatus,Plains-wanderer,,Terrestrial fauna,,species,Other Non-passerine birds,Critically Endangered,Critically Endangered,Critically endangered,rest,31/01/2018,16/01/2023,Critically Endangered,Critically Endangered
-13106,Philoria frosti,Baw Baw Frog,,Terrestrial fauna,,species,Amphibians,Critically Endangered,Critically Endangered,Critically endangered,rest,15/11/2016,16/01/2023,Critically Endangered,Critically Endangered
-75167,Phreatoicopsis raffae,freshwater isopod,"Wilson & Keable, 2002",Terrestrial fauna,,species,Aquatic inverts,Vulnerable,,Vulnerable,rest,2/12/2010,16/01/2023,Vulnerable,Vulnerable
-15262,Phreatoicopsis terricola,freshwater isopod,"Spencer & Hall, 1897",Terrestrial fauna,,species,Aquatic inverts,Vulnerable,,Vulnerable,rest,2/12/2010,16/01/2023,Vulnerable,Vulnerable
-12177,Pogona barbata,Bearded Dragon,,Terrestrial fauna,,species,Reptiles,Vulnerable,,Vulnerable,rest,3/08/2018,16/01/2023,Vulnerable,Vulnerable
-10278,Polytelis anthopeplus monarchoides,Regent Parrot,"Schodde, 1993",Terrestrial fauna,,species,Other Non-passerine birds,Vulnerable,Vulnerable,Vulnerable,breed,3/08/2021,16/01/2023,Vulnerable,Vulnerable
-10277,Polytelis swainsonii,Superb Parrot,,Terrestrial fauna,,species,Other Non-passerine birds,Endangered,Vulnerable,Endangered,breed,2/12/2010,16/01/2023,Endangered,Endangered
-12993,Pseudemoia pagenstecheri,Tussock Skink,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-12683,Pseudemoia rawlinsoni,Glossy Grass Skink,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-75211,Pseudocloeon hypodelum,Mayfly,"Lugo-Ortiz, McCafferty & Waltz, 1999",Terrestrial fauna,,species,Invertebrates,,,Vulnerable,rest,20/11/2012,16/01/2023,,
-75168,Synamphisopus ambiguus,freshwater isopod,"(Sheard, 1936)",Terrestrial fauna,,species,Invertebrates,Vulnerable,,Vulnerable,rest,16/09/2010,16/01/2023,Vulnerable,Vulnerable
-75169,Synamphisopus doegi,freshwater isopod,"Wilson & Keable, 2002",Terrestrial fauna,,species,Invertebrates,Vulnerable,,Vulnerable,rest,20/11/2012,16/01/2023,Vulnerable,Vulnerable
-12287,Varanus rosenbergi,Rosenberg's Goanna,,Terrestrial fauna,,species,Reptiles,Critically Endangered,,Endangered,rest,14/04/2020,16/01/2023,Critically Endangered,Critically Endangered
-12734,Vermicella annulata,Bandy Bandy,,Terrestrial fauna,,species,Reptiles,Endangered,,Vulnerable,rest,3/08/2018,16/01/2023,Endangered,Endangered
-15050,Victaphanta compacta,Otway Black Snail,"(Cox & Hedley, 1912)",Terrestrial fauna,,species,Invertebrates,Endangered,,Endangered,rest,2/12/2010,16/01/2023,Endangered,Endangered
+scientificName,vernacularName,generalisation
+Engaeus australis,Lilly Pilly Burrowing Crayfish,1 km
+Engaeus fultoni,Otway Burrowing Crayfish,1 km
+Engaeus mallacoota,Mallacoota Burrowing Crayfish,1 km
+Engaeus phyllocercus,Narracan Burrowing Crayfish,1 km
+Engaeus rostrogaleatus,Strzelecki Burrowing Crayfish,1 km
+Engaeus sericatus,Hairy Burrowing Crayfish,1 km
+Engaeus sternalis,Warragul Burrowing Crayfish,1 km
+Engaeus strictifrons,Portland Burrowing Crayfish,1 km
+Engaeus urostrictus,Dandenong Burrowing Crayfish,1 km
+Euastacus bidawalus,East Gippsland Spiny Crayfish,1 km
+Euastacus claytoni,Claytons Spiny Crayfish,1 km
+Euastacus crassus,Alpine Spiny Crayfish,1 km
+Galaxias aequipinnis,East Gippsland Galaxias,1 km
+Galaxias gunaikurnai,Shaw Galaxias,1 km
+Galaxias lanceolatus,Tapered Galaxias,1 km
+Galaxias longifundus,West Gippsland Galaxias,1 km
+Galaxias mcdowalli,McDowall's Galaxias,1 km
+Galaxias mungadhan,Dargo Galaxias,1 km
+Galaxias terenasus,Roundsnout Galaxias,1 km
+Gramastacus insolitus,Western Swamp Crayfish,1 km
+Austrogammarus australis,Dandenong Freshwater Amphipod,1 km
+Austrogammarus haasei,Sherbrooke Amphipod,1 km
+Colubotelson joyneri,freshwater isopod,1 km
+Colubotelson searli,freshwater isopod,1 km
+Gariwerdeus beehivensis,freshwater isopod,1 km
+Gariwerdeus ingletonensis,freshwater isopod,1 km
+Gariwerdeus turretensis,freshwater isopod,1 km
+Hemiphlebia mirabilis,Ancient Greenling Damselfly,1 km
+Hyridella glenelgensis,Glenelg Freshwater Mussel / Bocara Timbonn,1 km
+Leptoperla kallistae,Kallista Flightless Stonefly,1 km
+Naiopegia xiphagrostis,freshwater isopod,1 km
+Notopala sublineata,River Snail,1 km
+Notoperata sparsa,Caddisfly,1 km
+Pseudocalliax tooradin,Ghost shrimp,1 km
+Ramiheithrus virgatus,Caddisfly,1 km
+Riekoperla darlingtoni,Mt Donna Buang Wingless Stonefly,1 km
+Riekoperla intermedia,Stonefly,1 km
+Riekoperla isosceles,Stonefly,1 km
+Tamasia furcilla,Caddisfly,1 km
+Taskiria otwayensis,Caddisfly,1 km
+Thaumatoperla alpina,Alpine Stonefly,1 km
+Thaumatoperla flaveola,Mount Stirling stonefly,1 km
+Thaumatoperla robusta,Stonefly,1 km
+Thaumatoperla timmsi,Stonefly,1 km
+Triaenodes resima,Caddisfly,1 km
+Triaenodes uvida,Caddisfly,1 km
+Westriplectes angelae,Caddisfly,1 km
+Westriplectes pedderensis,Caddisfly,1 km
+Wundacaenis flabellum,Mayfly,1 km
+Borya mirabilis,Grampians Pincushion-lily,1 km
+Bossiaea vombata,Wombat Bossiaea,1 km
+Caladenia amoena,Charming Spider-orchid,1 km
+Caladenia arenaria,Sandhill Spider-orchid,1 km
+Caladenia audasii,McIvor Spider-orchid,1 km
+Caladenia calcicola,Limestone Spider-orchid,1 km
+Caladenia colorata,Colourful Spider-orchid,1 km
+Caladenia concolor,Crimson Spider-orchid,1 km
+Caladenia cremna,Whitfield Spider-orchid,1 km
+Caladenia cretacea,Stuart Mill Spider-orchid,1 km
+Caladenia cruciformis,Red-cross Spider-orchid,1 km
+Caladenia flavovirens,Christmas Spider-orchid,1 km
+Caladenia formosa,Elegant Spider-orchid,1 km
+Caladenia fulva,Tawny Spider-orchid,1 km
+Caladenia hastata,Mellblom's Spider-orchid,1 km
+Caladenia lowanensis,Wimmera Spider-orchid,1 km
+Caladenia pilotensis,Mount Pilot Spider-orchid,1 km
+Caladenia pumila,Dwarf Spider-orchid,1 km
+Caladenia robinsonii,Frankston Spider-orchid,1 km
+Caladenia rosella,Little Pink Spider-orchid,1 km
+Caladenia sp. aff. fragrantissima (Central Victoria),Bendigo Spider-orchid,1 km
+Caladenia sp. aff. venusta (Kilsyth South),Kilsyth South Spider-orchid,1 km
+Caladenia tensa,Rigid Spider-orchid,1 km
+Caladenia valida,Robust Spider-orchid,1 km
+Caladenia versicolor,Candy Spider-orchid,1 km
+Caladenia xanthochila,Yellow-lip Spider-orchid,1 km
+Calochilus richiae,Bald-tip Beard-orchid,1 km
+Diuris basaltica,Small Golden Moths,1 km
+Diuris fragrantissima,Sunshine Diuris,1 km
+Gaultheria hispida,Snow-berry,1 km
+Prasophyllum correctum,Gaping Leek-orchid,1 km
+Prasophyllum diversiflorum,Gorae Leek-orchid,1 km
+Prasophyllum fosteri,Shelford Leek-orchid,1 km
+Prasophyllum frenchii,Maroon Leek-orchid,1 km
+Prasophyllum niphopedium,Marsh Leek-orchid,1 km
+Prasophyllum retroflexum,Curled Leek-orchid,1 km
+Prasophyllum roseum,Pink-lip Leek-orchid,1 km
+Prasophyllum suaveolens,Fragrant Leek-orchid,1 km
+Prasophyllum subbisectum,Pomonal Leek-orchid,1 km
+Pterostylis basaltica,Basalt Rustyhood,1 km
+Pterostylis cheraphila,Floodplain Rustyhood,1 km
+Pterostylis despectans,Lowly Greenhood,1 km
+Pterostylis tenuissima,Swamp Greenhood,1 km
+Pterostylis valida,Robust Greenhood,1 km
+Pterostylis xerophila,Desert Greenhood,1 km
+Thelymitra epipactoides,Metallic Sun-orchid,1 km
+Thelymitra mackibbinii,Brilliant Sun-orchid,1 km
+Aprasia aurita,Mallee Worm-Lizard,1 km
+Aprasia parapulchella,Pink-tailed Worm-Lizard,1 km
+Austropyrgus grampianensis,Dairy Creek Austropyrgus Snail,1 km
+Callocephalon fimbriatum,Gang-gang Cockatoo,1 km
+Calyptorhynchus banksii graptogyne,Red-tailed Black-Cockatoo (south-eastern),1 km
+Calyptorhynchus lathami,Glossy Black-Cockatoo,1 km
+Cyclodomorphus praealtus,Alpine She-oak Skink,1 km
+Dinotoperla walkeri,Stonefly,1 km
+Furina diadema,Red-naped Snake,1 km
+Haliaeetus leucogaster,White-bellied Sea-Eagle,1 km
+Heleioporus australiacus,Giant Burrowing Frog,1 km
+Liopholis guthega,Guthega Skink,1 km
+Lissolepis coventryi,Swamp Skink,1 km
+Litoria booroolongensis,Booroolong Tree Frog,1 km
+Litoria spenceri,Spotted Tree Frog,1 km
+Litoria watsoni,Watson's Tree Frog,1 km
+Lophochroa leadbeateri,Major Mitchell's Cockatoo,1 km
+Michelea microphylla,Michelea Species 5256,1 km
+Miniopterus orianae bassanii,Southern Bent-winged Bat (southern ssp.),1 km
+Morelia spilota metcalfei,Carpet Python,1 km
+Morelia spilota spilota,Diamond Python,1 km
+Morethia adelaidensis,Samphire Skink,1 km
+Ninox connivens,Barking Owl,1 km
+Oecetis quadrula,Caddisfly,1 km
+Parasuta spectabilis,Port Lincoln Snake,1 km
+Pedionomus torquatus,Plains-wanderer,1 km
+Philoria frosti,Baw Baw Frog,1 km
+Phreatoicopsis raffae,freshwater isopod,1 km
+Phreatoicopsis terricola,freshwater isopod,1 km
+Pogona barbata,Bearded Dragon,1 km
+Polytelis anthopeplus monarchoides,Regent Parrot,1 km
+Polytelis swainsonii,Superb Parrot,1 km
+Pseudemoia pagenstecheri,Tussock Skink,1 km
+Pseudemoia rawlinsoni,Glossy Grass Skink,1 km
+Pseudocloeon hypodelum,Mayfly,1 km
+Synamphisopus ambiguus,freshwater isopod,1 km
+Synamphisopus doegi,freshwater isopod,1 km
+Varanus rosenbergi,Rosenberg's Goanna,1 km
+Vermicella annulata,Bandy Bandy,1 km
+Victaphanta compacta,Otway Black Snail,1 km
