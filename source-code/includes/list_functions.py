@@ -9,7 +9,7 @@ import ssl
 import requests
 import datetime
 
-def download_ala_list(url: str):
+def download_ala_specieslist(url: str):
     print("download_ala_list: ", url)
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
@@ -47,9 +47,9 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     oldListUrl = oldListPref + proddr + urlSuffix
     newListUrl = newListPref + testdr + urlSuffix
 
-    oldList = download_ala_list(oldListUrl)
+    oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
-    newList = download_ala_list(newListUrl)
+    newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
     if ltype=='S':    # sensitive list
         collist_new = ['name', 'commonName_new','scientificName_new']
@@ -120,7 +120,7 @@ def get_listDataframe(listurl:str):
     while True:
         urlSuffix = "?max=" + str(limit) + "&offset=" + str(offset)
         listUrl = listurl + urlSuffix
-        pList = download_ala_list(listUrl)
+        pList = download_ala_specieslist(listUrl)
         for item in pList['lists']:
             listdf = pd.DataFrame(columns=item[0].keys())
             for subitem in item:
