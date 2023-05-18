@@ -32,61 +32,76 @@ import list_functions as lf
 
 ltype = "S"
 # ACT Sensitive
+print('ACT sensitive')
 filename = "ACT-sensitive.csv"
 testdr = "dr2627"
 proddr = "dr2627"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished ACT sensitive')
 
 # NSW Sensitive
+print('NSW sensitive')
 filename = "NSW-sensitive.csv"
 testdr = "dr18457"
 proddr = "dr487"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished NSW sensitive')
 
 # NT Sensitive
+print('NT sensitive')
 filename = "NT-sensitive.csv"
 testdr = "dr18690"
 proddr = "dr492"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished NT sensitive')
 
 # Qld Sensitive
+print('QLD sensitive')
 filename = "QLD-sensitive.csv"
 testdr = "dr18404"
 proddr = "dr493"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished QLD sensitive')
 
 # SA Sensitive
+print('SA sensitive')
 filename = "SA-sensitive.csv"
 testdr = "dr18706"
 proddr = "dr884"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished SA sensitive')
 
 # TAS Sensitive - not currently in Test
+print('TAS sensitive')
 filename = "TAS-sensitive.csv"
 testdr = "dr18692"
 proddr = "dr491"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
-changelist
+print('Finished TAS sensitive')
 
 # VIC Sensitive
+print('VIC sensitive')
 filename = "VIC-sensitive.csv"
 testdr = "dr18669"
 proddr = "dr490"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished VIC sensitive')
 
 # WA Sensitive
+print('WA sensitive')
 filename = "WA-sensitive.csv"
 testdr = "dr18406"
 proddr = "dr467"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished WA sensitive')
 
 ###############################################################################################################
 # Download Production list to Historical Lists directory 

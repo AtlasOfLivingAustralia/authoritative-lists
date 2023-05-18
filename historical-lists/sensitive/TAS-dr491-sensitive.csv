@@ -1,2 +1,4 @@
-id,name,commonName,scientificName,lsid,dataResourceUid,kvpValues,ambiguous name
-4238674,Lomatia tasmanica,King's Lomatia,Lomatia tasmanica,https://id.biodiversity.org.au/node/apni/2903191,dr491,"[{'key': 'ambiguous name', 'value': 'Lomatia tasmanica'}]",Lomatia tasmanica
+id,name,commonName,scientificName,lsid,dataResourceUid,kvpValues,generalisation
+4355380,Lomatia tasmanica,King's Lomatia,Lomatia tasmanica,https://id.biodiversity.org.au/node/apni/2903191,dr491,"[{'key': 'generalisation', 'value': 'Withold'}]",Withold
+4355379,Prasophyllum taphanyx,Graveside Leek-orchid,Prasophyllum taphanyx,https://id.biodiversity.org.au/taxon/apni/51409980,dr491,"[{'key': 'generalisation', 'value': '10 km'}]",10 km
+4355381,Caladenia vulgaris,Summer Fingers,Caladenia vulgaris,https://id.biodiversity.org.au/taxon/apni/51399454,dr491,"[{'key': 'generalisation', 'value': '10 km'}]",10 km
