@@ -20,13 +20,12 @@
 import datetime
 import os
 import sys
-import list_functions as lf
 
 projectdir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-changedir = projectdir + "analysis/change-log/"
+changedir = "analysis/change-log/"
 sys.path.append(os.path.abspath(projectdir + "source-code/includes"))
 monthStr = datetime.datetime.now().strftime('%Y%m%d')
-
+import list_functions as lf
 
 ###############################################################################################################
 
@@ -35,72 +34,91 @@ monthStr = datetime.datetime.now().strftime('%Y%m%d')
 ltype = "C"
 
 # ACT Conservation
+print('ACT conservation')
 filename = "ACT-conservation.csv"
 testdr = "dr649"
 proddr = "dr649"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished ACT conservation')
 
 # EPBC Conservation
+print('EPBC conservation')
 filename = "EPBC-conservation.csv"
 testdr = "dr656"
 proddr = "dr656"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished EPBC conservation')
 
 # NSW conservation
+print('NSW conservation')
 filename = "NSW-conservation.csv"
 testdr = "dr650"
 proddr = "dr650"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished NSW conservation')
 
 # NT Conservation
+print('NT conservation')
 filename = "NT-conservation.csv"
 testdr = "dr651"
 proddr = "dr651"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished NT conservation')
 
 # Qld Conservation
+print('QLD conservation')
 filename = "QLD-conservation.csv"
 testdr = "dr652"
 proddr = "dr652"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished QLD conservation')
 
 # SA Conservation
+print('SA conservation')
 filename = "SA-conservation.csv"
 testdr = "dr653"
 proddr = "dr653"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished SA conservation')
 
 # TAS Conservation
+print('TAS conservation')
 filename = "TAS-conservation.csv"
 testdr = "dr654"
 proddr = "dr654"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished TAS conservation')
 
 # VIC Conservation
+print('VIC conservation')
 filename = "VIC-conservation.csv"
 testdr = "dr655"
 proddr = "dr655"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished VIC conservation')
 
 # WA Conservation
+print('WA conservation')
 filename = "WA-conservation.csv"
 testdr = "dr2201"
 proddr = "dr2201"
 changelist = lf.get_changelist(testdr, proddr, ltype)
 changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+print('Finished WA conservation')
 
 ###############################################################################################################
 # Download Production list to Historical Lists directory
 #
 # Conservation lists
+
 drList = {"ACT": "dr649", "NSW": "dr650", "NT": "dr651", "QLD": "dr652", "SA": "dr653", "TAS": "dr654",
           "VIC": "dr655", "EPBC": "dr656", "WA": "dr2201"}
 
