@@ -10,7 +10,7 @@ import sys
 import os
 
 projectdir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-outdir = projectdir + "analysis/Monitoring/"
+outdir = projectdir + "Monitoring/"
 sys.path.append(os.path.abspath(projectdir + "source-code/includes"))
 import list_functions as lf
 import configuration as cfg

@@ -22,7 +22,7 @@ import os
 import sys
 
 projectdir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-changedir = "analysis/change-log/"
+changedir = "Monitoring/Change-logs/"
 sys.path.append(os.path.abspath(projectdir + "source-code/includes"))
 monthStr = datetime.datetime.now().strftime('%Y%m%d')
 import list_functions as lf
