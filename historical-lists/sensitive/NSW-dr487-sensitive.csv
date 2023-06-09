@@ -1,200 +1,200 @@
 id,name,commonName,scientificName,lsid,dataResourceUid,kvpValues,generalisation
-4349439,Callocephalon fimbriatum,Gang-gang Cockatoo,Callocephalon fimbriatum,https://biodiversity.org.au/afd/taxa/6c646af8-06fb-40ae-83aa-3dd001cc4ea6,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349534,Ninox strenua,Powerful Owl,Ninox (Rhabdoglaux) strenua,https://biodiversity.org.au/afd/taxa/d1c5dee0-0de6-487c-bf10-9fc5188ab671,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349543,Tyto tenebricosa,Sooty Owl,Tyto tenebricosa,https://biodiversity.org.au/afd/taxa/645b287c-e547-4602-9275-ad3f972328bb,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349518,Ninox connivens,Barking Owl,Ninox (Hieracoglaux) connivens,https://biodiversity.org.au/afd/taxa/bd332ca4-dab5-4fda-8d68-04b678ffcdb4,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349526,Hoplocephalus bungaroides,Broad-headed Snake,Hoplocephalus bungaroides,https://biodiversity.org.au/afd/taxa/f579a6fc-ae01-4338-ba3c-16cdc4e53246,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349544,Neophema chrysogaster,Orange-bellied Parrot,Neophema (Neonanodes) chrysogaster,https://biodiversity.org.au/afd/taxa/88653999-1e2f-47d1-87fa-1f6d3e47ffb8,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349450,Glossopsitta porphyrocephala,Purple-crowned Lorikeet,Parvipsitta porphyrocephala,https://biodiversity.org.au/afd/taxa/a2399fe3-c90f-4fb1-a710-fe81643ff56e,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349572,Philoria loveridgei,Loveridge's Frog,Philoria loveridgei,https://biodiversity.org.au/afd/taxa/f1e8b187-acbb-472d-89e7-a1900b4acdc7,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349582,Dasyornis brachypterus,Eastern Bristlebird,Dasyornis (Dasyornis) brachypterus,https://biodiversity.org.au/afd/taxa/5a760ca8-e6c7-4465-a113-3eaf26b170cb,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349561,Hamirostra melanosternon,Black-breasted Buzzard,Hamirostra melanosternon,https://biodiversity.org.au/afd/taxa/96e35cba-e86c-47dd-848e-056377227209,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349412,Neophema pulchella,Turquoise Parrot,Neophema (Neophema) pulchella,https://biodiversity.org.au/afd/taxa/e9cc09f0-bfc4-40a1-8b5b-a7f4beb3271d,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349466,Tyto novaehollandiae,Masked Owl,Tyto novaehollandiae,https://biodiversity.org.au/afd/taxa/f1c0ca04-8d30-40f4-ab25-103c74f430d2,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349547,Cyclopsitta diophthalma coxeni,Coxen's Fig-parrot,Cyclopsitta diophthalma coxeni,https://biodiversity.org.au/afd/taxa/2c0e502e-f6ae-4efb-a023-d068a7955879,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349585,Lophoictinia isura,Square-tailed Kite,Lophoictinia isura,https://biodiversity.org.au/afd/taxa/715a2874-1942-4762-866c-1194990e7a91,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349442,Erythrotriorchis radiatus,Red Goshawk,Erythrotriorchis radiatus,https://biodiversity.org.au/afd/taxa/390a23b8-0097-4a2c-b068-283d2d4bd21f,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349415,Lophochroa leadbeateri,Major Mitchell's Cockatoo,Lophochroa leadbeateri,https://biodiversity.org.au/afd/taxa/5815e99d-01cd-4a92-99ba-36f480c4834d,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349433,Calyptorhynchus lathami,Glossy Black-cockatoo,Calyptorhynchus (Calyptorhynchus) lathami,https://biodiversity.org.au/afd/taxa/2b3630b3-6e95-47b8-ad3f-e3f46fa797dc,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349467,Mixophyes balbus,Stuttering Frog,Mixophyes balbus,https://biodiversity.org.au/afd/taxa/7e478d81-8ec8-49ae-a51f-b838bbe05c77,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349506,Mixophyes fleayi,Fleay's Barred Frog,Mixophyes fleayi,https://biodiversity.org.au/afd/taxa/289e1b7c-1323-473a-8c2b-a674324c102e,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349535,Polytelis anthopeplus monarchoides,Regent Parrot (eastern Subspecies),Polytelis anthopeplus monarchoides,https://biodiversity.org.au/afd/taxa/1958a1ff-0233-4257-9f8c-032dcadb6fea,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349583,Philoria kundagungan,Mountain Frog,Philoria kundagungan,https://biodiversity.org.au/afd/taxa/fcb2e700-8046-4556-94bd-78d188dadd9c,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349578,Mixophyes iteratus,Giant Barred Frog,Mixophyes iteratus,https://biodiversity.org.au/afd/taxa/9eef5215-a3d4-4435-b82c-9284d730f002,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349495,Falco hypoleucos,Grey Falcon,Falco (Hierofalco) hypoleucos,https://biodiversity.org.au/afd/taxa/4c73a934-63ae-417d-af40-56a82ae68371,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349569,Pseudophryne corroboree,Southern Corroboree Frog,Pseudophryne corroboree,https://biodiversity.org.au/afd/taxa/1a3bc394-a748-4755-a6b8-98dd42da48db,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349440,Polytelis swainsonii,Superb Parrot,Polytelis swainsonii,https://biodiversity.org.au/afd/taxa/46fca72f-4a32-44c5-a67c-770bd5333f55,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349542,Pedionomus torquatus,Plains-wanderer,Pedionomus torquatus,https://biodiversity.org.au/afd/taxa/30b4b2e5-0d5b-46cb-bddb-a2137a35fa2c,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349464,Pterostylis oreophila,Blue-tongued Orchid,Pterostylis oreophila,https://id.biodiversity.org.au/taxon/apni/51412246,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349565,Genoplesium baueri,Yellow Gnat-orchid,Genoplesium baueri,https://id.biodiversity.org.au/taxon/apni/51405989,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349531,Banksia conferta,,Banksia conferta,https://id.biodiversity.org.au/node/apni/9597877,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349580,Diuris tricolor,Spotted-throat Cowslip,Diuris tricolor,https://id.biodiversity.org.au/taxon/apni/51404361,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349473,Cryptostylis hunteriana,Leafless Tongue Orchid,Cryptostylis hunteriana,https://id.biodiversity.org.au/taxon/apni/51401155,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349492,Peristeranthus hillii,Brown Fairy-chain Orchid,Peristeranthus hillii,https://id.biodiversity.org.au/taxon/apni/51407834,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349530,Thelymitra epipactoides,Metallic Sun Orchid,Thelymitra epipactoides,https://id.biodiversity.org.au/taxon/apni/51414274,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349554,Arthropteris palisotii,Lesser Creeping Fern,Arthropteris palisotii,https://id.biodiversity.org.au/node/apni/8496980,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349608,Lindsaea fraseri,Fraser's Screw Fern,Lindsaea fraseri,https://id.biodiversity.org.au/node/apni/2906676,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349541,Callistemon linearifolius,Netted Bottle Brush,Callistemon linearifolius,https://id.biodiversity.org.au/node/apni/2897309,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349414,Drynaria rigidula,Basket Fern,Drynaria rigidula,https://id.biodiversity.org.au/node/apni/2904164,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349447,Lindsaea incisa,Slender Screw Fern,Lindsaea incisa,https://id.biodiversity.org.au/node/apni/2892259,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349609,Prostanthera marifolia,Seaforth Mintbush,Prostanthera marifolia,https://id.biodiversity.org.au/node/apni/2897722,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349435,Chiloglottis platyptera,Barrington Tops Ant Orchid,Chiloglottis platyptera,https://id.biodiversity.org.au/taxon/apni/51400612,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349483,Euphrasia scabra,Yellow Eyebright,Euphrasia scabra,https://id.biodiversity.org.au/node/apni/2903366,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349508,Diuris praecox,Rough Doubletail,Diuris praecox,https://id.biodiversity.org.au/taxon/apni/51404309,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349610,Allocasuarina portuensis,Nielsen Park She-oak,Allocasuarina portuensis,https://id.biodiversity.org.au/node/apni/2891101,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349606,Elaeocarpus williamsianus,Hairy Quandong,Elaeocarpus williamsianus,https://id.biodiversity.org.au/node/apni/2906669,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349553,Eucalyptus imlayensis,Mount Imlay Mallee,Eucalyptus imlayensis,https://id.biodiversity.org.au/node/apni/2899202,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349452,Indigofera efoliata,Leafless Indigo,Indigofera efoliata,https://id.biodiversity.org.au/node/apni/2899952,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349443,Hakea pulvinifera,Lake Keepit Hakea,Hakea pulvinifera,https://id.biodiversity.org.au/node/apni/2917559,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349566,Rhizanthella slateri,Eastern Australian Underground Orchid,Rhizanthella slateri,https://id.biodiversity.org.au/taxon/apni/51412992,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349475,Gentiana bredboensis,Bredbo Gentian,Gentiana bredboensis,https://id.biodiversity.org.au/node/apni/2900971,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349527,Sarcochilus dilatatus,Brown Sarcochilus,Sarcochilus dilatatus,https://id.biodiversity.org.au/taxon/apni/51413227,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349444,Diuris venosa,Veined Doubletail,Diuris venosa,https://id.biodiversity.org.au/taxon/apni/51404365,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349564,Bulbophyllum globuliforme,Miniature Moss-orchid,Bulbophyllum globuliforme,https://id.biodiversity.org.au/taxon/apni/51396335,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349560,Gentiana wingecarribiensis,Wingecarribee Gentian,Gentiana wingecarribiensis,https://id.biodiversity.org.au/node/apni/2915610,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349501,Pterostylis cobarensis,Greenhood Orchid,Pterostylis cobarensis,https://id.biodiversity.org.au/taxon/apni/51412068,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349474,Sarcochilus weinthalii,Blotched Sarcochilus,Sarcochilus weinthalii,https://id.biodiversity.org.au/taxon/apni/51413251,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349430,Sarcochilus fitzgeraldii,Ravine Orchid,Sarcochilus fitzgeraldii,https://id.biodiversity.org.au/taxon/apni/51413233,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349519,Phaius australis,Southern Swamp Orchid,Phaius australis,https://id.biodiversity.org.au/taxon/apni/51407850,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349558,Diploglottis campbellii,Small-leaved Tamarind,Diploglottis campbellii,https://id.biodiversity.org.au/node/apni/2906814,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349587,Sarcochilus hartmannii,Waxy Sarcochilus,Sarcochilus hartmannii,https://id.biodiversity.org.au/taxon/apni/51413235,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349468,Chiloglottis anaticeps,Bird Orchid,Chiloglottis anaticeps,https://id.biodiversity.org.au/taxon/apni/51400590,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349528,Diuris pedunculata,Small Snake Orchid,Diuris pedunculata,https://id.biodiversity.org.au/taxon/apni/51404295,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349595,Grevillea mollis,Soft Grevillea,Grevillea mollis,https://id.biodiversity.org.au/node/apni/2890447,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349479,Grevillea iaspicula,Wee Jasper Grevillea,Grevillea iaspicula,https://id.biodiversity.org.au/node/apni/2897239,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349522,Lastreopsis hispida,Bristly Shield Fern,Lastreopsis hispida,https://id.biodiversity.org.au/node/apni/2907135,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349434,Prasophyllum fuscum,Slaty Leek Orchid,Prasophyllum fuscum,https://id.biodiversity.org.au/taxon/apni/51409769,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349607,Angiopteris evecta,Giant Fern,Angiopteris evecta,https://id.biodiversity.org.au/taxon/apni/51299822,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349511,Pterostylis alpina,Alpine Greenhood,Pterostylis alpina,https://id.biodiversity.org.au/taxon/apni/51412006,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349465,Prasophyllum affine,Jervis Bay Leek Orchid,Prasophyllum affine,https://id.biodiversity.org.au/taxon/apni/51409681,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349445,Pterostylis pulchella,Waterfall Greenhood,Pterostylis pulchella,https://id.biodiversity.org.au/taxon/apni/51412286,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349573,Platyzoma microphyllum,Braid Fern,Platyzoma microphyllum,https://id.biodiversity.org.au/node/apni/2916514,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349419,Genoplesium rhyoliticum,Rhyolite Midge Orchid,Genoplesium rhyoliticum,https://id.biodiversity.org.au/taxon/apni/51406051,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349559,Pilularia novae-hollandiae,Austral Pillwort,Pilularia novae-hollandiae,https://id.biodiversity.org.au/node/apni/2905369,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349557,Geodorum densiflorum,Pink Nodding Orchid,Geodorum densiflorum,https://id.biodiversity.org.au/taxon/apni/51406097,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349478,Lindsaea brachypoda,Short-footed Screw Fern,Lindsaea brachypoda,https://id.biodiversity.org.au/node/apni/2902961,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349454,Zieria adenophora,Araluen Zieria,Zieria adenophora,https://id.biodiversity.org.au/node/apni/2905804,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349417,Cymbidium canaliculatum,Tiger Orchid,Cymbidium canaliculatum,https://id.biodiversity.org.au/taxon/apni/51401317,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349517,Eucalyptus copulans,,Eucalyptus copulans,https://id.biodiversity.org.au/node/apni/2891931,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349448,Pterostylis nigricans,Dark Greenhood,Pterostylis nigricans,https://id.biodiversity.org.au/taxon/apni/51412236,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349413,Trachymene scapigera,Mountain Trachymene,Trachymene scapigera,https://id.biodiversity.org.au/node/apni/2903508,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349597,Diuris disposita,Willawarrin Doubletail,Diuris disposita,https://id.biodiversity.org.au/taxon/apni/51404211,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349602,Psilotum complanatum,Flat Fork Fern,Psilotum complanatum,https://id.biodiversity.org.au/node/apni/2914286,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349455,Myriophyllum implicatum,,Myriophyllum implicatum,https://id.biodiversity.org.au/node/apni/2889355,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349441,Caladenia arenaria,Sand-hill Spider-orchid,Caladenia arenaria,https://id.biodiversity.org.au/taxon/apni/51398785,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349510,Lysimachia vulgaris var. davurica,Yellow Loosestrife,Lysimachia vulgaris var. davurica,https://id.biodiversity.org.au/node/apni/2901512,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349493,Diuris bracteata,,Diuris bracteata,https://id.biodiversity.org.au/taxon/apni/51404173,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349533,Diuris aequalis,Buttercup Doubletail,Diuris aequalis,https://id.biodiversity.org.au/taxon/apni/51404157,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349520,Gyrostemon thesioides,Broom Wheelfruit,Gyrostemon thesioides,https://id.biodiversity.org.au/node/apni/2898598,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349487,Oberonia complanata,Yellow-flowered King Of The Fairies,Oberonia complanata,https://id.biodiversity.org.au/taxon/apni/51406761,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349552,Leucopogon confertus,Torrington Beard-heath,Leucopogon confertus,https://id.biodiversity.org.au/node/apni/2895126,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349529,Grevillea divaricata,,Grevillea divaricata,https://id.biodiversity.org.au/node/apni/2919387,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349592,Grevillea beadleana,Beadle's Grevillea,Grevillea beadleana,https://id.biodiversity.org.au/node/apni/2900555,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349429,Diuris flavescens,Pale Yellow Doubletail,Diuris flavescens,https://id.biodiversity.org.au/taxon/apni/51404227,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349451,Prostanthera staurophylla,Tenterfield Mint-bush,Prostanthera staurophylla,https://id.biodiversity.org.au/node/apni/2909925,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349600,Pterostylis chaetophora,,Pterostylis chaetophora,https://id.biodiversity.org.au/taxon/apni/51412056,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349594,Persoonia hirsuta,Hairy Geebung,Persoonia hirsuta,https://id.biodiversity.org.au/node/apni/2902498,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349545,Caladenia tessellata,Thick Lip Spider Orchid,Caladenia tessellata,https://id.biodiversity.org.au/taxon/apni/51399404,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349593,Dendrobium melaleucaphilum,Spider Orchid,Dendrobium melaleucaphilum,https://id.biodiversity.org.au/taxon/apni/51402880,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349512,Acacia dangarensis,,Acacia dangarensis,https://id.biodiversity.org.au/node/apni/2915433,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349463,Isotoma fluviatilis subsp. fluviatilis,,Isotoma fluviatilis subsp. fluviatilis,https://id.biodiversity.org.au/node/apni/2897543,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349513,Fontainea oraria,Coastal Fontainea,Fontainea oraria,https://id.biodiversity.org.au/node/apni/2917992,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349556,Pterostylis foliata,Slender Greenhood,Pterostylis foliata,https://id.biodiversity.org.au/taxon/apni/51412140,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349514,Pimelea venosa,Bolivia Hill Rice-flower,Pimelea venosa,https://id.biodiversity.org.au/node/apni/2891541,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349555,Oberonia titania,Norfolk Island Oberonia,Oberonia titania,https://id.biodiversity.org.au/taxon/apni/51406765,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349432,Pterostylis gibbosa,Illawarra Greenhood,Pterostylis gibbosa,https://id.biodiversity.org.au/taxon/apni/51412148,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349540,Grevillea caleyi,Caley's Grevillea,Grevillea caleyi,https://id.biodiversity.org.au/node/apni/2912335,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349563,Caladenia concolor,Crimson Spider Orchid,Caladenia concolor,https://id.biodiversity.org.au/taxon/apni/51398911,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349598,Caladenia rosella,Little Pink Spider-orchid,Caladenia rosella,https://id.biodiversity.org.au/taxon/apni/51399335,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349571,Cheilanthes sieberi subsp. pseudovellea,,Cheilanthes sieberi subsp. pseudovellea,https://id.biodiversity.org.au/node/apni/2907348,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349476,Grammitis stenophylla,Narrow-leaf Finger Fern,Grammitis stenophylla,https://id.biodiversity.org.au/node/apni/2894545,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349500,Grevillea masonii,Mason's Grevillea,Grevillea masonii,https://id.biodiversity.org.au/node/apni/2913810,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349490,Prasophyllum petilum,Tarengo Leek Orchid,Prasophyllum petilum,https://id.biodiversity.org.au/taxon/apni/51409851,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349482,Pterostylis sp. Botany Bay,Botany Bay Bearded Orchid,Pterostylis sp. Botany Bay,ALA_DR487_111,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349471,Viola cleistogamoides,Hidden Violet,Viola cleistogamoides,https://id.biodiversity.org.au/node/apni/2892487,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349599,Zieria buxijugum,Box Range Zieria,Zieria buxijugum,https://id.biodiversity.org.au/node/apni/2905774,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349574,Zieria formosa,Shapely Zieria,Zieria formosa,https://id.biodiversity.org.au/node/apni/2911487,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349584,Zieria parrisiae,Parris' Zieria,Zieria parrisiae,https://id.biodiversity.org.au/node/apni/2919089,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349550,Genoplesium superbum,Superb Midge Orchid,Genoplesium superbum,https://id.biodiversity.org.au/taxon/apni/51406077,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349591,Microtis angusii,Angus's Onion Orchid,Microtis angusii,https://id.biodiversity.org.au/taxon/apni/51406608,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349523,Micromyrtus grandis,Severn River Heath-myrtle,Micromyrtus grandis,https://id.biodiversity.org.au/node/apni/2898424,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349416,Pterostylis saxicola,Sydney Plains Greenhood,Pterostylis saxicola,https://id.biodiversity.org.au/taxon/apni/51412318,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349456,Cyclodomorphus praealtus,Alpine She-oak Skink,Cyclodomorphus praealtus,https://biodiversity.org.au/afd/taxa/91f49257-08dd-4515-b26d-6cdeeada1a70,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349491,Pseudophryne pengilleyi,Northern Corroboree Frog,Pseudophryne pengilleyi,https://biodiversity.org.au/afd/taxa/cc5315bf-6682-44d9-809c-139afaddf7c8,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349428,Genoplesium plumosum,Tallong Midge Orchid,Genoplesium plumosum,https://id.biodiversity.org.au/taxon/apni/51406045,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349488,Angophora exul,,Angophora bakeri subsp. bakeri,https://id.biodiversity.org.au/node/apni/2913071,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349446,Eucalyptus dissita,Narrow-leaved Sally,Eucalyptus moorei subsp. moorei,https://id.biodiversity.org.au/node/apni/2890966,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349459,Baeckea kandos,A Shrub,Baeckea kandos,https://id.biodiversity.org.au/node/apni/2886411,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349516,Pomaderris adnata,Sublime Point Pomaderris,Pomaderris adnata,https://id.biodiversity.org.au/node/apni/2896205,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349568,Prostanthera palustris,Swamp Mint-bush,Prostanthera palustris,https://id.biodiversity.org.au/node/apni/2918112,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349504,Pimelea axiflora subsp. pubescens,Bungonia Rice-flower,Pimelea axiflora subsp. pubescens,https://id.biodiversity.org.au/node/apni/8328266,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349601,Pterostylis elegans,Elegant Greenhood,Pterostylis elegans,https://id.biodiversity.org.au/taxon/apni/51412114,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349521,Pterostylis metcalfei,Metcalfe's Greenhood,Pterostylis metcalfei,https://id.biodiversity.org.au/taxon/apni/51412218,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349449,Eucalyptus pachycalyx subsp. banyabba,Banyabba Shiny-barked Gum,Eucalyptus pachycalyx subsp. banyabba,https://id.biodiversity.org.au/node/apni/6810160,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349460,Pultenaea sp. Olinda,,Pultenaea sp. Olinda,ALA_DR487_131,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349524,Persoonia pauciflora,North Rothbury Persoonia,Persoonia pauciflora,https://id.biodiversity.org.au/node/apni/2899054,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349496,Typhonium sp. aff. brownii,Stinky Lily,Typhonium sp. aff. brownii,ALA_DR487_133,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349438,Boronia boliviensis,Bolivia Hill Boronia,Boronia boliviensis,https://id.biodiversity.org.au/node/apni/2899640,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349484,Diuris arenaria,Sand Doubletail,Diuris arenaria,https://id.biodiversity.org.au/taxon/apni/51404163,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349502,Hakea archaeoides,Big Nellie Hakea,Hakea archaeoides,https://id.biodiversity.org.au/node/apni/2920623,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349589,Leionema lamprophyllum subsp. obovatum,Shiny Leionema,Leionema lamprophyllum subsp. obovatum,https://id.biodiversity.org.au/node/apni/2906924,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349469,Caladenia porphyrea,,Caladenia quadrifaria,https://id.biodiversity.org.au/taxon/apni/51399300,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349590,Prasophyllum canaliculatum,Summer Leek Orchid,Prasophyllum canaliculatum,https://id.biodiversity.org.au/taxon/apni/51409713,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349562,Davidsonia jerseyana,Davidson's Plum,Davidsonia jerseyana,https://id.biodiversity.org.au/node/apni/2918807,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349525,Acacia atrox,Myall Creek Wattle,Acacia atrox,https://id.biodiversity.org.au/node/apni/2894816,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349498,Nurus atlas,Atlas Rainforest Ground-beetle,Nurus atlas,https://biodiversity.org.au/afd/taxa/cb794852-fe55-4f70-b5f7-2f34e08385a9,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349548,Nurus brevis,Shorter Rainforest Ground-beetle,Nurus brevis,https://biodiversity.org.au/afd/taxa/026f169f-00cf-4cc9-8b21-599ed336b862,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349575,Wollemia nobilis,Wollemi Pine,Wollemia nobilis,https://id.biodiversity.org.au/node/apni/2899238,dr487,"[{'key': 'generalisation', 'value': 'WITHHOLD'}]",WITHHOLD
-4349536,"Diuris sp. (Oaklands, D.L. Jones 5380)",Oaklands Diuris,"Diuris sp. (Oaklands, D.L. Jones 5380)",ALA_DR487_145,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349532,Caladenia attenuata,Duramana Fingers,Caladenia attenuata,https://id.biodiversity.org.au/taxon/apni/51398803,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349577,Calyptorhynchus banksii banksii,Red-tailed Black-cockatoo (coastal Subspecies),Calyptorhynchus (Calyptorhynchus) banksii banksii,https://biodiversity.org.au/afd/taxa/b4fe1a2d-5393-4523-8446-4d348a044238,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349472,Calyptorhynchus banksii samueli,Red-tailed Black-cockatoo (inland Subspecies),Calyptorhynchus (Calyptorhynchus) banksii samueli,https://biodiversity.org.au/afd/taxa/64129f52-5fb1-44ee-a09e-13c0bb61145f,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349576,Pezoporus wallicus wallicus,Eastern Ground Parrot,Pezoporus wallicus wallicus,https://biodiversity.org.au/afd/taxa/41b07a4e-e6dc-4575-8c9b-4c44872d21f8,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349499,Tyto longimembris,Eastern Grass Owl,Tyto longimembris,https://biodiversity.org.au/afd/taxa/272490b7-303d-4550-a4fb-f76c076539cd,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349421,Genoplesium vernale,East Lynne Midge-orchid,Genoplesium vernale,https://id.biodiversity.org.au/taxon/apni/51406091,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349515,Prasophyllum retroflexum,Kiandra Leek Orchid,Prasophyllum retroflexum,https://id.biodiversity.org.au/taxon/apni/51409867,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349503,Eidothea hardeniana,Nightcap Oak,Eidothea hardeniana,https://id.biodiversity.org.au/node/apni/2908076,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349603,Thelymitra adorata,Wyong Sun Orchid,Thelymitra adorata,https://id.biodiversity.org.au/taxon/apni/51414212,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349424,Liopholis guthega,Guthega Skink,Liopholis guthega,https://biodiversity.org.au/afd/taxa/740f5037-a04b-46c1-9113-894a159dacd3,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349507,Thelymitra atronitida,Blackhood Sun-orchid,Thelymitra atronitida,https://id.biodiversity.org.au/taxon/apni/51414234,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349470,Diuris ochroma,Pale Golden Moths,Diuris ochroma,https://id.biodiversity.org.au/taxon/apni/51404273,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349539,Philoria pughi,Pugh's Frog,Philoria pughi,https://biodiversity.org.au/afd/taxa/1f800926-6b4c-4e7c-802d-65cc9edfb368,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349418,Philoria richmondensis,Richmond Range Sphagnum Frog,Philoria richmondensis,https://biodiversity.org.au/afd/taxa/df58b980-3068-4491-81d5-74a6512047cf,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349549,Corybas dowlingii,Red Helmet Orchid,Corybas dowlingii,https://id.biodiversity.org.au/taxon/apni/51401041,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349567,Pterostylis despectans,Mt Bryan Greenhood,Pterostylis despectans,https://id.biodiversity.org.au/taxon/apni/51412102,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349480,Caladenia montana,,Caladenia montana,https://id.biodiversity.org.au/taxon/apni/51399205,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349551,Pultenaea sp. Genowlan Point,Genowlan Pultenaea,Pultenaea sp. Genowlan Point (NSW 417813),https://id.biodiversity.org.au/node/apni/2891788,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349588,Pultenaea elusa,Elusive Bush-pea,Pultenaea elusa,https://id.biodiversity.org.au/node/apni/2921308,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349581,Genoplesium littorale,Tuncurry Midge Orchid,Genoplesium littorale,https://id.biodiversity.org.au/taxon/apni/51406025,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349431,Pomaderris walshii,Carrington Falls Pomaderris,Pomaderris walshii,https://id.biodiversity.org.au/node/apni/2909534,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349436,Pandion cristatus,Fish Hawk,Pandion haliaetus cristatus,https://biodiversity.org.au/afd/taxa/e61096e6-7685-45bd-b5ae-922cce74c254,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349505,Prasophyllum innubum,Brandy Marys Leek-orchid,Prasophyllum innubum,https://id.biodiversity.org.au/taxon/apni/51409795,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349462,Prasophyllum keltonii,Kelton's Leek-orchid,Prasophyllum keltonii,https://id.biodiversity.org.au/taxon/apni/51409797,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349453,Thelymitra kangaloonica,Kangaloon Sun Orchid,Thelymitra kangaloonica,https://id.biodiversity.org.au/taxon/apni/51414328,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349538,Calochilus pulchellus,Pretty Beard Orchid,Calochilus pulchellus,https://id.biodiversity.org.au/taxon/apni/51400238,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349489,Prasophyllum sp. Moama,,Prasophyllum sp. Moama,ALA_DR487_172,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349537,Jalmenus eubulus,Pale Imperial Hairstreak,Jalmenus eubulus,https://biodiversity.org.au/afd/taxa/afcd2cac-0ca9-472e-8411-75c7eda40f89,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349586,Prasophyllum pallens,Musty Leek Orchid,Prasophyllum pallens,https://id.biodiversity.org.au/taxon/apni/51409837,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349457,Pterostylis bicornis,Horned Greenhood,Pterostylis bicornis,https://id.biodiversity.org.au/taxon/apni/51316867,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349426,Genoplesium insigne,Variable Midge Orchid,Genoplesium insigne,https://id.biodiversity.org.au/taxon/apni/51406023,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349546,Prasophyllum bagoense,Bago Leek-orchid,Prasophyllum bagoense,https://id.biodiversity.org.au/taxon/apni/51409699,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349423,Diuris eborensis,,Diuris eborensis,https://id.biodiversity.org.au/taxon/apni/51404215,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349605,Pterostylis riparia,,Pterostylis riparia,https://id.biodiversity.org.au/taxon/apni/51412298,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349509,Pterostylis ventricosa,,Pterostylis ventricosa,https://id.biodiversity.org.au/taxon/apni/51412432,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349420,Pterostylis vernalis,Halbury Rustyhood,Pterostylis vernalis,https://id.biodiversity.org.au/taxon/apni/51412434,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349494,Corunastylis sp. Charmhaven (NSW896673),,Genoplesium sp. Charmhaven (NSW 896673),https://id.biodiversity.org.au/taxon/apni/51406063,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349458,Elaeocarpus sedentarius,Minyon Quandong,Elaeocarpus sedentarius,https://id.biodiversity.org.au/node/apni/2916168,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349477,Thelymitra alpicola,Alpine Sun-orchid,Thelymitra alpicola,https://id.biodiversity.org.au/taxon/apni/51414220,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349437,Banksia vincentia,,Banksia vincentia,https://id.biodiversity.org.au/node/apni/4546357,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349461,Myuchelys georgesi,Georges Helmeted Turtle,Wollumbinia georgesi,https://biodiversity.org.au/afd/taxa/4f95257b-a79e-452a-bc1e-9f512d8fd878,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349481,Prostanthera gilesii,,Prostanthera gilesii,https://id.biodiversity.org.au/taxon/apni/51288027,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349596,Diuris byronensis,Byron Bay Diuris,Diuris byronensis,https://id.biodiversity.org.au/taxon/apni/51404183,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349422,Hibbertia spanantha,Julian's Hibbertia,Hibbertia spanantha,https://id.biodiversity.org.au/taxon/apni/51283403,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349579,Gingidia rupicola,Mountain Angelica,Gingidia rupicola,https://id.biodiversity.org.au/node/apni/6904884,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349604,Amytornis modestus inexpectatus,Thick-billed Grasswren (central Nsw Subspecies),Amytornis (Amytornis) modestus inexpectatus,https://biodiversity.org.au/afd/taxa/71c46068-caff-444d-985e-b6e0d9c72c34,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349486,Amytornis modestus obscurior,Thick-billed Grasswren (north-west Nsw Subspecies),Amytornis (Amytornis) modestus obscurior,https://biodiversity.org.au/afd/taxa/3e943ee9-84d2-4e34-b90a-397ce1439208,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349427,Anthosachne kingiana subsp. kingiana,Phillip Island Wheat Grass,Anthosachne kingiana subsp. kingiana,https://id.biodiversity.org.au/taxon/apni/51291193,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
-4349425,Caladenia tensa,Erect Greencomb Spider Orchid,Caladenia tensa,https://id.biodiversity.org.au/taxon/apni/51399400,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349570,Caladenia atroclavia,Black-clubbed Spider-orchid,Caladenia atroclavia,https://id.biodiversity.org.au/taxon/apni/51398799,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349485,Prasophyllum sandrae,Majors Creek Leek Orchid,Prasophyllum sandrae,ALA_DR487_196,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349497,Backhousia subargentea,Giant Ironwood,Backhousia subargentea,https://id.biodiversity.org.au/node/apni/2888873,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368067,Callocephalon fimbriatum,Gang-gang Cockatoo,Callocephalon fimbriatum,https://biodiversity.org.au/afd/taxa/6c646af8-06fb-40ae-83aa-3dd001cc4ea6,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368060,Ninox strenua,Powerful Owl,Ninox (Rhabdoglaux) strenua,https://biodiversity.org.au/afd/taxa/d1c5dee0-0de6-487c-bf10-9fc5188ab671,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368027,Tyto tenebricosa,Sooty Owl,Tyto tenebricosa,https://biodiversity.org.au/afd/taxa/645b287c-e547-4602-9275-ad3f972328bb,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367952,Ninox connivens,Barking Owl,Ninox (Hieracoglaux) connivens,https://biodiversity.org.au/afd/taxa/bd332ca4-dab5-4fda-8d68-04b678ffcdb4,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367936,Hoplocephalus bungaroides,Broad-headed Snake,Hoplocephalus bungaroides,https://biodiversity.org.au/afd/taxa/f579a6fc-ae01-4338-ba3c-16cdc4e53246,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368079,Neophema chrysogaster,Orange-bellied Parrot,Neophema (Neonanodes) chrysogaster,https://biodiversity.org.au/afd/taxa/88653999-1e2f-47d1-87fa-1f6d3e47ffb8,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368064,Glossopsitta porphyrocephala,Purple-crowned Lorikeet,Parvipsitta porphyrocephala,https://biodiversity.org.au/afd/taxa/a2399fe3-c90f-4fb1-a710-fe81643ff56e,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368090,Philoria loveridgei,Loveridge's Frog,Philoria loveridgei,https://biodiversity.org.au/afd/taxa/f1e8b187-acbb-472d-89e7-a1900b4acdc7,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367927,Dasyornis brachypterus,Eastern Bristlebird,Dasyornis (Dasyornis) brachypterus,https://biodiversity.org.au/afd/taxa/5a760ca8-e6c7-4465-a113-3eaf26b170cb,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368048,Hamirostra melanosternon,Black-breasted Buzzard,Hamirostra melanosternon,https://biodiversity.org.au/afd/taxa/96e35cba-e86c-47dd-848e-056377227209,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367903,Neophema pulchella,Turquoise Parrot,Neophema (Neophema) pulchella,https://biodiversity.org.au/afd/taxa/e9cc09f0-bfc4-40a1-8b5b-a7f4beb3271d,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368049,Tyto novaehollandiae,Masked Owl,Tyto novaehollandiae,https://biodiversity.org.au/afd/taxa/f1c0ca04-8d30-40f4-ab25-103c74f430d2,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367987,Cyclopsitta diophthalma coxeni,Coxen's Fig-parrot,Cyclopsitta diophthalma coxeni,https://biodiversity.org.au/afd/taxa/2c0e502e-f6ae-4efb-a023-d068a7955879,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367934,Lophoictinia isura,Square-tailed Kite,Lophoictinia isura,https://biodiversity.org.au/afd/taxa/715a2874-1942-4762-866c-1194990e7a91,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367983,Erythrotriorchis radiatus,Red Goshawk,Erythrotriorchis radiatus,https://biodiversity.org.au/afd/taxa/390a23b8-0097-4a2c-b068-283d2d4bd21f,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367944,Lophochroa leadbeateri,Major Mitchell's Cockatoo,Lophochroa leadbeateri,https://biodiversity.org.au/afd/taxa/5815e99d-01cd-4a92-99ba-36f480c4834d,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367915,Calyptorhynchus lathami,Glossy Black-cockatoo,Calyptorhynchus (Calyptorhynchus) lathami,https://biodiversity.org.au/afd/taxa/2b3630b3-6e95-47b8-ad3f-e3f46fa797dc,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367919,Mixophyes balbus,Stuttering Frog,Mixophyes balbus,https://biodiversity.org.au/afd/taxa/7e478d81-8ec8-49ae-a51f-b838bbe05c77,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367904,Mixophyes fleayi,Fleay's Barred Frog,Mixophyes fleayi,https://biodiversity.org.au/afd/taxa/289e1b7c-1323-473a-8c2b-a674324c102e,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368084,Polytelis anthopeplus monarchoides,Regent Parrot (eastern Subspecies),Polytelis anthopeplus monarchoides,https://biodiversity.org.au/afd/taxa/1958a1ff-0233-4257-9f8c-032dcadb6fea,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368095,Philoria kundagungan,Mountain Frog,Philoria kundagungan,https://biodiversity.org.au/afd/taxa/fcb2e700-8046-4556-94bd-78d188dadd9c,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368014,Mixophyes iteratus,Giant Barred Frog,Mixophyes iteratus,https://biodiversity.org.au/afd/taxa/9eef5215-a3d4-4435-b82c-9284d730f002,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368021,Falco hypoleucos,Grey Falcon,Falco (Hierofalco) hypoleucos,https://biodiversity.org.au/afd/taxa/4c73a934-63ae-417d-af40-56a82ae68371,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367981,Pseudophryne corroboree,Southern Corroboree Frog,Pseudophryne corroboree,https://biodiversity.org.au/afd/taxa/1a3bc394-a748-4755-a6b8-98dd42da48db,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367933,Polytelis swainsonii,Superb Parrot,Polytelis swainsonii,https://biodiversity.org.au/afd/taxa/46fca72f-4a32-44c5-a67c-770bd5333f55,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368086,Pedionomus torquatus,Plains-wanderer,Pedionomus torquatus,https://biodiversity.org.au/afd/taxa/30b4b2e5-0d5b-46cb-bddb-a2137a35fa2c,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368055,Pterostylis oreophila,Blue-tongued Orchid,Pterostylis oreophila,https://id.biodiversity.org.au/taxon/apni/51412246,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368038,Genoplesium baueri,Yellow Gnat-orchid,Genoplesium baueri,https://id.biodiversity.org.au/taxon/apni/51405989,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368071,Banksia conferta,,Banksia conferta,https://id.biodiversity.org.au/node/apni/9597877,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367969,Diuris tricolor,Spotted-throat Cowslip,Diuris tricolor,https://id.biodiversity.org.au/taxon/apni/51404361,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368069,Cryptostylis hunteriana,Leafless Tongue Orchid,Cryptostylis hunteriana,https://id.biodiversity.org.au/taxon/apni/51401155,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367899,Peristeranthus hillii,Brown Fairy-chain Orchid,Peristeranthus hillii,https://id.biodiversity.org.au/taxon/apni/51407834,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368087,Thelymitra epipactoides,Metallic Sun Orchid,Thelymitra epipactoides,https://id.biodiversity.org.au/taxon/apni/51414274,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367910,Arthropteris palisotii,Lesser Creeping Fern,Arthropteris palisotii,https://id.biodiversity.org.au/node/apni/8496980,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368019,Lindsaea fraseri,Fraser's Screw Fern,Lindsaea fraseri,https://id.biodiversity.org.au/node/apni/2906676,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368007,Callistemon linearifolius,Netted Bottle Brush,Callistemon linearifolius,https://id.biodiversity.org.au/node/apni/2897309,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368011,Drynaria rigidula,Basket Fern,Drynaria rigidula,https://id.biodiversity.org.au/node/apni/2904164,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368061,Lindsaea incisa,Slender Screw Fern,Lindsaea incisa,https://id.biodiversity.org.au/node/apni/2892259,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367948,Prostanthera marifolia,Seaforth Mintbush,Prostanthera marifolia,https://id.biodiversity.org.au/node/apni/2897722,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367954,Chiloglottis platyptera,Barrington Tops Ant Orchid,Chiloglottis platyptera,https://id.biodiversity.org.au/taxon/apni/51400612,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367960,Euphrasia scabra,Yellow Eyebright,Euphrasia scabra,https://id.biodiversity.org.au/node/apni/2903366,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367900,Diuris praecox,Rough Doubletail,Diuris praecox,https://id.biodiversity.org.au/taxon/apni/51404309,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368073,Allocasuarina portuensis,Nielsen Park She-oak,Allocasuarina portuensis,https://id.biodiversity.org.au/node/apni/2891101,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367922,Elaeocarpus williamsianus,Hairy Quandong,Elaeocarpus williamsianus,https://id.biodiversity.org.au/node/apni/2906669,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367979,Eucalyptus imlayensis,Mount Imlay Mallee,Eucalyptus imlayensis,https://id.biodiversity.org.au/node/apni/2899202,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367914,Indigofera efoliata,Leafless Indigo,Indigofera efoliata,https://id.biodiversity.org.au/node/apni/2899952,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367994,Hakea pulvinifera,Lake Keepit Hakea,Hakea pulvinifera,https://id.biodiversity.org.au/node/apni/2917559,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367926,Rhizanthella slateri,Eastern Australian Underground Orchid,Rhizanthella slateri,https://id.biodiversity.org.au/taxon/apni/51412992,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367997,Gentiana bredboensis,Bredbo Gentian,Gentiana bredboensis,https://id.biodiversity.org.au/node/apni/2900971,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368059,Sarcochilus dilatatus,Brown Sarcochilus,Sarcochilus dilatatus,https://id.biodiversity.org.au/taxon/apni/51413227,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367908,Diuris venosa,Veined Doubletail,Diuris venosa,https://id.biodiversity.org.au/taxon/apni/51404365,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368034,Bulbophyllum globuliforme,Miniature Moss-orchid,Bulbophyllum globuliforme,https://id.biodiversity.org.au/taxon/apni/51396335,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368051,Gentiana wingecarribiensis,Wingecarribee Gentian,Gentiana wingecarribiensis,https://id.biodiversity.org.au/node/apni/2915610,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367921,Pterostylis cobarensis,Greenhood Orchid,Pterostylis cobarensis,https://id.biodiversity.org.au/taxon/apni/51412068,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368000,Sarcochilus weinthalii,Blotched Sarcochilus,Sarcochilus weinthalii,https://id.biodiversity.org.au/taxon/apni/51413251,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368093,Sarcochilus fitzgeraldii,Ravine Orchid,Sarcochilus fitzgeraldii,https://id.biodiversity.org.au/taxon/apni/51413233,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368045,Phaius australis,Southern Swamp Orchid,Phaius australis,https://id.biodiversity.org.au/taxon/apni/51407850,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367935,Diploglottis campbellii,Small-leaved Tamarind,Diploglottis campbellii,https://id.biodiversity.org.au/node/apni/2906814,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368091,Sarcochilus hartmannii,Waxy Sarcochilus,Sarcochilus hartmannii,https://id.biodiversity.org.au/taxon/apni/51413235,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368018,Chiloglottis anaticeps,Bird Orchid,Chiloglottis anaticeps,https://id.biodiversity.org.au/taxon/apni/51400590,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368012,Diuris pedunculata,Small Snake Orchid,Diuris pedunculata,https://id.biodiversity.org.au/taxon/apni/51404295,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367989,Grevillea mollis,Soft Grevillea,Grevillea mollis,https://id.biodiversity.org.au/node/apni/2890447,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368001,Grevillea iaspicula,Wee Jasper Grevillea,Grevillea iaspicula,https://id.biodiversity.org.au/node/apni/2897239,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367924,Lastreopsis hispida,Bristly Shield Fern,Lastreopsis hispida,https://id.biodiversity.org.au/node/apni/2907135,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367972,Prasophyllum fuscum,Slaty Leek Orchid,Prasophyllum fuscum,https://id.biodiversity.org.au/taxon/apni/51409769,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367990,Angiopteris evecta,Giant Fern,Angiopteris evecta,https://id.biodiversity.org.au/taxon/apni/51299822,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368030,Pterostylis alpina,Alpine Greenhood,Pterostylis alpina,https://id.biodiversity.org.au/taxon/apni/51412006,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368052,Prasophyllum affine,Jervis Bay Leek Orchid,Prasophyllum affine,https://id.biodiversity.org.au/taxon/apni/51409681,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368028,Pterostylis pulchella,Waterfall Greenhood,Pterostylis pulchella,https://id.biodiversity.org.au/taxon/apni/51412286,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368083,Platyzoma microphyllum,Braid Fern,Platyzoma microphyllum,https://id.biodiversity.org.au/node/apni/2916514,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367967,Genoplesium rhyoliticum,Rhyolite Midge Orchid,Genoplesium rhyoliticum,https://id.biodiversity.org.au/taxon/apni/51406051,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367985,Pilularia novae-hollandiae,Austral Pillwort,Pilularia novae-hollandiae,https://id.biodiversity.org.au/node/apni/2905369,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368015,Geodorum densiflorum,Pink Nodding Orchid,Geodorum densiflorum,https://id.biodiversity.org.au/taxon/apni/51406097,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368002,Lindsaea brachypoda,Short-footed Screw Fern,Lindsaea brachypoda,https://id.biodiversity.org.au/node/apni/2902961,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368078,Zieria adenophora,Araluen Zieria,Zieria adenophora,https://id.biodiversity.org.au/node/apni/2905804,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368042,Cymbidium canaliculatum,Tiger Orchid,Cymbidium canaliculatum,https://id.biodiversity.org.au/taxon/apni/51401317,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367938,Eucalyptus copulans,,Eucalyptus copulans,https://id.biodiversity.org.au/node/apni/2891931,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367974,Pterostylis nigricans,Dark Greenhood,Pterostylis nigricans,https://id.biodiversity.org.au/taxon/apni/51412236,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368057,Trachymene scapigera,Mountain Trachymene,Trachymene scapigera,https://id.biodiversity.org.au/node/apni/2903508,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368024,Diuris disposita,Willawarrin Doubletail,Diuris disposita,https://id.biodiversity.org.au/taxon/apni/51404211,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367946,Psilotum complanatum,Flat Fork Fern,Psilotum complanatum,https://id.biodiversity.org.au/node/apni/2914286,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367995,Myriophyllum implicatum,,Myriophyllum implicatum,https://id.biodiversity.org.au/node/apni/2889355,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367961,Caladenia arenaria,Sand-hill Spider-orchid,Caladenia arenaria,https://id.biodiversity.org.au/taxon/apni/51398785,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368005,Lysimachia vulgaris var. davurica,Yellow Loosestrife,Lysimachia vulgaris var. davurica,https://id.biodiversity.org.au/node/apni/2901512,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368074,Diuris bracteata,,Diuris bracteata,https://id.biodiversity.org.au/taxon/apni/51404173,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367963,Diuris aequalis,Buttercup Doubletail,Diuris aequalis,https://id.biodiversity.org.au/taxon/apni/51404157,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368008,Gyrostemon thesioides,Broom Wheelfruit,Gyrostemon thesioides,https://id.biodiversity.org.au/node/apni/2898598,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368033,Oberonia complanata,Yellow-flowered King Of The Fairies,Oberonia complanata,https://id.biodiversity.org.au/taxon/apni/51406761,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367968,Leucopogon confertus,Torrington Beard-heath,Leucopogon confertus,https://id.biodiversity.org.au/node/apni/2895126,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368054,Grevillea divaricata,,Grevillea divaricata,https://id.biodiversity.org.au/node/apni/2919387,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368085,Grevillea beadleana,Beadle's Grevillea,Grevillea beadleana,https://id.biodiversity.org.au/node/apni/2900555,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368006,Diuris flavescens,Pale Yellow Doubletail,Diuris flavescens,https://id.biodiversity.org.au/taxon/apni/51404227,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368036,Prostanthera staurophylla,Tenterfield Mint-bush,Prostanthera staurophylla,https://id.biodiversity.org.au/node/apni/2909925,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367930,Pterostylis chaetophora,,Pterostylis chaetophora,https://id.biodiversity.org.au/taxon/apni/51412056,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367917,Persoonia hirsuta,Hairy Geebung,Persoonia hirsuta,https://id.biodiversity.org.au/node/apni/2902498,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368076,Caladenia tessellata,Thick Lip Spider Orchid,Caladenia tessellata,https://id.biodiversity.org.au/taxon/apni/51399404,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368037,Dendrobium melaleucaphilum,Spider Orchid,Dendrobium melaleucaphilum,https://id.biodiversity.org.au/taxon/apni/51402880,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367993,Acacia dangarensis,,Acacia dangarensis,https://id.biodiversity.org.au/node/apni/2915433,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367950,Isotoma fluviatilis subsp. fluviatilis,,Isotoma fluviatilis subsp. fluviatilis,https://id.biodiversity.org.au/node/apni/2897543,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368072,Fontainea oraria,Coastal Fontainea,Fontainea oraria,https://id.biodiversity.org.au/node/apni/2917992,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367966,Pterostylis foliata,Slender Greenhood,Pterostylis foliata,https://id.biodiversity.org.au/taxon/apni/51412140,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367955,Pimelea venosa,Bolivia Hill Rice-flower,Pimelea venosa,https://id.biodiversity.org.au/node/apni/2891541,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367912,Oberonia titania,Norfolk Island Oberonia,Oberonia titania,https://id.biodiversity.org.au/taxon/apni/51406765,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368040,Pterostylis gibbosa,Illawarra Greenhood,Pterostylis gibbosa,https://id.biodiversity.org.au/taxon/apni/51412148,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368053,Grevillea caleyi,Caley's Grevillea,Grevillea caleyi,https://id.biodiversity.org.au/node/apni/2912335,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367986,Caladenia concolor,Crimson Spider Orchid,Caladenia concolor,https://id.biodiversity.org.au/taxon/apni/51398911,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368081,Caladenia rosella,Little Pink Spider-orchid,Caladenia rosella,https://id.biodiversity.org.au/taxon/apni/51399335,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368046,Cheilanthes sieberi subsp. pseudovellea,,Cheilanthes sieberi subsp. pseudovellea,https://id.biodiversity.org.au/node/apni/2907348,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367898,Grammitis stenophylla,Narrow-leaf Finger Fern,Grammitis stenophylla,https://id.biodiversity.org.au/node/apni/2894545,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367973,Grevillea masonii,Mason's Grevillea,Grevillea masonii,https://id.biodiversity.org.au/node/apni/2913810,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367916,Prasophyllum petilum,Tarengo Leek Orchid,Prasophyllum petilum,https://id.biodiversity.org.au/taxon/apni/51409851,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367928,Pterostylis sp. Botany Bay,Botany Bay Bearded Orchid,Pterostylis sp. Botany Bay,ALA_DR487_111,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367988,Viola cleistogamoides,Hidden Violet,Viola cleistogamoides,https://id.biodiversity.org.au/node/apni/2892487,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368092,Zieria buxijugum,Box Range Zieria,Zieria buxijugum,https://id.biodiversity.org.au/node/apni/2905774,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368080,Zieria formosa,Shapely Zieria,Zieria formosa,https://id.biodiversity.org.au/node/apni/2911487,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367957,Zieria parrisiae,Parris' Zieria,Zieria parrisiae,https://id.biodiversity.org.au/node/apni/2919089,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368058,Genoplesium superbum,Superb Midge Orchid,Genoplesium superbum,https://id.biodiversity.org.au/taxon/apni/51406077,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367964,Microtis angusii,Angus's Onion Orchid,Microtis angusii,https://id.biodiversity.org.au/taxon/apni/51406608,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367945,Micromyrtus grandis,Severn River Heath-myrtle,Micromyrtus grandis,https://id.biodiversity.org.au/node/apni/2898424,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368010,Pterostylis saxicola,Sydney Plains Greenhood,Pterostylis saxicola,https://id.biodiversity.org.au/taxon/apni/51412318,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367949,Cyclodomorphus praealtus,Alpine She-oak Skink,Cyclodomorphus praealtus,https://biodiversity.org.au/afd/taxa/91f49257-08dd-4515-b26d-6cdeeada1a70,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368066,Pseudophryne pengilleyi,Northern Corroboree Frog,Pseudophryne pengilleyi,https://biodiversity.org.au/afd/taxa/cc5315bf-6682-44d9-809c-139afaddf7c8,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367956,Genoplesium plumosum,Tallong Midge Orchid,Genoplesium plumosum,https://id.biodiversity.org.au/taxon/apni/51406045,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368082,Angophora exul,,Angophora bakeri subsp. bakeri,https://id.biodiversity.org.au/node/apni/2913071,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367931,Eucalyptus dissita,Narrow-leaved Sally,Eucalyptus moorei subsp. moorei,https://id.biodiversity.org.au/node/apni/2890966,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367909,Baeckea kandos,A Shrub,Baeckea kandos,https://id.biodiversity.org.au/node/apni/2886411,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367975,Pomaderris adnata,Sublime Point Pomaderris,Pomaderris adnata,https://id.biodiversity.org.au/node/apni/2896205,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368022,Prostanthera palustris,Swamp Mint-bush,Prostanthera palustris,https://id.biodiversity.org.au/node/apni/2918112,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367942,Pimelea axiflora subsp. pubescens,Bungonia Rice-flower,Pimelea axiflora subsp. pubescens,https://id.biodiversity.org.au/node/apni/8328266,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368017,Pterostylis elegans,Elegant Greenhood,Pterostylis elegans,https://id.biodiversity.org.au/taxon/apni/51412114,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368063,Pterostylis metcalfei,Metcalfe's Greenhood,Pterostylis metcalfei,https://id.biodiversity.org.au/taxon/apni/51412218,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367932,Eucalyptus pachycalyx subsp. banyabba,Banyabba Shiny-barked Gum,Eucalyptus pachycalyx subsp. banyabba,https://id.biodiversity.org.au/node/apni/6810160,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367905,Pultenaea sp. Olinda,,Pultenaea sp. Olinda,ALA_DR487_131,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368039,Persoonia pauciflora,North Rothbury Persoonia,Persoonia pauciflora,https://id.biodiversity.org.au/node/apni/2899054,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367923,Typhonium sp. aff. brownii,Stinky Lily,Typhonium sp. aff. brownii,ALA_DR487_133,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367996,Boronia boliviensis,Bolivia Hill Boronia,Boronia boliviensis,https://id.biodiversity.org.au/node/apni/2899640,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367962,Diuris arenaria,Sand Doubletail,Diuris arenaria,https://id.biodiversity.org.au/taxon/apni/51404163,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368013,Hakea archaeoides,Big Nellie Hakea,Hakea archaeoides,https://id.biodiversity.org.au/node/apni/2920623,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367982,Leionema lamprophyllum subsp. obovatum,Shiny Leionema,Leionema lamprophyllum subsp. obovatum,https://id.biodiversity.org.au/node/apni/2906924,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368047,Caladenia porphyrea,,Caladenia quadrifaria,https://id.biodiversity.org.au/taxon/apni/51399300,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367906,Prasophyllum canaliculatum,Summer Leek Orchid,Prasophyllum canaliculatum,https://id.biodiversity.org.au/taxon/apni/51409713,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368094,Davidsonia jerseyana,Davidson's Plum,Davidsonia jerseyana,https://id.biodiversity.org.au/node/apni/2918807,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367937,Acacia atrox,Myall Creek Wattle,Acacia atrox,https://id.biodiversity.org.au/node/apni/2894816,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368070,Nurus atlas,Atlas Rainforest Ground-beetle,Nurus atlas,https://biodiversity.org.au/afd/taxa/cb794852-fe55-4f70-b5f7-2f34e08385a9,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368044,Nurus brevis,Shorter Rainforest Ground-beetle,Nurus brevis,https://biodiversity.org.au/afd/taxa/026f169f-00cf-4cc9-8b21-599ed336b862,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368065,Wollemia nobilis,Wollemi Pine,Wollemia nobilis,https://id.biodiversity.org.au/node/apni/2899238,dr487,"[{'key': 'generalisation', 'value': 'WITHHOLD'}]",WITHHOLD
+4367907,"Diuris sp. (Oaklands, D.L. Jones 5380)",Oaklands Diuris,"Diuris sp. (Oaklands, D.L. Jones 5380)",ALA_DR487_145,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367977,Caladenia attenuata,Duramana Fingers,Caladenia attenuata,https://id.biodiversity.org.au/taxon/apni/51398803,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368009,Calyptorhynchus banksii banksii,Red-tailed Black-cockatoo (coastal Subspecies),Calyptorhynchus (Calyptorhynchus) banksii banksii,https://biodiversity.org.au/afd/taxa/b4fe1a2d-5393-4523-8446-4d348a044238,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368068,Calyptorhynchus banksii samueli,Red-tailed Black-cockatoo (inland Subspecies),Calyptorhynchus (Calyptorhynchus) banksii samueli,https://biodiversity.org.au/afd/taxa/64129f52-5fb1-44ee-a09e-13c0bb61145f,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368031,Pezoporus wallicus wallicus,Eastern Ground Parrot,Pezoporus wallicus wallicus,https://biodiversity.org.au/afd/taxa/41b07a4e-e6dc-4575-8c9b-4c44872d21f8,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368043,Tyto longimembris,Eastern Grass Owl,Tyto longimembris,https://biodiversity.org.au/afd/taxa/272490b7-303d-4550-a4fb-f76c076539cd,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367991,Genoplesium vernale,East Lynne Midge-orchid,Genoplesium vernale,https://id.biodiversity.org.au/taxon/apni/51406091,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368050,Prasophyllum retroflexum,Kiandra Leek Orchid,Prasophyllum retroflexum,https://id.biodiversity.org.au/taxon/apni/51409867,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367918,Eidothea hardeniana,Nightcap Oak,Eidothea hardeniana,https://id.biodiversity.org.au/node/apni/2908076,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368041,Thelymitra adorata,Wyong Sun Orchid,Thelymitra adorata,https://id.biodiversity.org.au/taxon/apni/51414212,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367998,Liopholis guthega,Guthega Skink,Liopholis guthega,https://biodiversity.org.au/afd/taxa/740f5037-a04b-46c1-9113-894a159dacd3,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368035,Thelymitra atronitida,Blackhood Sun-orchid,Thelymitra atronitida,https://id.biodiversity.org.au/taxon/apni/51414234,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367920,Diuris ochroma,Pale Golden Moths,Diuris ochroma,https://id.biodiversity.org.au/taxon/apni/51404273,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367901,Philoria pughi,Pugh's Frog,Philoria pughi,https://biodiversity.org.au/afd/taxa/1f800926-6b4c-4e7c-802d-65cc9edfb368,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367943,Philoria richmondensis,Richmond Range Sphagnum Frog,Philoria richmondensis,https://biodiversity.org.au/afd/taxa/df58b980-3068-4491-81d5-74a6512047cf,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368025,Corybas dowlingii,Red Helmet Orchid,Corybas dowlingii,https://id.biodiversity.org.au/taxon/apni/51401041,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368016,Pterostylis despectans,Mt Bryan Greenhood,Pterostylis despectans,https://id.biodiversity.org.au/taxon/apni/51412102,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368023,Caladenia montana,,Caladenia montana,https://id.biodiversity.org.au/taxon/apni/51399205,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367999,Pultenaea sp. Genowlan Point,Genowlan Pultenaea,Pultenaea sp. Genowlan Point (NSW 417813),https://id.biodiversity.org.au/node/apni/2891788,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367940,Pultenaea elusa,Elusive Bush-pea,Pultenaea elusa,https://id.biodiversity.org.au/node/apni/2921308,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367929,Genoplesium littorale,Tuncurry Midge Orchid,Genoplesium littorale,https://id.biodiversity.org.au/taxon/apni/51406025,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368020,Pomaderris walshii,Carrington Falls Pomaderris,Pomaderris walshii,https://id.biodiversity.org.au/node/apni/2909534,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368056,Pandion cristatus,Fish Hawk,Pandion haliaetus cristatus,https://biodiversity.org.au/afd/taxa/e61096e6-7685-45bd-b5ae-922cce74c254,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4368032,Prasophyllum innubum,Brandy Marys Leek-orchid,Prasophyllum innubum,https://id.biodiversity.org.au/taxon/apni/51409795,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367939,Prasophyllum keltonii,Kelton's Leek-orchid,Prasophyllum keltonii,https://id.biodiversity.org.au/taxon/apni/51409797,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368088,Thelymitra kangaloonica,Kangaloon Sun Orchid,Thelymitra kangaloonica,https://id.biodiversity.org.au/taxon/apni/51414328,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367958,Calochilus pulchellus,Pretty Beard Orchid,Calochilus pulchellus,https://id.biodiversity.org.au/taxon/apni/51400238,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367959,Prasophyllum sp. Moama,,Prasophyllum sp. Moama,ALA_DR487_172,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367976,Jalmenus eubulus,Pale Imperial Hairstreak,Jalmenus eubulus,https://biodiversity.org.au/afd/taxa/afcd2cac-0ca9-472e-8411-75c7eda40f89,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368026,Prasophyllum pallens,Musty Leek Orchid,Prasophyllum pallens,https://id.biodiversity.org.au/taxon/apni/51409837,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368004,Pterostylis bicornis,Horned Greenhood,Pterostylis bicornis,https://id.biodiversity.org.au/taxon/apni/51316867,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367992,Genoplesium insigne,Variable Midge Orchid,Genoplesium insigne,https://id.biodiversity.org.au/taxon/apni/51406023,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368003,Prasophyllum bagoense,Bago Leek-orchid,Prasophyllum bagoense,https://id.biodiversity.org.au/taxon/apni/51409699,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367947,Diuris eborensis,,Diuris eborensis,https://id.biodiversity.org.au/taxon/apni/51404215,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368075,Pterostylis riparia,,Pterostylis riparia,https://id.biodiversity.org.au/taxon/apni/51412298,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368077,Pterostylis ventricosa,,Pterostylis ventricosa,https://id.biodiversity.org.au/taxon/apni/51412432,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367970,Pterostylis vernalis,Halbury Rustyhood,Pterostylis vernalis,https://id.biodiversity.org.au/taxon/apni/51412434,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367953,Corunastylis sp. Charmhaven (NSW896673),,Genoplesium sp. Charmhaven (NSW 896673),https://id.biodiversity.org.au/taxon/apni/51406063,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368089,Elaeocarpus sedentarius,Minyon Quandong,Elaeocarpus sedentarius,https://id.biodiversity.org.au/node/apni/2916168,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367980,Thelymitra alpicola,Alpine Sun-orchid,Thelymitra alpicola,https://id.biodiversity.org.au/taxon/apni/51414220,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367913,Banksia vincentia,,Banksia vincentia,https://id.biodiversity.org.au/node/apni/4546357,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368029,Myuchelys georgesi,Georges Helmeted Turtle,Wollumbinia georgesi,https://biodiversity.org.au/afd/taxa/4f95257b-a79e-452a-bc1e-9f512d8fd878,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367971,Prostanthera gilesii,,Prostanthera gilesii,https://id.biodiversity.org.au/taxon/apni/51288027,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367941,Diuris byronensis,Byron Bay Diuris,Diuris byronensis,https://id.biodiversity.org.au/taxon/apni/51404183,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367911,Hibbertia spanantha,Julian's Hibbertia,Hibbertia spanantha,https://id.biodiversity.org.au/taxon/apni/51283403,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367984,Gingidia rupicola,Mountain Angelica,Gingidia rupicola,https://id.biodiversity.org.au/node/apni/6904884,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367965,Amytornis modestus inexpectatus,Thick-billed Grasswren (central Nsw Subspecies),Amytornis (Amytornis) modestus inexpectatus,https://biodiversity.org.au/afd/taxa/71c46068-caff-444d-985e-b6e0d9c72c34,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4368062,Amytornis modestus obscurior,Thick-billed Grasswren (north-west Nsw Subspecies),Amytornis (Amytornis) modestus obscurior,https://biodiversity.org.au/afd/taxa/3e943ee9-84d2-4e34-b90a-397ce1439208,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367978,Anthosachne kingiana subsp. kingiana,Phillip Island Wheat Grass,Anthosachne kingiana subsp. kingiana,https://id.biodiversity.org.au/taxon/apni/51291193,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
+4367925,Caladenia tensa,Erect Greencomb Spider Orchid,Caladenia tensa,https://id.biodiversity.org.au/taxon/apni/51399400,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367902,Caladenia atroclavia,Black-clubbed Spider-orchid,Caladenia atroclavia,https://id.biodiversity.org.au/taxon/apni/51398799,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367897,Prasophyllum sandrae,Majors Creek Leek Orchid,Prasophyllum sandrae,ALA_DR487_196,dr487,"[{'key': 'generalisation', 'value': '10km'}]",10km
+4367951,Backhousia subargentea,Giant Ironwood,Backhousia subargentea,https://id.biodiversity.org.au/node/apni/2888873,dr487,"[{'key': 'generalisation', 'value': '1km'}]",1km
