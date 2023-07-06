@@ -53,10 +53,10 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     newList = kvp_to_columns(newList)
     if ltype=='S':    # sensitive list
         collist_new = ['name', 'commonName_new','scientificName_new']
-        collist_old = ['name', 'commonName_old','scientificName_old']
+        collist_old = [ 'name', 'commonName_old','scientificName_old']
     else: # conservation list
         collist_new = ['name', 'commonName_new','scientificName_new', 'status_new']
-        collist_old = ['name', 'commonName_old','scientificName_old', 'status_old']
+        collist_old = [ 'name', 'commonName_old','scientificName_old', 'status_old']
         collist_status = ['name', 'commonName_new','scientificName_new', 'status_new',  'status_old']
         # status changes - only check status changes for conservation list
         statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
@@ -82,7 +82,10 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     # statusChanges['listUpdate'] = 'status change'
 
     # union and display in alphabetical order and save locally
-    changeList = pd.concat([newVsOld, oldVsNew])
+    changeList = pd.concat([newVsOld, oldVsNew, statusChanges])
+    column_order = ['name', 'scientificName_old','scientificName_new',  'commonName_old', 'commonName_new',  'status_old', 'status_new', 'listUpdate']
+    changeList = changeList[column_order]
+
     #changeList = changeList[['listUpdate','name', 'scientificName_x','commonName_x','status_x','status_y']].sort_values('name')
     return changeList
 

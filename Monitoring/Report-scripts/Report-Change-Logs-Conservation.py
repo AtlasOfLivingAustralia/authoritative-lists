@@ -21,9 +21,9 @@ import datetime
 import os
 import sys
 
-projectdir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-changedir = "Monitoring/Change-logs/"
-sys.path.append(os.path.abspath(projectdir + "source-code/includes"))
+projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+changeDir = "Monitoring/Change-logs/"
+sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
 monthStr = datetime.datetime.now().strftime('%Y%m%d')
 import list_functions as lf
 
@@ -39,7 +39,7 @@ filename = "ACT-conservation.csv"
 testdr = "dr649"
 proddr = "dr649"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished ACT conservation')
 
 # EPBC Conservation
@@ -48,7 +48,7 @@ filename = "EPBC-conservation.csv"
 testdr = "dr656"
 proddr = "dr656"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished EPBC conservation')
 
 # NSW conservation
@@ -57,7 +57,7 @@ filename = "NSW-conservation.csv"
 testdr = "dr650"
 proddr = "dr650"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished NSW conservation')
 
 # NT Conservation
@@ -66,7 +66,7 @@ filename = "NT-conservation.csv"
 testdr = "dr651"
 proddr = "dr651"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished NT conservation')
 
 # Qld Conservation
@@ -75,7 +75,7 @@ filename = "QLD-conservation.csv"
 testdr = "dr652"
 proddr = "dr652"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished QLD conservation')
 
 # SA Conservation
@@ -84,7 +84,7 @@ filename = "SA-conservation.csv"
 testdr = "dr653"
 proddr = "dr653"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished SA conservation')
 
 # TAS Conservation
@@ -93,7 +93,7 @@ filename = "TAS-conservation.csv"
 testdr = "dr654"
 proddr = "dr654"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished TAS conservation')
 
 # VIC Conservation
@@ -102,7 +102,7 @@ filename = "VIC-conservation.csv"
 testdr = "dr655"
 proddr = "dr655"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished VIC conservation')
 
 # WA Conservation
@@ -111,7 +111,7 @@ filename = "WA-conservation.csv"
 testdr = "dr2201"
 proddr = "dr2201"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished WA conservation')
 
 ###############################################################################################################
@@ -128,5 +128,5 @@ for state, dr in drList.items():
     prodListUrl = "https://lists.ala.org.au/ws/speciesListItems/" + dr + "?max=10000&includeKVP=true"
     prodList = lf.download_ala_list(prodListUrl)  # save the prod list to the historical lists directory
     prodList = lf.kvp_to_columns(prodList)
-    prodList.to_csv(projectdir + "historical-lists/conservation/" + filename, encoding="UTF-8", index=False)
+    prodList.to_csv(projectDir + "historical-lists/conservation/" + filename, encoding="UTF-8", index=False)
 print('Finished downloading conservation historical list')

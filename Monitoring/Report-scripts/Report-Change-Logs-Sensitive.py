@@ -21,24 +21,24 @@ import datetime
 import os
 import sys
 
-projectdir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-changedir = "Monitoring/Change-logs/"
-sys.path.append(os.path.abspath(projectdir + "source-code/includes"))
+projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+changeDir = "Monitoring/Change-logs/"
+sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
 monthStr = datetime.datetime.now().strftime('%Y%m%d')
 import list_functions as lf
 
 ###############################################################################################################
-# Sensitive  Lists
-
+# # Sensitive  Lists
+#
 ltype = "S"
-# ACT Sensitive
-print('ACT sensitive')
-filename = "ACT-sensitive.csv"
-testdr = "dr2627"
-proddr = "dr2627"
-changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
-print('Finished ACT sensitive')
+# # ACT Sensitive
+# print('ACT sensitive')
+# filename = "ACT-sensitive.csv"
+# testdr = "dr2627"
+# proddr = "dr2627"
+# changelist = lf.get_changelist(testdr, proddr, ltype)
+# changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+# print('Finished ACT sensitive')
 
 # NSW Sensitive
 print('NSW sensitive')
@@ -46,7 +46,7 @@ filename = "NSW-sensitive.csv"
 testdr = "dr18457"
 proddr = "dr487"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished NSW sensitive')
 
 # NT Sensitive
@@ -55,7 +55,7 @@ filename = "NT-sensitive.csv"
 testdr = "dr18690"
 proddr = "dr492"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished NT sensitive')
 
 # Qld Sensitive
@@ -64,7 +64,7 @@ filename = "QLD-sensitive.csv"
 testdr = "dr18404"
 proddr = "dr493"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished QLD sensitive')
 
 # SA Sensitive
@@ -73,7 +73,7 @@ filename = "SA-sensitive.csv"
 testdr = "dr18706"
 proddr = "dr884"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished SA sensitive')
 
 # TAS Sensitive - not currently in Test
@@ -82,7 +82,7 @@ filename = "TAS-sensitive.csv"
 testdr = "dr18692"
 proddr = "dr491"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished TAS sensitive')
 
 # VIC Sensitive
@@ -91,7 +91,7 @@ filename = "VIC-sensitive.csv"
 testdr = "dr18669"
 proddr = "dr490"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished VIC sensitive')
 
 # WA Sensitive
@@ -100,7 +100,7 @@ filename = "WA-sensitive.csv"
 testdr = "dr18406"
 proddr = "dr467"
 changelist = lf.get_changelist(testdr, proddr, ltype)
-changelist.to_csv(projectdir + changedir + monthStr + "-" + filename, encoding="UTF-8", index=False)
+changelist.to_csv(projectDir + changeDir + monthStr + "-" + filename, encoding="UTF-8", index=False)
 print('Finished WA sensitive')
 
 ###############################################################################################################
@@ -117,5 +117,5 @@ for state, dr in drList.items():
     prodListUrl = "https://lists.ala.org.au/ws/speciesListItems/" + dr + "?max=10000&includeKVP=true"
     prodList = lf.download_ala_list(prodListUrl)  # save the prod list to the historical lists directory
     prodList = lf.kvp_to_columns(prodList)
-    prodList.to_csv(projectdir + "historical-lists/sensitive/" + filename, encoding="UTF-8", index=False)
+    prodList.to_csv(projectDir + "historical-lists/sensitive/" + filename, encoding="UTF-8", index=False)
 print('Finished downloading sensitive historical list')
