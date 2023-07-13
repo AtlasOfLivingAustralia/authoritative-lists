@@ -82,8 +82,15 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     # statusChanges['listUpdate'] = 'status change'
 
     # union and display in alphabetical order and save locally
-    changeList = pd.concat([newVsOld, oldVsNew, statusChanges])
-    column_order = ['name', 'scientificName_old','scientificName_new',  'commonName_old', 'commonName_new',  'status_old', 'status_new', 'listUpdate']
+    if ltype == 'C':
+        changeList = pd.concat([newVsOld, oldVsNew, statusChanges])
+        column_order = ['name', 'scientificName_old', 'scientificName_new', 'commonName_old', 'commonName_new',
+                        'status_old', 'status_new', 'listUpdate']
+    else:
+        changeList = pd.concat([newVsOld, oldVsNew])
+        column_order = ['name', 'scientificName_old', 'scientificName_new', 'commonName_old', 'commonName_new',
+                        'listUpdate']
+
     changeList = changeList[column_order]
 
     #changeList = changeList[['listUpdate','name', 'scientificName_x','commonName_x','status_x','status_y']].sort_values('name')
