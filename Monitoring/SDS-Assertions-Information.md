@@ -1,18 +1,21 @@
-### State Sensitive Species Lists Sensitive Data Assertions  
-
- The table below summarises assertions:
-
-* Generalised
-* Already Generalised
-* Not Supplied 
-
-|  State   | ListID   |   Generalised |   Already Generalised |    Not Supplied |   Total Occurrences |
-| :--------|:---------|--------------:|----------------------:|----------------:|--------------------:|
-|  ACT     | dr2627   |        125216 |                 70901 |          740559 |              196117 |
-|  NSW     | dr487    |        158263 |                201347 |          181628 |              359610 |
-|  NT      | dr492    |          2909 |                  1866 |             873 |                4775 |
-|  QLD     | dr493    |         52568 |                 37745 |          376549 |               90313 |
-|  SA      | dr884    |         74748 |                 20247 |          364278 |               94995 |
-|  TAS     | dr491    |           191 |                     3 |             200 |                 194 |
-|  VIC     | dr490    |        151592 |                 85509 |          224917 |              237101 |
-|  WA      | dr467    |        480176 |                 57143 |         3360125 |              537319 |
+## State Sensitive Species Lists - Occurrence Assertions Summary  
+### **No ALA Profile** 
+|  State   | ListID   |   #Sp.in list |   Total Occurrences |   Species count |   Generalised |   Already Generalised |    Not Supplied |
+| :--------|:---------|--------------:|--------------------:|----------------:|--------------:|----------------------:|----------------:|
+|  ACT     | dr2627   |           203 |              936869 |             199 |        125216 |                 70909 |          740744 |
+|  NSW     | dr487    |           200 |              541306 |             196 |        158263 |                201415 |          181628 |
+|  NT      | dr492    |             9 |                5648 |               9 |          2909 |                  1866 |             873 |
+|  QLD     | dr493    |           959 |              466882 |             718 |         52554 |                 37749 |          376579 |
+|  SA      | dr884    |           214 |              459306 |             201 |         74748 |                 20249 |          364309 |
+|  TAS     | dr491    |             3 |                 394 |               3 |           191 |                     3 |             200 |
+|  VIC     | dr490    |           136 |              462033 |             134 |        151592 |                 85512 |          224929 |
+### **Including ALA Profile**  
+|  State   | ListID   |   #Sp.in list |   Total Occurrences |   Species count |   Generalised |   Already Generalised |    Not Supplied |
+| :--------|:---------|--------------:|--------------------:|----------------:|--------------:|----------------------:|----------------:|
+|  ACT     | dr2627   |           203 |              879388 |             199 |        114381 |                 69065 |          695942 |
+|  NSW     | dr487    |           200 |              512070 |             189 |        146297 |                196176 |          169597 |
+|  NT      | dr492    |             9 |                5524 |               9 |          2834 |                  1844 |             846 |
+|  QLD     | dr493    |           959 |              388795 |             716 |         47925 |                 37017 |          303853 |
+|  SA      | dr884    |           214 |              420160 |             197 |         71349 |                 20126 |          328685 |
+|  TAS     | dr491    |             3 |                 338 |               3 |           151 |                     3 |             184 |
+|  VIC     | dr490    |           136 |              426444 |             132 |        138658 |                 83744 |          204042 | 

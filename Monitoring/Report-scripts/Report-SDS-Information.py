@@ -28,7 +28,8 @@ import configuration as cfg
 
 ##############################################################################################
 
-def download_url(url: str):
+def download_url(urlprefix: str, urlsuffix: str, dr: str):
+    url = urlprefix + dr + urlsuffix
     print("download from: ", url)
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
@@ -40,43 +41,54 @@ def download_url(url: str):
             print('Error in download_ala_list:', url.status)
     return data
 
-def build_markdown(df):
+def build_markdown(df, mheader: str, mfooter: str):
     # Create markdown from dataframe
-    # mdf = lf.df_to_markdown(df)
     # Add headers and description
     blist = [
         "Generalised",
         "Already Generalised",
         "Not Supplied \n"
     ]
-    mheader = "### State Sensitive Species Lists Sensitive Data Assertions" + "  \n"
     # Convert the list to a Markdown-formatted string with bullets
     bliststr = "\n".join([f"* {item}" for item in blist])
-    description = f"\n The table below summarises assertions:\n\n{bliststr}\n"
-
-    # Update the Markdown content in the first row
+    description = f"\n The tables below summarise assertions:\n\n{bliststr}\n"
     mdf = lf.df_to_markdown(df)
-    mdf = mheader + description + mdf
+    mdf = mheader + mdf + mfooter
+    # mdf = mheader + description + mdf + mfooter
 
     return mdf
 
-def get_sds_info(state,dr):
+def get_sds_info(state, dr, alaProfile):
+    # Get number of records in Species list
+    urlprefix = 'https://api.ala.org.au/specieslist/ws/speciesList/'
+    urlsuffix = ''
+    data = download_url(urlprefix, urlsuffix, dr)
+    splCt = data['itemCount'][0]
+
+    drProfile = dr + alaProfile
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     # Generalised count
-    # urlgen = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3Adr2627&fq=sensitive%3Ageneralised&im=false'
-    urlgen = urlprefix + dr + '&fq=sensitive%3Ageneralised&im=false'
-    data = download_url(urlgen)
+    urlsuffix = '&fq=sensitive%3Ageneralised&im=false'
+    data = download_url(urlprefix, urlsuffix, drProfile)
     genCt = data['totalRecords'][0]
+
     # Already Generalised
-    urlagen = urlprefix + dr + '&fq=sensitive%3AalreadyGeneralised&im=false'
-    data = download_url(urlagen)
+    urlsuffix = '&fq=sensitive%3AalreadyGeneralised&im=false'
+    data = download_url(urlprefix, urlsuffix, drProfile)
     aGenCt = data['totalRecords'][0]
+
     # Not supplied
-    urlns = urlprefix + dr + '&fq=-sensitive%3A*'
-    data = download_url(urlns)
+    urlsuffix =  '&fq=-sensitive%3A*'
+    data = download_url(urlprefix, urlsuffix, drProfile)
     nsCt = data['totalRecords'][0]
-    totCt = genCt + aGenCt
-    values = [[state, dr, genCt, aGenCt, nsCt, totCt]]
+
+    # Species count
+    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
+    urlsuffix = '&facets=species'
+    data = download_url(urlprefix, urlsuffix, drProfile)
+    spCt = data['count'][0]
+    totCt = genCt + aGenCt + nsCt
+    values = [[state, dr, splCt, totCt, spCt, genCt, aGenCt, nsCt]]
 
     return values
 
@@ -84,18 +96,38 @@ def get_sds_info(state,dr):
 # Production Sensitive Lists
 drList = {"ACT":"dr2627", "NSW":"dr487", "NT":"dr492",
           "QLD":"dr493", "SA":"dr884","TAS":"dr491",
-          "VIC":"dr490", "WA":"dr467"}
+          "VIC":"dr490"}
+# drList = {"VIC":"dr490"}
 
-cols = ['State', 'ListID', 'Generalised', 'Already Generalised', ' Not Supplied', 'Total Occurrences']
+cols = ['State', 'ListID', '#Sp.in list', 'Total Occurrences', 'Species count',
+        'Generalised', 'Already Generalised', ' Not Supplied']
+
 summarydf = pd.DataFrame(columns=cols)
+rsummarydf = pd.DataFrame(columns=cols)
+
+
 for state, dr in drList.items():
-    summarydf = summarydf.append(pd.DataFrame(get_sds_info(state, dr), columns=cols), ignore_index=True)
+    alaProfile = ""
+    rsummarydf = rsummarydf.append(pd.DataFrame(get_sds_info(state, dr, alaProfile), columns=cols), ignore_index=True)
+    alaProfile = "&qualityProfile=ALA"
+    summarydf = summarydf.append(pd.DataFrame(get_sds_info(state, dr, alaProfile), columns=cols), ignore_index=True)
+
+# need to do this for ALA profile also
 
 # Write Summary report to markdown
-mdsdf = build_markdown(summarydf)
-# mfile = outDir + 'SDS-Information-' + monthStr + '.md'
+mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary" + "  \n" + "### **No ALA Profile** \n"
+mfooter = "\n"
+# Raw data no ALA profile
+rdsdf = build_markdown(rsummarydf, mheader, mfooter)
+
+# Data with ALA profile
+mheader = "### **Including ALA Profile**" + "  \n"
+mfooter = " "
+mdsdf = build_markdown(summarydf, mheader, mfooter)
+
 mfile = outDir + 'SDS-Assertions-Information' + '.md'
 with open(mfile, 'w') as f:
+    f.write(rdsdf)
     f.write(mdsdf)
 print('Writing report to markdown')
 print('Finished Processing')
