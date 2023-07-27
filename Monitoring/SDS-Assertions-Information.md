@@ -1,21 +1,15 @@
-## State Sensitive Species Lists - Occurrence Assertions Summary  
-### **No ALA Profile** 
-|  State   | ListID   |   #Sp.in list |   Total Occurrences |   Species count |   Generalised |   Already Generalised |    Not Supplied |
-| :--------|:---------|--------------:|--------------------:|----------------:|--------------:|----------------------:|----------------:|
-|  ACT     | dr2627   |           203 |              936869 |             199 |        125216 |                 70909 |          740744 |
-|  NSW     | dr487    |           200 |              541306 |             196 |        158263 |                201415 |          181628 |
-|  NT      | dr492    |             9 |                5648 |               9 |          2909 |                  1866 |             873 |
-|  QLD     | dr493    |           959 |              466882 |             718 |         52554 |                 37749 |          376579 |
-|  SA      | dr884    |           214 |              459306 |             201 |         74748 |                 20249 |          364309 |
-|  TAS     | dr491    |             3 |                 394 |               3 |           191 |                     3 |             200 |
-|  VIC     | dr490    |           136 |              462033 |             134 |        151592 |                 85512 |          224929 |
-### **Including ALA Profile**  
-|  State   | ListID   |   #Sp.in list |   Total Occurrences |   Species count |   Generalised |   Already Generalised |    Not Supplied |
-| :--------|:---------|--------------:|--------------------:|----------------:|--------------:|----------------------:|----------------:|
-|  ACT     | dr2627   |           203 |              879388 |             199 |        114381 |                 69065 |          695942 |
-|  NSW     | dr487    |           200 |              512070 |             189 |        146297 |                196176 |          169597 |
-|  NT      | dr492    |             9 |                5524 |               9 |          2834 |                  1844 |             846 |
-|  QLD     | dr493    |           959 |              388795 |             716 |         47925 |                 37017 |          303853 |
-|  SA      | dr884    |           214 |              420160 |             197 |         71349 |                 20126 |          328685 |
-|  TAS     | dr491    |             3 |                 338 |               3 |           151 |                     3 |             184 |
-|  VIC     | dr490    |           136 |              426444 |             132 |        138658 |                 83744 |          204042 | 
+## State Sensitive Species Lists - Occurrence Assertions Summary 
+
+ The table below summarises the occurrence record count for sensitive species                    within each of the states respectively.  
+ The location of each occurrence should be generalised within the state                   and the value of **Not Supplied** should always be zero. 
+
+|  State   | ListID   |   #Species in list |   Total Occurrences |   Species count |   Generalised |   Already Generalised |    Not Supplied |
+| :--------|:---------|-------------------:|--------------------:|----------------:|--------------:|----------------------:|----------------:|
+|  ACT     | dr2627   |                203 |               67112 |             199 |         64247 |                  2865 |               0 |
+|  NSW     | dr487    |                200 |              239443 |             196 |         54719 |                184724 |               0 |
+|  NT      | dr492    |                  9 |                1678 |               9 |          1302 |                   376 |               0 |
+|  QLD     | dr493    |                959 |               52319 |             718 |         40368 |                 11951 |               0 |
+|  SA      | dr884    |                214 |               46534 |             201 |         42580 |                  3954 |               0 |
+|  TAS     | dr491    |                  3 |                 194 |               3 |           191 |                     3 |               0 |
+|  VIC     | dr490    |                136 |               78681 |             134 |         62142 |                 16539 |               0 |
+|  WA      | dr467    |               4604 |              532356 |            4029 |        475727 |                 49465 |            7164 |
