@@ -54,8 +54,8 @@ def build_markdown(df):
                    within each of the states respectively.  \n The location of each occurrence should be generalised within the state\
                    and the value of **Not Supplied** should always be zero. \n\n"
     # Format links for markdown
-    tcols = ['ListID', 'Unique Species count','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
-    lcols = ['splUrl', 'spctUrl', 'tcUrl','gUrl', 'agUrl', 'nsUrl']
+    tcols = ['ListID','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
+    lcols = ['splUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
     df[tcols] = df[tcols].astype(str)
     df[lcols] = df[lcols].astype(str).apply(lambda x: '(' + x + ')')
     # Create column pairs from tcols and lcols
@@ -64,7 +64,7 @@ def build_markdown(df):
     # Drop the original columns
     df = df.drop(columns=[col for col in df.columns if col in set(sum([tcols, lcols], []))])
     df.columns = df.columns.str.replace('New', '')
-    df = df.iloc[:, [0, 2, 1, 4, 3, 5, 6, 7]]
+    df = df.iloc[:, [0, 3, 1, 4, 2, 5, 6, 7]]
     mdf = df.to_markdown(index=False)
     mdf = mheader + description + mdf + mfooter
 
@@ -110,14 +110,14 @@ def get_sds_info(state, sName, dr):
     nsCt = data['totalRecords'][0]
 
     # Species count
+    spPrefix = 'https://lists.ala.org.au/speciesListItem/list/'
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
     data, spctUrl = download_url(urlprefix, urlsuffix, dr)
-    spctUrl.url = spctUrl.url.replace(apiPrefix, bioPrefix)
     spCt = data['count'][0]
 
     values = [state, dr,  splCt, totCt, spCt,  genCt,  aGenCt, nsCt,
-               splUrl.url,spctUrl.url, tcUrl.url, gUrl.url, agUrl.url, nsUrl.url]
+               splUrl.url, tcUrl.url, gUrl.url, agUrl.url, nsUrl.url]
     return values
 
 ##############################################################################################
@@ -125,13 +125,13 @@ def get_sds_info(state, sName, dr):
 drDict = {"ACT":"dr2627", "NSW":"dr487", "NT":"dr492",
           "QLD":"dr493", "SA":"dr884","TAS":"dr491",
           "VIC":"dr490", "WA":"dr467"}
-
+# drDict = {"ACT":"dr2627"}
 stateNames = {"ACT":"Australian+Capital+Territory", "NSW":"New+South+Wales", "NT":"Northern+Territory",
           "QLD":"Queensland", "SA":"South+Australia","TAS":"Tasmania",
           "VIC":"Victoria", "WA": "Western+Australia"}
 
 cols = ['State', 'ListID', '#Species in list', 'Total Occurrences', 'Unique Species count',
-        'Generalised', 'Already Generalised', ' Not Supplied', 'splUrl', 'spctUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
+        'Generalised', 'Already Generalised', ' Not Supplied', 'splUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
 
 # Create dataframe of summary information
 summarydf = pd.DataFrame(columns=cols)
