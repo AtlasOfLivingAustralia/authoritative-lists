@@ -51,7 +51,7 @@ def build_markdown(df):
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
     mfooter = "\n"
     description = "\n The table below summarises the occurrence record count for sensitive species \
-                   within each of the states respectively.  \n The location of each occurrence should be generalised within the state\
+                   within each of the states respectively.  \n The location of each occurrence should be generalised within the species list state\
                    and the value of **Not Supplied** should always be zero. \n\n"
     # Format links for markdown
     tcols = ['ListID','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
