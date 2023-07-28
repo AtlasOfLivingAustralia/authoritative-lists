@@ -29,37 +29,42 @@ import configuration as cfg
 ##############################################################################################
 
 def download_url(urlprefix: str, urlsuffix: str, dr: str):
-    url = urlprefix + dr + urlsuffix
-    print("download from: ", url)
-    with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
-        if url.status == 200:
-            data = json.loads(url.read().decode())
+    lUrl = urlprefix + dr + urlsuffix
+    print("download from: ", lUrl)
+    with urllib.request.urlopen(lUrl, context=ssl.create_default_context(cafile=certifi.where())) as lUrl:
+        if lUrl.status == 200:
+            data = json.loads(lUrl.read().decode())
             data = pd.json_normalize(data)
-
         else:
             # Handle the error
-            print('Error in download_ala_list:', url.status)
-    return data
+            print('Error in download_ala_list:', lUrl.status)
+    return data, lUrl
+
+def concat_columns(row, col_pairs):
+    for tcol, new_tcol, lcol in col_pairs:
+        row[new_tcol] = '[' + row[tcol] + ']' + row[lcol]
+    return row
 
 def build_markdown(df):
-    # Create markdown from dataframe
-    # Add headers and description
+    # Create markdown from dataframe, add headers and description
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
     mfooter = "\n"
-    # Bulleted list text
-    # blist = [
-    #     "Generalised",
-    #     "Already Generalised",
-    #     "Not Supplied \n"
-    # ]
-    # Convert the list to a Markdown-formatted string with bullets
-    # bliststr = "\n".join([f"* {item}" for item in blist])
-    # description = f"\n The tables below summarise assertions:\n\n{bliststr}\n"
     description = "\n The table below summarises the occurrence record count for sensitive species \
                    within each of the states respectively.  \n The location of each occurrence should be generalised within the state\
                    and the value of **Not Supplied** should always be zero. \n\n"
-    mdf = lf.df_to_markdown(df)
-    # mdf = mheader + mdf + mfooter
+    # Format links for markdown
+    tcols = ['ListID', 'Unique Species count','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
+    lcols = ['splUrl', 'spctUrl', 'tcUrl','gUrl', 'agUrl', 'nsUrl']
+    df[tcols] = df[tcols].astype(str)
+    df[lcols] = df[lcols].astype(str).apply(lambda x: '(' + x + ')')
+    # Create column pairs from tcols and lcols
+    colpairs = list(zip(tcols, ['New' + col for col in tcols], lcols))
+    df = df.apply(lambda row: concat_columns(row, colpairs), axis=1)
+    # Drop the original columns if needed
+    df = df.drop(columns=[col for col in df.columns if col in set(sum([tcols, lcols], []))])
+    df.columns = df.columns.str.replace('New', '')
+    df = df.iloc[:, [0, 2, 1, 4, 3, 5, 6, 7]]
+    mdf = df.to_markdown(index=False)
     mdf = mheader + description + mdf + mfooter
 
     return mdf
@@ -68,33 +73,39 @@ def get_sds_info(state, sName, dr):
     # Get number of records in Species list
     urlprefix = 'https://api.ala.org.au/specieslist/ws/speciesList/'
     urlsuffix = ''
-    data = download_url(urlprefix, urlsuffix, dr)
+    data, splUrl = download_url(urlprefix, urlsuffix, dr)
     splCt = data['itemCount'][0]
+
+    # Total Occurrences
+    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
+    urlsuffix = '&fq=state%3A%22' + sName + '%22'
+    data, tcUrl = download_url(urlprefix, urlsuffix, dr)
+    totCt = data['totalRecords'][0]
 
     # Generalised count
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=sensitive%3Ageneralised&fq=state%3A%22' + sName + '%22'
-    data = download_url(urlprefix, urlsuffix, dr)
+    data, gUrl = download_url(urlprefix, urlsuffix, dr)
     genCt = data['totalRecords'][0]
 
     # Already Generalised
     urlsuffix = '&fq=sensitive%3AalreadyGeneralised&fq=state%3A%22' + sName + '%22'
-    data = download_url(urlprefix, urlsuffix, dr)
+    data, agUrl = download_url(urlprefix, urlsuffix, dr)
     aGenCt = data['totalRecords'][0]
 
     # Not supplied
     urlsuffix =  '&fq=-sensitive%3A*&fq=state%3A%22' + sName + '%22'
-    data = download_url(urlprefix, urlsuffix, dr)
+    data, nsUrl = download_url(urlprefix, urlsuffix, dr)
     nsCt = data['totalRecords'][0]
 
     # Species count
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
-    data = download_url(urlprefix, urlsuffix, dr)
+    data, spctUrl = download_url(urlprefix, urlsuffix, dr)
     spCt = data['count'][0]
-    totCt = genCt + aGenCt + nsCt
-    values = [[state, dr, splCt, totCt, spCt, genCt, aGenCt, nsCt]]
 
+    values = [state, dr,  splCt, totCt, spCt,  genCt,  aGenCt, nsCt,
+               splUrl.url,spctUrl.url, tcUrl.url, gUrl.url, agUrl.url, nsUrl.url]
     return values
 
 ##############################################################################################
@@ -107,16 +118,15 @@ stateNames = {"ACT":"Australian+Capital+Territory", "NSW":"New+South+Wales", "NT
           "QLD":"Queensland", "SA":"South+Australia","TAS":"Tasmania",
           "VIC":"Victoria", "WA": "Western+Australia"}
 
-# drList = {"VIC":"dr490"}
-
-cols = ['State', 'ListID', '#Species in list', 'Total Occurrences', 'Species count',
-        'Generalised', 'Already Generalised', ' Not Supplied']
+cols = ['State', 'ListID', '#Species in list', 'Total Occurrences', 'Unique Species count',
+        'Generalised', 'Already Generalised', ' Not Supplied', 'splUrl', 'spctUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
 
 # Create dataframe of summary information
 summarydf = pd.DataFrame(columns=cols)
 for state, dr in drDict.items():
     sName = stateNames[state]
-    summarydf = summarydf.append(pd.DataFrame(get_sds_info(state, sName, dr), columns=cols), ignore_index=True)
+    row_data = get_sds_info(state, sName, dr)
+    summarydf = summarydf.append(pd.DataFrame([row_data], columns=cols), ignore_index=True)
 
 # Build markdown
 mdsdf = build_markdown(summarydf)
