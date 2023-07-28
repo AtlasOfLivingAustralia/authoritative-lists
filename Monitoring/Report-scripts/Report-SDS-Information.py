@@ -18,6 +18,7 @@ import certifi
 import ssl
 import datetime
 import pandas as pd
+import re
 
 projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 outDir = projectDir + "Monitoring/"
@@ -60,7 +61,7 @@ def build_markdown(df):
     # Create column pairs from tcols and lcols
     colpairs = list(zip(tcols, ['New' + col for col in tcols], lcols))
     df = df.apply(lambda row: concat_columns(row, colpairs), axis=1)
-    # Drop the original columns if needed
+    # Drop the original columns
     df = df.drop(columns=[col for col in df.columns if col in set(sum([tcols, lcols], []))])
     df.columns = df.columns.str.replace('New', '')
     df = df.iloc[:, [0, 2, 1, 4, 3, 5, 6, 7]]
@@ -70,38 +71,49 @@ def build_markdown(df):
     return mdf
 
 def get_sds_info(state, sName, dr):
+
     # Get number of records in Species list
+    lprefix = 'https://lists.ala.org.au/speciesListItem/list/'
     urlprefix = 'https://api.ala.org.au/specieslist/ws/speciesList/'
     urlsuffix = ''
     data, splUrl = download_url(urlprefix, urlsuffix, dr)
+    splUrl.url = splUrl.url.replace(urlprefix, lprefix)
     splCt = data['itemCount'][0]
+
+    apiPrefix = 'https://api.ala.org.au/occurrences/occurrences'
+    bioPrefix = 'https://biocache.ala.org.au/occurrence'
 
     # Total Occurrences
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=state%3A%22' + sName + '%22'
     data, tcUrl = download_url(urlprefix, urlsuffix, dr)
+    tcUrl.url = tcUrl.url.replace(apiPrefix, bioPrefix)
     totCt = data['totalRecords'][0]
 
     # Generalised count
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=sensitive%3Ageneralised&fq=state%3A%22' + sName + '%22'
     data, gUrl = download_url(urlprefix, urlsuffix, dr)
+    gUrl.url = gUrl.url.replace(apiPrefix, bioPrefix)
     genCt = data['totalRecords'][0]
 
     # Already Generalised
     urlsuffix = '&fq=sensitive%3AalreadyGeneralised&fq=state%3A%22' + sName + '%22'
     data, agUrl = download_url(urlprefix, urlsuffix, dr)
+    agUrl.url = agUrl.url.replace(apiPrefix, bioPrefix)
     aGenCt = data['totalRecords'][0]
 
     # Not supplied
     urlsuffix =  '&fq=-sensitive%3A*&fq=state%3A%22' + sName + '%22'
     data, nsUrl = download_url(urlprefix, urlsuffix, dr)
+    nsUrl.url = nsUrl.url.replace(apiPrefix, bioPrefix)
     nsCt = data['totalRecords'][0]
 
     # Species count
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
     data, spctUrl = download_url(urlprefix, urlsuffix, dr)
+    spctUrl.url = spctUrl.url.replace(apiPrefix, bioPrefix)
     spCt = data['count'][0]
 
     values = [state, dr,  splCt, totCt, spCt,  genCt,  aGenCt, nsCt,
