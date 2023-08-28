@@ -1,5 +1,5 @@
 ## State Sensitive Species Lists - Occurrence Assertions Summary 
-### Date Last Updatedxxxxx: 2023-08-29
+### Date Last Updated: 2023-08-29
 
  The table below summarises the occurrence record count for sensitive species                    within each of the states respectively.  
 

@@ -50,7 +50,7 @@ def concat_columns(row, col_pairs):
 def build_markdown(df, monthStr):
     # Create markdown from dataframe, add headers and description
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
-    updateInfo = "### Date Last Updatedxxxxx: " + monthStr + "\n"
+    updateInfo = "### Date Last Updated: " + monthStr + "\n"
     mfooter = "\n"
     description = "\n The table below summarises the occurrence record count for sensitive species \
                    within each of the states respectively.  \n\n The location of each occurrence should be generalised within the species list state\
