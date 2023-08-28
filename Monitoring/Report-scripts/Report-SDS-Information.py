@@ -23,7 +23,8 @@ import re
 projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 outDir = projectDir + "Monitoring/"
 sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
-monthStr = datetime.datetime.now().strftime('%Y%m%d')
+# monthStr = datetime.datetime.now().strftime('%Y%m%d')
+monthStr = datetime.datetime.now().strftime('%Y-%m-%d')
 import list_functions as lf
 import configuration as cfg
 
@@ -46,12 +47,13 @@ def concat_columns(row, col_pairs):
         row[new_tcol] = '[' + row[tcol] + ']' + row[lcol]
     return row
 
-def build_markdown(df):
+def build_markdown(df, monthStr):
     # Create markdown from dataframe, add headers and description
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
+    updateInfo = "### Date Last Updatedxxxxx: " + monthStr + "\n"
     mfooter = "\n"
     description = "\n The table below summarises the occurrence record count for sensitive species \
-                   within each of the states respectively.  \n The location of each occurrence should be generalised within the species list state\
+                   within each of the states respectively.  \n\n The location of each occurrence should be generalised within the species list state\
                    and the value of **Not Supplied** should always be zero. \n\n"
     # Format links for markdown
     tcols = ['ListID','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
@@ -66,7 +68,7 @@ def build_markdown(df):
     df.columns = df.columns.str.replace('New', '')
     df = df.iloc[:, [0, 3, 1, 4, 2, 5, 6, 7]]
     mdf = df.to_markdown(index=False)
-    mdf = mheader + description + mdf + mfooter
+    mdf = mheader + updateInfo + description + mdf + mfooter
 
     return mdf
 
@@ -141,7 +143,7 @@ for state, dr in drDict.items():
     summarydf = summarydf.append(pd.DataFrame([row_data], columns=cols), ignore_index=True)
 
 # Build markdown
-mdsdf = build_markdown(summarydf)
+mdsdf = build_markdown(summarydf, monthStr)
 mfile = outDir + 'SDS-Assertions-Information' + '.md'
 print('Writing report to markdown file')
 with open(mfile, 'w') as f:

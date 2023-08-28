@@ -1,6 +1,8 @@
 ## State Sensitive Species Lists - Occurrence Assertions Summary 
+### Date Last Updatedxxxxx: 2023-08-29
 
  The table below summarises the occurrence record count for sensitive species                    within each of the states respectively.  
+
  The location of each occurrence should be generalised within the species list state                   and the value of **Not Supplied** should always be zero. 
 
 | State   | ListID                                                         |   #Species in list | Total Occurrences                                                                                                                |   Unique Species count | Generalised                                                                                                                                                 | Already Generalised                                                                                                                                               |  Not Supplied                                                                                                                                  |
