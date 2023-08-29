@@ -7,10 +7,13 @@ Bossiaea grayi,Murrumbidgee Bossiaea,Fabaceae,Endangered,Endangered
 Botaurus poiciloptilus,Australasian Bittern,Ardeidae,Endangered,Endangered
 Caladenia actensis,Canberra Spider Orchid,Orchidaceae,Critically Endangered,Critically Endangered
 Callocephalon fimbriatum,Gang-gang Cockatoo,Cacatuidae,Endangered,Endangered
+Calyptorhynchus lathami,Glossy Black-cockatoo,Cacatuidae,Vulnerable,Vulnerable
 Calyptorhynchus lathami lathami,Glossy Black-cockatoo,Cacatuidae,Vulnerable,Vulnerable
+Climacteris picumnus,Brown Treecreeper,Climacteridae,Vulnerable,Vulnerable
 Climacteris picumnus victoriae,Brown Treecreeper,Climacteridae,Vulnerable,Vulnerable
 Corunastylis ectopa,Brindabella Midge Orchid,Orchidaceae,Critically Endangered,Critically Endangered
 Daphoenositta chrysoptera,Varied Sittella,Neosittidae,Vulnerable,Vulnerable
+Dasyurus maculatus,Spotted-tailed Quoll,Dasyuridae,Vulnerable,Vulnerable
 Dasyurus maculatus maculatus,Spotted-tailed Quoll,Dasyuridae,Vulnerable,Vulnerable
 Dasyurus viverrinus,Eastern Quoll,dasyuridae,Endangered,Endangered
 Delma impar,Striped Legless Lizard,Pygopodidae,Vulnerable,Vulnerable
@@ -21,6 +24,7 @@ Gentiana baeuerlenii,Baeuerlen's Gentian,Gentianaceae,Endangered,Endangered
 Grantiella picta,Painted Honeyeater,Meliphagidae,Vulnerable,Vulnerable
 Hieraaetus morphnoides,Little Eagle,Accipitridae,Vulnerable,Vulnerable
 Hirundapus caudacutus,White-throated Needletail,Apodidae,Vulnerable,Vulnerable
+Isoodon obesulus,Southern Brown Bandicoot,Peramelidae,Endangered,Endangered
 Isoodon obesulus obesulus,Southern Brown Bandicoot,Peramelidae,Endangered,Endangered
 Keyacris scurra,Key's Matchstick Grasshopper,Morabidae,Endangered,Endangered
 Lalage tricolor,White-winged Triller,Campephagidae,Vulnerable,Vulnerable
@@ -33,8 +37,10 @@ Litoria raniformis,Southern Bell Frog,Hylidae,Vulnerable,Vulnerable
 Litoria verreauxii alpina,Alpine Tree Frog,Hylidae,Vulnerable,Vulnerable
 Maccullochella macquariensis,Trout Cod,Percichthyidae,Endangered,Endangered
 Macquaria australasica,Macquarie Perch,Percichthyidae,Endangered,Endangered
+Mastacomys fuscus,Broad-toothed Rat,Muridae,Vulnerable,Vulnerable
 Mastacomys fuscus mordicus,Broad-toothed Rat,Muridae,Vulnerable,Vulnerable
 Melanodryas cucullata cucullata,Hooded Robin,Petroicidae,Endangered,Endangered
+Melanodryas cucullate,Hooded Robin,Petroicidae,Endangered,Endangered
 Muehlenbeckia tuggeranong,Tuggeranong Lignum,Polygonaceae,Endangered,Endangered
 Perunga ochracea,Perunga Grasshopper,Acrididae,Vulnerable,Vulnerable
 Petauroides volans,Southern Greater Glider,Pseudocheiridae,Endangered,Endangered
@@ -57,3 +63,5 @@ Swainsona recta,Small Purple Pea,Fabaceae,Endangered,Endangered
 Synemon plana,Golden Sun Moth,Castniidae,Vulnerable,Vulnerable
 Thesium australe,Austral Toadflax,Santalaceae,Vulnerable,Vulnerable
 Tympanocryptis lineata,Canberra Grassland Earless Dragon,Agamidae,Critically Endangered,Critically Endangered
+Tympanocryptis lineata pinguicolla,Grassland Earless Dragon,Agamidae,Critically Endangered,Critically Endangered
+Tympanocryptis pinguicolla,Grassland Earless Dragon,Agamidae,Critically Endangered,Critically Endangered
