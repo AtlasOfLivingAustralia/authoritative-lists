@@ -52,9 +52,10 @@ def build_markdown(df, monthStr):
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
     updateInfo = "### Date Last Updated: " + monthStr + "\n"
     mfooter = "\n"
-    description = "\n The table below summarises the occurrence record count for sensitive species \
-                   within each of the states respectively.  \n\n The location of each occurrence should be generalised within the species list state\
-                   and the value of **Not Supplied** should always be zero. \n\n"
+    d1 = "\n The table below summarises the occurrence record count for sensitive species \
+                   within each of the states respectively.\n"
+    d2 = "\n * The location of each occurrence should be generalised within the species list state. "
+    d3 = "\n * The value of **Not Supplied** should always be zero. \n\n"
     # Format links for markdown
     tcols = ['ListID','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
     lcols = ['splUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
@@ -68,7 +69,7 @@ def build_markdown(df, monthStr):
     df.columns = df.columns.str.replace('New', '')
     df = df.iloc[:, [0, 3, 1, 4, 2, 5, 6, 7]]
     mdf = df.to_markdown(index=False)
-    mdf = mheader + updateInfo + description + mdf + mfooter
+    mdf = mheader + updateInfo + d1 + d2 + d3 + mdf + mfooter
 
     return mdf
 
