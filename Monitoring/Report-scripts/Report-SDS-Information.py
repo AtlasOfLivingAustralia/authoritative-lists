@@ -18,7 +18,7 @@ import certifi
 import ssl
 import datetime
 import pandas as pd
-import re
+
 
 projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
 outDir = projectDir + "Monitoring/"
@@ -30,8 +30,8 @@ import configuration as cfg
 
 ##############################################################################################
 
-def download_url(urlprefix: str, urlsuffix: str, dr: str):
-    lUrl = urlprefix + dr + urlsuffix
+def download_url(urlprefix: str, urlsuffix: str, drId: str):
+    lUrl = urlprefix + drId + urlsuffix
     print("download from: ", lUrl)
     with urllib.request.urlopen(lUrl, context=ssl.create_default_context(cafile=certifi.where())) as lUrl:
         if lUrl.status == 200:
@@ -42,22 +42,24 @@ def download_url(urlprefix: str, urlsuffix: str, dr: str):
             print('Error in download_ala_list:', lUrl.status)
     return data, lUrl
 
+
 def concat_columns(row, col_pairs):
     for tcol, new_tcol, lcol in col_pairs:
         row[new_tcol] = '[' + row[tcol] + ']' + row[lcol]
     return row
 
-def build_markdown(df, monthStr):
+
+def build_markdown(df, dStr):
     # Create markdown from dataframe, add headers and description
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
-    updateInfo = "### Date Last Updated: " + monthStr + "\n"
+    updateInfo = "### Date Last Updated: " + dStr + "\n"
     mfooter = "\n"
     d1 = "\n The table below summarises the occurrence record count for sensitive species \
                    within each of the states respectively.\n"
     d2 = "\n * The location of each occurrence should be generalised within the species list state. "
     d3 = "\n * The value of **Not Supplied** should always be zero. \n\n"
     # Format links for markdown
-    tcols = ['ListID','Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied' ]
+    tcols = ['ListID', 'Total Occurrences', 'Generalised', 'Already Generalised', ' Not Supplied']
     lcols = ['splUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
     df[tcols] = df[tcols].astype(str)
     df[lcols] = df[lcols].astype(str).apply(lambda x: '(' + x + ')')
@@ -73,13 +75,14 @@ def build_markdown(df, monthStr):
 
     return mdf
 
-def get_sds_info(state, sName, dr):
+
+def get_sds_info(state, sName, drId):
 
     # Get number of records in Species list
     lprefix = 'https://lists.ala.org.au/speciesListItem/list/'
     urlprefix = 'https://api.ala.org.au/specieslist/ws/speciesList/'
     urlsuffix = ''
-    data, splUrl = download_url(urlprefix, urlsuffix, dr)
+    data, splUrl = download_url(urlprefix, urlsuffix, drId)
     splUrl.url = splUrl.url.replace(urlprefix, lprefix)
     splCt = data['itemCount'][0]
 
@@ -89,49 +92,52 @@ def get_sds_info(state, sName, dr):
     # Total Occurrences
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=state%3A%22' + sName + '%22'
-    data, tcUrl = download_url(urlprefix, urlsuffix, dr)
+    data, tcUrl = download_url(urlprefix, urlsuffix, drId)
     tcUrl.url = tcUrl.url.replace(apiPrefix, bioPrefix)
     totCt = data['totalRecords'][0]
 
     # Generalised count
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=sensitive%3Ageneralised&fq=state%3A%22' + sName + '%22'
-    data, gUrl = download_url(urlprefix, urlsuffix, dr)
+    data, gUrl = download_url(urlprefix, urlsuffix, drId)
     gUrl.url = gUrl.url.replace(apiPrefix, bioPrefix)
     genCt = data['totalRecords'][0]
 
     # Already Generalised
     urlsuffix = '&fq=sensitive%3AalreadyGeneralised&fq=state%3A%22' + sName + '%22'
-    data, agUrl = download_url(urlprefix, urlsuffix, dr)
+    data, agUrl = download_url(urlprefix, urlsuffix, drId)
     agUrl.url = agUrl.url.replace(apiPrefix, bioPrefix)
     aGenCt = data['totalRecords'][0]
 
     # Not supplied
-    urlsuffix =  '&fq=-sensitive%3A*&fq=state%3A%22' + sName + '%22'
-    data, nsUrl = download_url(urlprefix, urlsuffix, dr)
+    urlsuffix = '&fq=-sensitive%3A*&fq=state%3A%22' + sName + '%22'
+    data, nsUrl = download_url(urlprefix, urlsuffix, drId)
     nsUrl.url = nsUrl.url.replace(apiPrefix, bioPrefix)
     nsCt = data['totalRecords'][0]
 
     # Species count
-    spPrefix = 'https://lists.ala.org.au/speciesListItem/list/'
     urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
-    data, spctUrl = download_url(urlprefix, urlsuffix, dr)
+    data, spctUrl = download_url(urlprefix, urlsuffix, drId)
     spCt = data['count'][0]
 
-    values = [state, dr,  splCt, totCt, spCt,  genCt,  aGenCt, nsCt,
-               splUrl.url, tcUrl.url, gUrl.url, agUrl.url, nsUrl.url]
+    values = [state, drId,  splCt, totCt, spCt,  genCt,  aGenCt, nsCt,
+              splUrl.url, tcUrl.url, gUrl.url, agUrl.url, nsUrl.url]
     return values
 
 ##############################################################################################
 # Production Sensitive Lists
-drDict = {"ACT":"dr2627", "NSW":"dr487", "NT":"dr492",
-          "QLD":"dr493", "SA":"dr884","TAS":"dr491",
-          "VIC":"dr490", "WA":"dr467"}
+
+
+drDict = {"ACT": "dr2627", "NSW": "dr487", "NT": "dr492",
+          "QLD": "dr493", "SA": "dr884", "TAS": "dr491",
+          "VIC": "dr490", "WA": "dr467"}
+
 # drDict = {"ACT":"dr2627"}
-stateNames = {"ACT":"Australian+Capital+Territory", "NSW":"New+South+Wales", "NT":"Northern+Territory",
-          "QLD":"Queensland", "SA":"South+Australia","TAS":"Tasmania",
-          "VIC":"Victoria", "WA": "Western+Australia"}
+
+stateNames = {"ACT": "Australian+Capital+Territory", "NSW": "New+South+Wales", "NT": "Northern+Territory",
+              "QLD": "Queensland", "SA": "South+Australia", "TAS": "Tasmania",
+              "VIC": "Victoria", "WA": "Western+Australia"}
 
 cols = ['State', 'ListID', '#Species in list', 'Total Occurrences', 'Unique Species count',
         'Generalised', 'Already Generalised', ' Not Supplied', 'splUrl', 'tcUrl', 'gUrl', 'agUrl', 'nsUrl']
@@ -150,6 +156,3 @@ print('Writing report to markdown file')
 with open(mfile, 'w') as f:
     f.write(mdsdf)
 print('Finished Processing')
-
-
-
