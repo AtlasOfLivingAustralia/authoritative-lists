@@ -17,7 +17,7 @@ Information regarding Conservation statuses for jurisdictions can be found downl
 
 ## Sensitive Lists
 
-[Sensitive lists in the ALA's Lists tool](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true) are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). THe SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
+[Sensitive lists in the ALA's Lists tool](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true) are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). The SDS obsfucates location and other information to each occurrence record in the ALA's ingestion process. 
 
 See the `List info` link for metadata about each list. Some lists apply a single level of obsfucation to every species in the list, and other lists apply supplied obfuscation rules for each species. The rules are specified in the `generalisation` field.
 
