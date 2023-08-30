@@ -36,9 +36,7 @@ See https://github.com/AtlasOfLivingAustralia/sds for info about SDS processing.
 
     
 ## Conservation Lists 
-[Conservation lists](https://lists.ala.org.au/public/speciesLists?isAuthoritative=eq:true&isThreatened=eq:true) are for each state plus the national EPBC list.
-
-These Lists are used for the `stateConservation` and `countryConservation` fields: 
+[Conservation lists](https://lists.ala.org.au/public/speciesLists?isAuthoritative=eq:true&isThreatened=eq:true) are for each state plus the national EPBC list and are used for the `stateConservation` and `countryConservation` fields: 
 - flagged isThreatened
 - flagged isAuthoritative
 - region field provided
