@@ -49,8 +49,12 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
+    # oldList.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/Qld-Old.csv", encoding="UTF-8", index=False)
+
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
+    # newList.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/Qld-New.csv", encoding="UTF-8", index=False)
+
     if ltype=='S':    # sensitive list
         collist_new = ['name', 'commonName_new','scientificName_new']
         collist_old = [ 'name', 'commonName_old','scientificName_old']
@@ -66,11 +70,14 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     # new names
     newVsOld = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
+    # newVsOld.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/newVsOld.csv", encoding="UTF-8", index=False)
+
     newVsOld = newVsOld[newVsOld['scientificName_old'].isna()][collist_new]
     newVsOld['listUpdate'] = 'added'
-
     # removed names
     oldVsNew = pd.merge(oldList, newList, how='left', on='name', suffixes=('_old', '_new'))
+    # oldVsNew.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/OldVsNew.csv", encoding="UTF-8", index=False)
+
     oldVsNew = oldVsNew[oldVsNew['scientificName_new'].isna()][collist_old]
     oldVsNew['listUpdate'] = 'removed'
 
