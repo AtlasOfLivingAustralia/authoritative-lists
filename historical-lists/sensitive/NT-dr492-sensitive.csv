@@ -1,10 +1,10 @@
-id,name,commonName,scientificName,lsid,dataResourceUid,kvpValues,generalisation
-4349407,Macroderma gigas,Ghost Bat,Macroderma gigas,https://biodiversity.org.au/afd/taxa/63bc796a-5a85-45bc-b4bc-edecc931cc50,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349404,Hipposideros stenotis,Northern Leaf-nosed Bat,Hipposideros stenotis,https://biodiversity.org.au/afd/taxa/26fe0f53-6d66-4607-8fc6-55b99302992e,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349409,Hipposideros inornatus,Arnhem Leaf-nosed Bat,Hipposideros inornatus,https://biodiversity.org.au/afd/taxa/5d2dab40-ff9d-46d9-b31e-970b79bbc73b,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349403,Pezoporus occidentalis,Night Parrot,Pezoporus occidentalis,https://biodiversity.org.au/afd/taxa/c630f3b0-528a-4686-a2a1-73113135f214,dr492,"[{'key': 'generalisation', 'value': '100km'}]",100km
-4349405,Polytelis alexandrae,Alexandra's Parrot,Polytelis alexandrae,https://biodiversity.org.au/afd/taxa/be7a08f5-387f-4156-91e2-77f0d3d09d8c,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349406,Falco (Hierofalco) hypoleucos,Grey Falcon,Falco (Hierofalco) hypoleucos,https://biodiversity.org.au/afd/taxa/4c73a934-63ae-417d-af40-56a82ae68371,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349410,Bellatorias obiri,Arnhem Land Egernia,Bellatorias obiri,https://biodiversity.org.au/afd/taxa/2afc8501-f330-4973-84d9-94dc817d793c,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349411,Attacus wardi,Atlas Moth,Attacus wardi,https://biodiversity.org.au/afd/taxa/8a05008e-53e8-4773-855a-43ac29cc6056,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
-4349408,Ogyris iphis doddi,Dodd’s Azure,Ogyris iphis doddi,https://biodiversity.org.au/afd/taxa/ae3ab4c9-9308-4ac8-84d7-e0f0b7fb9712,dr492,"[{'key': 'generalisation', 'value': '10km'}]",10km
+id,name,commonName,scientificName,lsid,generalisation,category
+4395488,Macroderma gigas,Ghost Bat,Macroderma gigas,https://biodiversity.org.au/afd/taxa/63bc796a-5a85-45bc-b4bc-edecc931cc50,10km,EN
+4395493,Hipposideros stenotis,Northern Leaf-nosed Bat,Hipposideros stenotis,https://biodiversity.org.au/afd/taxa/26fe0f53-6d66-4607-8fc6-55b99302992e,10km,EN
+4395485,Hipposideros inornatus,Arnhem Leaf-nosed Bat,Hipposideros inornatus,https://biodiversity.org.au/afd/taxa/5d2dab40-ff9d-46d9-b31e-970b79bbc73b,10km,EN
+4395489,Pezoporus occidentalis,Night Parrot,Pezoporus occidentalis,https://biodiversity.org.au/afd/taxa/c630f3b0-528a-4686-a2a1-73113135f214,100km,EN
+4395491,Polytelis alexandrae,Alexandra's Parrot,Polytelis alexandrae,https://biodiversity.org.au/afd/taxa/be7a08f5-387f-4156-91e2-77f0d3d09d8c,10km,EN
+4395487,Falco (Hierofalco) hypoleucos,Grey Falcon,Falco (Hierofalco) hypoleucos,https://biodiversity.org.au/afd/taxa/4c73a934-63ae-417d-af40-56a82ae68371,10km,EN
+4395486,Bellatorias obiri,Arnhem Land Egernia,Bellatorias obiri,https://biodiversity.org.au/afd/taxa/2afc8501-f330-4973-84d9-94dc817d793c,10km,EN
+4395490,Attacus wardi,Atlas Moth,Attacus wardi,https://biodiversity.org.au/afd/taxa/8a05008e-53e8-4773-855a-43ac29cc6056,10km,EN
+4395492,Ogyris iphis doddi,Dodd’s Azure,Ogyris iphis doddi,https://biodiversity.org.au/afd/taxa/ae3ab4c9-9308-4ac8-84d7-e0f0b7fb9712,10km,EN

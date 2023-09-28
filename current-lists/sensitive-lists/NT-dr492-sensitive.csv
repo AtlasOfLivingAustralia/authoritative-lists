@@ -1,10 +1,12 @@
-scientificName,commonName,generalisation,category
-Macroderma gigas,Ghost Bat,10km,EN
-Hipposideros stenotis,Northern Leaf-nosed Bat,10km,EN
-Hipposideros inornatus,Arnhem Leaf-nosed Bat,10km,EN
-Pezoporus occidentalis,Night Parrot,100km,EN
-Polytelis alexandrae,Alexandra's Parrot,10km,EN
-Falco (Hierofalco) hypoleucos,Grey Falcon,10km,EN
-Bellatorias obiri,Arnhem Land Egernia,10km,EN
-Attacus wardi,Atlas Moth,10km,EN
-Ogyris iphis doddi,Dodd’s Azure,10km,EN
+scientificName,generalisation,category
+Macroderma gigas,10km,EN
+Hipposideros stenotis,10km,EN
+Hipposideros inornatus,10km,EN
+Pezoporus occidentalis,100km,EN
+Polytelis alexandrae,10km,EN
+Falco (Hierofalco) hypoleucos,10km,EN
+Bellatorias obiri,10km,EN
+Attacus wardi,10km,EN
+Ogyris iphis doddi,10km,EN
+Chromolaena odorata,WITHHOLD,PBC10
+Parthenium hysterophorus,WITHHOLD,PBC10
