@@ -19,14 +19,13 @@ import ssl
 import datetime
 import pandas as pd
 
-
-projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+#projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
+projectDir = "/Users/new330/IdeaProjects/authoritative-lists/"
 outDir = projectDir + "Monitoring/"
 sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
 # monthStr = datetime.datetime.now().strftime('%Y%m%d')
 monthStr = datetime.datetime.now().strftime('%Y-%m-%d')
-import list_functions as lf
-import configuration as cfg
+
 
 ##############################################################################################
 
