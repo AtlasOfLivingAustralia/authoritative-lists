@@ -10,7 +10,6 @@ import requests
 import datetime
 
 def download_ala_specieslist(url: str):
-    print("download_ala_list: ", url)
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
             data = json.loads(url.read().decode())
@@ -21,7 +20,6 @@ def download_ala_specieslist(url: str):
     return data
 
 def kvp_to_columns(df):
-    print(df.columns)
     d0 = pd.DataFrame()
     for i in df.index:
         if len(df['kvpValues'][i]) > 0:
@@ -35,12 +33,9 @@ def kvp_to_columns(df):
     return d0
 
 def build_list_url(drstr: str):
-    print("build_list_url: ", drstr)
     url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
     return url
-
 def get_changelist(testdr: str, proddr: str, ltype: str):
-    print("get_changelist: Test - ", testdr, "Prod - ", proddr)
     oldListPref = "https://lists.ala.org.au/ws/speciesListItems/"
     newListPref = "https://lists-test.ala.org.au/ws/speciesListItems/"
     urlSuffix = "?max=10000&includeKVP=true"
@@ -49,58 +44,34 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
-    # oldList.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/Qld-Old.csv", encoding="UTF-8", index=False)
-
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
-    # newList.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/Qld-New.csv", encoding="UTF-8", index=False)
 
-    if ltype=='S':    # sensitive list
-        collist_new = ['name', 'commonName_new','scientificName_new']
-        collist_old = [ 'name', 'commonName_old','scientificName_old']
-    else: # conservation list
-        collist_new = ['name', 'commonName_new','scientificName_new', 'status_new']
-        collist_old = [ 'name', 'commonName_old','scientificName_old', 'status_old']
-        collist_status = ['name', 'commonName_new','scientificName_new', 'status_new',  'status_old']
-        # status changes - only check status changes for conservation list
-        statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
-        statusChanges = statusChanges[statusChanges['status_new'] !=
-                                      statusChanges['status_old']][collist_status]
+    # new names - left join new to old, drop na old
+    newVsOld = pd.merge(newList, oldList, how='left', on='name', suffixes=("_new", "_old"))
+    additions = newVsOld[newVsOld['scientificName_old'].isna()][['name','scientificName_new','commonName_new','status_new']]
+    additions.columns = additions.columns.str.replace("_new", "", regex=True)
+    additions['listUpdate'] = 'added'
+
+    # removed names - left join old to new, drop na new
+    oldVsNew = pd.merge(oldList, newList, how='left', on='name', suffixes=("_old", "_new"))
+    removals = oldVsNew[oldVsNew['scientificName_new'].isna()][['name','scientificName_old','commonName_old','status_old']]
+    removals.columns = removals.columns.str.replace("_old", "", regex=True)
+    removals['listUpdate'] = 'removed'
+
+    # status changes - only check status changes for conservation list
+    if ltype=='C':
+        statusChanges = pd.merge(newList, oldList, how='inner', on='name', suffixes=('_new', '_old'))
+        statusChanges = statusChanges[statusChanges['status_new'] != statusChanges['status_old']][['name','scientificName_new','commonName_new','status_new','status_old']]
+        statusChanges.columns = statusChanges.columns.str.replace("_new", "", regex=True)
         statusChanges['listUpdate'] = 'status change'
-
-    # new names
-    newVsOld = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
-    # newVsOld.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/newVsOld.csv", encoding="UTF-8", index=False)
-
-    newVsOld = newVsOld[newVsOld['scientificName_old'].isna()][collist_new]
-    newVsOld['listUpdate'] = 'added'
-    # removed names
-    oldVsNew = pd.merge(oldList, newList, how='left', on='name', suffixes=('_old', '_new'))
-    # oldVsNew.to_csv("/Users/oco115/PycharmProjects/authoritative-lists/Monitoring/Change-logs/OldVsNew.csv", encoding="UTF-8", index=False)
-
-    oldVsNew = oldVsNew[oldVsNew['scientificName_new'].isna()][collist_old]
-    oldVsNew['listUpdate'] = 'removed'
-
-    # # status changes
-    # statusChanges = pd.merge(newList, oldList, how='left', on='name', suffixes=('_new', '_old'))
-    # statusChanges = statusChanges[statusChanges['status_new'] !=
-    #                               statusChanges['status_old']][['name', 'commonName_new',
-    #                                                             'scientificName_new', 'status_new', 'status_old']]
-    # statusChanges['listUpdate'] = 'status change'
 
     # union and display in alphabetical order and save locally
     if ltype == 'C':
-        changeList = pd.concat([newVsOld, oldVsNew, statusChanges])
-        column_order = ['name', 'scientificName_old', 'scientificName_new', 'commonName_old', 'commonName_new',
-                        'status_old', 'status_new', 'listUpdate']
+        changeList = pd.concat([additions, removals, statusChanges])
     else:
-        changeList = pd.concat([newVsOld, oldVsNew])
-        column_order = ['name', 'scientificName_old', 'scientificName_new', 'commonName_old', 'commonName_new',
-                        'listUpdate']
-
-    changeList = changeList[column_order]
-
-    #changeList = changeList[['listUpdate','name', 'scientificName_x','commonName_x','status_x','status_y']].sort_values('name')
+        changeList = pd.concat([additions, removals])
+    changeList = changeList.sort_values('name',ascending=True)
     return changeList
 
 def gbifparse(indf):
