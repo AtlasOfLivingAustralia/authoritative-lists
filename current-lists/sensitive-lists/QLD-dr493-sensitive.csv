@@ -1,5 +1,5 @@
 scientificName,vernacularName,category,generalisation
-Rhinolophus philippinensis,greater large-eared horseshoe bat,EN,2 km
+Rhinolophus robertsi,greater large-eared horseshoe bat,EN,2 km
 Chloebia gouldiae,Gouldian finch,EN,2 km
 Erythrura trichroa,blue-faced parrot-finch,NT,2 km
 Neochmia phaeton evangelinae,crimson finch (white-bellied subspecies),LC,2 km
@@ -40,7 +40,7 @@ Saproscincus saltus,Cape Melville shade skink,LC,2 km
 Varanus semiremex,rusty monitor,LC,2 km
 Orraya occultus,McIlwraith leaf-tailed gecko,CR,2 km
 Phyllurus amnicola,Mount Elliot broad-tailed gecko,VU,2 km
-Phyllurus caudiannulatus,ringed thin-tailed gecko,VU,2 km
+Phyllurus caudiannulatus,ringed thin-tailed gecko,EN,2 km
 Phyllurus championae,Connors' Range broad-tailed gecko,VU,2 km
 Phyllurus gulbaru,Gulbaru gecko,CR,2 km
 Phyllurus isis,Mount Jukes broad-tailed gecko,VU,2 km
@@ -52,7 +52,7 @@ Elseya irwini,Irwin's turtle,LC,2 km
 Elusor macrurus,Mary River turtle,EN,2 km
 Emydura macquarii emmotti,Emmott's short-neck turtle,LC,2 km
 Emydura subglobosa angkibaanya,Jardine River turtle,CR,2 km
-Rheodytes leukops,Fitzroy River turtle,VU,2 km
+Rheodytes leukops,Fitzroy River turtle,EN,2 km
 Wollumbinia belli,Bell's turtle,EN,2 km
 Cophixalus concinnus,beautiful nurseryfrog,CR,2 km
 Cophixalus kulakula,Kutini boulder-frog,LC,2 km
@@ -61,7 +61,7 @@ Cophixalus monticola,mountain nurseryfrog,CR,2 km
 Cophixalus neglectus,Bellenden Ker nurseryfrog,CR,2 km
 Cophixalus pakayakulangun,golden-capped boulder-frog,LC,2 km
 Cophixalus petrophilus,blotched boulder-frog,LC,2 km
-Cophixalus zweifeli,Cape Melville boulderfrog,VU,2 km
+Cophixalus zweifeli,Cape Melville boulderfrog,LC,2 km
 Litoria andiirrmalin,Melville Range treefrog,VU,2 km
 Litoria kroombitensis,Kroombit treefrog,CR,2 km
 Litoria longirostris,long snouted treefrog,NT,2 km
@@ -75,7 +75,7 @@ Taudactylus eungellensis,Eungella dayfrog,EN,2 km
 Taudactylus liemi,Eungella tinkerfrog,NT,2 km
 Taudactylus pleione,Kroombit tinkerfrog,CR,2 km
 Taudactylus rheophilus,northern tinkerfrog,CR,2 km
-Philoria knowlesi,Mt Ballow mountain frog,LC,2 km
+Philoria knowlesi,Mt Ballow mountain frog,EN,2 km
 Philoria kundagungan,red-and-yellow mountainfrog,EN,2 km
 Chlamydogobius micropterus,Elizabeth Springs goby,EN,2 km
 Chlamydogobius squamigenus,Edgbaston goby,EN,2 km
@@ -954,7 +954,7 @@ Amblovenatum tildeniae,,CR,2 km
 Chingia australis,,EN,2 km
 Pakau pennigera,,EN,2 km
 Plesioneuron tuberculatum,,EN,2 km
-Pneumatopteris pennigera,lime fern,EN,2 km
+Pneumatopteris pennigera,lime fern,UK,2 km
 Reholttumia costata,,NT,2 km
 Thelypteris confluens,,VU,2 km
 Macadamia jansenii,,CR,2 km

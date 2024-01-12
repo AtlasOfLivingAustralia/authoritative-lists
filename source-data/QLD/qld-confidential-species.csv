@@ -1,5 +1,5 @@
 Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA status,EPBC status,Significant,Endemicity
-969,animals,mammals,Rhinolophidae,Rhinolophus philippinensis,greater large-eared horseshoe bat,"Waterhouse, 1843",E,V,Y,QI
+969,animals,mammals,Rhinolophidae,Rhinolophus robertsi,greater large-eared horseshoe bat,"Tate, 1952",E,V,Y,QI
 1376,animals,birds,Estrildidae,Chloebia gouldiae,Gouldian finch,"(Gould, 1844)",E,E,Y,QA
 1378,animals,birds,Estrildidae,Erythrura trichroa,blue-faced parrot-finch,"(Kittlitz, 1835)",NT,,Y,QAI
 1370,animals,birds,Estrildidae,Neochmia phaeton evangelinae,crimson finch (white-bellied subspecies),"(Hombron & Jacquinot, 1841)",C,E,Y,QI
@@ -40,7 +40,7 @@ Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA statu
 70,animals,reptiles,Varanidae,Varanus semiremex,rusty monitor,"Peters, 1869",C,,N,Q
 389,animals,reptiles,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",CR,,Y,Q
 22412,animals,reptiles,Carphodactylidae,Phyllurus amnicola,Mount Elliot broad-tailed gecko,"Hoskin, Couper, Schneider & Covacevich 2000",V,,Y,Q
-379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",V,,Y,Q
+379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",E,,Y,Q
 22413,animals,reptiles,Carphodactylidae,Phyllurus championae,Connors' Range broad-tailed gecko,"Schneider, Couper, Hoskin & Covacevich 2000",V,,Y,Q
 27779,animals,reptiles,Carphodactylidae,Phyllurus gulbaru,Gulbaru gecko,"Hoskin, Couper & Schneider 2003",CR,CE,Y,Q
 380,animals,reptiles,Carphodactylidae,Phyllurus isis,Mount Jukes broad-tailed gecko,"Couper, Covaevich & Moritz, 1993",V,,Y,Q
@@ -52,7 +52,7 @@ Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA statu
 56,animals,reptiles,Chelidae,Elusor macrurus,Mary River turtle,"Cann & Legler, 1994",E,E,Y,Q
 27777,animals,reptiles,Chelidae,Emydura macquarii emmotti,Emmott's short-neck turtle,"Cann, McCord & Joseph-Ouni, 2003",C,,N,QA
 29733,animals,reptiles,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",CR,,Y,Q
-48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",V,V,Y,Q
+48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",E,V,Y,Q
 22659,animals,reptiles,Chelidae,Wollumbinia belli,Bell's turtle,"(Gray, 1844)",E,E,Y,QA
 29399,animals,amphibians,Microhylidae,Cophixalus concinnus,beautiful nurseryfrog,"Tyler, 1979",CR,CE,Y,Q
 34088,animals,amphibians,Microhylidae,Cophixalus kulakula,Kutini boulder-frog,"Hoskin & Aland, 2011",C,,N,Q
@@ -61,13 +61,13 @@ Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA statu
 711,animals,amphibians,Microhylidae,Cophixalus neglectus,Bellenden Ker nurseryfrog,"Zweifel, 1962",CR,CE,Y,Q
 34089,animals,amphibians,Microhylidae,Cophixalus pakayakulangun,golden-capped boulder-frog,"Hoskin & Aland, 2011",C,,N,Q
 34968,animals,amphibians,Microhylidae,Cophixalus petrophilus,blotched boulder-frog,"Hoskin, 2013",C,,N,Q
-19463,animals,amphibians,Microhylidae,Cophixalus zweifeli,Cape Melville boulderfrog,"Davies & McDonald, 1998",V,,Y,Q
+19463,animals,amphibians,Microhylidae,Cophixalus zweifeli,Cape Melville boulderfrog,"Davies & McDonald, 1998",C,,N,Q
 18173,animals,amphibians,Hylidae,Litoria andiirrmalin,Melville Range treefrog,"McDonald, 1997",V,,Y,Q
 18279,animals,amphibians,Hylidae,Litoria kroombitensis,Kroombit treefrog,"Hoskin, Hines, Meyer, Clarke & Cunningham, 2013",CR,CE,Y,Q
 616,animals,amphibians,Hylidae,Litoria longirostris,long snouted treefrog,"Tyler & Davies, 1977",NT,,Y,Q
 602,animals,amphibians,Hylidae,Litoria lorica,little waterfall frog,"Davies & McDonald, 1979",CR,CE,Y,Q
 31630,animals,amphibians,Hylidae,Litoria myola,Kuranda treefrog,"Hoskin, 2007",CR,CE,Y,Q
-587,animals,amphibians,Hylidae,Litoria subglandulosa,New England treefrog,"Tyler & Anstis, 1975",V,,Y,QA
+587,animals,amphibians,Hylidae,Litoria subglandulosa,New England treefrog,"Tyler & Anstis, 1975",V,V,Y,QA
 675,animals,amphibians,Myobatrachidae,Mixophyes fleayi,Fleay's barred frog,"Corben & Ingram, 1987",E,E,Y,QA
 676,animals,amphibians,Myobatrachidae,Mixophyes iteratus,giant barred frog,"Straughan, 1968",V,V,Y,QA
 660,animals,amphibians,Myobatrachidae,Pseudophryne covacevichae,magnificent broodfrog,"Ingram & Corben, 1994",V,V,Y,Q
@@ -75,31 +75,31 @@ Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA statu
 654,animals,amphibians,Myobatrachidae,Taudactylus liemi,Eungella tinkerfrog,"Ingram, 1980",NT,,Y,Q
 655,animals,amphibians,Myobatrachidae,Taudactylus pleione,Kroombit tinkerfrog,"Czechura, 1986",CR,CE,Y,Q
 656,animals,amphibians,Myobatrachidae,Taudactylus rheophilus,northern tinkerfrog,"Liem & Hosmer, 1973",CR,CE,Y,Q
-36765,animals,amphibians,Limnodynastidae,Philoria knowlesi,Mt Ballow mountain frog,"Mahony, Hines, Mahony & Donnellan, 2022",C,,N,QA
+36765,animals,amphibians,Limnodynastidae,Philoria knowlesi,Mt Ballow mountain frog,"Mahony, Hines, Mahony & Donnellan, 2022",E,,Y,QA
 687,animals,amphibians,Limnodynastidae,Philoria kundagungan,red-and-yellow mountainfrog,"(Ingram & Corben, 1975)",E,E,Y,QA
 18163,animals,ray-finned fishes,Gobiidae,Chlamydogobius micropterus,Elizabeth Springs goby,"Larson, 1995",E,E,Y,Q
 18164,animals,ray-finned fishes,Gobiidae,Chlamydogobius squamigenus,Edgbaston goby,"Larson, 1995",E,V,Y,Q
 32228,animals,ray-finned fishes,Gobiidae,Stiphodon pelewensis,Daintree cling goby,"Herre, 1936",V,,Y,QAI
 18167,animals,ray-finned fishes,Percichthyidae,Nannoperca oxleyana,Oxleyan pygmy perch,"Whitley, 1940",E,E,Y,QA
-18166,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,V,Y,Q
+18166,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,E,Y,Q
 18165,animals,ray-finned fishes,Pseudomugilidae,Scaturiginichthys vermeilipinnis,redfin blue eye,"Ivantsoff, Unmack, Saeed & Crowley, 1991",E,E,Y,Q
 27032,animals,ray-finned fishes,Melanotaeniidae,Rhadinocentrus ornatus,ornate rainbowfish,"(Regan, 1914)",,,N,QA
 18,animals,insects,Lycaenidae,Hypochrysops apollo apollo,Apollo jewel (Wet Tropics subspecies),"Miskin, 1891",V,,Y,Q
-6,animals,insects,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",CR,,Y,Q
+6,animals,insects,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",CR,CE,Y,Q
 2008,animals,insects,Nymphalidae,Argynnis hyperbius inconstans,Australian fritillary,"Butler, 1873",E,CE,Y,QA
 35259,animals,insects,Petaluridae,Petalura gigantea,south-eastern petaltail,"Leach, 1815",,,N,QA
 35260,animals,insects,Petaluridae,Petalura ingentissima,giant petaltail,"Tillyard, 1908",,,N,Q
 32098,animals,insects,Petaluridae,Petalura litorea,coastal petaltail,"Theishinger, 1999",,,N,QA
 35261,animals,insects,Petaluridae,Petalura pulcherrima,beautiful petaltail,"Tillyard, 1913",,,N,Q
-33588,animals,malacostracans,Parastacidae,Cherax robustus,,"Riek, 1951",V,,Y,Q
+33588,animals,malacostracans,Parastacidae,Cherax robustus,,"Riek, 1951",V,V,Y,Q
 33590,animals,malacostracans,Parastacidae,Euastacus bindal,Mt Elliot crayfish,"Morgan, 1989",CR,CE,Y,Q
-36167,animals,malacostracans,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",CR,,Y,Q
-33591,animals,malacostracans,Parastacidae,Euastacus eungella,,"Morgan, 1988",E,,Y,Q
+36167,animals,malacostracans,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",CR,CE,Y,Q
+33591,animals,malacostracans,Parastacidae,Euastacus eungella,,"Morgan, 1988",E,E,Y,Q
 33593,animals,malacostracans,Parastacidae,Euastacus hystricosus,,"Riek, 1951",E,,Y,Q
-33594,animals,malacostracans,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",CR,,Y,Q
-33595,animals,malacostracans,Parastacidae,Euastacus maidae,,"(Riek, 1956)",CR,,Y,Q
-33596,animals,malacostracans,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",E,,Y,Q
-33597,animals,malacostracans,Parastacidae,Euastacus robertsi,,"Monroe, 1977",E,,Y,Q
+33594,animals,malacostracans,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",CR,CE,Y,Q
+33595,animals,malacostracans,Parastacidae,Euastacus maidae,,"(Riek, 1956)",CR,CE,Y,Q
+33596,animals,malacostracans,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",E,E,Y,Q
+33597,animals,malacostracans,Parastacidae,Euastacus robertsi,,"Monroe, 1977",E,E,Y,Q
 33603,animals,malacostracans,Parastacidae,Tenuibranchiurus glypticus,swamp crayfish,"Riek, 1951",E,,Y,Q
 29180,animals,arachnids,Theraphosidae,Selenocosmia crassipes,,"(Koch, 1874)",C,,N,Q
 29182,animals,arachnids,Theraphosidae,Selenocosmia strenua,,"(Thorell, 1881)",C,,N,Q
@@ -954,7 +954,7 @@ Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA statu
 9553,plants,land plants,Thelypteridaceae,Chingia australis,,Holttum,E,E,Y,Q
 42078,plants,land plants,Thelypteridaceae,Pakau pennigera,,(G.Forst.) S.E.Fawc. & A.R.Sm.,E,,Y,QAI
 11646,plants,land plants,Thelypteridaceae,Plesioneuron tuberculatum,,(Ces.) Holttum,E,E,Y,QI
-11700,plants,land plants,Thelypteridaceae,Pneumatopteris pennigera,lime fern,(G.Forst.) Holttum,E,,Y,XU
+11700,plants,land plants,Thelypteridaceae,Pneumatopteris pennigera,lime fern,(G.Forst.) Holttum,,,N,XU
 42079,plants,land plants,Thelypteridaceae,Reholttumia costata,,(Brack.) S.E.Fawc. & A.R.Sm.,NT,,Y,QI
 16042,plants,land plants,Thelypteridaceae,Thelypteris confluens,,(Thunb.) C.V.Morton,V,,Y,QAI
 8185,plants,land plants,Proteaceae,Macadamia jansenii,,C.L.Gross & P.H.Weston,CR,E,Y,Q

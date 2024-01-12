@@ -13,12 +13,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 668,animals,amphibians,Limnodynastidae,Notaden bennettii,holy cross frog,"Günther, 1873",C,,N,N,QA
 669,animals,amphibians,Limnodynastidae,Notaden melanoscaphus,brown shovelfoot,"Hosmer, 1962",C,,N,N,QA
 670,animals,amphibians,Limnodynastidae,Notaden nichollsi,desert shovelfoot,"Parker, 1940",C,,N,N,QA
-36765,animals,amphibians,Limnodynastidae,Philoria knowlesi,Mt Ballow mountain frog,"Mahony, Hines, Mahony & Donnellan, 2022",C,,N,Y,QA
+36765,animals,amphibians,Limnodynastidae,Philoria knowlesi,Mt Ballow mountain frog,"Mahony, Hines, Mahony & Donnellan, 2022",E,,Y,Y,QA
 687,animals,amphibians,Limnodynastidae,Philoria kundagungan,red-and-yellow mountainfrog,"(Ingram & Corben, 1975)",E,E,Y,Y,QA
 688,animals,amphibians,Limnodynastidae,Philoria loveridgei,masked mountainfrog,"Parker, 1940",C,,N,N,QA
 680,animals,amphibians,Limnodynastidae,Platyplectrum ornatum,ornate burrowing frog,"(Gray, 1842)",C,,N,N,QA
 18161,animals,amphibians,Limnodynastidae,Platyplectrum spenceri,desert burrowing frog,"(Parker, 1940)",C,,N,N,QA
-693,animals,amphibians,Myobatrachidae,Assa darlingtoni,pouched frog,"(Loveridge, 1933)",V,,Y,N,QA
+693,animals,amphibians,Myobatrachidae,Assa darlingtoni,pouched frog,"(Loveridge, 1933)",V,V,Y,N,QA
 694,animals,amphibians,Myobatrachidae,Crinia bilingua,bilingual froglet,"(Martin, Tyler & Davies, 1980)",C,,N,N,QA
 695,animals,amphibians,Myobatrachidae,Crinia deserticola,chirping froglet,"(Liem & Ingram, 1977)",C,,N,N,QA
 696,animals,amphibians,Myobatrachidae,Crinia parinsignifera,beeping froglet,"Main, 1957",C,,N,N,QA
@@ -36,7 +36,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 659,animals,amphibians,Myobatrachidae,Pseudophryne major,great brown broodfrog,"Parker, 1940",C,,N,N,QA
 661,animals,amphibians,Myobatrachidae,Pseudophryne raveni,copper backed broodfrog,"Ingram & Corben, 1994",C,,N,N,Q
 648,animals,amphibians,Myobatrachidae,Rheobatrachus silus,southern gastric brooding frog,"Liem, 1973",PE,EX,Y,N,Q
-650,animals,amphibians,Myobatrachidae,Rheobatrachus vitellinus,northern gastric brooding frog,"Mahony, Tyler & Davies, 1984",E,EX,Y,N,Q
+650,animals,amphibians,Myobatrachidae,Rheobatrachus vitellinus,northern gastric brooding frog,"Mahony, Tyler & Davies, 1984",EX,EX,Y,N,Q
 651,animals,amphibians,Myobatrachidae,Taudactylus acutirostris,sharp snouted dayfrog,"(Andersson, 1916)",PE,EX,Y,N,Q
 652,animals,amphibians,Myobatrachidae,Taudactylus diurnus,southern dayfrog,"Straughan & Lee, 1966",PE,EX,Y,N,Q
 653,animals,amphibians,Myobatrachidae,Taudactylus eungellensis,Eungella dayfrog,"Liem & Hosmer, 1973",E,E,Y,Y,Q
@@ -99,12 +99,14 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 596,animals,amphibians,Hylidae,Litoria peronii,emerald spotted treefrog,"(Tschudi, 1838)",C,,N,N,QA
 597,animals,amphibians,Hylidae,Litoria revelata,whirring treefrog,"Ingram, Corben & Hosmer, 1982",C,,N,N,QA
 598,animals,amphibians,Hylidae,Litoria rheocola,common mistfrog,"Liem, 1974",E,,Y,N,Q
-599,animals,amphibians,Hylidae,Litoria rothii,northern laughing treefrog,"(De Vis, 1884)",C,,N,N,QA
+42173,animals,amphibians,Hylidae,Litoria ridibunda,western laughing treefrog,"Donnellan et al., 2023",C,,N,N,QA
+599,animals,amphibians,Hylidae,Litoria rothii,eastern laughing treefrog,"(De Vis, 1884)",C,,N,N,QI
+42174,animals,amphibians,Hylidae,Litoria rothii sensu lato,northern laughing treefrog,"(De Vis, 1884)",C,,N,N,QAI
 600,animals,amphibians,Hylidae,Litoria rubella,ruddy treefrog,"(Gray, 1842)",C,,N,N,QAI
 610,animals,amphibians,Hylidae,Litoria serrata,tapping green eyed frog,"(Andersson, 1916)",V,,Y,N,Q
 18440,animals,amphibians,Hylidae,Litoria sp. cf. cooloolensis (North Stradbroke Is population),,,NT,,Y,N,Q
 591,animals,amphibians,Hylidae,Litoria spaldingi,northern creek frog,"(Hosmer, 1964)",C,,N,N,QA
-587,animals,amphibians,Hylidae,Litoria subglandulosa,New England treefrog,"Tyler & Anstis, 1975",V,,Y,Y,QA
+587,animals,amphibians,Hylidae,Litoria subglandulosa,New England treefrog,"Tyler & Anstis, 1975",V,V,Y,Y,QA
 589,animals,amphibians,Hylidae,Litoria tyleri,southern laughing treefrog,"Martin, Watson, Gartside, Littlejohn & Loftus-Hills, 1979",C,,N,N,QA
 590,animals,amphibians,Hylidae,Litoria verreauxii,whistling treefrog,"(Duméril, 1853)",C,,N,N,QA
 29174,animals,amphibians,Hylidae,Litoria wilcoxii,eastern stony creek frog,"Günther, 1864",C,,N,N,QA
@@ -130,8 +132,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 34089,animals,amphibians,Microhylidae,Cophixalus pakayakulangun,golden-capped boulder-frog,"Hoskin & Aland, 2011",C,,N,Y,Q
 713,animals,amphibians,Microhylidae,Cophixalus peninsularis,Cape York nurseryfrog,"Zweifel, 1985",V,,Y,N,Q
 34968,animals,amphibians,Microhylidae,Cophixalus petrophilus,blotched boulder-frog,"Hoskin, 2013",C,,N,Y,Q
-699,animals,amphibians,Microhylidae,Cophixalus saxatilis,Black Mountain boulderfrog,"Zweifel & Parker, 1977",V,,Y,N,Q
-19463,animals,amphibians,Microhylidae,Cophixalus zweifeli,Cape Melville boulderfrog,"Davies & McDonald, 1998",V,,Y,Y,Q
+699,animals,amphibians,Microhylidae,Cophixalus saxatilis,Black Mountain boulderfrog,"Zweifel & Parker, 1977",C,,N,N,Q
+19463,animals,amphibians,Microhylidae,Cophixalus zweifeli,Cape Melville boulderfrog,"Davies & McDonald, 1998",C,,N,Y,Q
 581,animals,amphibians,Ranidae,Papurana daemeli,Australian woodfrog,"(Steindachner, 1868)",C,,N,N,QAI
 716,animals,amphibians,Bufonidae,Rhinella marina,cane toad,"(Linnaeus, 1758)",,,N,N,II
 32083,animals,arachnids,Idiopidae,Arbanitis longipes,Brisbane tube spider,"Koch, 1874",,,N,N,Q
@@ -223,6 +225,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1967,animals,birds,Apodidae,Collocalia esculenta,glossy swiftlet,"(Linnaeus, 1758)",C,,N,N,VI
 1971,animals,birds,Apodidae,Hirundapus caudacutus,white-throated needletail,"(Latham, 1801)",V,V,Y,N,QAI
 32024,animals,birds,Apodidae,Mearnsia novaeguineae,Papuan spine-tailed swift,"(D'Albertis & Salvadori, 1879)",C,,N,N,VI
+42198,animals,birds,Hydrobatidae,Hydrobates castro,band-rumped storm-petrel,"(Harcourt, 1851)",C,,N,N,VI
 36352,animals,birds,Hydrobatidae,Hydrobates leucorhous,Leach's Storm-Petrel,"(Vieillot, 1818)",C,,N,N,VI
 1247,animals,birds,Oceanitidae,Fregetta grallaria,white-bellied storm-petrel,"(Vieillot, 1817)",C,V,Y,N,QAI
 34426,animals,birds,Oceanitidae,Fregetta maoriana,New Zealand storm-petrel,"(Mathews, 1932)",C,,N,N,VI
@@ -452,7 +455,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1920,animals,birds,Laridae,Chlidonias leucopterus,white-winged black tern,"(Temminck, 1815)",SL,,Y,N,QAI
 1912,animals,birds,Laridae,Chroicocephalus novaehollandiae,silver gull,"Stephens, 1826",C,,N,N,QAI
 33858,animals,birds,Laridae,Chroicocephalus ridibundus,black-headed gull,"(Linnaeus, 1766)",C,,N,N,VI
-1886,animals,birds,Laridae,Gelochelidon nilotica,gull-billed tern,"Gmelin, 1789",SL,,Y,N,QAI
+1886,animals,birds,Laridae,Gelochelidon macrotarsa,Australian tern,"(Gould, 1837)",SL,,Y,N,QAI
+1891,animals,birds,Laridae,Gelochelidon nilotica,gull-billed tern,"Gmelin, 1789",SL,,Y,N,VU
 1908,animals,birds,Laridae,Gygis alba,white tern,"(Sparrman, 1786)",C,,N,N,VU
 1896,animals,birds,Laridae,Hydroprogne caspia,Caspian tern,"Pallas, 1770",SL,,Y,N,QAI
 32026,animals,birds,Laridae,Larus crassirostris,black-tailed gull,"Vieillot, 1818",C,,N,N,VI
@@ -473,6 +477,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1907,animals,birds,Laridae,Thalasseus bengalensis,lesser crested tern,"Lesson, 1831",C,,N,N,QAI
 1895,animals,birds,Laridae,Thalasseus bergii,crested tern,"Lichtenstein, 1823",SL,,Y,N,QAI
 1191,animals,birds,Cacatuidae,Cacatua galerita,sulphur-crested cockatoo,"(Latham, 1790)",C,,N,N,QAI
+1192,animals,birds,Cacatuidae,Cacatua leadbeateri leadbeateri,Major Mitchell's cockatoo,"(Vigors, 1831)",E,E,Y,N,QA
 1194,animals,birds,Cacatuidae,Cacatua sanguinea,little corella,"Gould, 1843",C,,N,N,QAI
 21967,animals,birds,Cacatuidae,Cacatua tenuirostris,long-billed corella,"(Kuhl, 1820)",C,,N,N,IA
 1196,animals,birds,Cacatuidae,Calyptorhynchus banksii,red-tailed black-cockatoo,"(Latham, 1790)",C,,N,N,QA
@@ -482,7 +487,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 22493,animals,birds,Cacatuidae,Calyptorhynchus lathami erebus,glossy black-cockatoo (northern),"Schodde & Mason, 1993",V,,Y,N,Q
 22494,animals,birds,Cacatuidae,Calyptorhynchus lathami lathami,glossy black-cockatoo (eastern),"Temminck, 1807",V,V,Y,N,QA
 1193,animals,birds,Cacatuidae,Eolophus roseicapilla,galah,"(Vieillot, 1817)",C,,N,N,QA
-1192,animals,birds,Cacatuidae,Lophochroa leadbeateri leadbeateri,Major Mitchell's cockatoo,"(Vigors, 1831)",E,E,Y,N,QA
 1173,animals,birds,Cacatuidae,Nymphicus hollandicus,cockatiel,"(Kerr, 1792)",C,,N,N,QA
 1175,animals,birds,Cacatuidae,Probosciger aterrimus macgillivrayi,palm cockatoo,"(Mathews, 1912)",E,V,Y,N,QI
 1185,animals,birds,Cacatuidae,Zanda funerea,yellow-tailed black-cockatoo,"(Shaw, 1794)",C,,N,N,QA
@@ -496,8 +500,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1164,animals,birds,Psittaculidae,Cyclopsitta diophthalma coxeni,Coxen's fig-parrot,"Gould, 1867",CR,CE,Y,N,QA
 1165,animals,birds,Psittaculidae,Cyclopsitta diophthalma macleayana,Macleay's fig-parrot,"Ramsay, 1874",V,,Y,N,Q
 1166,animals,birds,Psittaculidae,Cyclopsitta diophthalma marshalli,Marshall's fig-parrot,"(Iredale, 1946)",C,,N,N,Q
-1168,animals,birds,Psittaculidae,Eclectus roratus macgillivrayi,eclectus parrot (Cape York Peninsula),"Mathews, 1913",V,,Y,N,Q
-26892,animals,birds,Psittaculidae,Eclectus roratus polychloros,eclectus parrot (Torres Strait),"(Scopoli, 1786)",C,,N,N,QI
+1168,animals,birds,Psittaculidae,Eclectus polychloros macgillivrayi,eclectus parrot (Cape York Peninsula),"Mathews, 1913",V,,Y,N,Q
+26892,animals,birds,Psittaculidae,Eclectus polychloros polychloros,eclectus parrot (Torres Strait),"(Scopoli, 1786)",C,,N,N,QI
 1143,animals,birds,Psittaculidae,Geoffroyus geoffroyi,red-cheeked parrot,"(Bechstein, 1811)",C,,N,N,QAI
 1145,animals,birds,Psittaculidae,Glossopsitta concinna,musk lorikeet,"(Shaw, 1791)",C,,N,N,QA
 1149,animals,birds,Psittaculidae,Lathamus discolor,swift parrot,"(Shaw, 1790)",E,CE,Y,N,QA
@@ -523,10 +527,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1126,animals,birds,Psittaculidae,Platycercus venustus,northern rosella,"(Kuhl, 1820)",C,,N,N,QA
 1127,animals,birds,Psittaculidae,Polytelis alexandrae,princess parrot,"Gould, 1863",C,V,Y,N,VU
 21973,animals,birds,Psittaculidae,Polytelis swainsonii,superb parrot,"(Desmarest, 1826)",C,V,Y,N,VA
-1117,animals,birds,Psittaculidae,Psephotus chrysopterygius,golden-shouldered parrot,"Gould, 1858",E,E,Y,N,Q
+1117,animals,birds,Psittaculidae,Psephotellus chrysopterygius,golden-shouldered parrot,"(Gould, 1858)",E,E,Y,N,Q
+1119,animals,birds,Psittaculidae,Psephotellus pulcherrimus,paradise parrot,"(Gould, 1845)",PE,EX,Y,N,QA
+1121,animals,birds,Psittaculidae,Psephotellus varius,mulga parrot,"(Clark, 1910)",C,,N,N,QA
 1118,animals,birds,Psittaculidae,Psephotus haematonotus,red-rumped parrot,"(Gould, 1838)",C,,N,N,QA
-1119,animals,birds,Psittaculidae,Psephotus pulcherrimus,paradise parrot,"Gould, 1845",PE,EX,Y,N,QA
-1121,animals,birds,Psittaculidae,Psephotus varius,mulga parrot,"Clark, 1910",C,,N,N,QA
 1123,animals,birds,Psittaculidae,Psitteuteles versicolor,varied lorikeet,"(Lear, 1831)",C,,N,N,QA
 1124,animals,birds,Psittaculidae,Trichoglossus chlorolepidotus,scaly-breasted lorikeet,"(Kuhl, 1820)",C,,N,N,QA
 1125,animals,birds,Psittaculidae,Trichoglossus moluccanus,rainbow lorikeet,"(Gmelin, 1788)",C,,N,N,QA
@@ -760,11 +764,11 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1649,animals,birds,Artamidae,Artamus superciliosus,white-browed woodswallow,"(Gould, 1837)",C,,N,N,QA
 1650,animals,birds,Artamidae,Cracticus mentalis,black-backed butcherbird,"Salvadori & D'Albertis, 1876",C,,N,N,QAI
 1654,animals,birds,Artamidae,Cracticus nigrogularis,pied butcherbird,"(Gould, 1837)",C,,N,N,QA
-22475,animals,birds,Artamidae,Cracticus quoyi jardini,black butcherbird (coastal Cape York Peninsula),"Mathews, 1912",C,,N,N,Q
-22476,animals,birds,Artamidae,Cracticus quoyi rufescens,black butcherbird (coastal north-central Queensland)),"De Vis, 1883",C,,N,N,Q
 1656,animals,birds,Artamidae,Cracticus torquatus,grey butcherbird,"(Latham, 1801)",C,,N,N,QA
 1644,animals,birds,Artamidae,Gymnorhina tibicen,Australian magpie,"(Latham, 1801)",C,,N,N,QAI
 1655,animals,birds,Artamidae,Melloria quoyi,black butcherbird,"(Lesson, 1827)",C,,N,N,QAI
+22475,animals,birds,Artamidae,Melloria quoyi jardini,black butcherbird (coastal Cape York Peninsula),"(Mathews, 1912)",C,,N,N,Q
+22476,animals,birds,Artamidae,Melloria quoyi rufescens,black butcherbird (coastal north-central Queensland)),"(De Vis, 1883)",C,,N,N,Q
 1645,animals,birds,Artamidae,Strepera graculina,pied currawong,"Shaw,  1790",C,,N,N,QA
 22479,animals,birds,Artamidae,Strepera graculina graculina,pied currawong (eastern Australia),"Shaw, 1790",C,,N,N,QA
 22477,animals,birds,Artamidae,Strepera graculina magnirostris,pied currawong (Cape York Peninsula),"H.L. White, 1923",C,,N,N,Q
@@ -806,12 +810,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1346,animals,birds,Petroicidae,Drymodes superciliaris,northern scrub-robin,"Gould, 1850",C,,N,N,QAI
 1347,animals,birds,Petroicidae,Eopsaltria australis,eastern yellow robin,"(Shaw, 1790)",C,,N,N,QA
 1350,animals,birds,Petroicidae,Heteromyias cinereifrons,grey-headed robin,"(Salvadori, 1875)",C,,N,N,Q
+1341,animals,birds,Petroicidae,Kempiella griseoceps,yellow-legged flycatcher,"(De Vis, 1894)",C,,N,N,QAI
 1337,animals,birds,Petroicidae,Melanodryas cucullata,hooded robin,"(Latham, 1801)",C,,N,N,QA
 22461,animals,birds,Petroicidae,Melanodryas cucullata cucullata,hooded robin (south-eastern),"Latham, 1802",E,E,Y,N,QA
 22462,animals,birds,Petroicidae,Melanodryas cucullata picata,hooded robin (northern inland),"Gould, 1865",C,,N,N,QA
 1339,animals,birds,Petroicidae,Microeca fascinans,jacky winter,"(Latham, 1801)",C,,N,N,QAI
 1340,animals,birds,Petroicidae,Microeca flavigaster,lemon-bellied flycatcher,"Gould, 1843",C,,N,N,QAI
-1341,animals,birds,Petroicidae,Microeca griseoceps,yellow-legged flycatcher,"De Vis, 1894",C,,N,N,QAI
 1348,animals,birds,Petroicidae,Peneoenanthe pulverulenta,mangrove robin,"(Bonaparte, 1850)",C,,N,N,QA
 1330,animals,birds,Petroicidae,Petroica boodang,scarlet robin,"(Gmelin, 1789)",C,,N,N,QA
 1329,animals,birds,Petroicidae,Petroica goodenovii,red-capped robin,"(Vigors & Horsfield, 1827)",C,,N,N,QA
@@ -1696,7 +1700,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 19206,animals,insects,Lycaenidae,Hypochrysops ignitus ignitus,fiery jewel (southern subspecies),"(Leach, 1814)",,,N,N,QA
 19209,animals,insects,Lycaenidae,Hypochrysops miskini,coral jewel,"(Waterhouse, 1903)",,,N,N,Q
 19201,animals,insects,Lycaenidae,Hypochrysops narcissus narcissus,narcissus jewel,"(Fabricius, 1775)",,,N,N,Q
-6,animals,insects,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",CR,,Y,Y,Q
+6,animals,insects,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",CR,CE,Y,Y,Q
 19888,animals,insects,Lycaenidae,Hypochrysops polycletus,,"(Linnaeus, 1758)",,,N,N,QAI
 19215,animals,insects,Lycaenidae,Hypochrysops polycletus rex,royal jewel (New Guinea subspecies),"(Boisduval, 1832)",,,N,N,QAI
 19214,animals,insects,Lycaenidae,Hypochrysops polycletus rovena,royal jewel (Australian subspecies),"H.H. Druce, 1891",,,N,N,Q
@@ -1734,7 +1738,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 19281,animals,insects,Lycaenidae,Nacaduba calauria calauria,violet line-blue,"(C. Felder, 1860)",,,N,N,QAI
 19279,animals,insects,Lycaenidae,Nacaduba cyanea arinia,green-banded line-blue,"(Oberthur, 1878)",,,N,N,Q
 19278,animals,insects,Lycaenidae,Nacaduba kurava parma,white-banded line-blue,"Waterhouse & Lyell, 1914",,,N,N,QA
-13,animals,insects,Lycaenidae,Nacaduba pactolus cela,bold blue-line,"Waterhouse & Lyell, 1914",V,,Y,N,Q
+13,animals,insects,Lycaenidae,Nacaduba pactolus cela,bold blue-line,"Waterhouse & Lyell, 1914",C,,N,N,Q
 19306,animals,insects,Lycaenidae,Neolucia agricola agricola,fringed heath-blue,"(Westwood, [1851])",,,N,N,QA
 19322,animals,insects,Lycaenidae,Neopithecops lucifer heria,Devil's blue,"(Fruhstorfer, 1919)",,,N,N,QAI
 1,animals,insects,Lycaenidae,Nesolycaena albosericea,satin opal,"(Miskin, 1891)",,,N,N,Q
@@ -1760,7 +1764,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 19197,animals,insects,Lycaenidae,Paralucia pyrodiscus pyrodiscus,fiery copper,"(Rosenstock, 1885)",,,N,N,QA
 19276,animals,insects,Lycaenidae,Petrelaea tombugensis,mauve line-blue,"(Rober, [1886])",,,N,N,QAI
 31889,animals,insects,Lycaenidae,Philiris azula johnsoni,azure moonbeam,"Sands, 2015",,,N,N,Q
-3,animals,insects,Lycaenidae,Philiris diana,large moonbeam (Wet Tropics),"Waterhouse & Lyell, 1914",,,N,N,Q
+3,animals,insects,Lycaenidae,Philiris diana diana,large moonbeam (Wet Tropics),"Waterhouse & Lyell, 1914",,,N,N,Q
+21774,animals,insects,Lycaenidae,Philiris diana fortuna,,"Hacobian, Braby & Petrie, 2023",,,N,N,Q
 19218,animals,insects,Lycaenidae,Philiris fulgens kurandae,bicolour moonbeam,"Waterhouse, 1903",,,N,N,Q
 19974,animals,insects,Lycaenidae,Philiris innotata,purple moonbeam,"(Miskin, 1874)",,,N,N,QAI
 19223,animals,insects,Lycaenidae,Philiris lucina,blue moonbeam (Cape York),"(Waterhouse & Lyell, 1914)",,,N,N,Q
@@ -1839,7 +1844,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 18566,animals,insects,Formicidae,Trichomyrmex mayri,,"(Forel, 1902)",,,N,N,II
 18567,animals,insects,Formicidae,Turneria bidentata,,"Forel, 1895",,,N,N,QA
 18568,animals,insects,Formicidae,Wasmannia auropunctata,electric ant,"(Roger, 1863)",,,N,N,II
-26976,animals,lampreys,Geotriidae,Mordacia mordax,shorthead lamprey,"(Richardson, 1846)",,,N,N,QA
+30038,animals,lampreys,Mordaciidae,Mordacia praecox,non-parasitic lamprey,"Potter, 1968",E,E,Y,N,QA
 26926,animals,lobe-finned fishes,Ceratodontidae,Neoceratodus forsteri,Australian lungfish,"(Krefft, 1870)",,V,Y,N,Q
 33571,animals,malacostracans,Microprasellidae,Angeliera rivularis,,"Stock, 1985",,,N,N,Q
 33608,animals,malacostracans,Ponderellidae,Ponderella bundoona,,"Wilson & Keable, 2004",,,N,N,Q
@@ -1863,25 +1868,25 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 33586,animals,malacostracans,Parastacidae,Cherax punctatus,,"Clark, 1936",,,N,N,Q
 33587,animals,malacostracans,Parastacidae,Cherax quadricarinatus,redclaw,"(von Martens, 1868)",,,N,N,QA
 36163,animals,malacostracans,Parastacidae,Cherax rhynchotus,,"Riek, 1951",,,N,N,Q
-33588,animals,malacostracans,Parastacidae,Cherax robustus,,"Riek, 1951",V,,Y,Y,Q
+33588,animals,malacostracans,Parastacidae,Cherax robustus,,"Riek, 1951",V,V,Y,Y,Q
 36164,animals,malacostracans,Parastacidae,Cherax rotundus,,"Clark, 1941",,,N,N,QA
 36165,animals,malacostracans,Parastacidae,Cherax urospinosus,,"Riek, 1969",,,N,N,Q
 36166,animals,malacostracans,Parastacidae,Cherax wasselli,,"Riek, 1969",,,N,N,Q
 33589,animals,malacostracans,Parastacidae,Euastacus balanensis,,"Morgan, 1988",,,N,N,Q
 33590,animals,malacostracans,Parastacidae,Euastacus bindal,Mt Elliot crayfish,"Morgan, 1989",CR,CE,Y,Y,Q
-36167,animals,malacostracans,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",CR,,Y,Y,Q
-36176,animals,malacostracans,Parastacidae,Euastacus dalagarbe,,"Coughran, 2005",CR,,Y,N,QA
-33591,animals,malacostracans,Parastacidae,Euastacus eungella,,"Morgan, 1988",E,,Y,Y,Q
+36167,animals,malacostracans,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",CR,CE,Y,Y,Q
+36176,animals,malacostracans,Parastacidae,Euastacus dalagarbe,,"Coughran, 2005",CR,CE,Y,N,QA
+33591,animals,malacostracans,Parastacidae,Euastacus eungella,,"Morgan, 1988",E,E,Y,Y,Q
 33592,animals,malacostracans,Parastacidae,Euastacus fleckeri,,"(Watson, 1935)",,,N,N,Q
 33593,animals,malacostracans,Parastacidae,Euastacus hystricosus,,"Riek, 1951",E,,Y,Y,Q
-33594,animals,malacostracans,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",CR,,Y,Y,Q
-33595,animals,malacostracans,Parastacidae,Euastacus maidae,,"(Riek, 1956)",CR,,Y,Y,Q
+33594,animals,malacostracans,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",CR,CE,Y,Y,Q
+33595,animals,malacostracans,Parastacidae,Euastacus maidae,,"(Riek, 1956)",CR,CE,Y,Y,Q
 36178,animals,malacostracans,Parastacidae,Euastacus mirangudjin,orange-bellied crayfish,"Coughran, 2002",,,N,N,QA
-33596,animals,malacostracans,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",E,,Y,Y,Q
-33597,animals,malacostracans,Parastacidae,Euastacus robertsi,,"Monroe, 1977",E,,Y,Y,Q
+33596,animals,malacostracans,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",E,E,Y,Y,Q
+33597,animals,malacostracans,Parastacidae,Euastacus robertsi,,"Monroe, 1977",E,E,Y,Y,Q
 33598,animals,malacostracans,Parastacidae,Euastacus setosus,,"(Riek, 1956)",,,N,N,Q
 33599,animals,malacostracans,Parastacidae,Euastacus sulcatus,blue spiny crayfish,"Riek, 1951",C,,N,N,QA
-36168,animals,malacostracans,Parastacidae,Euastacus suttoni,,"Clark, 1941",E,,Y,N,QA
+36168,animals,malacostracans,Parastacidae,Euastacus suttoni,,"Clark, 1941",E,E,Y,N,QA
 33600,animals,malacostracans,Parastacidae,Euastacus urospinosus,,"(Riek, 1956)",,,N,N,Q
 33601,animals,malacostracans,Parastacidae,Euastacus valentulus,,"Riek, 1951",,,N,N,QA
 33602,animals,malacostracans,Parastacidae,Euastacus yigara,,"Short & Davie, 1993",,,N,N,Q
@@ -1914,7 +1919,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 22415,animals,mammals,Dasyuridae,Antechinus subtropicus,subtropical antechinus,"Van Dyck & Crowther, 2000",C,,N,N,QA
 824,animals,mammals,Dasyuridae,Dasycercus blythi,brush-tailed mulgara,"(Waite, 1904)",V,,Y,N,QA
 26895,animals,mammals,Dasyuridae,Dasycercus cristicauda,crest-tailed mulgara,"(Krefft, 1867)",V,,Y,N,QA
-827,animals,mammals,Dasyuridae,Dasyuroides byrnei,kowari,"(Spencer, 1896)",E,V,Y,N,QA
+827,animals,mammals,Dasyuridae,Dasyuroides byrnei,kowari,"(Spencer, 1896)",E,E,Y,N,QA
 813,animals,mammals,Dasyuridae,Dasyurus geoffroii geoffroii,western quoll,"Gould, 1841",PE,V,Y,N,QA
 800,animals,mammals,Dasyuridae,Dasyurus hallucatus,northern quoll,"Gould, 1842",C,E,Y,N,QA
 802,animals,mammals,Dasyuridae,Dasyurus maculatus gracilis,spotted-tailed quoll (northern subspecies),"(Ramsay, 1888)",E,E,Y,N,Q
@@ -1952,15 +1957,15 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 873,animals,mammals,Petauridae,Dactylopsila trivirgata,striped possum,"Gray, 1858",C,,N,N,QAI
 36761,animals,mammals,Petauridae,Petaurus ariel,savanna glider,"(Gould, 1842)",C,,N,N,QA
 875,animals,mammals,Petauridae,Petaurus australis australis,yellow-bellied glider (southern subspecies),"Shaw, 1791",V,V,Y,N,QA
-876,animals,mammals,Petauridae,Petaurus australis unnamed subsp.,yellow-bellied glider (northern subspecies),"Thomas, 1923",E,E,Y,N,Q
+876,animals,mammals,Petauridae,Petaurus australis brevirostrum,northern yellow-bellied glider,"Cooper, Travouillon & Helgen, 2023",E,E,Y,N,Q
 36760,animals,mammals,Petauridae,Petaurus breviceps,sugar glider,"(Waterhouse, 1838)",C,,N,N,QA
 878,animals,mammals,Petauridae,Petaurus gracilis,mahogany glider,"(de Vis, 1883)",E,E,Y,N,Q
 879,animals,mammals,Petauridae,Petaurus norfolcensis,squirrel glider,"(Kerr, 1792)",C,,N,N,QA
 36762,animals,mammals,Petauridae,Petaurus notatus,Krefft's glider,"Peters, 1859",C,,N,N,QA
 845,animals,mammals,Pseudocheiridae,Hemibelideus lemuroides,lemuroid ringtail possum,"(Collett, 1884)",CR,,Y,N,Q
-2455,animals,mammals,Pseudocheiridae,Petauroides armillatus,central greater glider,"Thomas, 1923",E,E,Y,N,QA
-2456,animals,mammals,Pseudocheiridae,Petauroides minor,northern greater glider,"(Collett, 1887)",V,V,Y,N,Q
-848,animals,mammals,Pseudocheiridae,Petauroides volans sensu lato,greater glider,"(Kerr, 1792)",V,V,Y,N,QA
+848,animals,mammals,Pseudocheiridae,Petauroides volans,greater glider,"(Kerr, 1792)",V,V,Y,N,QA
+2456,animals,mammals,Pseudocheiridae,Petauroides volans minor,northern greater glider,"(Collett, 1887)",V,V,Y,N,Q
+2455,animals,mammals,Pseudocheiridae,Petauroides volans volans,southern greater glider,"(Kerr, 1792)",E,E,Y,N,QA
 849,animals,mammals,Pseudocheiridae,Petropseudes dahli,rock ringtail possum,"(Collett, 1895)",C,,N,N,QA
 851,animals,mammals,Pseudocheiridae,Pseudocheirus peregrinus,common ringtail possum,"(Boddaert, 1785)",C,,N,N,QA
 853,animals,mammals,Pseudocheiridae,Pseudochirops archeri,green ringtail possum,"(Collett, 1884)",C,,N,N,Q
@@ -1968,7 +1973,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 843,animals,mammals,Pseudocheiridae,Pseudochirulus herbertensis,Herbert River ringtail possum,"(Collett, 1884)",C,,N,N,Q
 930,animals,mammals,Acrobatidae,Acrobates pygmaeus,feathertail glider,"(Shaw, 1793)",C,,N,N,QA
 881,animals,mammals,Phalangeridae,Phalanger mimicus,southern common cuscus,"Thomas, 1895",C,,N,N,QAI
-883,animals,mammals,Phalangeridae,Spilocuscus maculatus,common spotted cuscus,"(Demarest, 1818)",C,,N,N,QAI
+883,animals,mammals,Phalangeridae,Spilocuscus nudicaudatus,Australian spotted cuscus,"(Gould, 1850)",C,,N,N,Q
 857,animals,mammals,Phalangeridae,Trichosurus caninus,short-eared possum,"(Ogilby, 1835)",C,,N,N,QA
 859,animals,mammals,Phalangeridae,Trichosurus vulpecula,common brushtail possum,"(Kerr, 1792)",C,,N,N,QA
 869,animals,mammals,Hypsiprymnodontidae,Hypsiprymnodon moschatus,musky rat-kangaroo,"Ramsay, 1876",C,,N,N,Q
@@ -2021,7 +2026,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 968,animals,mammals,Rhinolophidae,Rhinolophus megaphyllus,eastern horseshoe-bat,"Gray, 1834",C,,N,N,QAI
 22063,animals,mammals,Rhinolophidae,Rhinolophus megaphyllus ignifer,northern horseshoe bat,,C,,N,N,QA
 22064,animals,mammals,Rhinolophidae,Rhinolophus megaphyllus megaphyllus,southern horseshoe bat,"Gray, 1834.",C,,N,N,QA
-969,animals,mammals,Rhinolophidae,Rhinolophus philippinensis,greater large-eared horseshoe bat,"Waterhouse, 1843",E,V,Y,Y,QI
+969,animals,mammals,Rhinolophidae,Rhinolophus robertsi,greater large-eared horseshoe bat,"Tate, 1952",E,V,Y,Y,QI
 1001,animals,mammals,Hipposideridae,Hipposideros ater aruensis,eastern dusky leaf-nosed bat,"Gray, 1858",C,,N,N,QAI
 1002,animals,mammals,Hipposideridae,Hipposideros cervinus,fawn leaf-nosed bat,"(Gould, 1854)",V,,Y,N,QAI
 1003,animals,mammals,Hipposideridae,Hipposideros diadema reginae,diadem leaf-nosed bat,"Troughton, 1937.",NT,,Y,N,QAI
@@ -2045,7 +2050,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 22061,animals,mammals,Molossidae,Mormopterus ridei,eastern free-tailed bat,"(Felten, 1964)",C,,N,N,QA
 954,animals,mammals,Miniopteridae,Miniopterus australis,little bent-wing bat,"(Tomes, 1858)",C,,N,N,QAI
 955,animals,mammals,Miniopteridae,Miniopterus schreibersii oceanensis,eastern bent-wing bat,"Maeda, 1982",C,,N,N,QAI
-971,animals,mammals,Vespertilionidae,Chalinolobus dwyeri,large-eared pied bat,"Ryan, 1966",E,V,Y,N,QA
+971,animals,mammals,Vespertilionidae,Chalinolobus dwyeri,large-eared pied bat,"Ryan, 1966",E,E,Y,N,QA
 972,animals,mammals,Vespertilionidae,Chalinolobus gouldii,Gould's wattled bat,"(Gray, 1841)",C,,N,N,QA
 973,animals,mammals,Vespertilionidae,Chalinolobus morio,chocolate wattled bat,"(Gray, 1841)",C,,N,N,QA
 961,animals,mammals,Vespertilionidae,Chalinolobus nigrogriseus,hoary wattled bat,"(Gould, 1856)",C,,N,N,QAI
@@ -2109,7 +2114,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 738,animals,mammals,Muridae,Pseudomys patrius,eastern pebble-mound mouse,"Thomas & Dollman, 1909",C,,N,N,Q
 741,animals,mammals,Muridae,Rattus fuscipes,bush rat,"(Waterhouse, 1839)",C,,N,N,QA
 742,animals,mammals,Muridae,Rattus leucopus,Cape York rat,"(Gray, 1867)",C,,N,N,QAI
-743,animals,mammals,Muridae,Rattus lutreolus,swamp rat,"(Gray, 1841)",C,,N,N,QA
+743,animals,mammals,Muridae,Rattus lutreolus,swamp rat,"(J.E. Gray, 1841)",C,,N,N,QA
 730,animals,mammals,Muridae,Rattus norvegicus,brown rat,"(Berkenhout, 1769)",,,N,N,II
 731,animals,mammals,Muridae,Rattus rattus,black rat,"(Linnaeus, 1758)",,,N,N,II
 732,animals,mammals,Muridae,Rattus sordidus,canefield rat,"(Gould, 1858)",C,,N,N,QAI
@@ -2231,7 +2236,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27027,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia nigrans,blackbanded rainbowfish,"Richardson, 1843",,,N,N,QA
 34840,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia rubrostriata,red-striped rainbowfish,"(Ramsay & Ogilby, 1886)",,,N,N,QI
 27858,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia sp. nov. 'Malanda',Malanda rainbowfish,,CR,CE,Y,N,Q
-27859,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia sp. nov. 'Running River',Running River rainbowfish,,CR,,Y,N,Q
+27859,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia sp. nov. 'Running River',Running River rainbowfish,,CR,CE,Y,N,Q
 27028,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia splendida inornata,checkered rainbowfish,"(Castelnau, 1875)",,,N,N,QA
 27029,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia splendida splendida,eastern rainbowfish,"(Peters, 1866)",,,N,N,Q
 27030,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia splendida tatei,desert rainbowfish,"(Ziertz, 1896)",,,N,N,QA
@@ -2240,7 +2245,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27032,animals,ray-finned fishes,Melanotaeniidae,Rhadinocentrus ornatus,ornate rainbowfish,"(Regan, 1914)",,,N,Y,QA
 27057,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil cyanodorsalis,blueback blue eye,"Allen & Sarti, 1983",,,N,N,QA
 27058,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil gertrudae,spotted blue eye,"Weber, 1911",,,N,N,QAI
-18166,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,V,Y,Y,Q
+18166,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,E,Y,Y,Q
 27059,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil signifer,Pacific blue eye,"Kner, 1865",,,N,N,QA
 27060,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil tenellus,delicate blue eye,"Taylor, 1964",,,N,N,QAI
 18165,animals,ray-finned fishes,Pseudomugilidae,Scaturiginichthys vermeilipinnis,redfin blue eye,"Ivantsoff, Unmack, Saeed & Crowley, 1991",E,E,Y,Y,Q
@@ -2565,7 +2570,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 30272,animals,reptiles,Chelidae,Elseya albagula,white-throated snapping turtle,"Thomson, Georges & Limpus, 2006",CR,CE,Y,N,Q
 18454,animals,reptiles,Chelidae,Elseya irwini,Irwin's turtle,"Cann, 1997",C,,N,Y,Q
 31642,animals,reptiles,Chelidae,Elseya irwini (Johnstone),Johnstone River snapping turtle,,C,,N,N,Q
-18453,animals,reptiles,Chelidae,Elseya oneiros,Gulf snapping turtle,"Joseph-Ouni et al., 2020",V,E,Y,N,QA
+18453,animals,reptiles,Chelidae,Elseya lavarackorum,Gulf snapping turtle,"(White & Archer, 1994)",V,E,Y,N,QA
 56,animals,reptiles,Chelidae,Elusor macrurus,Mary River turtle,"Cann & Legler, 1994",E,E,Y,Y,Q
 27777,animals,reptiles,Chelidae,Emydura macquarii emmotti,Emmott's short-neck turtle,"Cann, McCord & Joseph-Ouni, 2003",C,,N,Y,QA
 58,animals,reptiles,Chelidae,Emydura macquarii krefftii,Krefft's river turtle,"(Gray,  1871)",C,,N,N,Q
@@ -2575,7 +2580,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29733,animals,reptiles,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",CR,,Y,Y,Q
 29734,animals,reptiles,Chelidae,Emydura subglobosa worrelli,diamond head turtle,"(Wells & Wellington, 1985)",NT,,Y,N,QA
 18466,animals,reptiles,Chelidae,Emydura tanybaraga,northern yellow-faced turtle,"Cann, 1997",C,,N,N,QA
-48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",V,V,Y,Y,Q
+48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",E,V,Y,Y,Q
 22659,animals,reptiles,Chelidae,Wollumbinia belli,Bell's turtle,"(Gray, 1844)",E,E,Y,Y,QA
 54,animals,reptiles,Chelidae,Wollumbinia latisternum,saw-shelled turtle,"(Gray, 1867)",C,,N,N,QA
 34163,animals,reptiles,Gekkonidae,Cyrtodactylus adorus,Pascoe River ring-tailed gecko,"Shea, Couper, Worthington Wilmer & Amey 2011",C,,N,N,Q
@@ -2604,9 +2609,15 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 18840,animals,reptiles,Gekkonidae,Nactus cheverti,Chevert gecko,"(Boulenger, 1885)",C,,N,N,Q
 18841,animals,reptiles,Gekkonidae,Nactus eboracensis,Cape York bent-toed gecko,"(Macleay, 1878)",C,,N,N,Q
 405,animals,reptiles,Gekkonidae,Nactus galgajuga,Black Mountain gecko,"(Ingram, 1978)",C,,N,N,Q
-31634,animals,reptiles,Diplodactylidae,Amalosia jacovae,clouded gecko,"Couper, Keim & Hoskin, 2007",C,,N,N,Q
-401,animals,reptiles,Diplodactylidae,Amalosia lesueurii,Lesueur's velvet gecko,"(Dumeril & Bibron, 1836)",C,,N,N,QA
-404,animals,reptiles,Diplodactylidae,Amalosia rhombifer,zig-zag gecko,"Gray, 1845",C,,N,N,QA
+36208,animals,reptiles,Diplodactylidae,Amalosia capensis,Cape York zigzag gecko,"Hoskin & Couper, 2023",C,,N,N,Q
+36205,animals,reptiles,Diplodactylidae,Amalosia hinesi,Nandewar zigzag gecko,"Hoskin & Couper, 2023",C,,N,N,QA
+31634,animals,reptiles,Diplodactylidae,Amalosia jacovae,clouded gecko,"(Couper, Keim & Hoskin, 2007)",C,,N,N,QA
+401,animals,reptiles,Diplodactylidae,Amalosia lesueurii,Lesueur's velvet gecko,"(Duméril & Bibron, 1836)",C,,N,N,QA
+36207,animals,reptiles,Diplodactylidae,Amalosia nebula,upland zigzag gecko,"Hoskin & Couper, 2023",C,,N,N,Q
+36209,animals,reptiles,Diplodactylidae,Amalosia queenslandia,Queensland zigzag gecko,"Hoskin & Couper, 2023",C,,N,N,Q
+36204,animals,reptiles,Diplodactylidae,Amalosia rhombifer,zigzag velvet gecko,"(Gray, 1845)",C,,N,N,QA
+391,animals,reptiles,Diplodactylidae,Amalosia robusta,robust velvet gecko,"(Boulenger, 1885)",C,,N,N,QA
+36206,animals,reptiles,Diplodactylidae,Amalosia saxicola,rock zigzag gecko,"Hoskin & Couper, 2023",C,,N,N,Q
 433,animals,reptiles,Diplodactylidae,Crenadactylus naso,northern clawless geckos,"Storr, 1978",C,,N,N,QA
 35829,animals,reptiles,Diplodactylidae,Diplodactylus ameyi,eastern deserts fat-tailed gecko,"Couper & Oliver, 2016",C,,N,N,QA
 35619,animals,reptiles,Diplodactylidae,Diplodactylus barraganae,Gulf fat-tailed gecko,"Couper, Oliver & Pepper, 2014",C,,N,N,QA
@@ -2621,7 +2632,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41416,animals,reptiles,Diplodactylidae,Lucasium iris,Gilbert ground gecko,"Vanderduys, Hoskin, Kutt, Wright & Zozaya, 2020",C,,N,N,Q
 427,animals,reptiles,Diplodactylidae,Lucasium microplax,southern sandplain gecko,"Eastwood, Doughty, Hutchinson, Keogh & Pepper, 2020",C,,N,N,QA
 426,animals,reptiles,Diplodactylidae,Lucasium steindachneri,Steindachner's gecko,"(Boulenger, 1885)",C,,N,N,QA
-391,animals,reptiles,Diplodactylidae,Nebulifera robusta,robust velvet gecko,"Boulenger, 1885",C,,N,N,QA
 36675,animals,reptiles,Diplodactylidae,Oedura argentea,silver-eyed velvet gecko,"Hoskin, Zozaya & Vanderduys, 2018",C,,N,N,Q
 35823,animals,reptiles,Diplodactylidae,Oedura bella,Gulf marbled velvet gecko,"Oliver & Doughty, 2016",C,,N,N,QA
 399,animals,reptiles,Diplodactylidae,Oedura castelnaui,northern velvet gecko,"(Thominot, 1889)",C,,N,N,Q
@@ -2652,7 +2662,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 395,animals,reptiles,Carphodactylidae,Nephrurus levis,three-lined knob-tail,"De Vis, 1886",C,,N,N,QA
 389,animals,reptiles,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",CR,,Y,Y,Q
 22412,animals,reptiles,Carphodactylidae,Phyllurus amnicola,Mount Elliot broad-tailed gecko,"Hoskin, Couper, Schneider & Covacevich 2000",V,,Y,Y,Q
-379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",V,,Y,Y,Q
+379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",E,,Y,Y,Q
 22413,animals,reptiles,Carphodactylidae,Phyllurus championae,Connors' Range broad-tailed gecko,"Schneider, Couper, Hoskin & Covacevich 2000",V,,Y,Y,Q
 42046,animals,reptiles,Carphodactylidae,Phyllurus fimbriatus,Scawfell Island leaf-tailed gecko,"Hoskin, 2023",C,,N,N,Q
 27779,animals,reptiles,Carphodactylidae,Phyllurus gulbaru,Gulbaru gecko,"Hoskin, Couper & Schneider 2003",CR,CE,Y,Y,Q
@@ -2716,8 +2726,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 544,animals,reptiles,Agamidae,Pogona vitticeps,central bearded dragon,"(Ahl, 1926)",C,,N,N,QA
 563,animals,reptiles,Agamidae,Tropicagama temporalis,swamplands lashtail,"(Günther, 1867)",C,,N,N,QAI
 18390,animals,reptiles,Agamidae,Tympanocryptis condaminensis,Condamine earless dragon,"Melville, Smith, Hobson, Hunjan & Shoo, 2014",E,E,Y,N,Q
+36744,animals,reptiles,Agamidae,Tympanocryptis darlingensis,Darling earless dragon,"Chaplin, Wilson, Sumner & Melville, 2023",C,,N,N,QA
+36746,animals,reptiles,Agamidae,Tympanocryptis einasleighensis,Einasleigh earless dragon,"Chaplin, Wilson, Sumner & Melville, 2023",C,,N,N,Q
+36745,animals,reptiles,Agamidae,Tympanocryptis hobsoni,Emerald earless dragon,"Chaplin, Wilson, Sumner & Melville, 2023",C,,N,N,Q
 546,animals,reptiles,Agamidae,Tympanocryptis intima,gibber earless dragon,"Mitchell, 1948",C,,N,N,QA
-547,animals,reptiles,Agamidae,Tympanocryptis lineata,lined earless dragon,"Peters, 1863",C,,N,N,QA
 35425,animals,reptiles,Agamidae,Tympanocryptis pentalineata,five-lined earless dragon,"Melville, Smith, Hobson, Hunjan & Shoo, 2014",C,,N,N,Q
 535,animals,reptiles,Agamidae,Tympanocryptis tetraporophora,Eyrean earless dragon,"Lucas & Frost, 1895",C,,N,N,QA
 35426,animals,reptiles,Agamidae,Tympanocryptis wilsoni,Roma earless dragon,"Melville, Smith, Hobson, Hunjan & Shoo, 2014",E,,Y,N,Q
@@ -2745,7 +2757,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 304,animals,reptiles,Scincidae,Anomalopus leuckartii,two-clawed worm-skink,"(Weinland, 1862)",C,,N,N,QA
 305,animals,reptiles,Scincidae,Anomalopus mackayi,long-legged worm-skink,"Greer & Cogger, 1985",E,V,Y,N,QA
 308,animals,reptiles,Scincidae,Anomalopus verreauxii,three-clawed worm-skink,"(Dumeril & Dumeril, 1851)",C,,N,N,QA
-33180,animals,reptiles,Scincidae,Austroablepharus barrylyoni,Lyon's soil-crevice skink,"Couper, Limpus, Mcdonald & Amey 2010",CR,,Y,N,Q
+33180,animals,reptiles,Scincidae,Austroablepharus barrylyoni,Lyon's soil-crevice skink,"Couper, Limpus, Mcdonald & Amey 2010",CR,CE,Y,N,Q
 117,animals,reptiles,Scincidae,Austroablepharus kinghorni,red-tailed soil-crevice skink,"(Copland, 1947)",C,,N,N,QA
 221,animals,reptiles,Scincidae,Bellatorias frerei,major skink,"Günther, 1897",C,,N,N,QAI
 224,animals,reptiles,Scincidae,Bellatorias major,land mullet,"(Gray, 1845)",C,,N,N,QA
@@ -2868,7 +2880,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 172,animals,reptiles,Scincidae,Glaphyromorphus pumilus,dwarf mulch-skink,"(Boulenger, 1887)",C,,N,N,Q
 173,animals,reptiles,Scincidae,Glaphyromorphus punctulatus,fine-spotted mulch-skink,"(Peters, 1871)",C,,N,N,Q
 175,animals,reptiles,Scincidae,Gnypetoscincus queenslandiae,prickly forest skink,"(De Vis, 1890)",C,,N,N,Q
-178,animals,reptiles,Scincidae,Harrisoniascincus zia,rainforest cool-skink,"(Ingram & Ehmann, 1981)",V,,Y,N,QA
+178,animals,reptiles,Scincidae,Harrisoniascincus zia,rainforest cool-skink,"(Ingram & Ehmann, 1981)",V,V,Y,N,QA
 189,animals,reptiles,Scincidae,Karma murrayi,Murray's skink,"(Boulenger, 1887)",C,,N,N,QA
 18839,animals,reptiles,Scincidae,Karma tryoni,Tryon's skink,"(Longman, 1918)",E,,Y,Y,QA
 179,animals,reptiles,Scincidae,Lampropholis adonis,diamond-shielded sunskink,"Ingram, 1991",C,,N,N,Q
@@ -2940,10 +2952,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 113,animals,reptiles,Scincidae,Ophioscincus cooloolensis,Cooloola snake-skink,"Greer & Cogger, 1985",C,,N,N,Q
 114,animals,reptiles,Scincidae,Ophioscincus ophioscincus,yolk-bellied snake-skink,"(Boulenger, 1887)",C,,N,N,Q
 116,animals,reptiles,Scincidae,Ophioscincus truncatus,short-limbed snake-skink,"(Peters, 1876)",C,,N,N,QA
-36768,animals,reptiles,Scincidae,Praeteropus auxilliger,sandstone legless skink,"Hutchinson, Couper, Amey & Worthington Wilmer, 2021",C,,N,N,Q
+36768,animals,reptiles,Scincidae,Praeteropus auxilliger,sandstone worm-skink,"Hutchinson, Couper, Amey & Worthington Wilmer, 2021",C,,N,N,Q
 317,animals,reptiles,Scincidae,Praeteropus brevicollis,short-necked worm-skink,"Greer & Cogger, 1985",C,,N,N,Q
 303,animals,reptiles,Scincidae,Praeteropus gowi,speckled worm-skink,"Greer & Cogger, 1985",C,,N,N,Q
-36769,animals,reptiles,Scincidae,Praeteropus monachus,Mt Abbott legless skink,"Hutchinson, Couper, Amey & Worthington Wilmer, 2021",C,,N,N,Q
+36769,animals,reptiles,Scincidae,Praeteropus monachus,Mt Abbot worm-skink,"Hutchinson, Couper, Amey & Worthington Wilmer, 2021",C,,N,N,Q
 119,animals,reptiles,Scincidae,Proablepharus tenuis,northern soil-crevice skink,"(Broom, 1896)",C,,N,N,QA
 128,animals,reptiles,Scincidae,Pygmaeascincus koshlandae,fine-browed dwarf skink,"Greer, 1991",C,,N,N,Q
 130,animals,reptiles,Scincidae,Pygmaeascincus sadlieri,Magnetic Island dwarf skink,"Greer, 1991",C,,N,N,Q
@@ -5047,7 +5059,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 30827,fungi,arthoniomycetes,Opegraphaceae,Cresponea flava,,(Vain.) Egea & Torrente,C,,N,N,Q
 26562,fungi,arthoniomycetes,Opegraphaceae,Cresponea leprieurii,,(Mont.) Egea & Torrente,C,,N,N,Q
 31817,fungi,arthoniomycetes,Opegraphaceae,Cresponea litoralis,,Elix,C,,N,N,Q
-24493,fungi,arthoniomycetes,Opegraphaceae,Cresponea plurilocularis,,(Nyl.) Egea & Torrente,C,,N,N,QA
 30833,fungi,arthoniomycetes,Opegraphaceae,Cresponea proximata,,(Nyl.) Egea & Torrente,C,,N,N,Q
 28246,fungi,arthoniomycetes,Opegraphaceae,Dictyographa cinerea,,(C.Knight & Mitt.) Muell.Arg.,C,,N,N,Q
 31921,fungi,arthoniomycetes,Opegraphaceae,Dictyographa psyllocarpa,,(Leight.) Redinger,C,,N,N,Q
@@ -5095,6 +5106,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 25316,fungi,arthoniomycetes,Roccellaceae,Chiodecton queenslandiae,,G.Thor,C,,N,N,Q
 23986,fungi,arthoniomycetes,Roccellaceae,Chiodecton sphaerale,,Ach.,C,,N,N,QA
 23081,fungi,arthoniomycetes,Roccellaceae,Chiodecton sublaevigatum,,Kremp.,C,,N,N,Q
+24493,fungi,arthoniomycetes,Roccellaceae,Cresponea plurilocularis,,(Nyl.) Egea & Torrente,C,,N,N,QA
 23082,fungi,arthoniomycetes,Roccellaceae,Dichosporidium boschianum,,(Mont.) G.Thor,C,,N,N,Q
 40868,fungi,arthoniomycetes,Roccellaceae,Dichosporidium microsporum,,G.Thor,C,,N,N,Q
 30100,fungi,arthoniomycetes,Roccellaceae,Enterographa anguinella,,(Nyl.) Redinger,C,,N,N,Q
@@ -6675,16 +6687,29 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 23394,fungi,lecanoromycetes,Peltigeraceae,Peltigera polydactyla var. polydactyla,,(Neck.) Hoffm.,C,,N,N,U
 25475,fungi,lecanoromycetes,Peltigeraceae,Peltigera polydactylon,,(Neck.) Hoffm.,C,,N,N,QAI
 32329,fungi,lecanoromycetes,Peltigeraceae,Peltigera pruinosa,,(Gyeln.) Inumaru,C,,N,N,Q
+42181,fungi,lecanoromycetes,Pertusariaceae,Lepra albopunctata,,(A.W.Archer & Elix) A.W.Archer & Elix,C,,N,N,Q
+42184,fungi,lecanoromycetes,Pertusariaceae,Lepra asiana,,(Vain.) A.W.Archer & Elix,C,,N,N,Q
 42110,fungi,lecanoromycetes,Pertusariaceae,Lepra clarkeana,,"(A.W. Archer) I. Schmitt, Hodkinson & Lumbsch",,,N,N,U
+42176,fungi,lecanoromycetes,Pertusariaceae,Lepra commutata,,(Muell. Arg) Lendemer & R.C. Harris,C,,N,N,Q
 42087,fungi,lecanoromycetes,Pertusariaceae,Lepra elatinica,,A.W.Archer & Elix,C,,N,N,Q
-41276,fungi,lecanoromycetes,Pertusariaceae,Lepra lacericans,,(A.W.Archer) A.W.Archer & Elix,C,,N,N,Q
+42186,fungi,lecanoromycetes,Pertusariaceae,Lepra erythrella,,"(Muell. Arg.) I. Schmitt, Hodkinson & Lumbsch",C,,N,N,Q
+42182,fungi,lecanoromycetes,Pertusariaceae,Lepra lacerans,,"(Muell. Arg.) I. Schmitt, Hodkinson & Lumbsch",C,,N,N,Q
+41276,fungi,lecanoromycetes,Pertusariaceae,Lepra lacericans,,(A.W.Archer) A.W.Archer & Elix,C,,N,N,QA
+42178,fungi,lecanoromycetes,Pertusariaceae,Lepra miscella,,"(A.W. Archer) I. Schmitt, Hodkinson & Lumbsch",C,,N,N,Q
+42180,fungi,lecanoromycetes,Pertusariaceae,Lepra muricata,,(J.C.David) A.W.Archer & Elix,C,,N,N,Q
 41892,fungi,lecanoromycetes,Pertusariaceae,Lepra neotriconica,,(Elix & A.W.Archer) A.W.Archer & Elix,C,,N,N,Q
-41901,fungi,lecanoromycetes,Pertusariaceae,Lepra scaberula,,"(A.W.Archer) I.Schmitt, Hodkinson & Lumbsch",C,,N,N,Q
-41388,fungi,lecanoromycetes,Pertusariaceae,Lepra subventosa var. subventosa,,(Malme) I.Schmidt & Lumbsch,C,,N,N,Q
-41386,fungi,lecanoromycetes,Pertusariaceae,Lepra tropica,,(Vain) Lendemer & R.C.Harris,C,,N,N,Q
-33009,fungi,lecanoromycetes,Pertusariaceae,Pertusaria albopunctata,,Elix & A.W.Archer,C,,N,N,Q
+42183,fungi,lecanoromycetes,Pertusariaceae,Lepra patellifera,,(A.W. Archer) I. Schmitt & Lumbsch,C,,N,N,Q
+42191,fungi,lecanoromycetes,Pertusariaceae,Lepra psoromica,,(A.W.Archer & Elix) A.W.Archer & Elix,C,,N,N,Q
+41901,fungi,lecanoromycetes,Pertusariaceae,Lepra scaberula,,"(A.W.Archer) I.Schmitt, Hodkinson & Lumbsch",,,N,N,U
+42187,fungi,lecanoromycetes,Pertusariaceae,Lepra sublacerans,,(A.W.Archer) A.W.Archer & Elix,C,,N,N,Q
+42175,fungi,lecanoromycetes,Pertusariaceae,Lepra subventosa,,(Malme) I.Schmidt & Lumbsch,C,,N,N,QA
+42190,fungi,lecanoromycetes,Pertusariaceae,Lepra subventosa var. hypothamnolica,,(A.W.Archer & Elix) A.W.Archer & Elix,C,,N,N,Q
+41388,fungi,lecanoromycetes,Pertusariaceae,Lepra subventosa var. subventosa,,(Malme) I.Schmidt & Lumbsch,C,,N,N,QA
+41386,fungi,lecanoromycetes,Pertusariaceae,Lepra tropica,,(Vain) Lendemer & R.C.Harris,C,,N,N,QA
+42179,fungi,lecanoromycetes,Pertusariaceae,Lepra umbricola,,(A.W.Archer & Elix) A.W.Archer & Elix,C,,N,N,Q
+42188,fungi,lecanoromycetes,Pertusariaceae,Lepra verdonii,,,C,,N,N,Q
+42177,fungi,lecanoromycetes,Pertusariaceae,Lepra wallamanensis,,(Elix & A.W.Archer) A.W.Archer & Elix,C,,N,N,Q
 26616,fungi,lecanoromycetes,Pertusariaceae,Pertusaria aquilonia,,A.W.Archer & Elix,C,,N,N,Q
-26617,fungi,lecanoromycetes,Pertusariaceae,Pertusaria asiana,,Vain.,C,,N,N,Q
 25380,fungi,lecanoromycetes,Pertusariaceae,Pertusaria atromaculata,,A.W.Archer & Elix,C,,N,N,Q
 34270,fungi,lecanoromycetes,Pertusariaceae,Pertusaria bagoensis,,Elix & A.W.Archer,C,,N,N,Q
 33007,fungi,lecanoromycetes,Pertusariaceae,Pertusaria balekensis,,A.W.Archer & Elix,C,,N,N,QA
@@ -6692,15 +6717,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 26618,fungi,lecanoromycetes,Pertusariaceae,Pertusaria boweniana,,A.W.Archer & Elix,C,,N,N,Q
 23403,fungi,lecanoromycetes,Pertusariaceae,Pertusaria ceylonica,,Muell.Arg.,C,,N,N,Q
 23404,fungi,lecanoromycetes,Pertusariaceae,Pertusaria cicatricosa,,Muell.Arg.,C,,N,N,Q
-25241,fungi,lecanoromycetes,Pertusariaceae,Pertusaria clarkeana,,A.W.Archer,C,,N,N,Q
-23401,fungi,lecanoromycetes,Pertusariaceae,Pertusaria commutata,,Muell.Arg.,C,,N,N,Q
 32509,fungi,lecanoromycetes,Pertusariaceae,Pertusaria confluentica,,Jariangpr. & Elix,C,,N,N,Q
 34252,fungi,lecanoromycetes,Pertusariaceae,Pertusaria cryptostoma,,Muell.Arg.,C,,N,N,Q
 25381,fungi,lecanoromycetes,Pertusariaceae,Pertusaria dehiscens var. dehiscens,,Muell.Arg.,C,,N,N,Q
 35325,fungi,lecanoromycetes,Pertusariaceae,Pertusaria elliptica,,Muell.Arg.,C,,N,N,Q
 27641,fungi,lecanoromycetes,Pertusariaceae,Pertusaria elliptica var. bispora,,A.W.Archer & Elix,C,,N,N,Q
 23406,fungi,lecanoromycetes,Pertusariaceae,Pertusaria elliptica var. elliptica,,Muell.Arg.,C,,N,N,QA
-24298,fungi,lecanoromycetes,Pertusariaceae,Pertusaria erythrella,,Muell.Arg.,C,,N,N,Q
 26619,fungi,lecanoromycetes,Pertusariaceae,Pertusaria ewersii,,A.W.Archer & Elix,C,,N,N,Q
 26620,fungi,lecanoromycetes,Pertusariaceae,Pertusaria flavoisidiata,,A.W.Archer & Elix,C,,N,N,Q
 32508,fungi,lecanoromycetes,Pertusariaceae,Pertusaria flavopunctata,,A.W.Archer & Elix,C,,N,N,Q
@@ -6714,8 +6736,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 26624,fungi,lecanoromycetes,Pertusariaceae,Pertusaria injuneana,,A.W.Archer & Elix,C,,N,N,Q
 23409,fungi,lecanoromycetes,Pertusariaceae,Pertusaria irregularis,,Muell.Arg.,C,,N,N,Q
 25382,fungi,lecanoromycetes,Pertusariaceae,Pertusaria isidiosa,,A.W.Archer,C,,N,N,Q
-24299,fungi,lecanoromycetes,Pertusariaceae,Pertusaria lacerans,,Muell.Arg.,C,,N,N,Q
-25384,fungi,lecanoromycetes,Pertusariaceae,Pertusaria lacericans,,A.W.Archer,C,,N,N,QA
 25386,fungi,lecanoromycetes,Pertusariaceae,Pertusaria lavata,,Muell.Arg.,C,,N,N,Q
 24300,fungi,lecanoromycetes,Pertusariaceae,Pertusaria leiocarpella,,Muell.Arg.,C,,N,N,Q
 23410,fungi,lecanoromycetes,Pertusariaceae,Pertusaria leioplacella,,Nyl.,C,,N,N,QA
@@ -6730,9 +6750,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29728,fungi,lecanoromycetes,Pertusariaceae,Pertusaria meeana,,A.W.Archer & Elix,C,,N,N,Q
 25388,fungi,lecanoromycetes,Pertusariaceae,Pertusaria microstoma,,Muell.Arg.,C,,N,N,Q
 41418,fungi,lecanoromycetes,Pertusariaceae,Pertusaria microstoma var. deficiens,,A.W.Archer & Elix.,C,,N,N,Q
-25385,fungi,lecanoromycetes,Pertusariaceae,Pertusaria miscella,,A.W.Archer,C,,N,N,Q
 25389,fungi,lecanoromycetes,Pertusariaceae,Pertusaria montpittensis,,A.W.Archer,C,,N,N,Q
-26627,fungi,lecanoromycetes,Pertusariaceae,Pertusaria muricata,,J.C.David,C,,N,N,Q
 25390,fungi,lecanoromycetes,Pertusariaceae,Pertusaria norstictica,,A.W.Archer,C,,N,N,Q
 24305,fungi,lecanoromycetes,Pertusariaceae,Pertusaria novae-zelandiae,,Szatala,C,,N,N,Q
 26628,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pallida,,A.W.Archer & Elix,C,,N,N,Q
@@ -6740,14 +6758,11 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 25391,fungi,lecanoromycetes,Pertusariaceae,Pertusaria paradoxica var. paradoxica,,A.W.Archer & Elix,C,,N,N,Q
 23417,fungi,lecanoromycetes,Pertusariaceae,Pertusaria paragibberosa,,A.W.Archer,C,,N,N,Q
 24306,fungi,lecanoromycetes,Pertusariaceae,Pertusaria paratropa,,Muell.Arg.,C,,N,N,Q
-24084,fungi,lecanoromycetes,Pertusariaceae,Pertusaria patellifera,,A.W.Archer,C,,N,N,Q
-33006,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pertracta,,Stirt.,C,,N,N,QA
+33006,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pertractata,,Stirt.,C,,N,N,QA
 23423,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pertusella,,Muell.Arg.,C,,N,N,Q
-23972,fungi,lecanoromycetes,Pertusariaceae,Pertusaria petrophyes,,C.Knight,C,,N,N,QA
 25392,fungi,lecanoromycetes,Pertusariaceae,Pertusaria planaica,,A.W.Archer & Elix,C,,N,N,Q
 23426,fungi,lecanoromycetes,Pertusariaceae,Pertusaria porinella,,Nyl.,C,,N,N,QA
 26629,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pseudococcodes,,Muell.Arg.,C,,N,N,Q
-25393,fungi,lecanoromycetes,Pertusariaceae,Pertusaria psoromica,,A.W.Archer & Elix,C,,N,N,Q
 32569,fungi,lecanoromycetes,Pertusariaceae,Pertusaria puffina,,A.W.Archer & Elix,C,,N,N,Q
 23427,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pustulata,,(Ach.) Duby,C,,N,N,QI
 26630,fungi,lecanoromycetes,Pertusariaceae,Pertusaria pycnothelia,,Nyl.,C,,N,N,QA
@@ -6756,20 +6771,14 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 35509,fungi,lecanoromycetes,Pertusariaceae,Pertusaria rogersii,,A.W.Archer & Elix,C,,N,N,Q
 26631,fungi,lecanoromycetes,Pertusariaceae,Pertusaria salebrosa,,A.W.Archer & Elix,C,,N,N,Q
 25395,fungi,lecanoromycetes,Pertusariaceae,Pertusaria saltuensis,,A.W.Archer & Elix,C,,N,N,Q
-23418,fungi,lecanoromycetes,Pertusariaceae,Pertusaria scaberula,,A.W.Archer,C,,N,N,QA
 41423,fungi,lecanoromycetes,Pertusariaceae,Pertusaria simoneana,,A.W.Archer & Elix.,C,,N,N,Q
 25407,fungi,lecanoromycetes,Pertusariaceae,Pertusaria sordida,,A.W.Archer,C,,N,N,Q
 25396,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subcerussata,,A.W.Archer,C,,N,N,Q
 25397,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subisidiosa,,A.W.Archer,C,,N,N,Q
-27642,fungi,lecanoromycetes,Pertusariaceae,Pertusaria sublacerans,,A.W.Archer,C,,N,N,Q
 25398,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subplanaica,,A.W.Archer & Elix,C,,N,N,Q
 33005,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subradians,,Muell.Arg.,C,,N,N,Q
 24003,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subrigida,,Muell.Arg.,C,,N,N,Q
 23420,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subventosa,,Malme,C,,N,N,QA
-36331,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subventosa subsp. subventosa,,Malme,C,,N,N,Q
-25399,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subventosa var. deficiens,,A.W.Archer & Elix,C,,N,N,Q
-25400,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subventosa var. hypothamnolica,,A.W.Archer & Elix,C,,N,N,Q
-23421,fungi,lecanoromycetes,Pertusariaceae,Pertusaria subventosa var. subventosa,,Malme,C,,N,N,QA
 41296,fungi,lecanoromycetes,Pertusariaceae,Pertusaria ternata,,A.W.Archer & Elix,C,,N,N,Q
 34219,fungi,lecanoromycetes,Pertusariaceae,Pertusaria texana,,Muell.Arg.,C,,N,N,QI
 25401,fungi,lecanoromycetes,Pertusariaceae,Pertusaria thiophaninica,,A.W.Archer,C,,N,N,Q
@@ -6778,13 +6787,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 25383,fungi,lecanoromycetes,Pertusariaceae,Pertusaria thwaitesii,,Muell.Arg.,C,,N,N,Q
 35810,fungi,lecanoromycetes,Pertusariaceae,Pertusaria trachyspora,,A.W.Archer,C,,N,N,Q
 25403,fungi,lecanoromycetes,Pertusariaceae,Pertusaria trevethensis,,A.W.Archer,C,,N,N,Q
-26632,fungi,lecanoromycetes,Pertusariaceae,Pertusaria tropica,,Vain.,C,,N,N,Q
-26633,fungi,lecanoromycetes,Pertusariaceae,Pertusaria umbricola,,A.W.Archer & Elix,C,,N,N,Q
 23416,fungi,lecanoromycetes,Pertusariaceae,Pertusaria undulata,,Muell.Arg.,C,,N,N,Q
-31973,fungi,lecanoromycetes,Pertusariaceae,Pertusaria verdonii,,A.W.Archer,C,,N,N,Q
 26634,fungi,lecanoromycetes,Pertusariaceae,Pertusaria verruculifera,,Vain.,C,,N,N,Q
 25404,fungi,lecanoromycetes,Pertusariaceae,Pertusaria vulpina,,A.W.Archer,C,,N,N,Q
-33008,fungi,lecanoromycetes,Pertusariaceae,Pertusaria wallamanensis,,Elix & A.W.Archer,C,,N,N,Q
 26635,fungi,lecanoromycetes,Pertusariaceae,Pertusaria xanthodactylina,,A.W.Archer & Elix,C,,N,N,Q
 36332,fungi,lecanoromycetes,Pertusariaceae,Pertusaria xanthodes,,Muell.Arg.,C,,N,N,QI
 23413,fungi,lecanoromycetes,Pertusariaceae,Pertusaria xanthoplaca,,Muell.Arg.,C,,N,N,QA
@@ -6928,7 +6933,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27574,fungi,lecanoromycetes,Pilocarpaceae,Lasioloma phycophilum,,(Vain.) R.Sant.,C,,N,N,QA
 27584,fungi,lecanoromycetes,Pilocarpaceae,Lasioloma phycophorum,,(Vain.) R.Sant.,C,,N,N,QA
 27570,fungi,lecanoromycetes,Pilocarpaceae,Lasioloma trichophorum,,(Vain.) R.Sant.,C,,N,N,QA
-33308,fungi,lecanoromycetes,Pilocarpaceae,Leiomonis erratica,,(Koerb.) R.C.Harris & Lendemer,C,,N,N,Q
+33308,fungi,lecanoromycetes,Pilocarpaceae,Leimonis erratica,,(Koerb.) R.C.Harris & Lendemer,C,,N,N,Q
 26584,fungi,lecanoromycetes,Pilocarpaceae,Loflammia epiphylla,,(Fee) Luecking & Vezda,C,,N,N,QA
 24229,fungi,lecanoromycetes,Pilocarpaceae,Loflammia gabrielis,,(Muell.Arg.) Vezda,C,,N,N,QA
 25326,fungi,lecanoromycetes,Pilocarpaceae,Logilvia gilva,,(Muell.Arg.) Vezda,C,,N,N,QA
@@ -7886,9 +7891,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 7113,plants,Florideophyceae,Plocamiaceae,Plocamium dilatatum,,J.Agardh,C,,N,N,Q
 7114,plants,Florideophyceae,Plocamiaceae,Plocamium hamatum,,J.Agardh,C,,N,N,Q
 27186,plants,Florideophyceae,Plocamiaceae,Plocamium microcladioides,,South & N.M.Adams,C,,N,N,Q
-42100,plants,Florideophyceae,Porolithaceae,Porolithon abbreviatum,,,C,,N,N,Q
-42102,plants,Florideophyceae,Porolithaceae,Porolithon lobulatum,,,C,,N,N,Q
-42103,plants,Florideophyceae,Porolithaceae,Porolithon pinnaculum,,,C,,N,N,Q
+42102,plants,Florideophyceae,Porolithaceae,Porolithon lobulatum,,S.Y.Jeong & G.Diaz-Pulido,C,,N,N,Q
+42193,plants,Florideophyceae,Porolithaceae,Porolithon parvulum,,S.Y.Jeong & G.Diaz-Pulido,,,N,N,U
+42103,plants,Florideophyceae,Porolithaceae,Porolithon pinnaculum,,S.Y.Jeong & G.Diaz-Pulido,C,,N,N,Q
 6992,plants,Florideophyceae,Pterocladiaceae,Pterocladia caloglossoides,,(M.Howe) Dawson,C,,N,N,Q
 22279,plants,Florideophyceae,Pterocladiaceae,Pterocladia heteroplatos,,(Boergesen) Umam.Rao & Kaliap.,C,,N,N,Q
 18409,plants,Florideophyceae,Pterocladiaceae,Pterocladiella caerulescens,,(Kuetz.) Santel. & Hommers.,C,,N,N,QA
@@ -8580,16 +8585,20 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 11731,plants,land plants,Akaniaceae,Akania bidwillii,turnip wood,(Hogg) Mabb.,C,,N,N,QA
 22747,plants,land plants,Alismataceae,Alisma plantago-aquatica,,L.,,,N,N,IU
 18353,plants,land plants,Alismataceae,Astonia australiensis,,(Aston) S.W.L.Jacobs,E,,Y,N,Q
+30766,plants,land plants,Alismataceae,Butomopsis latifolia,,(D.Don) Kunth,C,,N,N,QA
 3358,plants,land plants,Alismataceae,Caldesia acanthocarpa,,(F.Muell.) Buchenau,SL,,Y,N,QA
 14761,plants,land plants,Alismataceae,Caldesia oligococca,,(F.Muell.) Buchenau,SL,,Y,N,QA
 34135,plants,land plants,Alismataceae,Caldesia reniformis,,(D.Don) Makino,SL,,Y,N,QI
 13379,plants,land plants,Alismataceae,Damasonium minus,starfruit,(R.Br.) Buchenau,SL,,Y,N,QA
 35817,plants,land plants,Alismataceae,Echinodorus cordifolius,,(L.) Griseb.,,,N,N,IU
 31280,plants,land plants,Alismataceae,Echinodorus cordifolius subsp. cordifolius,,(L.) Griseb.,,,N,N,IU
+9783,plants,land plants,Alismataceae,Hydrocleys nymphoides,,(Humb. & Bonpl. ex Willd.) Buchenau,,,N,N,IU
+27215,plants,land plants,Alismataceae,Limnocharis flava,yellow burrhead,(L.) Buchenau,,,N,N,IU
 4813,plants,land plants,Alismataceae,Sagittaria platyphylla,sagittaria,(Engelm.) J.G.Sm.,,,N,N,IU
 26257,plants,land plants,Alliaceae,Nothoscordum borbonicum,,Kunth,,,N,N,IU
 14677,plants,land plants,Alseuosmiaceae,Crispiloba disperma,,(S.Moore) Steenis,C,,N,N,Q
 4935,plants,land plants,Alstroemeriaceae,Alstroemeria psittacina,,Lehm.,,,N,N,IU
+12991,plants,land plants,Alstroemeriaceae,Drymophila moorei,orange berry,Baker,C,,N,N,QA
 18101,plants,land plants,Amaranthaceae,Achyranthes aspera,,L.,C,,N,N,QAI
 31635,plants,land plants,Amaranthaceae,Achyranthes bidentata,,Blume,C,,N,N,QI
 18036,plants,land plants,Amaranthaceae,Aerva javanica,,(Burm.f.) Juss. ex Schult.,,,N,N,IU
@@ -8659,7 +8668,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16352,plants,land plants,Amaranthaceae,Ptilotus clementii,,(Farmar) Benl,C,,N,N,QA
 11677,plants,land plants,Amaranthaceae,Ptilotus corymbosus,,R.Br.,C,,N,N,QA
 11662,plants,land plants,Amaranthaceae,Ptilotus decipiens,,(Benth.) C.A.Gardner,C,,N,N,QA
-16354,plants,land plants,Amaranthaceae,Ptilotus exaltatus,,Nees,,,N,N,QA
+16354,plants,land plants,Amaranthaceae,Ptilotus exaltatus,,Nees,C,,N,N,QA
 9777,plants,land plants,Amaranthaceae,Ptilotus extenuatus,,Benl,E,,Y,N,Q
 11665,plants,land plants,Amaranthaceae,Ptilotus fusiformis,,(R.Br.) Poir.,C,,N,N,QA
 19988,plants,land plants,Amaranthaceae,Ptilotus helipteroides,,(F.Muell.) F.Muell.,C,,N,N,QA
@@ -8688,8 +8697,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 10969,plants,land plants,Amaranthaceae,Ptilotus spicatus,,Benth.,C,,N,N,QA
 40980,plants,land plants,Amaranthaceae,Ptilotus uncinellus,,(A.R.Bean) T.Hammer,E,,Y,N,Q
 41219,plants,land plants,Amaranthaceae,Ptilotus xerophilus,,T.Hammer & R.W.Davis,C,,N,N,QA
-39764,plants,land plants,Amaranthaceae,Trichinium burtonii,,,C,,N,N,QA
-39765,plants,land plants,Amaranthaceae,Trichinium nervosum,,,C,,N,N,Q
 11753,plants,land plants,Amaryllidaceae,Calostemma luteum,,Sims,SL,,Y,N,QA
 39858,plants,land plants,Amaryllidaceae,Calostemma scottsellickiana,,,SL,,Y,N,Q
 35857,plants,land plants,Amaryllidaceae,Crinum arenarium,,Herb.,SL,,Y,N,QA
@@ -8912,7 +8919,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41692,plants,land plants,Apocynaceae,Gymnema longipedicellatum,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 4706,plants,land plants,Apocynaceae,Gymnema muelleri,,Benth.,C,,N,N,QA
 4710,plants,land plants,Apocynaceae,Gymnema pleiadenium,,F.Muell.,C,,N,N,QA
-41690,plants,land plants,Apocynaceae,Gymnema stramineum,,(P.I.Forst.) P.I.Forst.,V,,Y,N,Q
+41690,plants,land plants,Apocynaceae,Gymnema stramineum,,(P.I.Forst.) P.I.Forst.,CR,,Y,N,Q
 4707,plants,land plants,Apocynaceae,Gymnema suborbiculare,,K.Schum.,C,,N,N,QI
 4711,plants,land plants,Apocynaceae,Gymnema tricholepis,,Schltr.,C,,N,N,QI
 12395,plants,land plants,Apocynaceae,Heterostemma acuminatum,,Decne.,C,,N,N,QI
@@ -8997,13 +9004,13 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 5945,plants,land plants,Apocynaceae,Parsonsia paulforsteri,,J.B.Williams,C,,N,N,Q
 16525,plants,land plants,Apocynaceae,Parsonsia plaesiophylla,,S.T.Blake,C,,N,N,Q
 14344,plants,land plants,Apocynaceae,Parsonsia rotata,veinless silkpod,Maiden & Betche,C,,N,N,Q
-5907,plants,land plants,Apocynaceae,Parsonsia sankowskyana,,J.B.Williams,E,,Y,N,Q
+5907,plants,land plants,Apocynaceae,Parsonsia sankowskyana,,J.B.Williams,CR,,Y,N,Q
 16526,plants,land plants,Apocynaceae,Parsonsia straminea,monkey rope,(R.Br.) F.Muell.,C,,N,N,QA
 11170,plants,land plants,Apocynaceae,Parsonsia tenuis,slender silkpod,S.T.Blake,V,,Y,N,Q
 16527,plants,land plants,Apocynaceae,Parsonsia velutina,hairy silkpod,R.Br.,C,,N,N,QAI
 14343,plants,land plants,Apocynaceae,Parsonsia ventricosa,,F.Muell.,C,,N,N,QA
 5906,plants,land plants,Apocynaceae,Parsonsia wildensis,,J.B.Williams,V,,Y,N,Q
-5905,plants,land plants,Apocynaceae,Parsonsia wongabelensis,,J.B.Williams,E,,Y,N,Q
+5905,plants,land plants,Apocynaceae,Parsonsia wongabelensis,,J.B.Williams,CR,,Y,N,Q
 28993,plants,land plants,Apocynaceae,Phyllanthera grayi,,(P.I.Forst.) Venter,V,,Y,N,Q
 11185,plants,land plants,Apocynaceae,Rauvolfia tetraphylla,,L.,,,N,N,IU
 9163,plants,land plants,Apocynaceae,Sarcolobus hullsii,,(F.Muell. ex Benth.) P.I.Forst.,C,,N,N,QA
@@ -9243,17 +9250,17 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 22101,plants,land plants,Arecaceae,Syagrus romanzoffiana,Queen palm,(Cham.) Glassman,,,N,N,IU
 8539,plants,land plants,Arecaceae,Wodyetia bifurcata,foxtail palm,A.K.Irvine,V,,Y,Y,Q
 15645,plants,land plants,Argophyllaceae,Argophyllum cryptophlebum,,Zemann,NT,,Y,N,Q
-40479,plants,land plants,Argophyllaceae,Argophyllum curtum,,A.R.Bean & P.I.Forst.,C,,N,N,Q
-40481,plants,land plants,Argophyllaceae,Argophyllum ferrugineum,,A.R.Bean & P.I.Forst.,C,,N,N,Q
-40475,plants,land plants,Argophyllaceae,Argophyllum heterodontum,,A.R.Bean & P.I.Forst.,C,,N,N,Q
-40491,plants,land plants,Argophyllaceae,Argophyllum iridescens,,A.R.Bean & P.I.Forst.,C,,N,N,Q
+40479,plants,land plants,Argophyllaceae,Argophyllum curtum,,A.R.Bean & P.I.Forst.,NT,,Y,N,Q
+40481,plants,land plants,Argophyllaceae,Argophyllum ferrugineum,,A.R.Bean & P.I.Forst.,E,,Y,N,Q
+40475,plants,land plants,Argophyllaceae,Argophyllum heterodontum,,A.R.Bean & P.I.Forst.,NT,,Y,N,Q
+40491,plants,land plants,Argophyllaceae,Argophyllum iridescens,,A.R.Bean & P.I.Forst.,V,,Y,N,Q
 40473,plants,land plants,Argophyllaceae,Argophyllum jagonis,,A.R.Bean & P.I.Forst.,C,,N,N,Q
 15646,plants,land plants,Argophyllaceae,Argophyllum lejourdanii,,F.Muell.,C,,N,N,Q
 40482,plants,land plants,Argophyllaceae,Argophyllum lejourdanii var. cryptophlebum,,F.M.Bailey,C,,N,N,Q
 40474,plants,land plants,Argophyllaceae,Argophyllum loxotrichum,,A.R.Bean & P.I.Forst.,C,,N,N,Q
 40253,plants,land plants,Argophyllaceae,Argophyllum nitidum var. fulvum,,,C,,N,N,Q
 15647,plants,land plants,Argophyllaceae,Argophyllum nullumense,silver leaf,R.T.Baker,C,,N,N,QA
-40480,plants,land plants,Argophyllaceae,Argophyllum palumense,,A.R.Bean & P.I.Forst.,C,,N,N,Q
+40480,plants,land plants,Argophyllaceae,Argophyllum palumense,,A.R.Bean & P.I.Forst.,E,,Y,N,Q
 9882,plants,land plants,Argophyllaceae,Argophyllum verae,,P.I.Forst.,V,,Y,N,Q
 22029,plants,land plants,Aristolochiaceae,Aristolochia acuminata,,Lam.,C,,N,N,QAI
 11220,plants,land plants,Aristolochiaceae,Aristolochia chalmersii,,O.C.Schmidt,C,,N,N,Q
@@ -9323,10 +9330,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17944,plants,land plants,Aspleniaceae,Asplenium parvum,,Watts,C,,N,N,QI
 12113,plants,land plants,Aspleniaceae,Asplenium pellucidum,,Lam.,V,V,Y,Y,QI
 17945,plants,land plants,Aspleniaceae,Asplenium polyodon,mare's tail fern,G.Forst.,C,,N,N,QAI
-40215,plants,land plants,Aspleniaceae,Asplenium prenticei,,,C,,N,N,Q
-40438,plants,land plants,Aspleniaceae,Asplenium resectum var. australiense,,,C,,N,N,Q
 17946,plants,land plants,Aspleniaceae,Asplenium simplicifrons,,F.Muell.,C,,N,N,Q
-40426,plants,land plants,Aspleniaceae,Asplenium simplicifrons var. laciniatum,,,C,,N,N,Q
 35711,plants,land plants,Aspleniaceae,Asplenium subglandulosum subsp. subglandulosum,,"(Hook. & Grev.) Salvo, Prada & T.E.Diaz",C,,N,N,QA
 21945,plants,land plants,Aspleniaceae,Asplenium tenerum,,G.Forst.,C,,N,N,QI
 41572,plants,land plants,Aspleniaceae,Hymenasplenium excisum,,(C.Presl) S.Linds.,C,,N,N,QI
@@ -9734,7 +9738,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 7090,plants,land plants,Asteraceae,Picris angustifolia subsp. carolorum-henricorum,,(Lack) S.Holzapfel,C,,N,N,QA
 6922,plants,land plants,Asteraceae,Picris barbarorum,,Lindl.,V,,Y,N,QA
 7132,plants,land plants,Asteraceae,Picris burbidgeae,,S.Holzapfel,C,,N,N,QA
-39757,plants,land plants,Asteraceae,Picris carolorumhenricorum,,,C,,N,N,Q
 7131,plants,land plants,Asteraceae,Picris conyzoides,,Lack & S.Holzapfel,V,,Y,N,Q
 10604,plants,land plants,Asteraceae,Picris evae,,Lack,V,V,Y,N,Q
 40700,plants,land plants,Asteraceae,Placus solandri,,,C,,N,N,Q
@@ -9777,7 +9780,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15131,plants,land plants,Asteraceae,Pterocaulon sphacelatum,applebush,(Labill.) F.Muell.,C,,N,N,QA
 34336,plants,land plants,Asteraceae,Pterocaulon tricholobum,,A.R.Bean,C,,N,N,QA
 29608,plants,land plants,Asteraceae,Pterocaulon verbascifolium,,(Benth.) F.Muell.,C,,N,N,QA
-7596,plants,land plants,Asteraceae,Pycnosorus chrysanthus,golden billy buttons,(Schltdl.) Sond.,C,,N,N,QA
 8307,plants,land plants,Asteraceae,Pycnosorus eremaeus,,J.Everett & Doust,C,,N,N,QA
 8202,plants,land plants,Asteraceae,Pycnosorus globosus,,F.L.Bauer ex Benth.,C,,N,N,QA
 8308,plants,land plants,Asteraceae,Pycnosorus melleus,,J.Everett & Doust,C,,N,N,QA
@@ -9882,7 +9884,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 11639,plants,land plants,Asteraceae,Tanacetum vulgare,tansy,L.,,,N,N,IU
 10448,plants,land plants,Asteraceae,Taraxacum officinale,dandelion,(L.) Weber,,,N,N,IU
 34786,plants,land plants,Asteraceae,Tarlmounia elliptica,,"(DC.) H.Rob., S.C.Keeley, Skvarla & R.Chan",,,N,N,IU
-6897,plants,land plants,Asteraceae,Tetramolopium sp. (Mt Bowen D.G.Fell+ DGF1224),,,V,,Y,N,Q
+42197,plants,land plants,Asteraceae,Tetramolopium ornans,,Ngugi,V,,Y,N,U
 7612,plants,land plants,Asteraceae,Tetramolopium vagans,,Pedley,V,,Y,N,Q
 10902,plants,land plants,Asteraceae,Thespidium basiflorum,,(F.Muell.) F.Muell. ex Benth.,C,,N,N,QA
 41214,plants,land plants,Asteraceae,Thymophylla tenuiloba,,(DC.) Small,,,N,N,IU
@@ -10004,7 +10006,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 10956,plants,land plants,Bignoniaceae,Pandorea baileyana,large-leaved wonga vine,(Maiden & R.T.Baker) Steenis,C,,N,N,QA
 2959,plants,land plants,Bignoniaceae,Pandorea doratoxylon,,J.M.Black,C,,N,N,QA
 3327,plants,land plants,Bignoniaceae,Pandorea floribunda,,(A.Cunn. ex DC.) Guymer,C,,N,N,QA
-16569,plants,land plants,Bignoniaceae,Pandorea jasminoides,,(Lindl.) K.Schum.,C,,N,N,Q
+16569,plants,land plants,Bignoniaceae,Pandorea jasminoides,,(G.Don) K.Schum.,C,,N,N,Q
 32530,plants,land plants,Bignoniaceae,Pandorea linearis,,(F.M.Bailey) Guymer,C,,N,N,Q
 11167,plants,land plants,Bignoniaceae,Pandorea nervosa,,Steenis,C,,N,N,Q
 16570,plants,land plants,Bignoniaceae,Pandorea pandorana,wonga vine,(Andrews) Steenis,C,,N,N,QAI
@@ -10026,6 +10028,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 20028,plants,land plants,Bignoniaceae,Tecomaria capensis,,,,,N,N,IU
 31610,plants,land plants,Bignoniaceae,Tecomaria capensis subsp. capensis,,(Thunb.) Spach,,,N,N,IU
 11232,plants,land plants,Bixaceae,Bixa orellana,analto,L.,,,N,N,IU
+9894,plants,land plants,Bixaceae,Cochlospermum fraseri subsp. heteronemum,,(F.Muell.) Poppend.,C,,N,N,QA
+15502,plants,land plants,Bixaceae,Cochlospermum gillivraei,,Benth.,C,,N,N,QAI
+10921,plants,land plants,Bixaceae,Cochlospermum gregorii,,F.Muell.,C,,N,N,QA
 40309,plants,land plants,Blandfordiaceae,Blandfordia flammea var. aurea,,,SL,,Y,N,Q
 17868,plants,land plants,Blandfordiaceae,Blandfordia grandiflora,christmas bells,R.Br.,E,,Y,N,QA
 17869,plants,land plants,Blechnaceae,Blechnum ambiguum,,(C.Presl) Kaulf. ex C.Chr.,SL,,Y,N,QA
@@ -10205,6 +10210,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 10506,plants,land plants,Brassicaceae,Lepidium sagittulatum,,Thell.,C,,N,N,QA
 15273,plants,land plants,Brassicaceae,Lepidium strongylophyllum,,F.Muell. ex Benth.,C,,N,N,QA
 14438,plants,land plants,Brassicaceae,Lepidium virginicum,Virginian peppercress,L.,,,N,N,IU
+42195,plants,land plants,Brassicaceae,Lepidium yelarbonense,,Al-Shehbaz,C,,N,N,Q
 10508,plants,land plants,Brassicaceae,Lobularia maritima,sweet Alyssum,(L.) Desv.,,,N,N,IU
 9164,plants,land plants,Brassicaceae,Menkea crassa,,E.A.Shaw,C,,N,N,QA
 15098,plants,land plants,Brassicaceae,Raphanus raphanistrum,wild radish,L.,,,N,N,IU
@@ -10523,9 +10529,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 13955,plants,land plants,Capparaceae,Crateva religiosa,,G.Forst.,C,,N,N,QI
 13871,plants,land plants,Caprifoliaceae,Lonicera japonica,Japanese honeysuckle,Thunb.,,,N,N,IU
 17737,plants,land plants,Cardiopteridaceae,Cardiopteris moluccana,,Blume,SL,,Y,N,QI
+17656,plants,land plants,Cardiopteridaceae,Citronella moorei,churnwood,(F.Muell. ex Benth.) R.A.Howard,C,,N,N,QA
+17657,plants,land plants,Cardiopteridaceae,Citronella smythii,,(F.Muell.) R.A.Howard,C,,N,N,Q
+40690,plants,land plants,Cardiopteridaceae,Villaresia smythii,,,C,,N,N,Q
 13988,plants,land plants,Caricaceae,Carica papaya,pawpaw,L.,,,N,N,IU
-9280,plants,land plants,Carpodetaceae,Abrophyllum ornans,,(F.Muell.) Hook.f. ex Benth.,C,,N,N,QA
-15481,plants,land plants,Carpodetaceae,Cuttsia viburnea,silver-leaf cuttsia,F.Muell.,C,,N,N,QA
 6029,plants,land plants,Caryophyllaceae,Arenaria leptoclados,,(Rchb.) Guss.,,,N,N,IU
 17668,plants,land plants,Caryophyllaceae,Cerastium glomeratum,mouse ear chickweed,Thuill.,,,N,N,IU
 8165,plants,land plants,Caryophyllaceae,Cerastium vulgare,,Hartm.,,,N,N,IU
@@ -10602,7 +10609,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 39823,plants,land plants,Casuarinaceae,Casuarina inophloia,,,C,,N,N,Q
 17709,plants,land plants,Casuarinaceae,Casuarina pauper,black oak,F.Muell. ex L.A.S.Johnson,C,,N,N,QA
 13926,plants,land plants,Casuarinaceae,Gymnostoma australianum,,L.A.S.Johnson,V,,Y,N,Q
-31316,plants,land plants,Cecropiaceae,Cecropia peltata,Mexican bean tree,L.,,,N,N,IU
 26374,plants,land plants,Celastraceae,Apatophyllum flavovirens,,A.R.Bean & Jessup,CR,,Y,N,Q
 11115,plants,land plants,Celastraceae,Apatophyllum olsenii,,McGill.,E,V,Y,N,Q
 26373,plants,land plants,Celastraceae,Apatophyllum teretifolium,,A.R.Bean & Jessup,NT,,Y,N,Q
@@ -10903,9 +10909,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 35017,plants,land plants,Clusiaceae,Garcinia zichii,,W.E.Cooper,C,,N,N,QI
 13629,plants,land plants,Clusiaceae,Hypericum perforatum,St. John's wort,L.,,,N,N,II
 12414,plants,land plants,Cochlospermaceae,Cochlospermum fraseri,,Planch.,C,,N,N,U
-9894,plants,land plants,Cochlospermaceae,Cochlospermum fraseri subsp. heteronemum,,(F.Muell.) Poppend.,C,,N,N,QA
-15502,plants,land plants,Cochlospermaceae,Cochlospermum gillivraei,,Benth.,C,,N,N,QAI
-10921,plants,land plants,Cochlospermaceae,Cochlospermum gregorii,,F.Muell.,C,,N,N,QA
 17782,plants,land plants,Colchicaceae,Burchardia umbellata,,R.Br.,C,,N,N,QA
 17099,plants,land plants,Colchicaceae,Gloriosa superba,glory lily,L.,,,N,N,IU
 12969,plants,land plants,Colchicaceae,Iphigenia indica,,(L.) Kunth,C,,N,N,QA
@@ -11298,6 +11301,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17686,plants,land plants,Cyperaceae,Carex appressa,,R.Br.,C,,N,N,QAI
 11754,plants,land plants,Cyperaceae,Carex breviculmis,,R.Br.,C,,N,N,QAI
 17687,plants,land plants,Cyperaceae,Carex breviscapa,,C.B.Clarke,V,,Y,N,QI
+42196,plants,land plants,Cyperaceae,Carex brownii,,Tuck.,C,,N,N,QAI
 11604,plants,land plants,Cyperaceae,Carex brunnea,,Thunb.,C,,N,N,QAI
 9889,plants,land plants,Cyperaceae,Carex cryptostachys,,Brongn.,C,,N,N,QI
 11854,plants,land plants,Cyperaceae,Carex declinata,,Boott,C,,N,N,QA
@@ -11624,6 +11628,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 6791,plants,land plants,Cyperaceae,Lepidosperma gunnii,,Boeckeler,C,,N,N,QA
 9381,plants,land plants,Cyperaceae,Lepidosperma laterale,,R.Br.,C,,N,N,QA
 10987,plants,land plants,Cyperaceae,Lepidosperma limicola,,N.A.Wakef.,C,,N,N,QA
+4853,plants,land plants,Cyperaceae,Lepidosperma lineare,,R.Br.,,,N,N,Q
 16809,plants,land plants,Cyperaceae,Lepidosperma longitudinale,pithy swordsedge,Labill.,C,,N,N,QA
 10153,plants,land plants,Cyperaceae,Lepidosperma quadrangulatum,,A.A.Ham.,C,,N,N,QA
 16810,plants,land plants,Cyperaceae,Lepidosperma tuberculatum var. grande,,Kuek.,C,,N,N,Q
@@ -11774,7 +11779,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 13886,plants,land plants,Dennstaedtiaceae,Hypolepis muelleri x Hypolepis rugosula,,,C,,N,N,QA
 13887,plants,land plants,Dennstaedtiaceae,Hypolepis rugosula,ruddy ground fern,(Labill.) J.Sm.,C,,N,N,QAI
 16895,plants,land plants,Dennstaedtiaceae,Hypolepis tenuifolia,,(G.Forst.) Bernh. ex C.Presl,C,,N,N,QI
-40422,plants,land plants,Dennstaedtiaceae,Hypolepis tenuifolia var. hirsuta,,,C,,N,N,Q
 16676,plants,land plants,Dennstaedtiaceae,Microlepia speluncae,cave fern,(L.) T.Moore,C,,N,N,QAI
 35931,plants,land plants,Dennstaedtiaceae,Pteridium aquilinum subsp. wightianum,,(J.Agardh) W.C.Shieh,C,,N,N,QAI
 16340,plants,land plants,Dennstaedtiaceae,Pteridium esculentum,common bracken,(G.Forst.) Cockayne,C,,N,N,QAI
@@ -11839,7 +11843,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16992,plants,land plants,Dilleniaceae,Hibbertia cistifolia,,R.Br. ex DC.,C,,N,N,QA
 14499,plants,land plants,Dilleniaceae,Hibbertia cistoidea,,(Hook.) C.T.White,C,,N,N,QA
 9669,plants,land plants,Dilleniaceae,Hibbertia concinna,,F.M.Bailey,C,,N,N,Q
-9057,plants,land plants,Dilleniaceae,Hibbertia cymosa,,S.T.Reynolds,V,,Y,N,Q
+9057,plants,land plants,Dilleniaceae,Hibbertia cymosa,,S.T.Reynolds,NT,,Y,N,Q
 11591,plants,land plants,Dilleniaceae,Hibbertia dentata,trailing guinea flower,R.Br. ex DC.,C,,N,N,QA
 16938,plants,land plants,Dilleniaceae,Hibbertia diffusa,,R.Br. ex DC.,C,,N,N,QA
 11558,plants,land plants,Dilleniaceae,Hibbertia echiifolia,,R.Br. ex Benth.,C,,N,N,QA
@@ -12105,7 +12109,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16788,plants,land plants,Ericaceae,Leucopogon pimeleoides,,A.Cunn. ex DC.,C,,N,N,QA
 6089,plants,land plants,Ericaceae,Leucopogon sp. (Lamington G.Leiper AQ633386),,,C,,N,N,QA
 16791,plants,land plants,Ericaceae,Leucopogon virgatus,common beard heath,(Labill.) R.Br.,C,,N,N,QA
-27447,plants,land plants,Ericaceae,Lissanthe brevistyla,,A.R.Bean,V,,Y,N,Q
+27447,plants,land plants,Ericaceae,Lissanthe brevistyla,,A.R.Bean,E,,Y,N,Q
 2569,plants,land plants,Ericaceae,Lissanthe pluriloculata,,"(F.Muell.) J.M.Powell, Crayn & E.A.Br.",C,,N,N,Q
 6322,plants,land plants,Ericaceae,Lissanthe strigosa,,(Sm.) R.Br.,C,,N,N,U
 6758,plants,land plants,Ericaceae,Lissanthe strigosa subsp. subulata,,(R.Br.) J.M.Powell,C,,N,N,QA
@@ -12285,7 +12289,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17561,plants,land plants,Euphorbiaceae,Croton insularis,Queensland cascarilla,Baill.,C,,N,N,QAI
 34716,plants,land plants,Euphorbiaceae,Croton lucens,,P.I.Forst.,CR,,Y,N,Q
 11493,plants,land plants,Euphorbiaceae,Croton magneticus,,Airy Shaw,V,,Y,N,Q
-28906,plants,land plants,Euphorbiaceae,Croton mamillatus,Bahrs scrub croton,P.I.Forst.,CR,,Y,N,Q
+28906,plants,land plants,Euphorbiaceae,Croton mamillatus,Bahrs scrub croton,P.I.Forst.,CR,CE,Y,N,Q
 28905,plants,land plants,Euphorbiaceae,Croton minimus,,P.I.Forst.,C,,N,N,Q
 31932,plants,land plants,Euphorbiaceae,Croton multicaulis,,P.I.Forst.,C,,N,N,Q
 2047,plants,land plants,Euphorbiaceae,Croton multicaulis subsp. multicaulis,,P.I.Forst.,C,,N,N,Q
@@ -12407,7 +12411,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14380,plants,land plants,Euphorbiaceae,Mallotus discolor,white kamala,F.Muell. ex Benth.,C,,N,N,QA
 2231,plants,land plants,Euphorbiaceae,Mallotus dispersus,,P.I.Forst.,C,,N,N,QA
 8257,plants,land plants,Euphorbiaceae,Mallotus ficifolius,,(Baill.) Pax & K.Hoffm.,C,,N,N,Q
-22330,plants,land plants,Euphorbiaceae,Mallotus megadontus,,P.I.Forst.,V,,Y,N,Q
+22330,plants,land plants,Euphorbiaceae,Mallotus megadontus,,P.I.Forst.,E,,Y,N,Q
 16713,plants,land plants,Euphorbiaceae,Mallotus mollissimus,,(Geiseler) Airy Shaw,C,,N,N,QI
 16714,plants,land plants,Euphorbiaceae,Mallotus nesophilus,,Muell.Arg.,C,,N,N,QA
 11407,plants,land plants,Euphorbiaceae,Mallotus paniculatus,,(Lam.) Muell.Arg.,C,,N,N,QI
@@ -12657,7 +12661,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17429,plants,land plants,Gleicheniaceae,Dicranopteris linearis var. subferruginea,,(Hieron. ex Brause) Nakai,C,,N,N,QI
 34593,plants,land plants,Gleicheniaceae,Dicranopteris linearis x Sticherus flabellatus var. compactus,,,C,,N,N,Q
 12086,plants,land plants,Gleicheniaceae,Diplopterygium longissimum,giant scrambling fern,(Blume) Nakai,C,,N,N,QI
-40362,plants,land plants,Gleicheniaceae,Gleichenia circinnata var. mendellii,,,C,,N,N,Q
 17088,plants,land plants,Gleicheniaceae,Gleichenia dicarpa,pouched coral fern,R.Br.,C,,N,N,QAI
 9759,plants,land plants,Gleicheniaceae,Gleichenia mendellii,,(G.Schneid.) S.B.Andrews,C,,N,N,QA
 17089,plants,land plants,Gleicheniaceae,Gleichenia microphylla,scrambling coral fern,R.Br.,C,,N,N,QAI
@@ -12723,6 +12726,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 34954,plants,land plants,Goodeniaceae,Goodenia modesta,,J.M.Black,C,,N,N,QA
 41740,plants,land plants,Goodeniaceae,Goodenia mystrophylla,,K.A.Sheph.,C,,N,N,QAI
 9907,plants,land plants,Goodeniaceae,Goodenia nigrescens,,Carolin,C,,N,N,QA
+42200,plants,land plants,Goodeniaceae,Goodenia nocoleche,,B.Pellow & J.L.Porter,V,,Y,N,QA
 9915,plants,land plants,Goodeniaceae,Goodenia odonnellii,,F.Muell.,C,,N,N,QA
 13620,plants,land plants,Goodeniaceae,Goodenia ovata,,Sm.,C,,N,N,QA
 14528,plants,land plants,Goodeniaceae,Goodenia paniculata,,Sm.,C,,N,N,QA
@@ -12743,7 +12747,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27652,plants,land plants,Goodeniaceae,Goodenia sp. (Torrens Creek E.J.Thompson+ HUG754),,,C,,N,N,Q
 27655,plants,land plants,Goodeniaceae,Goodenia splendida,,A.E.Holland & T.P.Boyle,C,,N,N,Q
 17066,plants,land plants,Goodeniaceae,Goodenia stelligera,,R.Br.,C,,N,N,QA
-9911,plants,land plants,Goodeniaceae,Goodenia stirlingii,,F.M.Bailey,NT,,Y,N,Q
+9911,plants,land plants,Goodeniaceae,Goodenia stirlingii,,F.M.Bailey,V,,Y,N,Q
 11022,plants,land plants,Goodeniaceae,Goodenia strangfordii,,F.Muell.,C,,N,N,QA
 9909,plants,land plants,Goodeniaceae,Goodenia subauriculata,,C.T.White,C,,N,N,Q
 41737,plants,land plants,Goodeniaceae,Goodenia subsolana,,K.A.Sheph.,C,,N,N,Q
@@ -12857,6 +12861,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 31910,plants,land plants,Heliconiaceae,Heliconia psittacorum,,L.f.,,,N,N,IU
 16978,plants,land plants,Helicteraceae,Helicteres cana,,Benth.,C,,N,N,U
 34818,plants,land plants,Helicteraceae,Helicteres cana subsp. cana,,(Schott & Endl.) Benth.,C,,N,N,QA
+13021,plants,land plants,Hemerocallidaceae,Caesia chlorantha,,F.Muell.,C,,N,N,QA
+9363,plants,land plants,Hemerocallidaceae,Caesia parviflora,,R.Br.,C,,N,N,QA
+13020,plants,land plants,Hemerocallidaceae,Caesia parviflora var. vittata,,(R.Br.) R.J.F.Hend.,C,,N,N,QA
+13022,plants,land plants,Hemerocallidaceae,Caesia setifera,,Baker,C,,N,N,QAI
+41700,plants,land plants,Hemerocallidaceae,Corynotheca divaricata,,(R.J.F.Hend.) R.L.Barrett & T.Macfarlane,C,,N,N,QA
+13026,plants,land plants,Hemerocallidaceae,Corynotheca licrota,club fruit lily,R.J.F.Hend.,C,,N,N,QA
 17461,plants,land plants,Hemerocallidaceae,Dianella atraxis,,R.J.F.Hend.,C,,N,N,Q
 11712,plants,land plants,Hemerocallidaceae,Dianella bambusifolia,,Hallier f.,C,,N,N,QI
 13239,plants,land plants,Hemerocallidaceae,Dianella brevipedunculata,,R.J.F.Hend.,C,,N,N,Q
@@ -12902,6 +12912,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 39776,plants,land plants,Hemerocallidaceae,Stypandra grandis,,,C,,N,N,Q
 13500,plants,land plants,Hemerocallidaceae,Thelionema caespitosum,tufted blue lily,(R.Br.) R.J.F.Hend.,C,,N,N,QAI
 16040,plants,land plants,Hemerocallidaceae,Thelionema grande,,(C.T.White) R.J.F.Hend.,C,,N,N,QA
+9341,plants,land plants,Hemerocallidaceae,Tricoryne anceps,,R.Br.,C,,N,N,Q
+15974,plants,land plants,Hemerocallidaceae,Tricoryne elatior,yellow autumn lily,R.Br.,C,,N,N,QA
+14160,plants,land plants,Hemerocallidaceae,Tricoryne muricata,,Baker,C,,N,N,Q
 29523,plants,land plants,Herbertaceae,Herbertus longifissus,,Steph.,C,,N,N,Q
 34571,plants,land plants,Herbertaceae,Herbertus oldfieldianus,,(Steph.) Rodway,C,,N,N,Q
 15308,plants,land plants,Hernandiaceae,Gyrocarpus americanus,,Jacq.,C,,N,N,QAI
@@ -12913,7 +12926,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15810,plants,land plants,Himantandraceae,Galbulimima baccata,,F.M.Bailey,C,,N,N,QA
 40741,plants,land plants,Hookeriaceae,Hookeria baileyi,,,C,,N,N,Q
 40730,plants,land plants,Hookeriaceae,Lepidopilum australe,,,C,,N,N,Q
-16924,plants,land plants,Hugoniaceae,Hugonia jenkinsii,,F.Muell.,C,,N,N,QI
 29307,plants,land plants,Hyacinthaceae,Ledebouria petiolata,,J.C.Manning & Goldblatt,,,N,N,IU
 10003,plants,land plants,Hydatellaceae,Trithuria lanterna,,D.A.Cooke,C,,N,N,QA
 12172,plants,land plants,Hydrocharitaceae,Blyxa aubertii,,Rich.,SL,,Y,N,QAI
@@ -12930,6 +12942,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14509,plants,land plants,Hydrocharitaceae,Hydrilla verticillata,hydrilla,(L.f.) Royle,SL,,Y,N,QAI
 12114,plants,land plants,Hydrocharitaceae,Hydrocharis dubia,frogbit,(Blume) Backer,,,N,N,IU
 33953,plants,land plants,Hydrocharitaceae,Limnobium laevigatum,,(Humb. & Bonpl. ex Willd.) Heine,,,N,N,IU
+22446,plants,land plants,Hydrocharitaceae,Najas browniana,,Rendle,SL,,Y,N,Q
+34208,plants,land plants,Hydrocharitaceae,Najas graminea var. graminea,,Delile,SL,,Y,N,QA
+34229,plants,land plants,Hydrocharitaceae,Najas halophila,,L.Triest,SL,,Y,N,Q
+34313,plants,land plants,Hydrocharitaceae,Najas malesiana,,W.J.de Wilde,SL,,Y,N,Q
+13434,plants,land plants,Hydrocharitaceae,Najas marina,,L.,SL,,Y,N,QI
+14366,plants,land plants,Hydrocharitaceae,Najas tenuifolia,water nymph,R.Br.,SL,,Y,N,QAI
 12139,plants,land plants,Hydrocharitaceae,Ottelia alismoides,,(L.) Pers.,SL,,Y,N,QAI
 14339,plants,land plants,Hydrocharitaceae,Ottelia ovalifolia,swamp lily,(R.Br.) Rich.,SL,,Y,N,Q
 34200,plants,land plants,Hydrocharitaceae,Ottelia ovalifolia subsp. chrysobasis,,S.W.L.Jacobs,SL,,Y,N,Q
@@ -13075,18 +13093,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 9053,plants,land plants,Isoetaceae,Isoetes drummondii subsp. drummondii,plain quillwort,A.Braun,C,,N,N,Q
 12054,plants,land plants,Isoetaceae,Isoetes muelleri,quillwort,A.Braun,C,,N,N,QA
 24784,plants,land plants,Jackiellaceae,Jackiella javanica,,Schiffn.,C,,N,N,Q
-13021,plants,land plants,Johnsoniaceae,Caesia chlorantha,,F.Muell.,C,,N,N,QA
-9363,plants,land plants,Johnsoniaceae,Caesia parviflora,,R.Br.,C,,N,N,QA
 17789,plants,land plants,Johnsoniaceae,Caesia parviflora var. parviflora,,R.Br.,C,,N,N,QA
-13020,plants,land plants,Johnsoniaceae,Caesia parviflora var. vittata,,(R.Br.) R.J.F.Hend.,C,,N,N,QA
-13022,plants,land plants,Johnsoniaceae,Caesia setifera,,Baker,C,,N,N,QAI
-41700,plants,land plants,Johnsoniaceae,Corynotheca divaricata,,(R.J.F.Hend.) R.L.Barrett & T.Macfarlane,C,,N,N,QA
-13026,plants,land plants,Johnsoniaceae,Corynotheca licrota,club fruit lily,R.J.F.Hend.,C,,N,N,QA
-9341,plants,land plants,Johnsoniaceae,Tricoryne anceps,,R.Br.,C,,N,N,Q
 15972,plants,land plants,Johnsoniaceae,Tricoryne anceps subsp. anceps,,R.Br.,C,,N,N,Q
 15973,plants,land plants,Johnsoniaceae,Tricoryne anceps subsp. pterocaulon,,(Baker) Thongp.,C,,N,N,QAI
-15974,plants,land plants,Johnsoniaceae,Tricoryne elatior,yellow autumn lily,R.Br.,C,,N,N,QA
-14160,plants,land plants,Johnsoniaceae,Tricoryne muricata,,Baker,C,,N,N,Q
 33665,plants,land plants,Juncaceae,Juncus acutus,,L.,,,N,N,IU
 31187,plants,land plants,Juncaceae,Juncus acutus subsp. acutus,,L.,,,N,N,IU
 14473,plants,land plants,Juncaceae,Juncus aridicola,tussock rush,L.A.S.Johnson,C,,N,N,QA
@@ -13199,7 +13208,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41016,plants,land plants,Lamiaceae,Coleus excelsus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41017,plants,land plants,Lamiaceae,Coleus fasciculatus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41018,plants,land plants,Lamiaceae,Coleus foetidus,,(Benth.) A.J.Paton,C,,N,N,Q
-41019,plants,land plants,Lamiaceae,Coleus fragrantissimus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
+41019,plants,land plants,Lamiaceae,Coleus fragrantissimus,,(P.I.Forst.) P.I.Forst.,CR,,Y,N,Q
 41020,plants,land plants,Lamiaceae,Coleus geminatus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41021,plants,land plants,Lamiaceae,Coleus glabriflorus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41022,plants,land plants,Lamiaceae,Coleus gratus,,(S.T.Blake) P.I.Forst. & T.C.Wilson,V,V,Y,N,Q
@@ -13226,6 +13235,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41042,plants,land plants,Lamiaceae,Coleus ventosus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41043,plants,land plants,Lamiaceae,Coleus venustus,,(P.I.Forst.) P.I.Forst.,C,,N,N,Q
 41399,plants,land plants,Lamiaceae,Coleus wallamanensis,,(T.C.Wilson & P.I.Forst.) T.C.Wilson & P.I.Forster.,C,,N,N,Q
+42189,plants,land plants,Lamiaceae,Cymaria dichotoma,,Benth.,C,,N,N,QAI
 19829,plants,land plants,Lamiaceae,Dicrastylis costelloi,,F.M.Bailey,C,,N,N,QA
 11611,plants,land plants,Lamiaceae,Dicrastylis lewellinii,,(F.Muell.) F.Muell.,C,,N,N,QA
 39774,plants,land plants,Lamiaceae,Dicrastylis weddii,,,C,,N,N,Q
@@ -13564,7 +13574,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14414,plants,land plants,Laxmanniaceae,Lomandra spicata,jungle matrush,A.T.Lee,C,,N,N,QA
 9674,plants,land plants,Laxmanniaceae,Lomandra teres,,T.D.Macfarl.,V,,Y,N,Q
 9780,plants,land plants,Laxmanniaceae,Romnalda grallata,,R.J.F.Hend.,C,,N,N,Q
-32507,plants,land plants,Laxmanniaceae,Romnalda ophiopogonoides,,"Conran, P.I.Forst. & Donnon",V,,Y,N,Q
+32507,plants,land plants,Laxmanniaceae,Romnalda ophiopogonoides,,"Conran, P.I.Forst. & Donnon",E,,Y,N,Q
 12377,plants,land plants,Laxmanniaceae,Romnalda strobilacea,,R.J.F.Hend. & Sharpe,V,V,Y,N,Q
 16133,plants,land plants,Laxmanniaceae,Sowerbaea juncea,vanilla plant,Andrews,C,,N,N,QA
 13796,plants,land plants,Laxmanniaceae,Sowerbaea subtilis,,D.A.Stewart,V,,Y,N,Q
@@ -13858,8 +13868,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15733,plants,land plants,Leguminosae,Acacia oswaldii,miljee,F.Muell.,C,,N,N,QA
 14943,plants,land plants,Leguminosae,Acacia paradoxa,kangaroo thorn,DC.,C,,N,N,QA
 19458,plants,land plants,Leguminosae,Acacia paraneura,,Randell,C,,N,N,QA
-41066,plants,land plants,Leguminosae,Acacia parvifoliolata,,Pedley,C,,N,N,Q
-8381,plants,land plants,Leguminosae,Acacia pedleyi,,Tindale & Kodela,V,,Y,N,Q
+41066,plants,land plants,Leguminosae,Acacia parvifoliolata,,Pedley,E,,Y,N,Q
+8381,plants,land plants,Leguminosae,Acacia pedleyi,,Tindale & Kodela,E,,Y,N,Q
 14944,plants,land plants,Leguminosae,Acacia pendula,myall,A.Cunn. ex G.Don,C,,N,N,QA
 14890,plants,land plants,Leguminosae,Acacia penninervis,,Sieber ex DC.,C,,N,N,QA
 15734,plants,land plants,Leguminosae,Acacia penninervis var. longiracemosa,,Domin,C,,N,N,QA
@@ -14060,7 +14070,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14791,plants,land plants,Leguminosae,Bossiaea rupicola,pea flower,A.Cunn. ex Benth.,C,,N,N,QA
 15603,plants,land plants,Leguminosae,Bossiaea scortechinii,,F.Muell.,C,,N,N,QA
 32625,plants,land plants,Leguminosae,Butea monosperma,,(Lam.) Taub.,,,N,N,IU
-14800,plants,land plants,Leguminosae,Caesalpinia crista,,L.,C,,N,N,QI
 14804,plants,land plants,Leguminosae,Cajanus acutifolius,,(Benth.) Maesen,C,,N,N,QA
 14805,plants,land plants,Leguminosae,Cajanus cajan,pigeon pea,(L.) Huth,,,N,N,IU
 15555,plants,land plants,Leguminosae,Cajanus confertiflorus,,F.Muell.,C,,N,N,Q
@@ -14203,7 +14212,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14652,plants,land plants,Leguminosae,Cyclocarpa stellaris,,Afzel. ex Urb.,,,N,N,IU
 15487,plants,land plants,Leguminosae,Cynometra iripa,,Kostel.,C,,N,N,QAI
 42000,plants,land plants,Leguminosae,Cynometra lenticellata,,(C.T.White) Rados.,,,N,N,U
-42003,plants,land plants,Leguminosae,Cynometra lenticellata var. lenticellata,,,C,,N,N,QI
+42003,plants,land plants,Leguminosae,Cynometra lenticellata var. lenticellata,,(C.T.White) Rados.,C,,N,N,QI
 36077,plants,land plants,Leguminosae,Cynometra ramiflora,,L.,C,,N,N,QAI
 36080,plants,land plants,Leguminosae,Cynometra roseiflora,,W.E.Cooper,CR,,Y,N,Q
 15491,plants,land plants,Leguminosae,Dalbergia candenatensis,,(Dennst.) Prain,C,,N,N,QAI
@@ -14285,7 +14294,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15431,plants,land plants,Leguminosae,Dillwynia retorta,,(J.C.Wendl.) Druce,C,,N,N,QA
 15432,plants,land plants,Leguminosae,Dillwynia sericea,silky parrot pea,A.Cunn.,C,,N,N,QA
 8145,plants,land plants,Leguminosae,Dillwynia sieberi,,Steud.,C,,N,N,QA
-8189,plants,land plants,Leguminosae,Dioclea hexandra,,(Ralph) Mabb.,V,,Y,N,QI
+8189,plants,land plants,Leguminosae,Dioclea hexandra,,(Ralph) Mabb.,E,,Y,N,QI
 10876,plants,land plants,Leguminosae,Dipogon lignosus,purple dolichos,(L.) Verdc.,,,N,N,IU
 32258,plants,land plants,Leguminosae,Dunbaria punctata,,(Wight & Arn.) Benth.,C,,N,N,QI
 12993,plants,land plants,Leguminosae,Entada phaseoloides,matchbox bean,(L.) Merr.,C,,N,N,QI
@@ -14867,6 +14876,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 13760,plants,land plants,Leguminosae,Tephrosia varians,,(F.M.Bailey) C.T.White,C,,N,N,Q
 10952,plants,land plants,Leguminosae,Tephrosia virens,,Pedley,C,,N,N,QA
 12852,plants,land plants,Leguminosae,Teramnus labialis,,(L.f.) Spreng.,,,N,N,IU
+42172,plants,land plants,Leguminosae,Ticanto crista,,(L.) R.Clark & Gagnon,C,,N,N,QI
 10911,plants,land plants,Leguminosae,Tipuana tipu,tipuana,(Benth.) Kuntze,,,N,N,IU
 20046,plants,land plants,Leguminosae,Trifolium alexandrinum,,,,,N,N,IU
 8927,plants,land plants,Leguminosae,Trifolium alexandrinum var. serotinum,,Zoh. & Lern.,,,N,N,IU
@@ -15217,9 +15227,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29708,plants,land plants,Lepidoziaceae,Zoopsis liukiuensis,,Horik.,C,,N,N,Q
 35427,plants,land plants,Lepidoziaceae,Zoopsis setigera,,K.I.Goebel,C,,N,N,Q
 25741,plants,land plants,Lepidoziaceae,Zoopsis setulosa,,Leitg.,C,,N,N,Q
-17656,plants,land plants,Leptaulaceae,Citronella moorei,churnwood,(F.Muell. ex Benth.) R.A.Howard,C,,N,N,QA
-17657,plants,land plants,Leptaulaceae,Citronella smythii,,(F.Muell.) R.A.Howard,C,,N,N,Q
-40690,plants,land plants,Leptaulaceae,Villaresia smythii,,,C,,N,N,Q
 25279,plants,land plants,Leptodontaceae,Forsstroemia producta,,(Hornsch.) Paris,C,,N,N,Q
 24672,plants,land plants,Leptodontaceae,Forsstroemia trichomitria subsp. australis,,(Muell.Hal.) L.R.Stark,C,,N,N,Q
 24768,plants,land plants,Leptodontaceae,Leptodon smithii,,(Hedw.) F.Weber & D.Mohr,C,,N,N,QI
@@ -15259,9 +15266,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 25138,plants,land plants,Leucobryaceae,Leucobryum wattsii,,Broth.,C,,N,N,Q
 29308,plants,land plants,Leucomiaceae,Leucomium strumosum,,(Hornsch.) Mitt.,C,,N,N,Q
 16796,plants,land plants,Liliaceae,Lilium formosanum,,Wallace,,,N,N,IU
-30766,plants,land plants,Limnocharitaceae,Butomopsis latifolia,,(D.Don) Kunth,C,,N,N,QA
-9783,plants,land plants,Limnocharitaceae,Hydrocleys nymphoides,,(Humb. & Bonpl. ex Willd.) Buchenau,,,N,N,IU
-27215,plants,land plants,Limnocharitaceae,Limnocharis flava,yellow burrhead,(L.) Buchenau,,,N,N,IU
+16924,plants,land plants,Linaceae,Hugonia jenkinsii,,F.Muell.,C,,N,N,QI
 13586,plants,land plants,Linaceae,Linum marginale,native flax,A.Cunn. ex Planch.,C,,N,N,QA
 22690,plants,land plants,Linaceae,Linum trigynum,,L.,,,N,N,IU
 12980,plants,land plants,Linaceae,Linum usitatissimum,flax,L.,,,N,N,IU
@@ -15437,7 +15442,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29947,plants,land plants,Loranthaceae,Muellerina flexialabastra,,Downey & C.A.Wilson,C,,N,N,Q
 11693,plants,land plants,Loranthaceae,Muellerina myrtifolia,,(A.Cunn. ex Benth.) Barlow,NT,,Y,N,QA
 25694,plants,land plants,Lunulariaceae,Lunularia cruciata,,(L.) Dumort.,C,,N,N,QAI
-12991,plants,land plants,Luzuriagaceae,Drymophila moorei,orange berry,Baker,C,,N,N,QA
 12357,plants,land plants,Lycopodiaceae,Huperzia serrata,,(Thunb. ex Murray) Trevis.,PE,EX,Y,Y,QI
 41061,plants,land plants,Lycopodiaceae,Lateristachys lateralis,,(R.Br.) Holub,SL,,Y,N,QAI
 41045,plants,land plants,Lycopodiaceae,Palhinhaea cernua,,(L.) Franco & Carv.,C,,N,N,QAI
@@ -15519,6 +15523,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 13039,plants,land plants,Malvaceae,Abelmoschus moschatus,,Medik.,C,,N,N,QAI
 33396,plants,land plants,Malvaceae,Abelmoschus moschatus subsp. moschatus,,Medik.,,,N,N,IU
 13290,plants,land plants,Malvaceae,Abelmoschus moschatus subsp. tuberosus,,(Span.) Borss.Waalk.,C,,N,N,QAI
+42199,plants,land plants,Malvaceae,Abelmoschus rhodopetalus,,F.Muell.,C,,N,N,QAI
 31516,plants,land plants,Malvaceae,Abutilon albescens,,Miq.,C,,N,N,QAI
 14113,plants,land plants,Malvaceae,Abutilon arenarium,,C.T.White,C,,N,N,Q
 18081,plants,land plants,Malvaceae,Abutilon auritum,Chinese lantern,(Wall. ex Link) Sweet,C,,N,N,QI
@@ -15748,6 +15753,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29725,plants,land plants,Melastomataceae,Melastoma malabathricum,,L.,C,,N,N,Q
 26849,plants,land plants,Melastomataceae,Melastoma malabathricum subsp. malabathricum,,L.,C,,N,N,QAI
 40361,plants,land plants,Melastomataceae,Melastoma malabathricum var. nanum,,,C,,N,N,Q
+18776,plants,land plants,Melastomataceae,Memecylon pauciflorum,,Blume,C,,N,N,QAI
 22848,plants,land plants,Melastomataceae,Miconia calvescens,miconia,DC.,,,N,N,IU
 29871,plants,land plants,Melastomataceae,Miconia nervosa,,(Sm.) Triana,,,N,N,IU
 27862,plants,land plants,Melastomataceae,Miconia racemosa,,(Aubl.) DC.,,,N,N,IU
@@ -15812,7 +15818,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15891,plants,land plants,Meliaceae,Xylocarpus moluccensis,,(Lam.) M.Roem.,C,,N,N,QAI
 8086,plants,land plants,Meliaceae,Xylocarpus rumphii,,(Kostel.) Mabb.,C,,N,N,Q
 8611,plants,land plants,Memecylaceae,Memecylon hylandii,,Whiffin,C,,N,N,Q
-18776,plants,land plants,Memecylaceae,Memecylon pauciflorum,,Blume,C,,N,N,QAI
 13376,plants,land plants,Menispermaceae,Carronia multisepalea,,F.Muell.,C,,N,N,QA
 9013,plants,land plants,Menispermaceae,Carronia pedicellata,,Forman,E,E,Y,N,Q
 17692,plants,land plants,Menispermaceae,Carronia protensa,,(F.Muell.) Diels,C,,N,N,Q
@@ -16326,7 +16331,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17256,plants,land plants,Myrtaceae,Eucalyptus curtisii,Plunkett mallee,Blakely & C.T.White,NT,,Y,N,QAI
 19850,plants,land plants,Myrtaceae,Eucalyptus dalrympleana,,,C,,N,N,U
 13246,plants,land plants,Myrtaceae,Eucalyptus dalrympleana subsp. heptantha,,L.A.S.Johnson,C,,N,N,QA
-40899,plants,land plants,Myrtaceae,Eucalyptus dalveenica,,"T.L.Collins, R.L.Andrew & J.J.Bruhl",CR,,Y,N,Q
+40899,plants,land plants,Myrtaceae,Eucalyptus dalveenica,,"T.L.Collins, R.L.Andrew & J.J.Bruhl",CR,CE,Y,N,Q
 17257,plants,land plants,Myrtaceae,Eucalyptus dealbata,tumble-down red gum,A.Cunn. ex Schauer,C,,N,N,QA
 6028,plants,land plants,Myrtaceae,Eucalyptus dealbata x Eucalyptus prava,,,C,,N,N,Q
 17258,plants,land plants,Myrtaceae,Eucalyptus deanei,,Maiden,C,,N,N,QA
@@ -16425,7 +16430,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17230,plants,land plants,Myrtaceae,Eucalyptus normantonensis,Normanton box,Maiden & Cambage,C,,N,N,QA
 14549,plants,land plants,Myrtaceae,Eucalyptus notabilis,,Maiden,C,,N,N,QA
 17231,plants,land plants,Myrtaceae,Eucalyptus nova-anglica,New England peppermint,H.Deane & Maiden,C,,N,N,QAI
-9239,plants,land plants,Myrtaceae,Eucalyptus nudicaulis,Mt Isa mallee,A.R.Bean,E,,Y,N,Q
+9239,plants,land plants,Myrtaceae,Eucalyptus nudicaulis,Mt Isa mallee,A.R.Bean,E,E,Y,N,Q
 12625,plants,land plants,Myrtaceae,Eucalyptus obliqua,messmate stringybark,L'Her.,C,,N,N,QAI
 17232,plants,land plants,Myrtaceae,Eucalyptus ochrophloia,yapunyah,F.Muell.,C,,N,N,QA
 9308,plants,land plants,Myrtaceae,Eucalyptus ochrophloia x Eucalyptus populnea,,,C,,N,N,Q
@@ -16505,7 +16510,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 40184,plants,land plants,Myrtaceae,Eucalyptus stoneana,,,C,,N,N,Q
 17199,plants,land plants,Myrtaceae,Eucalyptus suffulgens,,L.A.S.Johnson & K.D.Hill,C,,N,N,Q
 26371,plants,land plants,Myrtaceae,Eucalyptus tardecidens,,(L.A.S.Johnson & K.D.Hill) A.R.Bean,C,,N,N,Q
-6582,plants,land plants,Myrtaceae,Eucalyptus taurina,Helidon ironbark,A.R.Bean & Brooker,E,,Y,N,Q
+6582,plants,land plants,Myrtaceae,Eucalyptus taurina,Helidon ironbark,A.R.Bean & Brooker,E,E,Y,N,Q
 17202,plants,land plants,Myrtaceae,Eucalyptus tectifica,Darwin box,F.Muell.,C,,N,N,QA
 17203,plants,land plants,Myrtaceae,Eucalyptus tenuipes,narrow-leaved white mahogany,(Maiden & Blakely) Blakely & C.T.White,C,,N,N,Q
 17204,plants,land plants,Myrtaceae,Eucalyptus tereticornis,,Sm.,C,,N,N,QA
@@ -16577,7 +16582,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27385,plants,land plants,Myrtaceae,Gossia fragrantissima,,(F.Muell. ex Benth.) N.Snow & Guymer,E,E,Y,N,QA
 27386,plants,land plants,Myrtaceae,Gossia gonoclada,,(F.Muell. ex Benth.) N.Snow & Guymer,CR,E,Y,N,Q
 25951,plants,land plants,Myrtaceae,Gossia grayi,,N.Snow & Guymer,C,,N,N,QA
-27387,plants,land plants,Myrtaceae,Gossia hillii,,(Benth.) N.Snow & Guymer,C,,N,N,QA
+27387,plants,land plants,Myrtaceae,Gossia hillii,,(Benth.) N.Snow & Guymer,CR,,Y,N,QA
 27388,plants,land plants,Myrtaceae,Gossia inophloia,,(J.F.Bailey & C.T.White) N.Snow & Guymer,CR,,Y,N,Q
 25950,plants,land plants,Myrtaceae,Gossia lewisensis,,N.Snow & Guymer,C,,N,N,Q
 27389,plants,land plants,Myrtaceae,Gossia lucida,,(Banks ex Gaertn.) N.Snow & Guymer,C,,N,N,Q
@@ -16607,10 +16612,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 31444,plants,land plants,Myrtaceae,Homoranthus vagans,,L.M.Copel.,V,,Y,N,Q
 16919,plants,land plants,Myrtaceae,Homoranthus virgatus,twiggy homoranthus,A.Cunn. ex Schauer,C,,N,N,QA
 9021,plants,land plants,Myrtaceae,Homoranthus zeteticorum,,Craven & S.R.Jones,E,,Y,N,Q
-31857,plants,land plants,Myrtaceae,Kardomia granitica,,(A.R.Bean) Peter G.Wilson,E,V,Y,N,Q
+31857,plants,land plants,Myrtaceae,Kardomia granitica,,(A.R.Bean) Peter G.Wilson,V,V,Y,N,Q
 31856,plants,land plants,Myrtaceae,Kardomia jucunda,,(S.T.Blake) Peter G.Wilson,C,,N,N,Q
 31855,plants,land plants,Myrtaceae,Kardomia silvestris,,(A.R.Bean) Peter G.Wilson,E,,Y,N,QA
-31854,plants,land plants,Myrtaceae,Kardomia squarrulosa,,(Domin) Peter G.Wilson,V,,Y,N,Q
+31854,plants,land plants,Myrtaceae,Kardomia squarrulosa,,(Domin) Peter G.Wilson,NT,,Y,N,Q
 16854,plants,land plants,Myrtaceae,Kunzea bracteolata,white kunzea,Maiden & Betche,C,,N,N,QA
 36106,plants,land plants,Myrtaceae,Kunzea caduca,,Toelken,C,,N,N,Q
 8919,plants,land plants,Myrtaceae,Kunzea calida,Mount Stewart kunzea,F.Muell.,V,,Y,N,Q
@@ -16630,7 +16635,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 28334,plants,land plants,Myrtaceae,Lenwebbia sp. (Main Range P.R.Sharpe+ 4877),Main Range lenwebbia,,CR,CE,Y,N,Q
 8996,plants,land plants,Myrtaceae,Leptospermum amboinense,,Blume,C,,N,N,QAI
 16816,plants,land plants,Myrtaceae,Leptospermum arachnoides,,Gaertn.,C,,N,N,QA
-29864,plants,land plants,Myrtaceae,Leptospermum barneyense,,A.R.Bean,V,,Y,N,Q
+29864,plants,land plants,Myrtaceae,Leptospermum barneyense,,A.R.Bean,E,,Y,N,Q
 39979,plants,land plants,Myrtaceae,Leptospermum fabricia,,,C,,N,N,Q
 40328,plants,land plants,Myrtaceae,Leptospermum flavescens var. citratum,,,C,,N,N,Q
 40320,plants,land plants,Myrtaceae,Leptospermum flavescens var. citriodorum,,,C,,N,N,Q
@@ -16826,7 +16831,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 9522,plants,land plants,Myrtaceae,Ristantia waterhousei,,Peter G.Wilson & B.Hyland,V,,Y,N,Q
 31850,plants,land plants,Myrtaceae,Sannantha angusta,,(A.R.Bean) Peter G.Wilson,C,,N,N,QA
 31853,plants,land plants,Myrtaceae,Sannantha bidwillii,,(A.R.Bean) Peter G.Wilson,C,,N,N,Q
-31852,plants,land plants,Myrtaceae,Sannantha brachypoda,,(A.R.Bean) Peter G.Wilson,V,,Y,N,Q
+31852,plants,land plants,Myrtaceae,Sannantha brachypoda,,(A.R.Bean) Peter G.Wilson,NT,,Y,N,Q
 31851,plants,land plants,Myrtaceae,Sannantha collina,,(A.R.Bean) Peter G.Wilson,C,,N,N,QA
 31848,plants,land plants,Myrtaceae,Sannantha papillosa,,(A.R.Bean) Peter G.Wilson,V,,Y,N,Q
 31849,plants,land plants,Myrtaceae,Sannantha similis,,(A.R.Bean) Peter G.Wilson,C,,N,N,QA
@@ -16947,13 +16952,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41847,plants,land plants,Myuriaceae,Oedicladium rufescens,,(Reinw. & Hornsch.) Mitt.,C,,N,N,QI
 29306,plants,land plants,Myuriaceae,Oedicladium rufescens subsp. rufescens,,(Reinw. & Hornsch.) Mitt.,C,,N,N,Q
 41194,plants,land plants,Myuriaceae,Oedicladium rufescens var. purpuratum,,(Mitt) Klazenga,C,,N,N,QA
-22446,plants,land plants,Najadaceae,Najas browniana,,Rendle,SL,,Y,N,Q
 5196,plants,land plants,Najadaceae,Najas graminea,,Delile,C,,N,N,U
-34208,plants,land plants,Najadaceae,Najas graminea var. graminea,,Delile,SL,,Y,N,QA
-34229,plants,land plants,Najadaceae,Najas halophila,,Triest,SL,,Y,N,Q
-34313,plants,land plants,Najadaceae,Najas malesiana,,W.J.de Wilde,SL,,Y,N,Q
-13434,plants,land plants,Najadaceae,Najas marina,,L.,SL,,Y,N,QI
-14366,plants,land plants,Najadaceae,Najas tenuifolia,water nymph,R.Br.,SL,,Y,N,QAI
 35809,plants,land plants,Neckeraceae,Alleniella hymenodonta,,"(Müll.Hal.) S.Olsson, Enroth & D.Quandt",C,,N,N,QAI
 25261,plants,land plants,Neckeraceae,Caduciella mariei,,(Besch.) Enroth,C,,N,N,QA
 24756,plants,land plants,Neckeraceae,Circulifolium exiguum,,(Bosch & Sande Lac.) M.Fleisch.,C,,N,N,QA
@@ -17704,7 +17703,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 34821,plants,land plants,Pandanaceae,Benstonea lauterbachii,,(K.Schum. & Warb. ex Warb.) Callm. & Buerki,C,,N,N,QI
 34820,plants,land plants,Pandanaceae,Benstonea monticola,,(F.Muell.) Callm. & Buerki,C,,N,N,Q
 12682,plants,land plants,Pandanaceae,Freycinetia excelsa,climbing pandanus,F.Muell.,C,,N,N,QAI
-12683,plants,land plants,Pandanaceae,Freycinetia marginata,,Blume,V,,Y,N,Q
+12683,plants,land plants,Pandanaceae,Freycinetia marginata,,Blume,E,,Y,N,Q
 12684,plants,land plants,Pandanaceae,Freycinetia percostata,,Merr. & L.M.Perry,V,,Y,N,QI
 15840,plants,land plants,Pandanaceae,Freycinetia scandens,,Gaudich.,C,,N,N,QI
 13846,plants,land plants,Pandanaceae,Pandanus aquaticus,,F.Muell.,C,,N,N,QA
@@ -17767,6 +17766,11 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 12759,plants,land plants,Papaveraceae,Papaver somniferum,opium poppy,L.,,,N,N,IU
 4121,plants,land plants,Papaveraceae,Papaver somniferum subsp. setigerum,,(DC.) Arcang.,,,N,N,IU
 30327,plants,land plants,Papaveraceae,Papaver somniferum subsp. somniferum,,L.,,,N,N,IU
+15094,plants,land plants,Paracryphiaceae,Quintinia fawkneri,,F.Muell.,C,,N,N,Q
+15095,plants,land plants,Paracryphiaceae,Quintinia quatrefagesii,,F.Muell.,C,,N,N,Q
+15096,plants,land plants,Paracryphiaceae,Quintinia sieberi,,A.DC.,C,,N,N,QA
+15097,plants,land plants,Paracryphiaceae,Quintinia verdonii,grey possumwood,F.Muell.,C,,N,N,QA
+15051,plants,land plants,Paracryphiaceae,Sphenostemon lobosporus,,(F.Muell.) L.S.Sm.,C,,N,N,Q
 19719,plants,land plants,Passifloraceae,Adenia heterophylla,,(Blume) Koord.,C,,N,N,QI
 12860,plants,land plants,Passifloraceae,Adenia heterophylla subsp. australis,,(R.Br. ex DC.) W.J.de Wilde,C,,N,N,QAI
 12861,plants,land plants,Passifloraceae,Adenia heterophylla subsp. heterophylla,,(Blume) Koord.,C,,N,N,QI
@@ -17792,6 +17796,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16532,plants,land plants,Passifloraceae,Passiflora suberosa,corky passion flower,L.,,,N,N,IU
 36078,plants,land plants,Passifloraceae,Passiflora suberosa subsp. litoralis,,(Kunth) Port.-Utl. ex M.A.M.Azevedo et al.,,,N,N,IU
 16533,plants,land plants,Passifloraceae,Passiflora subpeltata,white passion flower,Ortega,,,N,N,IU
+36130,plants,land plants,Passifloraceae,Turnera subulata,,Sm.,,,N,N,IU
+29726,plants,land plants,Passifloraceae,Turnera ulmifolia,,L.,,,N,N,IU
 35846,plants,land plants,Paulowniaceae,Paulownia tomentosa,,(Thunb.) Steud.,,,N,N,IU
 16842,plants,land plants,Pedaliaceae,Josephinia eugeniae,josephinia burr,F.Muell.,C,,N,N,QA
 16843,plants,land plants,Pedaliaceae,Josephinia imperatricis,,Vent.,C,,N,N,QAI
@@ -17823,7 +17829,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 12589,plants,land plants,Phrymaceae,Peplidium maritimum,,(L.f.) Asch.,C,,N,N,Q
 22702,plants,land plants,Phrymaceae,Peplidium muelleri,,Benth.,C,,N,N,QA
 22205,plants,land plants,Phrymaceae,Peplidium sp. (Edgbaston R.J.Fensham 3341),,,C,,N,N,Q
-30539,plants,land plants,Phyllanthaceae,Actephila bella,,P.I.Forst.,V,,Y,N,Q
+30539,plants,land plants,Phyllanthaceae,Actephila bella,,P.I.Forst.,E,,Y,N,Q
 30644,plants,land plants,Phyllanthaceae,Actephila championiae,,P.I.Forst.,V,,Y,N,Q
 30504,plants,land plants,Phyllanthaceae,Actephila flavescens,,P.I.Forst.,C,,N,N,Q
 11365,plants,land plants,Phyllanthaceae,Actephila foetida,,Domin,V,V,Y,N,Q
@@ -18041,7 +18047,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14019,plants,land plants,Pittosporaceae,Bursaria incana,,Lindl.,C,,N,N,QA
 19358,plants,land plants,Pittosporaceae,Bursaria incana x Bursaria tenuifolia,,,C,,N,N,Q
 2053,plants,land plants,Pittosporaceae,Bursaria reevesii,,"L.Cayzer, Crisp & I.Telford",V,,Y,N,Q
-17785,plants,land plants,Pittosporaceae,Bursaria spinosa,,Cav.,,,N,N,QA
+17785,plants,land plants,Pittosporaceae,Bursaria spinosa,,Cav.,C,,N,N,QA
 22227,plants,land plants,Pittosporaceae,Bursaria spinosa subsp. spinosa,,Cav.,C,,N,N,QA
 17786,plants,land plants,Pittosporaceae,Bursaria tenuifolia,,F.M.Bailey,C,,N,N,Q
 31647,plants,land plants,Pittosporaceae,Cheiranthera borealis,,(E.M.Benn.) L.Cayzer & Crisp,C,,N,N,QA
@@ -18346,7 +18352,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15571,plants,land plants,Poaceae,Calyptochloa gracillima,,C.E.Hubb.,,,N,N,Q
 34710,plants,land plants,Poaceae,Calyptochloa gracillima subsp. gracillima,,C.E.Hubb.,C,,N,N,Q
 34709,plants,land plants,Poaceae,Calyptochloa gracillima subsp. ipsviciensis,,E.J.Thomps.,CR,,Y,N,Q
-34719,plants,land plants,Poaceae,Calyptochloa johnsoniana,,E.J.Thomps. & B.K.Simon,C,,N,N,Q
+34719,plants,land plants,Poaceae,Calyptochloa johnsoniana,,E.J.Thomps. & B.K.Simon,CR,,Y,N,Q
 41926,plants,land plants,Poaceae,Calyptochloa sphaerocarpa,,E.J.Thomps.,C,,N,N,Q
 14773,plants,land plants,Poaceae,Capillipedium parviflorum,scented top,(R.Br.) Stapf,C,,N,N,QAI
 14774,plants,land plants,Poaceae,Capillipedium spicigerum,spicytop,S.T.Blake,C,,N,N,QAI
@@ -18653,7 +18659,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15364,plants,land plants,Poaceae,Eragrostis lacunaria,purple lovegrass,F.Muell. ex Benth.,C,,N,N,QA
 3820,plants,land plants,Poaceae,Eragrostis lanicaulis,,Lazarides,C,,N,N,QA
 15365,plants,land plants,Poaceae,Eragrostis laniflora,,Benth.,C,,N,N,QA
-42075,plants,land plants,Poaceae,Eragrostis lasioclada,,Merr.,C,,N,N,Q
 15366,plants,land plants,Poaceae,Eragrostis leptocarpa,drooping lovegrass,Benth.,C,,N,N,QA
 15367,plants,land plants,Poaceae,Eragrostis leptostachya,,(R.Br.) Steud.,C,,N,N,QA
 10727,plants,land plants,Poaceae,Eragrostis longipedicellata,,B.K.Simon,C,,N,N,Q
@@ -19173,7 +19178,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 2248,plants,land plants,Poaceae,Urochloa holosericea,,(R.Br.) R.D.Webster,C,,N,N,QAI
 29241,plants,land plants,Poaceae,Urochloa holosericea subsp. holosericea,,(R.Br.) R.D.Webster,C,,N,N,QAI
 29195,plants,land plants,Poaceae,Urochloa holosericea subsp. velutina,,R.D.Webster,C,,N,N,QA
-29226,plants,land plants,Poaceae,Urochloa humidicola,,(Rendle) Les & S.W.L.Jacobs,,,N,N,IU
 29269,plants,land plants,Poaceae,Urochloa kurzii,,(Hook.f.) R.D.Webster,C,,N,N,QAI
 14999,plants,land plants,Poaceae,Urochloa mosambicensis,sabi grass,(Hack.) Dandy,,,N,N,IU
 2359,plants,land plants,Poaceae,Urochloa mutica,,(Forssk.) Nguyen,,,N,N,IU
@@ -19351,7 +19355,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16423,plants,land plants,Polypodiaceae,Platycerium hillii,,T.Moore,SL,,Y,N,Q
 11697,plants,land plants,Polypodiaceae,Platycerium superbum,staghorn fern,de Jonch. & Hennipman,SL,,Y,N,Q
 11422,plants,land plants,Polypodiaceae,Platycerium veitchii,silver elkhorn,(Underw.) C.Chr.,SL,,Y,N,Q
-40435,plants,land plants,Polypodiaceae,Polypodium aspidioides var. tropica,,,C,,N,N,Q
 40455,plants,land plants,Polypodiaceae,Polypodium confluens forma liberatum,,,C,,N,N,Q
 40436,plants,land plants,Polypodiaceae,Polypodium confluens var. lobatum,,,C,,N,N,Q
 40456,plants,land plants,Polypodiaceae,Polypodium irioides forma cristatum,,,C,,N,N,Q
@@ -19698,7 +19701,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 8486,plants,land plants,Psilotaceae,Tmesipteris lanceolata,,P.A.Dang.,PE,EX,Y,Y,Q
 15999,plants,land plants,Psilotaceae,Tmesipteris ovata,,N.A.Wakef.,SL,,Y,N,QA
 12344,plants,land plants,Psilotaceae,Tmesipteris truncata,,(R.Br.) Desv.,SL,,Y,N,QA
-16972,plants,land plants,Ptaeroxylaceae,Harrisonia brownii,,A.Juss.,C,,N,N,QAI
 12487,plants,land plants,Pteridaceae,Acrostichum aureum,golden mangrove fern,L.,SL,,Y,N,QAI
 18110,plants,land plants,Pteridaceae,Acrostichum speciosum,mangrove fern,Willd.,SL,,Y,N,QAI
 18116,plants,land plants,Pteridaceae,Adiantum aethiopicum,,L.,SL,,Y,N,QAI
@@ -19744,7 +19746,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 41594,plants,land plants,Pteridaceae,Pellaea muelleri,,(Hook.) A.R.Field,SL,,Y,N,Q
 21889,plants,land plants,Pteridaceae,Pellaea nana,,(Hook.) Bostock,SL,,Y,N,QA
 13800,plants,land plants,Pteridaceae,Pellaea paradoxa,heart fern,(R.Br.) Hook.,SL,,Y,N,QAI
-41800,plants,land plants,Pteridaceae,Pellaea viridis,,,,,N,N,IU
+41800,plants,land plants,Pteridaceae,Pellaea viridis,,(Forssk.) Prantl,,,N,N,IU
 12588,plants,land plants,Pteridaceae,Pellaea viridis var. viridis,,(Forssk.) Prantl,,,N,N,IU
 19980,plants,land plants,Pteridaceae,Pityrogramma calomelanos,,(L.) Link,,,N,N,IU
 13805,plants,land plants,Pteridaceae,Pityrogramma calomelanos var. austroamericana,,(Domin) Farw.,,,N,N,IU
@@ -19779,7 +19781,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 24718,plants,land plants,Ptychomniaceae,Euptychium cuspidatum,,(Mitt.) Mitt.,C,,N,N,Q
 34983,plants,land plants,Ptychomniaceae,Euptychium setigerum,,(Sull.) Broth.,C,,N,N,QI
 24691,plants,land plants,Ptychomniaceae,Euptychium setigerum subsp. setigerum,,(Sull.) Broth.,C,,N,N,Q
-36650,plants,land plants,Ptychomniaceae,Garovaglia elegans,,(Dozy & Molk.) Hampe ex Bosch & Sande Lac.,C,,N,N,QI
+36650,plants,land plants,Ptychomniaceae,Garovaglia elegans,,(Dozy & Molk.) Hampe ex Bosch & Sande Lac.,C,,N,N,U
 24739,plants,land plants,Ptychomniaceae,Garovaglia elegans subsp. dietrichiae,,(Muell.Hal.) During,C,,N,N,QA
 36648,plants,land plants,Ptychomniaceae,Garovaglia powellii,,Mitt.,C,,N,N,Q
 24740,plants,land plants,Ptychomniaceae,Garovaglia powellii var. muelleri,,(Hampe) During,C,,N,N,QI
@@ -19805,10 +19807,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29371,plants,land plants,Pylaisiadelphaceae,Trismegistia rigida,,(Mitt.) Broth.,C,,N,N,QAI
 25020,plants,land plants,Pylaisiadelphaceae,Wijkia extenuata,,(Brid.) H.A.Crum,C,,N,N,QAI
 41696,plants,land plants,Pylaisiadelphaceae,Wijkia extenuata var. caudata,,Fife,C,,N,N,Q
-15094,plants,land plants,Quintiniaceae,Quintinia fawkneri,,F.Muell.,C,,N,N,Q
-15095,plants,land plants,Quintiniaceae,Quintinia quatrefagesii,,F.Muell.,C,,N,N,Q
-15096,plants,land plants,Quintiniaceae,Quintinia sieberi,,A.DC.,C,,N,N,QA
-15097,plants,land plants,Quintiniaceae,Quintinia verdonii,grey possumwood,F.Muell.,C,,N,N,QA
 25176,plants,land plants,Racopilaceae,Powellia involutifolia,,Mitt.,C,,N,N,QI
 41205,plants,land plants,Racopilaceae,Powelliopsis integra,,(Dixon) Zanten,C,,N,N,QI
 24903,plants,land plants,Racopilaceae,Racopilum cuspidigerum,,(Schwaegr.) Aongstr.,C,,N,N,QAI
@@ -19859,7 +19857,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 16323,plants,land plants,Ranunculaceae,Ranunculus lappaceus,common buttercup,Sm.,C,,N,N,QA
 27648,plants,land plants,Ranunculaceae,Ranunculus meristus,,B.G.Briggs & Makinson,C,,N,N,QA
 13111,plants,land plants,Ranunculaceae,Ranunculus muricatus,sharp buttercup,L.,,,N,N,IU
-19990,plants,land plants,Ranunculaceae,Ranunculus pentandrus,,,C,,N,N,U
+19990,plants,land plants,Ranunculaceae,Ranunculus pentandrus,,J.M.Black,C,,N,N,Q
 13775,plants,land plants,Ranunculaceae,Ranunculus pentandrus var. pentandrus,,J.M.Black,C,,N,N,QA
 13108,plants,land plants,Ranunculaceae,Ranunculus pentandrus var. platycarpus,,(F.Muell.) H.Eichler,C,,N,N,QA
 13112,plants,land plants,Ranunculaceae,Ranunculus plebeius,,R.Br. ex DC.,C,,N,N,QA
@@ -20029,7 +20027,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27849,plants,land plants,Rosaceae,Cydonia oblonga,,Mill.,,,N,N,IU
 14109,plants,land plants,Rosaceae,Eriobotrya japonica,loquat,(Thunb.) Lindl.,,,N,N,IU
 41364,plants,land plants,Rosaceae,Malus domestica,,Borkh.,,,N,N,IU
-22838,plants,land plants,Rosaceae,Malus pumila,,Mill.,,,N,N,IU
 31001,plants,land plants,Rosaceae,Potentilla indica,,(Andrews) Th.Wolf,,,N,N,IU
 27467,plants,land plants,Rosaceae,Prunus armeniaca,,L.,,,N,N,IU
 12238,plants,land plants,Rosaceae,Prunus brachystachya,,Kalkman,C,,N,N,QI
@@ -20068,6 +20065,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 26686,plants,land plants,Rosaceae,Rubus x novus x Rubus parvifolius,,Kuntze,C,,N,N,U
 19995,plants,land plants,Rosaceae,Sanguisorba minor,,,,,N,N,II
 9411,plants,land plants,Rosaceae,Sanguisorba minor subsp. muricata,,Briq.,,,N,N,IU
+9280,plants,land plants,Rousseaceae,Abrophyllum ornans,,(F.Muell.) Hook.f. ex Benth.,C,,N,N,QA
+15481,plants,land plants,Rousseaceae,Cuttsia viburnea,silver-leaf cuttsia,F.Muell.,C,,N,N,QA
 3528,plants,land plants,Rubiaceae,Aidia cowleyi,,Puttock,C,,N,N,Q
 35577,plants,land plants,Rubiaceae,Aidia gyropetala,,A.J.Ford & Halford,C,,N,N,Q
 18045,plants,land plants,Rubiaceae,Aidia racemosa,,(Cav.) Tirveng.,C,,N,N,QAI
@@ -20374,7 +20373,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 21899,plants,land plants,Rubiaceae,Uncaria callophylla,,Blume ex Korth.,C,,N,N,QI
 20058,plants,land plants,Rubiaceae,Uncaria cordata,,(Lour.) Merr.,E,,Y,N,QI
 13367,plants,land plants,Rubiaceae,Uncaria cordata var. cordata,,(Lour.) Merr.,E,,Y,N,QI
-20059,plants,land plants,Rubiaceae,Uncaria lanosa,,Wall.,C,,N,N,QI
+20059,plants,land plants,Rubiaceae,Uncaria lanosa,,Wall.,C,,N,N,U
 14997,plants,land plants,Rubiaceae,Uncaria lanosa var. appendiculata,,(Benth.) Ridsdale,C,,N,N,QI
 15924,plants,land plants,Rubiaceae,Wendlandia basistaminea,,F.Muell.,C,,N,N,Q
 15925,plants,land plants,Rubiaceae,Wendlandia connata,,C.T.White,NT,,Y,N,Q
@@ -20491,7 +20490,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 40189,plants,land plants,Rutaceae,Eriostemon parvifolius,,,C,,N,N,Q
 40190,plants,land plants,Rutaceae,Eriostemon queenslandicus,,,C,,N,N,Q
 40038,plants,land plants,Rutaceae,Euodia acronychioides,,,C,,N,N,Q
-26465,plants,land plants,Rutaceae,Euodia hylandii,,T.G.Hartley,V,,Y,N,Q
+26465,plants,land plants,Rutaceae,Euodia hylandii,,T.G.Hartley,NT,,Y,N,Q
 3494,plants,land plants,Rutaceae,Euodia pubifolia,,T.G.Hartley,E,,Y,N,Q
 17119,plants,land plants,Rutaceae,Flindersia acuminata,silver silkwood,C.T.White,C,,N,N,Q
 11300,plants,land plants,Rutaceae,Flindersia australis,crow's ash,R.Br.,C,,N,N,QA
@@ -20518,6 +20517,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 11430,plants,land plants,Rutaceae,Geijera salicifolia,brush wilga,Schott,C,,N,N,QAI
 11972,plants,land plants,Rutaceae,Glycosmis trifoliata,,(Blume) Spreng.,C,,N,N,QAI
 17015,plants,land plants,Rutaceae,Halfordia kendack,saffron heart,(Montrouz.) Guillaumin,C,,N,N,QAI
+16972,plants,land plants,Rutaceae,Harrisonia brownii,,A.Juss.,C,,N,N,QAI
 21803,plants,land plants,Rutaceae,Leionema ambiens,,(F.Muell.) Paul G.Wilson,NT,,Y,N,QA
 5966,plants,land plants,Rutaceae,Leionema ambiens x Leionema rotundifolium,,,C,,N,N,Q
 41828,plants,land plants,Rutaceae,Leionema beckleri,,(F.Muell.) I.Telford & J.J.Bruhl,E,,Y,N,QA
@@ -20587,7 +20587,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 21799,plants,land plants,Rutaceae,Philotheca difformis subsp. smithiana,,(Benth.) Paul G.Wilson,C,,N,N,QA
 30647,plants,land plants,Rutaceae,Philotheca epilosa,,(Paul G.Wilson) P.I.Forst.,C,,N,N,QA
 30718,plants,land plants,Rutaceae,Philotheca glasshousiensis,,(Domin) P.I.Forst.,C,,N,N,Q
-30648,plants,land plants,Rutaceae,Philotheca obovatifolia,,(Bayly) P.I.Forst.,V,,Y,N,QA
+30648,plants,land plants,Rutaceae,Philotheca obovatifolia,,(Bayly) P.I.Forst.,V,V,Y,N,QA
 30527,plants,land plants,Rutaceae,Philotheca queenslandica,,(C.T.White) P.I.Forst.,C,,N,N,Q
 21801,plants,land plants,Rutaceae,Philotheca sporadica,,(Bayly) Paul G.Wilson,NT,V,Y,N,Q
 18948,plants,land plants,Rutaceae,Pitaviaster haplophyllus,,(F.Muell.) T.G.Hartley,C,,N,N,Q
@@ -20693,6 +20693,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 14267,plants,land plants,Samolaceae,Samolus valerandi,brookweed,L.,C,,N,N,QAI
 18004,plants,land plants,Santalaceae,Anthobolus filifolius,,R.Br.,C,,N,N,QA
 17953,plants,land plants,Santalaceae,Anthobolus leptomerioides,,F.Muell.,C,,N,N,QA
+40674,plants,land plants,Santalaceae,Bifaria breviarticulata,,,C,,N,N,Q
 17640,plants,land plants,Santalaceae,Choretrum candollei,white sour bush,F.Muell. ex Benth.,C,,N,N,QA
 13930,plants,land plants,Santalaceae,Dendromyza reinwardtiana,,(Blume ex Korth.) Danser,V,,Y,N,QAI
 13931,plants,land plants,Santalaceae,Dendrotrophe varians,,(Blume) Miq.,C,,N,N,QI
@@ -20702,13 +20703,32 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 17182,plants,land plants,Santalaceae,Exocarpos sparteus,slender cherry,R.Br.,C,,N,N,QA
 17183,plants,land plants,Santalaceae,Exocarpos strictus,dwarf cherry,R.Br.,C,,N,N,QA
 39868,plants,land plants,Santalaceae,Henslowia queenslandiae,,,C,,N,N,Q
+39783,plants,land plants,Santalaceae,Korthalsella brassiana,,Blakely,C,,N,N,Q
+13850,plants,land plants,Santalaceae,Korthalsella breviarticulata,,(Tiegh.) Danser,C,,N,N,Q
+12397,plants,land plants,Santalaceae,Korthalsella grayi,,Barlow,C,,N,N,Q
+13901,plants,land plants,Santalaceae,Korthalsella japonica,,(Thunb.) Engl.,C,,N,N,Q
+12764,plants,land plants,Santalaceae,Korthalsella papuana,,Danser,C,,N,N,Q
+18929,plants,land plants,Santalaceae,Korthalsella rubra,,(Tiegh.) Engl.,C,,N,N,Q
+12399,plants,land plants,Santalaceae,Korthalsella rubra subsp. geijericola,,Barlow,C,,N,N,QA
+16852,plants,land plants,Santalaceae,Korthalsella rubra subsp. rubra,,(Tiegh.) Engl.,C,,N,N,QA
 16815,plants,land plants,Santalaceae,Leptomeria acida,sour currant bush,R.Br.,C,,N,N,QA
 19415,plants,land plants,Santalaceae,Leptomeria drupacea,,(Labill.) Druce,C,,N,N,QA
+15861,plants,land plants,Santalaceae,Notothixos cornifolius,kurrajong mistletoe,Oliv.,C,,N,N,QA
+14132,plants,land plants,Santalaceae,Notothixos incanus,,(Hook.) Oliv.,C,,N,N,QA
+15862,plants,land plants,Santalaceae,Notothixos leiophyllus,,K.Schum.,C,,N,N,QI
+15863,plants,land plants,Santalaceae,Notothixos subaureus,golden mistletoe,Oliv.,C,,N,N,QAI
+40404,plants,land plants,Santalaceae,Notothixos subaureus var. cinereus,,,C,,N,N,Q
 13070,plants,land plants,Santalaceae,Santalum acuminatum,sweet quandong,(R.Br.) A.DC.,C,,N,N,QA
 16237,plants,land plants,Santalaceae,Santalum lanceolatum,,R.Br.,SL,,Y,N,QA
 40409,plants,land plants,Santalaceae,Santalum lanceolatum var. venosum,,,C,,N,N,Q
 13576,plants,land plants,Santalaceae,Santalum obtusifolium,sandalwood,R.Br.,C,,N,N,QA
 13501,plants,land plants,Santalaceae,Thesium australe,toadflax,R.Br.,V,V,Y,N,QA
+15960,plants,land plants,Santalaceae,Viscum articulatum,flat mistletoe,Burm.f.,C,,N,N,QAI
+39891,plants,land plants,Santalaceae,Viscum australe,,,C,,N,N,Q
+13726,plants,land plants,Santalaceae,Viscum bancroftii,,Blakely,C,,N,N,Q
+12352,plants,land plants,Santalaceae,Viscum ovalifolium,,DC.,C,,N,N,QI
+9205,plants,land plants,Santalaceae,Viscum whitei,,Blakely,C,,N,N,Q
+14117,plants,land plants,Santalaceae,Viscum whitei subsp. whitei,,Blakely,C,,N,N,Q
 18052,plants,land plants,Sapindaceae,Alectryon connatus,grey birds-eye,(F.Muell.) Radlk.,C,,N,N,QI
 18053,plants,land plants,Sapindaceae,Alectryon coriaceus,beach alectryon,(Benth.) Radlk.,C,,N,N,QA
 18054,plants,land plants,Sapindaceae,Alectryon diversifolius,scrub boonaree,(F.Muell.) S.T.Reynolds,C,,N,N,QA
@@ -20882,7 +20902,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 15849,plants,land plants,Sapindaceae,Lepiderema sericolignis,,(F.M.Bailey) Radlk.,C,,N,N,Q
 6796,plants,land plants,Sapindaceae,Lepiderema sp. (Impulse Creek A.B.Pollock 73),,,C,,N,N,Q
 8846,plants,land plants,Sapindaceae,Lepidopetalum fructoglabrum,,Welzen,C,,N,N,QI
-27834,plants,land plants,Sapindaceae,Lepisanthes senegalensis,,(Poir.) Leenh.,E,,Y,N,QI
+27834,plants,land plants,Sapindaceae,Lepisanthes senegalensis,,(Poir.) Leenh.,V,,Y,N,QI
 6175,plants,land plants,Sapindaceae,Mischarytera lautereriana,corduroy tamarind,(F.M.Bailey) H.Turner,C,,N,N,Q
 6176,plants,land plants,Sapindaceae,Mischarytera macrobotrys,,(Merr. & L.M.Perry) H.Turner,C,,N,N,QI
 31132,plants,land plants,Sapindaceae,Mischarytera megaphylla,,P.I.Forst.,C,,N,N,Q
@@ -21372,7 +21392,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 29351,plants,land plants,Sphagnaceae,Sphagnum novozelandicum,,Mitt.,C,,N,N,QAI
 24946,plants,land plants,Sphagnaceae,Sphagnum perichaetiale,,Hampe,C,,N,N,QI
 12553,plants,land plants,Sphenocleaceae,Sphenoclea zeylanica,,Gaertn.,C,,N,N,QAI
-15051,plants,land plants,Sphenostemonaceae,Sphenostemon lobosporus,,(F.Muell.) L.S.Sm.,C,,N,N,Q
 24975,plants,land plants,Splachnaceae,Tayloria octoblepharum,,(Hook.) Mitt.,C,,N,N,QA
 13824,plants,land plants,Stackhousiaceae,Macgregoria racemigera,carpet-of-snow,F.Muell.,C,,N,N,QA
 8818,plants,land plants,Stackhousiaceae,Stackhousia clementii,,Domin,C,,N,N,QA
@@ -21499,7 +21518,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 12565,plants,land plants,Symplocaceae,Symplocos baeuerlenii,small-leaved hazelwood,R.T.Baker,V,V,Y,N,QA
 34174,plants,land plants,Symplocaceae,Symplocos boonjee,,Jessup,C,,N,N,Q
 34281,plants,land plants,Symplocaceae,Symplocos bullata,,Jessup,C,,N,N,Q
-13752,plants,land plants,Symplocaceae,Symplocos crassiramifera,,Noot.,V,,Y,N,Q
+13752,plants,land plants,Symplocaceae,Symplocos crassiramifera,,Noot.,E,,Y,N,Q
 14188,plants,land plants,Symplocaceae,Symplocos cyanocarpa,,C.T.White,C,,N,N,Q
 34227,plants,land plants,Symplocaceae,Symplocos cyanocarpa var. cyanocarpa,,C.T.White,C,,N,N,Q
 34226,plants,land plants,Symplocaceae,Symplocos cyanocarpa var. pilosa,,Jessup,C,,N,N,Q
@@ -21632,8 +21651,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 12548,plants,land plants,Triuridaceae,Sciaphila arfakiana,,Becc.,C,,N,N,QI
 34187,plants,land plants,Triuridaceae,Sciaphila densiflora,,Schltr.,C,,N,N,QI
 12526,plants,land plants,Tropaeolaceae,Tropaeolum majus,garden nasturtium,L.,,,N,N,IU
-36130,plants,land plants,Turneraceae,Turnera subulata,,Sm.,,,N,N,IU
-29726,plants,land plants,Turneraceae,Turnera ulmifolia,,L.,,,N,N,IU
 20015,plants,land plants,Typhaceae,Sparganium erectum,,,,,N,N,IU
 8080,plants,land plants,Typhaceae,Sparganium erectum subsp. stoloniferum,erect bur-reed,(Buch.-Ham. ex Graebn.) H.Hara,,,N,N,IU
 12552,plants,land plants,Typhaceae,Sparganium subglobosum,floating bur-reed,Morong,C,,N,N,QA
@@ -21643,6 +21660,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 12641,plants,land plants,Urticaceae,Australina pusilla,,(Poir.) Gaudich.,C,,N,N,U
 30170,plants,land plants,Urticaceae,Australina pusilla subsp. muelleri,,(Wedd.) Friis & Wilmot-Dear,C,,N,N,QA
 35584,plants,land plants,Urticaceae,Boehmeria virgata var. austroqueenslandica,,(Domin) Friis & Wilmot-Dear,C,,N,N,QAI
+31316,plants,land plants,Urticaceae,Cecropia peltata,Mexican bean tree,L.,,,N,N,IU
 34541,plants,land plants,Urticaceae,Debregeasia australis,,"Friis, Wilmot-Dear & C.J.Chen",C,,N,N,QA
 17452,plants,land plants,Urticaceae,Dendrocnide corallodesme,,(Lauterb.) Chew,C,,N,N,QI
 18447,plants,land plants,Urticaceae,Dendrocnide cordifolia,,(L.S.Sm.) Jackes & M.Hurley,C,,N,N,Q
@@ -21706,26 +21724,6 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 35022,plants,land plants,Violaceae,Viola perreniformis,,(L.G.Adams) R.J.Little & G.Leiper,C,,N,N,QA
 30926,plants,land plants,Violaceae,Viola silicestris,,K.R.Thiele & Prober,C,,N,N,QA
 25216,plants,land plants,Viridivelleraceae,Viridivellus pulchellum,,I.G.Stone,C,,N,N,Q
-40674,plants,land plants,Viscaceae,Bifaria breviarticulata,,,C,,N,N,Q
-39783,plants,land plants,Viscaceae,Korthalsella brassiana,,Blakely,C,,N,N,Q
-13850,plants,land plants,Viscaceae,Korthalsella breviarticulata,,(Tiegh.) Danser,C,,N,N,Q
-12397,plants,land plants,Viscaceae,Korthalsella grayi,,Barlow,C,,N,N,Q
-13901,plants,land plants,Viscaceae,Korthalsella japonica,,(Thunb.) Engl.,C,,N,N,Q
-12764,plants,land plants,Viscaceae,Korthalsella papuana,,Danser,C,,N,N,Q
-18929,plants,land plants,Viscaceae,Korthalsella rubra,,(Tiegh.) Engl.,C,,N,N,Q
-12399,plants,land plants,Viscaceae,Korthalsella rubra subsp. geijericola,,Barlow,C,,N,N,QA
-16852,plants,land plants,Viscaceae,Korthalsella rubra subsp. rubra,,(Tiegh.) Engl.,C,,N,N,QA
-15861,plants,land plants,Viscaceae,Notothixos cornifolius,kurrajong mistletoe,Oliv.,C,,N,N,QA
-14132,plants,land plants,Viscaceae,Notothixos incanus,,(Hook.) Oliv.,C,,N,N,QA
-15862,plants,land plants,Viscaceae,Notothixos leiophyllus,,K.Schum.,C,,N,N,QI
-15863,plants,land plants,Viscaceae,Notothixos subaureus,golden mistletoe,Oliv.,C,,N,N,QAI
-40404,plants,land plants,Viscaceae,Notothixos subaureus var. cinereus,,,C,,N,N,Q
-15960,plants,land plants,Viscaceae,Viscum articulatum,flat mistletoe,Burm.f.,C,,N,N,QAI
-39891,plants,land plants,Viscaceae,Viscum australe,,,C,,N,N,Q
-13726,plants,land plants,Viscaceae,Viscum bancroftii,,Blakely,C,,N,N,Q
-12352,plants,land plants,Viscaceae,Viscum ovalifolium,,DC.,C,,N,N,QI
-9205,plants,land plants,Viscaceae,Viscum whitei,,Blakely,C,,N,N,Q
-14117,plants,land plants,Viscaceae,Viscum whitei subsp. whitei,,Blakely,C,,N,N,Q
 17985,plants,land plants,Vitaceae,Ampelocissus acetosa,,(F.Muell.) Planch.,C,,N,N,QAI
 14054,plants,land plants,Vitaceae,Ampelocissus gardineri,,(F.M.Bailey) Jackes,C,,N,N,QA
 35631,plants,land plants,Vitaceae,Ampelocissus martinii,,Planch.,,,N,N,IU
@@ -21765,7 +21763,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 40817,plants,land plants,Vitaceae,Vitis strigosa,,,C,,N,N,Q
 19760,plants,land plants,Winteraceae,Bubbia queenslandiana,,Vink,C,,N,N,Q
 9793,plants,land plants,Winteraceae,Bubbia queenslandiana subsp. australis,,Vink,V,,Y,N,Q
-12446,plants,land plants,Winteraceae,Bubbia queenslandiana subsp. queenslandiana,,Vink,NT,,Y,N,Q
+12446,plants,land plants,Winteraceae,Bubbia queenslandiana subsp. queenslandiana,,Vink,E,,Y,N,Q
 14796,plants,land plants,Winteraceae,Bubbia semecarpoides,,(F.Muell.) B.L.Burtt,C,,N,N,Q
 12445,plants,land plants,Winteraceae,Bubbia whiteana,,A.C.Sm.,CR,,Y,N,Q
 39766,plants,land plants,Winteraceae,Drimys membranea,,,C,,N,N,Q
@@ -21832,7 +21830,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 8948,plants,land plants,Zingiberaceae,Alpinia hylandii,,R.M.Sm.,NT,,Y,N,Q
 18020,plants,land plants,Zingiberaceae,Alpinia modesta,,F.Muell. ex K.Schum.,C,,N,N,Q
 29589,plants,land plants,Zingiberaceae,Alpinia zerumbet,,(Pers.) B.L.Burtt & R.M.Sm.,,,N,N,IU
-8949,plants,land plants,Zingiberaceae,Amomum queenslandicum,,R.M.Sm.,V,,Y,N,Q
+8949,plants,land plants,Zingiberaceae,Amomum queenslandicum,,R.M.Sm.,CR,,Y,N,Q
 17551,plants,land plants,Zingiberaceae,Curcuma australasica,,Hook.f.,C,,N,N,QAI
 17552,plants,land plants,Zingiberaceae,Curcuma longa,,L.,,,N,N,U
 9307,plants,land plants,Zingiberaceae,Etlingera australasica,,(R.M.Sm.) R.M.Sm.,C,,N,N,Q
