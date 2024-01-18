@@ -35,6 +35,7 @@ def kvp_to_columns(df):
 def build_list_url(drstr: str):
     url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
     return url
+
 def get_changelist(testdr: str, proddr: str, ltype: str):
     oldListPref = "https://lists.ala.org.au/ws/speciesListItems/"
     newListPref = "https://lists-test.ala.org.au/ws/speciesListItems/"
@@ -44,25 +45,31 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
+    oldList = oldList.add_suffix("_old")
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
+    newList = newList.add_suffix("_new")
 
     # new names - left join new to old, drop na old
-    newVsOld = pd.merge(newList, oldList, how='left', on='name', suffixes=("_new", "_old"))
-    additions = newVsOld[newVsOld['scientificName_old'].isna()][['name','scientificName_new','commonName_new','status_new']]
+    newVsOld = pd.merge(newList, oldList, how='left', left_on='name_new', right_on="name_old")
+    columns = ['name_new','scientificName_new','commonName_new']
+    if ltype == "C": columns = columns + ['status_new']
+    additions = newVsOld[newVsOld['name_old'].isna()][columns]
     additions.columns = additions.columns.str.replace("_new", "", regex=True)
     additions['listUpdate'] = 'added'
 
     # removed names - left join old to new, drop na new
-    oldVsNew = pd.merge(oldList, newList, how='left', on='name', suffixes=("_old", "_new"))
-    removals = oldVsNew[oldVsNew['scientificName_new'].isna()][['name','scientificName_old','commonName_old','status_old']]
+    oldVsNew = pd.merge(oldList, newList, how='left', left_on='name_old',right_on="name_new")
+    columns = ['name_old','scientificName_old','commonName_old']
+    if ltype == "C": columns = columns + ['status_old']
+    removals = oldVsNew[oldVsNew['name_new'].isna()][columns]
     removals.columns = removals.columns.str.replace("_old", "", regex=True)
     removals['listUpdate'] = 'removed'
 
     # status changes - only check status changes for conservation list
     if ltype=='C':
-        statusChanges = pd.merge(newList, oldList, how='inner', on='name', suffixes=('_new', '_old'))
-        statusChanges = statusChanges[statusChanges['status_new'] != statusChanges['status_old']][['name','scientificName_new','commonName_new','status_new','status_old']]
+        statusChanges = pd.merge(newList, oldList, how='inner', left_on='name_new', right_on='name_old')
+        statusChanges = statusChanges[statusChanges['status_new'] != statusChanges['status_old']][['name_new','scientificName_new','commonName_new','status_new','status_old']]
         statusChanges.columns = statusChanges.columns.str.replace("_new", "", regex=True)
         statusChanges['listUpdate'] = 'status change'
 
