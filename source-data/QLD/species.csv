@@ -250,7 +250,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 18333,animals,birds,Procellariidae,Aphrodroma brevirostris,Kerguelen petrel,"(Lesson, 1831)",C,,N,N,VU
 1197,animals,birds,Procellariidae,Ardenna bulleri,Buller's shearwater,"Salvin, 1888",C,,N,N,QAI
 1198,animals,birds,Procellariidae,Ardenna carneipes,flesh-footed shearwater,"Gould, 1844",SL,,Y,N,QAI
-1200,animals,birds,Procellariidae,Ardenna grisea,sooty shearwater,"(Gmelin, 1789)",V,,Y,N,QAI
+1200,animals,birds,Procellariidae,Ardenna grisea,sooty shearwater,"(Gmelin, 1789)",V,V,Y,N,QAI
 1188,animals,birds,Procellariidae,Ardenna pacifica,wedge-tailed shearwater,"(Gmelin, 1789)",V,,Y,N,QAI
 1190,animals,birds,Procellariidae,Ardenna tenuirostris,short-tailed shearwater,"(Temminck, 1835)",SL,,Y,N,QAI
 1240,animals,birds,Procellariidae,Bulweria bulwerii,Bulwer's petrel,"(Jardine & Selby, 1828)",SL,,Y,N,VU
@@ -391,7 +391,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1960,animals,birds,Charadriidae,Peltohyas australis,inland dotterel,"(Gould, 1841)",C,,N,N,QA
 18315,animals,birds,Charadriidae,Pluvialis dominica,American golden plover,"(Statius Muller, 1776)",C,,N,N,VI
 1944,animals,birds,Charadriidae,Pluvialis fulva,Pacific golden plover,"(Gmelin, 1789)",SL,,Y,N,QAI
-1931,animals,birds,Charadriidae,Pluvialis squatarola,grey plover,"(Linnaeus, 1758)",SL,,Y,N,QAI
+1931,animals,birds,Charadriidae,Pluvialis squatarola,grey plover,"(Linnaeus, 1758)",SL,V,Y,N,QAI
 19465,animals,birds,Charadriidae,Thinornis cucullatus,hooded plover,"(Vieillot, 1818)",C,V,Y,N,VA
 27774,animals,birds,Charadriidae,Vanellus miles,masked lapwing,"(Boddaert, 1783)",C,,N,N,QAI
 1932,animals,birds,Charadriidae,Vanellus miles miles,masked lapwing (northern subspecies),"(Boddaert, 1783)",C,,N,N,QAI
@@ -401,11 +401,11 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1928,animals,birds,Jacanidae,Irediparra gallinacea,comb-crested jacana,"(Temminck, 1828)",C,,N,N,QAI
 1883,animals,birds,Rostratulidae,Rostratula australis,Australian painted-snipe,"(Gould, 1838)",E,E,Y,N,QA
 1885,animals,birds,Scolopacidae,Actitis hypoleucos,common sandpiper,"(Linnaeus, 1758)",SL,,Y,N,QAI
-1872,animals,birds,Scolopacidae,Arenaria interpres,ruddy turnstone,"(Linnaeus, 1758)",SL,,Y,N,QAI
-1874,animals,birds,Scolopacidae,Calidris acuminata,sharp-tailed sandpiper,"(Horsfield, 1821)",SL,,Y,N,QAI
+1872,animals,birds,Scolopacidae,Arenaria interpres,ruddy turnstone,"(Linnaeus, 1758)",SL,V,Y,N,QAI
+1874,animals,birds,Scolopacidae,Calidris acuminata,sharp-tailed sandpiper,"(Horsfield, 1821)",SL,V,Y,N,QAI
 1875,animals,birds,Scolopacidae,Calidris alba,sanderling,"(Pallas, 1764)",SL,,Y,N,QAI
 1876,animals,birds,Scolopacidae,Calidris alpina,dunlin,"(Linnaeus, 1758)",C,,N,N,VI
-1877,animals,birds,Scolopacidae,Calidris canutus,red knot,"(Linnaeus, 1758)",E,E,Y,N,QAI
+1877,animals,birds,Scolopacidae,Calidris canutus,red knot,"(Linnaeus, 1758)",E,V,Y,N,QAI
 1863,animals,birds,Scolopacidae,Calidris falcinellus,broad-billed sandpiper,"(Pontoppidan, 1763)",SL,,Y,N,QAI
 1878,animals,birds,Scolopacidae,Calidris ferruginea,curlew sandpiper,"(Pontoppidan, 1763)",CR,CE,Y,N,QAI
 1879,animals,birds,Scolopacidae,Calidris melanotos,pectoral sandpiper,"(Vieillot, 1819)",SL,,Y,N,QAI
@@ -414,12 +414,12 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1880,animals,birds,Scolopacidae,Calidris ruficollis,red-necked stint,"(Pallas, 1776)",SL,,Y,N,QAI
 1870,animals,birds,Scolopacidae,Calidris subminuta,long-toed stint,"(Middendorff, 1853)",SL,,Y,N,VU
 41247,animals,birds,Scolopacidae,Calidris subruficollis,buff-breasted sandpiper,"(Vieillot, 1819)",C,,N,N,VI
-1856,animals,birds,Scolopacidae,Calidris tenuirostris,great knot,"(Horsfield, 1821)",CR,CE,Y,N,QAI
-1857,animals,birds,Scolopacidae,Gallinago hardwickii,Latham's snipe,"(Gray, 1831)",SL,,Y,N,QAI
+1856,animals,birds,Scolopacidae,Calidris tenuirostris,great knot,"(Horsfield, 1821)",CR,V,Y,N,QAI
+1857,animals,birds,Scolopacidae,Gallinago hardwickii,Latham's snipe,"(Gray, 1831)",SL,V,Y,N,QAI
 1858,animals,birds,Scolopacidae,Gallinago megala,Swinhoe's snipe,"Swinhoe, 1861",SL,,Y,N,VU
-1865,animals,birds,Scolopacidae,Limnodromus semipalmatus,Asian dowitcher,"(Blyth, 1848)",SL,,Y,N,QAI
-1867,animals,birds,Scolopacidae,Limosa lapponica baueri,Western Alaskan bar-tailed godwit,"Naumann, 1836",V,V,Y,N,QAI
-1855,animals,birds,Scolopacidae,Limosa limosa,black-tailed godwit,"(Linnaeus, 1758)",SL,,Y,N,QAI
+1865,animals,birds,Scolopacidae,Limnodromus semipalmatus,Asian dowitcher,"(Blyth, 1848)",SL,V,Y,N,QAI
+1867,animals,birds,Scolopacidae,Limosa lapponica baueri,Western Alaskan bar-tailed godwit,"Naumann, 1836",V,E,Y,N,QAI
+1855,animals,birds,Scolopacidae,Limosa limosa,black-tailed godwit,"(Linnaeus, 1758)",SL,E,Y,N,QAI
 1843,animals,birds,Scolopacidae,Numenius madagascariensis,eastern curlew,"(Linnaeus, 1766)",E,CE,Y,N,QAI
 1844,animals,birds,Scolopacidae,Numenius minutus,little curlew,"Gould, 1841",SL,,Y,N,QAI
 1845,animals,birds,Scolopacidae,Numenius phaeopus,whimbrel,"(Linnaeus, 1758)",SL,,Y,N,QAI
@@ -430,10 +430,10 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 1852,animals,birds,Scolopacidae,Tringa glareola,wood sandpiper,"Linnaeus, 1758",SL,,Y,N,QAI
 18835,animals,birds,Scolopacidae,Tringa guttifer,Nordmann's greenshank,"(Nordmann, 1835)",C,,N,N,VU
 1861,animals,birds,Scolopacidae,Tringa incana,wandering tattler,"(Gmelin, 1789)",SL,,Y,N,QAI
-1853,animals,birds,Scolopacidae,Tringa nebularia,common greenshank,"(Gunnerus, 1767)",SL,,Y,N,QAI
+1853,animals,birds,Scolopacidae,Tringa nebularia,common greenshank,"(Gunnerus, 1767)",SL,E,Y,N,QAI
 1841,animals,birds,Scolopacidae,Tringa stagnatilis,marsh sandpiper,"(Bechstein, 1803)",SL,,Y,N,QAI
 18831,animals,birds,Scolopacidae,Tringa totanus,common redshank,"(Linnaeus, 1758)",SL,,Y,N,VU
-1827,animals,birds,Scolopacidae,Xenus cinereus,terek sandpiper,"(Guldenstadt, 1775)",SL,,Y,N,QAI
+1827,animals,birds,Scolopacidae,Xenus cinereus,terek sandpiper,"(Guldenstadt, 1775)",SL,V,Y,N,QAI
 36763,animals,birds,Turnicidae,Turnix castanotus,chestnut-backed button-quail,"(Gould, 1840)",C,,N,N,QA
 1091,animals,birds,Turnicidae,Turnix maculosus,red-backed button-quail,"(Temminck, 1815)",C,,N,N,QAI
 1092,animals,birds,Turnicidae,Turnix melanogaster,black-breasted button-quail,"(Gould, 1837)",V,V,Y,N,QA
@@ -2226,8 +2226,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 27063,animals,ray-finned fishes,Salmonidae,Salmo trutta,brown trout,"Linnaeus, 1758",,,N,N,II
 33549,animals,ray-finned fishes,Antennariidae,Antennarius commerson,giant anglerfish,"(Latreille, 1804)",,,N,N,QAI
 33556,animals,ray-finned fishes,Brachionichthyidae,Brachionichthys australis,,"Last, Gledhill & Holmes, 2007",,,N,N,QA
-36473,animals,ray-finned fishes,Melanotaeniidae,Cairnsichthys bitaeniatus,Daintree rainbowfish,"Hammer, Allen, Martin, Adams, Ebner, Raadik & Unmack 2018",,,N,N,Q
-27022,animals,ray-finned fishes,Melanotaeniidae,Cairnsichthys rhombosomoides,Cairns rainbowfish,"(Nichols & Raven, 1928)",,,N,N,Q
+36473,animals,ray-finned fishes,Melanotaeniidae,Cairnsichthys bitaeniatus,Daintree rainbowfish,"Hammer, Allen, Martin, Adams, Ebner, Raadik & Unmack 2018",,CE,Y,N,Q
+27022,animals,ray-finned fishes,Melanotaeniidae,Cairnsichthys rhombosomoides,Cairns rainbowfish,"(Nichols & Raven, 1928)",,E,Y,N,Q
 27023,animals,ray-finned fishes,Melanotaeniidae,Iriatherina werneri,threadfin rainbowfish,"Meinken, 1974",,,N,N,QAI
 27024,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia duboulayi,crimsonspotted rainbowfish,"(Castelnau, 1878)",,,N,N,QA
 18170,animals,ray-finned fishes,Melanotaeniidae,Melanotaenia eachamensis,Lake Eacham rainbowfish,"Allen & Cross, 1982",,E,Y,N,Q
@@ -2577,7 +2577,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 43,animals,reptiles,Chelidae,Emydura macquarii macquarii,Murray turtle,"(Gray,  1830)",C,,N,N,QA
 27778,animals,reptiles,Chelidae,Emydura macquarii nigra,Fraser Island short-neck turtle,"McCord, Cann & Joseph-Ouni, 2003",C,,N,N,Q
 46,animals,reptiles,Chelidae,Emydura subglobosa,red-flushed river turtle,"(Krefft, 1876)",NT,,Y,N,QAI
-29733,animals,reptiles,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",CR,,Y,Y,Q
+29733,animals,reptiles,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",CR,CE,Y,Y,Q
 29734,animals,reptiles,Chelidae,Emydura subglobosa worrelli,diamond head turtle,"(Wells & Wellington, 1985)",NT,,Y,N,QA
 18466,animals,reptiles,Chelidae,Emydura tanybaraga,northern yellow-faced turtle,"Cann, 1997",C,,N,N,QA
 48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",E,V,Y,Y,Q
@@ -2639,7 +2639,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 400,animals,reptiles,Diplodactylidae,Oedura coggeri,northern spotted velvet gecko,"Bustard, 1966",C,,N,N,Q
 18296,animals,reptiles,Diplodactylidae,Oedura elegans,elegant velvet gecko,"Hoskin, 2019",C,,N,N,QA
 32050,animals,reptiles,Diplodactylidae,Oedura jowalbinna,Quinkan velvet gecko,"Hoskin & Higgie, 2008",C,,N,Y,Q
-40991,animals,reptiles,Diplodactylidae,Oedura lineata,Arcadia velvet gecko,"Hoskin, 2019",CR,,Y,N,Q
+40991,animals,reptiles,Diplodactylidae,Oedura lineata,Arcadia velvet gecko,"Hoskin, 2019",CR,CE,Y,N,Q
 18295,animals,reptiles,Diplodactylidae,Oedura monilis,ocellated velvet gecko,"De Vis, 1888",C,,N,N,Q
 40990,animals,reptiles,Diplodactylidae,Oedura picta,ornate velvet gecko,"Hoskin, 2019",C,,N,N,Q
 378,animals,reptiles,Diplodactylidae,Oedura tryoni,southern spotted velvet gecko,"De Vis, 1884",C,,N,N,QA
@@ -2660,7 +2660,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 393,animals,reptiles,Carphodactylidae,Nephrurus asper,spiny knob-tailed gecko,"Günther, 1876",C,,N,N,Q
 36756,animals,reptiles,Carphodactylidae,Nephrurus eromanga,Eromanga Basin knob-tail gecko,"Oliver, Donnellan & Gunn, 2022",C,,N,N,Q
 395,animals,reptiles,Carphodactylidae,Nephrurus levis,three-lined knob-tail,"De Vis, 1886",C,,N,N,QA
-389,animals,reptiles,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",CR,,Y,Y,Q
+389,animals,reptiles,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",CR,CE,Y,Y,Q
 22412,animals,reptiles,Carphodactylidae,Phyllurus amnicola,Mount Elliot broad-tailed gecko,"Hoskin, Couper, Schneider & Covacevich 2000",V,,Y,Y,Q
 379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",E,,Y,Y,Q
 22413,animals,reptiles,Carphodactylidae,Phyllurus championae,Connors' Range broad-tailed gecko,"Schneider, Couper, Hoskin & Covacevich 2000",V,,Y,Y,Q
@@ -2670,9 +2670,9 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 31986,animals,reptiles,Carphodactylidae,Phyllurus kabikabi,Oakview leaf-tailed gecko,"Couper, Hamley & Hoskin 2008",CR,CE,Y,Y,Q
 381,animals,reptiles,Carphodactylidae,Phyllurus nepthys,peppered-belly broad-tailed gecko,"Couper, Covaevich & Moritz, 1993",C,,N,N,Q
 382,animals,reptiles,Carphodactylidae,Phyllurus ossa,Mount Ossa broad-tailed gecko,"Couper, Covaevich & Moritz, 1993",C,,N,N,Q
-40916,animals,reptiles,Carphodactylidae,Phyllurus pinnaclensis,Pinnacles leaf-tailed gecko,"Hoskin, Bertola & Higgie, 2019",CR,,Y,N,Q
+40916,animals,reptiles,Carphodactylidae,Phyllurus pinnaclensis,Pinnacles leaf-tailed gecko,"Hoskin, Bertola & Higgie, 2019",CR,CE,Y,N,Q
 388,animals,reptiles,Carphodactylidae,Saltuarius cornutus,northern leaf-tailed gecko,"(Ogilby, 1892)",C,,N,N,Q
-34950,animals,reptiles,Carphodactylidae,Saltuarius eximius,Cape Melville leaf-tailed gecko,"Hoskin & Couper, 2013",CR,,Y,Y,Q
+34950,animals,reptiles,Carphodactylidae,Saltuarius eximius,Cape Melville leaf-tailed gecko,"Hoskin & Couper, 2013",CR,CE,Y,Y,Q
 390,animals,reptiles,Carphodactylidae,Saltuarius salebrosus,rough-throated leaf-tailed gecko,"Covacevich, 1975",C,,N,N,Q
 363,animals,reptiles,Carphodactylidae,Saltuarius swaini,southern leaf-tailed gecko,"(Wells & Wellington, 1985)",C,,N,N,QA
 18172,animals,reptiles,Carphodactylidae,Saltuarius wyberba,granite leaf-tailed gecko,"Couper, Schneider & Covacevich, 1997",C,,N,N,QA
@@ -2743,8 +2743,8 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 78,animals,reptiles,Varanidae,Varanus gouldii,sand monitor,"(Gray, 1838)",C,,N,N,QA
 79,animals,reptiles,Varanidae,Varanus indicus,mangrove monitor,"(Daudin, 1802)",C,,N,N,QAI
 65,animals,reptiles,Varanidae,Varanus keithhornei,canopy goanna,"(Wells & Wellington, 1985)",C,,N,N,Q
-66,animals,reptiles,Varanidae,Varanus mertensi,Mertens' water monitor,"Glauert, 1951",E,,Y,N,QA
-67,animals,reptiles,Varanidae,Varanus mitchelli,Mitchell's water monitor,"Mertens, 1958",CR,,Y,N,QA
+66,animals,reptiles,Varanidae,Varanus mertensi,Mertens' water monitor,"Glauert, 1951",E,E,Y,N,QA
+67,animals,reptiles,Varanidae,Varanus mitchelli,Mitchell's water monitor,"Mertens, 1958",CR,CE,Y,N,QA
 74,animals,reptiles,Varanidae,Varanus panoptes,yellow-spotted monitor,"Storr, 1980",C,,N,N,QA
 68,animals,reptiles,Varanidae,Varanus prasinus,emerald monitor,"(Schlegel, 1839)",NT,,Y,N,QAI
 69,animals,reptiles,Varanidae,Varanus scalaris,spotted tree monitor,"Mertens,  1941",C,,N,N,QAI
@@ -2977,7 +2977,7 @@ Taxon_Id,Kingdom,Class,Family,Scientific_name,Common_name,Taxon_author,NCA_statu
 102,animals,reptiles,Scincidae,Tiliqua multifasciata,Centralian blue-tongued lizard,"Sternfeld, 1919",C,,N,N,QA
 103,animals,reptiles,Scincidae,Tiliqua rugosa,shingle-back,"(Gray, 1825)",C,,N,N,QA
 104,animals,reptiles,Scincidae,Tiliqua scincoides,eastern blue-tongued lizard,"(White, 1790)",C,,N,N,QA
-106,animals,reptiles,Scincidae,Tiliqua scincoides intermedia,northern bluetongue,"Mitchell, 1955",CR,,Y,N,QA
+106,animals,reptiles,Scincidae,Tiliqua scincoides intermedia,northern bluetongue,"Mitchell, 1955",CR,CE,Y,N,QA
 107,animals,reptiles,Scincidae,Tiliqua scincoides scincoides,eastern bluetongue,"(White, 1790)",C,,N,N,QA
 108,animals,reptiles,Typhlopidae,Anilios affinis,small-headed blind snake,"(Boulenger, 1889)",C,,N,N,QAI
 18838,animals,reptiles,Typhlopidae,Anilios aspina,round-tailed blind snake,"(Couper, Covacevich & Wilson, 1998)",C,,N,N,Q
