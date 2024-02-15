@@ -18,9 +18,9 @@ import certifi
 import ssl
 import datetime
 import pandas as pd
+import os.path as path
 
-projectDir = "/Users/oco115/PycharmProjects/authoritative-lists/"
-# projectDir = "/Users/new330/IdeaProjects/authoritative-lists/"
+projectDir = path.abspath(path.join(os.getcwd(),"../..")) + "/"
 outDir = projectDir + "Monitoring/"
 sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
 # monthStr = datetime.datetime.now().strftime('%Y%m%d')
@@ -146,11 +146,11 @@ summarydf = pd.DataFrame(columns=cols)
 for state, dr in drDict.items():
     sName = stateNames[state]
     row_data = get_sds_info(state, sName, dr)
-    summarydf = summarydf.append(pd.DataFrame([row_data], columns=cols), ignore_index=True)
+    summarydf = pd.concat([summarydf,pd.DataFrame([row_data], columns=cols)], ignore_index=True)
 
 # Build markdown
 mdsdf = build_markdown(summarydf, monthStr)
-mfile = outDir + 'Prod-SDS-Assertions-Information' + '.md'
+mfile = outDir + 'SDS-Assertions-Information' + '.md'
 print('Writing report to markdown file')
 with open(mfile, 'w') as f:
     f.write(mdsdf)
