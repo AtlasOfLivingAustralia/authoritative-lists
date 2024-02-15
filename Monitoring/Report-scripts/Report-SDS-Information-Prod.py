@@ -150,7 +150,7 @@ for state, dr in drDict.items():
 
 # Build markdown
 mdsdf = build_markdown(summarydf, monthStr)
-mfile = outDir + 'SDS-Assertions-Information' + '.md'
+mfile = outDir + 'Prod-SDS-Assertions-Information' + '.md'
 print('Writing report to markdown file')
 with open(mfile, 'w') as f:
     f.write(mdsdf)
