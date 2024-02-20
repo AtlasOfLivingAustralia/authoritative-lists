@@ -87,16 +87,15 @@ def get_sds_info(state, sName, drId):
 
     apiPrefix = 'https://api.ala.org.au/occurrences/occurrences'
     bioPrefix = 'https://biocache.ala.org.au/occurrence'
+    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
 
     # Total Occurrences
-    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=state%3A%22' + sName + '%22'
     data, tcUrl = download_url(urlprefix, urlsuffix, drId)
     tcUrl.url = tcUrl.url.replace(apiPrefix, bioPrefix)
     totCt = data['totalRecords'][0]
 
     # Generalised count
-    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=sensitive%3Ageneralised&fq=state%3A%22' + sName + '%22'
     data, gUrl = download_url(urlprefix, urlsuffix, drId)
     gUrl.url = gUrl.url.replace(apiPrefix, bioPrefix)
@@ -115,7 +114,6 @@ def get_sds_info(state, sName, drId):
     nsCt = data['totalRecords'][0]
 
     # Species count
-    urlprefix = 'https://api.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
     data, spctUrl = download_url(urlprefix, urlsuffix, drId)
     spCt = data['count'][0]
@@ -127,12 +125,9 @@ def get_sds_info(state, sName, drId):
 ##############################################################################################
 # Production Sensitive Lists
 
-
 drDict = {"ACT": "dr2627", "NSW": "dr487", "NT": "dr492",
           "QLD": "dr493", "SA": "dr884", "TAS": "dr491",
           "VIC": "dr490", "WA": "dr467"}
-
-# drDict = {"ACT":"dr2627"}
 
 stateNames = {"ACT": "Australian+Capital+Territory", "NSW": "New+South+Wales", "NT": "Northern+Territory",
               "QLD": "Queensland", "SA": "South+Australia", "TAS": "Tasmania",
