@@ -36,6 +36,13 @@ def build_list_url(drstr: str):
     url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
     return url
 
+def get_specieslistItems(row, row_num, numrows):
+    drstr = row['dataResourceUid']
+    url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr
+    # url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
+    row =  download_ala_specieslist(url)
+    return row
+
 def get_changelist(testdr: str, proddr: str, ltype: str):
     oldListPref = "https://lists.ala.org.au/ws/speciesListItems/"
     newListPref = "https://lists-test.ala.org.au/ws/speciesListItems/"
@@ -146,6 +153,13 @@ def df_to_markdown(df, y_index=False):
         # Remove the index with some creative splicing and iteration
         return '\n'.join(['| {}'.format(row.split('|', 2)[-1]) for row in blob.split('\n')])
     return blob
+
+def create_markdown_link(row, col, colurl):
+    # return markdown_text
+    return f"[{row[col]}]({row[colurl]})"
+
+def wrap_text(text, width):
+    return ' '.join([text[i:i + width] for i in range(0, len(text), width)])
 
 def list_to_markdown(ltype, cdf, sdf, mfile):
     # Output dataframe to markdown
