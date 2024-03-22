@@ -24,7 +24,9 @@ projectDir = path.abspath(path.join(os.getcwd(),"../..")) + "/"
 print(projectDir)
 outDir = projectDir + "Monitoring/"
 sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
+# monthStr = datetime.datetime.now().strftime('%Y%m%d')
 monthStr = datetime.datetime.now().strftime('%Y-%m-%d')
+
 
 ##############################################################################################
 
@@ -86,15 +88,16 @@ def get_sds_info(state, sName, drId):
 
     apiPrefix = 'https://api.test.ala.org.au/occurrences/occurrences'
     bioPrefix = 'https://biocache-test.ala.org.au/occurrence'
-    urlprefix = 'https://api.test.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
 
     # Total Occurrences
+    urlprefix = 'https://api.test.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=state%3A%22' + sName + '%22'
     data, tcUrl = download_url(urlprefix, urlsuffix, drId)
     tcUrl.url = tcUrl.url.replace(apiPrefix, bioPrefix)
     totCt = data['totalRecords'][0]
 
     # Generalised count
+    urlprefix = 'https://api.test.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A'
     urlsuffix = '&fq=sensitive%3Ageneralised&fq=state%3A%22' + sName + '%22'
     data, gUrl = download_url(urlprefix, urlsuffix, drId)
     gUrl.url = gUrl.url.replace(apiPrefix, bioPrefix)
@@ -113,6 +116,7 @@ def get_sds_info(state, sName, drId):
     nsCt = data['totalRecords'][0]
 
     # Species count
+    urlprefix = 'https://api.test.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A'
     urlsuffix = '&facets=species'
     data, spctUrl = download_url(urlprefix, urlsuffix, drId)
     spCt = data['count'][0]
@@ -122,11 +126,14 @@ def get_sds_info(state, sName, drId):
     return values
 
 ##############################################################################################
-# Test Sensitive Lists
+# Production Sensitive Lists
+
 
 drDict = {"ACT": "dr2627", "NSW": "dr18457", "NT": "dr18690",
           "QLD": "dr18404", "SA": "dr18706", "TAS": "dr18692",
-         "VIC": "dr18669", "WA": "dr18406"}
+          "VIC": "dr18669", "WA": "dr18406"}
+
+#drDict = {"ACT":"dr2627", "NSW": "dr18457"}
 
 stateNames = {"ACT": "Australian+Capital+Territory", "NSW": "New+South+Wales", "NT": "Northern+Territory",
               "QLD": "Queensland", "SA": "South+Australia", "TAS": "Tasmania",
@@ -144,7 +151,7 @@ for state, dr in drDict.items():
 
 # Build markdown
 mdsdf = build_markdown(summarydf, monthStr)
-mfile = outDir + 'SDS-Assertions-Information-test2' + '.md'
+mfile = outDir + 'SDS-Assertions-Information-test' + '.md'
 print('Writing report to markdown file')
 with open(mfile, 'w') as f:
     f.write(mdsdf)
