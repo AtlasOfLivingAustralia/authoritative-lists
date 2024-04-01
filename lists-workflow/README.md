@@ -11,5 +11,12 @@ This is going to be an apache airflow job, running once a week on **needs to be 
     | State | Conservation | Sensitive |
     |-------|--------------|-----------|
     | ACT   |       X      |           |
+    | NT    |       X      |           |
+    | NSW   |       X      |     X     |
+    | QLD   |       X      |     X     |
+    | TAS   |       X      |           |
+    | VIC   |       X      |     X     |
+    | WA    |       X      |     X     |
+
 
 2. Compare them with the current 
