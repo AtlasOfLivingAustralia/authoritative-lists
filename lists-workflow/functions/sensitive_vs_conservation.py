@@ -80,11 +80,7 @@ def create_sensitive_list(list_data = None,
 
         sensitive_species = list_data
         sensitive_species['generalisation'] = "10km"
-        print(sensitive_species)
- 
-        print("need to figure this out for WA")
-        import sys
-        sys.exit()
+        return sensitive_species
 
     else:
         
@@ -198,14 +194,8 @@ def create_conservation_list(list_data = None,
             'Family': 'family'
         })
 
-    elif state == "Western Australia":
-
-        print("in conservation for WA")
-        print(list_data)
-        import sys
-        sys.exit()
-
     else:
+        
         conservation_list = list_data
 
     # remove nans from the status column

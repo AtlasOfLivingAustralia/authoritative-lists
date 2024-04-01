@@ -7,11 +7,12 @@ def main():
 
     changes_dict = {x:None for x in lists}
 
-    conservation_changelist = lf.get_changelist(list_ids_conservation_test["EPBC"], list_ids_conservation_prod["EPBC"], "C")
+    conservation_changelist = lf.get_changelist(list_ids_conservation_test["EPBC"], list_ids_conservation_prod["EPBC"], "C").reset_index(drop=True)
     print("conservation")
     print(conservation_changelist.columns)
     print(conservation_changelist.shape)
     print(conservation_changelist)
+    conservation_changelist.to_csv("")
     import sys
     sys.exit()
 

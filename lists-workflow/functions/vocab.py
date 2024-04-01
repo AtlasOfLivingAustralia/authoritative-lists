@@ -85,7 +85,7 @@ conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act
              "Tasmania": ["https://nre.tas.gov.au/Documents/TasThreatenedSpecies.xls.xlsx"],
              "Victoria": ["https://vba.dse.vic.gov.au/vba/downloadVSC.do"],
              "Western Australia": ["https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-flora",
-                                   "https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-fauna"]} 
+                                   "https://www.dbca.wa.gov.au/wildlife-and-ecosystems/animals/list-threatened-and-priority-fauna"]} 
 
 # urls for relevant sensitive lists
 sensitive_list_urls = {"New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],

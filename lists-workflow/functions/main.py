@@ -34,7 +34,7 @@ def main():
             sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state)
 
             # write list to csv for upload (may change this later)
-            sensitive_list.to_csv("{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+            sensitive_list.to_csv("../temp-new-lists/{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
 
         # then, check if state is in conservation URLs
         if state in conservation_list_urls.keys():
@@ -55,7 +55,7 @@ def main():
             conservation_list = create_conservation_list(list_data=conservation_list_data,state=state)
 
             # write conservation list to csv (may change this later)
-            conservation_list.to_csv("{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+            conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
 
     # EPBC separately
     EPBC_df = lf.webscrape_list_url(url="https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974",
@@ -82,7 +82,7 @@ def main():
               'genus', 
               'species',
               'status'
-              ]].to_csv("{}-conservation-{}.csv".format("EPBC",datetime.now().strftime("%Y-%m-%d")),index=False)
+              ]].to_csv("../temp-new-lists/{}-conservation-{}.csv".format("EPBC",datetime.now().strftime("%Y-%m-%d")),index=False)
 
     # upload lists to the test environment <<=== CHANGE THIS
 
