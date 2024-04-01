@@ -63,6 +63,7 @@ generalisation_categories = {"Category 3": "1km",
                              "Category 2": "10km",
                              "Category 1": "WITHHOLD"}
 
+# TODO: find out where this is in the code
 return_columns = {"Australian Capital Territory": "dr2627",
                       "New South Wales": "dr487",
                       "Northern Territory": "dr492",
@@ -72,11 +73,10 @@ return_columns = {"Australian Capital Territory": "dr2627",
                       "Victoria": "dr490",
                       "Western Australia": "dr467"}
 
+# not sure what this is
 api_values = {"New South Wales": "value"}
 
-# Queensland species status codes
-# codesurl =  "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species-status-codes.csv"
-
+# urls for conservation lists
 conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act.gov.au/resource/9ikf-qahj.json"], # or is this correct?
              "New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
              "Northern Territory": ["https://ftp-dlrm.nt.gov.au/main.html?download&weblink=1e717d654034af5e5f840d2ba3fd9187&realfilename=NT_Species_List_Fauna.xlsx", #fauna
@@ -87,6 +87,7 @@ conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act
              "Western Australia": ["https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-flora",
                                    "https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-fauna"]} 
 
+# urls for relevant sensitive lists
 sensitive_list_urls = {"New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
              "Queensland": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"],
              "Victoria": ["https://vba.dse.vic.gov.au/vba/downloadVSC.do"], ### TODO: check on this
