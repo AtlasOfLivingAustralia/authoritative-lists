@@ -7,10 +7,18 @@ import certifi
 import ssl
 import requests
 import datetime
-from vocab import api_values,conservation_list_urls
+from vocab import api_values,conservation_list_urls,listsProd,listsTest,urlSuffix
+from vocab import list_names_conservation_test,list_names_sensitive_test,authorize_url,token_url
 from bs4 import BeautifulSoup
+import time
+from io import StringIO
+
+from flask import Flask, request, redirect, render_template_string, session
 
 def download_ala_specieslist(url: str):
+    '''
+    Download ALA species list.  Returns error if list isn't right, returns dataframe if list is correct
+    '''
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
             data = json.loads(url.read().decode())
@@ -20,7 +28,11 @@ def download_ala_specieslist(url: str):
             print('Error in download_ala_list:', url.status)
     return data
 
+# TODO: confirm what this is doing
 def kvp_to_columns(df):
+    '''
+    All data is in the KVP for lists(?).  Make sure the KVP data is in a pandas dataframe by itself.
+    '''
     d0 = pd.DataFrame()
     for i in df.index:
         if len(df['kvpValues'][i]) > 0:
@@ -33,35 +45,37 @@ def kvp_to_columns(df):
             d0 = pd.concat([d0, kvpdf])
     return d0
 
-def build_list_url(drstr: str):
-    url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
-    return url
-
-def get_specieslistItems(row, row_num, numrows):
-    drstr = row['dataResourceUid']
-    url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr
-    # url = "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
-    row =  download_ala_specieslist(url)
-    return row
-
+# TODO: determine if this is necessary
+# build the list URL here
+# def build_list_url(drstr: str):
+#     return "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
+    
+# TODO: go through this 
 def get_changelist(testdr: str, proddr: str, ltype: str):
-    oldListPref = "https://lists.ala.org.au/ws/speciesListItems/"
-    newListPref = "https://lists-test.ala.org.au/ws/speciesListItems/"
-    urlSuffix = "?max=10000&includeKVP=true"
-    oldListUrl = oldListPref + proddr + urlSuffix
-    newListUrl = newListPref + testdr + urlSuffix
+    
+    # get old and new list urls    
+    oldListUrl = listsProd + proddr + urlSuffix
+    newListUrl = listsTest + testdr + urlSuffix
 
+    # print(oldListUrl)
+    # print(newListUrl)
+
+    # download old list and turn it into pandas dataframe
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
     oldList = oldList.add_suffix("_old")
+
+    # download new list and turn it into pandas dataframe
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
     newList = newList.add_suffix("_new")
 
-    # new names - left join new to old, drop na old
+    # check for new  and old names - left join new to old, drop any colums in names_old if they are na
+    # conservation lists keep track of changes
     newVsOld = pd.merge(newList, oldList, how='left', left_on='name_new', right_on="name_old")
     columns = ['name_new','scientificName_new','commonName_new']
-    if ltype == "C": columns = columns + ['status_new']
+    if ltype == "C": 
+        columns = columns + ['status_new']
     additions = newVsOld[newVsOld['name_old'].isna()][columns]
     additions.columns = additions.columns.str.replace("_new", "", regex=True)
     additions['listUpdate'] = 'added'
@@ -69,7 +83,8 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     # removed names - left join old to new, drop na new
     oldVsNew = pd.merge(oldList, newList, how='left', left_on='name_old',right_on="name_new")
     columns = ['name_old','scientificName_old','commonName_old']
-    if ltype == "C": columns = columns + ['status_old']
+    if ltype == "C": 
+        columns = columns + ['status_old']
     removals = oldVsNew[oldVsNew['name_new'].isna()][columns]
     removals.columns = removals.columns.str.replace("_old", "", regex=True)
     removals['listUpdate'] = 'removed'
@@ -86,106 +101,14 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
         changeList = pd.concat([additions, removals, statusChanges])
     else:
         changeList = pd.concat([additions, removals])
+
+    # return changelist
     changeList = changeList.sort_values('name',ascending=True)
     return changeList
 
-def gbifparse(indf):
-    print('gbifparse')
-    # GBIF Parser - returns binomial and trinomial names for scientificName
-    namesonly = indf['name']
-    url = "https://api.gbif.org/v1/parser/name"
-    headers = {'content-type': 'application/json'}
-    data = namesonly.to_json(orient="values")
-    params = {'name': data}
-    r = requests.post(url=url, data=data, headers=headers)
-    results = pd.read_json(r.text)
-    return results
-
-def map_status(state, fname, dframe):
-    codeslist = pd.read_csv(fname, dtype=str)
-    codeslist['sourceStatus'] = codeslist['sourceStatus'].str.strip()
-    codeslist['Status'] = codeslist['Status'].str.strip()
-    code_status_dict = dict(zip(codeslist['sourceStatus'], codeslist['Status']))
-    if 'sourcestatus' in dframe.columns:
-        dframe = dframe.rename(columns={'sourcestatus' : 'sourceStatus'})
-    dframe['status'] = dframe['sourceStatus'].map(code_status_dict)
-    return dframe
-
-# list_information_report functions
-
-def get_listDataframe(listurl:str):
-    print("get_listDataframe: ", listurl)
-    limit = 1000
-    offset = 0
-    fulldf = pd.DataFrame()
-    results_list = []
-
-    while True:
-        urlSuffix = "?max=" + str(limit) + "&offset=" + str(offset)
-        listUrl = listurl + urlSuffix
-        pList = download_ala_specieslist(listUrl)
-        for item in pList['lists']:
-            listdf = pd.DataFrame(columns=item[0].keys())
-            for subitem in item:
-                listdf.loc[len(listdf)] = [subitem[column] for column in listdf.columns]
-        fulldf = pd.concat([fulldf, listdf], ignore_index=True)
-        # Check if there are more results to fetch
-        nrecs = pList['listCount'][0]
-        if (offset + limit) < nrecs:
-            # Update the offset for the next page
-            offset += limit
-        else:
-           break
-    return fulldf
-
-
-def filterDataframe(fulldf, filter_dict):
-    print('filterDataframe')
-    # Create a boolean mask based on the key-value pair
-    # drvals = filter_dict.values()
-    filtered_df = fulldf[fulldf['dataResourceUid'].isin(filter_dict.values())]
-    # Apply the mask to the DataFrame to get the filtered rows
-    return filtered_df
-
-# def df_to_markdown(df, y_index=False):
-#     from tabulate import tabulate
-#     blob = tabulate(df, headers='keys', tablefmt='pipe')
-#     if not y_index:
-#         # Remove the index with some creative splicing and iteration
-#         return '\n'.join(['| {}'.format(row.split('|', 2)[-1]) for row in blob.split('\n')])
-#     return blob
-
-# def create_markdown_link(row, col, colurl):
-#     # return markdown_text
-#     return f"[{row[col]}]({row[colurl]})"
-
-def wrap_text(text, width):
-    return ' '.join([text[i:i + width] for i in range(0, len(text), width)])
-
-# def list_to_markdown(ltype, cdf, sdf, mfile):
-#     # Output dataframe to markdown
-#     today = datetime.datetime.now().strftime('%Y-%m-%d')
-#     if ltype=='P':
-#         fheader = "## Authoritative Lists - Production:   " + today + "  \n"
-#     else:
-#         fheader = "## Authoritative Lists - Test:   " + today + "  \n"
-
-#     # Conservation List
-#     ltypeheader = "### Conservation Lists" + "  \n"
-#     mdcdf = df_to_markdown(cdf)
-#     mdcdf = fheader + ltypeheader + mdcdf
-
-#     # Sensitive List
-#     ltypeheader = "### Sensitive Lists" + "  \n"
-#     mdsdf = df_to_markdown(sdf)
-#     mdsdf = fheader + ltypeheader + mdsdf
-#     with open(mfile, 'w') as f:
-#         f.write(mdcdf)
-#         f.write(mdsdf)
-
 def read_list_url(url=None,
                   state=None):
-       
+
     if ".xls" in url.lower() or ".xlsx" in url.lower():
         # check for skipping lines for the NT
         if state == "Northern Territory":
@@ -204,13 +127,11 @@ def read_list_url(url=None,
                 df = df[['FAMILY','GENUS','SPECIES','scientificName','COMMON NAME',
                          'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION']] # 'INTRODUCED STATUS'
         else:
-            print("has xls but not url")
-            print(url)
             xls = pd.ExcelFile(url,engine='openpyxl')
-            print(xls.sheet_names)
-            import sys
-            sys.exit()
-            df = pd.read_excel(url)
+            if state == "Tasmania":
+                df = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
+            else:
+                raise ValueError("{} not taken into account:\n\n{}\n".format(state,url))
     elif ".csv" in url:
         df = pd.read_csv(url)
     elif ".json" in url:
@@ -291,13 +212,6 @@ def get_conservation_codes(state=None):
     
         return None
     
-def post_list_to_test(list_data=None,
-                      druid=None):
-    
-    response = requests.post("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}".format(druid))
-
-    return None
-    
 def webscrape_list_url(url=None,
                        state=None):
 
@@ -328,20 +242,22 @@ def webscrape_list_url(url=None,
             temp2 = temp.rename(columns={
                 'Scientific name': 'scientificName',
                 'Common name': 'vernacularName',
-                'WA listing': 'Code',
-                'WA listing.1': 'Category'
+                'WA listing': 'status',
+                'WA listing.1': 'sourceStatus'
             })
             temp2['family'] = None
-            return temp2[['scientificName','vernacularName','family','Code','Category']]
+            return temp2[['scientificName','vernacularName','family','status','sourceStatus']]
         elif 'flora' in url:
             codes = get_conservation_codes(state=state)
             temp2 = pd.merge(temp,codes,left_on='WA Status',right_on='Code')
             temp2 = temp2.rename(columns={
                 'Taxon': 'scientificName',
-                'Family': 'family'
+                'Family': 'family',
+                'Code': 'status',
+                'Category': 'sourceStatus'
             })
             temp2['vernacularName'] = None
-            return temp2[['scientificName','vernacularName','family','Code','Category']]
+            return temp2[['scientificName','vernacularName','family','status','sourceStatus']]
         else:
             raise ValueError("There is a case that is not considered, or list doesn't contain 'flora' or 'fauna':\n\n{}\n".format(url))
         
@@ -352,9 +268,97 @@ def webscrape_list_url(url=None,
             data = json.loads(new_url.read().decode())
         return pd.json_normalize(data, record_path =['value'])
 
+    elif state == "Victoria":
+
+        return pd.read_csv(url) #data, sep=",")
+
     else:
 
         # need to write a new loop
         print("do separate webscrape function for {} for now".format(state))
         import sys
         sys.exit()
+    
+def format_data_for_post(list_data=None,
+                         state=None,
+                         list_type=None):
+
+    # { "listName": "list1", "listType": "TEST", "listItems": [ { "itemName": "item1", "kvpValues": [ { "key": "key1", "value": "value1" }, { "key": "key2", "value": "value2" } ] } ] }
+    if list_type == "C":
+        post_data = {"listName": list_names_conservation_test[state],"listType": "TEST","listItems": [None for i in range(list_data.shape[0])]} 
+    elif list_type == "S":
+        post_data = {"listName": list_names_sensitive_test[state],"listType": "TEST","listItems": [None for i in range(list_data.shape[0])]} 
+    else:
+        raise ValueError("Only two values are needed: 'C' for Conservation, 'S' for Sensitive")
+
+    # print(list(list_data.columns).re)
+    columns = list(list_data.columns)
+    columns.remove('scientificName')
+    
+    # loop over each row to generate kvp values
+    for i,row in list_data.iterrows():
+        post_data["listItems"][i] = {"itemName": row['scientificName'],"kvpValues": [{x:row[x] for x in columns}]}
+
+    # return data
+    return post_data
+
+def post_list_to_test(list_data=None,
+                      druid=None,
+                      state=None,
+                      list_type=None):
+    
+    # format your data for posting to test
+    data = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
+
+    # get authentication for server
+    auth = get_authentication()
+    
+    # check if access token is expired
+    test = is_access_token_expired(expires_at = auth['expires_at'])
+    
+    # if it is expired, run the following loop
+    if test:
+
+        # refresh tokens
+        new_access_token, new_refresh_token, new_expires_in = refresh_access_token(refresh_token=auth['refresh_token'],
+                        client_id = auth['id_token'])
+        auth['access_token'] = new_access_token
+        auth['refresh_token'] = new_refresh_token
+        auth['expires_at'] = new_expires_in
+
+        # write them to your file
+        out_file = open('auth-confidential.json','w')
+        json.dumps(auth,out_file)
+        out_file.close()
+
+    # create headers with authentication
+    headers = {'user-agent': 'token-refresh/0.1.1', 'Authorization': 'Bearer {0}'.format(auth['access_token'])}
+
+    # create the response and then return none
+    response = requests.post("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}".format(druid),data=data,headers=headers)
+    return None
+
+def get_authentication():
+
+    with open('auth-confidential.json') as f:
+        return json.load(f)
+    
+def is_access_token_expired(expires_at=None):
+    return expires_at is None or time.time() > expires_at
+
+def refresh_access_token(refresh_token=None,
+                         client_id = None):
+    data = {
+        'grant_type': 'refresh_token',
+        'refresh_token': refresh_token,
+        'client_id': client_id,
+    }
+    response = requests.post(token_url, data=data, headers={'Accept': 'application/json'})
+    if response.status_code == 200:
+        auth_response = response.json()
+        new_access_token = auth_response['access_token']
+        new_refresh_token = auth_response.get('refresh_token', 'N/A')
+        new_expires_in = auth_response.get('expires_in', 'N/A')
+        return new_access_token, new_refresh_token, new_expires_in
+    else:
+        return None, None, None

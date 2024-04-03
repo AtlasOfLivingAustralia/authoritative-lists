@@ -1,90 +1,97 @@
-import requests
 import pandas as pd
 import list_functions as lf
-from vocab import lists,conservation_list_urls,sensitive_list_urls
+import email_functions as ef
+from vocab import conservation_list_urls,sensitive_list_urls
+from vocab import conservation_lists,sensitive_lists,list_ids_sensitive_test,list_ids_sensitive_prod
+from vocab import list_ids_conservation_test,list_ids_conservation_prod
 from sensitive_vs_conservation import create_conservation_list,create_sensitive_list
 from datetime import datetime
+
 # need xlrd???
 
 def main():
+    '''
+    add comments
+    '''
 
-    for state in lists:
+    # ---------------------------------------------------------------------------------------------
+    # PART 1: Getting the data
+    # 
+    # AND
+    # 
+    # PART 2: Uploading to the test environment
+    # ---------------------------------------------------------------------------------------------
+    
+    for state in conservation_lists:
 
-        print(state)
         # initialise sensitive and conservation list data
-        sensitive_list_data = pd.DataFrame()
         conservation_list_data = pd.DataFrame()
 
-        # check if state is in sensitive list urls
-        if state in sensitive_list_urls.keys():
+        # get all data
+        for i in range(len(conservation_list_urls[state])):
+            conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
 
-            # loop over all links present to get 
-            for i in range(len(sensitive_list_urls[state])):
-                sensitive_list_data = pd.concat([sensitive_list_data,lf.read_list_url(url=sensitive_list_urls[state][i],state=state)]).reset_index(drop=True)
+        # create conservation list from raw data
+        conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
 
-            sensitive_list_data = sensitive_list_data.rename(columns={'scientificname': 'scientificName', 
-                                                                'vernacularname': 'vernacularName',
-                                                                'sourcestatus': 'sourceStatus'})
-            
-            # check for current status in new south wales
-            if 'isCurrent' in sensitive_list_data:
-                sensitive_list_data = sensitive_list_data[sensitive_list_data['isCurrent'] == "true"]
+        # post list to test
+        lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C")
+        
+        # write conservation list to csv (may change this later)
+        conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
 
-            # create a processed sensitive list from the raw data
-            sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state)
+    for state in sensitive_lists:
 
-            # write list to csv for upload (may change this later)
-            sensitive_list.to_csv("../temp-new-lists/{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+        # initialise data
+        sensitive_list_data = pd.DataFrame()
 
-        # then, check if state is in conservation URLs
-        if state in conservation_list_urls.keys():
+        # loop over all links present to get 
+        for i in range(len(sensitive_list_urls[state])):
+            sensitive_list_data = pd.concat([sensitive_list_data,lf.read_list_url(url=sensitive_list_urls[state][i],state=state)]).reset_index(drop=True)
 
-            for i in range(len(conservation_list_urls[state])):
-                conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
+        # create a processed sensitive list from the raw data
+        sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
 
-            # do renaming of columns
-            conservation_list_data = conservation_list_data.rename(columns={'scientificname': 'scientificName', 
-                                                                            'vernacularname': 'vernacularName',
-                                                                            'sourcestatus': 'sourceStatus'})
+        # post list to test
+        lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S")
+        
+        # write list to csv for upload (may change this later)
+        sensitive_list.to_csv("../temp-new-lists/{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
     
-            # specific to New South Wales - check if there is a current thing
-            if 'isCurrent' in conservation_list_data:
-                conservation_list_data = conservation_list_data[conservation_list_data['isCurrent'] == "true"]
+    # ---------------------------------------------------------------------------------------------
+    # PART 3: Determining changes
+    # ---------------------------------------------------------------------------------------------
+    # dictionaries of changes
+    conservation_dict_changes = {x:"No" for x in conservation_lists}
+    sensitive_dict_changes = {x:"No" for x in sensitive_lists}
 
-            # create conservation list from raw data
-            conservation_list = create_conservation_list(list_data=conservation_list_data,state=state)
+    # loop over sensitive lists
+    for state in sensitive_lists:
 
-            # write conservation list to csv (may change this later)
-            conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+        print("Sensitive: {}".format(state))
+        
+        # generate difference report for sensitive list
+        sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
+        if not sensitive_changelist.empty:
+            sensitive_dict_changes[state] = "Yes"
+            sensitive_changelist.to_csv("../temp-changes/{}-sensitive-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
 
-    # EPBC separately
-    EPBC_df = lf.webscrape_list_url(url="https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974",
-                                    state="EPBC")
+    # loop over conservation lists
+    for state in conservation_lists:
 
-    # keep these?
-    # 'Listed SPRAT TaxonID', 'Current SPRAT TaxonID'
-    EPBC_new = EPBC_df.rename(columns={
-        'Scientific Name': 'scientificName', 
-        'Common Name': 'vernacularName',        
-        'Threatened status': 'sourceStatus',
-        'Family': 'family',
-        'Genus': 'genus',
-        'Species': 'species'
-    })
+        print("Conservation: {}".format(state))
 
-    # "EPBC Act Threatened Species": "dr656",
-    EPBC_new['status'] = EPBC_new['sourceStatus']
-
-    EPBC_new[['scientificName', 
-              'vernacularName', 
-              'sourceStatus',
-              'family', 
-              'genus', 
-              'species',
-              'status'
-              ]].to_csv("../temp-new-lists/{}-conservation-{}.csv".format("EPBC",datetime.now().strftime("%Y-%m-%d")),index=False)
-
-    # upload lists to the test environment <<=== CHANGE THIS
+        # generate difference report for conservation list
+        conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
+        if not conservation_changelist.empty:
+            conservation_dict_changes[state] = "Yes"
+            conservation_changelist.to_csv("../temp-changes/{}-conservation-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
+    
+    # ---------------------------------------------------------------------------------------------
+    # PART 4: Send email to Cam
+    # ---------------------------------------------------------------------------------------------
+    # send email here
+    # ec.send_email(conservation_changes=conservation_changelist,sensitive_changes=sensitive_changelist)
 
 if __name__ == "__main__":
     main()
