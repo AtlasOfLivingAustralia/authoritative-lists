@@ -44,11 +44,6 @@ def kvp_to_columns(df):
             kvpdf = pd.merge(df, kvpdf, "inner", on="id")
             d0 = pd.concat([d0, kvpdf])
     return d0
-
-# TODO: determine if this is necessary
-# build the list URL here
-# def build_list_url(drstr: str):
-#     return "https://lists.ala.org.au/ws/speciesListItems/" + drstr + "?max=10000&includeKVP=true"
     
 # TODO: go through this 
 def get_changelist(testdr: str, proddr: str, ltype: str):
@@ -56,9 +51,6 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     # get old and new list urls    
     oldListUrl = listsProd + proddr + urlSuffix
     newListUrl = listsTest + testdr + urlSuffix
-
-    # print(oldListUrl)
-    # print(newListUrl)
 
     # download old list and turn it into pandas dataframe
     oldList = download_ala_specieslist(oldListUrl)
@@ -312,6 +304,9 @@ def post_list_to_test(list_data=None,
 
     # get authentication for server
     auth = get_authentication()
+
+    # get client ID and secret ID
+    client_id,client_secret = get_client_id_secret()
     
     # check if access token is expired
     test = is_access_token_expired(expires_at = auth['expires_at'])
@@ -321,39 +316,69 @@ def post_list_to_test(list_data=None,
 
         # refresh tokens
         new_access_token, new_refresh_token, new_expires_in = refresh_access_token(refresh_token=auth['refresh_token'],
-                        client_id = auth['id_token'])
+                        client_id=client_id,client_secret=client_secret)
         auth['access_token'] = new_access_token
         auth['refresh_token'] = new_refresh_token
-        auth['expires_at'] = new_expires_in
+        auth['expires_at'] = time.time() + new_expires_in
 
         # write them to your file
+        ### TODO: TEST THIS
         out_file = open('auth-confidential.json','w')
-        json.dumps(auth,out_file)
+        print(json.dumps(auth))
+        out_file.write(json.dumps(auth))
         out_file.close()
 
     # create headers with authentication
-    headers = {'user-agent': 'token-refresh/0.1.1', 'Authorization': 'Bearer {0}'.format(auth['access_token'])}
+    headers = {'accept': 'application/json', 
+               'client_id': client_id, 
+               'X-ALA-userId': client_id,
+               'client_secret': client_secret,
+               'Authorization': 'Bearer {0}'.format(auth['access_token'])}
 
     # create the response and then return none
-    response = requests.post("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}".format(druid),data=data,headers=headers)
+    response = requests.post("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}?".format(druid),data=data,headers=headers)
+    
     return None
+    print(response.status_code)
+    print("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}?".format(druid))
+    print(data)
+    
 
 def get_authentication():
 
     with open('auth-confidential.json') as f:
         return json.load(f)
     
+def get_client_id_secret():
+
+    f = open('ids.txt')
+    for line in f:
+        if 'client_id' in line:
+            client_id = line.strip().split(" = ")[1]
+        if 'client_secret' in line:
+            client_secret = line.strip().split(" = ")[1]
+
+    return client_id,client_secret
+    
 def is_access_token_expired(expires_at=None):
     return expires_at is None or time.time() > expires_at
 
 def refresh_access_token(refresh_token=None,
-                         client_id = None):
+                         client_id = None,
+                         client_secret = None):
+    
+    # set up payload
     data = {
         'grant_type': 'refresh_token',
         'refresh_token': refresh_token,
         'client_id': client_id,
+        'client_secret': client_secret
     }
+
+    # get response
     response = requests.post(token_url, data=data, headers={'Accept': 'application/json'})
+
+    # set new tokens in json
     if response.status_code == 200:
         auth_response = response.json()
         new_access_token = auth_response['access_token']

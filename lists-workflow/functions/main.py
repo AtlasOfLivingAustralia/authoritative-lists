@@ -21,8 +21,10 @@ def main():
     # 
     # PART 2: Uploading to the test environment
     # ---------------------------------------------------------------------------------------------
-    
+    # '''
     for state in conservation_lists:
+
+        print(state)
 
         # initialise sensitive and conservation list data
         conservation_list_data = pd.DataFrame()
@@ -38,7 +40,10 @@ def main():
         lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C")
         
         # write conservation list to csv (may change this later)
-        conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+        # conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+
+    import sys
+    sys.exit()
 
     for state in sensitive_lists:
 
@@ -53,17 +58,17 @@ def main():
         sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
 
         # post list to test
-        lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S")
+        # lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S")
         
         # write list to csv for upload (may change this later)
         sensitive_list.to_csv("../temp-new-lists/{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
-    
+    # '''
     # ---------------------------------------------------------------------------------------------
     # PART 3: Determining changes
     # ---------------------------------------------------------------------------------------------
     # dictionaries of changes
-    conservation_dict_changes = {x:"No" for x in conservation_lists}
-    sensitive_dict_changes = {x:"No" for x in sensitive_lists}
+    conservation_dict_changes = {x:False for x in conservation_lists}
+    sensitive_dict_changes = {x:False for x in sensitive_lists}
 
     # loop over sensitive lists
     for state in sensitive_lists:
@@ -73,7 +78,7 @@ def main():
         # generate difference report for sensitive list
         sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
         if not sensitive_changelist.empty:
-            sensitive_dict_changes[state] = "Yes"
+            sensitive_dict_changes[state] = False
             sensitive_changelist.to_csv("../temp-changes/{}-sensitive-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
 
     # loop over conservation lists
@@ -91,7 +96,7 @@ def main():
     # PART 4: Send email to Cam
     # ---------------------------------------------------------------------------------------------
     # send email here
-    # ec.send_email(conservation_changes=conservation_changelist,sensitive_changes=sensitive_changelist)
+    ef.send_email(conservation_dict_changes=conservation_dict_changes,sensitive_dict_changes=sensitive_dict_changes)
 
 if __name__ == "__main__":
     main()

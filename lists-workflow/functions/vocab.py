@@ -15,23 +15,23 @@ listsProd = "https://lists.ala.org.au/ws/speciesListItems/"
 listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"
 urlSuffix = "?max=10000&includeKVP=true"
 
-conservation_lists = ["Victoria"]
-sensitive_lists = ["Victoria"]
+conservation_lists = ["New South Wales"]
+sensitive_lists = ["New South Wales"]
 
-# # all the state lists that are automatically checked every week
+# all the state lists that are automatically checked every week
 # conservation_lists = ["Queensland",
 #          "Northern Territory",
 #          "New South Wales",
 #          "Western Australia",
 #          "Australian Capital Territory", ## Done - sensitive managed by org
 #          "Tasmania", ## Done - sensitive managed by org
+#         "Victoria", #authentication error]
 #          "EPBC"
-# #          "Victoria", #authentication error]
 #          ]
 
 # sensitive_lists = ["New South Wales",
 #                     "Queensland",
-#                     # "Victoria",
+#                     "Victoria",
 #                     "Western Australia"]
 
 # ALA list ids for all conservation authoritative lists on test
@@ -58,7 +58,7 @@ list_ids_conservation_prod = {"Australian Capital Territory": "dr649",
 # ALA list ids for all sensitive authoritative lists on test we are updating
 list_ids_sensitive_test = {"New South Wales": "dr18457",
                            "Queensland": "dr18404",
-                           "Victoria": "dr490",
+                           "Victoria": "dr18669",
                            "Western Australia": "dr18406"}
 
 # ALA list ids for all sensitive authoritative lists on test we are updating

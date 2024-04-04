@@ -1,73 +1,52 @@
 # import smtplib
 from redmail import outlook
 from smtplib import SMTP
+from datetime import datetime
+from pathlib import Path
 
-def send_email(conservation_changes = None,
-               sensitive_changes = None):
+def send_email(conservation_dict_changes = None,
+               sensitive_dict_changes = None):
     
-    smtp = SMTP()
-    smtp.set_debuglevel(2)
+    # smtp = SMTP()
+    # smtp.set_debuglevel(2)
 
-    password_file = open('login.txt')
-    for line in password_file:
-        if "password" in line:
-            password = line.strip().split(" = ")[1]
-        if "username" in line:
-            username = line.strip().split(" = ")[1]
+    # password_file = open('login.txt')
+    # for line in password_file:
+    #     if "password" in line:
+    #         password = line.strip().split(" = ")[1]
+    #     if "username" in line:
+    #         username = line.strip().split(" = ")[1]
 
-    outlook.username = username
-    outlook.password = password
+    # 
+    # outlook.username = username
+    # outlook.password = password
+
+    # create attachments
+    conservation_states = [k for k,v in conservation_dict_changes.items() if v]
+    sensitive_states = [k for k,v in sensitive_dict_changes.items() if v]
+
+    attachments = {}
+    message_body = "Hi Cam and Tania,\n\nAttached are changes from the following lists:\n\n"
+
     
-    print("sending email")
-    outlook.send(
-        receivers=["amanda.buyan@csiro.au"],
-        subject="An example",
-        text="Hi, this is an example."
-    )
-    print("email sent")
+    for cs in conservation_states:
+        message_body += "{}\n".format(cs)
+        attachments["{}-conservation-changes-{}.csv".format(cs,datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-changes/{}-conservation-changes-{}.csv".format(cs,datetime.now().strftime("%Y-%m-%d")))
 
-# attachments =  attachments={
-    #     'data.csv': Path('path/to/file.csv'),
-    #     'data.xlsx': pd.DataFrame(...),
-    #     'raw_file.html': '<h1>Just some HTML</h1>',
-    # }
+    for ss in sensitive_states:
+        message_body += "{}\n".format(ss)
+        attachments["{}-sensitive-changes-{}.csv".format(ss,datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-changes/{}-sensitive-changes-{}.csv".format(cs,datetime.now().strftime("%Y-%m-%d")))
     
+    print(attachments)
+    print(message_body)
 
-    # sensitive_changelist.to_csv("../temp-changes/{}-sensitive-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
+    # print("sending email")
+    # outlook.send(
+    #     receivers=["amanda.buyan@csiro.au"],
+    #     subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
+    #     text=message_body,
+    #     attachments = {
 
-    '''
-    import smtplib
-from os.path import basename
-from email.mime.application import MIMEApplication
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.utils import COMMASPACE, formatdate
-
-
-def send_mail(send_from, send_to, subject, text, files=None,
-              server="127.0.0.1"):
-    assert isinstance(send_to, list)
-
-    msg = MIMEMultipart()
-    msg['From'] = send_from
-    msg['To'] = COMMASPACE.join(send_to)
-    msg['Date'] = formatdate(localtime=True)
-    msg['Subject'] = subject
-
-    msg.attach(MIMEText(text))
-
-    for f in files or []:
-        with open(f, "rb") as fil:
-            part = MIMEApplication(
-                fil.read(),
-                Name=basename(f)
-            )
-        # After the file is closed
-        part['Content-Disposition'] = 'attachment; filename="%s"' % basename(f)
-        msg.attach(part)
-
-
-    smtp = smtplib.SMTP(server)
-    smtp.sendmail(send_from, send_to, msg.as_string())
-    smtp.close()
-    '''
+    #     }
+    # )
+    # print("email sent")
