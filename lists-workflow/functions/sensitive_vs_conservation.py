@@ -12,6 +12,9 @@ def create_sensitive_list(list_data = None,
     # do as much renaming as you can 
     sensitive_species= list_data.rename(columns=sensitive_columns_rename[state])
 
+    # set this just in case
+    extra_columns = None
+
     # first, check for states whose lists we won't be updating automatically
     if state in ["Australian Capital Territory","South Australia","Northern Territory","Tasmania"]:
 
@@ -44,6 +47,8 @@ def create_sensitive_list(list_data = None,
     
     elif state == "Queensland":
 
+        extra_columns = ['WildNetTaxonID','taxonID']
+
         # merge category column with code
         sensitive_species = pd.merge(sensitive_species,conservation_codes,left_on=['category'],right_on=['Code'],how="left")
         
@@ -55,6 +60,10 @@ def create_sensitive_list(list_data = None,
         sensitive_species['kingdom'] = sensitive_species['kingdom'].replace(kingdomMap)
         sensitive_species['category'] = sensitive_species['category'].replace(codeMap)
         sensitive_species['category'] = sensitive_species['category'].fillna('UK')
+
+        # make the taxonID column
+        sensitive_species['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + sensitive_species['WildNetTaxonID'].astype(str)
+
 
     elif state == "Western Australia":
 
@@ -76,7 +85,10 @@ def create_sensitive_list(list_data = None,
         # data is good as is
         sensitive_species = list_data
 
-    return sensitive_species[['scientificName', 'family', 'vernacularName', 'generalisation','category']]
+    if extra_columns:
+        return sensitive_species[['scientificName', 'family', 'vernacularName', 'generalisation','category'] + extra_columns]
+    else:
+        return sensitive_species[['scientificName', 'family', 'vernacularName', 'generalisation','category']]
 
 def create_conservation_list(list_data = None,
                              state = None):
@@ -86,6 +98,9 @@ def create_conservation_list(list_data = None,
     
     # do all the renaming possible here
     conservation_list = list_data.rename(columns=conservation_columns_rename[state])
+
+    # set this just in case
+    extra_columns = None
     
     # now, check state
     if state == "New South Wales":
@@ -95,6 +110,8 @@ def create_conservation_list(list_data = None,
         conservation_list = conservation_list.rename(columns={"stateConservation": "sourceStatus"})
 
     elif state == "Queensland":
+
+        extra_columns = ['WildNetTaxonID','taxonID']
 
         # get conservation list
         conservation_list = pd.merge(conservation_list,conservation_codes,left_on=['sourceStatus'],right_on=['Code'],how="left")
@@ -115,6 +132,9 @@ def create_conservation_list(list_data = None,
         adds.loc[adds['scientificName'] == "Cacatua leadbeateri leadbeateri",'scientificName'] = "Cacatua leadbeateri"
         adds.loc[adds['scientificName'] == "Eclectus polychloros macgillivrayi",'scientificName'] = "Eclectus polychloros"
         conservation_list = pd.concat([conservation_list,adds])
+
+        # make the taxonID column
+        conservation_list['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + conservation_list['WildNetTaxonID'].astype(str)
     
     elif state == "Northern Territory":
 
@@ -172,4 +192,7 @@ def create_conservation_list(list_data = None,
         conservation_list['sourceStatus'] = conservation_list['status']
 
     # returned the cleaned conservation list
-    return conservation_list[['scientificName', 'family', 'vernacularName', 'status','sourceStatus']]
+    if extra_columns:
+        return conservation_list[['scientificName', 'family', 'vernacularName', 'status','sourceStatus'] + extra_columns]
+    else:
+        return conservation_list[['scientificName', 'family', 'vernacularName', 'status','sourceStatus']]

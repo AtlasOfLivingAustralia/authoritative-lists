@@ -6,12 +6,10 @@ import json
 import certifi
 import ssl
 import requests
-import datetime
 from vocab import api_values,conservation_list_urls,listsProd,listsTest,urlSuffix
 from vocab import list_names_conservation_test,list_names_sensitive_test,authorize_url,token_url
 from bs4 import BeautifulSoup
 import time
-from io import StringIO
 
 from flask import Flask, request, redirect, render_template_string, session
 
@@ -289,7 +287,9 @@ def format_data_for_post(list_data=None,
     
     # loop over each row to generate kvp values
     for i,row in list_data.iterrows():
-        post_data["listItems"][i] = {"itemName": row['scientificName'],"kvpValues": [{x:row[x] for x in columns}]}
+        post_data["listItems"][i] = {"itemName": row['scientificName'],"kvpValues": []}
+        for x in columns:
+            post_data["listItems"][i]["kvpValues"].append({"key": x, "value": row[x]})
 
     # return data
     return post_data
@@ -315,34 +315,29 @@ def post_list_to_test(list_data=None,
     if test:
 
         # refresh tokens
-        new_access_token, new_refresh_token, new_expires_in = refresh_access_token(refresh_token=auth['refresh_token'],
+        new_access_token, new_expires_in = refresh_access_token(refresh_token=auth['refresh_token'],
                         client_id=client_id,client_secret=client_secret)
         auth['access_token'] = new_access_token
-        auth['refresh_token'] = new_refresh_token
         auth['expires_at'] = time.time() + new_expires_in
 
         # write them to your file
-        ### TODO: TEST THIS
         out_file = open('auth-confidential.json','w')
-        print(json.dumps(auth))
         out_file.write(json.dumps(auth))
         out_file.close()
 
     # create headers with authentication
-    headers = {'accept': 'application/json', 
-               'client_id': client_id, 
-               'X-ALA-userId': client_id,
-               'client_secret': client_secret,
-               'Authorization': 'Bearer {0}'.format(auth['access_token'])}
+    headers = {'Content-Type': 'application/json', 
+               'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
+               'Authorization': 'Bearer {}'.format(auth['access_token'])}
 
     # create the response and then return none
-    response = requests.post("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}?".format(druid),data=data,headers=headers)
-    
-    return None
-    print(response.status_code)
-    print("https://api.test.ala.org.au/specieslist/ws/speciesListPost/{}?".format(druid))
-    print(data)
-    
+    # below is API for this - eventually switch?
+    # "https://api.test.ala.org.au/specieslist/ws/speciesList/{}?".format(druid) # speciesListPost is deprecated
+    # below is website - THIS WORKS
+    # "https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid)
+    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data),headers=headers)
+    print(response)
+    return None   
 
 def get_authentication():
 
@@ -382,8 +377,7 @@ def refresh_access_token(refresh_token=None,
     if response.status_code == 200:
         auth_response = response.json()
         new_access_token = auth_response['access_token']
-        new_refresh_token = auth_response.get('refresh_token', 'N/A')
-        new_expires_in = auth_response.get('expires_in', 'N/A')
-        return new_access_token, new_refresh_token, new_expires_in
+        new_expires_in = auth_response.get('expires_in')
+        return new_access_token, new_expires_in
     else:
-        return None, None, None
+        return None, None
