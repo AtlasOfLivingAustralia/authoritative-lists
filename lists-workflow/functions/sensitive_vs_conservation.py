@@ -23,6 +23,8 @@ def create_sensitive_list(list_data = None,
     # now, check NSW
     elif state == "New South Wales":
 
+        # taxonRank
+
         # check for current status in new south wales
         if 'isCurrent' in sensitive_species:
             sensitive_species = sensitive_species[sensitive_species['isCurrent'] == "true"]
@@ -47,13 +49,15 @@ def create_sensitive_list(list_data = None,
     
     elif state == "Queensland":
 
+        # NO TAXON RANK AVAILABLE - WHERE TO GET THIS
+
         extra_columns = ['WildNetTaxonID','taxonID']
 
         # merge category column with code
         sensitive_species = pd.merge(sensitive_species,conservation_codes,left_on=['category'],right_on=['Code'],how="left")
         
         # add generalisation
-        sensitive_species['generalisation'] = "2 km"
+        sensitive_species['generalisation'] = "2km"
 
         # map sourceStatus to category and kingdom - also fill in category with 'UK' (unknown)
         # if not known
@@ -77,13 +81,18 @@ def create_sensitive_list(list_data = None,
         sensitive_species = sensitive_species[~sensitive_species['RESTRICTED_FLAG'].isin([
             math.nan
         ])].reset_index(drop=True)
-        sensitive_species['family'] = None
+        sensitive_species['family'] = ""
         sensitive_species['generalisation'] = '1km'
+        # 'TAXON_LEVEL_CDE' - replace 'spec' with 'species'
+        sensitive_species['taxonRank'] = sensitive_species['vernacularName'].replace('spec','species')
 
     else:
         
         # data is good as is
         sensitive_species = list_data
+
+    # replace all the NaNs with an empty string
+    sensitive_species['vernacularName'] = sensitive_species['vernacularName'].replace(math.nan,"")
 
     if extra_columns:
         return sensitive_species[['scientificName', 'family', 'vernacularName', 'generalisation','category'] + extra_columns]
@@ -181,7 +190,10 @@ def create_conservation_list(list_data = None,
         ])].reset_index(drop=True)
 
         # add family column
-        conservation_list['family'] = None
+        conservation_list['family'] = ""
+
+    # replace all the NaNs with an empty string
+        conservation_list['vernacularName'] = conservation_list['vernacularName'].replace(math.nan,"")
 
     # remove nans from the status column
     if 'status' in conservation_list:

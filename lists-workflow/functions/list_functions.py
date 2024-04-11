@@ -227,7 +227,8 @@ def webscrape_list_url(url=None,
         test = list(set([str(s) for s in strings if ".xlsx" in str(s)]))
         xls = pd.ExcelFile(test[0].split("\"")[1])
         temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
-        
+        # no rank idenified - not sure how to do this
+
         if 'fauna' in url:
             temp2 = temp.rename(columns={
                 'Scientific name': 'scientificName',

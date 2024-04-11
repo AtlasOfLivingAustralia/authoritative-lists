@@ -23,33 +23,33 @@ def main():
     # PART 2: Uploading to the test environment
     # PART 3: Generating changelist to see if list has been updated
     # ---------------------------------------------------------------------------------------------
-    for state in conservation_lists:
+    # for state in conservation_lists:
 
-        print("Conservation: {}".format(state))
+    #     print("Conservation: {}".format(state))
 
-        # initialise sensitive and conservation list data
-        conservation_list_data = pd.DataFrame()
+    #     # initialise sensitive and conservation list data
+    #     conservation_list_data = pd.DataFrame()
 
-        # get all data
-        for i in range(len(conservation_list_urls[state])):
-            conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
+    #     # get all data
+    #     for i in range(len(conservation_list_urls[state])):
+    #         conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
 
-        # create conservation list from raw data
-        conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
+    #     # create conservation list from raw data
+    #     conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
 
-        # post list to test
-        lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C")
+    #     # post list to test
+    #     lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C")
         
-        # generate difference report for conservation list
-        conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
+    #     # generate difference report for conservation list
+    #     conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
 
-        # if there are changes, write them out to a csv for emailing
-        if not conservation_changelist.empty:
-            conservation_dict_changes[state] = "Yes"
-            conservation_changelist.to_csv("../temp-changes/{}-conservation-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
+    #     # if there are changes, write them out to a csv for emailing
+    #     if not conservation_changelist.empty:
+    #         conservation_dict_changes[state] = "Yes"
+    #         conservation_changelist.to_csv("../temp-changes/{}-conservation-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
     
-        # write conservation list to csv (may change this later)
-        # conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
+    #     # write conservation list to csv (may change this later)
+    #     # conservation_list.to_csv("../temp-new-lists/{}-conservation-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)
 
     for state in sensitive_lists:
 
@@ -61,6 +61,12 @@ def main():
         # loop over all links present to get 
         for i in range(len(sensitive_list_urls[state])):
             sensitive_list_data = pd.concat([sensitive_list_data,lf.read_list_url(url=sensitive_list_urls[state][i],state=state)]).reset_index(drop=True)
+
+        print(sensitive_list_data.columns)
+        print(sensitive_list_data.head())
+        # print(list(set(sensitive_list_data['TAXON_LEVEL_CDE'])))
+        import sys
+        sys.exit()
 
         # create a processed sensitive list from the raw data
         sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)

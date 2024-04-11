@@ -15,8 +15,8 @@ listsProd = "https://lists.ala.org.au/ws/speciesListItems/"
 listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"
 urlSuffix = "?max=10000&includeKVP=true"
 
-conservation_lists = ["New South Wales","Queensland"]
-sensitive_lists = ["New South Wales","Queensland"]
+conservation_lists = [] # Queensland
+sensitive_lists = ["Western Australia"]
 
 # all the state lists that are automatically checked every week
 # conservation_lists = ["Queensland",
