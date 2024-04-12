@@ -5,6 +5,10 @@ import list_functions as lf
 
 def create_sensitive_list(list_data = None,
                           state = None):
+    '''
+    This function creates sensitive lists, and makes sure that the correct information is 
+    returned, especially data on how to obscure coordinates.
+    '''
 
     # check for conservation codes
     conservation_codes = lf.get_conservation_codes(state=state)
@@ -22,8 +26,6 @@ def create_sensitive_list(list_data = None,
 
     # now, check NSW
     elif state == "New South Wales":
-
-        # taxonRank
 
         # check for current status in new south wales
         if 'isCurrent' in sensitive_species:
@@ -50,7 +52,6 @@ def create_sensitive_list(list_data = None,
     elif state == "Queensland":
 
         # NO TAXON RANK AVAILABLE - WHERE TO GET THIS
-
         extra_columns = ['WildNetTaxonID','taxonID']
 
         # merge category column with code
@@ -68,12 +69,12 @@ def create_sensitive_list(list_data = None,
         # make the taxonID column
         sensitive_species['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + sensitive_species['WildNetTaxonID'].astype(str)
 
-
     elif state == "Western Australia":
 
         # make sure the generalisation column is there
         sensitive_species = list_data
         sensitive_species['generalisation'] = "10km"
+        sensitive_species['category'] = sensitive_species['status']
     
     elif state == "Victoria":
 
@@ -101,6 +102,10 @@ def create_sensitive_list(list_data = None,
 
 def create_conservation_list(list_data = None,
                              state = None):
+    '''
+    This function creates conservation lists, and makes sure that the correct information is 
+    returned, especially the status of species.
+    '''
 
     # check for conservation codes
     conservation_codes = lf.get_conservation_codes(state=state)

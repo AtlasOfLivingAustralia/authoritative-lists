@@ -11,8 +11,6 @@ from vocab import list_names_conservation_test,list_names_sensitive_test,authori
 from bs4 import BeautifulSoup
 import time
 
-from flask import Flask, request, redirect, render_template_string, session
-
 def download_ala_specieslist(url: str):
     '''
     Download ALA species list.  Returns error if list isn't right, returns dataframe if list is correct
@@ -26,10 +24,9 @@ def download_ala_specieslist(url: str):
             print('Error in download_ala_list:', url.status)
     return data
 
-# TODO: confirm what this is doing
 def kvp_to_columns(df):
     '''
-    All data is in the KVP for lists(?).  Make sure the KVP data is in a pandas dataframe by itself.
+    All data is in the KVP for lists.  Make sure the KVP data is in a pandas dataframe by itself.
     '''
     d0 = pd.DataFrame()
     for i in df.index:
@@ -43,8 +40,11 @@ def kvp_to_columns(df):
             d0 = pd.concat([d0, kvpdf])
     return d0
     
-# TODO: go through this 
 def get_changelist(testdr: str, proddr: str, ltype: str):
+    '''
+    Determines changes between current lists in production ("old") and the lists we uploaded 
+    to test ("new").  Returns a pandas dataframe with all the changes
+    '''
     
     # get old and new list urls    
     oldListUrl = listsProd + proddr + urlSuffix
@@ -98,6 +98,9 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
 def read_list_url(url=None,
                   state=None):
+    '''
+    Determine what type of parsing is needed for each URL
+    '''
 
     if ".xls" in url.lower() or ".xlsx" in url.lower():
         # check for skipping lines for the NT
@@ -139,6 +142,9 @@ def read_list_url(url=None,
     return df
 
 def get_conservation_codes(state=None):
+    '''
+    Gets conservation codes for relevant states
+    '''
 
     if state is None:
         raise ValueError("Please provide a state for specific conservation codes.")
@@ -204,6 +210,9 @@ def get_conservation_codes(state=None):
     
 def webscrape_list_url(url=None,
                        state=None):
+    '''
+    Webscrape for new list files for certain states
+    '''
 
     if state == "EPBC":
         # get the data from the url
@@ -273,8 +282,11 @@ def webscrape_list_url(url=None,
 def format_data_for_post(list_data=None,
                          state=None,
                          list_type=None):
+    '''
+    Turn a pandas dataframe into a dictionary for posting to the lists test environment
+    '''
 
-    # { "listName": "list1", "listType": "TEST", "listItems": [ { "itemName": "item1", "kvpValues": [ { "key": "key1", "value": "value1" }, { "key": "key2", "value": "value2" } ] } ] }
+    # Check which type of list is being passed and create the post_data dict accordingly
     if list_type == "C":
         post_data = {"listName": list_names_conservation_test[state],"listType": "TEST","listItems": [None for i in range(list_data.shape[0])]} 
     elif list_type == "S":
@@ -282,7 +294,7 @@ def format_data_for_post(list_data=None,
     else:
         raise ValueError("Only two values are needed: 'C' for Conservation, 'S' for Sensitive")
 
-    # print(list(list_data.columns).re)
+    # get all values needed for posting
     columns = list(list_data.columns)
     columns.remove('scientificName')
     
@@ -299,6 +311,9 @@ def post_list_to_test(list_data=None,
                       druid=None,
                       state=None,
                       list_type=None):
+    '''
+    Posts formatted data to test with authentication checks
+    '''
     
     # format your data for posting to test
     data = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
@@ -331,21 +346,22 @@ def post_list_to_test(list_data=None,
                'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
                'Authorization': 'Bearer {}'.format(auth['access_token'])}
 
-    # create the response and then return none
-    # below is API for this - eventually switch?
-    # "https://api.test.ala.org.au/specieslist/ws/speciesList/{}?".format(druid) # speciesListPost is deprecated
-    # below is website - THIS WORKS
-    # "https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid)
+    # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data),headers=headers)
-    print(response)
     return None   
 
 def get_authentication():
+    '''
+    Get relevant authentication information from json downloaded from website
+    '''
 
     with open('auth-confidential.json') as f:
         return json.load(f)
     
 def get_client_id_secret():
+    '''
+    Get client ids and secret for posting data
+    '''
 
     f = open('ids.txt')
     for line in f:
@@ -357,11 +373,18 @@ def get_client_id_secret():
     return client_id,client_secret
     
 def is_access_token_expired(expires_at=None):
+    '''
+    Check if your JWT token is expired
+    '''
+
     return expires_at is None or time.time() > expires_at
 
 def refresh_access_token(refresh_token=None,
                          client_id = None,
                          client_secret = None):
+    '''
+    If the JWT token needs to be refreshed, this function refreshes the access token
+    '''
     
     # set up payload
     data = {
