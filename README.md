@@ -10,7 +10,6 @@ The workflow consists of the following:
 
 1. Download the following authoritiative conservation and sensitive lists from each state using relevant links:
 
-    |-------|--------------|-----------|
     | State | Conservation | Sensitive |
     |-------|--------------|-----------|
     | ACT   |       X      |           |
@@ -20,7 +19,6 @@ The workflow consists of the following:
     | TAS   |       X      |           |
     | VIC   |       X      |     X     |
     | WA    |       X      |     X     |
-    |-------|--------------|-----------|
 
 2. Compare them with the current lists on the ALA to determine what changes, if any, have been made.
 3. Email relevant parties to check the updates to the list.
@@ -36,7 +34,6 @@ For FAQs about our Sensitive Data Service, refer [here](https://rasd.org.au/pdf/
 
 For a full list of conservation and sensitive lists in Australia, refer to the table below:
 
-|------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|
 | State/Entity                 | Conservation                                                   | Sensitive                                                      | 
 |------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|
 | Australian Capital Territory | [dr649](https://lists.ala.org.au/speciesListItem/list/dr649)   | [dr2627](https://lists.ala.org.au/speciesListItem/list/dr2627) |
@@ -48,4 +45,3 @@ For a full list of conservation and sensitive lists in Australia, refer to the t
 | Tasmania                     | [dr654](https://lists.ala.org.au/speciesListItem/list/dr654)   | [dr491](https://lists.ala.org.au/speciesListItem/list/dr491)   |
 | Victoria                     | [dr655](https://lists.ala.org.au/speciesListItem/list/dr655)   | [dr490](https://lists.ala.org.au/speciesListItem/list/dr490)   |
 | Western Australia            | [dr2201](https://lists.ala.org.au/speciesListItem/list/dr2201) | [dr467](https://lists.ala.org.au/speciesListItem/list/dr467)   |
-|------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|
