@@ -5,8 +5,7 @@ Australian jurisdictions into the ALA's list tool.
 
 ## Overall workflow
 
-This is going to be an **apache airflow job (TBC)**, running once a week on **needs to be confirmed** Tuesdays at midnight.  
-The workflow consists of the following:
+This is going to be an **apache airflow job (TBC)**, running once a week on **needs to be confirmed** Tuesdays at midnight.  The workflow consists of the following:
 
 1. Download the following authoritiative conservation and sensitive lists from each state using relevant links:
 
