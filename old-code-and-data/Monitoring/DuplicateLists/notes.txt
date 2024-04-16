@@ -1,0 +1,6 @@
+Match details:  https://api.ala.org.au/specieslist/ws/speciesList/dr781?sort=dataResourceUid&max=10&offset=0'
+
+Guid list identical: https://api.ala.org.au/specieslist/ws/speciesList/dr467/taxa'
+unpublished lists:  https://api.ala.org.au/specieslist/ws/speciesList/unpublished'
+
+Get all species Items in a list:   'https://api.ala.org.au/specieslist/ws/speciesListItems/dr781?nonulls=true&sort=itemOrder&max=10&offset=0&includeKVP=true'

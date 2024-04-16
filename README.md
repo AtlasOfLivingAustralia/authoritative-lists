@@ -1,59 +1,51 @@
-# Authoritative Conservation and Sensitive Species Lists
+# Updating Authoritative Conservation and Sensitive Species Lists in the ALA
 
-This repository is intended to document the collection and preparation of Conservation and Sensitive lists from Australian jurisdictions into the ALA's list tool.
+This repository is intended to document the automatic collection and preparation of Conservation and Sensitive lists from 
+Australian jurisdictions into the ALA's list tool.
 
-## Contents
-Each of the directories listed below has its own **README.md** file describing source content and processes used to create the datasets.
+## Overall workflow
 
-| **Directory** | **Description**                                                                 |
-| --------- |---------------------------------------------------------------------------------|
-| historical-lists | Conservation and Sensitive Species Lists in the ALA Lists tool as at 16/03/2022 |
-| source-data| Source data and translation information                                         |
-| current-lists | Lists processed/extracted from source |
+This is going to be an **apache airflow job (TBC)**, running once a week on **needs to be confirmed** Tuesdays at midnight.  
+The workflow consists of the following:
 
-Information regarding Conservation statuses for jurisdictions can be found downloaded from here:
+1. Download the following authoritiative conservation and sensitive lists from each state using relevant links:
 
-[All Threatened Species Codes](https://github.com/AtlasOfLivingAustralia/authoritative-lists/blob/master/All%20Threatened%20species%20codes.xlsx)
+    |-------|--------------|-----------|
+    | State | Conservation | Sensitive |
+    |-------|--------------|-----------|
+    | ACT   |       X      |           |
+    | NT    |       X      |           |
+    | NSW   |       X      |     X     |
+    | QLD   |       X      |     X     |
+    | TAS   |       X      |           |
+    | VIC   |       X      |     X     |
+    | WA    |       X      |     X     |
+    |-------|--------------|-----------|
 
-## Sensitive Lists
+2. Compare them with the current lists on the ALA to determine what changes, if any, have been made.
+3. Email relevant parties to check the updates to the list.
+4. Once relevant parties have approved changes, upload changes to production.
 
-[Sensitive lists in the ALA's Lists tool](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true) are provided by each state jurisdiction to supply data obfuscation rules to the ALA's sensitive data service (SDS). The SDS obfuscates location and other information to each occurrence record in the ALA's ingestion process. 
+## What are Conservation vs. Sensitive Lists?
 
-See the `List info` link for metadata about each list. Some lists apply a single level of obsfucation to every species in the list, and other lists apply supplied obfuscation rules for each species. The rules are specified in the `generalisation` field.
+[Conservation lists](https://lists.ala.org.au/public/speciesLists?isAuthoritative=eq:true&isThreatened=eq:true) refer to lists put out by juristictions, such as 
+states and territories, that have assessed the status of species in their jurisdiction.  A species is put on a conservation list if the relevant authorities determine its conservation is a cause for concern.  [Sensitive lists](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true), on the other hand, may contain 
+species that are not on the conservation list of said juristiction, but will have its exact locality obfuscated by our [Sensitive Data Service](https://github.com/AtlasOfLivingAustralia/sds).  The level of obfuscation depends on the level of sensitivity of the species.
 
-See https://github.com/AtlasOfLivingAustralia/sds for info about SDS processing.
+For FAQs about our Sensitive Data Service, refer [here](https://rasd.org.au/pdf/RASD-FAQs.pdf).
 
-| druid |list|
-|-------|---------|
-| dr2627 |[Australian Capital Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr2627)|
-| dr487 |[New South Wales : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr487)|
-| dr492 |[Northern Territory : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr492)|
-| dr493 |[Queensland : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr493)|
-| dr884 |[South Australia : Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr884)|
-| dr491 |[Tasmania: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr491)|
-| dr490 |[Victoria: Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr490)|
-| dr467 |[Western Australia :Sensitive Species](https://lists.ala.org.au/speciesListItem/list/dr467)|
+For a full list of conservation and sensitive lists in Australia, refer to the table below:
 
-    
-## Conservation Lists 
-[Conservation lists](https://lists.ala.org.au/public/speciesLists?isAuthoritative=eq:true&isThreatened=eq:true) are for each state plus the national EPBC list and are used for the `stateConservation` and `countryConservation` fields: 
-- flagged isThreatened
-- flagged isAuthoritative
-- region field provided
-Only these 3 are required for stateConservation and countryConservation
-
-
-Conservation lists contain the fields `status` and `sourceStatus`, the former usually representing a final parsed IUCN like vocabulary to enable faceting, and the latter containing the raw values provided by the state jurisdiction.
-
-| druid |list|
-|-------|---------|
-| dr649 |[Australian Capital Territory : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr649)|
-| dr656 |[EPBC Act Threatened Species : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr656)|
-| dr650 |[New South Wales : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr650)|
-| dr651 |[Northern Territory : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr651)|
-| dr652 |[Queensland : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr652)|
-| dr653 |[South Australia : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr653)|
-| dr654 |[Tasmania: Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr654)|
-| dr655 |[Victoria: Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr655)|
-| dr2201 |[Western Australia : Conservation Status](https://lists.ala.org.au/speciesListItem/list/dr2201)|
-
+|------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|
+| State/Entity                 | Conservation                                                   | Sensitive                                                      | 
+|------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|
+| Australian Capital Territory | [dr649](https://lists.ala.org.au/speciesListItem/list/dr649)   | [dr2627](https://lists.ala.org.au/speciesListItem/list/dr2627) |
+| EPBC Act                     | [dr656](https://lists.ala.org.au/speciesListItem/list/dr656)   | None                                                           |
+| New South Wales              | [dr650](https://lists.ala.org.au/speciesListItem/list/dr650)   | [dr487](https://lists.ala.org.au/speciesListItem/list/dr487)   |
+| Northern Territory           | [dr651](https://lists.ala.org.au/speciesListItem/list/dr651)   | [dr492](https://lists.ala.org.au/speciesListItem/list/dr492)   |
+| Queensland                   | [dr652](https://lists.ala.org.au/speciesListItem/list/dr652)   | [dr493](https://lists.ala.org.au/speciesListItem/list/dr493)   |
+| South Australia              | [dr653](https://lists.ala.org.au/speciesListItem/list/dr653)   | [dr884](https://lists.ala.org.au/speciesListItem/list/dr884)   |
+| Tasmania                     | [dr654](https://lists.ala.org.au/speciesListItem/list/dr654)   | [dr491](https://lists.ala.org.au/speciesListItem/list/dr491)   |
+| Victoria                     | [dr655](https://lists.ala.org.au/speciesListItem/list/dr655)   | [dr490](https://lists.ala.org.au/speciesListItem/list/dr490)   |
+| Western Australia            | [dr2201](https://lists.ala.org.au/speciesListItem/list/dr2201) | [dr467](https://lists.ala.org.au/speciesListItem/list/dr467)   |
+|------------------------------|----------------------------------------------------------------|----------------------------------------------------------------|

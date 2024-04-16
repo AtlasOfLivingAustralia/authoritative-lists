@@ -1,5 +1,0 @@
-The Global Register of Invasive Species (GRIS) was developed as a concept and prototype by the IUCN SSC Invasive Species Specialist Group (ISSG) in 2006 as part of a project undertaken for the Defenders of Wildlife on the Regulation of Live Animal Imports into the United States. The concept was revisited and expanded by the ISSG to address Aichi Biodiversity Target 9 and support its achievement- with the development of the Global Register of Introduced and Invasive Species (GRIIS). GRIIS hosted by the ISSG compiles annotated and verified country-wise inventories of introduced and invasive species. Development and population of the GRIIS was undertaken by the ISSG within the framework of activities of the Information Synthesis and Assessment Working Group of the Global Invasive Alien Species Information Partnership (GIASIP). This is a list of species as listed for Australia as at 10/12/2018
-
-URL http://www.griis.org/about.php
-Date submitted 2018-12-10
-Last Update 2020-08-05
