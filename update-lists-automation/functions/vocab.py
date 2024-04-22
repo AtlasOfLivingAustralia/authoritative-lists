@@ -26,10 +26,12 @@ urlSuffix = "?max=10000&includeKVP=true"
 #          "EPBC"
 #          ]
 
-sensitive_lists = ["New South Wales",
-                    "Queensland",
-                    "Victoria",
-                    "Western Australia"]
+sensitive_lists = ["Western Australia"]
+
+# sensitive_lists = ["New South Wales",
+#                     "Queensland",
+#                     "Victoria",
+#                     "Western Australia"]
 
 conservation_lists = []
 
@@ -95,6 +97,12 @@ codeMap = {'C': 'LC', 'CR': 'CR', 'E': 'EN',
         'NT': 'NT','PE': 'EW', 'SL': 'SL',
         'V': 'VU'}
 kingdomMap = {'animals':'Animalia','plants':'Plantae','fungi':'Fungi'}
+classMap = {'AMPHIBIAN': 'Amphibia', 
+            'MAMMAL': 'Mammalia', 
+            'INVERTEBRATE': '', 
+            'FISH': '', 
+            'BIRD': 'Aves', 
+            'REPTILE': 'Reptilia'}
 
 # columns to rename for both sensitive and conservation lists
 conservation_columns_rename = {"Queensland": {'Scientific_name':'scientificName',
@@ -153,13 +161,11 @@ conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act
              "Queensland": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
              "Tasmania": ["https://nre.tas.gov.au/Documents/TasThreatenedSpecies.xls.xlsx"],
              "Victoria": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
-             "Western Australia": ["https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-flora",
-                                   "https://www.dbca.wa.gov.au/wildlife-and-ecosystems/animals/list-threatened-and-priority-fauna"],
+             "Western Australia": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
              "EPBC": ["https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974"]} 
 
 # urls for relevant sensitive lists
 sensitive_list_urls = {"New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
              "Queensland": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"],
              "Victoria": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"], ### TODO: check on this
-             "Western Australia": ["https://www.dbca.wa.gov.au/wildlife-and-ecosystems/animals/list-threatened-and-priority-fauna",
-                                   "https://www.dbca.wa.gov.au/wildlife-and-ecosystems/plants/list-threatened-and-priority-flora"]}            
+             "Western Australia": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"]}

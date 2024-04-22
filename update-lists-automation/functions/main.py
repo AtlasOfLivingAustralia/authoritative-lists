@@ -60,6 +60,8 @@ def main():
         
     for state in sensitive_lists:
 
+        print(state)
+
         # initialise data
         sensitive_list_data = pd.DataFrame()
 
@@ -83,6 +85,8 @@ def main():
         if not sensitive_changelist.empty:
             sensitive_dict_changes[state] = False
             sensitive_changelist.to_csv("../temp-changes/{}-sensitive-changes-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")))
+
+        # s3://ala-uploads-source-data-production/lists/
 
         # write list to csv for upload (may change this later)
         new_list.to_csv("../temp-new-lists/{}-sensitive-{}.csv".format(state,datetime.now().strftime("%Y-%m-%d")),index=False)

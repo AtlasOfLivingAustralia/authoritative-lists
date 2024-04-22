@@ -1,6 +1,6 @@
 import pandas as pd
 import math
-from vocab import generalisation_categories,codeMap,kingdomMap,conservation_columns_rename,sensitive_columns_rename
+from vocab import generalisation_categories,codeMap,kingdomMap,conservation_columns_rename,sensitive_columns_rename,classMap
 import list_functions as lf
 
 def create_sensitive_list(list_data = None,
@@ -26,6 +26,9 @@ def create_sensitive_list(list_data = None,
 
     # now, check NSW
     elif state == "New South Wales":
+
+        # extra columns - test to see for NSW
+        extra_columns = ["kingdom","order","genus"]
 
         # check for current status in new south wales
         if 'isCurrent' in sensitive_species:
@@ -75,6 +78,8 @@ def create_sensitive_list(list_data = None,
         sensitive_species = list_data
         sensitive_species['generalisation'] = "10km"
         sensitive_species['category'] = sensitive_species['status']
+        # add this
+        # sensitive_species['Class'] = sensitive_species['Class'].replace(classMap)
     
     elif state == "Victoria":
 

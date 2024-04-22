@@ -191,18 +191,17 @@ def get_conservation_codes(state=None):
         soup =  BeautifulSoup(response.text, 'html.parser')
         strings = list(soup.find_all('a'))
         test = list(set([str(s) for s in strings if ".xlsx" in str(s)]))
-        xls = pd.ExcelFile(test[0].split("\"")[1])
+        for url in test:
+            if 'flora' in url.lower():
+                xls = pd.ExcelFile(url.split("\"")[1]) # changed from 0
+                df = pd.read_excel(xls,sheet_name=xls.sheet_names[4],skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
+                df = df[~df['Unnamed: 2'].isna()]
+                return df.rename(columns={
+                    'Unnamed: 1': 'Code',
+                    'Unnamed: 2': 'Category'
+                }).reset_index(drop=True)
         
-        # comment here
-        if "Flora" in test[0]:
-            df = pd.read_excel(xls,sheet_name=xls.sheet_names[4],skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
-        else:
-            df = pd.read_excel(xls,sheet_name=xls.sheet_names[1],skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
-        df = df[~df['Unnamed: 2'].isna()]
-        return df.rename(columns={
-            'Unnamed: 1': 'Code',
-            'Unnamed: 2': 'Category'
-        }).reset_index(drop=True)
+        return None
     
     else:
     
@@ -233,33 +232,52 @@ def webscrape_list_url(url=None,
         # parse the html to get the spreadsheets
         soup =  BeautifulSoup(response.text, 'html.parser')
         strings = list(soup.find_all('a'))
-        test = list(set([str(s) for s in strings if ".xlsx" in str(s)]))
-        xls = pd.ExcelFile(test[0].split("\"")[1])
-        temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
-        # no rank idenified - not sure how to do this
+        urls = list(set([str(s) for s in strings if ".xls" in str(s)]))
 
-        if 'fauna' in url:
-            temp2 = temp.rename(columns={
-                'Scientific name': 'scientificName',
-                'Common name': 'vernacularName',
-                'WA listing': 'status',
-                'WA listing.1': 'sourceStatus'
-            })
-            temp2['family'] = None
-            return temp2[['scientificName','vernacularName','family','status','sourceStatus']]
-        elif 'flora' in url:
-            codes = get_conservation_codes(state=state)
-            temp2 = pd.merge(temp,codes,left_on='WA Status',right_on='Code')
-            temp2 = temp2.rename(columns={
-                'Taxon': 'scientificName',
-                'Family': 'family',
-                'Code': 'status',
-                'Category': 'sourceStatus'
-            })
-            temp2['vernacularName'] = None
-            return temp2[['scientificName','vernacularName','family','status','sourceStatus']]
-        else:
-            raise ValueError("There is a case that is not considered, or list doesn't contain 'flora' or 'fauna':\n\n{}\n".format(url))
+        # initialise dataframe
+        df_wa = pd.DataFrame()
+
+        # loop over urls to find flora and fauna
+        for url in urls:
+            xls = pd.ExcelFile(url.split("\"")[1])
+            temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
+            if 'fauna' in url.lower():
+                
+                temp2 = temp.rename(columns={
+                    'Scientific name': 'scientificName',
+                    'Common name': 'vernacularName',
+                    'WA listing': 'status',
+                    'WA listing.1': 'sourceStatus'
+                })
+                temp2['family'] = None
+                temp2['kingdom'] = 'Animalia'
+                df_wa = pd.concat([df_wa,temp2]).reset_index(drop=True)
+                
+            elif 'flora' in url.lower():
+                # get codes
+
+                codes = get_conservation_codes(state=state)
+                # replace 'T' with WA Rank value
+                temp['WA Status 2'] = [row[-1] if row[-2]=='T' else row[-2] for row in temp[['WA Status','WA Rank']].itertuples()]
+                
+                # merge codes and data
+                temp2 = pd.merge(temp,codes,left_on='WA Status 2',right_on='Code')
+                
+                # rename columns
+                temp2 = temp2.rename(columns={
+                    'Taxon': 'scientificName',
+                    'Family': 'family',
+                    'Code': 'status',
+                    'Category': 'sourceStatus'
+                })
+
+                # add a vernacular name column
+                temp2['vernacularName'] = None
+
+                # concat data
+                df_wa = pd.concat([df_wa,temp2]).reset_index(drop=True)
+        
+        return df_wa[['scientificName','vernacularName','kingdom','family','status','sourceStatus']]
         
     elif state == "New South Wales":      
         
