@@ -242,7 +242,7 @@ def webscrape_list_url(url=None,
             xls = pd.ExcelFile(url.split("\"")[1])
             temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
             if 'fauna' in url.lower():
-                
+
                 temp2 = temp.rename(columns={
                     'Scientific name': 'scientificName',
                     'Common name': 'vernacularName',
@@ -254,9 +254,14 @@ def webscrape_list_url(url=None,
                 df_wa = pd.concat([df_wa,temp2]).reset_index(drop=True)
                 
             elif 'flora' in url.lower():
-                # get codes
-
+                
+                # get codes and ensure correct codes are in place
                 codes = get_conservation_codes(state=state)
+                codes = codes.replace({'Code': {1: 'P1', 2: 'P2', 3: 'P3', 4: 'P4'}})
+
+                # replace numbers with correct codes
+                temp = temp.replace({'WA Status': {1: 'P1', 2: 'P2', 3: 'P3', 4: 'P4'}})
+                
                 # replace 'T' with WA Rank value
                 temp['WA Status 2'] = [row[-1] if row[-2]=='T' else row[-2] for row in temp[['WA Status','WA Rank']].itertuples()]
                 
@@ -335,7 +340,7 @@ def post_list_to_test(list_data=None,
     
     # format your data for posting to test
     data = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
-
+    
     # get authentication for server
     auth = get_authentication()
 
@@ -363,7 +368,7 @@ def post_list_to_test(list_data=None,
     headers = {'Content-Type': 'application/json', 
                'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
                'Authorization': 'Bearer {}'.format(auth['access_token'])}
-
+    
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data),headers=headers)
     return None   
@@ -423,3 +428,18 @@ def refresh_access_token(refresh_token=None,
         return new_access_token, new_expires_in
     else:
         return None, None
+    
+def get_s3_information():
+
+    # initialise dict
+    s3_info = {}
+
+    # open file containing s3 bucket information
+    f = open('s3_info.txt')
+
+    # get all values
+    for line in f:
+        key,value = line.strip().split(" = ")
+        s3_info[key] = value
+
+    return s3_info

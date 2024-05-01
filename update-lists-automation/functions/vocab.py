@@ -15,6 +15,7 @@ listsProd = "https://lists.ala.org.au/ws/speciesListItems/"
 listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"
 urlSuffix = "?max=10000&includeKVP=true"
 
+
 # all the state lists that are automatically checked every week
 # conservation_lists = ["Queensland",
 #          "Northern Territory",
@@ -25,17 +26,13 @@ urlSuffix = "?max=10000&includeKVP=true"
 #         "Victoria", #authentication error]
 #          "EPBC"
 #          ]
-
-sensitive_lists = ["Western Australia"]
+conservation_lists = [] #["Queensland"]
 
 # sensitive_lists = ["New South Wales",
 #                     "Queensland",
 #                     "Victoria",
 #                     "Western Australia"]
-
-conservation_lists = []
-
-
+sensitive_lists = ["Western Australia"]
 
 # ALA list ids for all conservation authoritative lists on test
 list_ids_conservation_test = {"Australian Capital Territory": "dr649",
@@ -121,7 +118,8 @@ conservation_columns_rename = {"Queensland": {'Scientific_name':'scientificName'
                                "Western Australia": {},
                                "Australian Capital Territory": {'scientificname': 'scientificName',
                                                                 'vernacularname': 'vernacularName',
-                                                                'sourcestatus': 'sourceStatus'},
+                                                                'sourcestatus': 'sourceStatus',
+                                                                'taxonrank': 'taxonRank'},
                                "Tasmania": {'Scientific name': 'scientificName', 
                                             'Common name': 'vernacularName',
                                             'Current TSPA schedule classification': 'status',
