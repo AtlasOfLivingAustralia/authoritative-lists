@@ -17,22 +17,20 @@ urlSuffix = "?max=10000&includeKVP=true"
 
 
 # all the state lists that are automatically checked every week
-# conservation_lists = ["Queensland",
-#          "Northern Territory",
-#          "New South Wales",
-#          "Western Australia",
-#          "Australian Capital Territory", ## Done - sensitive managed by org
-#          "Tasmania", ## Done - sensitive managed by org
-#         "Victoria", #authentication error]
-#          "EPBC"
-#          ]
-conservation_lists = [] #["Queensland"]
+conservation_lists = ["Queensland",
+         "Northern Territory",
+         "New South Wales",
+         "Western Australia",
+         "Australian Capital Territory", ## Done - sensitive managed by org
+         "Tasmania", ## Done - sensitive managed by org
+        "Victoria", #authentication error]
+         "EPBC"
+         ]
 
-# sensitive_lists = ["New South Wales",
-#                     "Queensland",
-#                     "Victoria",
-#                     "Western Australia"]
-sensitive_lists = ["Western Australia"]
+sensitive_lists = ["New South Wales",
+                    "Queensland",
+                    "Victoria",
+                    "Western Australia"]
 
 # ALA list ids for all conservation authoritative lists on test
 list_ids_conservation_test = {"Australian Capital Territory": "dr649",

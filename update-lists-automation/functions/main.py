@@ -10,12 +10,18 @@ def main():
     args = parser.parse_args()
 
     # check to see if we are running this for all lists - if not, split lists separated by comma
-    if args.conservation_lists != 'all':
+    if args.conservation_lists != 'all' and args.conservation_lists != 'None':
         args.conservation_lists = args.conservation_lists.split(',')
+    elif args.conservation_lists == 'None':
+        args.conservation_lists = []
     else:
         args.conservation_lists = conservation_lists
-    if args.sensitive_lists != 'all':
+
+    # get list of all sensitive lists you want to generate
+    if args.sensitive_lists != 'all' and args.sensitive_lists != 'None':
         args.sensitive_lists = args.sensitive_lists.split(',')
+    elif args.sensitive_lists == 'None':
+        args.sensitive_lists = []
     else:
         args.sensitive_lists = sensitive_lists
 
@@ -34,6 +40,7 @@ def main():
             ef.send_email(conservation_dict_changes=conservation_dict_changes,
                         sensitive_dict_changes=sensitive_dict_changes) 
             
+    # post given lists to production
     if args.post_lists_to_production:
 
         print("Amanda write this if interest is there")

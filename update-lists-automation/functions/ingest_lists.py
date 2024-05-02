@@ -49,6 +49,8 @@ def ingest_lists(conservation_lists = None,
     # ---------------------------------------------------------------------------------------------
     for state in conservation_lists:
 
+        print(state)
+
         # initialise sensitive and conservation list data
         conservation_list_data = pd.DataFrame()
 

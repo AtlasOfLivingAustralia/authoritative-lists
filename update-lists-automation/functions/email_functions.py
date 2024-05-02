@@ -29,14 +29,16 @@ def send_email(conservation_dict_changes = None,
     conservation_list_changes = ""
     sensitive_list_changes = ""
 
-    # add attachments
+    # add attachments - first, changelists, then 
     for cs in conservation_changes_states:
         conservation_list_changes+="{}<br />\n".format(cs)
         attachments["{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-changes/{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+        attachments["{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-new-lists/{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
     for ss in sensitive_changes_states:
         sensitive_list_changes+="{}<br />\n".format(ss)
         attachments["{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-changes/{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+        attachments["{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("../temp-changes/{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
     
     # add date and time to email
     html = html.replace('CONSERVATION_LIST_OF_CHANGES',conservation_list_changes)
@@ -53,7 +55,7 @@ def send_email(conservation_dict_changes = None,
     
     # send email (this is currently test one)
     email.send(
-        receivers=["amanda.buyan@csiro.au"], #["authoritative-list-updates@ala.org.au"],
+        receivers=["authoritative-list-updates@ala.org.au"], #["amanda.buyan@csiro.au"], 
         subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
         html=html,
         attachments = attachments

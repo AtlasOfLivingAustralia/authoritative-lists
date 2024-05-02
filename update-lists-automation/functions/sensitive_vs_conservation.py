@@ -223,7 +223,11 @@ def create_conservation_list(list_data = None,
         # replace all the NaNs with an empty string
         conservation_list['vernacularName'] = conservation_list['vernacularName'].replace(math.nan,"")
 
-    elif state == "Western Australia" or state == "Australian Capital Territory":
+    elif state == "Western Australia":
+
+        conservation_list['taxonRank'] = ''
+    
+    elif state == "Australian Capital Territory":
 
         extra_columns = ['taxonRank']
 
