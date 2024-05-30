@@ -58,11 +58,13 @@ You will need 4 files to have this run correctly:
 2. Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).
 
     username = USERNAME
+
     password = PASSWORD
 
 3. Your ALA client ID and your secret client ID (default name is `ids.txt`; specify filename by using `-cids` argument).
 
     client_id = CLIENT_ID
+    
     client_secret = CLIENT_SECRET
 
 4. Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).
