@@ -49,23 +49,23 @@ This is going to be **needs to be confirmed** *a cron job*, running **needs to b
 
 To install all requirements, run
 
-    `pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 You will need 4 files to have this run correctly:
 
 1. ALA Authentication json file (default name is `auth-confidential.json`, specify filename by using `-auth` argument).  To download your authentication, go [here from test for now](https://auth-secure.auth.ap-southeast-2.amazoncognito.com/login?response_type=code&redirect_uri=https%3A%2F%2Faws-auth-test-2023.test.ala.org.au%2Fuserdetails%2Fcallback%3Fclient_name%3DOidcClient&state=059c4be224&client_id=61mj7ivlmf22e5588lgtr8vi7d&scope=openid+profile+email+ala%2Fattrs+ala%2Froles+aws.cognito.signin.user.admin>)
 
-2. Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).  Format:
+2. Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).
 
     username = USERNAME
     password = PASSWORD
 
-3. Your ALA client ID and your secret client ID (default name is `ids.txt`; specify filename by using `-cids` argument).  Format:
+3. Your ALA client ID and your secret client ID (default name is `ids.txt`; specify filename by using `-cids` argument).
 
     client_id = CLIENT_ID
     client_secret = CLIENT_SECRET
 
-4. Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).  Format:
+4. Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).
 
     bucket = BUCKET
     key_conservation_changes = CONSERVATION_CHANGES_DIR
