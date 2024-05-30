@@ -57,34 +57,34 @@ You will need 4 files to have this run correctly:
 
 2. Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).  Format:
 
-    `username = USERNAME`
-    `password = PASSWORD`
+    username = USERNAME
+    password = PASSWORD
 
 3. Your ALA client ID and your secret client ID (default name is `ids.txt`; specify filename by using `-cids` argument).  Format:
 
-    `client_id = CLIENT_ID`
-    `client_secret = CLIENT_SECRET`
+    client_id = CLIENT_ID
+    client_secret = CLIENT_SECRET
 
 4. Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).  Format:
 
-    `bucket = BUCKET`
-    `key_conservation_changes = CONSERVATION_CHANGES_DIR`
-    `key_sensitive_changes = SENSITIVE_CHANGES_DIR`
-    `key_conservation_lists = CONSERVATION_LISTS_DIR`
-    `key_sensitive_lists = SENSITIVE_LISTS_DIR`
+    bucket = BUCKET
+    key_conservation_changes = CONSERVATION_CHANGES_DIR
+    key_sensitive_changes = SENSITIVE_CHANGES_DIR
+    key_conservation_lists = CONSERVATION_LISTS_DIR
+    key_sensitive_lists = SENSITIVE_LISTS_DIR
 
 ## How to run the script
 
 If you indent to update and send an email for all lists, run
 
-    `python main.py`
+    python main.py
 
 However, there are three arguments that you can use to run this code for select lists, as well as turning the email capacity off: `-cl`, `-sl`, and `-sem`.  
 
 First are the arguments to the conservation lists (`-cl`) and the sensitive lists (`-sl`).  The default value is `all`; however, you can specify different lists you want to run this workflow on (i.e. one didn't run correctly).  You split lists by `,` and you fill in the spaces in the states with `_`.  Examples are here using the `-cl` argument, but this can also be applied to the `-sl` arguments.
 
-    `-cl Queensland`
-    `-cl Northern_Territory`
-    `-cl Queensland,Northern_Territory`
+    -cl Queensland
+    -cl Northern_Territory
+    -cl Queensland,Northern_Territory
 
 Next is the argument to choose whether or not to send an email (`-sem`).  This will inform the relevant parties that lists have been updated and need to be checked for relevance, taxonomy and any other information.  `-sem` is a boolean and is, by default, set to `True`.  Set to `False` if you are updating lists and don't want to spam the relevant parties with updates.
