@@ -89,10 +89,8 @@ However, there are three arguments that you can use to run this code for select 
 
 First are the arguments to the conservation lists (`-cl`) and the sensitive lists (`-sl`).  The default value is `all`; however, you can specify different lists you want to run this workflow on (i.e. one didn't run correctly).  You split lists by `,` and you fill in the spaces in the states with `_`.  Examples are here using the `-cl` argument, but this can also be applied to the `-sl` arguments.
 
-    ```
     -cl Queensland
     -cl Northern_Territory
     -cl Queensland,Northern_Territory
-    ```
-    
+
 Next is the argument to choose whether or not to send an email (`-sem`).  This will inform the relevant parties that lists have been updated and need to be checked for relevance, taxonomy and any other information.  `-sem` is a boolean and is, by default, set to `True`.  Set to `False` if you are updating lists and don't want to spam the relevant parties with updates.
