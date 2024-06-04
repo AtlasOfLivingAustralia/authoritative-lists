@@ -117,8 +117,8 @@ conservation_columns_rename = {"Queensland": {'Scientific_name':'scientificName'
                                               'Common_name': 'vernacularName',
                                               'Taxon_author':'scientificNameAuthorship',
                                               'Family': 'family',
-                                              'NCA_status':'sourceStatus',
-                                              'Code_description':'status',
+                                            #   'NCA_status':'status',
+                                            #   'Code_description':'status',
                                               'Taxon_Id':'WildNetTaxonID'},
                                "Northern Territory": {'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION': 'status',
                                                       'COMMON NAME': 'vernacularName',
@@ -136,7 +136,7 @@ conservation_columns_rename = {"Queensland": {'Scientific_name':'scientificName'
                                             'Current TSPA schedule classification': 'status',
                                             'Category': 'sourceStatus',
                                             'Family': 'family'},
-                               "Victoria": {'VIC_ADVISORY_STATUS': 'status',
+                               "Victoria": {'FFG_ACT_STATUS': 'status',
                                             'SCIENTIFIC_NAME': 'scientificName', 
                                             'COMMON_NAME': 'vernacularName'},
                                "EPBC": {'Scientific Name': 'scientificName',
@@ -359,5 +359,109 @@ sensitive_species_corrections = {
         "Andersonia sp. Mitchell River (B.G. Hammersley 925)": "Andersonia sp. Mitchell River (B.G.Hammersley 925) WA Herbarium",
         "Eucalyptus preissiana x staeri": "Eucalyptus preissiana x Eucalyptus staeri",
         "Mirbelia sp. Ternata (M.D. Crisp & L.G. Cook MDC 9267)": "Mirbelia sp. Ternata (M.D.Crisp & L.G.Cook MDC 9267) WA Herbarium"
+    }
+}
+
+statuses_rename = {
+    "Australian Capital Territory": {
+        "Extinct": "Extinct",
+        "Extinct in the Wild": "Extinct in the Wild",
+        "Critically Endangered ": "Critically Endangered",
+        "Endangered": "Endangered",
+        "Vulnerable": "Vulnerable",
+        "Regionally Conservation Dependent": "Conservation Dependent"
+    },
+    "EPBC Act": {
+        "Extinct": "Extinct",
+        "Extinct in wild": "Extinct in the Wild",
+        "Extinct in the wild": "Extinct in the Wild",
+        "Critically Endangered": "Critically Endangered",
+        "Endangered": "Endangered",
+        "Vulnerable": "Vulnerable",
+        "Conservation dependent": "Conservation Dependent",
+        "JAMBA CAMBA KAMBA": "Migratory",
+        "CITES": "CITES"
+    },
+    "New South Wales": {
+        "Extinct": "Extinct",
+        "Critically Endangered": "Critically Endangered",
+        "Endangered": "Endangered",
+        "Vulnerable": "Vulnerable"
+    },
+    "Northern Territory": {
+        "EX": "Extinct",
+        "EW": "Critically Endangered",
+        "CE": "Critically Endangered",
+        "CR": "Critically Endangered",
+        "EN": "Endangered",
+        "VU": "Vulnerable",
+        "NT": "Near Threatened",
+        "LC": "Least concern",
+        "DD": "Data Deficient",
+        "NE": "Not Evaluated"
+    },
+    "Queensland": {
+        "Extinct wildlife": "Extinct",
+        "Extinct in the wild wildlife": "Extinct in the Wild",
+        "Extinct in the wild": "Extinct in the Wild",
+        "Critically endangered wildlife": "Critically Endangered",
+        "Endangered wildlife": "Endangered",
+        "Vulnerable wildlife": "Vulnerable",
+        "Near threatened wildlife": "Near Threatened",
+        "Special least concern wildlife": "Least concern",
+        "Least concern wildlife": "Least concern",
+        "International wildlife": "CITES"
+    },
+    "South Australia": {
+        "Endangered": "Endangered",
+        "Vulnerable": "Vulnerable",
+        "Rare": "Near Threatened"
+    },
+    "Tasmania": {
+        "Extinct": "Extinct",
+        "Endangered": "Endangered",
+        "Vulnerable": "Vulnerable",
+        "Rare": "Near Threatened",
+        "x": "Extinct",
+        "e": "Endangered",
+        "v": "Vulnerable",
+        "r": "Near Threatened"
+    },
+    "Victoria": {
+        "Extinct": "Extinct",
+        "Extinct in the Wild": "Extinct in the Wild",
+        "Endangered (Extinct in Victoria)": "Extinct in the Wild",
+        "Critically Endangered": "Critically Endangered",
+        "Endangered": "Endangered",
+        "Endangered": "Vulnerable",
+        "Conservation Dependent": "Conservation Dependent",
+        "Restricted": "Restricted"
+    },
+    "Western Australia": {
+        'CR':'Critically Endangered',
+        'EN':'Endangered',
+        'VU':'Vulnerable',
+        'EX':'Extinct',
+        'EW':'Extinct in the Wild',
+        'SP':'Specially Protected',
+        'MI':'Migratory',
+        'CD':'Conservation Dependent',
+        'CD & MI':'Conservation Dependent',
+        'OS':'Other Specially Protected',
+        'P1':'Priority 1: Poorly-known species',
+        'P2':'Priority 2: Poorly-known species',
+        'P3':'Priority 3: Poorly-known species',
+        'P4':'Priority 4: Rare, Near Threatened',
+        'MI & P1':'Priority 1: Poorly-known species',
+        'MI & P3':'Priority 2: Poorly-known species',
+        'MI & P4':'Priority 4: Rare, Near Threatened'
+    },
+    "EPBC": {
+        "EX": "Extinct",
+        "EW": "Extinct in the Wild",    
+        "CR": "Critically Endangered",
+        "EN": "Endangered",
+        "VU": "Vulnerable",
+        "CD": "Conservation dependent",
     }
 }

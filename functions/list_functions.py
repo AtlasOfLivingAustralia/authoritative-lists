@@ -340,7 +340,7 @@ def post_list_to_test(list_data=None,
     '''
     
     # format your data for posting to test
-    data = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
+    data_for_post = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
     
     # get authentication for server
     auth = get_authentication(args=args)
@@ -361,11 +361,7 @@ def post_list_to_test(list_data=None,
                                                                     client_secret=client_secret)
             auth['access_token'] = new_access_token
             auth['expires_at'] = time.time() + new_expires_in
-            # print(auth)
-            # print()
-            # print(auth['refresh_token'])
 
-            # write them to your file
             # Serializing json
             auth_json = json.dumps(auth, indent=4)
             
@@ -380,7 +376,7 @@ def post_list_to_test(list_data=None,
                'Authorization': 'Bearer {}'.format(auth['access_token'])}
     
     # post the data to test
-    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data),headers=headers)
+    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
     return None   
 
 def get_authentication(args=None):
