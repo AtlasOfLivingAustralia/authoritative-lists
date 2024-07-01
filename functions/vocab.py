@@ -154,7 +154,7 @@ sensitive_columns_rename = {"New South Wales": {},
                                            'Code_description':'status',
                                            'Kingdom':'kingdom',
                                            'Family':'family'},
-                            "Victoria": {'VIC_ADVISORY_STATUS': 'category',
+                            "Victoria": {'FFG_ACT_STATUS': 'category', # NOT VIC_ADVISORY_STATUS
                                          'SCIENTIFIC_NAME': 'scientificName', 
                                          'COMMON_NAME': 'vernacularName'},
                             "Western Australia": {}}

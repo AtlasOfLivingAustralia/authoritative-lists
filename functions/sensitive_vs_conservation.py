@@ -87,7 +87,7 @@ def create_sensitive_list(list_data = None,
         # make sure the generalisation column is there
         sensitive_species = list_data
         sensitive_species['generalisation'] = "10km"
-        sensitive_species['category'] = sensitive_species['status'].replace(statuses_rename[state]) # added this
+        sensitive_species['category'] = sensitive_species['status']
         sensitive_species['taxonRank'] = ''
         
         # Crendactylus tuberculatus instead of Crenadactylus tuberculatus
