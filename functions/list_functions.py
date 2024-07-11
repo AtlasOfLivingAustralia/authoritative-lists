@@ -60,7 +60,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     newList = kvp_to_columns(newList)
     newList = newList.add_suffix("_new")
 
-    # check for new  and old names - left join new to old, drop any colums in names_old if they are na
+    # check for new  and old names - left join new to old, drop any columns in names_old if they are na
     # conservation lists keep track of changes
     newVsOld = pd.merge(newList, oldList, how='left', left_on='name_new', right_on="name_old")
     columns = ['name_new','scientificName_new','commonName_new']
@@ -426,7 +426,6 @@ def refresh_access_token(refresh_token=None,
     
     # set new tokens in json
     if response.status_code == 200:
-        print("here at authentication")
         auth_response = response.json()
         new_access_token = auth_response['access_token']
         new_expires_in = auth_response['expires_in']

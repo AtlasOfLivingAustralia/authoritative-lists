@@ -15,7 +15,7 @@ def ingest_lists(conservation_lists = None,
     This is the main function for part 1 of successful authoritative lists ingestion.  There 
     are four parts to this process:
 
-    1. Gather the data for each list from each states
+    1. Gather the data for each list from each state
     2. Upload data to the test environment for verification of name matching
     3. Generate changelist to see updates to lists
     4. Email changes to relevant parties

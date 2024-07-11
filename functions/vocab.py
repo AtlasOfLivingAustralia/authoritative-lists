@@ -433,7 +433,7 @@ statuses_rename = {
         "Endangered (Extinct in Victoria)": "Extinct in the Wild",
         "Critically Endangered": "Critically Endangered",
         "Endangered": "Endangered",
-        "Endangered": "Vulnerable",
+        "Vulnerable": "Vulnerable",
         "Conservation Dependent": "Conservation Dependent",
         "Restricted": "Restricted"
     },

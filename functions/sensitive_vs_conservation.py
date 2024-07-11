@@ -102,7 +102,7 @@ def create_sensitive_list(list_data = None,
         sensitive_species['family'] = ""
         sensitive_species['generalisation'] = '1km'
         # 'TAXON_LEVEL_CDE' - replace 'spec' with 'species'
-        sensitive_species['taxonRank'] = sensitive_species['vernacularName'].replace('spec','species')
+        sensitive_species['taxonRank'] = sensitive_species['TAXON_LEVEL_CDE'].replace('spec','species')
 
     else:
         
