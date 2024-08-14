@@ -1,5 +1,7 @@
 # New workflow for automating authoritative lists
 
+*Note:* In the workflow, there is a column called `vernacularName`, which refers to the common name used in each state.  DO NOT CHANGE THIS.  The ALA will assign each species a common name on file, if they have it, under `commonName`.  This will ensure we preserve the name that each state gives its species.
+
 ## What are Conservation vs. Sensitive Lists?
 [Conservation lists](https://lists.ala.org.au/public/speciesLists?isAuthoritative=eq:true&isThreatened=eq:true) refer to lists put out by juristictions, such as 
 states and territories, that have assessed the status of species in their jurisdiction.  A species is put on a conservation list if the relevant authorities determine its conservation is a cause for concern.  [Sensitive lists](https://lists.ala.org.au/public/speciesLists?isSDS=eq:true), on the other hand, may contain 

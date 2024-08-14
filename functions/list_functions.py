@@ -377,7 +377,7 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
-    return None   
+    return None # was response   
 
 def get_authentication(args=None):
     '''

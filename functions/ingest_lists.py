@@ -61,14 +61,24 @@ def ingest_lists(conservation_lists = None,
         # create conservation list from raw data
         conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
 
+        # add IUCN status
+        conservation_list['IUCN_equivalent_status'] = conservation_list['status'].copy()
+
+        # trim whitespace at end of strings
+        conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
+
         # post list to test
-        lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
-        
+        response = lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
+
         # generate difference report for conservation list
         conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
 
         # # if there are changes, write them out to a csv for emailing
         if not conservation_changelist.empty:
+
+            print(conservation_changelist)
+            import sys
+            sys.exit()
 
             # write changes to csv
             conservation_dict_changes[state] = True
@@ -81,9 +91,9 @@ def ingest_lists(conservation_lists = None,
                                     Bucket = s3_info['bucket'], 
                                     Key = '{}/{}'.format(s3_info['key_conservation_changes'],temp_filename))
     
-        # write conservation list to csv (may change this later)
-        temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
+            # write conservation list to csv (may change this later)
+            temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
 
         # check for uploading
         if upload:
@@ -106,8 +116,14 @@ def ingest_lists(conservation_lists = None,
 
         # create a processed sensitive list from the raw data
         sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
-        
-        # post list to test
+
+        # add IUCN status
+        sensitive_list['IUCN_equivalent_status'] = sensitive_list['status'].copy()
+ 
+        # trim whitespace at end of strings
+        sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
+
+               # post list to test
         lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
         
         # generate difference report for sensitive list
@@ -127,9 +143,9 @@ def ingest_lists(conservation_lists = None,
                                     Bucket = s3_info['bucket'], 
                                     Key = '{}/{}'.format(s3_info['key_sensitive_changes'],temp_filename))
             
-        # write list to csv for upload (may change this later)
-        temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
+            # write list to csv for upload (may change this later)
+            temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
 
         # upload file to s3
         if upload:
