@@ -76,10 +76,6 @@ def ingest_lists(conservation_lists = None,
         # # if there are changes, write them out to a csv for emailing
         if not conservation_changelist.empty:
 
-            print(conservation_changelist)
-            import sys
-            sys.exit()
-
             # write changes to csv
             conservation_dict_changes[state] = True
             temp_filename = "{}-conservation-changes-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
@@ -117,9 +113,6 @@ def ingest_lists(conservation_lists = None,
         # create a processed sensitive list from the raw data
         sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
 
-        # add IUCN status
-        sensitive_list['IUCN_equivalent_status'] = sensitive_list['status'].copy()
- 
         # trim whitespace at end of strings
         sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 

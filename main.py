@@ -18,6 +18,15 @@ def main():
         else:
             raise ValueError("Only True and False values are accepted for sending email")
 
+    # First, check for sending email bool
+    if type(args.upload) is str:
+        if args.upload == "False":
+            args.upload = False
+        elif args.upload == "True":
+            args.upload = True
+        else:
+            raise ValueError("Only True and False values are accepted for sending email")
+
     # check to see if we are running this for all lists - if not, split lists separated by comma
     if args.conservation_lists != 'all' and args.conservation_lists != 'None':
         temp_list = args.conservation_lists.split(',')

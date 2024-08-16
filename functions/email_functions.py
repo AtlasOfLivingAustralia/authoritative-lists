@@ -61,7 +61,6 @@ def send_email(conservation_dict_changes = None,
         html=html,
         attachments = attachments
     )
-
 def get_username_password(args=None):
     '''
     Get client ids and secret for posting data

@@ -62,8 +62,8 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     # check for new  and old names - left join new to old, drop any columns in names_old if they are na
     # conservation lists keep track of changes
-    newVsOld = pd.merge(newList, oldList, how='left', left_on='name_new', right_on="name_old")
-    columns = ['name_new','scientificName_new','commonName_new']
+    newVsOld = pd.merge(newList, oldList, how='left', left_on=['name_new','vernacularName_new'], right_on=['name_old','vernacularName_old'])
+    columns = ['name_new','scientificName_new','commonName_new','vernacularName_new']
     if ltype == "C": 
         columns = columns + ['status_new']
     additions = newVsOld[newVsOld['name_old'].isna()][columns]
@@ -71,8 +71,8 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     additions['listUpdate'] = 'added'
 
     # removed names - left join old to new, drop na new
-    oldVsNew = pd.merge(oldList, newList, how='left', left_on='name_old',right_on="name_new")
-    columns = ['name_old','scientificName_old','commonName_old']
+    oldVsNew = pd.merge(oldList, newList, how='left', left_on=['name_old','vernacularName_old'],right_on=['name_new','vernacularName_new'])
+    columns = ['name_old','scientificName_old','commonName_old','vernacularName_old']
     if ltype == "C": 
         columns = columns + ['status_old']
     removals = oldVsNew[oldVsNew['name_new'].isna()][columns]
@@ -81,7 +81,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     # status changes - only check status changes for conservation list
     if ltype=='C':
-        statusChanges = pd.merge(newList, oldList, how='inner', left_on='name_new', right_on='name_old')
+        statusChanges = pd.merge(newList, oldList, how='inner', left_on=['name_new','vernacularName_new'], right_on=['name_old','vernacularName_old'])
         statusChanges = statusChanges[statusChanges['status_new'] != statusChanges['status_old']][['name_new','scientificName_new','commonName_new','status_new','status_old']]
         statusChanges.columns = statusChanges.columns.str.replace("_new", "", regex=True)
         statusChanges['listUpdate'] = 'status change'
@@ -111,10 +111,8 @@ def read_list_url(url=None,
             for name in sheet_names:
                 df = pd.concat([df,pd.read_excel(xls,sheet_name=name,skiprows=[0,1,2,3])])
             if 'Fauna' in url:
-                # introduced status?? remove??
                 df = df[['FAMILY','GENUS','SPECIES','COMMON NAME',
                          'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION']] # 'INTRODUCED STATUS'
-                df['scientificName'] = df['SPECIES']
             else:
                 df = df.rename(columns={'TAXON NAME': 'scientificName'})
                 df = df[['FAMILY','GENUS','SPECIES','scientificName','COMMON NAME',
@@ -194,7 +192,7 @@ def get_conservation_codes(state=None):
         for url in test:
             if 'flora' in url.lower():
                 xls = pd.ExcelFile(url.split("\"")[1]) # changed from 0
-                df = pd.read_excel(xls,sheet_name=xls.sheet_names[4],skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
+                df = pd.read_excel(xls,sheet_name=xls.sheet_names.index('Conservation Codes'),skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
                 df = df[~df['Unnamed: 2'].isna()]
                 return df.rename(columns={
                     'Unnamed: 1': 'Code',
@@ -377,6 +375,15 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
+
+    # ensure list is 
+    newListUrl = listsTest + druid + urlSuffix
+    test_list = download_ala_specieslist(newListUrl)
+    test_list = kvp_to_columns(test_list)
+    while test_list.shape[0] > list_data.shape[0]:
+        time.sleep(5)
+        test_list = download_ala_specieslist(newListUrl)
+
     return None # was response   
 
 def get_authentication(args=None):

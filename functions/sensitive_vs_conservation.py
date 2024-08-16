@@ -17,6 +17,9 @@ def create_sensitive_list(list_data = None,
     # do as much renaming as you can 
     sensitive_species= list_data.rename(columns=sensitive_columns_rename[state])
 
+    # ensure the raw_scientificName happens here
+    sensitive_species['raw_scientificName'] = sensitive_species['scientificName'].copy()
+
     # set this just in case
     extra_columns = None
 
@@ -37,12 +40,12 @@ def create_sensitive_list(list_data = None,
 
         # get sensitive species only with category attached 
         sensitive_species = sensitive_species[sensitive_species['sensitivityClass'].isin(["Category 1","Category 2","Category 3"])].reset_index(drop=True)
-
-         # add a generalisation column
-        sensitive_species['generalisation'] = sensitive_species['sensitivityClass']
+        
+        # add a generalisation column
+        sensitive_species['generalisation'] = sensitive_species['sensitivityClass'].copy()
 
         # add the category
-        sensitive_species['category'] = sensitive_species['sensitivityClass']
+        sensitive_species['category'] = sensitive_species['sensitivityClass'].copy()
 
         # replace the category names with generalisations, including witheld
         sensitive_species['generalisation'] = sensitive_species['generalisation'].replace(generalisation_categories)
@@ -85,9 +88,8 @@ def create_sensitive_list(list_data = None,
     elif state == "Western Australia":
 
         # make sure the generalisation column is there
-        sensitive_species = list_data
         sensitive_species['generalisation'] = "10km"
-        sensitive_species['category'] = sensitive_species['status']
+        sensitive_species['category'] = sensitive_species['status'].copy()
         sensitive_species['taxonRank'] = ''
         
         # Crendactylus tuberculatus instead of Crenadactylus tuberculatus
@@ -111,7 +113,6 @@ def create_sensitive_list(list_data = None,
 
     # replace all the NaNs with an empty string
     sensitive_species['vernacularName'] = sensitive_species['vernacularName'].replace(math.nan,"")
-    sensitive_species['raw_scientificName'] = sensitive_species['scientificName'].copy()
     sensitive_species['scientificName'] = sensitive_species['scientificName'].replace(sensitive_species_corrections[state])
 
     # replace NaNs with empty string
@@ -135,6 +136,9 @@ def create_conservation_list(list_data = None,
     # do all the renaming possible here
     conservation_list = list_data.rename(columns=conservation_columns_rename[state])
 
+    # ensure the raw_scientificName happens here
+    conservation_list['raw_scientificName'] = conservation_list['scientificName'].copy()
+
     # set this just in case
     extra_columns = None
     
@@ -142,7 +146,7 @@ def create_conservation_list(list_data = None,
     if state == "New South Wales":
 
         # make conservation list
-        conservation_list= list_data[(list_data['stateConservation'] !='Not Listed') & (list_data['isCurrent'] == 'true')].reset_index(drop=True)
+        conservation_list= conservation_list[(conservation_list['stateConservation'] !='Not Listed') & (conservation_list['isCurrent'] == 'true')].reset_index(drop=True)
         conservation_list['status'] = conservation_list['stateConservation']
         conservation_list = conservation_list.rename(columns={"stateConservation": "sourceStatus"})
         
@@ -256,10 +260,6 @@ def create_conservation_list(list_data = None,
 
         extra_columns = ['genus']
         conservation_list['taxonRank'] = ''
-        # print(conservation_list.columns)
-        # print(conservation_list[['scientificName','sourceStatus']])
-        # import sys
-        # sys.exit()
 
     else:
 
@@ -270,7 +270,6 @@ def create_conservation_list(list_data = None,
         sys.exit()
 
     # preserve the original name
-    conservation_list['raw_scientificName'] = conservation_list['scientificName'].copy()
     conservation_list['scientificName'] = conservation_list['scientificName'].replace(conservation_species_corrections[state])
 
     # remove nans from the status column
