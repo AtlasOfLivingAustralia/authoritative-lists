@@ -1,4 +1,6 @@
-# MYSQL Scripts
+# MYSQL Scripts - DO NOT USE
+## Use Monitoring/ArchiveLists python script
+
 ## ala-lists-create-update.mysql
 
 Mysql script to extract records from **species_list** table to temporary table **temp_list** with conditions as 
