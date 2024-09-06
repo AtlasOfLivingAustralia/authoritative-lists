@@ -56,11 +56,38 @@ def main():
     logger.info(f'Current working directory: {cwd}')
     outputdir = cwd / 'outputData'
     Path.mkdir(outputdir, exist_ok=True)
-    listdf = download_listinfo()  # download list information for all lists
-    archivedf = get_list_archive(listdf, outputdir)   # create dataframe with lists to update/archive
-    # archivedf['cUpdStatus'] = archivedf.apply(lambda row: update_collectory_dr(row), axis=1) # update list to private
-    archivedf['lUpdStatus'] = archivedf.apply(lambda row: update_list_dr(row), axis=1) # update list to private
+
+    # myfile = outputdir / 'mylists.csv'
+    # mydf = pd.read_csv(myfile, encoding='utf-8', dtype='str')
+
+    lfile = outputdir / 'list-test.csv'
+    afile = outputdir / 'archive-test.csv'
+
+    # download list information for all lists
+    listdf = download_listinfo()
+    listdf.to_csv(lfile, encoding='utf-8', index=False)
+
+    # filter list based on archive criteria
+    archivedf = get_list_archive(listdf, outputdir)
+    archivedf.to_csv(afile, encoding='utf-8', index=False)
+
+    # update collectory DR metadata
+    archivedf['cUpdStatus'] = archivedf.apply(lambda row: update_collectory_dr(row), axis=1) # update list to private
+    # archivedf['lUpdStatus'] = archivedf.apply(lambda row: update_list_dr(row, auth), axis=1) # update list to private
     print('finished processing')
+
+def test_update_list(mydf):
+
+    """
+        test updating list metadata
+
+        :return: status
+    """
+    # response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
+    # data=json.dumps(data_for_post),headers=headers)
+
+
+
 
 def download_listinfo():
 
@@ -198,78 +225,6 @@ def update_collectory_dr(row) -> str:
 #     print('got to here')
 #     return url.status
 
-def update_list_dr(row) -> str:
-    """
-    Update list - set isPrivate flag in list
-
-    :param row: list information from dataframe
-    :return str: Update request response code
-    """
-
-    authorization = cfg.collectoryApiKey
-    headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Authorization": authorization
-    }
-
-    druid = row['dataResourceUid']
-    jstr = row.to_dict()      # List info detail
-    # get list items
-    url = f'{cfg.litemPrefix}{druid}{cfg.litemSuffix}'
-    logger.info(f'Downloading list items from: ')
-    logger.info(f'.... list: {url}')
-    with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
-        if url.status == 200:
-            data = json.loads(url.read().decode())   # List item detail
-            # data = pd.json_normalize(data)
-        else:
-            logger.info(f'Error downloading: {url} URl Status: {url.status}')
-    # Append list info and list data then update
-    jstr['listItems'] = data
-    # post the data to test
-
-    try:
-        # response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
-        #                          data=json.dumps(data_for_post), headers=headers)
-        with requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
-                                 data=json.dumps(jstr), headers=headers) as response:
-        # with requests.post(url, json=jstr, headers=headers) as response:
-            if response.status_code == 200 or response.status_code == 201:
-                return str(response.status_code)
-            else:
-                response.raise_for_status()
-    except Exception as e:
-        print(' the updated died')
-        logger.error("Error in creating %s: %s for %s", url, jstr, e)
-        response.raise_for_status()
-    print ('got to here ok')
-    return url.status
-
-# def format_data_for_post(list_data=None,
-#                          state=None,
-#                          list_type=None):
-#     '''
-#     Turn a pandas dataframe into a dictionary for posting to the lists test environment
-#     '''
-#
-#
-#         post_data = {"listName": list_names_sensitive_test[state], "listType": "TEST",
-#                      "listItems": [None for i in range(list_data.shape[0])]}
-#
-#
-#     # get all values needed for posting
-#     columns = list(list_data.columns)
-#     columns.remove('scientificName')
-#
-#     # loop over each row to generate kvp values
-#     for i, row in list_data.iterrows():
-#         post_data["listItems"][i] = {"itemName": row['scientificName'], "kvpValues": []}
-#         for x in columns:
-#             post_data["listItems"][i]["kvpValues"].append({"key": x, "value": row[x]})
-#
-#     # return data
-#     return post_data
 
 
 # Main processing
