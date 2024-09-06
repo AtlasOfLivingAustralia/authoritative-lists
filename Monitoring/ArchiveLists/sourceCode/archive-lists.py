@@ -4,7 +4,7 @@
 
 # Archive criteria
 # Lists are not authoritative lists and have one or more of the following criteria:
-#  -  1 or less records
+#  -  less than 1 record
 #  -  list type – “Test%”  (not case-sensitive)
 #  -  list name contains "test%"   (not case-sensitive
 #
@@ -36,6 +36,7 @@ import certifi
 import ssl
 import datetime
 import pandas as pd
+import auth as auth
 import config as cfg
 
 logger = logging.getLogger("Archive Lists")
@@ -51,14 +52,10 @@ logger.addHandler(console)
 
 def main():
 
-    # Set output directory
     cwd = Path.cwd()   # current working directory
     logger.info(f'Current working directory: {cwd}')
     outputdir = cwd / 'outputData'
     Path.mkdir(outputdir, exist_ok=True)
-
-    # myfile = outputdir / 'mylists.csv'
-    # mydf = pd.read_csv(myfile, encoding='utf-8', dtype='str')
 
     lfile = outputdir / 'list-test.csv'
     afile = outputdir / 'archive-test.csv'
@@ -72,21 +69,11 @@ def main():
     archivedf.to_csv(afile, encoding='utf-8', index=False)
 
     # update collectory DR metadata
-    archivedf['cUpdStatus'] = archivedf.apply(lambda row: update_collectory_dr(row), axis=1) # update list to private
+    archivedf['cUpdStatus'] = archivedf.apply(lambda row: update_collectory_dr(row), axis=1)
+
+    # update list metadata
     # archivedf['lUpdStatus'] = archivedf.apply(lambda row: update_list_dr(row, auth), axis=1) # update list to private
     print('finished processing')
-
-def test_update_list(mydf):
-
-    """
-        test updating list metadata
-
-        :return: status
-    """
-    # response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
-    # data=json.dumps(data_for_post),headers=headers)
-
-
 
 
 def download_listinfo():
@@ -143,13 +130,13 @@ def get_list_archive(infodf, outdir):
     keepdf = notauthdf[~notauthdf['dataResourceUid'].isin(archivedf['dataResourceUid'])]
     keepdf = pd.concat([authdf, keepdf], axis=0, ignore_index=True)
 
-    # write lists to csv
+    # write lists to csv - just for reference or ease of testing
     keepfile = f'{outdir}\lists-keep-{monthstr}.csv'
     archivefile = f'{outdir}\lists-archive-{monthstr}.csv'
     keepdf.to_csv(keepfile, encoding='utf-8', index=False)
     archivedf.to_csv(archivefile, encoding='utf-8', index=False)
 
-    # ouptut list record counts
+    # output list record counts
     currlistct = len(infodf)
     isauthct = len(authdf)
     nonauthct = len(notauthdf)
@@ -184,7 +171,7 @@ def update_collectory_dr(row) -> str:
     drID = row['dataResourceUid']
     jstr = row.to_dict()
     url = cfg.collectoryUrl + "dataResource/" + drID
-    authorization = cfg.collectoryApiKey
+    authorization = auth.collectoryApiKey
     # logger.debug("POST %s to %s", row['json_string'], url)
     logger.debug("POST to %s", url)
     headers = {
@@ -201,6 +188,44 @@ def update_collectory_dr(row) -> str:
     except Exception as e:
         logger.error("Error in creating %s: %s for %s", url, jstr, e)
         response.raise_for_status()
+
+def update_list_dr(row, auth) -> str:
+    """
+    Update list - set isPrivate flag in list
+
+    :param row: list information from dataframe
+    :return str: Update request response code
+    """
+
+    druid = row['dataResourceUid']
+    jstr = row.to_dict()      # List info detail
+    # get list items
+    url = f'{cfg.litemPrefix}{druid}{cfg.litemSuffix}'
+    logger.info(f'Downloading list items from: ')
+    logger.info(f'.... list: {url}')
+    with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
+        if url.status == 200:
+            data = json.loads(url.read().decode())   # List item detail
+            # data = pd.json_normalize(data)
+        else:
+            logger.info(f'Error downloading: {url} URl Status: {url.status}')
+    # Append list info and list data then update
+    jstr['listItems'] = data
+
+    # this is where, for now, the whole list has to be updated - and isPrivate set to true
+    # try:
+    #     with requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
+    #                              data=json.dumps(jstr), headers=headers) as response:
+    #         if response.status_code == 200 or response.status_code == 201:
+    #             return str(response.status_code)
+    #         else:
+    #             response.raise_for_status()
+    # except Exception as e:
+    #     print(' the update died')
+    #     logger.error("Error in creating %s: %s for %s", url, jstr, e)
+    #     response.raise_for_status()
+
+    return url.status
 
 # def update_list_dr(row) -> str:
 #     """
