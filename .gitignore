@@ -1,1 +1,7 @@
 /.idea/
+*/ids.txt
+*/login.txt
+*/s3_info.txt
+*/data
+*.json
+*/*json
