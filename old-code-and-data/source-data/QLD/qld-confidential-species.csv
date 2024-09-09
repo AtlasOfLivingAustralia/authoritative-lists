@@ -1,0 +1,961 @@
+Taxon Id,Kingdom,Class,Family,Scientific name,Common name,Taxon author,NCA status,EPBC status,Significant,Endemicity
+969,animals,mammals,Rhinolophidae,Rhinolophus robertsi,greater large-eared horseshoe bat,"Tate, 1952",E,V,Y,QI
+1376,animals,birds,Estrildidae,Chloebia gouldiae,Gouldian finch,"(Gould, 1844)",E,E,Y,QA
+1378,animals,birds,Estrildidae,Erythrura trichroa,blue-faced parrot-finch,"(Kittlitz, 1835)",NT,,Y,QAI
+1370,animals,birds,Estrildidae,Neochmia phaeton evangelinae,crimson finch (white-bellied subspecies),"(Hombron & Jacquinot, 1841)",C,E,Y,QI
+1365,animals,birds,Estrildidae,Poephila cincta cincta,black-throated finch (white-rumped subspecies),"Gould, 1837",E,E,Y,QA
+1355,animals,birds,Estrildidae,Stagonopleura guttata,diamond firetail,"(Shaw, 1796)",V,V,Y,QA
+1435,animals,birds,Pachycephalidae,Pachycephala olivacea,olive whistler,"Vigors & Horsfield, 1827",C,,N,QA
+1478,animals,birds,Meliphagidae,Anthochaera phrygia,regent honeyeater,"(Shaw, 1794)",CR,CE,Y,QA
+1528,animals,birds,Meliphagidae,Epthianura crocea,yellow chat,"Castelnau & Ramsay, 1877",V,,Y,QA
+22458,animals,birds,Meliphagidae,Epthianura crocea crocea,yellow chat (gulf),"Castelnau & Ramsay, 1877",V,,Y,QA
+22459,animals,birds,Meliphagidae,Epthianura crocea macgregori,yellow chat (Dawson),"Keast, 1958",E,CE,Y,Q
+1399,animals,birds,Acanthizidae,Hylacola pyrrhopygia,chestnut-rumped heathwren,"(Vigors & Horsfield, 1827)",C,,N,QA
+1405,animals,birds,Dasyornithidae,Dasyornis brachypterus,eastern bristlebird,"(Latham, 1801)",E,E,Y,QA
+1566,animals,birds,Maluridae,Amytornis ballarae,Kalkadoon grasswren,"(Mathews, 1914)",C,,N,QA
+1563,animals,birds,Maluridae,Amytornis barbatus,grey grasswren,"Favaloro & McEvey, 1968",NT,,Y,QA
+29885,animals,birds,Maluridae,Amytornis barbatus barbatus,grey grasswren (Bulloo),"Favaloro & McEvey, 1968",E,E,Y,QA
+29886,animals,birds,Maluridae,Amytornis barbatus diamantina,grey grasswren (Lake Eyre basin),"Schodde & Christidis, 1987",NT,,Y,QA
+1564,animals,birds,Maluridae,Amytornis dorotheae,Carpentarian grasswren,"(Mathews, 1914)",E,E,Y,QA
+1565,animals,birds,Maluridae,Amytornis goyderi,Eyrean grasswren,"(Gould, 1875)",C,,N,QA
+1568,animals,birds,Maluridae,Amytornis rowleyi,rusty grasswren,"(Gould, 1840)",NT,,Y,QA
+1549,animals,birds,Maluridae,Stipiturus malachurus,southern emu-wren,"(Shaw, 1798)",V,,Y,QA
+1632,animals,birds,Atrichornithidae,Atrichornis rufescens,rufous scrub-bird,"(Ramsay, 1867)",V,E,Y,QA
+1133,animals,birds,Psittaculidae,Pezoporus occidentalis,night parrot,"Gould, 1861",E,E,Y,QA
+1093,animals,birds,Turnicidae,Turnix olivii,buff-breasted button-quail,"Robinson, 1900",CR,E,Y,Q
+1705,animals,birds,Falconidae,Falco hypoleucos,grey falcon,"Gould, 1841",V,V,Y,QA
+481,animals,reptiles,Elapidae,Hoplocephalus stephensii,Stephens' banded snake,"Krefft, 1869",C,,N,QA
+541,animals,reptiles,Boidae,Aspidites ramsayi,woma,"(Macleay, 1882)",NT,,Y,QA
+520,animals,reptiles,Boidae,Morelia viridis,green python,"(Schlegel, 1872)",NT,,Y,QAI
+315,animals,reptiles,Scincidae,Calorodius thorntonensis,Thornton Peak skink,"Greer, 1983",C,,N,Q
+35480,animals,reptiles,Scincidae,Carlia wundalthini,Cape Melville rainbow skink,"Hoskin, 2014",C,,N,Q
+227,animals,reptiles,Scincidae,Egernia rugosa,yakka skink,"De Vis, 1888",V,V,Y,Q
+29318,animals,reptiles,Scincidae,Glaphyromorphus clandestinus,Mt Elliot skink,"Hoskin & Couper, 2004",C,,N,Q
+35478,animals,reptiles,Scincidae,Glaphyromorphus othelarrni,Cape Melville bar-lipped skink,"Hoskin & Couper, 2014",C,,N,Q
+18839,animals,reptiles,Scincidae,Karma tryoni,Tryon's skink,"(Longman, 1918)",E,,Y,QA
+161,animals,reptiles,Scincidae,Lerista allanae,Allan's lerista,"(Longman, 1937)",E,E,Y,Q
+187,animals,reptiles,Scincidae,Magmellia luteilateralis,orange-speckled forest-skink,"(Covacevich & McDonald, 1980)",V,,Y,Q
+125,animals,reptiles,Scincidae,Nangura spinosa,Nangur skink,"Covacevich, Couper & James, 1993",CR,CE,Y,Q
+34971,animals,reptiles,Scincidae,Saproscincus saltus,Cape Melville shade skink,"Hoskin, 2013",C,,N,Q
+70,animals,reptiles,Varanidae,Varanus semiremex,rusty monitor,"Peters, 1869",C,,N,Q
+389,animals,reptiles,Carphodactylidae,Orraya occultus,McIlwraith leaf-tailed gecko,"(Couper, Covacevich & Moritz, 1993)",CR,,Y,Q
+22412,animals,reptiles,Carphodactylidae,Phyllurus amnicola,Mount Elliot broad-tailed gecko,"Hoskin, Couper, Schneider & Covacevich 2000",V,,Y,Q
+379,animals,reptiles,Carphodactylidae,Phyllurus caudiannulatus,ringed thin-tailed gecko,"Covacevich, 1975",E,,Y,Q
+22413,animals,reptiles,Carphodactylidae,Phyllurus championae,Connors' Range broad-tailed gecko,"Schneider, Couper, Hoskin & Covacevich 2000",V,,Y,Q
+27779,animals,reptiles,Carphodactylidae,Phyllurus gulbaru,Gulbaru gecko,"Hoskin, Couper & Schneider 2003",CR,CE,Y,Q
+380,animals,reptiles,Carphodactylidae,Phyllurus isis,Mount Jukes broad-tailed gecko,"Couper, Covaevich & Moritz, 1993",V,,Y,Q
+31986,animals,reptiles,Carphodactylidae,Phyllurus kabikabi,Oakview leaf-tailed gecko,"Couper, Hamley & Hoskin 2008",CR,CE,Y,Q
+34950,animals,reptiles,Carphodactylidae,Saltuarius eximius,Cape Melville leaf-tailed gecko,"Hoskin & Couper, 2013",CR,,Y,Q
+398,animals,reptiles,Carphodactylidae,Uvidicolus sphyrurus,border thick-tailed gecko,"(Ogilby, 1892)",C,V,Y,QA
+32050,animals,reptiles,Diplodactylidae,Oedura jowalbinna,Quinkan velvet gecko,"Hoskin & Higgie, 2008",C,,N,Q
+18454,animals,reptiles,Chelidae,Elseya irwini,Irwin's turtle,"Cann, 1997",C,,N,Q
+56,animals,reptiles,Chelidae,Elusor macrurus,Mary River turtle,"Cann & Legler, 1994",E,E,Y,Q
+27777,animals,reptiles,Chelidae,Emydura macquarii emmotti,Emmott's short-neck turtle,"Cann, McCord & Joseph-Ouni, 2003",C,,N,QA
+29733,animals,reptiles,Chelidae,Emydura subglobosa angkibaanya,Jardine River turtle,"Joseph-Ouni, Mccord, Cann, Smales & Freeman 2019",CR,,Y,Q
+48,animals,reptiles,Chelidae,Rheodytes leukops,Fitzroy River turtle,"Legler & Cann, 1980",E,V,Y,Q
+22659,animals,reptiles,Chelidae,Wollumbinia belli,Bell's turtle,"(Gray, 1844)",E,E,Y,QA
+29399,animals,amphibians,Microhylidae,Cophixalus concinnus,beautiful nurseryfrog,"Tyler, 1979",CR,CE,Y,Q
+34088,animals,amphibians,Microhylidae,Cophixalus kulakula,Kutini boulder-frog,"Hoskin & Aland, 2011",C,,N,Q
+709,animals,amphibians,Microhylidae,Cophixalus mcdonaldi,Mount Elliot nurseryfrog,"Zweifel, 1985",CR,CE,Y,Q
+710,animals,amphibians,Microhylidae,Cophixalus monticola,mountain nurseryfrog,"Richards, Dennis, Trenerry & Werren, 1994",CR,CE,Y,Q
+711,animals,amphibians,Microhylidae,Cophixalus neglectus,Bellenden Ker nurseryfrog,"Zweifel, 1962",CR,CE,Y,Q
+34089,animals,amphibians,Microhylidae,Cophixalus pakayakulangun,golden-capped boulder-frog,"Hoskin & Aland, 2011",C,,N,Q
+34968,animals,amphibians,Microhylidae,Cophixalus petrophilus,blotched boulder-frog,"Hoskin, 2013",C,,N,Q
+19463,animals,amphibians,Microhylidae,Cophixalus zweifeli,Cape Melville boulderfrog,"Davies & McDonald, 1998",C,,N,Q
+18173,animals,amphibians,Hylidae,Litoria andiirrmalin,Melville Range treefrog,"McDonald, 1997",V,,Y,Q
+18279,animals,amphibians,Hylidae,Litoria kroombitensis,Kroombit treefrog,"Hoskin, Hines, Meyer, Clarke & Cunningham, 2013",CR,CE,Y,Q
+616,animals,amphibians,Hylidae,Litoria longirostris,long snouted treefrog,"Tyler & Davies, 1977",NT,,Y,Q
+602,animals,amphibians,Hylidae,Litoria lorica,little waterfall frog,"Davies & McDonald, 1979",CR,CE,Y,Q
+31630,animals,amphibians,Hylidae,Litoria myola,Kuranda treefrog,"Hoskin, 2007",CR,CE,Y,Q
+587,animals,amphibians,Hylidae,Litoria subglandulosa,New England treefrog,"Tyler & Anstis, 1975",V,V,Y,QA
+675,animals,amphibians,Myobatrachidae,Mixophyes fleayi,Fleay's barred frog,"Corben & Ingram, 1987",E,E,Y,QA
+676,animals,amphibians,Myobatrachidae,Mixophyes iteratus,giant barred frog,"Straughan, 1968",V,V,Y,QA
+660,animals,amphibians,Myobatrachidae,Pseudophryne covacevichae,magnificent broodfrog,"Ingram & Corben, 1994",V,V,Y,Q
+653,animals,amphibians,Myobatrachidae,Taudactylus eungellensis,Eungella dayfrog,"Liem & Hosmer, 1973",E,E,Y,Q
+654,animals,amphibians,Myobatrachidae,Taudactylus liemi,Eungella tinkerfrog,"Ingram, 1980",NT,,Y,Q
+655,animals,amphibians,Myobatrachidae,Taudactylus pleione,Kroombit tinkerfrog,"Czechura, 1986",CR,CE,Y,Q
+656,animals,amphibians,Myobatrachidae,Taudactylus rheophilus,northern tinkerfrog,"Liem & Hosmer, 1973",CR,CE,Y,Q
+36765,animals,amphibians,Limnodynastidae,Philoria knowlesi,Mt Ballow mountain frog,"Mahony, Hines, Mahony & Donnellan, 2022",E,,Y,QA
+687,animals,amphibians,Limnodynastidae,Philoria kundagungan,red-and-yellow mountainfrog,"(Ingram & Corben, 1975)",E,E,Y,QA
+18163,animals,ray-finned fishes,Gobiidae,Chlamydogobius micropterus,Elizabeth Springs goby,"Larson, 1995",E,E,Y,Q
+18164,animals,ray-finned fishes,Gobiidae,Chlamydogobius squamigenus,Edgbaston goby,"Larson, 1995",E,V,Y,Q
+32228,animals,ray-finned fishes,Gobiidae,Stiphodon pelewensis,Daintree cling goby,"Herre, 1936",V,,Y,QAI
+18167,animals,ray-finned fishes,Percichthyidae,Nannoperca oxleyana,Oxleyan pygmy perch,"Whitley, 1940",E,E,Y,QA
+18166,animals,ray-finned fishes,Pseudomugilidae,Pseudomugil mellis,honey blue eye,"Allen & Ivantsoff, 1982",E,E,Y,Q
+18165,animals,ray-finned fishes,Pseudomugilidae,Scaturiginichthys vermeilipinnis,redfin blue eye,"Ivantsoff, Unmack, Saeed & Crowley, 1991",E,E,Y,Q
+27032,animals,ray-finned fishes,Melanotaeniidae,Rhadinocentrus ornatus,ornate rainbowfish,"(Regan, 1914)",,,N,QA
+18,animals,insects,Lycaenidae,Hypochrysops apollo apollo,Apollo jewel (Wet Tropics subspecies),"Miskin, 1891",V,,Y,Q
+6,animals,insects,Lycaenidae,Hypochrysops piceatus,bulloak jewel,"(Kerr, Macqueen & Sands, 1969)",CR,CE,Y,Q
+2008,animals,insects,Nymphalidae,Argynnis hyperbius inconstans,Australian fritillary,"Butler, 1873",E,CE,Y,QA
+35259,animals,insects,Petaluridae,Petalura gigantea,south-eastern petaltail,"Leach, 1815",,,N,QA
+35260,animals,insects,Petaluridae,Petalura ingentissima,giant petaltail,"Tillyard, 1908",,,N,Q
+32098,animals,insects,Petaluridae,Petalura litorea,coastal petaltail,"Theishinger, 1999",,,N,QA
+35261,animals,insects,Petaluridae,Petalura pulcherrima,beautiful petaltail,"Tillyard, 1913",,,N,Q
+33588,animals,malacostracans,Parastacidae,Cherax robustus,,"Riek, 1951",V,V,Y,Q
+33590,animals,malacostracans,Parastacidae,Euastacus bindal,Mt Elliot crayfish,"Morgan, 1989",CR,CE,Y,Q
+36167,animals,malacostracans,Parastacidae,Euastacus binzayedi,,"Coughran & Furse, 2013",CR,CE,Y,Q
+33591,animals,malacostracans,Parastacidae,Euastacus eungella,,"Morgan, 1988",E,E,Y,Q
+33593,animals,malacostracans,Parastacidae,Euastacus hystricosus,,"Riek, 1951",E,,Y,Q
+33594,animals,malacostracans,Parastacidae,Euastacus jagara,Jagara hairy crayfish,"Morgan, 1988",CR,CE,Y,Q
+33595,animals,malacostracans,Parastacidae,Euastacus maidae,,"(Riek, 1956)",CR,CE,Y,Q
+33596,animals,malacostracans,Parastacidae,Euastacus monteithorum,,"Morgan, 1989",E,E,Y,Q
+33597,animals,malacostracans,Parastacidae,Euastacus robertsi,,"Monroe, 1977",E,E,Y,Q
+33603,animals,malacostracans,Parastacidae,Tenuibranchiurus glypticus,swamp crayfish,"Riek, 1951",E,,Y,Q
+29180,animals,arachnids,Theraphosidae,Selenocosmia crassipes,,"(Koch, 1874)",C,,N,Q
+29182,animals,arachnids,Theraphosidae,Selenocosmia strenua,,"(Thorell, 1881)",C,,N,Q
+29185,animals,arachnids,Theraphosidae,Selenotypus plumipes,,"Pocock, 1895",C,,N,Q
+42130,fungi,lecanoromycetes,Parmeliaceae,Relicina rahengensis,,"(Vain.) Kirika, Divakar & Lumbsch",C,,N,QA
+17957,plants,land plants,Aponogetonaceae,Aponogeton,,,,,N,U
+11218,plants,land plants,Aponogetonaceae,Aponogeton bullosus,,H.Bruggen,E,E,Y,QA
+30917,plants,land plants,Aponogetonaceae,Aponogeton cuneatus,,S.W.L.Jacobs,SL,,Y,Q
+12437,plants,land plants,Aponogetonaceae,Aponogeton elongatus,,F.Muell. ex Benth.,C,,N,U
+21902,plants,land plants,Aponogetonaceae,Aponogeton elongatus subsp. elongatus,,F.Muell. ex Benth.,NT,,Y,QA
+21903,plants,land plants,Aponogetonaceae,Aponogeton elongatus subsp. fluitans,,Hellq. & S.W.L.Jacobs,V,,Y,Q
+21901,plants,land plants,Aponogetonaceae,Aponogeton lancesmithii,,Hellq. & S.W.L.Jacobs,E,,Y,Q
+21900,plants,land plants,Aponogetonaceae,Aponogeton prolifer,,Hellq. & S.W.L.Jacobs,E,E,Y,Q
+11267,plants,land plants,Aponogetonaceae,Aponogeton queenslandicus,,H.Bruggen,SL,,Y,QA
+21847,plants,land plants,Aponogetonaceae,Aponogeton vanbruggenii,,Hellq. & S.W.L.Jacobs,SL,,Y,QA
+6523,plants,land plants,Arecaceae,Archontophoenix myolensis,,Dowe,E,E,Y,Q
+12864,plants,land plants,Arecaceae,Arenga australasica,,(H.Wendl. & Drude) S.T.Blake ex H.E. Moore,V,,Y,QA
+8610,plants,land plants,Arecaceae,Calamus aruensis,,Becc.,V,,Y,QI
+12823,plants,land plants,Arecaceae,Calamus warburgii,,K.Schum.,V,,Y,QI
+29580,plants,land plants,Arecaceae,Hydriastele costata,,F.M.Bailey,V,V,Y,QI
+12768,plants,land plants,Arecaceae,Linospadix palmerianus,,(F.M.Bailey) Burret,NT,,Y,Q
+26863,plants,land plants,Arecaceae,Livistona concinna,,Dowe & Barfod,NT,,Y,Q
+12780,plants,land plants,Arecaceae,Livistona drudei,Halifax fan palm,F.Muell.,V,,Y,Q
+3321,plants,land plants,Arecaceae,Livistona fulva,,Rodd,V,,Y,Q
+2224,plants,land plants,Arecaceae,Livistona lanuginosa,,Rodd,V,V,Y,Q
+3322,plants,land plants,Arecaceae,Livistona nitida,,Rodd,NT,,Y,Q
+8539,plants,land plants,Arecaceae,Wodyetia bifurcata,foxtail palm,A.K.Irvine,V,,Y,Q
+9655,plants,land plants,Orchidaceae,Acianthus,,,C,,,U
+7974,plants,land plants,Orchidaceae,Acianthus borealis,,D.L.Jones,SL,,Y,Q
+13477,plants,land plants,Orchidaceae,Acianthus caudatus,mayfly orchid,R.Br.,SL,,Y,QA
+14086,plants,land plants,Orchidaceae,Acianthus exsertus,,R.Br.,SL,,Y,QA
+14087,plants,land plants,Orchidaceae,Acianthus fornicatus,pixie caps,R.Br.,SL,,Y,QA
+8545,plants,land plants,Orchidaceae,Acianthus ledwardii,,Rupp,SL,EX,Y,Q
+7931,plants,land plants,Orchidaceae,Acianthus pusillus,,D.L.Jones,SL,,Y,Q
+35341,plants,land plants,Orchidaceae,Acianthus saxatilis,,D.L.Jones & M.A.Clem.,E,,Y,Q
+20094,plants,land plants,Orchidaceae,Acriopsis,,,C,,N,U
+31909,plants,land plants,Orchidaceae,Acriopsis emarginata,pale chandelier orchid,D.L.Jones & M.A.Clem.,V,V,Y,QI
+20170,plants,land plants,Orchidaceae,Anoectochilus,,,C,,N,XU
+12862,plants,land plants,Orchidaceae,Anoectochilus yatesiae,jewel orchid,F.M.Bailey,NT,,Y,Q
+20190,plants,land plants,Orchidaceae,Aphyllorchis,,,,,N,XU
+9881,plants,land plants,Orchidaceae,Aphyllorchis anomala,,Dockrill,NT,,Y,Q
+12863,plants,land plants,Orchidaceae,Aphyllorchis queenslandica,,Dockrill,NT,,Y,Q
+11219,plants,land plants,Orchidaceae,Apostasia,,,C,,N,U
+15686,plants,land plants,Orchidaceae,Apostasia wallichii,,R.Br.,SL,,Y,QI
+20195,plants,land plants,Orchidaceae,Appendicula,,,,,N,U
+7919,plants,land plants,Orchidaceae,Appendicula australiensis,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,QI
+12631,plants,land plants,Orchidaceae,Appendicula reflexa,,Blume,,,N,XU
+9162,plants,land plants,Orchidaceae,Arthrochilus,,,,,N,U
+30805,plants,land plants,Orchidaceae,Arthrochilus apectus,,D.L.Jones,SL,,Y,Q
+30806,plants,land plants,Orchidaceae,Arthrochilus aquilus,,D.L.Jones,SL,,Y,Q
+41413,plants,land plants,Orchidaceae,Arthrochilus byrnesii,,Blaxell,SL,,Y,Q
+30807,plants,land plants,Orchidaceae,Arthrochilus corinnae,,D.L.Jones,SL,,Y,Q
+13369,plants,land plants,Orchidaceae,Arthrochilus dockrillii,,Lavarack,SL,,Y,Q
+15816,plants,land plants,Orchidaceae,Arthrochilus irritabilis,leafy elbow orchid,F.Muell.,SL,,Y,Q
+31121,plants,land plants,Orchidaceae,Arthrochilus lavarackianus,,(D.L.Jones) Lavarack,SL,,Y,Q
+7932,plants,land plants,Orchidaceae,Arthrochilus oreophilus,,D.L.Jones,SL,,Y,Q
+8527,plants,land plants,Orchidaceae,Arthrochilus prolixus,,D.L.Jones,SL,,Y,QA
+7933,plants,land plants,Orchidaceae,Arthrochilus rosulatus,,D.L.Jones,SL,,Y,Q
+7934,plants,land plants,Orchidaceae,Arthrochilus sabulosus,,D.L.Jones,SL,,Y,Q
+7935,plants,land plants,Orchidaceae,Arthrochilus stenophyllus,,D.L.Jones,SL,,Y,Q
+41483,plants,land plants,Orchidaceae,Blepharoglossum condylobulbon,,(Rchb.f.) L.Li,V,,Y,QI
+39196,plants,land plants,Orchidaceae,Bletilla striata,,(Thunb.) Rchb.f.,,,,XU
+41817,plants,land plants,Orchidaceae,Bogoria matutina,,(D.L.Jones & M.A.Clem.) M.A.Clem. & D.L.Jones,V,V,Y,Q
+20317,plants,land plants,Orchidaceae,Bromheadia,,,C,,N,U
+5601,plants,land plants,Orchidaceae,Bromheadia pulchra,,Schltr.,SL,,Y,QI
+33231,plants,land plants,Orchidaceae,Bryobium dischorense,,(Schltr.) M.A.Clem. & D.L.Jones,V,,Y,Q
+35688,plants,land plants,Orchidaceae,Bryobium eriaeoides,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,Q
+32737,plants,land plants,Orchidaceae,Bryobium irukandjianum,,(St.Cloud) M.A.Clem. & D.L.Jones,V,,Y,Q
+33434,plants,land plants,Orchidaceae,Bryobium queenslandicum,,(T.E.Hunt) M.A.Clem. & D.L.Jones,SL,,Y,Q
+13491,plants,land plants,Orchidaceae,Bulbophyllum,,,,,N,U
+9493,plants,land plants,Orchidaceae,Bulbophyllum argyropus,,(Endl.) Rchb.f.,V,,Y,QA
+40385,plants,land plants,Orchidaceae,Bulbophyllum aurantiacum var. wattsii,,,C,,N,Q
+14016,plants,land plants,Orchidaceae,Bulbophyllum baileyi,,F.Muell.,SL,,Y,QI
+9437,plants,land plants,Orchidaceae,Bulbophyllum boonjee,,B.Gray & D.L.Jones,V,,Y,Q
+9887,plants,land plants,Orchidaceae,Bulbophyllum bowkettiae,,F.M.Bailey,SL,,Y,Q
+13480,plants,land plants,Orchidaceae,Bulbophyllum bracteatum,,F.M.Bailey,SL,,Y,Q
+13483,plants,land plants,Orchidaceae,Bulbophyllum elisae,pineapple orchid,(F.Muell.) Benth.,SL,,Y,QA
+13484,plants,land plants,Orchidaceae,Bulbophyllum evasum,,T.E.Hunt & Rupp,SL,,Y,Q
+14017,plants,land plants,Orchidaceae,Bulbophyllum exiguum,,F.Muell.,SL,,Y,QA
+13485,plants,land plants,Orchidaceae,Bulbophyllum gadgarrense,,Rupp,SL,,Y,Q
+14018,plants,land plants,Orchidaceae,Bulbophyllum globuliforme,,Nicholls,NT,V,Y,QA
+12448,plants,land plants,Orchidaceae,Bulbophyllum gracillimum,graceful orchid,(Rolfe) Rolfe,V,V,Y,Q
+9006,plants,land plants,Orchidaceae,Bulbophyllum grandimesense,,B.Gray & D.L.Jones,V,,Y,Q
+13481,plants,land plants,Orchidaceae,Bulbophyllum johnsonii,,T.E.Hunt,SL,,Y,Q
+13486,plants,land plants,Orchidaceae,Bulbophyllum lageniforme,,F.M.Bailey,SL,,Y,Q
+7844,plants,land plants,Orchidaceae,Bulbophyllum lamingtonense,,D.L.Jones,SL,,Y,Q
+9005,plants,land plants,Orchidaceae,Bulbophyllum lewisense,,B.Gray & D.L.Jones,SL,,Y,Q
+13487,plants,land plants,Orchidaceae,Bulbophyllum lilianae,,Rendle,SL,,Y,Q
+12872,plants,land plants,Orchidaceae,Bulbophyllum longiflorum,,Thouars,V,V,Y,QI
+13488,plants,land plants,Orchidaceae,Bulbophyllum macphersonii,,Rupp,SL,,Y,Q
+34663,plants,land plants,Orchidaceae,Bulbophyllum maxillare,,(Lindl.) Rchb.,E,,Y,QI
+17779,plants,land plants,Orchidaceae,Bulbophyllum minutissimum,grain-of-wheat orchid,F.Muell.,SL,,Y,QA
+13489,plants,land plants,Orchidaceae,Bulbophyllum nematopodum,,F.Muell.,SL,,Y,Q
+13490,plants,land plants,Orchidaceae,Bulbophyllum newportii,,(F.M.Bailey) Rolfe,SL,,Y,Q
+39191,plants,land plants,Orchidaceae,Bulbophyllum purpurascens,,Teijsm. & Binn.,C,,N,Q
+13482,plants,land plants,Orchidaceae,Bulbophyllum radicans,,F.M.Bailey,SL,,Y,Q
+10323,plants,land plants,Orchidaceae,Bulbophyllum schillerianum,red rope orchid,Rchb.f.,SL,,Y,QA
+8228,plants,land plants,Orchidaceae,Bulbophyllum shepherdii,wheat-leaved orchid,(F.Muell.) F.Muell.,SL,,Y,QA
+8196,plants,land plants,Orchidaceae,Bulbophyllum sladeanum,,A.D.Hawkes,SL,,Y,Q
+39981,plants,land plants,Orchidaceae,Bulbophyllum toressae,,,C,,N,Q
+13258,plants,land plants,Orchidaceae,Bulbophyllum wadsworthii,,Dockrill,SL,,Y,Q
+39982,plants,land plants,Orchidaceae,Bulbophyllum wanjurum,,,C,,N,Q
+9362,plants,land plants,Orchidaceae,Bulbophyllum weinthalii,blotched bulbophyllum,R.S.Rogers,V,,Y,QA
+26723,plants,land plants,Orchidaceae,Bulbophyllum weinthalii subsp. striatum,,D.L.Jones,V,,Y,Q
+26724,plants,land plants,Orchidaceae,Bulbophyllum weinthalii subsp. weinthalii,,R.S.Rogers,V,,Y,Q
+34198,plants,land plants,Orchidaceae,Bulbophyllum whitei,,T.E.Hunt & Rupp,SL,,Y,Q
+8205,plants,land plants,Orchidaceae,Bulbophyllum wilkianum,,T.E.Hunt,SL,,Y,Q
+9004,plants,land plants,Orchidaceae,Bulbophyllum windsorense,,B.Gray & D.L.Jones,V,,Y,Q
+7975,plants,land plants,Orchidaceae,Bulbophyllum wolfei,,B.Gray & D.L.Jones,V,,Y,Q
+20332,plants,land plants,Orchidaceae,Cadetia,,,C,,N,XU
+32313,plants,land plants,Orchidaceae,Cadetia clausa,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+9697,plants,land plants,Orchidaceae,Cadetia collinsii,,Lavarack,V,,Y,Q
+13492,plants,land plants,Orchidaceae,Cadetia maideniana,,Schltr. ex Kellermann,SL,,Y,Q
+17788,plants,land plants,Orchidaceae,Cadetia taylori,,(F.Muell.) Schltr.,SL,,Y,Q
+33783,plants,land plants,Orchidaceae,Cadetia uniflos,,(F.M.Bailey) M.T.Mathieson,SL,,Y,Q
+13493,plants,land plants,Orchidaceae,Cadetia wariana,,Schltr.,V,,Y,Q
+13322,plants,land plants,Orchidaceae,Caladenia,,,,,N,U
+13494,plants,land plants,Orchidaceae,Caladenia alata,fairy orchid,R.Br.,SL,,Y,QA
+32546,plants,land plants,Orchidaceae,Caladenia amnicola,,D.L.Jones,,,,XU
+9298,plants,land plants,Orchidaceae,Caladenia atroclavia,,D.L.Jones & M.A.Clem.,E,E,Y,Q
+41502,plants,land plants,Orchidaceae,Caladenia atrovespa,,(D.L.Jones) G.N.Backh.,SL,,Y,Q
+13444,plants,land plants,Orchidaceae,Caladenia carnea,,R.Br.,SL,,Y,QAI
+17790,plants,land plants,Orchidaceae,Caladenia catenata,,(Sm.) Druce,SL,,Y,QA
+2326,plants,land plants,Orchidaceae,Caladenia chamaephylla,,D.L.Jones,SL,,Y,Q
+14021,plants,land plants,Orchidaceae,Caladenia dilatata,,R.Br.,,,N,XU
+19764,plants,land plants,Orchidaceae,Caladenia filamentosa,,R.Br.,C,,N,QA
+13445,plants,land plants,Orchidaceae,Caladenia filamentosa var. filamentosa,daddy long legs,R.Br.,C,,N,XU
+7977,plants,land plants,Orchidaceae,Caladenia flaccida,,D.L.Jones,SL,,Y,Q
+8247,plants,land plants,Orchidaceae,Caladenia fuscata,,(Rchb.f.) M.A.Clem. & D.L.Jones,SL,,Y,QA
+26363,plants,land plants,Orchidaceae,Caladenia gracillima,,(Rupp) D.L.Jones,SL,,Y,Q
+9297,plants,land plants,Orchidaceae,Caladenia picta,,(Nicholls) M.A.Clem. & D.L.Jones,SL,,Y,QA
+20335,plants,land plants,Orchidaceae,Calanthe,,,,,N,QAI
+36927,plants,land plants,Orchidaceae,Calanthe masuca x Calanthe vestita,,,,,,XU
+14760,plants,land plants,Orchidaceae,Calanthe triplicata,christmas orchid,(Willemet) Ames,SL,,Y,QAI
+40260,plants,land plants,Orchidaceae,Calanthe veratrifolia var. kennyi,,,C,,N,Q
+18742,plants,land plants,Orchidaceae,Caleana,,,C,,N,U
+14023,plants,land plants,Orchidaceae,Caleana major,flying duck orchid,R.Br.,SL,,Y,QA
+8206,plants,land plants,Orchidaceae,Caleana minor,small duck orchid,R.Br.,SL,,Y,QA
+9344,plants,land plants,Orchidaceae,Calochilus,,,C,,N,U
+27933,plants,land plants,Orchidaceae,Calochilus ammobius,,D.L.Jones & B.Gray,SL,,Y,Q
+8204,plants,land plants,Orchidaceae,Calochilus caeruleus,blue beards,L.O.Williams,SL,,Y,QI
+14140,plants,land plants,Orchidaceae,Calochilus campestris,copper beard orchid,R.Br.,SL,,Y,QA
+30808,plants,land plants,Orchidaceae,Calochilus cleistanthus,,D.L.Jones,SL,,Y,Q
+8547,plants,land plants,Orchidaceae,Calochilus gracillimus,slender beard orchid,Rupp,,,,XU
+14139,plants,land plants,Orchidaceae,Calochilus grandiflorus,giant beard orchid,(Benth.) Domin,SL,,Y,QA
+9329,plants,land plants,Orchidaceae,Calochilus holtzei,,F.Muell.,,,N,XU
+30809,plants,land plants,Orchidaceae,Calochilus imperiosus,,D.L.Jones,SL,,Y,Q
+30803,plants,land plants,Orchidaceae,Calochilus metallicus,,D.L.Jones,SL,,Y,Q
+13288,plants,land plants,Orchidaceae,Calochilus paludosus,red beard orchid,R.Br.,SL,,Y,QA
+8548,plants,land plants,Orchidaceae,Calochilus psednus,,D.L.Jones & Lavarack,E,E,Y,Q
+15832,plants,land plants,Orchidaceae,Calochilus robertsonii,purplish beard orchid,Benth.,SL,,Y,QA
+36010,plants,land plants,Orchidaceae,Calochilus therophilus,,D.L.Jones,SL,,Y,QA
+41786,plants,land plants,Orchidaceae,Cestichis,,,,,N,U
+36398,plants,land plants,Orchidaceae,Cestichis angustilabris,,(F.Muell.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36437,plants,land plants,Orchidaceae,Cestichis bracteata,,(T.E.Hunt) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36432,plants,land plants,Orchidaceae,Cestichis coelogynoides,,(F.Muell.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36439,plants,land plants,Orchidaceae,Cestichis fleckeri,,(Nicholls) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36442,plants,land plants,Orchidaceae,Cestichis nugentiae,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36435,plants,land plants,Orchidaceae,Cestichis swenssonii,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,QA
+20426,plants,land plants,Orchidaceae,Cheirostylis,,,C,,N,U
+18373,plants,land plants,Orchidaceae,Cheirostylis notialis,,D.L.Jones,SL,,Y,QA
+13323,plants,land plants,Orchidaceae,Cheirostylis ovata,caterpillar orchid,(F.M.Bailey) Schltr.,SL,,Y,QI
+9614,plants,land plants,Orchidaceae,Chiloglottis,,,,,N,U
+2163,plants,land plants,Orchidaceae,Chiloglottis diphylla,,R.Br.,SL,,Y,QA
+13324,plants,land plants,Orchidaceae,Chiloglottis formicifera,ant orchid,Fitzg.,,,N,XU
+7978,plants,land plants,Orchidaceae,Chiloglottis longiclavata,,D.L.Jones,NT,,Y,Q
+6156,plants,land plants,Orchidaceae,Chiloglottis sp. (Mango Flat D.L.Jones 2547),,,C,,N,U
+7979,plants,land plants,Orchidaceae,Chiloglottis sphyrnoides,,D.L.Jones,V,,Y,QA
+9260,plants,land plants,Orchidaceae,Chiloglottis sylvestris,,D.L.Jones & M.A.Clem.,SL,,Y,QA
+8200,plants,land plants,Orchidaceae,Chiloglottis trullata,,D.L.Jones,SL,,Y,Q
+9261,plants,land plants,Orchidaceae,Chiloglottis truncata,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+20427,plants,land plants,Orchidaceae,Chiloschista,,,C,,N,U
+13325,plants,land plants,Orchidaceae,Chiloschista phyllorhiza,,(F.Muell.) Schltr.,SL,,Y,Q
+39929,plants,land plants,Orchidaceae,Cleisostoma congestum,,,,,,XU
+39930,plants,land plants,Orchidaceae,Cleisostoma keffordii,,,,,,XU
+39931,plants,land plants,Orchidaceae,Cleisostoma orbiculare,,,C,,N,Q
+39094,plants,land plants,Orchidaceae,Cleisostoma racemiferum,,(Lindl.) Garay,,,,XU
+20490,plants,land plants,Orchidaceae,Cooktownia,,,C,,N,U
+18783,plants,land plants,Orchidaceae,Cooktownia robertsii,,D.L.Jones,E,,Y,Q
+36427,plants,land plants,Orchidaceae,Corunastylis,,,,,N,U
+27531,plants,land plants,Orchidaceae,Corunastylis acuminata,,(R.S.Rogers) D.L.Jones & M.A.Clem.,SL,,Y,Q
+27532,plants,land plants,Orchidaceae,Corunastylis alticola,,(D.L.Jones & B.Gray) D.L.Jones & M.A.Clem.,V,,Y,Q
+27533,plants,land plants,Orchidaceae,Corunastylis archeri,,(Hook.f.) D.L.Jones & M.A.Clem.,C,,N,XU
+27534,plants,land plants,Orchidaceae,Corunastylis conferta,,(D.L.Jones) D.L.Jones & M.A.Clem.,SL,,Y,Q
+27535,plants,land plants,Orchidaceae,Corunastylis cranei,,(D.L.Jones) D.L.Jones & M.A.Clem.,V,,Y,Q
+36430,plants,land plants,Orchidaceae,Corunastylis cuspidata,,D.L.Jones & L.M.Copel.,SL,,Y,Q
+27536,plants,land plants,Orchidaceae,Corunastylis filiformis,,(Fitzg.) D.L.Jones & M.A.Clem.,SL,,Y,QA
+27537,plants,land plants,Orchidaceae,Corunastylis fimbriata,,(R.Br.) D.L.Jones & M.A.Clem.,SL,,Y,QA
+27539,plants,land plants,Orchidaceae,Corunastylis parvicalla,,(Rupp) D.L.Jones & M.A.Clem.,SL,,Y,Q
+27540,plants,land plants,Orchidaceae,Corunastylis pedersonii,,(D.L.Jones) D.L.Jones & M.A.Clem.,V,,Y,Q
+27541,plants,land plants,Orchidaceae,Corunastylis psammophila,,(D.L.Jones) D.L.Jones & M.A.Clem.,SL,,Y,Q
+27542,plants,land plants,Orchidaceae,Corunastylis pumila,,(Hook.f.) D.L.Jones & M.A.Clem.,SL,,Y,QA
+27543,plants,land plants,Orchidaceae,Corunastylis rufa,,(R.Br.) D.L.Jones & M.A.Clem.,C,,N,XU
+27544,plants,land plants,Orchidaceae,Corunastylis sagittifera,,(Rupp) D.L.Jones & M.A.Clem.,C,,N,XU
+27545,plants,land plants,Orchidaceae,Corunastylis sigmoidea,,(D.L.Jones) D.L.Jones & M.A.Clem.,NT,,Y,Q
+36585,plants,land plants,Orchidaceae,Corunastylis sp. (Fraser Island NP R.Crane 2063),,,SL,,Y,Q
+36583,plants,land plants,Orchidaceae,Corunastylis sp. (Wyberba D.L.Jones+ 2557),,,SL,,Y,Q
+27546,plants,land plants,Orchidaceae,Corunastylis tecta,Cardwell midge orchid,(D.L.Jones) D.L.Jones & M.A.Clem.,E,E,Y,Q
+36568,plants,land plants,Orchidaceae,Corunastylis tenella,,D.L.Jones & L.M.Copel.,SL,,Y,Q
+27547,plants,land plants,Orchidaceae,Corunastylis valida,,(D.L.Jones) D.L.Jones & M.A.Clem.,V,,Y,Q
+12827,plants,land plants,Orchidaceae,Corybas,,,,,N,U
+13328,plants,land plants,Orchidaceae,Corybas abellianus,nodding helmet orchid,Dockrill,NT,,Y,Q
+14727,plants,land plants,Orchidaceae,Corybas aconitiflorus,,Salisb.,SL,,Y,QA
+9265,plants,land plants,Orchidaceae,Corybas barbarae,helmet orchid,D.L.Jones,SL,,Y,Q
+26539,plants,land plants,Orchidaceae,Corybas cerasinus,,D.L.Jones & B.Gray,NT,,Y,Q
+13326,plants,land plants,Orchidaceae,Corybas fimbriatus,fringed helmet orchid,(R.Br.) Rchb.f.,SL,,Y,QA
+13275,plants,land plants,Orchidaceae,Corybas fordhamii,banded helmet orchid,(Rupp) Rupp,SL,,Y,QA
+14005,plants,land plants,Orchidaceae,Corybas hispidus,bristly helmet orchid,D.L.Jones,SL,,Y,QA
+9264,plants,land plants,Orchidaceae,Corybas montanus,small helmet orchid,D.L.Jones,V,V,Y,Q
+13327,plants,land plants,Orchidaceae,Corybas undulatus,tailed helmet orchid,(R.Cunn.) Rupp,SL,,Y,QA
+20500,plants,land plants,Orchidaceae,Corymborkis,,,C,,N,U
+17607,plants,land plants,Orchidaceae,Corymborkis veratrifolia,cinnamon orchid,Thouars ex Blume,SL,,Y,QI
+20511,plants,land plants,Orchidaceae,Crepidium,,,,,N,U
+5793,plants,land plants,Orchidaceae,Crepidium fimbriatum,,(Lavarack) Szlach.,V,,Y,Q
+18489,plants,land plants,Orchidaceae,Crepidium flavovirens,,D.L.Jones & M.A.Clem.,V,,Y,Q
+5794,plants,land plants,Orchidaceae,Crepidium lawleri,,(Lavarack & B.Gray) Szlach.,E,E,Y,Q
+5795,plants,land plants,Orchidaceae,Crepidium marsupichilum,,(Upton) Szlach.,SL,,Y,QA
+20521,plants,land plants,Orchidaceae,Cryptostylis,,,,,N,U
+13277,plants,land plants,Orchidaceae,Cryptostylis erecta,bonnet orchid,R.Br.,SL,,Y,QA
+22074,plants,land plants,Orchidaceae,Cryptostylis hunteriana,,Nicholls,SL,V,Y,Q
+9617,plants,land plants,Orchidaceae,Cryptostylis leptochila,small tongue orchid,F.Muell. ex Benth.,SL,,Y,QA
+13278,plants,land plants,Orchidaceae,Cryptostylis subulata,large tongue orchid,(Labill.) Rchb.f.,SL,,Y,QA
+31824,plants,land plants,Orchidaceae,Cyanicula caerulea,,(R.Br.) Hopper & A.P.Br.,SL,,Y,QA
+13279,plants,land plants,Orchidaceae,Cymbidium,,,,,N,U
+17505,plants,land plants,Orchidaceae,Cymbidium canaliculatum,,R.Br.,SL,,Y,QA
+13963,plants,land plants,Orchidaceae,Cymbidium madidum,,Lindl.,SL,,Y,Q
+17506,plants,land plants,Orchidaceae,Cymbidium suave,,R.Br.,SL,,Y,QA
+20548,plants,land plants,Orchidaceae,Cyrtostylis,,,C,,N,QAI
+8227,plants,land plants,Orchidaceae,Cyrtostylis reniformis,,R.Br.,SL,,Y,QAI
+36407,plants,land plants,Orchidaceae,Danhatchia australis,,(Hatch) Garay & Christenson,SL,,Y,Q
+30797,plants,land plants,Orchidaceae,Demorchis queenslandica,,(Dockrill) D.L.Jones & M.A.Clem.,NT,,Y,Q
+41710,plants,land plants,Orchidaceae,Demorchis umbrosa,,(B.Gray) D.L.Jones & M.A.Clem.,SL,,Y,Q
+13286,plants,land plants,Orchidaceae,Dendrobium,,,,,N,U
+40864,plants,land plants,Orchidaceae,Dendrobium 'Bunts Bali' x Dendrobium x lavarackianum,,,,,,XU
+38443,plants,land plants,Orchidaceae,Dendrobium 'Mauna Kea',,,,,,XU
+17448,plants,land plants,Orchidaceae,Dendrobium adae,,F.M.Bailey,SL,,Y,QA
+13280,plants,land plants,Orchidaceae,Dendrobium aemulum,ironbark orchid,R.Br.,SL,,Y,QA
+37682,plants,land plants,Orchidaceae,Dendrobium affine,,(Decne.) Steud.,,,,XU
+13282,plants,land plants,Orchidaceae,Dendrobium agrostophyllum,buttercup orchid,F.Muell.,SL,,Y,Q
+36928,plants,land plants,Orchidaceae,Dendrobium albiflorum,,Ridl.,,,,XU
+13283,plants,land plants,Orchidaceae,Dendrobium antennatum,antelope orchid,Lindl.,E,E,Y,QI
+30798,plants,land plants,Orchidaceae,Dendrobium aphyllum,,(Roxb.) C.E.C.Fisch.,SL,,Y,QI
+31164,plants,land plants,Orchidaceae,Dendrobium atroviolaceum,,Rolfe,,,N,XU
+13284,plants,land plants,Orchidaceae,Dendrobium bifalce,,Lindl.,SL,,Y,QI
+13977,plants,land plants,Orchidaceae,Dendrobium bigibbum,Cooktown orchid,Lindl.,V,V,Y,Q
+40376,plants,land plants,Orchidaceae,Dendrobium bigibbum var. albomarginatum,,,,,,XU
+40377,plants,land plants,Orchidaceae,Dendrobium bigibbum var. macranthum,,,,,,XU
+8944,plants,land plants,Orchidaceae,Dendrobium callitrophilum,cypress orchid,B.Gray & D.L.Jones,V,V,Y,Q
+17449,plants,land plants,Orchidaceae,Dendrobium canaliculatum,,R.Br.,SL,,Y,QAI
+7936,plants,land plants,Orchidaceae,Dendrobium carrii,,Rupp & C.T.White,SL,,Y,Q
+9755,plants,land plants,Orchidaceae,Dendrobium carronii,,Lavarack & P.J.Cribb,V,V,Y,Q
+37192,plants,land plants,Orchidaceae,Dendrobium chalmersii,,F.Muell.,,,,XU
+39953,plants,land plants,Orchidaceae,Dendrobium complanatum,,,C,,N,Q
+12828,plants,land plants,Orchidaceae,Dendrobium discolor,,Lindl.,SL,,Y,QI
+35005,plants,land plants,Orchidaceae,Dendrobium discolor x D.nindii,,Lindl.,C,,,XU
+40865,plants,land plants,Orchidaceae,Dendrobium discolor x Dendrobium nindii,,,C,,N,Q
+39947,plants,land plants,Orchidaceae,Dendrobium eriaeoides,,,,,,XU
+13285,plants,land plants,Orchidaceae,Dendrobium falcorostrum,beech orchid,Fitzg.,SL,,Y,QA
+10523,plants,land plants,Orchidaceae,Dendrobium fellowsii,,F.Muell.,V,,Y,Q
+7938,plants,land plants,Orchidaceae,Dendrobium finniganense,,D.L.Jones,SL,,Y,Q
+12830,plants,land plants,Orchidaceae,Dendrobium fleckeri,apricot orchid,Rupp & C.T.White,SL,,Y,Q
+39948,plants,land plants,Orchidaceae,Dendrobium giddinsii,,,C,,N,Q
+12834,plants,land plants,Orchidaceae,Dendrobium gracilicaule,slender orchid,F.Muell.,SL,,Y,QA
+39949,plants,land plants,Orchidaceae,Dendrobium grantii,,,,,,XU
+17451,plants,land plants,Orchidaceae,Dendrobium johannis,brown antelope orchid,Rchb.f.,V,V,Y,QI
+6405,plants,land plants,Orchidaceae,Dendrobium jonesii,,Rendle,SL,,Y,Q
+39950,plants,land plants,Orchidaceae,Dendrobium keffordii,,,,,,XU
+22382,plants,land plants,Orchidaceae,Dendrobium kingianum,,Bidwill ex Lindl.,SL,,Y,Q
+6226,plants,land plants,Orchidaceae,Dendrobium kingianum subsp. carnarvonense,,Peter B.Adams,SL,,Y,Q
+14633,plants,land plants,Orchidaceae,Dendrobium kingianum subsp. kingianum,,Bidwill ex Lindl.,SL,,Y,QA
+40319,plants,land plants,Orchidaceae,Dendrobium kingianum var. pallidum,,,C,,N,Q
+9305,plants,land plants,Orchidaceae,Dendrobium kingianum x D.speciosum,,Bidwill ex Lindl.,C,,,XU
+9367,plants,land plants,Orchidaceae,Dendrobium lichenastrum,,(F.Muell.) Kraenzl.,SL,,Y,Q
+37194,plants,land plants,Orchidaceae,Dendrobium lineale,,Rolfe,,,,XU
+7941,plants,land plants,Orchidaceae,Dendrobium litorale,,Schltr.,SL,,Y,QI
+12833,plants,land plants,Orchidaceae,Dendrobium lobbii,,Teijsm. & Binn.,SL,,Y,QAI
+11457,plants,land plants,Orchidaceae,Dendrobium malbrownii,,Dockrill,V,,Y,Q
+12836,plants,land plants,Orchidaceae,Dendrobium mirbelianum,mangrove orchid,Gaudich.,E,E,Y,QI
+14634,plants,land plants,Orchidaceae,Dendrobium monophyllum,,F.Muell.,SL,,Y,QA
+12837,plants,land plants,Orchidaceae,Dendrobium nindii,blue orchid,W.Hill,E,E,Y,QI
+39682,plants,land plants,Orchidaceae,Dendrobium paragnomus,,Ormerod,,,,XU
+40365,plants,land plants,Orchidaceae,Dendrobium phalaenopsis var. compactum,,,,,,XU
+36930,plants,land plants,Orchidaceae,Dendrobium phalaenopsis var. schroederianum x Dendrobium taurinum,,,,,,XU
+8172,plants,land plants,Orchidaceae,Dendrobium prenticei,,(F.Muell.) Nicholls,SL,,Y,Q
+19822,plants,land plants,Orchidaceae,Dendrobium schneiderae,,F.M.Bailey,C,,N,XU
+7930,plants,land plants,Orchidaceae,Dendrobium schneiderae var. majus,,Rupp,SL,,Y,Q
+12839,plants,land plants,Orchidaceae,Dendrobium schneiderae var. schneiderae,,F.M.Bailey,NT,,Y,Q
+12840,plants,land plants,Orchidaceae,Dendrobium smillieae,,F.Muell.,SL,,Y,QI
+14631,plants,land plants,Orchidaceae,Dendrobium speciosum,,Sm.,SL,,Y,QA
+9756,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. capricornicum,,(Clemesha) D.P.Banks & Clemesha,SL,,Y,Q
+13975,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. curvicaule,,(F.M.Bailey) D.P.Banks & Clemesha,SL,,Y,Q
+9074,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. grandiflorum,,(F.M.Bailey) D.P.Banks & Clemesha,SL,,Y,Q
+9270,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. grandiflorum x Dendrobium speciosum subsp. hillii,,,C,,N,Q
+12829,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. hillii,,(Mast.) D.P.Banks & Clemesha,SL,,Y,QA
+9707,plants,land plants,Orchidaceae,Dendrobium speciosum subsp. pedunculatum,,(Clemesha) D.P.Banks & Clemesha,SL,,Y,Q
+40381,plants,land plants,Orchidaceae,Dendrobium speciosum var. delicatum,,,C,,N,Q
+40382,plants,land plants,Orchidaceae,Dendrobium speciosum var. nitidum,,,,,,XU
+37193,plants,land plants,Orchidaceae,Dendrobium stratiotes,,Rchb.f.,,,,XU
+39205,plants,land plants,Orchidaceae,Dendrobium strianopsis,,M.A.Clem. & D.L.Jones,,,,XU
+40412,plants,land plants,Orchidaceae,Dendrobium teretifolium var. album,,,,,,XU
+12831,plants,land plants,Orchidaceae,Dendrobium tetragonum,tree spider orchid,A.Cunn.,SL,,Y,QA
+39951,plants,land plants,Orchidaceae,Dendrobium tofftii,,,C,,N,Q
+12841,plants,land plants,Orchidaceae,Dendrobium toressae,,(F.M.Bailey) Dockrill,SL,,Y,Q
+8177,plants,land plants,Orchidaceae,Dendrobium trilamellatum,yellow antelope orchid,J.J.Sm.,SL,,Y,QA
+39952,plants,land plants,Orchidaceae,Dendrobium uniflos,,,C,,N,Q
+13976,plants,land plants,Orchidaceae,Dendrobium x delicatum,,(F.M.Bailey) F.M.Bailey,SL,,Y,QA
+9133,plants,land plants,Orchidaceae,Dendrobium x gracillimum,,(Rupp) Leaney,SL,,Y,QA
+8900,plants,land plants,Orchidaceae,Dendrobium x lavarackianum,,M.A.Clem.,SL,,Y,Q
+9065,plants,land plants,Orchidaceae,Dendrobium x ruppiosum,,Clemesha,SL,,Y,Q
+9134,plants,land plants,Orchidaceae,Dendrobium x superbiens,,Rchb.f.,V,,Y,Q
+32035,plants,land plants,Orchidaceae,Dendrobium x vinicolor,,St.Cloud,SL,,Y,Q
+20600,plants,land plants,Orchidaceae,Didymoplexis,,,C,,N,U
+12844,plants,land plants,Orchidaceae,Didymoplexis pallens,crystal bells,Griff.,NT,,Y,QI
+20601,plants,land plants,Orchidaceae,Dienia,,,C,,N,U
+41762,plants,land plants,Orchidaceae,Dienia ophrydis,,(J.Koenig) Seidenf. & Ormerod,SL,,Y,Q
+20615,plants,land plants,Orchidaceae,Diplocaulobium,,,,,N,U
+12845,plants,land plants,Orchidaceae,Diplocaulobium glabrum,,(J.J.Sm.) Kraenzl.,SL,,Y,QI
+29274,plants,land plants,Orchidaceae,Diplocaulobium stelliferum,,(J.J.Sm.) A.D.Hawkes,,,,XU
+12792,plants,land plants,Orchidaceae,Dipodium,,,,,N,U
+8446,plants,land plants,Orchidaceae,Dipodium elegantulum,,D.L.Jones,SL,,Y,QA
+12846,plants,land plants,Orchidaceae,Dipodium ensifolium,leafy hyacinth orchid,F.Muell.,SL,,Y,Q
+14607,plants,land plants,Orchidaceae,Dipodium hamiltonianum,yellow hyacinth orchid,F.M.Bailey,SL,,Y,Q
+5029,plants,land plants,Orchidaceae,Dipodium pandanum,,F.M.Bailey,E,,Y,QI
+14606,plants,land plants,Orchidaceae,Dipodium punctatum,,(Sm.) R.Br.,SL,,Y,QA
+12791,plants,land plants,Orchidaceae,Dipodium stenocheilum,,O.Schwarz,SL,,Y,QA
+9275,plants,land plants,Orchidaceae,Dipodium variegatum,,M.A.Clem. & D.L.Jones,SL,,Y,QA
+36436,plants,land plants,Orchidaceae,Diteilis collinsii,,(B.Gray) M.A.Clem. & D.L.Jones,SL,,Y,Q
+31912,plants,land plants,Orchidaceae,Diteilis petricola,,D.L.Jones & B.Gray,SL,,Y,Q
+36434,plants,land plants,Orchidaceae,Diteilis simmondsii,,(F.M.Bailey) M.A.Clem. & D.L.Jones,NT,,Y,Q
+12798,plants,land plants,Orchidaceae,Diuris,,,,,N,U
+12793,plants,land plants,Orchidaceae,Diuris abbreviata,lemon doubletail,F.Muell. ex Benth.,SL,,Y,QA
+9062,plants,land plants,Orchidaceae,Diuris alba,,R.Br.,SL,,Y,QA
+6215,plants,land plants,Orchidaceae,Diuris alba x Diuris chrysantha,,,C,,N,Q
+9276,plants,land plants,Orchidaceae,Diuris chrysantha,double yellow tails,D.L.Jones & M.A.Clem.,SL,,Y,QA
+34632,plants,land plants,Orchidaceae,Diuris curta,,D.L.Jones,E,,Y,QA
+7943,plants,land plants,Orchidaceae,Diuris exitela,,D.L.Jones,SL,,Y,Q
+7944,plants,land plants,Orchidaceae,Diuris lanceolata,snake orchid,Lindl.,C,E,Y,XU
+7945,plants,land plants,Orchidaceae,Diuris luteola,northern yellow donkeys tails,D.L.Jones & B.Gray,SL,,Y,Q
+41460,plants,land plants,Orchidaceae,Diuris minor,,(Benth.) D.L.Jones & M.A.Clem.,SL,,Y,QA
+7946,plants,land plants,Orchidaceae,Diuris oporina,northern white donkeys tails,D.L.Jones,NT,,Y,Q
+10526,plants,land plants,Orchidaceae,Diuris parvipetala,,(Dockrill) D.L.Jones & M.A.Clem.,V,,Y,Q
+17418,plants,land plants,Orchidaceae,Diuris punctata,,Sm.,SL,,Y,QA
+40419,plants,land plants,Orchidaceae,Diuris punctata var. parvipetala,,,C,,N,Q
+9445,plants,land plants,Orchidaceae,Diuris punctata var. punctata,,Sm.,SL,,Y,QA
+6015,plants,land plants,Orchidaceae,Diuris sp. (Byfield R.Melzer+ RM651A),,,C,,N,Q
+14608,plants,land plants,Orchidaceae,Diuris sulphurea,tiger orchid,R.Br.,SL,,Y,QA
+8198,plants,land plants,Orchidaceae,Diuris tricolor,,Fitzg.,SL,,Y,QA
+31906,plants,land plants,Orchidaceae,Diuris unica,,D.L.Jones,SL,,Y,Q
+12796,plants,land plants,Orchidaceae,Diuris x palachila,,R.S.Rogers,C,,N,XU
+20626,plants,land plants,Orchidaceae,Dockrillia,,,,,N,U
+5768,plants,land plants,Orchidaceae,Dockrillia bowmanii,scrub pencil orchid,(Benth.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+5766,plants,land plants,Orchidaceae,Dockrillia brevicauda,,(D.L.Jones & M.A.Clem.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+5762,plants,land plants,Orchidaceae,Dockrillia calamiformis,,(Lodd.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+18386,plants,land plants,Orchidaceae,Dockrillia cucumerina,,(Macleay ex Lindl.) Brieger,SL,,Y,QA
+5805,plants,land plants,Orchidaceae,Dockrillia dolichophylla,,(D.L.Jones & M.A.Clem.) M.A.Clem. & D.L.Jones,SL,,Y,QA
+5779,plants,land plants,Orchidaceae,Dockrillia linguiformis,tongue orchid,(Sw.) Brieger,SL,,Y,QA
+5798,plants,land plants,Orchidaceae,Dockrillia mortii,,(F.Muell.) Rauschert,SL,,Y,QA
+5804,plants,land plants,Orchidaceae,Dockrillia nugentii,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,Q
+5799,plants,land plants,Orchidaceae,Dockrillia pugioniformis,dagger orchid,(A.Cunn.) Rauschert,SL,,Y,QA
+5800,plants,land plants,Orchidaceae,Dockrillia racemosa,tableland pencil orchid,(Nicholls) Rauschert,SL,,Y,Q
+5801,plants,land plants,Orchidaceae,Dockrillia rigida,,(R.Br.) Rauschert,SL,,Y,QI
+5803,plants,land plants,Orchidaceae,Dockrillia schoenina,pencil orchid,(Lindl.) M.A.Clem. & D.L.Jones,SL,,Y,QA
+35702,plants,land plants,Orchidaceae,Dockrillia sulphurea,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+5671,plants,land plants,Orchidaceae,Dockrillia teretifolia,rat's tail orchid,(R.Br.) Brieger,SL,,Y,QA
+18387,plants,land plants,Orchidaceae,Dockrillia wassellii,,(S.T.Blake) Brieger,NT,,Y,Q
+5763,plants,land plants,Orchidaceae,Dockrillia x foederata,,(St.Cloud) Rauschert,SL,,Y,Q
+5764,plants,land plants,Orchidaceae,Dockrillia x grimesii,,(C.T.White & Summerh.) Rauschert,SL,,Y,Q
+20636,plants,land plants,Orchidaceae,Drymoanthus,,,C,,N,U
+7947,plants,land plants,Orchidaceae,Drymoanthus minutus,,Nicholls,SL,,Y,Q
+30801,plants,land plants,Orchidaceae,Empusa habenarina,,(F.Muell.) M.A.Clem. & D.L.Jones,SL,,Y,QA
+20683,plants,land plants,Orchidaceae,Epidendrum,,,,,N,XU
+36340,plants,land plants,Orchidaceae,Epidendrum elongatum,,Jacq.,,,,XU
+20684,plants,land plants,Orchidaceae,Epipogium,,,,,N,U
+12800,plants,land plants,Orchidaceae,Epipogium roseum,leafless nodding orchid,(D.Don) Lindl.,SL,,Y,QI
+20689,plants,land plants,Orchidaceae,Eria,,,,,N,XU
+39923,plants,land plants,Orchidaceae,Eria australiensis,,,C,,N,Q
+39924,plants,land plants,Orchidaceae,Eria inornata,,,,,,XU
+39925,plants,land plants,Orchidaceae,Eria intermedia,,,C,,N,Q
+39926,plants,land plants,Orchidaceae,Eria johnsonii,,,,,,XU
+37683,plants,land plants,Orchidaceae,Eria parviflora,,F.M.Bailey,,,,XU
+12802,plants,land plants,Orchidaceae,Eriochilus,,,,,N,U
+13952,plants,land plants,Orchidaceae,Eriochilus cucullatus,,(Labill.) Rchb.f.,SL,,Y,QA
+30804,plants,land plants,Orchidaceae,Eriochilus petricola,,D.L.Jones & M.A.Clem.,C,,N,XU
+20698,plants,land plants,Orchidaceae,Erythrorchis,,,C,,N,U
+17287,plants,land plants,Orchidaceae,Erythrorchis cassythoides,climbing orchid,(A.Cunn.) Garay,SL,,Y,QA
+30799,plants,land plants,Orchidaceae,Eucosia umbrosa,,D.L.Jones & M.A.Clem.,NT,,Y,Q
+20704,plants,land plants,Orchidaceae,Eulophia,,,,,N,QAI
+8203,plants,land plants,Orchidaceae,Eulophia bicallosa,,(D.Don) P.Hunt & Summerh.,NT,,Y,QAI
+39927,plants,land plants,Orchidaceae,Eulophia carrii,,,C,,N,Q
+35945,plants,land plants,Orchidaceae,Eulophia graminea,,Lindl.,,,N,XU
+30810,plants,land plants,Orchidaceae,Eulophia pelorica,,D.L.Jones & M.A.Clem.,V,,Y,Q
+9758,plants,land plants,Orchidaceae,Eulophia zollingeri,,(Rchb.f.) J.J.Sm.,V,,Y,Q
+20729,plants,land plants,Orchidaceae,Flickingeria,,,,,N,XU
+30811,plants,land plants,Orchidaceae,Flickingeria clementsii,,D.L.Jones,SL,,Y,Q
+8550,plants,land plants,Orchidaceae,Flickingeria convexa,,(Blume) A.D.Hawkes,SL,,Y,Q
+20750,plants,land plants,Orchidaceae,Gastrodia,,,,,N,U
+7948,plants,land plants,Orchidaceae,Gastrodia crebriflora,,D.L.Jones,V,,Y,Q
+12806,plants,land plants,Orchidaceae,Gastrodia sesamoides,cinnamon bells,R.Br.,SL,,Y,QA
+7949,plants,land plants,Orchidaceae,Gastrodia urceolata,,D.L.Jones,V,,Y,Q
+20762,plants,land plants,Orchidaceae,Geodorum,,,C,,N,QAI
+8197,plants,land plants,Orchidaceae,Geodorum densiflorum,pink nodding orchid,(Lam.) Schltr.,SL,,Y,QAI
+20775,plants,land plants,Orchidaceae,Glossodia,,,C,,N,U
+12809,plants,land plants,Orchidaceae,Glossodia major,wax-lip orchid,R.Br.,SL,,Y,QA
+13203,plants,land plants,Orchidaceae,Glossodia minor,small wax lip orchid,R.Br.,SL,,Y,QA
+20788,plants,land plants,Orchidaceae,Goodyera,,,,,N,XU
+12810,plants,land plants,Orchidaceae,Goodyera viridiflora,,(Blume) Blume,NT,,Y,XU
+20793,plants,land plants,Orchidaceae,Grastidium,,,C,,N,U
+19448,plants,land plants,Orchidaceae,Grastidium baileyi,,(F.Muell.) Rauschert,SL,,Y,QA
+19449,plants,land plants,Orchidaceae,Grastidium cancroides,,(T.E.Hunt) Rauschert,SL,,Y,Q
+19451,plants,land plants,Orchidaceae,Grastidium insigne,,(Blume) M.A.Clem. & D.L.Jones,SL,,Y,QI
+19450,plants,land plants,Orchidaceae,Grastidium luteocilium,,(Rupp) Rauschert,SL,,Y,Q
+5767,plants,land plants,Orchidaceae,Grastidium tozerense,,(Lavarack) M.A.Clem. & D.L.Jones,V,,Y,Q
+12817,plants,land plants,Orchidaceae,Habenaria,,,,,N,U
+39919,plants,land plants,Orchidaceae,Habenaria anomala,,,C,,N,Q
+39920,plants,land plants,Orchidaceae,Habenaria banfieldii,,,C,,N,Q
+21844,plants,land plants,Orchidaceae,Habenaria chlorosepala,,D.L.Jones,E,,Y,Q
+12812,plants,land plants,Orchidaceae,Habenaria elongata,,R.Br.,SL,,Y,QAI
+29234,plants,land plants,Orchidaceae,Habenaria euryloba,,D.L.Jones,V,,Y,Q
+21845,plants,land plants,Orchidaceae,Habenaria exilis,,D.L.Jones,E,,Y,Q
+13211,plants,land plants,Orchidaceae,Habenaria ferdinandi,,Schltr.,,,N,XU
+31654,plants,land plants,Orchidaceae,Habenaria fuscina,,D.L.Jones,V,,Y,Q
+19331,plants,land plants,Orchidaceae,Habenaria harroldii,,D.L.Jones,E,,Y,Q
+12814,plants,land plants,Orchidaceae,Habenaria hymenophylla,rainforest habenaria,Schltr.,NT,,Y,QA
+9580,plants,land plants,Orchidaceae,Habenaria macraithii,,Lavarack,E,E,Y,Q
+39921,plants,land plants,Orchidaceae,Habenaria millari,,,C,,N,Q
+39922,plants,land plants,Orchidaceae,Habenaria ovoidea,,,C,,N,Q
+18422,plants,land plants,Orchidaceae,Habenaria praecox,,Lavarack & Dockrill,SL,,Y,Q
+9015,plants,land plants,Orchidaceae,Habenaria propinquior,,Rchb.f.,SL,,Y,Q
+12813,plants,land plants,Orchidaceae,Habenaria rumphii,,(Brongn.) Lindl.,NT,,Y,QI
+12815,plants,land plants,Orchidaceae,Habenaria triplonema,,Schltr.,SL,,Y,QA
+33887,plants,land plants,Orchidaceae,Habenaria vatia,,D.L.Jones ex. M.T.Mathieson,V,,Y,Q
+12816,plants,land plants,Orchidaceae,Habenaria xanthantha,,F.Muell.,NT,,Y,Q
+20840,plants,land plants,Orchidaceae,Hetaeria,,,,,N,U
+12819,plants,land plants,Orchidaceae,Hetaeria oblongifolia,,Blume,SL,,Y,QI
+12775,plants,land plants,Orchidaceae,Liparis,,,,,N,U
+12769,plants,land plants,Orchidaceae,Liparis angustilabris,,(F.Muell.) Blaxell,C,,N,Q
+13180,plants,land plants,Orchidaceae,Liparis bracteata,,T.E.Hunt,C,,N,Q
+39914,plants,land plants,Orchidaceae,Liparis mowbulana,,,,,,XU
+12772,plants,land plants,Orchidaceae,Liparis nugentiae,,F.M.Bailey,C,,N,Q
+21010,plants,land plants,Orchidaceae,Luisia,,,,,N,XU
+36064,plants,land plants,Orchidaceae,Luisia atacta,,D.L.Jones,SL,,Y,Q
+21019,plants,land plants,Orchidaceae,Lyperanthus,,,C,,N,U
+12782,plants,land plants,Orchidaceae,Lyperanthus suaveolens,brown beaks,R.Br.,SL,,Y,QA
+39915,plants,land plants,Orchidaceae,Malaxis fimbriatum,,,,,,XU
+21077,plants,land plants,Orchidaceae,Micropera,,,C,,N,U
+13287,plants,land plants,Orchidaceae,Micropera fasciculata,,(Lindl.) Garay,SL,,Y,QI
+39903,plants,land plants,Orchidaceae,Microstylis amplexicaulis,,,C,,N,Q
+14404,plants,land plants,Orchidaceae,Microtis,,,,,N,U
+16629,plants,land plants,Orchidaceae,Microtis parviflora,slender onion orchid,R.Br.,SL,,Y,QAI
+9455,plants,land plants,Orchidaceae,Microtis rara,scented onion orchid,R.Br.,SL,,Y,QAI
+14403,plants,land plants,Orchidaceae,Microtis unifolia,common onion orchid,(G.Forst.) Rchb.f.,SL,,Y,QAI
+21094,plants,land plants,Orchidaceae,Mobilabium,,,C,,N,U
+12783,plants,land plants,Orchidaceae,Mobilabium hamatum,,Rupp,SL,,Y,Q
+19406,plants,land plants,Orchidaceae,Nervilia,,,C,,N,QAI
+9517,plants,land plants,Orchidaceae,Nervilia aragoana,,Gaudich.,SL,,Y,QAI
+8552,plants,land plants,Orchidaceae,Nervilia crociformis,,(Zoll. & Moritzi) Seidenf.,NT,,Y,Q
+12787,plants,land plants,Orchidaceae,Nervilia holochila,,(F.Muell.) Schltr.,SL,,Y,QA
+6517,plants,land plants,Orchidaceae,Nervilia peltata,,B.Gray & D.L.Jones,SL,,Y,Q
+12786,plants,land plants,Orchidaceae,Nervilia plicata,,(Andrews) Schltr.,SL,,Y,Q
+12785,plants,land plants,Orchidaceae,Nervilia uniflora,,(F.Muell.) Schltr.,SL,,Y,Q
+21157,plants,land plants,Orchidaceae,Oberonia,,,,,N,U
+10517,plants,land plants,Orchidaceae,Oberonia attenuata,Mossman fairy orchid,Dockrill,CR,CE,Y,Q
+10464,plants,land plants,Orchidaceae,Oberonia carnosa,,Lavarack,V,,Y,Q
+9017,plants,land plants,Orchidaceae,Oberonia complanata,,(A.Cunn.) M.A.Clem. & D.L.Jones,SL,,Y,Q
+36250,plants,land plants,Orchidaceae,Oberonia crateriformis,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+35334,plants,land plants,Orchidaceae,Oberonia flavescens,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+4988,plants,land plants,Orchidaceae,Oberonia palmicola,,F.Muell.,SL,,Y,QA
+31936,plants,land plants,Orchidaceae,Oberonia rimachila,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+21161,plants,land plants,Orchidaceae,Octarrhena,,,,,N,XU
+7920,plants,land plants,Orchidaceae,Octarrhena pusilla,,(F.M.Bailey) M.A.Clem. & D.L.Jones,SL,,Y,Q
+21164,plants,land plants,Orchidaceae,Oeceoclades,,,C,,N,U
+37727,plants,land plants,Orchidaceae,Oncidium euxanthinum,,,,,,XU
+39507,plants,land plants,Orchidaceae,Oncidium sphacelatum,,,,,,XU
+18070,plants,land plants,Orchidaceae,Orchidaceae,,,,,N,U
+37704,plants,land plants,Orchidaceae,Ornithochilus moretoni,,F.M.Bailey,,,,XU
+21191,plants,land plants,Orchidaceae,Orthoceras,,,,,N,U
+12790,plants,land plants,Orchidaceae,Orthoceras strictum,horned orchid,R.Br.,SL,,Y,QA
+21210,plants,land plants,Orchidaceae,Pachystoma,,,C,,N,U
+8553,plants,land plants,Orchidaceae,Pachystoma pubescens,,Blume,V,,Y,Q
+21217,plants,land plants,Orchidaceae,Papillilabium,,,C,,N,U
+21252,plants,land plants,Orchidaceae,Peristeranthus,,,C,,N,U
+12719,plants,land plants,Orchidaceae,Peristeranthus hillii,,(F.Muell.) T.E.Hunt,SL,,Y,QA
+21253,plants,land plants,Orchidaceae,Peristylus,,,,,N,XU
+10469,plants,land plants,Orchidaceae,Peristylus banfieldii,,(F.M.Bailey) Lavarack,E,,Y,Q
+12720,plants,land plants,Orchidaceae,Peristylus candidus,,J.J.Sm.,SL,,Y,Q
+30812,plants,land plants,Orchidaceae,Peristylus chlorandrellus,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+16493,plants,land plants,Orchidaceae,Peristylus papuanus,,(Kraenzl.) J.J.Sm.,,,,XU
+33430,plants,land plants,Orchidaceae,Petalochilus,,,C,,N,XU
+21267,plants,land plants,Orchidaceae,Phaius,,,,,N,QAI
+12722,plants,land plants,Orchidaceae,Phaius australis,,F.Muell.,E,E,Y,QAI
+12723,plants,land plants,Orchidaceae,Phaius bernaysii,yellow swamp orchid,Rowland ex Rchb.f.,E,E,Y,Q
+12724,plants,land plants,Orchidaceae,Phaius pictus,,T.E.Hunt,V,V,Y,Q
+21268,plants,land plants,Orchidaceae,Phalaenopsis,,,C,,N,U
+8487,plants,land plants,Orchidaceae,Phalaenopsis rosenstromii,moth orchid,F.M.Bailey,E,,Y,QI
+21277,plants,land plants,Orchidaceae,Pholidota,,,C,,N,U
+12725,plants,land plants,Orchidaceae,Pholidota imbricata,,Hook.,SL,,Y,QI
+12726,plants,land plants,Orchidaceae,Phreatia crassiuscula,,Nicholls,,,N,XU
+36416,plants,land plants,Orchidaceae,Pinalia fitzalanii,,(F.Muell.) Kuntze,SL,,Y,QI
+41778,plants,land plants,Orchidaceae,Pinalia moluccana,,"(Schltr. & J.J.Sm.) Schuit., Y.P.Ng & H.A.Pedersen",SL,,Y,QI
+6663,plants,land plants,Orchidaceae,Plectorrhiza,,,C,,,U
+41759,plants,land plants,Orchidaceae,Plectorrhiza beckleri,,"(F.Muell. ex Benth.) M.A.Clem., D.L.Jones & D.P.Banks",NT,,Y,QA
+12734,plants,land plants,Orchidaceae,Plectorrhiza brevilabris,,(F.Muell.) Dockrill,SL,,Y,Q
+41760,plants,land plants,Orchidaceae,Plectorrhiza purpurata,,(Rupp) M.A.M.Renner,SL,,Y,QA
+14320,plants,land plants,Orchidaceae,Plectorrhiza tridentata,tangle orchid,(Lindl.) Dockrill,SL,,Y,QA
+21333,plants,land plants,Orchidaceae,Pomatocalpa,,,,,N,U
+12735,plants,land plants,Orchidaceae,Pomatocalpa macphersonii,,(F.Muell.) T.E.Hunt,SL,,Y,Q
+11376,plants,land plants,Orchidaceae,Pomatocalpa marsupiale,,(Kraenzl.) J.J.Sm.,V,,Y,QI
+12688,plants,land plants,Orchidaceae,Prasophyllum,,,,,N,U
+14287,plants,land plants,Orchidaceae,Prasophyllum australe,austral leek orchid,R.Br.,SL,,Y,QA
+13104,plants,land plants,Orchidaceae,Prasophyllum brevilabre,,(Lindl.) Hook.f.,SL,,Y,QA
+7908,plants,land plants,Orchidaceae,Prasophyllum campestre,,R.J.Bates & D.L.Jones,NT,,Y,Q
+16367,plants,land plants,Orchidaceae,Prasophyllum elatum,tall leek orchid,R.Br.,SL,,Y,QA
+7909,plants,land plants,Orchidaceae,Prasophyllum exilis,,D.L.Jones & R.J.Bates,NT,,Y,Q
+8895,plants,land plants,Orchidaceae,Prasophyllum flavum,yellow leek orchid,R.Br.,SL,,Y,QA
+7910,plants,land plants,Orchidaceae,Prasophyllum incompositum,,D.L.Jones,NT,,Y,Q
+8894,plants,land plants,Orchidaceae,Prasophyllum odoratum,scented leek orchid,R.S.Rogers,,,N,XU
+39916,plants,land plants,Orchidaceae,Prasophyllum parvicallum,,,C,,N,Q
+16368,plants,land plants,Orchidaceae,Prasophyllum patens,,R.Br.,,,N,XU
+8488,plants,land plants,Orchidaceae,Prasophyllum wallum,Wallum leek orchid,R.J.Bates & D.L.Jones,V,V,Y,Q
+40654,plants,land plants,Orchidaceae,Prosthechea radiata,,(Lindl.) W.E.Higgins,,,,XU
+21359,plants,land plants,Orchidaceae,Pseudovanilla,,,,,N,U
+12689,plants,land plants,Orchidaceae,Pseudovanilla foliata,giant climbing orchid,(F.Muell.) Garay,SL,,Y,QA
+12704,plants,land plants,Orchidaceae,Pterostylis,,,,,N,U
+12690,plants,land plants,Orchidaceae,Pterostylis acuminata,sharp greenhood,R.Br.,SL,,Y,QA
+41747,plants,land plants,Orchidaceae,Pterostylis ampliata,,(D.L.Jones) D.L.Jones,SL,,Y,QA
+18886,plants,land plants,Orchidaceae,Pterostylis anatona,,D.L.Jones,SL,,Y,Q
+36226,plants,land plants,Orchidaceae,Pterostylis antennifera,,(D.L.Jones) D.L.Jones,SL,,Y,QA
+18887,plants,land plants,Orchidaceae,Pterostylis aquilonia,,D.L.Jones & B.Gray,SL,,Y,Q
+16345,plants,land plants,Orchidaceae,Pterostylis baptistii,king greenhood,Fitzg.,SL,,Y,QA
+34218,plants,land plants,Orchidaceae,Pterostylis baptistii x Pterostylis nutans,,,C,,N,Q
+8142,plants,land plants,Orchidaceae,Pterostylis bicolor,,M.A.Clem. & D.L.Jones,SL,,Y,QA
+8554,plants,land plants,Orchidaceae,Pterostylis bicornis,horned greenhood,D.L.Jones & M.A.Clem.,V,V,Y,Q
+12691,plants,land plants,Orchidaceae,Pterostylis boormanii,,Rupp,SL,,Y,QA
+36221,plants,land plants,Orchidaceae,Pterostylis borealis,,(D.L.Jones) D.L.Jones,SL,,Y,Q
+35021,plants,land plants,Orchidaceae,Pterostylis caligna,,M.T.Mathieson,E,,Y,Q
+6221,plants,land plants,Orchidaceae,Pterostylis chaetophora,,M.A.Clem. & D.L.Jones,E,,Y,QA
+18443,plants,land plants,Orchidaceae,Pterostylis cobarensis,,M.A.Clem.,SL,,Y,QA
+31907,plants,land plants,Orchidaceae,Pterostylis crassichila,,D.L.Jones,SL,,Y,Q
+12701,plants,land plants,Orchidaceae,Pterostylis curta,blunt greenhood,R.Br.,SL,,Y,QA
+12702,plants,land plants,Orchidaceae,Pterostylis cycnocephala,swan greenhood,Fitzg.,SL,,Y,QA
+13105,plants,land plants,Orchidaceae,Pterostylis daintreana,,F.Muell. ex Benth.,SL,,Y,QA
+12692,plants,land plants,Orchidaceae,Pterostylis depauperata,,F.M.Bailey,SL,,Y,Q
+12693,plants,land plants,Orchidaceae,Pterostylis erecta,,T.E.Hunt,SL,,Y,Q
+36233,plants,land plants,Orchidaceae,Pterostylis exquisita,,(D.L.Jones) D.L.Jones,SL,,Y,Q
+8892,plants,land plants,Orchidaceae,Pterostylis fischii,,Nicholls,SL,,Y,QA
+12694,plants,land plants,Orchidaceae,Pterostylis grandiflora,,R.Br.,SL,,Y,QA
+7911,plants,land plants,Orchidaceae,Pterostylis hamata,,Blackmore & Clemesha,SL,,Y,QA
+12703,plants,land plants,Orchidaceae,Pterostylis hildae,rainforest greenhood,Nicholls,SL,,Y,QA
+8179,plants,land plants,Orchidaceae,Pterostylis hispidula,,Fitzg.,SL,,Y,QA
+8555,plants,land plants,Orchidaceae,Pterostylis longicurva,,Rupp,SL,,Y,Q
+31118,plants,land plants,Orchidaceae,Pterostylis longipetala,,Rupp,SL,,Y,Q
+12695,plants,land plants,Orchidaceae,Pterostylis mitchellii,,Lindl.,SL,,Y,QA
+14295,plants,land plants,Orchidaceae,Pterostylis mutica,midget greenhood,R.Br.,SL,,Y,QA
+33979,plants,land plants,Orchidaceae,Pterostylis mystacina,,(D.L.Jones) Janes & Duretto,SL,,Y,Q
+9232,plants,land plants,Orchidaceae,Pterostylis nigricans,,D.L.Jones & M.A.Clem.,NT,,Y,QA
+9321,plants,land plants,Orchidaceae,Pterostylis nutans,,R.Br.,SL,,Y,QA
+16346,plants,land plants,Orchidaceae,Pterostylis obtusa,,R.Br.,SL,,Y,QA
+9322,plants,land plants,Orchidaceae,Pterostylis ophioglossa,,R.Br.,SL,,Y,QAI
+40233,plants,land plants,Orchidaceae,Pterostylis ophioglossa subsp. fusca,,,C,,N,Q
+16347,plants,land plants,Orchidaceae,Pterostylis parviflora,tiny greenhood,R.Br.,SL,,Y,QA
+36534,plants,land plants,Orchidaceae,Pterostylis pearsonii,,(D.L.Jones) Janes & Duretto,SL,,Y,Q
+12696,plants,land plants,Orchidaceae,Pterostylis pedunculata,maroonhood,R.Br.,SL,,Y,QA
+7912,plants,land plants,Orchidaceae,Pterostylis praetermissa,,M.A.Clem. & D.L.Jones,SL,,Y,QA
+7913,plants,land plants,Orchidaceae,Pterostylis procera,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+16348,plants,land plants,Orchidaceae,Pterostylis revoluta,autumn greenhood,R.Br.,C,,N,XU
+16349,plants,land plants,Orchidaceae,Pterostylis rufa,,R.Br.,SL,,Y,QA
+9834,plants,land plants,Orchidaceae,Pterostylis russellii,,T.E.Hunt,SL,,Y,Q
+18888,plants,land plants,Orchidaceae,Pterostylis scoliosa,,D.L.Jones,E,,Y,Q
+8556,plants,land plants,Orchidaceae,Pterostylis setifera,,"M.A.Clem., Matthias & D.L.Jones",NT,,Y,QA
+6689,plants,land plants,Orchidaceae,Pterostylis sp. (Gundiah W.W.Abell AQ72188),,,NT,,Y,Q
+6688,plants,land plants,Orchidaceae,Pterostylis sp. (Mt Maroon J.R.Clarkson+ 1114),,,,,N,XU
+12699,plants,land plants,Orchidaceae,Pterostylis stricta,,Clemesha & B.Gray,SL,,Y,Q
+9776,plants,land plants,Orchidaceae,Pterostylis taurus,charging bull orchid,M.A.Clem. & D.L.Jones,SL,,Y,Q
+35660,plants,land plants,Orchidaceae,Pterostylis torquata,,D.L.Jones,SL,,Y,QA
+41381,plants,land plants,Orchidaceae,Pterostylis venusta,,(D.L.Jones) D.L.Jones,SL,,Y,Q
+32533,plants,land plants,Orchidaceae,Pterostylis vitrea,,(D.L.Jones) Bostock,SL,,Y,Q
+39917,plants,land plants,Orchidaceae,Pterostylis whitei,,,C,,N,Q
+8557,plants,land plants,Orchidaceae,Pterostylis woollsii,long-tailed greenhood,Fitzg.,SL,,Y,Q
+21397,plants,land plants,Orchidaceae,Rhinerrhiza,,,C,,N,U
+12705,plants,land plants,Orchidaceae,Rhinerrhiza divitiflora,,(F.Muell. ex Benth.) Rupp,SL,,Y,QA
+30796,plants,land plants,Orchidaceae,Rhipidorchis micrantha,,(A.Rich.) D.L.Jones & M.A.Clem.,SL,,Y,QI
+21402,plants,land plants,Orchidaceae,Rhizanthella,,,C,,N,U
+30870,plants,land plants,Orchidaceae,Rhizanthella omissa,,D.L.Jones & M.A.Clem.,E,,Y,Q
+35496,plants,land plants,Orchidaceae,Rhomboda polygonoides,,(F.Muell.) Ormerod,V,V,Y,Q
+21410,plants,land plants,Orchidaceae,Rhynchophreatia,,,C,,N,U
+21419,plants,land plants,Orchidaceae,Robiquetia,,,,,N,XU
+8180,plants,land plants,Orchidaceae,Robiquetia gracilistipes,,(Schltr.) J.J.Sm.,SL,,Y,Q
+39918,plants,land plants,Orchidaceae,Robiquetia rectifolia,,,C,,N,Q
+12706,plants,land plants,Orchidaceae,Robiquetia wassellii,,Dockrill,NT,,Y,Q
+21434,plants,land plants,Orchidaceae,Saccolabiopsis,,,C,,N,U
+12707,plants,land plants,Orchidaceae,Saccolabiopsis armitii,,(F.Muell.) Dockrill,SL,,Y,Q
+9835,plants,land plants,Orchidaceae,Saccolabiopsis rectifolia,,(Dockrill) Garay,SL,,Y,Q
+39907,plants,land plants,Orchidaceae,Saccolabium virgatum,,,C,,N,Q
+35326,plants,land plants,Orchidaceae,Salacistis ochroleuca,,(F.M.Bailey) M.A.Clem. & D.L.Jones,E,,Y,QI
+12662,plants,land plants,Orchidaceae,Sarcochilus,,,,,N,U
+39908,plants,land plants,Orchidaceae,Sarcochilus bancroftii,,,C,,N,Q
+7914,plants,land plants,Orchidaceae,Sarcochilus borealis,,(Nicholls) M.A.Clem. & D.L.Jones,SL,,Y,Q
+9187,plants,land plants,Orchidaceae,Sarcochilus ceciliae,fairy bells,F.Muell.,SL,,Y,QA
+12659,plants,land plants,Orchidaceae,Sarcochilus dilatatus,brown sarcochilus,F.Muell.,SL,,Y,Q
+12709,plants,land plants,Orchidaceae,Sarcochilus falcatus,orange blossom orchid,R.Br.,SL,,Y,QA
+12658,plants,land plants,Orchidaceae,Sarcochilus fitzgeraldii,ravine orchid,F.Muell.,E,V,Y,QA
+12710,plants,land plants,Orchidaceae,Sarcochilus hartmannii,,F.Muell.,V,V,Y,QA
+12657,plants,land plants,Orchidaceae,Sarcochilus hillii,,(F.Muell.) F.Muell.,SL,,Y,Q
+8224,plants,land plants,Orchidaceae,Sarcochilus hirticalcar,harlequin orchid,(Dockrill) M.A.Clem. & B.J.Wallace,V,V,Y,Q
+40952,plants,land plants,Orchidaceae,Sarcochilus loganii,,D.L.Jones & M.A.Clem.,SL,,Y,Q
+39909,plants,land plants,Orchidaceae,Sarcochilus newportii,,,C,,N,Q
+35904,plants,land plants,Orchidaceae,Sarcochilus parviflorus,,Lindl.,SL,,Y,QA
+39910,plants,land plants,Orchidaceae,Sarcochilus platystachys,,,C,,N,Q
+9324,plants,land plants,Orchidaceae,Sarcochilus roseus,,(Clemesha) Clemesha,SL,,Y,Q
+14268,plants,land plants,Orchidaceae,Sarcochilus serrulatus,,D.L.Jones,SL,,Y,Q
+8223,plants,land plants,Orchidaceae,Sarcochilus spathulatus,,R.S.Rogers,SL,,Y,QA
+4361,plants,land plants,Orchidaceae,Sarcochilus tricalliatus,,(Rupp) Rupp,SL,,Y,Q
+12661,plants,land plants,Orchidaceae,Sarcochilus weinthalii,blotched sarcochilus,F.M.Bailey,E,V,Y,Q
+21465,plants,land plants,Orchidaceae,Schistotylus,,,C,,N,U
+21472,plants,land plants,Orchidaceae,Schoenorchis,,,C,,N,U
+8463,plants,land plants,Orchidaceae,Schoenorchis micrantha,,Reinw. ex Blume,SL,,Y,QI
+12663,plants,land plants,Orchidaceae,Schoenorchis sarcophylla,,Schltr.,V,,Y,Q
+21522,plants,land plants,Orchidaceae,Spathoglottis,,,,,N,U
+38625,plants,land plants,Orchidaceae,Spathoglottis papuana var. puberiflora,,R.S.Rogers & C.T.White,,,,XU
+12668,plants,land plants,Orchidaceae,Spathoglottis paulinae,,F.Muell.,NT,,Y,QI
+12667,plants,land plants,Orchidaceae,Spathoglottis plicata,New Guinea ground orchid,Blume,V,,Y,QI
+39911,plants,land plants,Orchidaceae,Spathoglottis soutteriana,,,C,,N,Q
+40956,plants,land plants,Orchidaceae,Speculantha borealis,,D.L.Jones,C,,N,Q
+21534,plants,land plants,Orchidaceae,Spiranthes,,,,,N,U
+5003,plants,land plants,Orchidaceae,Spiranthes australis,,(R.Br.) Lindl.,SL,,Y,QA
+41758,plants,land plants,Orchidaceae,Stigmatodactylus amplexicaulis,,"(F.M.Bailey) S.P.Lyon, M.A.Clem. & D.L.Jones",SL,,Y,QA
+41755,plants,land plants,Orchidaceae,Stigmatodactylus sublestus,,"(Dockrill) S.P.Lyon, M.A.Clem. & D.L.Jones",NT,,Y,Q
+12671,plants,land plants,Orchidaceae,Taeniophyllum,,,,,N,U
+40484,plants,land plants,Orchidaceae,Taeniophyllum baumei,,B.Gray,SL,,Y,Q
+36103,plants,land plants,Orchidaceae,Taeniophyllum clementsii,,(D.L.Jones & B.Gray) Kocyan & Schuit.,SL,,Y,Q
+8558,plants,land plants,Orchidaceae,Taeniophyllum confertum,,B.Gray & D.L.Jones,NT,,Y,Q
+41733,plants,land plants,Orchidaceae,Taeniophyllum cylindrocentrum,,Schltr.,SL,,Y,Q
+39912,plants,land plants,Orchidaceae,Taeniophyllum cymbiforme,,,C,,N,Q
+36337,plants,land plants,Orchidaceae,Taeniophyllum epacridicola,,B.Gray,SL,,Y,Q
+35944,plants,land plants,Orchidaceae,Taeniophyllum explanatum,,B.Gray,SL,,Y,Q
+9841,plants,land plants,Orchidaceae,Taeniophyllum lobatum,,Dockrill,NT,,Y,Q
+12670,plants,land plants,Orchidaceae,Taeniophyllum malianum,,Schltr.,SL,,Y,QI
+9840,plants,land plants,Orchidaceae,Taeniophyllum muelleri,,Lindl. ex Benth.,SL,,Y,Q
+35918,plants,land plants,Orchidaceae,Taeniophyllum triquetroradix,,B.Gray,SL,,Y,Q
+41210,plants,land plants,Orchidaceae,Taeniophyllum walkeri,,B.Gray,SL,,Y,Q
+39913,plants,land plants,Orchidaceae,Taeniophyllum wilkianum,,,C,,N,Q
+21587,plants,land plants,Orchidaceae,Tainia,,,C,,N,U
+9081,plants,land plants,Orchidaceae,Tainia trinervis,,(Blume) Rchb.f.,SL,,Y,QI
+21620,plants,land plants,Orchidaceae,Thelasis,,,,,N,U
+12673,plants,land plants,Orchidaceae,Thelasis carinata,,Blume,V,,Y,QI
+41410,plants,land plants,Orchidaceae,Thelychiton,,,,,N,U
+13082,plants,land plants,Orchidaceae,Thelymitra,,,,,N,U
+7915,plants,land plants,Orchidaceae,Thelymitra angustifolia,,R.Br.,SL,,Y,QI
+12677,plants,land plants,Orchidaceae,Thelymitra carnea,,R.Br.,SL,,Y,QA
+9199,plants,land plants,Orchidaceae,Thelymitra fragrans,,D.L.Jones & M.A.Clem.,SL,,Y,QA
+6207,plants,land plants,Orchidaceae,Thelymitra ixioides,,Sw.,SL,,Y,QA
+28222,plants,land plants,Orchidaceae,Thelymitra longifolia,,J.R.Forst. & G.Forst.,,,N,XU
+25956,plants,land plants,Orchidaceae,Thelymitra longiloba,,D.L.Jones & M.A.Clem.,,,N,XU
+7917,plants,land plants,Orchidaceae,Thelymitra malvina,,"M.A.Clem., D.L.Jones & Molloy",SL,,Y,QA
+20037,plants,land plants,Orchidaceae,Thelymitra media,,,,,N,XU
+12674,plants,land plants,Orchidaceae,Thelymitra media var. media,tall sun orchid,R.Br.,C,,N,Q
+13081,plants,land plants,Orchidaceae,Thelymitra nuda,scented sun orchid,R.Br.,C,,N,XU
+12675,plants,land plants,Orchidaceae,Thelymitra pauciflora,slender sun orchid,R.Br.,SL,,Y,QA
+7916,plants,land plants,Orchidaceae,Thelymitra purpurata,wallum sun orchid,Rupp,SL,,Y,QA
+29280,plants,land plants,Orchidaceae,Thelymitra queenslandica,,Jeanes,SL,,Y,Q
+12676,plants,land plants,Orchidaceae,Thelymitra venosa,large veined sun orchid,R.Br.,,,N,XU
+29290,plants,land plants,Orchidaceae,Thelymitra x merraniae,,Nicholls,SL,,Y,Q
+28167,plants,land plants,Orchidaceae,Thelymitra x truncata,,R.S.Rogers,,,N,XU
+21627,plants,land plants,Orchidaceae,Thrixspermum,,,,,N,XU
+22806,plants,land plants,Orchidaceae,Thrixspermum congestum,,(F.M.Bailey) Dockrill,SL,,Y,Q
+12678,plants,land plants,Orchidaceae,Thrixspermum platystachys,,(F.M.Bailey) Schltr.,SL,,Y,Q
+39044,plants,land plants,Orchidaceae,Thunia alba var. marshelliana,,,,,,XU
+21895,plants,land plants,Orchidaceae,Trachoma,,,,,N,U
+8182,plants,land plants,Orchidaceae,Trachoma speciosum,,"D.L.Jones, B.Gray, M.A.Clem. & J.J.Wood",SL,,Y,Q
+8183,plants,land plants,Orchidaceae,Trachoma stellatum,,"M.A.Clem., D.L.Jones, B.Gray & J.J.Wood",SL,,Y,Q
+34091,plants,land plants,Orchidaceae,Trachoma subluteum,,(Rupp) Garay,SL,,Y,Q
+21658,plants,land plants,Orchidaceae,Trichoglottis,,,,,N,XU
+11357,plants,land plants,Orchidaceae,Trichoglottis australiensis,,Dockrill,V,,Y,Q
+21710,plants,land plants,Orchidaceae,Vanda,,,C,,N,U
+12680,plants,land plants,Orchidaceae,Vanda hindsii,Cape York vanda,Lindl.,V,V,Y,QI
+40770,plants,land plants,Orchidaceae,Vanda whiteana,,,C,,N,Q
+31261,plants,land plants,Orchidaceae,Vanilla planifolia,,Andrews,,,N,XU
+21729,plants,land plants,Orchidaceae,Vrydagzynea,,,,,N,U
+30794,plants,land plants,Orchidaceae,Vrydagzynea grayi,,D.L.Jones & M.A.Clem.,E,E,Y,Q
+21765,plants,land plants,Orchidaceae,Zeuxine,,,,,N,QAI
+40091,plants,land plants,Orchidaceae,Zeuxine attenuata,,,C,,N,Q
+15903,plants,land plants,Orchidaceae,Zeuxine oblonga,hairy jewel orchid,R.S.Rogers & C.T.White,SL,,Y,QAI
+17351,plants,land plants,Droseraceae,Drosera,,L.,,,N,U
+11623,plants,land plants,Droseraceae,Drosera adelae,,F.Muell.,NT,,Y,Q
+41407,plants,land plants,Droseraceae,Drosera buubugujin,,M.T.Mathieson,CR,,Y,Q
+11621,plants,land plants,Droseraceae,Drosera prolifera,trailing sundew,C.T.White,V,V,Y,Q
+9811,plants,land plants,Droseraceae,Drosera schizandra,notched sundew,Diels,V,V,Y,Q
+16623,plants,land plants,Nepenthaceae,Nepenthes,,,C,,N,U
+40154,plants,land plants,Nepenthaceae,Nepenthes albolineata,,,C,,N,Q
+40155,plants,land plants,Nepenthaceae,Nepenthes alicae,,,C,,N,Q
+40147,plants,land plants,Nepenthaceae,Nepenthes armbrustae,,,C,,N,Q
+40148,plants,land plants,Nepenthaceae,Nepenthes bernaysii,,,,,,XU
+40149,plants,land plants,Nepenthaceae,Nepenthes cholmondeleyi,,,C,,N,Q
+40150,plants,land plants,Nepenthaceae,Nepenthes garrawayae,,,C,,N,Q
+40151,plants,land plants,Nepenthaceae,Nepenthes jardinei,,,C,,N,Q
+16622,plants,land plants,Nepenthaceae,Nepenthes mirabilis,tropical pitcher plant,(Lour.) Druce,SL,,Y,QI
+22495,plants,land plants,Nepenthaceae,Nepenthes mirabilis (Bramston Beach),,(Lour.) Druce,E,,Y,Q
+40152,plants,land plants,Nepenthaceae,Nepenthes moorei,,,C,,N,Q
+36037,plants,land plants,Nepenthaceae,Nepenthes parvula,,G.W.Wilson & S.Venter,SL,,Y,Q
+40143,plants,land plants,Nepenthaceae,Nepenthes pascoensis,,,C,,N,Q
+40144,plants,land plants,Nepenthaceae,Nepenthes rowanae,,,C,,N,Q
+35625,plants,land plants,Nepenthaceae,Nepenthes rowaniae,,F.M.Bailey,SL,,Y,Q
+31114,plants,land plants,Nepenthaceae,Nepenthes tenax,,C.Clarke & R.Kruger,SL,,Y,Q
+40762,plants,land plants,Cyatheaceae,Alsophila baileyana,,Domin,C,,N,Q
+41744,plants,land plants,Cyatheaceae,Alsophila cunninghamii,,(Hook.f.) R.M.Tryon,NT,,Y,QAI
+41582,plants,land plants,Cyatheaceae,Alsophila exilis,,(Holttum) A.R.Field,E,,Y,Q
+41745,plants,land plants,Cyatheaceae,Sphaeropteris celebica,,(Blume) R.M.Tryon,NT,,Y,QI
+41592,plants,land plants,Cyatheaceae,Sphaeropteris felina,,(Roxb.) Pic.Serm.,E,,Y,QI
+13958,plants,land plants,Dicksoniaceae,Calochlaena villosa,,(C.Chr.) M.D.Turner & R.A.White,NT,,Y,QI
+18759,plants,land plants,Cycadaceae,Cycas,,,,,N,U
+12076,plants,land plants,Cycadaceae,Cycas angulata,,R.Br.,SL,,Y,QA
+5934,plants,land plants,Cycadaceae,Cycas badensis,,K.D.Hill,SL,,Y,Q
+8338,plants,land plants,Cycadaceae,Cycas brunnea,,K.D.Hill,V,,Y,Q
+12077,plants,land plants,Cycadaceae,Cycas cairnsiana,,F.Muell.,V,V,Y,Q
+27956,plants,land plants,Cycadaceae,Cycas candida,,K.D.Hill,SL,,Y,Q
+8439,plants,land plants,Cycadaceae,Cycas couttsiana,,K.D.Hill,V,,Y,Q
+27451,plants,land plants,Cycadaceae,Cycas cupida,,P.I.Forst.,V,,Y,Q
+6326,plants,land plants,Cycadaceae,Cycas desolata,,P.I.Forst.,V,,Y,Q
+36662,plants,land plants,Cycadaceae,Cycas distans,,P.I.Forster & B.Gray,E,,Y,Q
+17503,plants,land plants,Cycadaceae,Cycas media,,R.Br.,SL,,Y,Q
+8337,plants,land plants,Cycadaceae,Cycas media - Cycas platyphylla,,,C,,N,Q
+5939,plants,land plants,Cycadaceae,Cycas media subsp. banksii,,K.D.Hill,SL,,Y,Q
+5935,plants,land plants,Cycadaceae,Cycas media subsp. ensata,,K.D.Hill,SL,,Y,Q
+5940,plants,land plants,Cycadaceae,Cycas media subsp. media,,R.Br.,SL,,Y,Q
+7045,plants,land plants,Cycadaceae,Cycas media subsp. media - C.ophiolitica,,R.Br.,C,,N,XU
+8445,plants,land plants,Cycadaceae,Cycas megacarpa,,K.D.Hill,E,E,Y,Q
+8437,plants,land plants,Cycadaceae,Cycas ophiolitica,Marlborough blue,K.D.Hill,E,E,Y,Q
+34680,plants,land plants,Cycadaceae,Cycas papuana,,F.Muell.,SL,,Y,QI
+8897,plants,land plants,Cycadaceae,Cycas platyphylla,,K.D.Hill,V,V,Y,Q
+38955,plants,land plants,Cycadaceae,Cycas revoluta,,Thunb.,,,,XU
+30730,plants,land plants,Cycadaceae,Cycas scratchleyana,,F.Muell.,SL,,Y,QI
+5936,plants,land plants,Cycadaceae,Cycas semota,,K.D.Hill,E,,Y,Q
+8384,plants,land plants,Cycadaceae,Cycas silvestris,,K.D.Hill,V,V,Y,Q
+34314,plants,land plants,Cycadaceae,Cycas terryana,,P.I.Forst.,V,,Y,Q
+5937,plants,land plants,Cycadaceae,Cycas tuckeri,,K.D.Hill,V,,Y,Q
+5781,plants,land plants,Cycadaceae,Cycas xipholepis,,K.D.Hill,SL,,Y,Q
+5938,plants,land plants,Cycadaceae,Cycas yorkiana,,K.D.Hill,SL,,Y,Q
+9800,plants,land plants,Zamiaceae,Bowenia,,,C,,N,XU
+17845,plants,land plants,Zamiaceae,Bowenia serrulata,Byfield fern,(W.Bull) Chamb.,SL,,Y,Q
+17846,plants,land plants,Zamiaceae,Bowenia spectabilis,,Hook. ex Hook.f.,SL,,Y,Q
+20973,plants,land plants,Zamiaceae,Lepidozamia,,,C,,N,U
+16811,plants,land plants,Zamiaceae,Lepidozamia hopei,Hope's cycad,(W.Hill) Regel,SL,,Y,Q
+12056,plants,land plants,Zamiaceae,Lepidozamia peroffskyana,shining burrawang,Regel,SL,,Y,QA
+12011,plants,land plants,Zamiaceae,Macrozamia,,,,,N,U
+18142,plants,land plants,Zamiaceae,Macrozamia cardiacensis,,P.I.Forst. & D.L.Jones,V,,Y,Q
+6525,plants,land plants,Zamiaceae,Macrozamia conferta,,D.L.Jones & P.I.Forst.,V,V,Y,Q
+6478,plants,land plants,Zamiaceae,Macrozamia cranei,,D.L.Jones & P.I.Forst.,E,E,Y,Q
+6479,plants,land plants,Zamiaceae,Macrozamia crassifolia,,P.I.Forst. & D.L.Jones,V,,Y,Q
+8435,plants,land plants,Zamiaceae,Macrozamia douglasii,,W.Hill ex F.M.Bailey,SL,,Y,Q
+8851,plants,land plants,Zamiaceae,Macrozamia fearnsidei,,D.L.Jones,SL,,Y,Q
+5850,plants,land plants,Zamiaceae,Macrozamia fearnsidei x Macrozamia moorei,,,C,,N,Q
+8511,plants,land plants,Zamiaceae,Macrozamia lomandroides,,D.L.Jones,E,E,Y,Q
+29176,plants,land plants,Zamiaceae,Macrozamia lomandroides - Macrozamia pauli-guilielmi,,,C,,N,Q
+5876,plants,land plants,Zamiaceae,Macrozamia lomandroides x M.pauli-guilielmi,,D.L.Jones,C,,N,U
+21873,plants,land plants,Zamiaceae,Macrozamia longispina,,P.I.Forst. & D.L.Jones,NT,,Y,Q
+33772,plants,land plants,Zamiaceae,Macrozamia longispina - Macrozamia macleayi,,,C,,N,Q
+14429,plants,land plants,Zamiaceae,Macrozamia lucida,pineapple zamia,L.A.S.Johnson,SL,,Y,QA
+32994,plants,land plants,Zamiaceae,Macrozamia lucida x Macrozamia macleayi,,,C,,N,Q
+6480,plants,land plants,Zamiaceae,Macrozamia machinii,,P.I.Forst. & D.L.Jones,V,V,Y,Q
+22414,plants,land plants,Zamiaceae,Macrozamia macleayi,,Miq.,SL,,Y,Q
+34393,plants,land plants,Zamiaceae,Macrozamia macleayi - Macrozamia mountperriensis,,,C,,N,Q
+16707,plants,land plants,Zamiaceae,Macrozamia miquelii,,(F.Muell.) A.DC.,SL,,Y,Q
+12010,plants,land plants,Zamiaceae,Macrozamia moorei,,F.Muell.,SL,,Y,Q
+8972,plants,land plants,Zamiaceae,Macrozamia mountperriensis,,F.M.Bailey,SL,,Y,Q
+6483,plants,land plants,Zamiaceae,Macrozamia occidua,,D.L.Jones & P.I.Forst.,V,V,Y,Q
+6481,plants,land plants,Zamiaceae,Macrozamia parcifolia,,P.I.Forst. & D.L.Jones,V,V,Y,Q
+16708,plants,land plants,Zamiaceae,Macrozamia pauli-guilielmi,,W.Hill & F.Muell.,E,E,Y,Q
+16709,plants,land plants,Zamiaceae,Macrozamia platyrhachis,,F.M.Bailey,E,E,Y,Q
+27445,plants,land plants,Zamiaceae,Macrozamia serpentina,,D.L.Jones & P.I.Forst.,E,,Y,Q
+6482,plants,land plants,Zamiaceae,Macrozamia viridis,,D.L.Jones & P.I.Forst.,E,,Y,QA
+41292,plants,land plants,Leguminosae,Austrocallerya pilipes,,(F.M.Bailey) J.Compton & Schrire,NT,,Y,Q
+20873,plants,land plants,Rubiaceae,Hydnophytum,,,,,N,U
+27448,plants,land plants,Rubiaceae,Hydnophytum ferrugineum,,P.I.Forst.,V,,Y,Q
+18900,plants,land plants,Rubiaceae,Hydnophytum moseleyanum,,Becc.,SL,,Y,QI
+21120,plants,land plants,Rubiaceae,Myrmecodia,,,,,N,U
+12228,plants,land plants,Rubiaceae,Myrmecodia beccarii,,Hook.f.,V,V,Y,Q
+19935,plants,land plants,Rubiaceae,Myrmecodia platytyrea,,Becc.,C,,N,Q
+16610,plants,land plants,Rubiaceae,Myrmecodia platytyrea subsp. antoinii,,(Becc.) C.R.Huxley & Jebb,SL,,Y,QI
+8188,plants,land plants,Rubiaceae,Myrmecodia tuberosa,,Jack,SL,,Y,QI
+12034,plants,land plants,Dipteridaceae,Dipteris conjugata,,Reinw.,NT,,Y,QI
+12024,plants,land plants,Gleicheniaceae,Sticherus milnei,,(Baker) Ching,V,,Y,QI
+21854,plants,land plants,Hymenophyllaceae,Crepidomanes aphlebioides,,(Christ) I.M.Turner,CR,,Y,QI
+14093,plants,land plants,Hymenophyllaceae,Crepidomanes majoriae,,(Watts) N.A.Wakef.,V,,Y,Q
+8513,plants,land plants,Hymenophyllaceae,Didymoglossum exiguum,,(Bedd.) Copel.,PE,EX,Y,Q
+33356,plants,land plants,Hymenophyllaceae,Didymoglossum mindorense,,(Christ) Ebihara & K.Iwats.,NT,,Y,QI
+29896,plants,land plants,Hymenophyllaceae,Hymenophyllum digitatum,,(Sw.) Fosberg,V,,Y,QI
+13884,plants,land plants,Hymenophyllaceae,Hymenophyllum eboracense,,Croxall,V,,Y,Q
+12052,plants,land plants,Hymenophyllaceae,Hymenophyllum gracilescens,,Domin,V,,Y,Q
+13885,plants,land plants,Hymenophyllaceae,Hymenophyllum kerianum,,Watts,V,,Y,Q
+12047,plants,land plants,Hymenophyllaceae,Hymenophyllum lobbii,,T.Moore,PE,EX,Y,QI
+33348,plants,land plants,Hymenophyllaceae,Hymenophyllum pallidum,,(Blume) Ebihara & K.Iwats.,NT,,Y,QI
+41411,plants,land plants,Hymenophyllaceae,Hymenophyllum reinwardtii,,Bosch,CR,,Y,QI
+13883,plants,land plants,Hymenophyllaceae,Hymenophyllum whitei,,Goy,CR,EX,Y,Q
+33350,plants,land plants,Hymenophyllaceae,Polyphlebium endlicherianum,,(C.Presl) Ebihara & K.Iwats.,V,E,Y,QAI
+37837,plants,land plants,Orobanchaceae,Striga asiatica,,(L.) Kuntze,,,N,XU
+8163,plants,land plants,Lycopodiaceae,Huperzia,,,,,N,U
+12357,plants,land plants,Lycopodiaceae,Huperzia serrata,,(Thunb. ex Murray) Trevis.,PE,EX,Y,QI
+40994,plants,land plants,Lycopodiaceae,Phlegmariurus,,,,,N,U
+34745,plants,land plants,Lycopodiaceae,Phlegmariurus carinatus,,(Desv. ex Poir.) Ching,E,E,Y,QI
+36500,plants,land plants,Lycopodiaceae,Phlegmariurus creber,rat-tail tassel-fern,(Alderw.) A.R.Field & Bostock,CR,,Y,Q
+34757,plants,land plants,Lycopodiaceae,Phlegmariurus dalhousieanus,blue tassel-fern,(Spring) A.R.Field & Bostock,CR,E,Y,QI
+36497,plants,land plants,Lycopodiaceae,Phlegmariurus delbrueckii,,(Herter) A.R.Field & Bostock,V,,Y,Q
+40988,plants,land plants,Lycopodiaceae,Phlegmariurus harmsii,,(Nessel) A.R.Field & Bostock,SL,,Y,QI
+40992,plants,land plants,Lycopodiaceae,Phlegmariurus ledermannii,,(Herter) A.R.Field & Bostock,V,,Y,Q
+34766,plants,land plants,Lycopodiaceae,Phlegmariurus lockyeri,,(D.L.Jones & B.Gray) A.R.Field & Bostock,V,V,Y,Q
+40556,plants,land plants,Lycopodiaceae,Phlegmariurus nummulariifolius,,(Blume) Ching,,,,XU
+34778,plants,land plants,Lycopodiaceae,Phlegmariurus phlegmaria,,(L.) T.Sen & U.Sen,C,,N,XU
+34782,plants,land plants,Lycopodiaceae,Phlegmariurus phlegmarioides,,(Gaudich.) A.R.Field & Bostock,V,,Y,QAI
+41046,plants,land plants,Lycopodiaceae,Phlegmariurus pinifolius,,(Trevis.) Kiew,E,,Y,Q
+40557,plants,land plants,Lycopodiaceae,Phlegmariurus proliferus,,(Blume) A.R.Field & Bostock,,,,XU
+34780,plants,land plants,Lycopodiaceae,Phlegmariurus squarrosus,water tassel-fern,(G.Forst.) A.Love & D.Love,CR,CE,Y,QAI
+34772,plants,land plants,Lycopodiaceae,Phlegmariurus tetrastichoides,,(A.R.Field & Bostock) A.R.Field & Bostock,V,V,Y,Q
+34771,plants,land plants,Lycopodiaceae,Phlegmariurus varius,,(R.Br.) A.R.Field & Bostock,V,,Y,QAI
+41166,plants,land plants,Lycopodiaceae,Pseudodiphasium volubile,,(G.Forst.) Holub,PE,EX,Y,QI
+41174,plants,land plants,Lycopodiaceae,Pseudolycopodiella limosa,,(Hook.) A.R.Field,NT,,Y,Q
+12111,plants,land plants,Aspleniaceae,Asplenium normale,,D.Don,V,,Y,QI
+12113,plants,land plants,Aspleniaceae,Asplenium pellucidum,,Lam.,V,V,Y,QI
+41607,plants,land plants,Aspleniaceae,Hymenasplenium perriei,,Li Bing Zhang & K.W.Xu,V,,Y,QI
+41579,plants,land plants,Aspleniaceae,Hymenasplenium wildii,,(F.M.Bailey) D.J.Ohlsen,V,V,Y,Q
+12084,plants,land plants,Athyriaceae,Diplazium cordifolium,,Blume,V,V,Y,QI
+12083,plants,land plants,Athyriaceae,Diplazium pallidum,,(Blume) T.Moore,E,E,Y,QI
+34929,plants,land plants,Athyriaceae,Diplazium squamuligerum,,(Rosenst.) Parris,CR,,Y,Q
+41596,plants,land plants,Blechnaceae,Blechnum reticulatum,,R.K.Wilson & Bayly,NT,,Y,Q
+10282,plants,land plants,Dryopteridaceae,Dryopteris hasseltii,,(Blume) C.Chr.,NT,,Y,Q
+12039,plants,land plants,Dryopteridaceae,Dryopteris sparsa,,(Buch.-Ham. ex D.Don) Kuntze,V,,Y,QI
+34742,plants,land plants,Dryopteridaceae,Dryopteris wattsii,,"M.McKeown, Sundue & Barrington",V,,Y,Q
+9860,plants,land plants,Dryopteridaceae,Elaphoglossum callifolium,,(Blume) T.Moore,NT,,Y,Q
+36593,plants,land plants,Dryopteridaceae,Lastreopsis dissecta,,"(C.T.White & Goy) Labiak, Sundue & R.C.Moran",NT,,Y,Q
+13855,plants,land plants,Dryopteridaceae,Lastreopsis silvestris,,D.A.Sm. ex Tindale,V,,Y,QA
+9868,plants,land plants,Dryopteridaceae,Lastreopsis walleri,,Tindale,V,V,Y,Q
+41599,plants,land plants,Dryopteridaceae,Parapolystichum grayi,,(D.L.Jones) J.J.S.Gardner & Nagalingum,V,,Y,Q
+41598,plants,land plants,Dryopteridaceae,Parapolystichum tinarooense,,"(Tindale) Labiak, Sundue & R.C.Moran",V,,Y,Q
+12057,plants,land plants,Lindsaeaceae,Lindsaea pulchella var. blanda,,(Mett. ex Kuhn) K.U.Kramer,,V,Y,XU
+12058,plants,land plants,Lindsaeaceae,Lindsaea terrae-reginae,,K.U.Kramer,E,,Y,Q
+41542,plants,land plants,Polypodiaceae,Ctenopterella blechnoides,,(Grev.) Parris,V,V,Y,QI
+21874,plants,land plants,Polypodiaceae,Drynaria x dumicola,,Bostock,V,,Y,Q
+11649,plants,land plants,Polypodiaceae,Lemmaphyllum accedens,,(Blume) Donk,PE,EX,Y,QI
+16625,plants,land plants,Polypodiaceae,Microsorum membranifolium,pimple fern,(R.Br.) Ching,NT,,Y,QI
+41560,plants,land plants,Polypodiaceae,Oreogrammitis albosetosa,,(F.M.Bailey) Parris,V,,Y,Q
+41570,plants,land plants,Polypodiaceae,Oreogrammitis leonardii,,(Parris) Parris,V,,Y,Q
+41726,plants,land plants,Polypodiaceae,Oreogrammitis reinwardtii,,(Blume) Parris,V,V,Y,QI
+41541,plants,land plants,Polypodiaceae,Tomophyllum walleri,,(Maiden & Betche) Parris,V,V,Y,Q
+2427,plants,land plants,Pteridaceae,Antrophyum austroqueenslandicum,,D.L.Jones,CR,CE,Y,Q
+14034,plants,land plants,Pteridaceae,Antrophyum plantagineum,,(Cav.) Kaulf.,NT,,Y,QI
+11744,plants,land plants,Pteridaceae,Antrophyum subfalcatum,,Brack.,V,,Y,QI
+41200,plants,land plants,Pteridaceae,Haplopteris dareicarpa,,(Hook.) S.Linds. & C.W.Chen,PE,,Y,Q
+39465,plants,land plants,Tectariaceae,Tectaria devexa,,(Kunze ex Mett.) Copel.,C,,N,Q
+12026,plants,land plants,Tectariaceae,Tectaria devexa var. devexa,,(Kunze ex Mett.) Copel.,E,E,Y,Q
+12027,plants,land plants,Tectariaceae,Tectaria siifolia,,(Willd.) Copel.,V,,Y,QAI
+41350,plants,land plants,Thelypteridaceae,Amblovenatum immersum,,(Blume) Parris,CR,,Y,QI
+41354,plants,land plants,Thelypteridaceae,Amblovenatum tildeniae,,(Holttum) T.E.Almeida & A.R.Field,CR,,Y,Q
+9553,plants,land plants,Thelypteridaceae,Chingia australis,,Holttum,E,E,Y,Q
+42078,plants,land plants,Thelypteridaceae,Pakau pennigera,,(G.Forst.) S.E.Fawc. & A.R.Sm.,E,,Y,QAI
+11646,plants,land plants,Thelypteridaceae,Plesioneuron tuberculatum,,(Ces.) Holttum,E,E,Y,QI
+11700,plants,land plants,Thelypteridaceae,Pneumatopteris pennigera,lime fern,(G.Forst.) Holttum,,,N,XU
+42079,plants,land plants,Thelypteridaceae,Reholttumia costata,,(Brack.) S.E.Fawc. & A.R.Sm.,NT,,Y,QI
+16042,plants,land plants,Thelypteridaceae,Thelypteris confluens,,(Thunb.) C.V.Morton,V,,Y,QAI
+8185,plants,land plants,Proteaceae,Macadamia jansenii,,C.L.Gross & P.H.Weston,CR,E,Y,Q
+8486,plants,land plants,Psilotaceae,Tmesipteris lanceolata,,P.A.Dang.,PE,EX,Y,Q

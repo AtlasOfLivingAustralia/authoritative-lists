@@ -1,0 +1,31 @@
+Field,Code,Code_description
+EPBC_status,CD,Conservation Dependent
+EPBC_status,CE,Critically Endangered
+EPBC_status,E,Endangered
+EPBC_status,EX,Extinct
+EPBC_status,V,Vulnerable
+EPBC_status,XW,Extinct in the Wild
+Endemicity,IA,Introduced (Intranational)
+Endemicity,II,Introduced (International)
+Endemicity,IU,Introduced (Unknown)
+Endemicity,Q,Queensland Endemic
+Endemicity,QA,Intranational
+Endemicity,QAI,Not Endemic to Australia
+Endemicity,QI,Regional Endemic
+Endemicity,U,Unknown
+Endemicity,VA,Vagrant (Intranational)
+Endemicity,VI,Vagrant (International)
+Endemicity,VU,Vagrant (Unknown)
+Endemicity,XA,Exotic (Intranational)
+Endemicity,XI,Exotic (International)
+Endemicity,XU,Exotic (Unknown)
+NCA_status,C,Least concern
+NCA_status,CR,Critically endangered
+NCA_status,E,Endangered
+NCA_status,EX,Extinct
+NCA_status,I,International
+NCA_status,NT,Near threatened
+NCA_status,P,Prohibited
+NCA_status,PE,Extinct in the wild
+NCA_status,SL,Special least concern
+NCA_status,V,Vulnerable
