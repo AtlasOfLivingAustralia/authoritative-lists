@@ -231,16 +231,19 @@ def webscrape_list_url(url=None,
         soup =  BeautifulSoup(response.text, 'html.parser')
         strings = list(soup.find_all('a'))
         urls = list(set([str(s) for s in strings if ".xls" in str(s)]))
-
+        
         # initialise dataframe
         df_wa = pd.DataFrame()
 
         # loop over urls to find flora and fauna
         for url in urls:
+            
+            # read the excel file
             xls = pd.ExcelFile(url.split("\"")[1])
-            temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
-            if 'fauna' in url.lower():
 
+            # first check for fauna
+            if 'fauna' in url.lower():
+                temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
                 temp2 = temp.rename(columns={
                     'Scientific name': 'scientificName',
                     'Common name': 'vernacularName',
@@ -251,7 +254,14 @@ def webscrape_list_url(url=None,
                 temp2['kingdom'] = 'Animalia'
                 df_wa = pd.concat([df_wa,temp2]).reset_index(drop=True)
                 
+            # then check for flora
             elif 'flora' in url.lower():
+                
+                # try this
+                temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])[['Taxon', 'Family', 'WA Rank']]
+                temp1 = pd.read_excel(xls,sheet_name=xls.sheet_names[1])[['Taxon', 'Family', 'WA Status']]
+                temp = temp.rename(columns={'WA Rank': 'WA Status'})
+                temp = pd.concat([temp,temp1])
                 
                 # get codes and ensure correct codes are in place
                 codes = get_conservation_codes(state=state)
@@ -261,10 +271,10 @@ def webscrape_list_url(url=None,
                 temp = temp.replace({'WA Status': {1: 'P1', 2: 'P2', 3: 'P3', 4: 'P4'}})
                 
                 # replace 'T' with WA Rank value
-                temp['WA Status 2'] = [row[-1] if row[-2]=='T' else row[-2] for row in temp[['WA Status','WA Rank']].itertuples()]
+                # temp['WA Status 2'] = [row[-1] if row[-2]=='T' else row[-2] for row in temp[['WA Status','WA Rank']].itertuples()]
                 
                 # merge codes and data
-                temp2 = pd.merge(temp,codes,left_on='WA Status 2',right_on='Code')
+                temp2 = pd.merge(temp,codes,left_on='WA Status',right_on='Code')
                 
                 # rename columns
                 temp2 = temp2.rename(columns={
@@ -276,6 +286,7 @@ def webscrape_list_url(url=None,
 
                 # add a vernacular name column
                 temp2['vernacularName'] = None
+                temp2['kingdom'] = None
 
                 # concat data
                 df_wa = pd.concat([df_wa,temp2]).reset_index(drop=True)
