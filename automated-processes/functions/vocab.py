@@ -29,7 +29,7 @@ conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act
 # urls for relevant sensitive lists
 sensitive_list_urls = {"New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
              "Queensland": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"],
-             "Victoria": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"], ### TODO: check on this
+             "Victoria": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"], ### NOTE: check on this
              "Western Australia": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"]}
 
 # all the state lists that are automatically checked every week
