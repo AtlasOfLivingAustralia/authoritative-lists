@@ -1,6 +1,9 @@
+import sys
+sys.path.append('../')
+
 from functions.all_args import create_parser
 from functions.ingest_lists import ingest_lists
-import functions.email_functions as ef
+from functions import email_functions as ef
 from functions.vocab import conservation_lists,sensitive_lists
 
 def main():

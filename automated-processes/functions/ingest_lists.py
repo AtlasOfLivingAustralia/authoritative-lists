@@ -1,7 +1,7 @@
 import pandas as pd
 from . import list_functions as lf
 from .vocab import conservation_list_urls,sensitive_list_urls,list_ids_sensitive_test,list_ids_sensitive_prod
-from .vocab import list_ids_conservation_test,list_ids_conservation_prod
+from .vocab import list_ids_conservation_test,list_ids_conservation_prod,listsProd,urlSuffix
 from .sensitive_vs_conservation import create_conservation_list,create_sensitive_list
 from datetime import datetime
 import boto3
@@ -37,7 +37,7 @@ def ingest_lists(conservation_lists = None,
         s3_info = lf.get_s3_information(args=args)
 
     # make sure local directories exist for writing in
-    local_dirs = ['data/temp-changes','data/temp-new-lists','data/temp-old-lists']
+    local_dirs = ['data/temp-changes','data/temp-new-lists','data/temp-historical-lists']
     for ld in local_dirs:
         if not os.path.isdir(ld):
             os.mkdir(ld)
@@ -69,6 +69,21 @@ def ingest_lists(conservation_lists = None,
 
         # post list to test
         response = lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
+
+        # get old and new list urls    
+        oldListUrl = listsProd + list_ids_conservation_prod[state] + urlSuffix
+
+        # download old list and turn it into pandas dataframe
+        oldList = lf.download_ala_specieslist(oldListUrl)
+        oldList = lf.kvp_to_columns(oldList)
+        temp_filename = "{}-conservation-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+        oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
+
+        # if specified, upload changes
+        if upload:
+            s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
+                                  Bucket = s3_info['bucket'], 
+                                  Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
 
         # generate difference report for conservation list
         conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
@@ -119,6 +134,20 @@ def ingest_lists(conservation_lists = None,
                # post list to test
         lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
         
+        # get old and new list urls    
+        oldListUrl = listsProd + list_ids_sensitive_prod[state] + urlSuffix
+        oldList = lf.download_ala_specieslist(oldListUrl)
+        oldList = lf.kvp_to_columns(oldList)
+        temp_filename = "{}-sensitive-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+        oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
+
+        # if specified, upload changes
+        if upload:
+            s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
+                                  Bucket = s3_info['bucket'], 
+                                  Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
+
+
         # generate difference report for sensitive list
         sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
         
