@@ -1,6 +1,6 @@
 beautifulsoup4==4.12.3
 boto3==1.34.89
-certifi==2023.7.22
+certifi==2024.7.4
 Markdown==3.4.1
 pandas==2.0.3
 redmail==0.6.0
