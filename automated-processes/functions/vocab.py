@@ -15,13 +15,21 @@ listsProd = "https://lists.ala.org.au/ws/speciesListItems/"
 listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"
 urlSuffix = "?max=10000&includeKVP=true"
 
+state_abbreviations = {
+    "Australian Capital Territory": "ACT",
+    "New South Wales": "NSW",
+    "Northern Territory": "NT",
+    "Queensland": "QLD",
+    "Victoria": "VIC",
+    "Western Australia": "WA"
+}
+
 # urls for conservation lists
 conservation_list_urls = {"Australian Capital Territory": ["https://www.data.act.gov.au/resource/9ikf-qahj.json"], # or is this correct?
              "New South Wales": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
              "Northern Territory": ["https://ftp-dlrm.nt.gov.au/main.html?download&weblink=1e717d654034af5e5f840d2ba3fd9187&realfilename=NT_Species_List_Fauna.xlsx", #fauna
                                     "https://ftp-dlrm.nt.gov.au/main.html?download&weblink=60088e77ecef6c6cbf515c299f07a420&realfilename=NT_Species_List_Flora.xlsx"], #flora
              "Queensland": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
-             "Tasmania": ["https://nre.tas.gov.au/Documents/TasThreatenedSpecies.xls.xlsx"],
              "Victoria": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
              "Western Australia": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
              "EPBC": ["https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974"]} 
@@ -38,8 +46,7 @@ conservation_lists = ["Queensland",
          "New South Wales",
          "Western Australia",
          "Australian Capital Territory", ## Done - sensitive managed by org
-        #  "Tasmania", ## Done - sensitive managed by org - need to figure this out
-         "Victoria", #authentication error]
+         "Victoria",
          "EPBC"
          ]
 

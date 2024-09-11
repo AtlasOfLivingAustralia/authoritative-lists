@@ -67,6 +67,9 @@ def ingest_lists(conservation_lists = None,
         # trim whitespace at end of strings
         conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
 
+        # add, change or delete list values as appropriate
+        conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
+
         # post list to test
         response = lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
 
@@ -131,7 +134,10 @@ def ingest_lists(conservation_lists = None,
         # trim whitespace at end of strings
         sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 
-               # post list to test
+        # add, change or delete list values as appropriate
+        sensitive_list = lf.add_change_delete_list_values(list_type = 'Sensitive',list_data=sensitive_list,state=state)
+
+        # post list to test
         lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
         
         # get old and new list urls    
@@ -146,7 +152,6 @@ def ingest_lists(conservation_lists = None,
             s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
                                   Bucket = s3_info['bucket'], 
                                   Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
-
 
         # generate difference report for sensitive list
         sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")

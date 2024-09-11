@@ -6,7 +6,7 @@ import json
 import certifi
 import ssl
 import requests
-from .vocab import api_values,conservation_list_urls,listsProd,listsTest,urlSuffix
+from .vocab import api_values,conservation_list_urls,listsProd,listsTest,urlSuffix,state_abbreviations
 from .vocab import list_names_conservation_test,list_names_sensitive_test,token_url
 from bs4 import BeautifulSoup
 import time
@@ -467,3 +467,51 @@ def get_s3_information(args=None):
         s3_info[key] = value
 
     return s3_info
+
+def add_change_delete_list_values(list_type = None,
+                                  list_data = None,
+                                  state = None):
+    
+    if list_data is None:
+        raise ValueError("Please provide a list for checking.")
+    
+    if list_type is None or list_type not in ['Sensitive','Conservation']:
+        raise ValueError("Only Sensitive and Conservation are accepted for list_type values")
+    
+    if state is None:
+        raise ValueError("Please provide a state.")
+    
+    # read in additions, changes, deletions
+    for dir in ['Additions','Changes','Deletions']:
+        df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state_abbreviations[state],list_type,dir)).set_index('raw_scientificName')
+        if not df.empty:
+            if dir == 'Additions' or dir == 'Changes':
+                df = df.T
+                dict_df = df.to_dict()
+                for name in dict_df:
+                    clean_dict_df = {k: dict_df[name][k] for k in dict_df[name] if not type(dict_df[name][k]) is float}
+                    fields = []
+                    values = []
+                    for entry in clean_dict_df:
+                        if 'field' in entry:
+                            fields.append(dict_df[name][entry])
+                        elif 'value' in entry:
+                            values.append(dict_df[name][entry])
+                        else:
+                            raise ValueError("There are columns titled other than field and value - fix this")
+                    if dir == 'Additions':
+                        temp_dict = {x:'' for x in list_data.columns}
+                        temp_dict['raw_scientificName'] = name
+                        for i,fv in enumerate(zip(fields,values)):
+                            temp_dict[fv[0]] = fv[1]
+                        list_data = pd.concat([list_data,pd.DataFrame([temp_dict])])
+                    else:
+                        index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
+                        for i,fv in enumerate(zip(fields,values)):
+                            list_data.at[index,fv[0]] = fv[1]
+            else:
+                for i,row in df.iterrows():
+                    index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]
+                    list_data.drop(index)
+
+    return list_data
