@@ -1,0 +1,15 @@
+﻿sourceStatus,Table of Equivalency (for definitions in each jurisdiction see relevent tab),,,,,,,,
+Status - Based on IUCN but also refering to unique codes from jurisdictions. Note - some jursidctions use informal codes in their data. These are referenced under each tab,ACT,EPBC,NSW,NT,Qld,SA,Tas,Vic,WA
+Extinct,Extinct,Extinct,Extinct,Extinct,Extinct wildlife,*,Extinct,Extinct,Extinct
+Extinct in the Wild,Extinct in the Wild,Extinct in wild,Extinct,Extinct,Extinct in the wild wildlife,Endangered,Extinct,"Extinct in the Wild, Endangered (Extinct in Victoria)",Extinct in the Wild
+Critically Endangered ,Critically Endangered ,Critically Endangered,Critically Endangered,"Critically endangered (possibly extinct), Critically endangered",Critically endangered wildlife,Endangered,Endangered,Critically Endangered,Critically Endangered
+Endangered,Endangered,Endangered,Endangered,Endangered,Endangered wildlife,Endangered,Endangered,Endangered,Endangered
+Vulnerable,Vulnerable,Vulnerable,Vulnerable,Vulnerable,Vulnerable wildlife,Vulnerable,Vulnerable,Vulnerable,Vulnerable
+Conservation Dependent,Regionally Conservation Dependent,Conservation dependent,*,*,*,*,*,Conservation Dependent,"Conservation Dependent Species (Specially Protected), Other Specially Protected Species"
+Near Threatened,*,*,*,Near Threatened,Near threatened wildlife,Rare,Rare,*,Priority 4
+Least concern,*,*,*,Least concern,"Special least concern wildlife, Least concern wildlife",*,*,*,*
+Data Deficient,*,*,*,Data Deficient,*,*,*,*,"Priority 1, Priority 2, Priority 3"
+Migratory (Where specifically identified under state legislation as migratory species. Most jurisdictions use J/C/K),*,JAMBA CAMBA KAMBA,*,*,*,*,*,*,Migratory Species (Specially Protected)
+CITES (where there is a specific category relating to CITES),*,CITES,*,*,International wildlife (Partly),*,*,*,*
+Not Evaluated,*,*,*,Not Evaluated,*,*,*,*,*
+Restricted,*,*,*,*,*,*,*,Restricted,*
