@@ -235,10 +235,11 @@ def create_conservation_list(list_data = None,
         ])].reset_index(drop=True)
 
         # separate conservation and sensitive species
-        conservation_list = conservation_list[~conservation_list['RESTRICTED_FLAG'].isin([
-            'rest',
-            'breed'
-        ])].reset_index(drop=True)
+        # conservation_list = conservation_list[~conservation_list['RESTRICTED_FLAG'].isin([
+        #     'rest',
+        #     'breed'
+        # ])].reset_index(drop=True)
+        conservation_list['RESTRICTED_FLAG'] = conservation_list['RESTRICTED_FLAG'].replace(math.nan,"")
 
         # add family column
         conservation_list['family'] = ''
@@ -290,4 +291,4 @@ def create_conservation_list(list_data = None,
     if extra_columns:
         return conservation_list[['raw_scientificName','scientificName', 'taxonRank', 'family', 'vernacularName', 'status','sourceStatus'] + extra_columns]
     else:
-        return conservation_list[['raw_scientificName','scientificName', 'taxonRank', 'family', 'vernacularName', 'status','sourceStatus',]]
+        return conservation_list[['raw_scientificName','scientificName', 'taxonRank', 'family', 'vernacularName', 'status','sourceStatus']]

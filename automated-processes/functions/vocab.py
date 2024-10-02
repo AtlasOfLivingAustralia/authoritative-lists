@@ -21,7 +21,8 @@ state_abbreviations = {
     "Northern Territory": "NT",
     "Queensland": "QLD",
     "Victoria": "VIC",
-    "Western Australia": "WA"
+    "Western Australia": "WA",
+    "EPBC": "EPBC"
 }
 
 # urls for conservation lists

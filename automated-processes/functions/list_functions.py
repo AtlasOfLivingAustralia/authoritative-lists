@@ -333,7 +333,9 @@ def format_data_for_post(list_data=None,
     # loop over each row to generate kvp values
     for i,row in list_data.iterrows():
         post_data["listItems"][i] = {"itemName": row['scientificName'],"kvpValues": []}
+        # print(columns)
         for x in columns:
+            # print(x)
             post_data["listItems"][i]["kvpValues"].append({"key": x, "value": row[x]})
     
     # return data
@@ -350,7 +352,7 @@ def post_list_to_test(list_data=None,
     
     # format your data for posting to test
     data_for_post = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
-    
+
     # get authentication for server
     auth = get_authentication(args=args)
 
@@ -387,13 +389,13 @@ def post_list_to_test(list_data=None,
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
 
-    # ensure list is 
-    newListUrl = listsTest + druid + urlSuffix
-    test_list = download_ala_specieslist(newListUrl)
-    test_list = kvp_to_columns(test_list)
-    while test_list.shape[0] > list_data.shape[0]:
-        time.sleep(5)
-        test_list = download_ala_specieslist(newListUrl)
+    # # ensure list is 
+    # newListUrl = listsTest + druid + urlSuffix
+    # test_list = download_ala_specieslist(newListUrl)
+    # test_list = kvp_to_columns(test_list)
+    # while test_list.shape[0] > list_data.shape[0]:
+    #     time.sleep(5)
+    #     test_list = download_ala_specieslist(newListUrl)
 
     return None # was response   
 
@@ -451,7 +453,7 @@ def refresh_access_token(refresh_token=None,
     else:
         print(response.status_code)
         print(response.text)
-        raise ValueError("Need to fix above - see status code and text")
+        raise ValueError("It is likely you need to manually regenerate JWT token - try this")
     
 def get_s3_information(args=None):
 
@@ -483,13 +485,17 @@ def add_change_delete_list_values(list_type = None,
     
     # read in additions, changes, deletions
     for dir in ['Additions','Changes','Deletions']:
-        df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state_abbreviations[state],list_type,dir)).set_index('raw_scientificName')
+        df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state_abbreviations[state],list_type,dir))
+        df = df.fillna('')
         if not df.empty:
-            if dir == 'Additions' or dir == 'Changes':
+            if dir == 'Additions':
+                list_data = pd.concat([list_data,df]).reset_index(drop=True)
+            elif dir == 'Changes':
+                df = df.set_index('raw_scientificName')
                 df = df.T
                 dict_df = df.to_dict()
                 for name in dict_df:
-                    clean_dict_df = {k: dict_df[name][k] for k in dict_df[name] if not type(dict_df[name][k]) is float}
+                    clean_dict_df = {k: dict_df[name][k] for k in dict_df[name]} # if not (type(dict_df[name][k]) is float or dict_df[name][k] == '')}
                     fields = []
                     values = []
                     for entry in clean_dict_df:
@@ -499,16 +505,9 @@ def add_change_delete_list_values(list_type = None,
                             values.append(dict_df[name][entry])
                         else:
                             raise ValueError("There are columns titled other than field and value - fix this")
-                    if dir == 'Additions':
-                        temp_dict = {x:'' for x in list_data.columns}
-                        temp_dict['raw_scientificName'] = name
-                        for i,fv in enumerate(zip(fields,values)):
-                            temp_dict[fv[0]] = fv[1]
-                        list_data = pd.concat([list_data,pd.DataFrame([temp_dict])])
-                    else:
-                        index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
-                        for i,fv in enumerate(zip(fields,values)):
-                            list_data.at[index,fv[0]] = fv[1]
+                    index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
+                    for i,fv in enumerate(zip(fields,values)):
+                        list_data.at[index,fv[0]] = fv[1]
             else:
                 for i,row in df.iterrows():
                     index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]

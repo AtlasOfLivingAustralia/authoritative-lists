@@ -66,12 +66,13 @@ def ingest_lists(conservation_lists = None,
 
         # trim whitespace at end of strings
         conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
-
+        
         # add, change or delete list values as appropriate
         conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
-
+        
         # post list to test
-        response = lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
+        # response = 
+        lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
 
         # get old and new list urls    
         oldListUrl = listsProd + list_ids_conservation_prod[state] + urlSuffix
@@ -105,9 +106,9 @@ def ingest_lists(conservation_lists = None,
                                     Bucket = s3_info['bucket'], 
                                     Key = '{}/{}'.format(s3_info['key_conservation_changes'],temp_filename))
     
-            # write conservation list to csv (may change this later)
-            temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-            conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
+        # write conservation list to csv (may change this later)
+        temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+        conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
 
         # check for uploading
         if upload:
@@ -170,9 +171,9 @@ def ingest_lists(conservation_lists = None,
                                     Bucket = s3_info['bucket'], 
                                     Key = '{}/{}'.format(s3_info['key_sensitive_changes'],temp_filename))
             
-            # write list to csv for upload (may change this later)
-            temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-            sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
+        # write list to csv for upload (may change this later)
+        temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+        sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
 
         # upload file to s3
         if upload:

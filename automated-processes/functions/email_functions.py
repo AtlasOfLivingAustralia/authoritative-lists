@@ -1,4 +1,7 @@
-from redmail import EmailSender,EmailHandler
+import sys
+sys.path.append('../')
+
+from redmail import EmailSender
 from datetime import datetime
 from pathlib import Path
 import markdown
@@ -22,7 +25,7 @@ def send_email(conservation_dict_changes = None,
     attachments = {}
 
     # create body of email here using markdown template
-    with open('functions/email_template.md', 'r') as f:
+    with open('../functions/email_template.md', 'r') as f:
         text = f.read()
         html = markdown.markdown(text)
 
@@ -48,15 +51,13 @@ def send_email(conservation_dict_changes = None,
     html = html.replace('DATE',str(datetime.now().date()))
 
     # get username and password
-    username,password = get_username_password(args=args)
-    email = EmailSender(host="smtp.office365.com", # this is for outlook - gmails is smtp.gmail.com
-                        port=587,
-                        username=username,
-                        password=password)
+    # username,password = get_username_password(args=args)
+    email = EmailSender(host='smtp-relay.csiro.au',
+                        port=25)
     
-    # send email (this is currently test one)
     email.send(
-        receivers=["authoritative-list-updates@ala.org.au"], #["amanda.buyan@csiro.au"], #
+        sender = "amanda.buyan@csiro.au",
+        receivers=["authoritative-list-updates@ala.org.au"], 
         subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
         html=html,
         attachments = attachments
