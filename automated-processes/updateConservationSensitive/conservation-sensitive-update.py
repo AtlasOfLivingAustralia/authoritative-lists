@@ -54,9 +54,6 @@ def main():
     else:
         args.sensitive_lists = sensitive_lists
 
-    # # check if we are ingesting lists or not
-    # if args.ingest_lists:
-
     # get changes from lists
     conservation_dict_changes,sensitive_dict_changes = ingest_lists(conservation_lists=args.conservation_lists,
                                                                     sensitive_lists=args.sensitive_lists,
@@ -70,9 +67,6 @@ def main():
         ef.send_email(conservation_dict_changes=conservation_dict_changes,
                       sensitive_dict_changes=sensitive_dict_changes,
                       args=args) 
-            
-    # post given lists to production
-    # if args.post_lists_to_production:
 
 if __name__ == '__main__':
     main()

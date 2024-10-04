@@ -1,7 +1,7 @@
 import pandas as pd
 import math
 from .vocab import generalisation_categories,codeMap,kingdomMap,conservation_columns_rename,sensitive_columns_rename,classMap
-from .vocab import conservation_species_corrections,sensitive_species_corrections,statuses_rename
+from .vocab import statuses_rename
 from . import list_functions as lf
 
 def create_sensitive_list(list_data = None,
@@ -113,7 +113,6 @@ def create_sensitive_list(list_data = None,
 
     # replace all the NaNs with an empty string
     sensitive_species['vernacularName'] = sensitive_species['vernacularName'].replace(math.nan,"")
-    sensitive_species['scientificName'] = sensitive_species['scientificName'].replace(sensitive_species_corrections[state])
 
     # replace NaNs with empty string
     sensitive_species = sensitive_species.where((pd.notnull(sensitive_species)), '')
@@ -269,9 +268,6 @@ def create_conservation_list(list_data = None,
         print(conservation_list.columns)
         import sys
         sys.exit()
-
-    # preserve the original name
-    conservation_list['scientificName'] = conservation_list['scientificName'].replace(conservation_species_corrections[state])
 
     # remove nans from the status column
     if 'status' in conservation_list:

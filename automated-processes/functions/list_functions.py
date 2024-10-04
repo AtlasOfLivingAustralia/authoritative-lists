@@ -503,8 +503,6 @@ def add_change_delete_list_values(list_type = None,
                             fields.append(dict_df[name][entry])
                         elif 'value' in entry:
                             values.append(dict_df[name][entry])
-                        else:
-                            raise ValueError("There are columns titled other than field and value - fix this")
                     index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
                     for i,fv in enumerate(zip(fields,values)):
                         list_data.at[index,fv[0]] = fv[1]

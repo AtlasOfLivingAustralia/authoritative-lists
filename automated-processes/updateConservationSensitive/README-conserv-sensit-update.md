@@ -37,7 +37,7 @@ This is going to be **needs to be confirmed** *a cron job*, running **needs to b
     | Northern Territory           |       X      |           |
     | Queensland                   |       X      |     X     |
     | South Australia              |              |           |
-    | Tasmania                     |       X      |           |
+    | Tasmania                     |              |           |
     | Victoria                     |       X      |     X     |
     | Western Australia            |       X      |     X     |
 
@@ -53,46 +53,68 @@ To install all requirements, run
 
     pip install -r requirements.txt
 
-You will need 4 files to have this run correctly:
+You will need 4 files in the same directory as the `conservation-sensitive-update.py` to have this run correctly:
 
-1. ALA Authentication json file (default name is `auth-confidential.json`, specify filename by using `-auth` argument).  To download your authentication, go [here from test for now](https://auth-secure.auth.ap-southeast-2.amazoncognito.com/login?response_type=code&redirect_uri=https%3A%2F%2Faws-auth-test-2023.test.ala.org.au%2Fuserdetails%2Fcallback%3Fclient_name%3DOidcClient&state=059c4be224&client_id=61mj7ivlmf22e5588lgtr8vi7d&scope=openid+profile+email+ala%2Fattrs+ala%2Froles+aws.cognito.signin.user.admin>)
+```
+login.txt
+ids.txt
+auth-confidential.json
+s3_info.txt
+```
 
-2. Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).
+Description and formats:
 
-    ```
-    username = USERNAME
-    password = PASSWORD
-    ```
+#### `login.txt`
 
-3. Your ALA client ID and your secret client ID (default name is `ids.txt`; specify filename by using `-cids` argument).
+Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).
 
-    ```
-    client_id = CLIENT_ID
-    client_secret = CLIENT_SECRET
-    ```
+```
+username = USERNAME
+password = PASSWORD
+```
 
-4. Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).
+#### `ids.txt`
 
-    ```
-    bucket = BUCKET
-    key_conservation_changes = CONSERVATION_CHANGES_DIR
-    key_sensitive_changes = SENSITIVE_CHANGES_DIR
-    key_conservation_lists = CONSERVATION_LISTS_DIR
-    key_sensitive_lists = SENSITIVE_LISTS_DIR
-    ```
+Your ALA client ID and your secret client ID **for the test environment** (default name is `ids.txt`; specify filename by using `-cids` argument).
+
+```
+client_id = CLIENT_ID
+client_secret = CLIENT_SECRET
+```
+
+#### `auth-confidential.txt`
+
+ALA Authentication json file (default name is `auth-confidential.json`, specify filename by using `-auth` argument).  To download your authentication, go [here from test for now](https://auth-secure.auth.ap-southeast-2.amazoncognito.com/login?response_type=code&redirect_uri=https%3A%2F%2Faws-auth-test-2023.test.ala.org.au%2Fuserdetails%2Fcallback%3Fclient_name%3DOidcClient&state=059c4be224&client_id=61mj7ivlmf22e5588lgtr8vi7d&scope=openid+profile+email+ala%2Fattrs+ala%2Froles+aws.cognito.signin.user.admin>)
+
+
+#### `s3_info.txt`
+
+Your s3 bucket information, along with the directories in that bucket (default name is `s3_info.txt`; specify filename by using `-s3` argument).
+
+```
+bucket = BUCKET
+key_conservation_changes = CONSERVATION_CHANGES_DIR
+key_sensitive_changes = SENSITIVE_CHANGES_DIR
+key_conservation_lists = CONSERVATION_LISTS_DIR
+key_sensitive_lists = SENSITIVE_LISTS_DIR
+key_conservation_historical = CONSERVATION_HISTORICAL_DIR
+key_sensitive_historical = SENSITIVE_HISTORICAL_DIR
+```
 
 ## How to run the script
 
-If you indent to update and send an email for all lists, run
+**Note: The option to upload and send email by default is False.  When you're ready to run it for manual checks, set these to True.**
 
-    python main.py
+To run the script for all lists we are able to update, type the following into the command line.
 
-However, there are three arguments that you can use to run this code for select lists, as well as turning the email capacity off: `-cl`, `-sl`, and `-sem`.  
+    python conservation-sensitive-update.py
 
-First are the arguments to the conservation lists (`-cl`) and the sensitive lists (`-sl`).  The default value is `all`; however, you can specify different lists you want to run this workflow on (i.e. one didn't run correctly).  You split lists by `,` and you fill in the spaces in the states with `_`.  Examples are here using the `-cl` argument, but this can also be applied to the `-sl` arguments.
+To get changes for specific lists, use the `-cl` (conservation lists) or `-sl` (sensitive lists) arguments:
 
-    -cl Queensland
-    -cl Northern_Territory
-    -cl Queensland,Northern_Territory
+    python conservation-sensitive-update.py -cl QLD,NSW
+    python conservation-sensitive-update.py -cl WA
 
-Next is the argument to choose whether or not to send an email (`-sem`).  This will inform the relevant parties that lists have been updated and need to be checked for relevance, taxonomy and any other information.  `-sem` is a boolean and is, by default, set to `True`.  Set to `False` if you are updating lists and don't want to spam the relevant parties with updates.
+To run the script including the upload and email options, you will have to set up access to ALA's AWS instance. See [this confluence page](https://confluence.csiro.au/display/ALASD/AWS+access) for more information, or ask Joe.
+
+    prod-login
+    python conservation-sensitive-update.py -up True -sem True

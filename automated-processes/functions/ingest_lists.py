@@ -71,7 +71,6 @@ def ingest_lists(conservation_lists = None,
         conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
         
         # post list to test
-        # response = 
         lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
 
         # get old and new list urls    

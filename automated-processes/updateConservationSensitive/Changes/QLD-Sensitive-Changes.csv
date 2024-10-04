@@ -1,4 +1,4 @@
-raw_scientificName,field,value
+raw_scientificName,field,value,notes
 Acianthus,taxonRank,genus
 Acriopsis,taxonRank,genus
 Anoectochilus,taxonRank,genus
@@ -95,3 +95,6 @@ Trichoglottis,taxonRank,genus
 Vanda,taxonRank,genus
 Vrydagzynea,taxonRank,genus
 Zeuxine,taxonRank,genus
+Dendrobium kingianum x D.speciosum,scientificName,Dendrobium kingianum Bidwill ex Lindl. x Dendrobium speciosum Sm.,
+Macrozamia lomandroides x M.pauli-guilielmi,scientificName,Macrozamia lomandroides - Macrozamia pauli-guilielmi,
+Dendrobium discolor x D.nindii,scientificName,Dendrobium discolor x D.nindii
