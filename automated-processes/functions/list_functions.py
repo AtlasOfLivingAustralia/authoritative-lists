@@ -104,7 +104,7 @@ def read_list_url(url=None,
 
     if ".xls" in url.lower() or ".xlsx" in url.lower():
         # check for skipping lines for the NT
-        if state == "Northern Territory":
+        if state == "NT":
             xls = pd.ExcelFile(url) #,skiprows = [0,1,2,3])
             sheet_names = xls.sheet_names[:-1]
             df = pd.DataFrame()
@@ -119,7 +119,7 @@ def read_list_url(url=None,
                          'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION']] # 'INTRODUCED STATUS'
         else:
             xls = pd.ExcelFile(url,engine='openpyxl')
-            if state == "Tasmania":
+            if state == "TAS":
                 df = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
             else:
                 raise ValueError("{} not taken into account:\n\n{}\n".format(state,url))
@@ -147,7 +147,7 @@ def get_conservation_codes(state=None):
     if state is None:
         raise ValueError("Please provide a state for specific conservation codes.")
     
-    if state == "Northern Territory":
+    if state == "NT":
         
         # get codes, rename and drop anything with NaNs
         xls = pd.ExcelFile(conservation_list_urls[state][0])
@@ -161,7 +161,7 @@ def get_conservation_codes(state=None):
                                                              codes['Categories for classification']))
         return codes
     
-    elif state == "Queensland":
+    elif state == "QLD":
 
         codes = pd.read_csv("https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species-status-codes.csv")
 
@@ -174,13 +174,13 @@ def get_conservation_codes(state=None):
 
         return codes 
     
-    elif state == "Tasmania":
+    elif state == "TAS":
 
         xls = pd.ExcelFile(conservation_list_urls[state][0])
         # first sheet name is species, second sheet is codes
         return pd.read_excel(xls,sheet_name=xls.sheet_names[1],skiprows=[0,6,7,8])[['Category code','Category']][0:4]
     
-    elif state == "Western Australia":
+    elif state == "WA":
 
         # get the data from the url
         response = requests.get(conservation_list_urls[state][0])
@@ -222,7 +222,7 @@ def webscrape_list_url(url=None,
         else:
             return pd.read_csv(test[0])
     
-    elif state == "Western Australia":
+    elif state == "WA":
 
         # get the data from the url
         response = requests.get(url)
@@ -293,14 +293,14 @@ def webscrape_list_url(url=None,
         
         return df_wa[['scientificName','vernacularName','kingdom','family','status','sourceStatus']]
         
-    elif state == "New South Wales":      
+    elif state == "NSW":      
         
         # figure out what this does....
         with urllib.request.urlopen(url,context=ssl._create_unverified_context()) as new_url:
             data = json.loads(new_url.read().decode())
         return pd.json_normalize(data, record_path =['value'])
 
-    elif state == "Victoria":
+    elif state == "VIC":
 
         return pd.read_csv(url) #data, sep=",")
 
@@ -388,14 +388,6 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
-
-    # # ensure list is 
-    # newListUrl = listsTest + druid + urlSuffix
-    # test_list = download_ala_specieslist(newListUrl)
-    # test_list = kvp_to_columns(test_list)
-    # while test_list.shape[0] > list_data.shape[0]:
-    #     time.sleep(5)
-    #     test_list = download_ala_specieslist(newListUrl)
 
     return None # was response   
 

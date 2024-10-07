@@ -24,12 +24,12 @@ def create_sensitive_list(list_data = None,
     extra_columns = None
 
     # first, check for states whose lists we won't be updating automatically
-    if state in ["Australian Capital Territory","South Australia","Northern Territory","Tasmania"]:
+    if state in ["ACT","SA","NT","TAS"]:
 
         return None
 
     # now, check NSW
-    elif state == "New South Wales":
+    elif state == "NSW":
 
         # extra columns - test to see for NSW
         extra_columns = ["kingdom","order","genus"]
@@ -64,7 +64,7 @@ def create_sensitive_list(list_data = None,
         new2['family'] = 'Scincidae'
         sensitive_species = pd.concat([sensitive_species,new,new2])
     
-    elif state == "Queensland":
+    elif state == "QLD":
 
         # NO TAXON RANK AVAILABLE - WHERE TO GET THIS
         extra_columns = ['WildNetTaxonID','taxonID']
@@ -85,7 +85,7 @@ def create_sensitive_list(list_data = None,
         sensitive_species['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + sensitive_species['WildNetTaxonID'].astype(str)
         sensitive_species['taxonRank'] = ''
 
-    elif state == "Western Australia":
+    elif state == "WA":
 
         # make sure the generalisation column is there
         sensitive_species['generalisation'] = "10km"
@@ -95,7 +95,7 @@ def create_sensitive_list(list_data = None,
         # Crendactylus tuberculatus instead of Crenadactylus tuberculatus
         sensitive_species = sensitive_species.replace('Crendactylus tuberculatus','Crenadactylus tuberculatus')
     
-    elif state == "Victoria":
+    elif state == "VIC":
 
         # separate conservation and sensitive species
         sensitive_species = sensitive_species[~sensitive_species['RESTRICTED_FLAG'].isin([
@@ -142,14 +142,14 @@ def create_conservation_list(list_data = None,
     extra_columns = None
     
     # now, check state
-    if state == "New South Wales":
+    if state == "NSW":
 
         # make conservation list
         conservation_list= conservation_list[(conservation_list['stateConservation'] !='Not Listed') & (conservation_list['isCurrent'] == 'true')].reset_index(drop=True)
         conservation_list['status'] = conservation_list['stateConservation']
         conservation_list = conservation_list.rename(columns={"stateConservation": "sourceStatus"})
         
-    elif state == "Queensland":
+    elif state == "QLD":
 
         extra_columns = ['WildNetTaxonID','taxonID']
 
@@ -179,9 +179,10 @@ def create_conservation_list(list_data = None,
         # add rank column
         conservation_list['taxonRank'] = ''
     
-    elif state == "Northern Territory":
+    elif state == "NT":
         
         # edit some of the codes
+        print()
         conservation_list['status'] = conservation_list['status'].replace({
             "CR-PE": "CR",
             "EN-EXNT": "EN",
@@ -198,6 +199,8 @@ def create_conservation_list(list_data = None,
             "(Int)",
             "INFRA",
             "NL",
+            "DD",
+            "NT",
             math.nan
         ])].reset_index(drop=True)
 
