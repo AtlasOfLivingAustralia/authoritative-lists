@@ -113,6 +113,7 @@ def read_list_url(url=None,
             if 'Fauna' in url:
                 df = df[['FAMILY','GENUS','SPECIES','COMMON NAME',
                          'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION']] # 'INTRODUCED STATUS'
+                df['scientificName'] = df['SPECIES'].copy()
             else:
                 df = df.rename(columns={'TAXON NAME': 'scientificName'})
                 df = df[['FAMILY','GENUS','SPECIES','scientificName','COMMON NAME',
@@ -317,7 +318,6 @@ def format_data_for_post(list_data=None,
     '''
     Turn a pandas dataframe into a dictionary for posting to the lists test environment
     '''
-
     # Check which type of list is being passed and create the post_data dict accordingly
     if list_type == "C":
         post_data = {"listName": list_names_conservation_test[state],"listType": "TEST","listItems": [None for i in range(list_data.shape[0])]} 
@@ -388,7 +388,7 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
-
+    # print(response.text)
     return None # was response   
 
 def get_authentication(args=None):
@@ -477,7 +477,7 @@ def add_change_delete_list_values(list_type = None,
     
     # read in additions, changes, deletions
     for dir in ['Additions','Changes','Deletions']:
-        df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state_abbreviations[state],list_type,dir))
+        df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state,list_type,dir))
         df = df.fillna('')
         if not df.empty:
             if dir == 'Additions':
@@ -495,9 +495,10 @@ def add_change_delete_list_values(list_type = None,
                             fields.append(dict_df[name][entry])
                         elif 'value' in entry:
                             values.append(dict_df[name][entry])
-                    index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
-                    for i,fv in enumerate(zip(fields,values)):
-                        list_data.at[index,fv[0]] = fv[1]
+                    if name in list_data:
+                        index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
+                        for i,fv in enumerate(zip(fields,values)):
+                            list_data.at[index,fv[0]] = fv[1]
             else:
                 for i,row in df.iterrows():
                     index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]

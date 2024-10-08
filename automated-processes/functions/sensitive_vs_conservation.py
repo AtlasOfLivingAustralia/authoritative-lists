@@ -182,7 +182,6 @@ def create_conservation_list(list_data = None,
     elif state == "NT":
         
         # edit some of the codes
-        print()
         conservation_list['status'] = conservation_list['status'].replace({
             "CR-PE": "CR",
             "EN-EXNT": "EN",
