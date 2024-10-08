@@ -95,6 +95,8 @@ Trichoglottis,taxonRank,genus
 Vanda,taxonRank,genus
 Vrydagzynea,taxonRank,genus
 Zeuxine,taxonRank,genus
+Pholidota,taxonRank,genus
 Dendrobium kingianum x D.speciosum,scientificName,Dendrobium kingianum Bidwill ex Lindl. x Dendrobium speciosum Sm.,
 Macrozamia lomandroides x M.pauli-guilielmi,scientificName,Macrozamia lomandroides - Macrozamia pauli-guilielmi,
-Dendrobium discolor x D.nindii,scientificName,Dendrobium discolor x D.nindii
+Dendrobium discolor x D.nindii,scientificName,Dendrobium discolor x Dendrobium nindii
+Blakella bloxsomei x Blakella citriodora,scientificName,Eucalyptus bloxsomei x Eucalyptus citriodora
