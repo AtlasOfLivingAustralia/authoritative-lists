@@ -476,7 +476,7 @@ def add_change_delete_list_values(list_type = None,
         raise ValueError("Please provide a state.")
     
     # read in additions, changes, deletions
-    for dir in ['Additions','Changes','Deletions']:
+    for dir in ['Changes','Additions','Deletions']:
         df = pd.read_csv("{}/{}-{}-{}.csv".format(dir,state,list_type,dir))
         df = df.fillna('')
         if not df.empty:

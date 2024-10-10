@@ -50,8 +50,7 @@ def send_email(conservation_dict_changes = None,
     html = html.replace('TIME',str(datetime.now().time())[0:8])
     html = html.replace('DATE',str(datetime.now().date()))
 
-    # get username and password
-    # username,password = get_username_password(args=args)
+    # set up email service
     email = EmailSender(host='smtp-relay.csiro.au',
                         port=25)
     
