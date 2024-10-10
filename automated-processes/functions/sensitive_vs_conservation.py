@@ -214,7 +214,7 @@ def create_conservation_list(list_data = None,
         # add taxon rank
         conservation_list['taxonRank'] = ''
 
-    elif state == "Tasmania":
+    elif state == "TAS":
 
         # get conservation codes
         conservation_list = pd.merge(conservation_list,conservation_codes,
@@ -228,7 +228,7 @@ def create_conservation_list(list_data = None,
         # add rank
         conservation_list['taxonRank'] = ''
 
-    elif state == "Victoria":
+    elif state == "VIC":
 
         # remove all nans (and maybe 'Poorly known')
         conservation_list = conservation_list[~conservation_list['status'].isin([
@@ -250,7 +250,7 @@ def create_conservation_list(list_data = None,
         conservation_list['vernacularName'] = conservation_list['vernacularName'].replace(math.nan,"")
 
 
-    elif state == "Western Australia":
+    elif state == "WA":
 
         conservation_list['taxonRank'] = ''
 
