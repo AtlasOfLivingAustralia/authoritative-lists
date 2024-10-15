@@ -254,7 +254,7 @@ def create_conservation_list(list_data = None,
 
         conservation_list['taxonRank'] = ''
 
-    elif state == "Australian Capital Territory":
+    elif state == "ACT":
 
         pass
 
