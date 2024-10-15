@@ -484,21 +484,12 @@ def add_change_delete_list_values(list_type = None,
                 list_data = pd.concat([list_data,df]).reset_index(drop=True)
             elif dir == 'Changes':
                 df = df.set_index('raw_scientificName')
-                df = df.T
-                dict_df = df.to_dict()
-                for name in dict_df:
-                    clean_dict_df = {k: dict_df[name][k] for k in dict_df[name]} # if not (type(dict_df[name][k]) is float or dict_df[name][k] == '')}
-                    fields = []
-                    values = []
-                    for entry in clean_dict_df:
-                        if 'field' in entry:
-                            fields.append(dict_df[name][entry])
-                        elif 'value' in entry:
-                            values.append(dict_df[name][entry])
-                    if name in list_data:
+                for name,row in df.iterrows():
+                    if name in list(list_data['raw_scientificName']):
                         index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
-                        for i,fv in enumerate(zip(fields,values)):
-                            list_data.at[index,fv[0]] = fv[1]
+                        list_data.at[index,row['field']] = row['value']
+                    # else:
+                    #     print("cannot find {} in list".format(name))
             else:
                 for i,row in df.iterrows():
                     index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]
