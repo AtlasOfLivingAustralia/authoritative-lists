@@ -63,6 +63,7 @@ def create_sensitive_list(list_data = None,
         new2['vernacularName'] = 'White\'s Skink'
         new2['family'] = 'Scincidae'
         sensitive_species = pd.concat([sensitive_species,new,new2])
+        sensitive_species = sensitive_species.rename(columns={'taxonRank': 'rank'})
     
     elif state == "QLD":
 
@@ -83,14 +84,14 @@ def create_sensitive_list(list_data = None,
 
         # make the taxonID column
         sensitive_species['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + sensitive_species['WildNetTaxonID'].astype(str)
-        sensitive_species['taxonRank'] = ''
+        sensitive_species['rank'] = ''
 
     elif state == "WA":
 
         # make sure the generalisation column is there
         sensitive_species['generalisation'] = "10km"
         sensitive_species['category'] = sensitive_species['status'].copy()
-        sensitive_species['taxonRank'] = ''
+        sensitive_species['rank'] = ''
         
         # Crendactylus tuberculatus instead of Crenadactylus tuberculatus
         sensitive_species = sensitive_species.replace('Crendactylus tuberculatus','Crenadactylus tuberculatus')
@@ -104,7 +105,7 @@ def create_sensitive_list(list_data = None,
         sensitive_species['family'] = ""
         sensitive_species['generalisation'] = '1km'
         # 'TAXON_LEVEL_CDE' - replace 'spec' with 'species'
-        sensitive_species['taxonRank'] = sensitive_species['TAXON_LEVEL_CDE'].replace('spec','species')
+        sensitive_species['rank'] = sensitive_species['TAXON_LEVEL_CDE'].replace('spec','species')
 
     else:
         
@@ -118,9 +119,9 @@ def create_sensitive_list(list_data = None,
     sensitive_species = sensitive_species.where((pd.notnull(sensitive_species)), '')
 
     if extra_columns:
-        return sensitive_species[['raw_scientificName','scientificName', 'taxonRank','family', 'vernacularName', 'generalisation','category'] + extra_columns]
+        return sensitive_species[['raw_scientificName','scientificName', 'rank','family', 'vernacularName', 'generalisation','category'] + extra_columns]
     else:
-        return sensitive_species[['raw_scientificName','scientificName', 'taxonRank','family', 'vernacularName', 'generalisation','category']]
+        return sensitive_species[['raw_scientificName','scientificName', 'rank','family', 'vernacularName', 'generalisation','category']]
 
 def create_conservation_list(list_data = None,
                              state = None):
@@ -147,7 +148,7 @@ def create_conservation_list(list_data = None,
         # make conservation list
         conservation_list= conservation_list[(conservation_list['stateConservation'] !='Not Listed') & (conservation_list['isCurrent'] == 'true')].reset_index(drop=True)
         conservation_list['status'] = conservation_list['stateConservation']
-        conservation_list = conservation_list.rename(columns={"stateConservation": "sourceStatus"})
+        conservation_list = conservation_list.rename(columns={"stateConservation": "sourceStatus", "taxonRank": 'rank'})
         
     elif state == "QLD":
 
@@ -177,7 +178,7 @@ def create_conservation_list(list_data = None,
         conservation_list['taxonID'] = "https://apps.des.qld.gov.au/species-search/details/?id=" + conservation_list['WildNetTaxonID'].astype(str)
 
         # add rank column
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
     
     elif state == "NT":
         
@@ -212,7 +213,7 @@ def create_conservation_list(list_data = None,
         conservation_list = conservation_list.rename(columns={'Categories for classification':'sourceStatus'})
 
         # add taxon rank
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
 
     elif state == "TAS":
 
@@ -226,7 +227,7 @@ def create_conservation_list(list_data = None,
         conservation_list = conservation_list[~conservation_list['status'].isna()].reset_index(drop=True)
 
         # add rank
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
 
     elif state == "VIC":
 
@@ -244,7 +245,7 @@ def create_conservation_list(list_data = None,
 
         # add family column
         conservation_list['family'] = ''
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
 
         # replace all the NaNs with an empty string
         conservation_list['vernacularName'] = conservation_list['vernacularName'].replace(math.nan,"")
@@ -252,7 +253,7 @@ def create_conservation_list(list_data = None,
 
     elif state == "WA":
 
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
 
     elif state == "ACT":
 
@@ -261,7 +262,7 @@ def create_conservation_list(list_data = None,
     elif state == "EPBC":
 
         extra_columns = ['genus']
-        conservation_list['taxonRank'] = ''
+        conservation_list['rank'] = ''
 
     else:
 
@@ -287,6 +288,6 @@ def create_conservation_list(list_data = None,
 
     # returned the cleaned conservation list
     if extra_columns:
-        return conservation_list[['raw_scientificName','scientificName', 'taxonRank', 'family', 'vernacularName', 'status','sourceStatus'] + extra_columns]
+        return conservation_list[['raw_scientificName','scientificName', 'rank', 'family', 'vernacularName', 'status','sourceStatus'] + extra_columns]
     else:
-        return conservation_list[['raw_scientificName','scientificName', 'taxonRank', 'family', 'vernacularName', 'status','sourceStatus']]
+        return conservation_list[['raw_scientificName','scientificName', 'rank', 'family', 'vernacularName', 'status','sourceStatus']]
