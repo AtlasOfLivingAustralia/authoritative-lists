@@ -22,7 +22,7 @@ import os.path as path
 
 projectDir = path.abspath(path.join(os.getcwd(),"../..")) + "/"
 print(projectDir)
-outDir = projectDir + "Monitoring/"
+outDir = projectDir + "reports/"
 sys.path.append(os.path.abspath(projectDir + "source-code/includes"))
 # monthStr = datetime.datetime.now().strftime('%Y%m%d')
 monthStr = datetime.datetime.now().strftime('%Y-%m-%d')
