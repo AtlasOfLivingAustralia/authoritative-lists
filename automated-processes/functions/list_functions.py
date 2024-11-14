@@ -119,9 +119,9 @@ def read_list_url(url=None,
                 df = df[['FAMILY','GENUS','SPECIES','scientificName','COMMON NAME',
                          'TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION']] # 'INTRODUCED STATUS'
         else:
-            xls = pd.ExcelFile(url,engine='openpyxl')
+            xls = pd.ExcelFile(url) #,engine='openpyxl')            
             if state == "TAS":
-                df = pd.read_excel(xls,sheet_name=xls.sheet_names[0])
+                df = pd.read_excel(xls) #,sheet_name=xls.sheet_names[0])
             else:
                 raise ValueError("{} not taken into account:\n\n{}\n".format(state,url))
     elif ".csv" in url:
@@ -175,11 +175,11 @@ def get_conservation_codes(state=None):
 
         return codes 
     
-    elif state == "TAS":
+    # elif state == "TAS":
 
-        xls = pd.ExcelFile(conservation_list_urls[state][0])
-        # first sheet name is species, second sheet is codes
-        return pd.read_excel(xls,sheet_name=xls.sheet_names[1],skiprows=[0,6,7,8])[['Category code','Category']][0:4]
+    #     xls = pd.ExcelFile(conservation_list_urls[state][0])
+    #     # first sheet name is species, second sheet is codes
+    #     return pd.read_excel(xls,sheet_name=xls.sheet_names[1],skiprows=[0,6,7,8])[['Category code','Category']][0:4]
     
     elif state == "WA":
 

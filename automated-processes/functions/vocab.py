@@ -21,6 +21,7 @@ state_abbreviations = {
     "NT": "Northern Territory",
     "QLD": "Queensland",
     "VIC": "Victoria",
+    "TAS": "Tasmania",
     "WA": "Western Australia",
     "EPBC": "EPBC"
 }
@@ -33,6 +34,7 @@ conservation_list_urls = {"ACT": ["https://www.data.act.gov.au/resource/9ikf-qah
              "QLD": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
              "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
              "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
+             "TAS": ["TasThreatSpecies.xlsx"],
              "EPBC": ["https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974"]} 
 
 # urls for relevant sensitive lists
@@ -42,7 +44,7 @@ sensitive_list_urls = {"NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/S
              "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"]}
 
 # all the state lists that are automatically checked every week
-conservation_lists = ["QLD","NT","NSW","WA","ACT","VIC","EPBC"]
+conservation_lists = ["QLD","NT","NSW","WA","ACT","VIC","TAS","EPBC"]
 
 sensitive_lists = ["NSW","QLD","VIC","WA"]
 
@@ -126,14 +128,14 @@ conservation_columns_rename = {"QLD": {'Scientific_name':'scientificName',
                                                                 'vernacularname': 'vernacularName',
                                                                 'sourcestatus': 'sourceStatus',
                                                                 'taxonrank': 'rank'},
-                               "TAS": {'Scientific name': 'scientificName', 
-                                            'Common name': 'vernacularName',
-                                            'Current TSPA schedule classification': 'status',
-                                            'Category': 'sourceStatus',
-                                            'Family': 'family'},
+                               "TAS": {'SPECIES_NAME': 'scientificName', # Scientific name
+                                       'PREFERRED_COMMON_NAMES': 'vernacularName', #Common name
+                                       'STATE_SCHEDULE': 'status', #Current TSPA schedule classification
+                                       # 'Category': 'sourceStatus',
+                                       'FAMILY': 'family'}, #Family
                                "VIC": {'FFG_ACT_STATUS': 'status',
-                                            'SCIENTIFIC_NAME': 'scientificName', 
-                                            'COMMON_NAME': 'vernacularName'},
+                                       'SCIENTIFIC_NAME': 'scientificName', 
+                                       'COMMON_NAME': 'vernacularName'},
                                "EPBC": {'Scientific Name': 'scientificName',
                                         'Common Name': 'vernacularName',
                                         'Threatened status': 'sourceStatus',
@@ -217,6 +219,10 @@ statuses_rename = {
         "Endangered": "Endangered",
         "Vulnerable": "Vulnerable",
         "Rare": "Near Threatened",
+        "extinct": "Extinct",
+        "endangered": "Endangered",
+        "vulnerable": "Vulnerable",
+        "rare": "Near Threatened",
         "x": "Extinct",
         "e": "Endangered",
         "v": "Vulnerable",

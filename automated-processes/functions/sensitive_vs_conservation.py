@@ -217,14 +217,21 @@ def create_conservation_list(list_data = None,
 
     elif state == "TAS":
 
+        replacement_species_names = conservation_list[~conservation_list['CURRENT_SPECIES_NAME'].isna()]
+        if not replacement_species_names.empty:
+            index =replacement_species_names.index
+            for i in index:
+                conservation_list.loc[i,'scientificName'] = conservation_list['CURRENT_SPECIES_NAME'][i]
+
         # get conservation codes
-        conservation_list = pd.merge(conservation_list,conservation_codes,
-                                     left_on=['status'],
-                                     right_on=['Category code'],how="left")
-        conservation_list['sourceStatus'] = conservation_list['Category'].copy()
+        # conservation_list = pd.merge(conservation_list,conservation_codes,
+        #                              left_on=['status'],
+        #                              right_on=['Category code'],how="left")
+        # conservation_list['sourceStatus'] = conservation_list['Category'].copy()
 
         # remove empty statuses
         conservation_list = conservation_list[~conservation_list['status'].isna()].reset_index(drop=True)
+        conservation_list = conservation_list[~conservation_list['status'].astype(str).str.contains('unofficial')].reset_index(drop=True)
 
         # add rank
         conservation_list['rank'] = ''
