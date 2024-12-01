@@ -17,6 +17,7 @@ import json
 import certifi
 import ssl
 import datetime
+import tabulate
 import pandas as pd
 import os.path as path
 
