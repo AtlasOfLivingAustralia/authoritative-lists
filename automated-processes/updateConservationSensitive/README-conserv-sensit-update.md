@@ -64,15 +64,6 @@ s3_info.txt
 
 Description and formats:
 
-#### `login.txt`
-
-Username and Password for your CSIRO email (default name is `login.txt`, specify filename with `-eid` argument).
-
-```
-username = USERNAME
-password = PASSWORD
-```
-
 #### `ids.txt`
 
 Your ALA client ID and your secret client ID **for the test environment** (default name is `ids.txt`; specify filename by using `-cids` argument).
@@ -109,10 +100,10 @@ To run the script for all lists we are able to update, type the following into t
 
     python conservation-sensitive-update.py
 
-To get changes for specific lists, use the `-cl` (conservation lists) or `-sl` (sensitive lists) arguments:
+To get changes for specific lists, use the `-cl` (conservation lists) or `-sl` (sensitive lists) arguments (**Note: if you want to only update conservation lists, you need to set the sensitive lists argument to None.  Same rul applies if you only want to update senstive lists.**):
 
-    python conservation-sensitive-update.py -cl QLD,NSW
-    python conservation-sensitive-update.py -cl WA
+    python conservation-sensitive-update.py -cl QLD,NSW -sl None
+    python conservation-sensitive-update.py -cl WA -sl None
 
 To run the script including the upload and email options, you will have to set up access to ALA's AWS instance. See [this confluence page](https://confluence.csiro.au/display/ALASD/AWS+access) for more information, or ask Joe.
 
