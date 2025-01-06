@@ -125,9 +125,9 @@ conservation_columns_rename = {"QLD": {'Scientific_name':'scientificName',
                                "NSW": {},
                                "WA": {},
                                "ACT": {'scientificname': 'scientificName',
-                                                                'vernacularname': 'vernacularName',
-                                                                'sourcestatus': 'sourceStatus',
-                                                                'taxonrank': 'rank'},
+                                       'vernacularname': 'vernacularName',
+                                       'actconservationstatus': 'sourceStatus',
+                                       'taxonomicrank': 'rank'},
                                "TAS": {'SPECIES_NAME': 'scientificName', # Scientific name
                                        'PREFERRED_COMMON_NAMES': 'vernacularName', #Common name
                                        'STATE_SCHEDULE': 'status', #Current TSPA schedule classification
