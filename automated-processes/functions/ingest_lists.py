@@ -1,7 +1,8 @@
 import pandas as pd
 from . import list_functions as lf
 from .vocab import conservation_list_urls,sensitive_list_urls,list_ids_sensitive_test,list_ids_sensitive_prod
-from .vocab import list_ids_conservation_test,list_ids_conservation_prod,listsProd,urlSuffix
+from .vocab import list_ids_conservation_test,list_ids_conservation_prod,listsProd,urlSuffix,all_sensitive_lists
+from .vocab import listsTest
 from .sensitive_vs_conservation import create_conservation_list,create_sensitive_list
 from datetime import datetime
 import boto3
@@ -179,5 +180,46 @@ def ingest_lists(conservation_lists = None,
             s3_client.upload_file(Filename = 'data/temp-new-lists/{}'.format(temp_filename), 
                                 Bucket = s3_info['bucket'], 
                                 Key = '{}/{}'.format(s3_info['key_sensitive_lists'],temp_filename))
-        
+    
+    # initialise the dataframe and column names for all sensitive lists compilation
+    raw_sciName = ['raw_scientificName_{}'.format(state) for state in all_sensitive_lists]
+    categories = ['category_{}'.format(state) for state in all_sensitive_lists]
+    generalisation = ['generalisation_{}'.format(state) for state in all_sensitive_lists]
+    columns = ['scientificName','family','kingdom'] + raw_sciName + categories + generalisation
+    all_sensitive = pd.DataFrame(columns=columns)
+
+    # loop over all sensitive lists
+    for state in all_sensitive_lists:
+
+        # download state/territory/birds sensitive
+        url = listsTest + list_ids_sensitive_test[state] + urlSuffix
+        kvps_sensitive = lf.download_ala_specieslist(url=url)
+        sensitive_df = lf.kvp_to_columns(kvps_sensitive)
+
+        # check for raw_scientificName
+        if 'raw_scientificName' not in sensitive_df.columns:
+            sensitive_df['raw_scientificName'] = sensitive_df['scientificName'].copy()
+
+        # rename columns for 
+        sensitive_df = sensitive_df.rename(columns={
+            'raw_scientificName': 'raw_scientificName_{}'.format(state),
+            'category': 'category_{}'.format(state),
+            'generalisation': 'generalisation_{}'.format(state)
+        })
+
+        # find column names missing and add them
+        headings_difference = [c for c in columns if c not in list(sensitive_df.columns)]
+        for heading in headings_difference:
+            sensitive_df[heading] = ['' for i in range(sensitive_df.shape[0])]
+
+        # add sensitive lists to overall list
+        all_sensitive = pd.concat([all_sensitive,sensitive_df[columns]]).reset_index(drop=True)
+
+    # post list to test
+    # lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)  
+
+    # write list to csv for upload (may change this later)
+    temp_filename = "all-sensitive-lists-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))
+    all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
+
     return conservation_dict_changes,sensitive_dict_changes   

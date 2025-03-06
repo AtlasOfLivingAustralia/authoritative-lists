@@ -48,6 +48,8 @@ conservation_lists = ["QLD","NT","NSW","WA","ACT","VIC","TAS","EPBC"]
 
 sensitive_lists = ["NSW","QLD","VIC","WA"]
 
+all_sensitive_lists = ["ACT","Birds","NSW","NT","QLD","TAS","VIC","WA"]
+
 # ALA list ids for all conservation authoritative lists on test
 list_ids_conservation_test = {"ACT": "dr649",
                               "NSW": "dr650",
@@ -72,18 +74,28 @@ list_ids_conservation_prod = {"ACT": "dr649",
 list_ids_sensitive_test = {"NSW": "dr18457",
                            "QLD": "dr18404",
                            "VIC": "dr18669",
-                           "WA": "dr18406"}
+                           "WA": "dr18406",
+                           "ACT": "dr2627",
+                           "NT": "dr18690",
+                           "TAS": "dr18692",
+                           "Birds": "dr22224",
+                           "All": "dr23005"}
 
 # ALA list ids for all sensitive authoritative lists on test we are updating
 list_ids_sensitive_prod = {"NSW": "dr487",
                            "QLD": "dr493",
                            "VIC": "dr490",
-                           "WA": "dr467"}
+                           "WA": "dr467",
+                           "ACT": "dr2627",
+                           "NT": "dr492",
+                           "TAS": "dr491",
+                           "Birds": "dr494"}
 
 list_names_sensitive_test = {"NSW": "NSW Sensitive Species List",
                              "QLD": "Queensland Confidential Species",
                              "VIC": "Victorian Restricted Species List",
-                             "WA": "Western Australia: Sensitive Species"}
+                             "WA": "Western Australia: Sensitive Species",
+                             "All": "All Sensitive Australian Species"}
 
 list_names_conservation_test = {"ACT": "Australian Capital Territory : Conservation Status",
                                 "NSW": "New South Wales : Conservation Status",
