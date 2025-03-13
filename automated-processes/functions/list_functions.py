@@ -296,10 +296,18 @@ def webscrape_list_url(url=None,
         
     elif state == "NSW":      
         
-        # figure out what this does....
-        with urllib.request.urlopen(url,context=ssl._create_unverified_context()) as new_url:
-            data = json.loads(new_url.read().decode())
-        return pd.json_normalize(data, record_path =['value'])
+        # initialise data, then go through all the links to get all the data
+        all_data = pd.DataFrame()
+        another_url=True
+        while another_url:
+            data = requests.get(url).json()
+            all_data = pd.concat([all_data,pd.json_normalize(data, record_path =['value'])])
+            if '@odata.nextLink' not in data.keys():
+                another_url = False
+            else:
+                url = data['@odata.nextLink']
+            
+        return all_data
 
     elif state == "VIC":
 

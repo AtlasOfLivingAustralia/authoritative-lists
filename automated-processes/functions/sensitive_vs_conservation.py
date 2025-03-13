@@ -37,7 +37,7 @@ def create_sensitive_list(list_data = None,
         # check for current status in new south wales
         if 'isCurrent' in sensitive_species:
             sensitive_species = sensitive_species[sensitive_species['isCurrent'] == "true"]
-
+        
         # get sensitive species only with category attached 
         sensitive_species = sensitive_species[sensitive_species['sensitivityClass'].isin(["Category 1","Category 2","Category 3"])].reset_index(drop=True)
         
