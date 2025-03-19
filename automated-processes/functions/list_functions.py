@@ -396,6 +396,8 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
+    if response.status_code != 200:
+        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response.status_code,response.text))
     return None # was response   
 
 def get_authentication(args=None):
@@ -495,8 +497,6 @@ def add_change_delete_list_values(list_type = None,
                     if name in list(list_data['raw_scientificName']):
                         index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
                         list_data.at[index,row['field']] = row['value']
-                    # else:
-                    #     print("cannot find {} in list".format(name))
             else:
                 for i,row in df.iterrows():
                     index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]
