@@ -67,7 +67,6 @@ def ingest_lists(conservation_lists = None,
 
         # trim whitespace at end of strings
         conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
-        conservation_list.to_csv('temp_{}.csv'.format(state))
         
         # add, change or delete list values as appropriate
         conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
