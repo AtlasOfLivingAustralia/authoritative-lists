@@ -396,6 +396,8 @@ def post_list_to_test(list_data=None,
     
     # post the data to test
     response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
+    if response.status_code != 200:
+        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response.status_code,response.text))
     return None # was response   
 
 def get_authentication(args=None):
