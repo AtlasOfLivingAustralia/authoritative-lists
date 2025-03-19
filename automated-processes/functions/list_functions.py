@@ -495,8 +495,6 @@ def add_change_delete_list_values(list_type = None,
                     if name in list(list_data['raw_scientificName']):
                         index = list_data.loc[list_data['raw_scientificName'] == name].index[0]
                         list_data.at[index,row['field']] = row['value']
-                    # else:
-                    #     print("cannot find {} in list".format(name))
             else:
                 for i,row in df.iterrows():
                     index = list_data.loc[list_data['raw_scientificName'] == row['raw_scientificName']].index[0]

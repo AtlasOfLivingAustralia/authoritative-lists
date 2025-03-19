@@ -43,7 +43,7 @@ def send_email(conservation_dict_changes = None,
         sensitive_list_changes+="{}<br />\n".format(ss)
         attachments["{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-changes/{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
         attachments["{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
- 
+
     # add date and time to email
     html = html.replace('CONSERVATION_LIST_OF_CHANGES',conservation_list_changes)
     html = html.replace('SENSITIVE_LIST_OF_CHANGES',sensitive_list_changes)
@@ -56,7 +56,7 @@ def send_email(conservation_dict_changes = None,
     
     email.send(
         sender = "amanda.buyan@csiro.au",
-        receivers=["authoritative-list-updates@ala.org.au"], 
+        receivers= ["authoritative-list-updates@ala.org.au"], 
         subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
         html=html,
         attachments = attachments
