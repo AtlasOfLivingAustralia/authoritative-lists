@@ -94,39 +94,39 @@ Vallisneria kristinae,family,Hydrocharitaceae,
 Antechinomys longicaudatus,scientificName,"Sminthopsis longicaudata Spencer, 1909",
 Hypseleotris notata,scientificName,"Hypseleotris kimberleyensis Hoese & Allen, 1982",
 Euphrasia scabra,family,Scrophulariaceae,
-Amytornis oweni oweni,scientificName,Amytornis (Magnamytis) whitei oweni,
-Botaurus dubius,scientificName,Ixobrychus dubius,
-Botaurus flavicollis australis (southwest subpopulation),scientificName,Ixobrychus flavicollis australis (southwest subpopulation),
-Grievea brachytropis,scientificName,Pultenaea brachytropis Benth. ex Lindl.,
-Grievea craigiana,scientificName,"Pultenaea craigiana C.F.Wilkins, Orthia & Crisp",
-Euchilus aridus (E.Pritz.) R.L.Barrett & Orthia,scientificName,Pultenaea arida E.Pritz.,
-Euchilus calycinus Turcz.,scientificName,Pultenaea calycina (Turcz.) Benth.,
-Euchilus calycinus Turcz. subsp. proxenus (Orthia & Chappill) Orthia & R.L.Barrett,scientificName,Pultenaea calycina subsp. proxena Orthia & Chappill,
-Euchilus daena (Orthia & Chappill) Orthia & R.L.Barrett,scientificName,Pultenaea daena Orthia & Chappill,
-Euchilus elachistus (F.Muell.) R.L.Barrett & Orthia,scientificName,Pultenaea elachista (F.Muell.) Crisp,
-Euchilus obcordatus R.Br.,scientificName,Pultenaea heterochila F.Muell.,
-Euchilus purpureus Turcz.,scientificName,Pultenaea purpurea (Turcz.) Crisp & Orthia,
-Euchilus rotundifolius Turcz.,scientificName,Pultenaea rotundifolia (Turcz.) Benth.,
-Euchilus spinulosus Turcz.,scientificName,Pultenaea spinulosa (Turcz.) Benth.,
-Grievea brachytropis (Benth. ex Lindl.) R.L.Barrett & Orthia,scientificName,Pultenaea brachytropis Benth. ex Lindl.,
-"Grievea craigiana (C.F.Wilkins, Orthia & Crisp) Orthia & R.L.Barrett",scientificName,"Pultenaea craigiana C.F.Wilkins, Orthia & Crisp",
-Jennata brachyphylla (Turcz.) R.L.Barrett & Clugston,scientificName,Pultenaea brachyphylla Turcz.,
-Jennata empetrifolia (Meisn.) R.L.Barrett & Clugston,scientificName,Pultenaea empetrifolia Meisn.,
-Jennata ericifolia (Benth.) R.L.Barrett & Clugston,scientificName,Pultenaea ericifolia Benth.,
-Jennata indira (Orthia & Crisp) Orthia & R.L.Barrett,scientificName,Pultenaea indira Orthia & Crisp,
-Jennata indira subsp. indira,scientificName,Pultenaea indira Orthia & Crisp,
-Jennata indira subsp. monstrosita (Orthia) Orthia & R.L.Barrett,scientificName,Pultenaea indira subsp. monstrosita Orthia,
-Jennata indira subsp. pudoides (Orthia) Orthia & R.L.Barrett,scientificName,Pultenaea indira subsp. pudoides Orthia,
-Jennata radiata (H.B.Will.) R.L.Barrett & Clugston,scientificName,Pultenaea radiata H.B.Will.,
-Jennata strobilifera (Meisn.) R.L.Barrett & Clugston,scientificName,Pultenaea strobilifera Meisn.,
-Jennata verruculosa (Turcz.) R.L.Barrett & Clugston,scientificName,Pultenaea verruculosa Turcz.,
-Jennata sp. Mt Lesueur (J.S.Beard 7827) WA Herbarium,scientificName,Pultenaea sp. Mt Lesueur (J.S.Beard 7827) WA Herbarium,
-Jennata sp. southern (L.A.Orthia 39) WA Herbarium,scientificName,Pultenaea sp. southern (L.A.Orthia 39) WA Herbarium,
-Loricobbia aspalathoides (Meisn.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea aspalathoides Meisn.,
-Loricobbia ochreata (Meisn.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea ochreata Meisn.,
-Loricobbia pauciflora (M.B.Scott.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea pauciflora M.B.Scott,
-Loricobbia pinifolia (Meisn.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea pinifolia Meisn.,
-Loricobbia reticulata (Sm.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea reticulata (Sm.) Benth.,
-Loricobbia skinneri (F.Muell.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea skinneri F.Muell.,
-Jacquemontia distigma (Benth.) Halford,scientificName,Polymeria distigma Benth.,
-Jacquemontia flexuosa (Spreng.) Halford,scientificName,Ipomoea diantha Roem. & Schult.,
+Amytornis oweni oweni,scientificName,Amytornis (Magnamytis) whitei oweni ,Mar 2025 addition
+Botaurus dubius,scientificName,Ixobrychus dubius,Mar 2025 addition
+Botaurus flavicollis australis (southwest subpopulation),scientificName,Ixobrychus flavicollis australis (southwest subpopulation),Mar 2025 addition
+Grievea brachytropis,scientificName,Pultenaea brachytropis Benth. ex Lindl.,Mar 2025 addition
+Grievea craigiana,scientificName,"Pultenaea craigiana C.F.Wilkins, Orthia & Crisp",Mar 2025 addition
+Euchilus aridus,scientificName,Pultenaea arida E.Pritz.,Mar 2025 addition
+Euchilus calycinus,scientificName,Pultenaea calycina (Turcz.) Benth.,Mar 2025 addition
+Euchilus calycinus Turcz. subsp. proxenus ,scientificName,Pultenaea calycina subsp. proxena Orthia & Chappill,Mar 2025 addition
+Euchilus daena,scientificName,Pultenaea daena Orthia & Chappill,Mar 2025 addition
+Euchilus elachistus,scientificName,Pultenaea elachista (F.Muell.) Crisp,Mar 2025 addition
+Euchilus obcordatus,scientificName,Pultenaea heterochila F.Muell.,Mar 2025 addition
+Euchilus purpureus,scientificName,Pultenaea purpurea (Turcz.) Crisp & Orthia,Mar 2025 addition
+Euchilus rotundifolius,scientificName,Pultenaea rotundifolia (Turcz.) Benth.,Mar 2025 addition
+Euchilus spinulosus,scientificName,Pultenaea spinulosa (Turcz.) Benth.,Mar 2025 addition
+Grievea brachytropis,scientificName,Pultenaea brachytropis Benth. ex Lindl.,Mar 2025 addition
+Grievea craigiana ,scientificName,"Pultenaea craigiana C.F.Wilkins, Orthia & Crisp",Mar 2025 addition
+Jennata brachyphylla,scientificName,Pultenaea brachyphylla Turcz.,Mar 2025 addition
+Jennata empetrifolia ,scientificName,Pultenaea empetrifolia Meisn.,Mar 2025 addition
+Jennata ericifolia,scientificName,Pultenaea ericifolia Benth.,Mar 2025 addition
+Jennata indira,scientificName,Pultenaea indira Orthia & Crisp,Mar 2025 addition
+Jennata indira subsp. indira,scientificName,Pultenaea indira Orthia & Crisp,Mar 2025 addition
+Jennata indira subsp. monstrosita ,scientificName,Pultenaea indira subsp. monstrosita Orthia,Mar 2025 addition
+Jennata indira subsp. pudoides,scientificName,Pultenaea indira subsp. pudoides Orthia,Mar 2025 addition
+Jennata radiata,scientificName,Pultenaea radiata H.B.Will.,Mar 2025 addition
+Jennata strobilifera,scientificName,Pultenaea strobilifera Meisn.,Mar 2025 addition
+Jennata verruculosa,scientificName,Pultenaea verruculosa Turcz.,Mar 2025 addition
+Jennata sp. Mt Lesueur (J.S.Beard 7827) WA Herbarium,scientificName,Pultenaea sp. Mt Lesueur (J.S.Beard 7827) WA Herbarium,Mar 2025 addition
+Jennata sp. southern (L.A.Orthia 39) WA Herbarium,scientificName,Pultenaea sp. southern (L.A.Orthia 39) WA Herbarium,Mar 2025 addition
+Loricobbia aspalathoides,scientificName,Pultenaea aspalathoides Meisn.,Mar 2025 addition
+Loricobbia ochreata,scientificName,Pultenaea ochreata Meisn.,Mar 2025 addition
+Loricobbia pauciflora,scientificName,Pultenaea pauciflora M.B.Scott,Mar 2025 addition
+Loricobbia pinifolia,scientificName,Pultenaea pinifolia Meisn.,Mar 2025 addition
+Loricobbia reticulata (Sm.) R.L.Barrett & T.D.Macfarl.,scientificName,Pultenaea reticulata (Sm.) Benth.,Mar 2025 addition
+Loricobbia skinneri,scientificName,Pultenaea skinneri F.Muell.,Mar 2025 addition
+Jacquemontia distigma,scientificName,Polymeria distigma Benth.,Mar 2025 addition
+Jacquemontia flexuosa,scientificName,Ipomoea diantha Roem. & Schult.,Mar 2025 addition
