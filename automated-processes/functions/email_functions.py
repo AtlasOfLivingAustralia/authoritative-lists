@@ -6,7 +6,9 @@ from datetime import datetime
 from pathlib import Path
 import markdown
 
-def send_email(conservation_dict_changes = None,
+def send_email(conservation_lists = None,
+               sensitive_lists = None,
+               conservation_dict_changes = None,
                sensitive_dict_changes = None,
                args=None):
 
@@ -37,11 +39,15 @@ def send_email(conservation_dict_changes = None,
     for cs in conservation_changes_states:
         conservation_list_changes+="{}<br />\n".format(cs)
         attachments["{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-changes/{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+
+    for cs in conservation_lists:    
         attachments["{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
     for ss in sensitive_changes_states:
         sensitive_list_changes+="{}<br />\n".format(ss)
         attachments["{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-changes/{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+        
+    for ss in sensitive_lists:
         attachments["{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
     # add date and time to email
