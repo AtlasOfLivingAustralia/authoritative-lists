@@ -1,8 +1,8 @@
 import pandas as pd
 from . import list_functions as lf
 from .vocab import conservation_list_urls,sensitive_list_urls,list_ids_sensitive_test,list_ids_sensitive_prod
-from .vocab import list_ids_conservation_test,list_ids_conservation_prod,listsProd,urlSuffix,all_sensitive_lists
-from .vocab import listsTest
+from .vocab import list_ids_conservation_test,list_ids_conservation_prod,get_listsProd,urlSuffix,all_sensitive_lists
+from .vocab import get_listsTest
 from .sensitive_vs_conservation import create_conservation_list,create_sensitive_list
 from datetime import datetime
 import boto3
@@ -75,7 +75,7 @@ def ingest_lists(conservation_lists = None,
         lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
 
         # get old and new list urls    
-        oldListUrl = listsProd + list_ids_conservation_prod[state] + urlSuffix
+        oldListUrl = get_listsProd + list_ids_conservation_prod[state] + urlSuffix
 
         # download old list and turn it into pandas dataframe
         oldList = lf.download_ala_specieslist(oldListUrl)
@@ -142,7 +142,7 @@ def ingest_lists(conservation_lists = None,
         lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
         
         # get old and new list urls    
-        oldListUrl = listsProd + list_ids_sensitive_prod[state] + urlSuffix
+        oldListUrl = get_listsProd + list_ids_sensitive_prod[state] + urlSuffix
         oldList = lf.download_ala_specieslist(oldListUrl)
         oldList = lf.kvp_to_columns(oldList)
         temp_filename = "{}-sensitive-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
@@ -192,7 +192,7 @@ def ingest_lists(conservation_lists = None,
     for state in all_sensitive_lists:
 
         # download state/territory/birds sensitive
-        url = listsTest + list_ids_sensitive_test[state] + urlSuffix
+        url = get_listsTest + list_ids_sensitive_test[state] + urlSuffix
         kvps_sensitive = lf.download_ala_specieslist(url=url)
         sensitive_df = lf.kvp_to_columns(kvps_sensitive)
 
@@ -216,7 +216,7 @@ def ingest_lists(conservation_lists = None,
         all_sensitive = pd.concat([all_sensitive,sensitive_df[columns]]).reset_index(drop=True)
 
     # post list to test
-    # lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)  
+    lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)  
 
     # write list to csv for upload (may change this later)
     temp_filename = "all-sensitive-lists-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))

@@ -11,7 +11,8 @@ def create_parser():
     # add arguments to parser
     parser.add_argument('-cl', '--conservation-lists',help='Conservation lists to process',default='all')
     parser.add_argument('-sl', '--sensitive-lists',help='Sensitive lists to process',default='all')    
-    parser.add_argument('-auth', '--authentication',help='Filename with authentication for POST APIs',default='auth-confidential.json')    
+    parser.add_argument('-auth-test', '--authentication-test',help='Filename with authentication for POST APIs for test',default='auth-confidential-test.json')   
+    parser.add_argument('-auth-prod', '--authentication-prod',help='Filename with authentication for POST APIs for prod',default='auth-confidential-prod.json')    
     parser.add_argument('-eid', '--email-id',help='Filename with Username and password for email',default='login.txt')    
     parser.add_argument('-cids', '--client-ids',help='Filename with client_id and client_secret_id',default='ids.txt')   
     parser.add_argument('-s3', '--s3-info',help='Filename with s3 bucket and key information',default='s3_info.txt')   

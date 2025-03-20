@@ -11,9 +11,11 @@ authorize_url = "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth
 token_url = "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth2/token"
 
 # URLs for ALA lists for test and production
-listsProd = "https://lists.ala.org.au/ws/speciesListItems/"
-listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"
-urlSuffix = "?max=10000&includeKVP=true"
+get_listsProd = "https://api.ala.org.au/ws/speciesListItems/"
+get_listsTest = "https://api.test.ala.org.au/ws/speciesListItems/"
+post_listsProd = "https://api.ala.org.au/ws/speciesList/"
+post_listsTest = "https://api.test.ala.org.au/ws/speciesList/"
+urlSuffix = "?nonulls=true&sort=itemOrder&max=10000&offset=0&includeKVP=true"
 
 state_abbreviations = {
     "ACT": "Australian Capital Territory",
