@@ -66,6 +66,8 @@ def main():
         # Send email to relevant parties
         ef.send_email(conservation_dict_changes=conservation_dict_changes,
                       sensitive_dict_changes=sensitive_dict_changes,
+                      conservation_lists=args.conservation_lists,
+                      sensitive_lists=args.sensitive_lists,
                       args=args) 
 
 if __name__ == '__main__':

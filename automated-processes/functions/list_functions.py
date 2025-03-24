@@ -15,7 +15,6 @@ def download_ala_specieslist(url: str):
     '''
     Download ALA species list.  Returns error if list isn't right, returns dataframe if list is correct
     '''
-    print(url)
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
             data = json.loads(url.read().decode())
@@ -52,13 +51,10 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     newListUrl = get_listsTest + testdr + urlSuffix
 
     # download old list and turn it into pandas dataframe
-    print("getting old list")
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
     oldList = oldList.add_suffix("_old")
 
-    print("getting new list")
-    print(newListUrl)
     # download new list and turn it into pandas dataframe
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
@@ -345,9 +341,7 @@ def format_data_for_post(list_data=None,
     # loop over each row to generate kvp values
     for i,row in list_data.iterrows():
         post_data["listItems"][i] = {"itemName": row['scientificName'],"kvpValues": []}
-        # print(columns)
         for x in columns:
-            # print(x)
             post_data["listItems"][i]["kvpValues"].append({"key": x, "value": row[x]})
     
     # return data
@@ -364,18 +358,16 @@ def post_list_to_test(list_data=None,
     
     # format your data for posting to test
     data_for_post = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
-
     auth=get_authentication_info(args=args,test=True)
-    print(auth['access_token'])
-
+    
     # create headers with authentication
     headers = {'Content-Type': 'application/json', 
                'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
                'Authorization': 'Bearer {}'.format(auth['access_token'])}
     
     # post the data to test
-    response = requests.post("{}/{}?".format(post_listsTest,druid),data=json.dumps(data_for_post),headers=headers)
-    if response.status_code != 200:
+    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
+    if response.status_code != 200 and response.status_code != 201:
         raise ValueError("There was an error posting the data.  Error code {}: {}".format(response.status_code,response.text))
     return None # was response   
 
@@ -462,7 +454,7 @@ def refresh_access_token(refresh_token=None,
         'client_id': client_id,
         'client_secret': client_secret
     }
-
+    
     # get response
     response = requests.post(token_url, data=data, headers={'Accept': 'application/json'})
     

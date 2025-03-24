@@ -73,7 +73,7 @@ def ingest_lists(conservation_lists = None,
         
         # post list to test
         lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
-
+# 
         # get old and new list urls    
         oldListUrl = get_listsProd + list_ids_conservation_prod[state] + urlSuffix
 
