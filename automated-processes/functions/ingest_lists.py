@@ -48,139 +48,143 @@ def ingest_lists(conservation_lists = None,
     # PART 2: Uploading to the test environment
     # PART 3: Generating changelist to see if list has been updated
     # ---------------------------------------------------------------------------------------------
-    for state in conservation_lists:
+    if conservation_lists is not None:
 
-        print(state)
+        for state in conservation_lists:
 
-        # initialise sensitive and conservation list data
-        conservation_list_data = pd.DataFrame()
+            print(state)
 
-        # get all data
-        for i in range(len(conservation_list_urls[state])):
-            conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
+            # initialise sensitive and conservation list data
+            conservation_list_data = pd.DataFrame()
 
-        # create conservation list from raw data
-        conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
+            # get all data
+            for i in range(len(conservation_list_urls[state])):
+                conservation_list_data = pd.concat([conservation_list_data,lf.read_list_url(url=conservation_list_urls[state][i],state=state)]).reset_index(drop=True)
 
-        # add IUCN status
-        conservation_list['IUCN_equivalent_status'] = conservation_list['status'].copy()
+            # create conservation list from raw data
+            conservation_list = create_conservation_list(list_data=conservation_list_data,state=state).reset_index(drop=True)
 
-        # trim whitespace at end of strings
-        conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
-        
-        # add, change or delete list values as appropriate
-        conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
-        
-        # post list to test
-        lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
-# 
-        # get old and new list urls    
-        oldListUrl = get_listsProd + list_ids_conservation_prod[state] + urlSuffix
+            # add IUCN status
+            conservation_list['IUCN_equivalent_status'] = conservation_list['status'].copy()
 
-        # download old list and turn it into pandas dataframe
-        oldList = lf.download_ala_specieslist(oldListUrl)
-        oldList = lf.kvp_to_columns(oldList)
-        temp_filename = "{}-conservation-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
+            # trim whitespace at end of strings
+            conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
+            
+            # add, change or delete list values as appropriate
+            conservation_list = lf.add_change_delete_list_values(list_type = 'Conservation',list_data=conservation_list,state=state)
+            
+            # post list to test
+            lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
+    # 
+            # get old and new list urls    
+            oldListUrl = get_listsProd + list_ids_conservation_prod[state] + urlSuffix
 
-        # if specified, upload changes
-        if upload:
-            s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
-                                  Bucket = s3_info['bucket'], 
-                                  Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
-
-        # generate difference report for conservation list
-        conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
-
-        # # if there are changes, write them out to a csv for emailing
-        if not conservation_changelist.empty:
-
-            # write changes to csv
-            conservation_dict_changes[state] = True
-            temp_filename = "{}-conservation-changes-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-            conservation_changelist.to_csv('data/temp-changes/{}'.format(temp_filename))
+            # download old list and turn it into pandas dataframe
+            oldList = lf.download_ala_specieslist(oldListUrl)
+            oldList = lf.kvp_to_columns(oldList)
+            temp_filename = "{}-conservation-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
 
             # if specified, upload changes
             if upload:
-                s3_client.upload_file(Filename = 'data/temp-changes/{}'.format(temp_filename), 
+                s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
                                     Bucket = s3_info['bucket'], 
-                                    Key = '{}/{}'.format(s3_info['key_conservation_changes'],temp_filename))
-    
-        # write conservation list to csv (may change this later)
-        temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
+                                    Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
 
-        # check for uploading
-        if upload:
-            s3_client.upload_file(Filename = 'data/temp-new-lists/{}'.format(temp_filename), 
-                                Bucket = s3_info['bucket'], 
-                                Key = '{}/{}'.format(s3_info['key_conservation_lists'],temp_filename))
+            # generate difference report for conservation list
+            conservation_changelist = lf.get_changelist(list_ids_conservation_test[state], list_ids_conservation_prod[state], "C")
+
+            # # if there are changes, write them out to a csv for emailing
+            if not conservation_changelist.empty:
+
+                # write changes to csv
+                conservation_dict_changes[state] = True
+                temp_filename = "{}-conservation-changes-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+                conservation_changelist.to_csv('data/temp-changes/{}'.format(temp_filename))
+
+                # if specified, upload changes
+                if upload:
+                    s3_client.upload_file(Filename = 'data/temp-changes/{}'.format(temp_filename), 
+                                        Bucket = s3_info['bucket'], 
+                                        Key = '{}/{}'.format(s3_info['key_conservation_changes'],temp_filename))
+        
+            # write conservation list to csv (may change this later)
+            temp_filename = "{}-conservation-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            conservation_list.to_csv('data/temp-new-lists/{}'.format(temp_filename),index=False)
+
+            # check for uploading
+            if upload:
+                s3_client.upload_file(Filename = 'data/temp-new-lists/{}'.format(temp_filename), 
+                                    Bucket = s3_info['bucket'], 
+                                    Key = '{}/{}'.format(s3_info['key_conservation_lists'],temp_filename))
 
     print()
     
-    for state in sensitive_lists:
+    if sensitive_lists is not None:
+        for state in sensitive_lists:
 
-        print(state)
+            print(state)
 
-        # initialise data
-        sensitive_list_data = pd.DataFrame()
+            # initialise data
+            sensitive_list_data = pd.DataFrame()
 
-        # loop over all links present to get 
-        for i in range(len(sensitive_list_urls[state])):
-            sensitive_list_data = pd.concat([sensitive_list_data,lf.read_list_url(url=sensitive_list_urls[state][i],state=state)]).reset_index(drop=True)
+            # loop over all links present to get 
+            for i in range(len(sensitive_list_urls[state])):
+                sensitive_list_data = pd.concat([sensitive_list_data,lf.read_list_url(url=sensitive_list_urls[state][i],state=state)]).reset_index(drop=True)
 
-        # create a processed sensitive list from the raw data
-        sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
+            # create a processed sensitive list from the raw data
+            sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
 
-        # trim whitespace at end of strings
-        sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
+            # trim whitespace at end of strings
+            sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 
-        # add, change or delete list values as appropriate
-        sensitive_list = lf.add_change_delete_list_values(list_type = 'Sensitive',list_data=sensitive_list,state=state)
-        
-        # post list to test
-        lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
-        
-        # get old and new list urls    
-        oldListUrl = get_listsProd + list_ids_sensitive_prod[state] + urlSuffix
-        oldList = lf.download_ala_specieslist(oldListUrl)
-        oldList = lf.kvp_to_columns(oldList)
-        temp_filename = "{}-sensitive-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
-
-        # if specified, upload changes
-        if upload:
-            s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
-                                  Bucket = s3_info['bucket'], 
-                                  Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
-
-        # generate difference report for sensitive list
-        sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
-        
-        # if there are changes, write them out to a csv for emailing
-        if not sensitive_changelist.empty:
-
-            # generate changelist and write to csv
-            sensitive_dict_changes[state] = True
-            temp_filename = "{}-sensitive-changes-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-            sensitive_changelist.to_csv("data/temp-changes/{}".format(temp_filename),index=False)
+            # add, change or delete list values as appropriate
+            sensitive_list = lf.add_change_delete_list_values(list_type = 'Sensitive',list_data=sensitive_list,state=state)
             
+            # post list to test
+            lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
+            
+            # get old and new list urls    
+            oldListUrl = get_listsProd + list_ids_sensitive_prod[state] + urlSuffix
+            oldList = lf.download_ala_specieslist(oldListUrl)
+            oldList = lf.kvp_to_columns(oldList)
+            temp_filename = "{}-sensitive-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
+
+            # if specified, upload changes
+            if upload:
+                s3_client.upload_file(Filename = 'data/temp-historical-lists/{}'.format(temp_filename), 
+                                    Bucket = s3_info['bucket'], 
+                                    Key = '{}/{}'.format(s3_info['key_conservation_historical'],temp_filename))
+
+            # generate difference report for sensitive list
+            sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
+            
+            # if there are changes, write them out to a csv for emailing
+            if not sensitive_changelist.empty:
+
+                # generate changelist and write to csv
+                sensitive_dict_changes[state] = True
+                temp_filename = "{}-sensitive-changes-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+                sensitive_changelist.to_csv("data/temp-changes/{}".format(temp_filename),index=False)
+                
+                # upload file to s3
+                if upload:
+                    s3_client.upload_file(Filename = 'data/temp-changes/{}'.format(temp_filename), 
+                                        Bucket = s3_info['bucket'], 
+                                        Key = '{}/{}'.format(s3_info['key_sensitive_changes'],temp_filename))
+                
+            # write list to csv for upload (may change this later)
+            temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
+            sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
+
             # upload file to s3
             if upload:
-                s3_client.upload_file(Filename = 'data/temp-changes/{}'.format(temp_filename), 
+                s3_client.upload_file(Filename = 'data/temp-new-lists/{}'.format(temp_filename), 
                                     Bucket = s3_info['bucket'], 
-                                    Key = '{}/{}'.format(s3_info['key_sensitive_changes'],temp_filename))
-            
-        # write list to csv for upload (may change this later)
-        temp_filename = "{}-sensitive-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
-        sensitive_list.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
-
-        # upload file to s3
-        if upload:
-            s3_client.upload_file(Filename = 'data/temp-new-lists/{}'.format(temp_filename), 
-                                Bucket = s3_info['bucket'], 
-                                Key = '{}/{}'.format(s3_info['key_sensitive_lists'],temp_filename))
+                                    Key = '{}/{}'.format(s3_info['key_sensitive_lists'],temp_filename))
     
+    '''
     # initialise the dataframe and column names for all sensitive lists compilation
     raw_sciName = ['raw_scientificName_{}'.format(state) for state in all_sensitive_lists]
     categories = ['category_{}'.format(state) for state in all_sensitive_lists]
@@ -221,5 +225,5 @@ def ingest_lists(conservation_lists = None,
     # write list to csv for upload (may change this later)
     temp_filename = "all-sensitive-lists-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))
     all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
-
+    '''
     return conservation_dict_changes,sensitive_dict_changes   
