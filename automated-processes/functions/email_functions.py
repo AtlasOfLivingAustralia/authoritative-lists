@@ -40,15 +40,17 @@ def send_email(conservation_lists = None,
         conservation_list_changes+="{}<br />\n".format(cs)
         attachments["{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-changes/{}-conservation-changes-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
-    for cs in conservation_lists:    
-        attachments["{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+    if conservation_lists is not None:
+        for cs in conservation_lists:    
+            attachments["{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-conservation-{}.csv".format(cs.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
     for ss in sensitive_changes_states:
         sensitive_list_changes+="{}<br />\n".format(ss)
         attachments["{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-changes/{}-sensitive-changes-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
-        
-    for ss in sensitive_lists:
-        attachments["{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
+
+    if sensitive_lists is not None:    
+        for ss in sensitive_lists:
+            attachments["{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))] = Path("./data/temp-new-lists/{}-sensitive-{}.csv".format(ss.replace(' ','_'),datetime.now().strftime("%Y-%m-%d")))
 
     # add date and time to email
     html = html.replace('CONSERVATION_LIST_OF_CHANGES',conservation_list_changes)
