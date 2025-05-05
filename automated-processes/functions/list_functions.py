@@ -192,7 +192,12 @@ def get_conservation_codes(state=None):
         test = list(set([str(s) for s in strings if ".xlsx" in str(s)]))
         for url in test:
             if 'flora' in url.lower():
-                xls = pd.ExcelFile(url.split("\"")[1]) # changed from 0
+                # read the excel file
+                if url.split("\"")[1][0:6] == "/sites":
+                    xls = pd.ExcelFile("https://www.dbca.wa.gov.au{}".format(url.split("\"")[1]))
+                else:
+                    xls = pd.ExcelFile(url.split("\"")[1])
+                
                 df = pd.read_excel(xls,sheet_name=xls.sheet_names.index('Conservation Codes'),skiprows=[1,2,3,4,5,6,7,8,9])[['Unnamed: 1','Unnamed: 2']]
                 df = df[~df['Unnamed: 2'].isna()]
                 return df.rename(columns={
@@ -238,9 +243,12 @@ def webscrape_list_url(url=None,
 
         # loop over urls to find flora and fauna
         for url in urls:
-            
+
             # read the excel file
-            xls = pd.ExcelFile(url.split("\"")[1])
+            if url.split("\"")[1][0:6] == "/sites":
+                xls = pd.ExcelFile("https://www.dbca.wa.gov.au{}".format(url.split("\"")[1]))
+            else:
+                xls = pd.ExcelFile(url.split("\"")[1])
 
             # first check for fauna
             if 'fauna' in url.lower():
@@ -257,7 +265,6 @@ def webscrape_list_url(url=None,
                 
             # then check for flora
             elif 'flora' in url.lower():
-                
                 # try this
                 temp = pd.read_excel(xls,sheet_name=xls.sheet_names[0])[['Taxon', 'Family', 'WA Rank']]
                 temp1 = pd.read_excel(xls,sheet_name=xls.sheet_names[1])[['Taxon', 'Family', 'WA Status']]

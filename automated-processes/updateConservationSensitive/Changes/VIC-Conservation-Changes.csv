@@ -1,15 +1,15 @@
 raw_scientificName,field,value,notes
-Astelia australiana,status,Critically Endangered
-Atrichopsis australis,scientificName,Notoligotrichum australe
-Diuris punctata var. punctata,scientificName,Diuris punctata
-Egretta garzetta,scientificName,Egretta garzetta nigripes
-Egretta garzetta,rank,subspecies
-Eucalyptus perriniana subsp. familiaris,scientificName,Eucalyptus perriniana
-Gelochelidon macrotarsa,scientificName,Gelochelidon nilotica macrotarsa
-Gelochelidon macrotarsa,rank,subspecies
-Lespedeza juncea,scientificName,Lespedeza juncea subsp. sericea
-Lespedeza juncea,rank,subspecies
-Rhynchoedura ormsbyi,scientificName, Rhynchoedura ornata
+Astelia australiana,status,Critically Endangered,
+Atrichopsis australis,scientificName,Notoligotrichum australe,
+Diuris punctata var. punctata,scientificName,Diuris punctata,
+Egretta garzetta,scientificName,Egretta garzetta nigripes,
+Egretta garzetta,rank,subspecies,
+Eucalyptus perriniana subsp. familiaris,scientificName,Eucalyptus perriniana,
+Gelochelidon macrotarsa,scientificName,Gelochelidon nilotica macrotarsa,
+Gelochelidon macrotarsa,rank,subspecies,
+Lespedeza juncea,scientificName,Lespedeza juncea subsp. sericea,
+Lespedeza juncea,rank,subspecies,
+Rhynchoedura ormsbyi,scientificName,Rhynchoedura ornata,
 Rytidosperma aff. caespitosum (South-west swamps),scientificName,Rytidosperma sp. South-west Swamps (A.C.Beauglehole 22255) Vic. Herbarium,
 Epacris microphylla/rhombifolia spp. agg.,scientificName,Epacris rhombifolia (L.R.Fraser & Vickery) Menadue,
 Dianella sp. aff. longifolia (Riverina),scientificName,Epacris rhombifolia (L.R.Fraser & Vickery) Menadue,
@@ -32,7 +32,7 @@ Diuris aff. pardina (Western Goldfields),scientificName,Diuris calcicola R.J.Bat
 Eucalyptus aff. phenax (Jeparit),scientificName,Eucalyptus dumosa A.Cunn. ex J.Oxley,
 Calochilus sp. aff. campestris (Moondarra),scientificName,Calochilus sp. 'Moondarra',
 Gemmabryum aff. clavatum (Mornington Peninsula),scientificName,Bryum clavatum (Schimp.) Müll.Hal.,
-Sida aff. corrugata (grey-leaf Boort form),scientificName,Sida spodochroma F.Muell. ,
+Sida aff. corrugata (grey-leaf Boort form),scientificName,Sida spodochroma F.Muell.,
 Prasophyllum aff. odoratum F,scientificName,Prasophyllum odoratum R.S.Rogers,
 Thelymitra aff. ixioides (Western Victoria),scientificName,Thelymitra J.R.Forst. & G.Forst.,
 Cyanicula caerulea x Glossodia major hybrid,scientificName,Cyanicula Hopper & A.P.Br.,
