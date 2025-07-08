@@ -243,12 +243,14 @@ def webscrape_list_url(url=None,
 
         # loop over urls to find flora and fauna
         for url in urls:
-
-            # read the excel file
-            if url.split("\"")[1][0:6] == "/sites":
+            
+            # read the excel file - amended if/elif/else statement to catch duplicates and lists we don't want
+            if url.split("\"")[1][0:6] == "/sites" and 'Threatened and Priority' in url:
                 xls = pd.ExcelFile("https://www.dbca.wa.gov.au{}".format(url.split("\"")[1]))
-            else:
+            elif 'Threatened and Priority' in url:
                 xls = pd.ExcelFile(url.split("\"")[1])
+            else:
+                continue
 
             # first check for fauna
             if 'fauna' in url.lower():
