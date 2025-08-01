@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Prod - SDS Assertions Information",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/legacy-notebooks-scripts/monitoring/reports/scripts",
+            "program": "Report-SDS-Information-Prod.py",
+            "console": "integratedTerminal"
+        },
+        
+    ]
+}
