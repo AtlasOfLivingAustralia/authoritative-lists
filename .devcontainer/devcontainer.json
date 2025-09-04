@@ -1,0 +1,96 @@
+
+{
+	"name": "Databox-Python-3.12",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// add a port forwarding for solr to hosts localhost
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"containerEnv": {
+		"PROMPT_COMMAND": "history -a",
+		"HISTFILE": "/home/vscode/.command-history/.bash_hist"
+	},
+
+	"postCreateCommand": "echo alias ll=\\'ls -alF\\' >> ~/.bash_aliases &&  pip3 install --user -r requirements.txt",
+
+	// mount data directory
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/.data,target=/data,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/.cache,target=/home/vscode/.cache,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/.command-history,target=/home/vscode/.command-history,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"files.exclude": {
+				  "**/__pycache__": true,
+				  "**/.pytest_cache": true
+				},
+				"files.autoSave": "onFocusChange",
+				"git.autorefresh": true,
+				"extensions.ignoreRecommendations": true,        
+				"python.analysis.diagnosticMode": "workspace",
+				"python.analysis.typeCheckingMode": "off",
+				"python.analysis.logLevel": "Trace",
+				"python.analysis.disableSemanticOnNoPython": false,
+				"python.analysis.enableSyncServer": true,
+				"python.analysis.userFileIndexingLimit": -1,
+				"python.formatting.provider": "none",
+				"python.languageServer": "Pylance",
+				"python.linting.enabled": false,
+				"python.linting.lintOnSave": false,
+				"python.testing.autoTestDiscoverOnSaveEnabled": false,
+				"python.testing.pytestArgs": [
+				  "tests"
+				],
+				"python.testing.pytestEnabled": true,
+				"python.testing.unittestEnabled": false,
+				"[python]": {
+				  "editor.defaultFormatter":"charliermarsh.ruff",
+				  "editor.formatOnSave": true,
+				  "editor.formatOnPaste": false,
+				  "editor.formatOnSaveMode": "file",
+				  "ruff.args": [
+						"--line-length=120",
+						"--ignore=Q"
+					],
+				  "editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				  }
+				}
+			  },      
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"GitHub.copilot",
+				"mechatroner.rainbow-csv",
+				"ms-toolsai.jupyter",
+				"ms-python.pylint",
+				"charliermarsh.ruff",
+				"eamodio.gitlens",
+				"GitHub.vscode-pull-request-github",
+				"RandomFractalsInc.vscode-data-preview",
+				"rangav.vscode-thunder-client",
+				"ms-toolsai.datawrangler"
+			]
+		}
+	},
+	
+	// "runArgs": [
+	// 	"--network=host",
+	// ],
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+}
