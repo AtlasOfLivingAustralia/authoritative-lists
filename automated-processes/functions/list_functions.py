@@ -6,8 +6,9 @@ import json
 import certifi
 import ssl
 import requests
-from .vocab import api_values,conservation_list_urls,get_listsProd,get_listsTest,post_listsTest,urlSuffix,state_abbreviations
+from .vocab import api_values,conservation_list_urls,get_listsProd,get_listsTest,urlSuffix
 from .vocab import list_names_conservation_test,list_names_sensitive_test,token_url
+from .vocab import upload_listsTest,ingest_listsTest,progress_listsTest
 from bs4 import BeautifulSoup
 import time
 
@@ -356,28 +357,65 @@ def format_data_for_post(list_data=None,
     # return data
     return post_data
 
-def post_list_to_test(list_data=None,
-                      druid=None,
-                      state=None,
-                      list_type=None,
+def post_list_to_test(druid=None,
+                      filename=None,
                       args=None):
     '''
     Posts formatted data to test with authentication checks
     '''
     
     # format your data for posting to test
-    data_for_post = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
     auth=get_authentication_info(args=args,test=True)
-    
-    # create headers with authentication
-    headers = {'Content-Type': 'application/json', 
-               'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
-               'Authorization': 'Bearer {}'.format(auth['access_token'])}
-    
-    # post the data to test
-    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
-    if response.status_code != 200 and response.status_code != 201:
-        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response.status_code,response.text))
+
+    # format headers
+    headers = {#'X-ALA-userId': auth['profile']['email'],
+               'Authorization': 'Bearer {}'.format(auth['access_token']),
+               'Accept': 'application/json'}
+
+    # create a binary string and data for file upload
+    with open('data/temp-new-lists/{}'.format(filename), 'rb') as f:
+        files = {
+            'file': (filename, f.read(), 'text/csv')
+        }
+
+        data = {
+			'description': 'CSV data upload',
+			'format': 'csv'
+		}
+
+    # first, upload the list
+    try:
+        response_upload = requests.post(upload_listsTest,data=data,files=files,headers=headers) 
+    except requests.exceptions.RequestException as e:  
+        print(e)
+    finally:
+        if response_upload.status_code != 200:
+            print("There was an error uploading the csv file.")
+            print(response_upload)
+            print(response_upload.text)
+
+    # second, trigger an ingestion of a list
+    upload_filename = response_upload.json()['localFile']
+    try:
+        response_ingest = requests.post('{}{}?file={}'.format(ingest_listsTest,druid,upload_filename),headers=headers)
+    except requests.exceptions.RequestException as e:  
+        print(e)
+    finally:
+        if response_ingest.status_code != 200 and response_ingest.status_code != 201:
+            print("There was an error uploading the csv file.")
+            print(response_ingest)
+            print(response_ingest.text)
+
+    # check progress of ingest; exit when done
+    id = response_ingest.json()['id']
+    response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
+    if response_test.status_code != 200 and response_test.status_code != 201:
+        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response_test.status_code,response_test.text))
+    completed = response_test.json()['completed']
+    while not completed:
+        time.sleep(15)
+        response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
+        completed = response_test.json()['completed']
     return None # was response   
 
 def get_authentication_info(args=None,test=False,prod=False):
