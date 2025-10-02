@@ -4,4 +4,4 @@ certifi==2024.7.4
 Markdown==3.4.1
 pandas==2.0.3
 redmail==0.6.0
-Requests>=2.32.0
+requests>=2.32.0
