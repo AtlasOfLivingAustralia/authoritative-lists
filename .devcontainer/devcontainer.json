@@ -38,6 +38,7 @@
 				  "**/.pytest_cache": true
 				},
 				"files.autoSave": "onFocusChange",
+				"files.eol": "\n",
 				"git.autorefresh": true,
 				"extensions.ignoreRecommendations": true,        
 				"python.analysis.diagnosticMode": "workspace",

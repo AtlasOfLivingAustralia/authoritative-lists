@@ -9,6 +9,22 @@
             "program": "Report-SDS-Information-Prod.py",
             "console": "integratedTerminal"
         },
+        {
+        "name": "Test - Update isPrivate flag",
+        "type": "debugpy",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/automated-processes/updateIsPrivateFlag",
+        "program": "update-isprivate-flag.py",
+        "console": "integratedTerminal",
+        "args": ["--input", "data",
+                 "--output", "data",
+                 "--infile", "data/lists-to-update.csv",
+                 "--env", "test"
+                 "--client_ids", "data/clientId.txt"
+                 "--authentication_test", "data/auth.json"
+                 "--authentication_prod", "data/auth.json"
+        ]
+        },
         
     ]
 }
