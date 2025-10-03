@@ -5,4 +5,5 @@
 */data
 *.json
 */*json
+/__pycache__
 auth.py
