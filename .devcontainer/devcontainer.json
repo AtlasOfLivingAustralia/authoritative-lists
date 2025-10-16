@@ -15,7 +15,8 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"containerEnv": {
 		"PROMPT_COMMAND": "history -a",
-		"HISTFILE": "/home/vscode/.command-history/.bash_hist"
+		"HISTFILE": "/home/vscode/.command-history/.bash_hist",
+		"TZ": "Australia/Sydney"
 	},
 
 	"postCreateCommand": "echo alias ll=\\'ls -alF\\' >> ~/.bash_aliases &&  pip3 install --user -r requirements.txt",
