@@ -5,10 +5,9 @@ import sys
 from pathlib import Path
 
 import archive_functions as afn
-
-# import config as cfg
 import pandas as pd
 import requests
+import upd_config as cfg
 
 sys.path.append("../")
 import functions.list_functions as lf
@@ -39,17 +38,13 @@ class Update_flag:
         self.graphql_url = None
         self.mutation_query = None
         self.accessToken = None
-        # self.list_file = None
         self.all_df = pd.DataFrame()
         self.upd_df = pd.DataFrame()
-        # self.collectory_url = "https://api.test.ala.org.au/metadata/ws/dataResource/"
-        # self.list_info_url = "https://api.test.ala.org.au/specieslist/ws/speciesList/?sort=dataResourceUid&"
-        self.list_info_url = "https://lists-ws.test.ala.org.au/v2/speciesList?isAuthoritative=False&isPrivate=False"
-        # self.list_info_url = "https://api.test.ala.org.au/specieslist/ws/speciesList/?sort=dataResourceUid&"
-        self.graphql_url = (
-            "https://lists-ws.test.ala.org.au/graphql"  # URL for list update
-        )
-        self.list_url = "https://lists-ws.test.ala.org.au/v2/speciesList/"
+
+        self.collectory_url = cfg.collectory_url
+        self.list_url = cfg.list_url
+        self.list_info_url = cfg.list_info_url
+        self.graphql_url = cfg.graphql_url
 
     def parse_arguments(self):
         """
@@ -346,7 +341,7 @@ class Update_flag:
         self.upd_df["retcode"] = self.upd_df.apply(self.update_list_metadata, axis=1)
 
         # Get collectory DR for list if it exists
-        collectory_df = self.get_collectory_to_update()
+        # collectory_df = self.get_collectory_to_update()
         # update collectory DR metadata
         # archivedf["cUpdStatus"] = collectory_df.apply(
         #     lambda row: update_collectory_dr(row), axis=1
