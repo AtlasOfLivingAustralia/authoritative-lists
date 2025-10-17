@@ -17,14 +17,16 @@
         "program": "update-isprivate-flag.py",
         "console": "integratedTerminal",
         "args": ["--input", "data",
-                 "--output", "data",
-                 "--infile", "data/lists-to-update.csv",
-                 "--env", "test"
-                 "--client_ids", "data/clientId.txt"
-                 "--authentication_test", "data/auth.json"
-                 "--authentication_prod", "data/auth.json"
-        ]
-        },
-        
+                        "--output", "data",
+                        "--infile", "data/auth-notprivate-lists.csv",
+                        "--outfile", "data/lists-to-update.csv",
+                        "--env", "test",
+                        "--getListInfo", "False",
+                        "--client_ids", "data/clientId.txt",
+                        "--authentication_test", "data/auth.json",
+                        "--authentication_prod", "data/auth.json"
+                ]
+                },
+                
     ]
 }

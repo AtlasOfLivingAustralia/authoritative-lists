@@ -1,18 +1,20 @@
-import sys
-import urllib.request
-
-sys.path.append("../")
 import argparse
+import datetime
 import json
-
-# import shlex
+import sys
 from pathlib import Path
 
-import functions.list_functions as lf
+import archive_functions as afn
+
+# import config as cfg
 import pandas as pd
 import requests
-from functions.ingest_lists import ingest_lists
-from functions.vocab import get_listsProd, get_listsTest
+
+sys.path.append("../")
+import functions.list_functions as lf
+
+# from functions.ingest_lists import ingest_lists
+# from functions.vocab import get_listsProd, get_listsTest
 
 
 class Update_flag:
@@ -37,7 +39,17 @@ class Update_flag:
         self.graphql_url = None
         self.mutation_query = None
         self.accessToken = None
-        self.list_file = None
+        # self.list_file = None
+        self.all_df = pd.DataFrame()
+        self.upd_df = pd.DataFrame()
+        # self.collectory_url = "https://api.test.ala.org.au/metadata/ws/dataResource/"
+        # self.list_info_url = "https://api.test.ala.org.au/specieslist/ws/speciesList/?sort=dataResourceUid&"
+        self.list_info_url = "https://lists-ws.test.ala.org.au/v2/speciesList?isAuthoritative=False&isPrivate=False"
+        # self.list_info_url = "https://api.test.ala.org.au/specieslist/ws/speciesList/?sort=dataResourceUid&"
+        self.graphql_url = (
+            "https://lists-ws.test.ala.org.au/graphql"  # URL for list update
+        )
+        self.list_url = "https://lists-ws.test.ala.org.au/v2/speciesList/"
 
     def parse_arguments(self):
         """
@@ -51,8 +63,10 @@ class Update_flag:
         parser.add_argument("--input", required=True)
         parser.add_argument("--output", required=True)
         parser.add_argument("--infile", required=True)
+        parser.add_argument("--outfile", required=True)
         parser.add_argument("--env", required=True)
         parser.add_argument("--client_ids", required=True)
+        parser.add_argument("--getListInfo", required=True)
         parser.add_argument("--authentication_test", required=True)
         parser.add_argument("--authentication_prod", required=True)
         args = parser.parse_args()
@@ -105,45 +119,162 @@ class Update_flag:
         """
         return mutation_query
 
-    def get_metadata(self, druid):
-        # need to do this via API
-        # token = "Bearer " + self.accessToken["access_token"]
-        headers1 = {
+    def download_list_info_ws(self):
+        """
+        Download Species list metadata for:
+        non-private and non-authoritative lists
+
+        :return: dataframe of lists
+        """
+
+        limit = 1000
+        page = 1
+        offset = 0
+        headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
         }
-        lUrl = (
-            f"https://lists-ws.test.ala.org.au/v2/speciesList/{druid}"  # 200
-            # "https://lists-ws.test.ala.org.au/v2/speciesList/68b694704bfbd22e5d7e1643" # 200
-            # "https://lists-develop.dev.ala.org.au/list/68bf92db938493273171ce8d" # 200
-            # "https://lists-develop-ws.dev.ala.org.au/v2/speciesList/dr13397"       # 403
-            # "https://lists-develop-ws.dev.ala.org.au/v2/speciesList/dr22808"  # 403
-        )
-        response = requests.get(
-            lUrl,
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
-            },
-        )
+        all_data = []
+        print(f"Downloading list info: ")
+        while True:
+            url = f"{self.list_info_url}&page={page}&pageSize={limit}"
+            print(f".... list: {url}")
+            response = requests.get(
+                url,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer {}".format(
+                        self.accessToken["access_token"]
+                    ),
+                },
+            )
+            # Check if the request was successful
+            if response.status_code == 200:
+                data = response.json()
+                if len(data["lists"]) == 0:
+                    break
+                data = pd.json_normalize([data])  # If the response is JSON
+                all_data.extend(data["lists"][0])
+                page += limit
+            else:
+                print(f"Error downloading: {url} Status: {response.status_code}")
 
-        # Check if the request was successful
-        if response.status_code == 200:
-            metadata = response.json()
-            # data = pd.json_normalize(data)  # If the response is JSON
-            print(metadata)
-        else:
-            print(f"Request failed with status code {response.status_code}")
-        return metadata
+        df = pd.DataFrame(all_data)
+        # cols_to_keep = [
+        #     "id",
+        #     "title",
+        #     "description",
+        #     "listType",
+        #     "licence",
+        #     "authority",
+        #     "region",
+        #     "wkt",
+        #     "isAuthoritative",
+        #     "isPrivate",
+        #     "isInvasive",
+        #     "isThreatened",
+        #     "isBIE",
+        #     "isSDS",
+        #     "tags",
+        # ]
+        # df = df[cols_to_keep]
+        return df
 
-    # def update_list_metadata(self, row):
-    def update_list_metadata(self):
+    def download_list_info_api(self):
+        """
+        Download Species list metadata for:
+        non-private and non-authoritative lists
+
+        :return: dataframe of lists
+        """
+
+        limit = 1000
+        offset = 0
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
+        }
+        all_data = []
+        print(f"Downloading list info: ")
+        while True:
+            url = f"{self.list_info_url}&offset={offset}&limit={limit}"
+            print(f".... list: {url}")
+            response = requests.get(
+                url,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer {}".format(
+                        self.accessToken["access_token"]
+                    ),
+                },
+            )
+            # Check if the request was successful
+            if response.status_code == 200:
+                data = response.json()
+                if len(data["lists"]) == 0:
+                    break
+                data = pd.json_normalize([data])  # If the response is JSON
+                all_data.extend(data["lists"][0])
+                offset += limit
+            else:
+                print(f"Error downloading: {url} Status: {response.status_code}")
+
+        df = pd.DataFrame(all_data)
+        return df
+
+    def filter_lists(self, args):
+        """ """
+        ##Criteria for list selection for update
+        # List must be `non-authoritative` and meet the following criteria:
+
+        #    1. Lists with zero records - rowCount
+        #    2. Lists with only 1 record -rowCount
+        #    3. Lists marked with list type – “Test%”
+        #    4. Lists with list name contains "test%"
+
+        notauthdf = self.all_df
+        notauthdf["rowCount"] = pd.to_numeric(notauthdf["rowCount"], errors="coerce")
+        # Archive non-authoritative records that meet rules criteria
+        archivedf = notauthdf[
+            (notauthdf["listType"].str.contains("test", case=False, na=False))
+            | (notauthdf["title"].str.contains("test", case=False, na=False))
+            | (notauthdf["rowCount"] <= 1)
+        ]
+
+        # write lists info to csv - just for reference or ease of testing
+        archivedf.to_csv(args.outfile, encoding="utf-8", index=False)
+
+        archivedf["isPrivate"] = True  # set isPrivate flag to true for update
+
+        # output list record counts
+        nonauthct = len(notauthdf)
+        lt1rec = (notauthdf["rowCount"] <= 1).sum()
+        typetest = (
+            notauthdf["listType"].str.contains("test", case=False, na=False)
+        ).sum()
+        nametest = (notauthdf["title"].str.contains("test", case=False, na=False)).sum()
+
+        print(f"  ")
+        print(f"Number non-authoritative lists: {nonauthct}")
+        print(f"    - # Lists with less than 2 records: {lt1rec}")
+        print(f"    - # List type value contains text test: {typetest}")
+        print(f"    - # List name value contains text test: {nametest}")
+
+        print(f"Number of lists to archive: {len(archivedf)}")
+
+        return archivedf
+
+    def update_list_metadata(self, row):
         # Get metadata (using API for now)
         # Update list
-        self.metadata = self.get_metadata("dr22808")
+        # self.metadata = self.get_metadata("dr22808")
         # Change the isPrivate flag
-        self.metadata["isPrivate"] = True
+        # self.metadata["isPrivate"] = True
         # Send the mutation using requests
+
+        print(f"Updating list: {row['dataResourceUid']}")
+        metadata = self.get_list_metadata(row["dataResourceUid"])
+        metadata["isPrivate"] = True
         response = requests.post(
             self.graphql_url,
             headers={
@@ -153,37 +284,77 @@ class Update_flag:
             json={
                 "query": self.mutation_query,
                 "operationName": "update",
-                "variables": self.metadata,
+                "variables": metadata,
             },
         )
-
-        print("Status:", response.status_code)
-        print("Response:", response.json())
-        print(json.dumps(response.json(), indent=2))
-
+        # print("Status:", response.status_code)
+        # print("Response:", response.json())
         data = response.json()
         if "errors" in data:
             raise Exception("GraphQL query error: " + str(data["errors"]))
-        print(f"Updated is Private flag for xx")
+        print(f"Updated isPrivate flag for list: {row['dataResourceUid']}")
+
+    def get_list_metadata(self, druid):
+        # need to do this via API   - put the keys to keep in config
+        keys_to_keep = [
+            "id",
+            "authority",
+            "description",
+            "isAuthoritative",
+            "isInvasive",
+            "isPrivate",
+            "isBIE",
+            "isSDS",
+            "isThreatened",
+            "licence",
+            "listType",
+            "region",
+            "title",
+            "wkt",
+            "tags",
+        ]
+        lUrl = self.list_url + druid
+        response = requests.get(lUrl)
+        if response.status_code == 200:
+            metadata = response.json()
+
+            for key in list(metadata.keys()):  # remove key values not used in update
+                if key not in keys_to_keep:
+                    metadata.pop(key)
+            print(f"Extracted metadata {metadata}")
+            print(f"Updated metadata: {metadata}")
+        else:
+            print(f"Request failed with status code {response.status_code}")
+        return metadata
 
     def run(self):
         args = self.parse_arguments()
-        inputFile = Path(args.infile)
-        # Read file of lists to update
-        # drList_df = pd.read_csv(inputFile, encoding="utf-8", dtype="str")
-        self.graphql_url = (
-            "https://lists-ws.test.ala.org.au/graphql"  # Set URL for list update
-        )
         # Get access token
-        # self.accessToken = self.get_access_token()
         self.accessToken = lf.get_authentication_info(args=args, test=True)
-        # Prepare the mutation query
-        self.mutation_query = self.prepare_mutation_query()
-        self.update_list_metadata()
-        # For each list in file
-        # drList_df["retcode"] = drList_df.apply(self.update_list_metadata, axis=1)
+        # Get lists to update or read file of lists to update
 
-        print(f"\n Start processing")
+        if args.getListInfo == "True":
+            self.all_df = self.download_list_info_ws()
+            self.all_df.to_csv(args.infile, encoding="utf-8", index=False)
+            self.upd_df = self.filter_lists(args)
+        else:
+            self.all_df = pd.read_csv(args.infile, encoding="utf-8", dtype="str")
+            self.upd_df = pd.read_csv(args.outfile, encoding="utf-8", dtype="str")
+
+        # Set up query for list metadata update via graphql
+        self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
+        self.upd_df["retcode"] = self.upd_df.apply(self.update_list_metadata, axis=1)
+
+        # Get collectory DR for list if it exists
+        collectory_df = self.get_collectory_to_update()
+        # update collectory DR metadata
+        # archivedf["cUpdStatus"] = collectory_df.apply(
+        #     lambda row: update_collectory_dr(row), axis=1
+        # )
+        # coll_url = f"{self.collectory_url}dr22808"
+        # status = afn.update_collectory_dr(coll_url)
+
+        print(f"\n All lists and collectory dataresources updated")
 
 
 if __name__ == "__main__":
