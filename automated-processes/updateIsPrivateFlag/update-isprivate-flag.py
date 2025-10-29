@@ -1,17 +1,15 @@
 import argparse
-import ast
-import datetime
 import json
 import sys
 from pathlib import Path
 
-import archive_functions as afn
+# import archive_functions as afn
 import pandas as pd
 import requests
 import upd_config as cfg
 
 sys.path.append("../")
-import functions.list_functions as lf
+import functions.list_functions as lfn
 
 # from functions.ingest_lists import ingest_lists
 # from functions.vocab import get_listsProd, get_listsTest
@@ -170,7 +168,7 @@ class Update_flag:
             | (notauthdf["rowCount"] <= 1)
         ]
 
-        archivedf["isPrivate"] = True  # set isPrivate flag to true for update
+        # archivedf["isPrivate"] = True  # set isPrivate flag to true for update
 
         # output list record counts
         nonauthct = len(notauthdf)
@@ -207,7 +205,7 @@ class Update_flag:
                             if key not in self.graphql_keys_to_keep:
                                 metadata.pop(key)
                         print(f"{druid} -  List metadata extracted, {lUrl}")
-                        metadata["isPrivate"] = True
+                        # metadata["isPrivate"] = True
                         metadata_json = json.dumps(metadata)
                         metadata_df.loc[len(metadata_df)] = {
                             "dataResourceUid": druid,
@@ -258,40 +256,18 @@ class Update_flag:
         # Change the isPrivate flag
         # self.metadata["isPrivate"] = True
         # Send the mutation using requests
-        druid = "dr22810"
-        df = self.list_meta_df
-        # # parse string to dict
-
-        # metadata_dict = json.loads(
-        #     df.loc[df["dataResourceUid"] == druid, "metadata"].iloc[0]
-        # )
-
-        # # optionally update something, e.g., isPrivate = true
-        # metadata_dict["isPrivate"] = True
-        # # convert back to JSON string
-        # metadata_json = json.dumps(metadata_dict)
-
-        # Assume df is your DataFrame and you want the row where df['id']=='xxxx'
-        # value_str = df.loc[df['id']=='xxxx', 'metadata'].iloc[0]
-        value_str = df.loc[df["dataResourceUid"] == druid, "metadata"].iloc[0]
-
-        # If it’s already a JSON string, you can parse it to a dict
-        metadata_dict = json.loads(value_str)
-        metadata_dict["isPrivate"] = True
-        # Then convert back to a JSON string (this ensures valid formatting)
-        json_str = json.dumps(metadata_dict)
-
-        print(json_str)
+        # druid = "dr22810"
 
         for druid in self.upd_df["dataResourceUid"]:
-            druid = "dr22810"
+            # druid = "dr22810"
             print(f"Updating list metadata: {druid}")
             metadata_dict = json.loads(
                 self.list_meta_df.loc[
                     self.list_meta_df["dataResourceUid"] == druid, "metadata"
                 ].iloc[0]
             )
-            metadata_dict["isPrivate"] = True
+            # metadata_dict["isPrivate"] = True
+            metadata_dict["isPrivate"] = False  # use for testing auth
             payload = {
                 "query": self.mutation_query,
                 "operationName": "update",
@@ -300,17 +276,7 @@ class Update_flag:
             response = requests.post(
                 self.graphql_url, headers=self.header_auth, json=payload
             )
-            # print(response.status_code, response.text)
-
-            # Inspect what was sent
-            print(f"Request URL:      {response.request.url}")
-            print(f"Request Headers:  {response.request.headers} \n")
-            # Inspect response
-            print(f"Response Status:  {response.status_code}")
-            print(f"Response text: {response.text}")
-            print(f"Request Body:\n     {response.request.body}")
-            print("\n")
-
+            print(response.status_code, response.text)
             if response.status_code != 200:
                 print(f"Metadata: \n {metadata_dict}")
                 raise Exception(
@@ -333,13 +299,9 @@ class Update_flag:
         """
 
         # drID = row['dataResourceUid']
+        drID = "dr22810"
         jstr = row.to_dict()
         print("POST to %s", collectory_url)
-        # headers = {
-        #     "Content-Type": "application/json",
-        #     "Accept": "application/json",
-        #     "Authorization": authorization,
-        # }
         try:
             with requests.post(
                 collectory_url,
@@ -354,34 +316,12 @@ class Update_flag:
             print("Error in creating %s: %s for %s", collectory_url, jstr, e)
             response.raise_for_status()
 
-    # def update_collectory_dr(self, row) -> str:
-    #     """
-    #     Update list - set isPrivate flag in collectory DR
-
-    #     :param row: list metadata from dataframe
-    #     :return str: Update request response code
-    #     """
-
-    #     # url = self.collectory_url + row["dataResourceUid"]
-    #     url = self.collectory_url + row["uid"]
-    #     jstr = row.to_dict()
-    #     print("POST to %s", url)
-    #     try:
-    #         with requests.post(url, json=jstr, headers=self.header_auth) as response:
-    #             if response.status_code == 200 or response.status_code == 201:
-    #                 return str(response.status_code)
-    #             else:
-    #                 response.raise_for_status()
-    #     except Exception as e:
-    #         print("Error in creating %s: %s for %s", url, jstr, e)
-    #         response.raise_for_status()
-
-    #     return ()
-
     def run(self):
         args = self.parse_arguments()
         # Get access token
-        self.accessToken = lf.get_authentication_info(args=args, test=True)
+        # self.accessToken = lfn.get_authentication_info(args=args, test=True)
+        self.accessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJjb2xsZWN0aW9uX2FkbWluIiwidXNlciIsImNvbGxlY3RvcnNfYWRtaW4iLCJhZG1pbiIsImRhdGFfcHVibGlzaGVyIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiIxMDRmZjdhYi00MTJhLTQzYWEtODg5NC0xZDk0NjAwZGZlYzEiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3NjE3MTA2MDUsImV4cCI6MTc2MTc5NzAwNSwiaWF0IjoxNzYxNzEwNjA1LCJqdGkiOiJjYmU0NDIxNS0wM2QwLTQxZDQtOWVhYy1mYTQzZDVmMjkxYWQiLCJ1c2VybmFtZSI6IjU2NTkyIn0.sGuyIXFf9hLtCFhet2-B3mmanoIDR-B79YHJPWp81E1LpTyK_f_iYZ3EWa5M7Zed2gJDZBBlwkaA9Zmvykxy3yxYiyz7etLV7v505W7MagPhf708i1jNaHQUmVw5qm2EubKNdS1M0N6s6XWXJ9wo183QexvjmiJCLGXFRctLiGuuPYldsx74Q7FdPHAPX-nMsevDoM_gN54INB8u7Hd26FCTWdHCiJgisZFWvhszHPGEzBdpJqOTyYcvsSFK6qHOR04mOM1OpUeVHRDqahQIKp2D_4HitbgqwWcDYxDQZQIITCN9AWWtQQz4ypBlTbsG-kd8CmEz8YW4SNQEaoDp5w"
+
         authorization_jwt = f"Bearer {self.accessToken}"
         self.header_noauth = {
             "Content-Type": "application/json",
@@ -390,6 +330,7 @@ class Update_flag:
         self.header_auth = {
             "Content-Type": "application/json",
             "Accept": "application/json",
+            "user-agent": "bie-index/1.0.0",
             "Authorization": authorization_jwt,
         }
 
@@ -400,9 +341,7 @@ class Update_flag:
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
             self.coll_df = self.get_collectory_metadata()
-            self.list_meta_df = (
-                self.get_list_metadata()
-            )  # isPrivate will be set to true in here
+            self.list_meta_df = self.get_list_metadata()
 
             # Write downloaded to CSV
             self.all_df.to_csv(args.allfile, encoding="utf-8", index=False)
@@ -425,7 +364,6 @@ class Update_flag:
 
         # Set up query for list metadata update via graphql
         self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
-        # self.upd_df.apply(self.update_list_metadata, axis=1)
         self.update_list_metadata()
         self.coll_df["upd_status_code"] = self.coll_df.apply(
             lambda row: self.update_collectory_dr(row, self.collectory_url), axis=1
