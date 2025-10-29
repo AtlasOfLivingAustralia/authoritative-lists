@@ -1,4 +1,5 @@
 import argparse
+import ast
 import datetime
 import json
 import sys
@@ -45,7 +46,7 @@ class Update_flag:
         self.list_url = cfg.list_url
         self.list_info_url = cfg.list_info_url
         self.graphql_url = cfg.graphql_url
-        self.keys_to_keep = cfg.keys_to_keep
+        self.graphql_keys_to_keep = cfg.graphql_keys_to_keep
 
     def parse_arguments(self):
         """
@@ -61,6 +62,7 @@ class Update_flag:
         parser.add_argument("--allfile", required=True)
         parser.add_argument("--updfile", required=True)
         parser.add_argument("--colfile", required=True)
+        parser.add_argument("--list_metafile", required=True)
         parser.add_argument("--env", required=True)
         parser.add_argument("--client_ids", required=True)
         parser.add_argument("--getListInfo", required=True)
@@ -126,16 +128,12 @@ class Update_flag:
 
         limit = 1000
         page = 1
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
-        }
         all_data = []
         print("Downloading list info: ")
         while True:
             url = f"{self.list_info_url}&page={page}&pageSize={limit}"
             print(f".... list: {url}")
-            response = requests.get(url, headers)
+            response = requests.get(url, self.header_auth)
             # Check if the request was successful
             if response.status_code == 200:
                 data = response.json()
@@ -192,129 +190,246 @@ class Update_flag:
 
         return archivedf
 
-    def get_list_metadata(self, druid):
-        # need to do this via API   - put the keys to keep in config
-        lUrl = self.list_url + druid
-        response = requests.get(lUrl, self.headers)
-
-        if response.status_code == 200:
-            metadata = response.json()
-            for key in list(metadata.keys()):  # remove key values not used in update
-                if key not in self.keys_to_keep:
-                    metadata.pop(key)
-            # print(f"Extracted metadata {metadata}")
-            # print(f"Updated metadata: {metadata}")
-        else:
-            print(
-                f"List metadata request failed with status code {response.status_code}"
-            )
-        return metadata
+    def get_list_metadata(self):
+        metadata = ""
+        metadata_df = pd.DataFrame(columns=["dataResourceUid", "metadata"])
+        for druid in self.upd_df["dataResourceUid"]:
+            lUrl = self.list_url + druid
+            response = requests.get(lUrl, self.header_noauth)
+            if response.status_code == 200:
+                metadata = None
+                try:
+                    metadata = response.json()
+                    if metadata:
+                        for key in list(
+                            metadata.keys()
+                        ):  # remove key values not used in update
+                            if key not in self.graphql_keys_to_keep:
+                                metadata.pop(key)
+                        print(f"{druid} -  List metadata extracted, {lUrl}")
+                        metadata["isPrivate"] = True
+                        metadata_json = json.dumps(metadata)
+                        metadata_df.loc[len(metadata_df)] = {
+                            "dataResourceUid": druid,
+                            "metadata": metadata_json,
+                        }
+                    else:
+                        print(f"{druid} - No ist metadata")
+                except ValueError:
+                    # Happens when response is not valid JSON (e.g., HTML error page or plain text)
+                    print(f"{druid} - Not valid JSON")
+            else:
+                print(
+                    f"{druid} - List metadata request for failed with status code {response.status_code}, {lUrl}"
+                )
+        return metadata_df
 
     def get_collectory_metadata(self):
         metadata = ""
         metadata_df = pd.DataFrame()
         for druid in self.upd_df["dataResourceUid"]:
             lUrl = self.collectory_url + druid
-            response = requests.get(lUrl, self.headers)
+            response = requests.get(lUrl, self.header_noauth)
             if response.status_code == 200:
-                metadata = response.json()
-                print(f"{druid} -  Collectory metadata extracted, {lUrl}")
+                metadata = None
+                try:
+                    metadata = response.json()
+                    print(f"{druid} -  Collectory metadata extracted, {lUrl}")
+                except ValueError:
+                    # Happens when response is not valid JSON (e.g., HTML error page or plain text)
+                    print(f"{druid} - Not valid JSON")
             else:
                 print(
                     f"{druid} - Collectory metadata request for failed with status code {response.status_code}, {lUrl}"
                 )
             # metadata_df.append(metadata)  # Append the returned DataFrame
-            metadata_df = pd.concat(
-                [metadata_df, pd.DataFrame([metadata])], ignore_index=True
-            )
-        # metadata_df = pd.concat(list_of_dfs, ignore_index=True)
+            if metadata:
+                metadata_df = pd.concat(
+                    [metadata_df, pd.DataFrame([metadata])], ignore_index=True
+                )
+            else:
+                print(f"{druid} - No metadata")
         return metadata_df
 
-    def update_list_metadata(self, row):
+    def update_list_metadata(self):
         # Get metadata (using API for now)
         # Update list
         # self.metadata = self.get_metadata("dr22808")
         # Change the isPrivate flag
         # self.metadata["isPrivate"] = True
         # Send the mutation using requests
-
-        druid = row["dataResourceUid"]
         druid = "dr22810"
-        print(f"Updating list metadata: {druid}")
-        metadata = self.get_list_metadata(druid)
-        metadata["isPrivate"] = True
-        jsonStr = {
-            "query": self.mutation_query,
-            "operationName": "update",
-            "variables": metadata,
-        }
-        response = requests.post(self.graphql_url, self.headers, json=jsonStr)
-        if response.status_code != 200:
-            print(f"Metadata: {metadata}")
-            raise Exception(
-                f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata['id']}"
+        df = self.list_meta_df
+        # # parse string to dict
+
+        # metadata_dict = json.loads(
+        #     df.loc[df["dataResourceUid"] == druid, "metadata"].iloc[0]
+        # )
+
+        # # optionally update something, e.g., isPrivate = true
+        # metadata_dict["isPrivate"] = True
+        # # convert back to JSON string
+        # metadata_json = json.dumps(metadata_dict)
+
+        # Assume df is your DataFrame and you want the row where df['id']=='xxxx'
+        # value_str = df.loc[df['id']=='xxxx', 'metadata'].iloc[0]
+        value_str = df.loc[df["dataResourceUid"] == druid, "metadata"].iloc[0]
+
+        # If it’s already a JSON string, you can parse it to a dict
+        metadata_dict = json.loads(value_str)
+        metadata_dict["isPrivate"] = True
+        # Then convert back to a JSON string (this ensures valid formatting)
+        json_str = json.dumps(metadata_dict)
+
+        print(json_str)
+
+        for druid in self.upd_df["dataResourceUid"]:
+            druid = "dr22810"
+            print(f"Updating list metadata: {druid}")
+            metadata_dict = json.loads(
+                self.list_meta_df.loc[
+                    self.list_meta_df["dataResourceUid"] == druid, "metadata"
+                ].iloc[0]
             )
-        else:
-            data = response.json()
-            if "errors" in data:
-                raise Exception(f"GraphQL query data error: " + str(data["errors"]))
-            print(f"Updated isPrivate flag for list: {druid}")
+            metadata_dict["isPrivate"] = True
+            payload = {
+                "query": self.mutation_query,
+                "operationName": "update",
+                "variables": metadata_dict,
+            }
+            response = requests.post(
+                self.graphql_url, headers=self.header_auth, json=payload
+            )
+            # print(response.status_code, response.text)
+
+            # Inspect what was sent
+            print(f"Request URL:      {response.request.url}")
+            print(f"Request Headers:  {response.request.headers} \n")
+            # Inspect response
+            print(f"Response Status:  {response.status_code}")
+            print(f"Response text: {response.text}")
+            print(f"Request Body:\n     {response.request.body}")
+            print("\n")
+
+            if response.status_code != 200:
+                print(f"Metadata: \n {metadata_dict}")
+                raise Exception(
+                    f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata_dict['id']}"
+                )
+            else:
+                data = response.json()
+                if "errors" in data:
+                    raise Exception(f"GraphQL query data error: " + str(data["errors"]))
+                print(f"Updated isPrivate flag for list: {druid}")
 
         return ()
 
-    def update_collectory_metadata(self, row):
-        print(f"Updating collectory metadata: {row['uid']}")
+    def update_collectory_dr(self, row, collectory_url) -> str:
+        """
+        Update list - set isPrivate flag in collectory DR
 
-        # Update collectory metadata
-        print(f"Updating collectory metadata: {row['uid']}")
-        colUrl = self.collectory_url + row["uid"]
-        # crow = self.coll_df[self.coll_df["uid"] == row["uid"]]
-        row["isPrivate"] = "True"
-        jstr = row.to_json()
+        :param row: list information from dataframe
+        :return str: Update request response code
+        """
+
+        # drID = row['dataResourceUid']
+        jstr = row.to_dict()
+        print("POST to %s", collectory_url)
+        # headers = {
+        #     "Content-Type": "application/json",
+        #     "Accept": "application/json",
+        #     "Authorization": authorization,
+        # }
         try:
-            with requests.post(colUrl, json=jstr, headers=self.headers) as response:
+            with requests.post(
+                collectory_url,
+                json=jstr,
+                headers=self.header_auth,
+            ) as response:
                 if response.status_code == 200 or response.status_code == 201:
                     return str(response.status_code)
                 else:
                     response.raise_for_status()
         except Exception as e:
-            print("Error in creating %s: %s for %s", colUrl, jstr, e)
+            print("Error in creating %s: %s for %s", collectory_url, jstr, e)
             response.raise_for_status()
 
-        print(f"Updated collectory isPrivate flag for list: {druid}")
+    # def update_collectory_dr(self, row) -> str:
+    #     """
+    #     Update list - set isPrivate flag in collectory DR
 
-        return ()
+    #     :param row: list metadata from dataframe
+    #     :return str: Update request response code
+    #     """
+
+    #     # url = self.collectory_url + row["dataResourceUid"]
+    #     url = self.collectory_url + row["uid"]
+    #     jstr = row.to_dict()
+    #     print("POST to %s", url)
+    #     try:
+    #         with requests.post(url, json=jstr, headers=self.header_auth) as response:
+    #             if response.status_code == 200 or response.status_code == 201:
+    #                 return str(response.status_code)
+    #             else:
+    #                 response.raise_for_status()
+    #     except Exception as e:
+    #         print("Error in creating %s: %s for %s", url, jstr, e)
+    #         response.raise_for_status()
+
+    #     return ()
 
     def run(self):
         args = self.parse_arguments()
         # Get access token
         self.accessToken = lf.get_authentication_info(args=args, test=True)
-        self.headers = {
+        authorization_jwt = f"Bearer {self.accessToken}"
+        self.header_noauth = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
+            "Accept": "application/json",
         }
-        # Get lists to update or read file of lists to update
+        self.header_auth = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": authorization_jwt,
+        }
 
+        # Get lists to update or read file of lists to update
         if args.getListInfo == "True":
             self.all_df = (
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
             self.coll_df = self.get_collectory_metadata()
+            self.list_meta_df = (
+                self.get_list_metadata()
+            )  # isPrivate will be set to true in here
 
             # Write downloaded to CSV
             self.all_df.to_csv(args.allfile, encoding="utf-8", index=False)
             self.upd_df.to_csv(args.updfile, encoding="utf-8", index=False)
             self.coll_df.to_csv(args.colfile, encoding="utf-8", index=False)
+            self.list_meta_df.to_csv(args.list_metafile, encoding="utf-8", index=False)
         else:
-            self.all_df = pd.read_csv(args.allfile, encoding="utf-8", dtype="str")
-            self.upd_df = pd.read_csv(args.updfile, encoding="utf-8", dtype="str")
-            self.coll_df = pd.read_csv(args.colfile, encoding="utf-8", dtype="str")
+            self.all_df = pd.read_csv(
+                args.allfile, encoding="utf-8", dtype="str"
+            ).fillna("")
+            self.upd_df = pd.read_csv(
+                args.updfile, encoding="utf-8", dtype="str"
+            ).fillna("")
+            self.list_meta_df = pd.read_csv(
+                args.list_metafile, encoding="utf-8", dtype="str"
+            ).fillna("")
+            self.coll_df = pd.read_csv(
+                args.colfile, encoding="utf-8", dtype="str"
+            ).fillna("")
 
         # Set up query for list metadata update via graphql
         self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
-        self.upd_df.apply(self.update_list_metadata, axis=1)
-        # self.coll_df.apply(self.update_collectory_metadata, axis=1)
+        # self.upd_df.apply(self.update_list_metadata, axis=1)
+        self.update_list_metadata()
+        self.coll_df["upd_status_code"] = self.coll_df.apply(
+            lambda row: self.update_collectory_dr(row, self.collectory_url), axis=1
+        )
 
         print(f"\n All lists and collectory dataresources updated")
 
