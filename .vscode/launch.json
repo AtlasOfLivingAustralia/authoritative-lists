@@ -26,7 +26,7 @@
                         "--getListInfo", "False",
                         "--client_ids", "data/clientId.txt",
                         "--authentication_test", "data/auth.json",
-                        "--authentication_prod", "data/auth.json"
+                        "--authentication_prod", "data/auth2.json"
                 ]
                 },
                 

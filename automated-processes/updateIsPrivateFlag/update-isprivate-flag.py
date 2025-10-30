@@ -40,6 +40,7 @@ class Update_flag:
         self.headers = None
         self.all_df = pd.DataFrame()
         self.upd_df = pd.DataFrame()
+        self.coll_df = pd.DataFrame()
         self.collectory_url = cfg.collectory_url
         self.list_url = cfg.list_url
         self.list_info_url = cfg.list_info_url
@@ -116,6 +117,41 @@ class Update_flag:
         """
         return mutation_query
 
+    def download_list_info_prod(self):
+        """
+        Download Species list metadata for:
+        non-private and non-authoritative lists
+
+        :return: dataframe of lists
+        """
+
+        max = 10
+        df = pd.DataFrame()
+
+        print("Downloading list info: ")
+        # Get total list count
+        url = f"{self.list_info_url}"
+        response = requests.get(url, self.header_auth)
+        if response.status_code == 200:
+            data = response.json()
+            listCount = data["listCount"]
+            max = max + listCount
+            print(f"Number of lists to download is: {listCount}")
+        else:
+            print(f"Error downloading: {url} Status: {response.status_code}")
+
+        url = f"{self.list_info_url}&max={max}"
+        print(f".... list: {url}")
+        response = requests.get(url, self.header_auth)
+        # Check if the request was successful
+        if response.status_code == 200:
+            data = response.json()
+            df = pd.DataFrame(data["lists"])
+        else:
+            print(f"Error downloading: {url} Status: {response.status_code}")
+
+        return df
+
     def download_list_info_ws(self):
         """
         Download Species list metadata for:
@@ -124,30 +160,96 @@ class Update_flag:
         :return: dataframe of lists
         """
 
-        limit = 1000
-        page = 1
+        # limit = 10000
+        # page = 1
+        max = 10
         all_data = []
         print("Downloading list info: ")
-        while True:
-            url = f"{self.list_info_url}&page={page}&pageSize={limit}"
-            print(f".... list: {url}")
-            response = requests.get(url, self.header_auth)
+        # Get total list count
+        url = f"{self.list_info_url}"
+        response = requests.get(url, self.header_auth)
+        if response.status_code == 200:
+            data = response.json()
+            listCount = data["listCount"]
+            max = max + listCount
+            # data = pd.json_normalize([data])
             # Check if the request was successful
-            if response.status_code == 200:
-                data = response.json()
-                if len(data["lists"]) == 0:
-                    break
-                data = pd.json_normalize([data])  # If the response is JSON
-                all_data.extend(data["lists"][0])
-                page += limit
-            else:
-                print(f"Error downloading: {url} Status: {response.status_code}")
+            print(f"Number of lists to download is: {listCount}")
+        else:
+            print(f"Error downloading: {url} Status: {response.status_code}")
 
-        df = pd.DataFrame(all_data)
+        # while True?:
+        # url = f"{self.list_info_url}&page={page}&pageSize={limit}"
+        url = f"{self.list_info_url}&max={max}"
+        print(f".... list: {url}")
+        response = requests.get(url, self.header_auth)
+        # Check if the request was successful
+        if response.status_code == 200:
+            data = response.json()
+            df = pd.DataFrame(data["lists"])
+            # if len(data["lists"]) == 0:
+            #     break
+            # data = pd.json_normalize([data])  # If the response is JSON
+            # all_data.extend(data["lists"][0])
+            # page += limit
+        else:
+            print(f"Error downloading: {url} Status: {response.status_code}")
+
+        # df = pd.DataFrame(all_data)
+        df = pd.DataFrame(data)
         # maybe do keys to keep here not in other function
         # df = df[self.keys_to_keep]
 
         return df
+
+    def filter_lists_prod(self, args):
+        """ """
+        ##Criteria for list selection for update
+        # List must be `non-authoritative`, and meet the following criteria:
+
+        #    1. Lists with zero records - rowCount
+        #    2. Lists with only 1 record -rowCount
+        #    3. Lists marked with list type – “Test%”
+        #    4. Lists with list name contains "test%"
+
+        notauthdf = self.all_df
+
+        # Prod - current API
+        notauthdf["itemCount"] = pd.to_numeric(notauthdf["itemCount"], errors="coerce")
+        # Archive non-authoritative records that meet rules criteria
+        archivedf = notauthdf[
+            (notauthdf["listType"].str.contains("test", case=False, na=False))
+            | (notauthdf["listName"].str.contains("test", case=False, na=False))
+            | (notauthdf["itemCount"] <= 1)
+        ]
+        nonauthct = len(notauthdf)
+        lt1rec = (notauthdf["itemCount"] <= 1).sum()
+        typetest = (
+            notauthdf["listType"].str.contains("test", case=False, na=False)
+        ).sum()
+        nametest = (
+            notauthdf["listName"].str.contains("test", case=False, na=False)
+        ).sum()
+
+        # output list record counts
+        nonauthct = len(notauthdf)
+        lt1rec = (notauthdf["itemCount"] <= 1).sum()
+        typetest = (
+            notauthdf["listType"].str.contains("test", case=False, na=False)
+        ).sum()
+        nametest = (
+            notauthdf["listName"].str.contains("test", case=False, na=False)
+        ).sum()
+
+        print("  ")
+        print(f"Number non-authoritative lists: {nonauthct}")
+        print(f"    - # Lists with less than 2 records: {lt1rec}")
+        print(f"    - # List type value contains text test: {typetest}")
+        print(f"    - # List name value contains text test: {nametest}")
+
+        print(f"Number of lists to archive: {len(archivedf)}")
+
+        return archivedf
 
     def filter_lists(self, args):
         """ """
@@ -160,6 +262,7 @@ class Update_flag:
         #    4. Lists with list name contains "test%"
 
         notauthdf = self.all_df
+        # Test - new API
         notauthdf["rowCount"] = pd.to_numeric(notauthdf["rowCount"], errors="coerce")
         # Archive non-authoritative records that meet rules criteria
         archivedf = notauthdf[
@@ -251,12 +354,6 @@ class Update_flag:
 
     def update_list_metadata(self):
         # Get metadata (using API for now)
-        # Update list
-        # self.metadata = self.get_metadata("dr22808")
-        # Change the isPrivate flag
-        # self.metadata["isPrivate"] = True
-        # Send the mutation using requests
-        # druid = "dr22810"
 
         for druid in self.upd_df["dataResourceUid"]:
             # druid = "dr22810"
@@ -299,7 +396,7 @@ class Update_flag:
         """
 
         # drID = row['dataResourceUid']
-        drID = "dr22810"
+        drID = "dr22810"  # for testing
         jstr = row.to_dict()
         print("POST to %s", collectory_url)
         try:
@@ -319,9 +416,10 @@ class Update_flag:
     def run(self):
         args = self.parse_arguments()
         # Get access token
-        # self.accessToken = lfn.get_authentication_info(args=args, test=True)
-        self.accessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJjb2xsZWN0aW9uX2FkbWluIiwidXNlciIsImNvbGxlY3RvcnNfYWRtaW4iLCJhZG1pbiIsImRhdGFfcHVibGlzaGVyIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiIxMDRmZjdhYi00MTJhLTQzYWEtODg5NC0xZDk0NjAwZGZlYzEiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3NjE3MTA2MDUsImV4cCI6MTc2MTc5NzAwNSwiaWF0IjoxNzYxNzEwNjA1LCJqdGkiOiJjYmU0NDIxNS0wM2QwLTQxZDQtOWVhYy1mYTQzZDVmMjkxYWQiLCJ1c2VybmFtZSI6IjU2NTkyIn0.sGuyIXFf9hLtCFhet2-B3mmanoIDR-B79YHJPWp81E1LpTyK_f_iYZ3EWa5M7Zed2gJDZBBlwkaA9Zmvykxy3yxYiyz7etLV7v505W7MagPhf708i1jNaHQUmVw5qm2EubKNdS1M0N6s6XWXJ9wo183QexvjmiJCLGXFRctLiGuuPYldsx74Q7FdPHAPX-nMsevDoM_gN54INB8u7Hd26FCTWdHCiJgisZFWvhszHPGEzBdpJqOTyYcvsSFK6qHOR04mOM1OpUeVHRDqahQIKp2D_4HitbgqwWcDYxDQZQIITCN9AWWtQQz4ypBlTbsG-kd8CmEz8YW4SNQEaoDp5w"
-
+        self.accessToken = lfn.get_authentication_info(
+            args=args, test=True
+        )  # doesn't always work
+        # self.accessToken = <token here>
         authorization_jwt = f"Bearer {self.accessToken}"
         self.header_noauth = {
             "Content-Type": "application/json",
@@ -340,7 +438,7 @@ class Update_flag:
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
-            self.coll_df = self.get_collectory_metadata()
+            # self.coll_df = self.get_collectory_metadata()
             self.list_meta_df = self.get_list_metadata()
 
             # Write downloaded to CSV
@@ -361,6 +459,13 @@ class Update_flag:
             self.coll_df = pd.read_csv(
                 args.colfile, encoding="utf-8", dtype="str"
             ).fillna("")
+
+        # Getting current production from API - one off only - delete later
+        # self.upd_df = self.filter_lists_prod(args)  # filter based on criteria
+        # prodfile = "prod_lists_all_noauth_notprivate.csv"
+        # filterfile = "prod_lists_to_update.csv"
+        # self.all_df.to_csv(prodfile, encoding="utf-8", index=False)
+        # self.upd_df.to_csv(filterfile, encoding="utf-8", index=False)
 
         # Set up query for list metadata update via graphql
         self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
