@@ -16,6 +16,7 @@ def download_ala_specieslist(url: str):
     '''
     Download ALA species list.  Returns error if list isn't right, returns dataframe if list is correct
     '''
+        
     with urllib.request.urlopen(url, context=ssl.create_default_context(cafile=certifi.where())) as url:
         if url.status == 200:
             data = json.loads(url.read().decode())
@@ -55,25 +56,29 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     oldList = download_ala_specieslist(oldListUrl)
     oldList = kvp_to_columns(oldList)
     oldList = oldList.add_suffix("_old")
+    columns_to_strip = ['name_old','scientificName_old']
+    oldList[columns_to_strip] = oldList[columns_to_strip].apply(lambda x: x.str.strip())
+    oldList = oldList.fillna(value='') # fill all None values since it's the new default
 
     # download new list and turn it into pandas dataframe
     newList = download_ala_specieslist(newListUrl)
     newList = kvp_to_columns(newList)
     newList = newList.add_suffix("_new")
+    columns_to_strip = ['name_new','scientificName_new']
+    newList[columns_to_strip] = newList[columns_to_strip].apply(lambda x: x.str.strip())
 
     # check for new  and old names - left join new to old, drop any columns in names_old if they are na
     # conservation lists keep track of changes
-    newVsOld = pd.merge(newList, oldList, how='left', left_on=['name_new','vernacularName_new'], right_on=['name_old','vernacularName_old'])
-    columns = ['name_new','scientificName_new','commonName_new','vernacularName_new']
+    newVsOld = pd.merge(newList, oldList, how='left', left_on=['name_new'], right_on=['name_old'])
+    columns = ['name_new','scientificName_new']
     if ltype == "C": 
         columns = columns + ['status_new']
     additions = newVsOld[newVsOld['name_old'].isna()][columns]
-    additions.columns = additions.columns.str.replace("_new", "", regex=True)
     additions['listUpdate'] = 'added'
 
     # removed names - left join old to new, drop na new
-    oldVsNew = pd.merge(oldList, newList, how='left', left_on=['name_old','vernacularName_old'],right_on=['name_new','vernacularName_new'])
-    columns = ['name_old','scientificName_old','commonName_old','vernacularName_old']
+    oldVsNew = pd.merge(oldList, newList, how='left', left_on=['name_old'],right_on=['name_new'])
+    columns = ['name_old','scientificName_old']
     if ltype == "C": 
         columns = columns + ['status_old']
     removals = oldVsNew[oldVsNew['name_new'].isna()][columns]
@@ -175,13 +180,7 @@ def get_conservation_codes(state=None):
         codes.loc[codes['Code_description'] == "Near threatened", 'Code_description'] = "Near Threatened"
 
         return codes 
-    
-    # elif state == "TAS":
-
-    #     xls = pd.ExcelFile(conservation_list_urls[state][0])
-    #     # first sheet name is species, second sheet is codes
-    #     return pd.read_excel(xls,sheet_name=xls.sheet_names[1],skiprows=[0,6,7,8])[['Category code','Category']][0:4]
-    
+        
     elif state == "WA":
 
         # get the data from the url
@@ -357,8 +356,10 @@ def format_data_for_post(list_data=None,
     # return data
     return post_data
 
-def post_list_to_test(druid=None,
-                      filename=None,
+def post_list_to_test(list_data=None,
+                      druid=None,
+                      state=None,
+                      list_type=None,
                       args=None):
     '''
     Posts formatted data to test with authentication checks
@@ -366,12 +367,18 @@ def post_list_to_test(druid=None,
     
     # format your data for posting to test
     auth=get_authentication_info(args=args,test=True)
+    '''
+    druid=None,
+    filename=None,
+    args=None
 
     # format headers
     headers = {#'X-ALA-userId': auth['profile']['email'],
                'Authorization': 'Bearer {}'.format(auth['access_token']),
-               'Accept': 'application/json'}
+               'Accept': 'application/json',
+               'user-agent': 'authoritative-lists/1.0.0'}
 
+    
     # create a binary string and data for file upload
     with open('data/temp-new-lists/{}'.format(filename), 'rb') as f:
         files = {
@@ -416,6 +423,20 @@ def post_list_to_test(druid=None,
         time.sleep(15)
         response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
         completed = response_test.json()['completed']
+    '''
+    # format your data for posting to test
+    data_for_post = format_data_for_post(list_data=list_data,state=state,list_type=list_type)
+    auth=get_authentication_info(args=args,test=True)
+    
+    # create headers with authentication
+    headers = {'Content-Type': 'application/json', 
+               'X-ALA-userId': auth['profile']['email'], # unsure between this and userId
+               'Authorization': 'Bearer {}'.format(auth['access_token'])}
+    
+    # post the data to test
+    response = requests.post("https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),data=json.dumps(data_for_post),headers=headers)
+    if response.status_code != 200 and response.status_code != 201:
+        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response.status_code,response.text))
     return None # was response   
 
 def get_authentication_info(args=None,test=False,prod=False):

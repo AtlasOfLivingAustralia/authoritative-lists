@@ -79,7 +79,8 @@ def ingest_lists(conservation_lists = None,
             #os.system('ln -s data/temp-new-lists/{} {}'.format(temp_filename,temp_filename))
 
             # post list to test
-            lf.post_list_to_test(druid=list_ids_conservation_test[state],filename=temp_filename,args=args)
+            # lf.post_list_to_test(druid=list_ids_conservation_test[state],filename=temp_filename,args=args)
+            lf.post_list_to_test(list_data=conservation_list,state=state,druid=list_ids_conservation_test[state],list_type="C",args=args)
  
             # get old and new list urls    
             oldListUrl = get_listsProd + list_ids_conservation_prod[state] + urlSuffix
@@ -87,9 +88,7 @@ def ingest_lists(conservation_lists = None,
             # download old list and turn it into pandas dataframe
             oldList = lf.download_ala_specieslist(oldListUrl)
             oldList = lf.kvp_to_columns(oldList)
-            print(oldList)
-            import sys
-            sys.exit()
+
             temp_filename = "{}-conservation-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
             oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
 
@@ -138,7 +137,7 @@ def ingest_lists(conservation_lists = None,
 
             # create a processed sensitive list from the raw data
             sensitive_list = create_sensitive_list(list_data=sensitive_list_data,state=state).reset_index(drop=True)
-
+            
             # trim whitespace at end of strings
             sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 
@@ -151,14 +150,13 @@ def ingest_lists(conservation_lists = None,
             #os.system('ln -s data/temp-new-lists/{} {}'.format(temp_filename,temp_filename))
 
             # post list to test
-            lf.post_list_to_test(druid=list_ids_sensitive_test[state],filename=temp_filename,args=args)
+            # lf.post_list_to_test(druid=list_ids_sensitive_test[state],filename=temp_filename,args=args)
+            lf.post_list_to_test(list_data=sensitive_list,state=state,druid=list_ids_sensitive_test[state],list_type="S",args=args)
             
             # get old and new list urls    
             oldListUrl = get_listsProd + list_ids_sensitive_prod[state] + urlSuffix
             oldList = lf.download_ala_specieslist(oldListUrl)
-            print(oldList)
-            import sys
-            sys.exit()
+
             oldList = lf.kvp_to_columns(oldList)
             temp_filename = "{}-sensitive-historical-{}.csv".format(state.replace(' ','_'),datetime.now().strftime("%Y-%m-%d"))
             oldList.to_csv('data/temp-historical-lists/{}'.format(temp_filename))
@@ -171,7 +169,7 @@ def ingest_lists(conservation_lists = None,
 
             # generate difference report for sensitive list
             sensitive_changelist = lf.get_changelist(list_ids_sensitive_test[state], list_ids_sensitive_prod[state], "S")
-            
+
             # if there are changes, write them out to a csv for emailing
             if not sensitive_changelist.empty:
 

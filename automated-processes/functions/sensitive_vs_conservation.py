@@ -205,7 +205,7 @@ def create_conservation_list(list_data = None,
         ])].reset_index(drop=True)
 
         # change classification to status and make sure they have correct capitalization
-        conservation_list = conservation_list.applymap(lambda s: s.capitalize() if type(s) == str else s)
+        conservation_list = conservation_list.map(lambda s: s.capitalize() if type(s) == str else s)
         conservation_list['status'] = conservation_list['status'].str.upper()
         
         # merge list with statuses

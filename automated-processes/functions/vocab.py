@@ -12,10 +12,16 @@ token_url = "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth2/to
 
 # URLs for ALA lists for test and production
 get_listsProd = "https://api.ala.org.au/specieslist/ws/speciesListItems/"
+# upload_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/upload"
+# ingest_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/"
+# progress_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/{speciesListID}/progress"
+# get_listsTest = "https://lists-develop-ws.dev.ala.org.au/v1/speciesListItems/" # was v2
+'''
 upload_listsTest = "https://lists-ws.test.ala.org.au/v2/upload"
 ingest_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/"
 progress_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/{speciesListID}/progress"
 get_listsTest = "https://lists-ws.test.ala.org.au/v2/speciesListItems/"
+'''
 urlSuffix = "?max=10000&includeKVP=true"
 
 state_abbreviations = {
