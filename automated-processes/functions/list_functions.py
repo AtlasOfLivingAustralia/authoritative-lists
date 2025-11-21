@@ -8,7 +8,7 @@ import ssl
 import requests
 from .vocab import api_values,conservation_list_urls,get_listsProd,get_listsTest,urlSuffix
 from .vocab import list_names_conservation_test,list_names_sensitive_test,token_url
-from .vocab import upload_listsTest,ingest_listsTest,progress_listsTest
+# from .vocab import upload_listsTest,ingest_listsTest,progress_listsTest
 from bs4 import BeautifulSoup
 import time
 
