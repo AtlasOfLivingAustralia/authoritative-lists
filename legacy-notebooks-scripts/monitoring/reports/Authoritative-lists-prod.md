@@ -1,4 +1,4 @@
-## Authoritative Lists - Production:   2023-07-24  
+## Authoritative Lists - Production:   
 ### Conservation Lists  
 |  dataResourceUid   | listName                                                       | listType          | dateCreated          | lastUpdated          | lastUploaded         | lastMatched          | username                  | fullName   |   itemCount | region                       | category   | generalisation   | authority   | sdsType   | isAuthoritative   | isInvasive   | isThreatened   | looseSearch   | wkt   |
 | :------------------|:---------------------------------------------------------------|:------------------|:---------------------|:---------------------|:---------------------|:---------------------|:--------------------------|:-----------|------------:|:-----------------------------|:-----------|:-----------------|:------------|:----------|:------------------|:-------------|:---------------|:--------------|:------|

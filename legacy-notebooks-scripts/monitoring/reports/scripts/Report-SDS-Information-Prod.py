@@ -10,16 +10,17 @@
 # Output information files to : ..\authoritative-lists\Monitoring\SDS-Information-<date>.md
 ##############################################################################################
 #
-import sys
-import os
-import urllib.request
-import json
-import certifi
-import ssl
 import datetime
-import tabulate
-import pandas as pd
+import json
+import os
 import os.path as path
+import ssl
+import sys
+import urllib.request
+
+import certifi
+import pandas as pd
+import tabulate
 
 projectDir = path.abspath(path.join(os.getcwd(), "../..")) + "/"
 outDir = projectDir + "reports/"
@@ -52,10 +53,10 @@ def concat_columns(row, col_pairs):
     return row
 
 
-def build_markdown(df, dStr):
+def build_markdown(df, dStr, env):
     # Create markdown from dataframe, add headers and description
     mheader = "## State Sensitive Species Lists - Occurrence Assertions Summary \n"
-    updateInfo = "### Date Last Updated: " + dStr + "\n"
+    updateInfo = f"{env} ### Date Last Updated: " + dStr + "\n"
     mfooter = "\n"
     d1 = (
         "\n The table below summarises the occurrence record count for sensitive species \
@@ -211,7 +212,8 @@ for state, dr in drDict.items():
     )
 
 # Build markdown
-mdsdf = build_markdown(summarydf, monthStr)
+env = "Production"
+mdsdf = build_markdown(summarydf, monthStr, env)
 mfile = outDir + "SDS-Assertions-Information" + ".md"
 print(f"Writing report to markdown file: {mfile}")
 with open(mfile, "w") as f:
