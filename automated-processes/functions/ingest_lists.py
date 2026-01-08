@@ -190,7 +190,7 @@ def ingest_lists(conservation_lists = None,
                                     Bucket = s3_info['bucket'], 
                                     Key = '{}/{}'.format(s3_info['key_sensitive_lists'],temp_filename))
     
-    '''
+    #'''
     # initialise the dataframe and column names for all sensitive lists compilation
     raw_sciName = ['raw_scientificName_{}'.format(state) for state in all_sensitive_lists]
     categories = ['category_{}'.format(state) for state in all_sensitive_lists]
@@ -231,5 +231,5 @@ def ingest_lists(conservation_lists = None,
     # write list to csv for upload (may change this later)
     temp_filename = "all-sensitive-lists-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))
     all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename),index=False)
-    '''
+    #'''
     return conservation_dict_changes,sensitive_dict_changes   
