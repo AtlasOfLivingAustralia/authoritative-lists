@@ -522,7 +522,7 @@ def refresh_access_token(refresh_token=None,
         'client_id': client_id,
         'client_secret': client_secret
     }
-    
+
     # get response
     response = requests.post(token_url, data=data, headers={'Accept': 'application/json'})
     
