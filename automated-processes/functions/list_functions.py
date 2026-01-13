@@ -705,17 +705,17 @@ def add_change_delete_list_values(list_type=None, list_data=None, state=None):
             if dir == "Additions":
                 list_data = pd.concat([list_data, df]).reset_index(drop=True)
             elif dir == "Changes":
-                df = df.set_index("raw_scientificName")
+                df = df.set_index("verbatimScientificName")
                 for name, row in df.iterrows():
-                    if name in list(list_data["raw_scientificName"]):
+                    if name in list(list_data["verbatimScientificName"]):
                         index = list_data.loc[
-                            list_data["raw_scientificName"] == name
+                            list_data["verbatimScientificName"] == name
                         ].index[0]
                         list_data.at[index, row["field"]] = row["value"]
             else:
                 for i, row in df.iterrows():
                     index = list_data.loc[
-                        list_data["raw_scientificName"] == row["raw_scientificName"]
+                        list_data["verbatimScientificName"] == row["verbatimScientificName"]
                     ].index[0]
                     list_data.drop(index)
 
@@ -725,12 +725,14 @@ def add_change_delete_list_values(list_type=None, list_data=None, state=None):
 def set_bool_argument(arg=None, name_arg=None):
     # set boolean dict for more efficient variable setting
     boolean_dict = {"True": True, "False": False}
-
+    
     if isinstance(arg, str):
         return boolean_dict[arg]
+    elif isinstance(arg, bool):
+        return arg
     else:
         raise ValueError(
-            "Only True and False values are accepted for {}".format(name_arg)
+            "Only strings or boolean values are accepted for {}".format(name_arg)
         )
 
 

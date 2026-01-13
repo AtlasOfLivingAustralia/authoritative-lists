@@ -120,6 +120,7 @@ def add_attachments(list_to_check=None, list_type=None, attachments=None, change
         name = "{}-{}.csv".format(
             file_names[list_type], datetime.now().strftime("%Y-%m-%d")
         )
+        print(name)
         path = "{}/{}-{}.csv".format(
             file_paths[list_type],
             file_names[list_type],
@@ -134,12 +135,12 @@ def add_attachments(list_to_check=None, list_type=None, attachments=None, change
             if list_type in ["cc", "sc"]:
                 changes += "{}<br />\n".format(x)
             name = "{}-{}-{}.csv".format(
-                x.replace(" ", "_"), file_names[x], datetime.now().strftime("%Y-%m-%d")
+                x.replace(" ", "_"), file_names[list_type], datetime.now().strftime("%Y-%m-%d")
             )
             path = "{}/{}-{}-{}.csv".format(
-                file_paths[x],
+                file_paths[list_type],
                 x.replace(" ", "_"),
-                file_names[x],
+                file_names[list_type],
                 datetime.now().strftime("%Y-%m-%d"),
             )
             attachments[name] = Path(path)

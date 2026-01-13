@@ -14,6 +14,8 @@ from .vocab import (
 
 def compile_conservation_lists(args=None):
 
+    print("compiling conservation lists")
+
     # initialise the dataframe and column names for all conservation lists compilation
     sourceStatus = ["sourceStatus_{}".format(state) for state in all_conservation_lists]
     columns = (
@@ -41,15 +43,8 @@ def compile_conservation_lists(args=None):
         list_df = lf.kvp_to_columns(kvps_conservation).reset_index(drop=True)
 
         # add temporary change to change raw to verbatim; also check if there are supplied names
-        if all(
-            x not in list_df.columns
-            for x in ["raw_scientificName", "verbatimScientificName"]
-        ):
+        if "verbatimScientificName" not in list_df.columns:
             list_df["verbatimScientificName"] = list_df["scientificName"].copy()
-        elif "raw_scientificName" in list_df.columns:
-            list_df = list_df.rename(
-                columns={"raw_scientificName": "verbatimScientificName"}
-            )
 
         # rename columns for
         list_df = list_df.rename(
@@ -109,17 +104,16 @@ def compile_conservation_lists(args=None):
     all_conservation = all_conservation.replace(math.nan, "")
 
     # post list to test
-    # TODO: change this
-    lf.post_list_to_test(
-        list_data=all_conservation,
-        state=state,
-        druid=all_conservation_druid,
-        list_type="C",
-        args=args,
-    )
+    # lf.post_list_to_test(
+    #     list_data=all_conservation,
+    #     state=state,
+    #     druid=all_conservation_druid,
+    #     list_type="C",
+    #     args=args,
+    # )
 
     # write list to csv for upload (may change this later)
-    temp_filename = "all-conservation-lists-{}.csv".format(
+    temp_filename = "all-conservation-{}.csv".format(
         datetime.now().strftime("%Y-%m-%d")
     )
     all_conservation.to_csv("data/temp-new-lists/{}".format(temp_filename), index=False)

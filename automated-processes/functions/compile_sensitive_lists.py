@@ -14,6 +14,8 @@ from functions.vocab import (
 
 def compile_sensitive_lists(args=None):
 
+    print("compiling sensitive lists")
+
     # initialise the dataframe and column names for all sensitive lists compilation
     generalisation = [
         "generalisation_{}".format(state) for state in all_sensitive_lists
@@ -43,15 +45,8 @@ def compile_sensitive_lists(args=None):
         list_df = lf.kvp_to_columns(kvps_sensitive).reset_index(drop=True)
 
         # add temporary change to change raw to verbatim; also check if there are supplied names
-        if all(
-            x not in list_df.columns
-            for x in ["raw_scientificName", "verbatimScientificName"]
-        ):
+        if "verbatimScientificName" not in list_df.columns:
             list_df["verbatimScientificName"] = list_df["scientificName"].copy()
-        elif "raw_scientificName" in list_df.columns:
-            list_df = list_df.rename(
-                columns={"raw_scientificName": "verbatimScientificName"}
-            )
 
         # rename columns for
         list_df = list_df.rename(
@@ -115,17 +110,16 @@ def compile_sensitive_lists(args=None):
     all_sensitive = all_sensitive.replace(math.nan, "")
 
     # post list to test
-    # TODO: change this
-    lf.post_list_to_test(
-        list_data=all_sensitive,
-        state=state,
-        druid=all_sensitive_druid,
-        list_type="S",
-        args=args,
-    )
+    # lf.post_list_to_test(
+    #     list_data=all_sensitive,
+    #     state=state,
+    #     druid=all_sensitive_druid,
+    #     list_type="S",
+    #     args=args,
+    # )
 
     # write list to csv for upload (may change this later)
-    temp_filename = "all-sensitive-lists-{}.csv".format(
+    temp_filename = "all-sensitive-{}.csv".format(
         datetime.now().strftime("%Y-%m-%d")
     )
     all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename), index=False)

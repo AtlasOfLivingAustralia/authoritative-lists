@@ -76,9 +76,9 @@ all_conservation_lists = ["QLD", "NT", "NSW", "WA", "ACT", "VIC", "TAS", "EPBC"]
 
 all_sensitive_lists = ["ACT", "BirdLife", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
-all_conservation_druid = ""
+all_conservation_druid = "dr23326"
 
-all_sensitive_druid = ""
+all_sensitive_druid = "dr23005"
 
 # ALA list ids for all conservation authoritative lists on test
 list_ids_conservation_test = {
@@ -146,6 +146,7 @@ list_names_conservation_test = {
     "VIC": "Victoria : Conservation Status",
     "WA": "Western Australia: Conservation Status",
     "EPBC": "EPBC Act Threatened Species",
+    "All": "All Threatened Australian Species",
 }
 
 # categories (from NSW?) to generalise

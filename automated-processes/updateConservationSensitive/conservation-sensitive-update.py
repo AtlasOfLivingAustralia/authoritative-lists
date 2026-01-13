@@ -1,5 +1,7 @@
 import sys
 
+sys.path.append("../")
+
 from functions import email_functions as ef
 from functions.all_args import create_parser
 from functions.ingest_lists import ingest_lists
@@ -7,7 +9,6 @@ from functions.list_functions import set_bool_argument, set_lists_to_run
 from functions.compile_conservation_lists import compile_conservation_lists
 from functions.compile_sensitive_lists import compile_sensitive_lists
 
-sys.path.append("../")
 
 
 def main():
