@@ -102,7 +102,7 @@ all_conservation_druid_test = "dr23326"
 
 all_conservation_druid_prod = ""
 
-all_sensitive_druid = "dr23005"
+all_sensitive_druid_test = "dr23005"
 
 all_sensitive_druid_prod = ""
 

@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pandas as pd
 from functions import list_functions as lf
-from functions.vocab import (
+from .vocab import (
     all_sensitive_druid_test,
     all_sensitive_lists,
     get_listsTest,

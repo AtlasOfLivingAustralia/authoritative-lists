@@ -759,7 +759,7 @@ def set_bool_argument(arg=None, name_arg=None):
         return arg
     else:
         raise ValueError(
-            "Only strings or boolean values are accepted for {}".format(name_arg)
+            "Only True/False or boolean values are accepted for {}".format(name_arg)
         )
 
 
