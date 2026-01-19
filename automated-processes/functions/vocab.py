@@ -50,8 +50,8 @@ conservation_list_urls = {
     ],  # flora
     "QLD": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
-    "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
     "TAS": ["TasThreatSpecies.xlsx"],
+    "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
     "EPBC": [
         "https://data.gov.au/data/dataset/threatened-species-state-lists/resource/78401dce-1f40-49d3-92c4-3713d6e34974"
     ],
@@ -67,18 +67,48 @@ sensitive_list_urls = {
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
 }
 
+# urls for all species in state/territory
+all_species_urls = {
+    "ACT": ["data/lists-from-ste-terr/ACT_taxa_table.csv"],  # might switch to URL
+    "NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
+    "NT": [
+        "data/lists-from-ste-terr/NTSpeciesList_17_9_2025.csv"
+    ],  # might switch to URL
+    "QLD": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
+    "SA": [
+        "https://www.environment.sa.gov.au/topics/science/information-and-data/census-of-sa-vertebrates",
+        "https://data.environment.sa.gov.au/Content/Publications/vascular-plants-bdbsa-taxonomy.xlsx",
+        "https://data.environment.sa.gov.au/Content/Publications/other-taxonomic-groups-bdbsa-taxonomy.xlsx",
+    ],
+    "TAS": [
+        "data/lists-from-ste-terr/TasmanianNaturalValuesAtlas.xlsx"
+    ],  # might switch to URL
+    "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
+    "WA": ["data/lists-from-ste-terr/WAFloraList2025.csv"],  # might switch to URL
+}
+
 # all the state lists that are automatically checked every week
-conservation_lists = ["QLD", "NT", "NSW", "WA", "ACT", "VIC", "TAS", "EPBC"]
+conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
 sensitive_lists = ["NSW", "QLD", "VIC", "WA"]
 
-all_conservation_lists = ["QLD", "NT", "NSW", "WA", "ACT", "VIC", "TAS", "EPBC"]
+all_conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
 all_sensitive_lists = ["ACT", "BirdLife", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
-all_conservation_druid = "dr23326"
+all_species_ste_terr = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"]  #
+
+all_conservation_druid_test = "dr23326"
+
+all_conservation_druid_prod = ""
 
 all_sensitive_druid = "dr23005"
+
+all_sensitive_druid_prod = ""
+
+all_species_ste_terr_druid_test = "dr23335"
+
+all_species_ste_terr_druid_prod = ""
 
 # ALA list ids for all conservation authoritative lists on test
 list_ids_conservation_test = {
@@ -129,6 +159,18 @@ list_ids_sensitive_prod = {
     "BirdLife": "dr494",
 }
 
+list_ids_species_dummy_test = {
+    "ACT": "dr23327",
+    "NSW": "dr23328",
+    "NT": "dr23329",
+    "QLD": "dr23330",
+    "SA": "dr23331",
+    "TAS": "dr23332",
+    "VIC": "dr23333",
+    "WA": "dr23334",
+}
+
+
 list_names_sensitive_test = {
     "NSW": "NSW Sensitive Species List",
     "QLD": "Queensland Confidential Species",
@@ -147,6 +189,17 @@ list_names_conservation_test = {
     "WA": "Western Australia: Conservation Status",
     "EPBC": "EPBC Act Threatened Species",
     "All": "All Threatened Australian Species",
+}
+
+list_names_all_species_state_test = {
+    "ACT": "ACT Species List (for test)",
+    "NSW": "NSW Species List (for test)",
+    "NT": "NT Species List (for test)",
+    "QLD": "QLD Species List (for test)",
+    "SA": "SA Species List (for test)",
+    "TAS": "TAS Species List (for test)",
+    "VIC": "VIC Species List (for test)",
+    "WA": "WA Species List (for test)",
 }
 
 # categories (from NSW?) to generalise
@@ -341,5 +394,150 @@ statuses_rename = {
         "MI & P1": "Priority 1: Poorly-known species",
         "MI & P3": "Priority 2: Poorly-known species",
         "MI & P4": "Priority 4: Rare, Near Threatened",
+    },
+}
+
+all_species_ste_terr_column_names = {
+    "ACT": {
+        "verbatimScientificName": "scientificname",
+        "verbatimVernacularName": "vernacularname",
+        "verbatimRank": "taxonomicrank",
+        "verbatimFamily": "family",
+        "verbatimScientificNameAuthorship": "scientificnameauthor",
+    },
+    "NSW": {
+        "verbatimScientificName": "currentScientificName",
+        "verbatimVernacularName": "currentVernacularName",
+        "verbatimRank": "taxonRank",
+        "verbatimFamily": "family",
+        "verbatimScientificNameAuthorship": "scientificNameAuthorship",
+    },
+    "NT": {
+        "verbatimScientificName": "scientificName",
+        "verbatimVernacularName": None,
+        "verbatimRank": None,
+        "verbatimFamily": None,
+        "verbatimScientificNameAuthorship": None,
+    },
+    "QLD": {
+        "verbatimScientificName": "Scientific_name",
+        "verbatimVernacularName": "Common_name",
+        "verbatimRank": None,
+        "verbatimFamily": "Family",
+        "verbatimScientificNameAuthorship": "Taxon_author",
+    },
+    "SA": {
+        "verbatimScientificName": "SCIENTIFIC NAME",
+        "verbatimVernacularName": "COMMON NAME",
+        "verbatimRank": None,
+        "verbatimFamily": "FAMILYNAME",
+        "verbatimScientificNameAuthorship": "SPECIES AUTHOR",
+    },
+    "TAS": {
+        "verbatimScientificName": "SPECIES_NAME",
+        "verbatimVernacularName": "PREFERRED_COMMON_NAMES",
+        "verbatimRank": None,
+        "verbatimFamily": "FAMILY",
+        "verbatimScientificNameAuthorship": "SPECIES_AUTHORITY",
+    },
+    "VIC": {
+        "verbatimScientificName": "SCIENTIFIC_NAME",
+        "verbatimVernacularName": "COMMON_NAME",
+        "verbatimRank": "TAXON_LEVEL_CDE",
+        "verbatimFamily": None,
+        "verbatimScientificNameAuthorship": "AUTHORITY",
+    },
+    "WA": {
+        "verbatimScientificName": "scientificName",
+        "verbatimVernacularName": "VERNACULAR",
+        "verbatimRank": "rank",
+        "verbatimFamily": None,
+        "verbatimScientificNameAuthorship": "author",
+    },
+}
+
+all_species_ste_terr_column_names_use = {
+    "ACT": [
+        "scientificname",
+        "vernacularname",
+        "taxonomicrank",
+        "family",
+        "scientificnameauthor",
+    ],
+    "NSW": [
+        "currentScientificName",
+        "currentVernacularName",
+        "taxonRank",
+        "family",
+        "scientificNameAuthorship",
+    ],
+    "NT": ["scientificName"],
+    "QLD": ["Scientific_name", "Common_name", "Family", "Taxon_author"],
+    "SA": [
+        "SCIENTIFIC NAME",
+        "COMMON NAME",
+        "FAMILYNAME",
+        "SPECIES AUTHOR",
+    ],
+    "TAS": [
+        "SPECIES_NAME",
+        "PREFERRED_COMMON_NAMES",
+        "FAMILY",
+        "SPECIES_AUTHORITY",
+    ],
+    "VIC": [
+        "SCIENTIFIC_NAME",
+        "COMMON_NAME",
+        "TAXON_LEVEL_CDE",
+        "AUTHORITY",
+    ],
+    "WA": [
+        "scientificName",
+        "VERNACULAR",
+        "rank",
+        "author",
+    ],
+}
+
+all_species_ste_terr_column_rename = {
+    "ACT": {
+        "scientificname": "scientificName",
+        "vernacularname": "vernacularName",
+        "taxonomicrank": "rank",
+        "scientificnameauthor": "scientificNameAuthorship",
+    },
+    "NSW": {
+        "currentScientificName": "scientificName",
+        "currentVernacularName": "vernacularName",
+        "taxonRank": "rank",
+    },
+    "NT": {},
+    "QLD": {
+        "Scientific_name": "scientificName",
+        "Common_name": "vernacularName",
+        "Family": "family",
+        "Taxon_author": "scientificNameAuthorship",
+    },
+    "SA": {
+        "SCIENTIFIC NAME": "scientificName",
+        "COMMON NAME": "vernacularName",
+        "FAMILYNAME": "family",
+        "SPECIES AUTHOR": "scientificNameAuthorship",
+    },
+    "TAS": {
+        "SPECIES_NAME": "scientificName",
+        "PREFERRED_COMMON_NAMES": "vernacularName",
+        "FAMILY": "family",
+        "SPECIES_AUTHORITY": "scientificNameAuthorship",
+    },
+    "VIC": {
+        "SCIENTIFIC_NAME": "scientificName",
+        "COMMON_NAME": "vernacularName",
+        "TAXON_LEVEL_CDE": "rank",
+        "AUTHORITY": "scientificNameAuthorship",
+    },
+    "WA": {
+        "VERNACULAR": "vernacularName",
+        "author": "scientificNameAuthorship",
     },
 }

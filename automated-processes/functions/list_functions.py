@@ -1,25 +1,30 @@
 # Common functions for Authoritative Lists
 #
-import pandas as pd
-import urllib.request
 import json
-import certifi
 import ssl
+import time
+import urllib.request
+
+import certifi
+import pandas as pd
 import requests
-from .vocab import (
-    api_values,
-    conservation_list_urls,
-    get_listsProd,
-    get_listsTest,
-    urlSuffix,
-    conservation_lists,
-    sensitive_lists,
-)
-from .vocab import list_names_conservation_test, list_names_sensitive_test, token_url
 
 # from .vocab import upload_listsTest,ingest_listsTest,progress_listsTest
 from bs4 import BeautifulSoup
-import time
+
+from .vocab import (
+    api_values,
+    conservation_list_urls,
+    conservation_lists,
+    get_listsProd,
+    get_listsTest,
+    list_names_conservation_test,
+    list_names_sensitive_test,
+    sensitive_lists,
+    token_url,
+    urlSuffix,
+    list_names_all_species_state_test
+)
 
 
 def download_ala_specieslist(url: str):
@@ -422,6 +427,21 @@ def webscrape_list_url(url=None, state=None):
 
         return pd.read_csv(url)  # data, sep=",")
 
+    elif state == "SA":
+
+        # get the data from the url
+        response = requests.get(url)
+
+        # parse the html to get the spreadsheets
+        soup = BeautifulSoup(response.text, "html.parser")
+        strings = list(soup.find_all("a"))
+        urls = list(set([str(s) for s in strings if ".xls" in str(s)]))
+
+        for url in urls:
+            xls = pd.ExcelFile(url.split('"')[1])
+            # second sheet name is titled 'Taxonomic List DEC 25'
+            return pd.read_excel(xls, sheet_name=xls.sheet_names[1], skiprows=[0, 1])
+
     else:
 
         # need to write a new loop
@@ -445,6 +465,12 @@ def format_data_for_post(list_data=None, state=None, list_type=None):
     elif list_type == "S":
         post_data = {
             "listName": list_names_sensitive_test[state],
+            "listType": "TEST",
+            "listItems": [None for i in range(list_data.shape[0])],
+        }
+    elif list_type == "ALL":
+        post_data = {
+            "listName": list_names_all_species_state_test[state],
             "listType": "TEST",
             "listItems": [None for i in range(list_data.shape[0])],
         }
@@ -715,7 +741,8 @@ def add_change_delete_list_values(list_type=None, list_data=None, state=None):
             else:
                 for i, row in df.iterrows():
                     index = list_data.loc[
-                        list_data["verbatimScientificName"] == row["verbatimScientificName"]
+                        list_data["verbatimScientificName"]
+                        == row["verbatimScientificName"]
                     ].index[0]
                     list_data.drop(index)
 
@@ -725,7 +752,7 @@ def add_change_delete_list_values(list_type=None, list_data=None, state=None):
 def set_bool_argument(arg=None, name_arg=None):
     # set boolean dict for more efficient variable setting
     boolean_dict = {"True": True, "False": False}
-    
+
     if isinstance(arg, str):
         return boolean_dict[arg]
     elif isinstance(arg, bool):

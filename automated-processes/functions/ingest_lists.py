@@ -1,21 +1,21 @@
+import os
+from datetime import datetime
+
+import boto3
 import pandas as pd
+
 from . import list_functions as lf
+from .sensitive_vs_conservation import create_conservation_list, create_sensitive_list
 from .vocab import (
     conservation_list_urls,
-    sensitive_list_urls,
-    list_ids_sensitive_test,
-    list_ids_sensitive_prod,
-)
-from .vocab import (
-    list_ids_conservation_test,
-    list_ids_conservation_prod,
     get_listsProd,
+    list_ids_conservation_prod,
+    list_ids_conservation_test,
+    list_ids_sensitive_prod,
+    list_ids_sensitive_test,
+    sensitive_list_urls,
     urlSuffix,
 )
-from .sensitive_vs_conservation import create_conservation_list, create_sensitive_list
-from datetime import datetime
-import boto3
-import os
 
 
 def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, args=None):

@@ -1,14 +1,14 @@
-from datetime import datetime
 import math
+from datetime import datetime
 
 import pandas as pd
 from functions import list_functions as lf
 from functions.vocab import (
+    all_sensitive_druid_test,
     all_sensitive_lists,
     get_listsTest,
     list_ids_sensitive_test,
     urlSuffix,
-    all_sensitive_druid,
 )
 
 
@@ -113,13 +113,11 @@ def compile_sensitive_lists(args=None):
     # lf.post_list_to_test(
     #     list_data=all_sensitive,
     #     state=state,
-    #     druid=all_sensitive_druid,
+    #     druid=all_sensitive_druid_test,
     #     list_type="S",
     #     args=args,
     # )
 
     # write list to csv for upload (may change this later)
-    temp_filename = "all-sensitive-{}.csv".format(
-        datetime.now().strftime("%Y-%m-%d")
-    )
+    temp_filename = "all-sensitive-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))
     all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename), index=False)

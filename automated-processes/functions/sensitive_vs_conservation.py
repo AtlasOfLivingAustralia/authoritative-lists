@@ -1,14 +1,16 @@
-import pandas as pd
 import math
+
+import pandas as pd
+
+from . import list_functions as lf
 from .vocab import (
-    generalisation_categories,
     codeMap,
-    kingdomMap,
     conservation_columns_rename,
+    generalisation_categories,
+    kingdomMap,
     sensitive_columns_rename,
     statuses_rename,
 )
-from . import list_functions as lf
 
 
 def create_sensitive_list(list_data=None, state=None):
@@ -63,7 +65,7 @@ def create_sensitive_list(list_data=None, state=None):
         # add the category
         sensitive_species["category"] = sensitive_species["sensitivityClass"].copy()
 
-        # replace the category names with generalisations, including witheld
+        # replace the category names with generalisations, including withheld
         sensitive_species["generalisation"] = sensitive_species[
             "generalisation"
         ].replace(generalisation_categories)

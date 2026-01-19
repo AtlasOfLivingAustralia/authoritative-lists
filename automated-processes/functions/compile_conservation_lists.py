@@ -1,14 +1,15 @@
-from datetime import datetime
 import math
+from datetime import datetime
 
 import pandas as pd
+
 from . import list_functions as lf
 from .vocab import (
+    all_conservation_druid_test,
     all_conservation_lists,
     get_listsTest,
     list_ids_conservation_test,
     urlSuffix,
-    all_conservation_druid,
 )
 
 
@@ -76,7 +77,7 @@ def compile_conservation_lists(args=None):
             # get nonmatching rows to concatenate
             nonmatching_rows = list_df.drop(matching_indices_list_df)
 
-            # if there are matchign rows, go through and add sourceStatus to extant row
+            # if there are matching rows, go through and add sourceStatus to extant row
             if len(matching_indices_all_conservation) > 0:
                 for j in matching_indices_all_conservation:
                     name = all_conservation["verbatimScientificName"][j]
@@ -107,7 +108,7 @@ def compile_conservation_lists(args=None):
     # lf.post_list_to_test(
     #     list_data=all_conservation,
     #     state=state,
-    #     druid=all_conservation_druid,
+    #     druid=all_conservation_druid_test,
     #     list_type="C",
     #     args=args,
     # )

@@ -1,9 +1,9 @@
 import sys
-
-from redmail import EmailSender
 from datetime import datetime
 from pathlib import Path
+
 import markdown
+from redmail import EmailSender
 
 sys.path.append("../")
 
@@ -135,7 +135,9 @@ def add_attachments(list_to_check=None, list_type=None, attachments=None, change
             if list_type in ["cc", "sc"]:
                 changes += "{}<br />\n".format(x)
             name = "{}-{}-{}.csv".format(
-                x.replace(" ", "_"), file_names[list_type], datetime.now().strftime("%Y-%m-%d")
+                x.replace(" ", "_"),
+                file_names[list_type],
+                datetime.now().strftime("%Y-%m-%d"),
             )
             path = "{}/{}-{}-{}.csv".format(
                 file_paths[list_type],
