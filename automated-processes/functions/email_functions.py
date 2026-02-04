@@ -53,9 +53,9 @@ def send_email(
     )
 
     # if we are adding the compiled lists, add them here
-    if args.compile:
-        attachments, _ = add_attachments(list_type="allc", attachments=attachments)
-        attachments, _ = add_attachments(list_type="alls", attachments=attachments)
+    # if args.compile:
+    #     attachments, _ = add_attachments(list_type="allc", attachments=attachments)
+    #     attachments, _ = add_attachments(list_type="alls", attachments=attachments)
 
     # add date and time to email
     html = html.replace("CONSERVATION_LIST_OF_CHANGES", conservation_list_changes)
@@ -120,7 +120,6 @@ def add_attachments(list_to_check=None, list_type=None, attachments=None, change
         name = "{}-{}.csv".format(
             file_names[list_type], datetime.now().strftime("%Y-%m-%d")
         )
-        print(name)
         path = "{}/{}-{}.csv".format(
             file_paths[list_type],
             file_names[list_type],

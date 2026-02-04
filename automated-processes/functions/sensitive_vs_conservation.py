@@ -142,15 +142,20 @@ def create_sensitive_list(list_data=None, state=None):
             "spec", "species"
         )
 
+    elif state == "BirdLife":
+
+        return list_data
+
     else:
 
         # data is good as is
         sensitive_species = list_data
 
     # replace all the NaNs with an empty string
-    sensitive_species["vernacularName"] = sensitive_species["vernacularName"].replace(
-        math.nan, ""
-    )
+    if "vernacularName" in sensitive_species.columns:
+        sensitive_species["vernacularName"] = sensitive_species["vernacularName"].replace(
+            math.nan, ""
+        )
 
     # replace NaNs with empty string
     sensitive_species = sensitive_species.where((pd.notnull(sensitive_species)), "")
@@ -168,6 +173,7 @@ def create_sensitive_list(list_data=None, state=None):
             ]
             + extra_columns
         ]
+
     else:
         return sensitive_species[
             [

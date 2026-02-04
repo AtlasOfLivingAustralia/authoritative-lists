@@ -10,7 +10,6 @@ from functions.compile_conservation_lists import compile_conservation_lists
 from functions.compile_sensitive_lists import compile_sensitive_lists
 
 
-
 def main():
 
     # generate parser here and get args

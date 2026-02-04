@@ -65,6 +65,7 @@ sensitive_list_urls = {
     ],
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
+    "BirdLife": ["birdlifeList_Feb2026.csv"]
 }
 
 # urls for all species in state/territory
@@ -90,7 +91,7 @@ all_species_urls = {
 # all the state lists that are automatically checked every week
 conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
-sensitive_lists = ["NSW", "QLD", "VIC", "WA"]
+sensitive_lists = ["NSW", "QLD", "VIC", "WA", "BirdLife"]
 
 all_conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
@@ -177,6 +178,7 @@ list_names_sensitive_test = {
     "VIC": "Victorian Restricted Species List",
     "WA": "Western Australia: Sensitive Species",
     "All": "All Sensitive Australian Species",
+    "BirdLife": "Birds Australia Sensitive Species List"
 }
 
 list_names_conservation_test = {
@@ -292,6 +294,7 @@ sensitive_columns_rename = {
         "COMMON_NAME": "vernacularName",
     },
     "WA": {},
+    "BirdLife": {},
 }
 
 # key word to get values out if list is coming from API

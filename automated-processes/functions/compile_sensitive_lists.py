@@ -43,10 +43,15 @@ def compile_sensitive_lists(args=None):
         url = get_listsTest + list_ids_sensitive_test[state] + urlSuffix
         kvps_sensitive = lf.download_ala_specieslist(url=url)
         list_df = lf.kvp_to_columns(kvps_sensitive).reset_index(drop=True)
+        list_df = list_df[list_df["scientificName"].notna()].reset_index(drop=True)
 
         # add temporary change to change raw to verbatim; also check if there are supplied names
         if "verbatimScientificName" not in list_df.columns:
             list_df["verbatimScientificName"] = list_df["scientificName"].copy()
+
+        # add family column just in case
+        if "family" not in list_df.columns:
+            list_df["family"] = ""
 
         # rename columns for
         list_df = list_df.rename(
