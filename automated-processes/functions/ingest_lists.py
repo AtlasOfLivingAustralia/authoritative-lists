@@ -96,6 +96,9 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 list_type="Conservation", list_data=conservation_list, state=state
             )
 
+            # replace NaNs with empty string
+            conservation_list = conservation_list.where((pd.notnull(conservation_list)), "")
+
             # write conservation list to csv (may change this later)
             temp_filename = "{}-conservation-{}.csv".format(
                 state.replace(" ", "_"), datetime.now().strftime("%Y-%m-%d")
@@ -202,13 +205,21 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 list_data=sensitive_list_data, state=state
             ).reset_index(drop=True)
 
+            # add this column for BirdLife manually
+            if state == "BirdLife":
+                sensitive_list["verbatimScientificName"] = sensitive_list["scientificName"].copy()
+
             # trim whitespace at end of strings
             sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 
+            
             # add, change or delete list values as appropriate
             sensitive_list = lf.add_change_delete_list_values(
                 list_type="Sensitive", list_data=sensitive_list, state=state
             )
+
+            # replace NaNs with empty string
+            sensitive_list = sensitive_list.where((pd.notnull(sensitive_list)), "")
 
             # write list to csv for upload (may change this later)
             temp_filename = "{}-sensitive-{}.csv".format(
