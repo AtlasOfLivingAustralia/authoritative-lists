@@ -36,9 +36,9 @@ def main():
     )
 
     # create the compiled sensitive lists
-    if args.compile:
-        compile_conservation_lists(args=args)
-        compile_sensitive_lists(args=args)
+    # if args.compile:
+    #     compile_conservation_lists(args=args)
+    #     compile_sensitive_lists(args=args)
 
     # check to see if we are sending an email
     if args.send_email:

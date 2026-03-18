@@ -34,9 +34,13 @@ def create_sensitive_list(list_data=None, state=None):
     extra_columns = None
 
     # first, check for states whose lists we won't be updating automatically
-    if state in ["ACT", "SA", "NT", "TAS"]:
+    if state in ["SA", "NT", "TAS"]:
 
         return None
+    
+    elif state == "ACT":
+
+        extra_columns = ["kingdom", "genus"]
 
     # now, check NSW
     elif state == "NSW":

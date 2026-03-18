@@ -116,6 +116,7 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 druid=list_ids_conservation_test[state],
                 list_type="C",
                 args=args,
+                filename=temp_filename
             )
 
             # get old and new list urls
@@ -238,6 +239,7 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 druid=list_ids_sensitive_test[state],
                 list_type="S",
                 args=args,
+                filename=temp_filename
             )
 
             # get old and new list urls

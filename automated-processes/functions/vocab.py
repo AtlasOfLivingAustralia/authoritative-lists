@@ -14,17 +14,18 @@ token_url = "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth2/to
 
 # URLs for ALA lists for test and production
 get_listsProd = "https://api.ala.org.au/specieslist/ws/speciesListItems/"
-get_listsTest = "https://lists-test.ala.org.au/ws/speciesListItems/"  # -ws.
+# get_listsTest = "https://lists.test.ala.org.au/ws/speciesListItems/"  # -ws.
 # upload_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/upload"
 # ingest_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/"
 # progress_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/{speciesListID}/progress"
 # get_listsTest = "https://lists-develop-ws.dev.ala.org.au/v1/speciesListItems/" # was v2
-"""
+#"""
 upload_listsTest = "https://lists-ws.test.ala.org.au/v2/upload"
 ingest_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/"
 progress_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/{speciesListID}/progress"
-get_listsTest = "https://lists-ws.test.ala.org.au/v2/speciesListItems/"
-"""
+get_listsTest = "https://lists-ws.test.ala.org.au/v2/download/{speciesListID}"
+# get_listsTest = "https://lists-ws.test.ala.org.au/v2/speciesListItems/"
+#"""
 urlSuffix = "?max=10000&includeKVP=true"
 
 state_abbreviations = {
@@ -59,6 +60,7 @@ conservation_list_urls = {
 
 # urls for relevant sensitive lists
 sensitive_list_urls = {
+    "ACT": ["https://www.data.act.gov.au/resource/4wyh-vhce.json"],
     "NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
     "QLD": [
         "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"
@@ -91,7 +93,7 @@ all_species_urls = {
 # all the state lists that are automatically checked every week
 conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
-sensitive_lists = ["NSW", "QLD", "VIC", "WA", "BirdLife"]
+sensitive_lists = ["ACT", "NSW", "QLD", "VIC", "WA", "BirdLife"]
 
 all_conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
@@ -173,6 +175,7 @@ list_ids_species_dummy_test = {
 
 
 list_names_sensitive_test = {
+    "ACT": "ACT Sensitive Species List",
     "NSW": "NSW Sensitive Species List",
     "QLD": "Queensland Confidential Species",
     "VIC": "Victorian Restricted Species List",
@@ -278,6 +281,13 @@ conservation_columns_rename = {
 }
 
 sensitive_columns_rename = {
+    "ACT": {
+        "scientificname": "scientificName",
+        "vernacularname": "vernacularName",
+        "catvalue1": "sourceStatus",
+        "taxonomicrank": "rank",
+        "catvalue2": "generalisation"
+        },
     "NSW": {},
     "QLD": {
         "Scientific name": "scientificName",

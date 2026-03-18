@@ -23,7 +23,10 @@ from .vocab import (
     sensitive_lists,
     token_url,
     urlSuffix,
-    list_names_all_species_state_test
+    list_names_all_species_state_test,
+    upload_listsTest,
+    ingest_listsTest,
+    progress_listsTest,
 )
 
 
@@ -69,7 +72,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     # get old and new list urls
     oldListUrl = get_listsProd + proddr + urlSuffix
-    newListUrl = get_listsTest + testdr + urlSuffix
+    newListUrl = get_listsTest.replace("{speciesListID}",testdr)
 
     # download old list and turn it into pandas dataframe
     oldList = download_ala_specieslist(oldListUrl)
@@ -82,32 +85,41 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     )  # fill all None values since it's the new default
 
     # download new list and turn it into pandas dataframe
-    newList = download_ala_specieslist(newListUrl)
-    newList = kvp_to_columns(newList)
+    newList = pd.read_csv(newListUrl)
     newList = newList.add_suffix("_new")
-    columns_to_strip = ["name_new", "scientificName_new"]
+    columns_to_strip = ["verbatimScientificName_new", "scientificName_new"]
     newList[columns_to_strip] = newList[columns_to_strip].apply(lambda x: x.str.strip())
 
     # check for new  and old names - left join new to old, drop any columns in names_old if they are na
     # conservation lists keep track of changes
-    newVsOld = pd.merge(
-        newList, oldList, how="left", left_on=["name_new"], right_on=["name_old"]
+    newVsOld = pd.merge(                       # was just scientificName
+        newList, oldList, how="left", left_on=["verbatimScientificName_new"], right_on=["name_old"]
     )
-    columns = ["name_new", "scientificName_new"]
+    columns = ["verbatimScientificName_new", "scientificName_new"]
     if ltype == "C":
         columns = columns + ["status_new"]
     additions = newVsOld[newVsOld["name_old"].isna()][columns]
+    if ltype == "C":
+        additions["status_old"] = ""
     additions["listUpdate"] = "added"
 
     # removed names - left join old to new, drop na new
-    oldVsNew = pd.merge(
-        oldList, newList, how="left", left_on=["name_old"], right_on=["name_new"]
+    oldVsNew = pd.merge(                                             # was just scientificName
+        oldList, newList, how="left", left_on=["name_old"], right_on=["verbatimScientificName_new"]
     )
-    columns = ["name_old", "scientificName_old"]
+    # temp check before switching over
+    if "verbatimScientificName_old" not in oldVsNew.columns:
+        columns = ["name_old", "scientificName_old"]
+    else:
+        columns = ["verbatimScientificName_old", "scientificName_old"]
+    
+    #
     if ltype == "C":
         columns = columns + ["status_old"]
-    removals = oldVsNew[oldVsNew["name_new"].isna()][columns]
-    removals.columns = removals.columns.str.replace("_old", "", regex=True)
+
+    removals = oldVsNew[oldVsNew["scientificName_new"].isna()][columns]
+    if ltype == "C":
+        removals["status_new"] = ""
     removals["listUpdate"] = "removed"
 
     # status changes - only check status changes for conservation list
@@ -116,33 +128,39 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
             newList,
             oldList,
             how="inner",
-            left_on=["name_new", "vernacularName_new"],
-            right_on=["name_old", "vernacularName_old"],
+            left_on=["scientificName_new", "vernacularName_new"],
+            right_on=["name_old", "vernacularName_old"], # will be scientificName_old eventually
         )
         statusChanges = statusChanges[
             statusChanges["status_new"] != statusChanges["status_old"]
         ][
             [
-                "name_new",
                 "scientificName_new",
-                "commonName_new",
+                "vernacularName_new",
                 "status_new",
                 "status_old",
             ]
         ]
-        statusChanges.columns = statusChanges.columns.str.replace(
-            "_new", "", regex=True
-        )
         statusChanges["listUpdate"] = "status change"
 
     # union and display in alphabetical order and save locally
+    additions = additions.rename(columns = {'verbatimScientificName_new': 'verbatimScientificName',
+                                                 'scientificName_new': 'scientificName'})
+    
+    if 'verbatimScientificName_old' in removals.columns:
+        removals = removals.rename(columns = {'verbatimScientificName_old': 'verbatimScientificName',
+                                              'scientificName_old': 'scientificName'})
+    else:
+        removals = removals.rename(columns = {'name_old': 'verbatimScientificName',
+                                              'scientificName_old': 'scientificName'})
+        
     if ltype == "C":
         changeList = pd.concat([additions, removals, statusChanges])
     else:
         changeList = pd.concat([additions, removals])
 
     # return changelist
-    changeList = changeList.sort_values("name", ascending=True)
+    changeList = changeList.sort_values("scientificName", ascending=True)
     return changeList
 
 
@@ -494,7 +512,7 @@ def format_data_for_post(list_data=None, state=None, list_type=None):
 
 
 def post_list_to_test(
-    list_data=None, druid=None, state=None, list_type=None, args=None
+    list_data=None, druid=None, state=None, list_type=None, args=None, filename=None
 ):
     """
     Posts formatted data to test with authentication checks
@@ -502,11 +520,8 @@ def post_list_to_test(
 
     # format your data for posting to test
     auth = get_authentication_info(args=args, test=True)
-    """
-    druid=None,
-    filename=None,
-    args=None
-
+    #"""
+    
     # format headers
     headers = {#'X-ALA-userId': auth['profile']['email'],
                'Authorization': 'Bearer {}'.format(auth['access_token']),
@@ -558,6 +573,13 @@ def post_list_to_test(
         time.sleep(15)
         response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
         completed = response_test.json()['completed']
+    if response_test.status_code != 200 and response_test.status_code != 201:
+        raise ValueError(
+            "There was an error posting the data.  Error code {}: {}".format(
+                response_test.status_code, response_test.text
+            )
+        )
+    return None
     """
     # format your data for posting to test
     data_for_post = format_data_for_post(
@@ -585,6 +607,7 @@ def post_list_to_test(
             )
         )
     return None  # was response
+    """
 
 
 def get_authentication_info(args=None, test=False, prod=False):
