@@ -284,11 +284,13 @@ sensitive_columns_rename = {
     "ACT": {
         "scientificname": "scientificName",
         "vernacularname": "vernacularName",
-        "catvalue1": "sourceStatus",
+        "catvalue1": "category",
         "taxonomicrank": "rank",
         "catvalue2": "generalisation"
         },
-    "NSW": {},
+    "NSW": {
+        "taxonRank": "rank",
+    },
     "QLD": {
         "Scientific name": "scientificName",
         "Common name": "vernacularName",

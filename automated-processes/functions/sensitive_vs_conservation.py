@@ -23,6 +23,8 @@ def create_sensitive_list(list_data=None, state=None):
     conservation_codes = lf.get_conservation_codes(state=state)
 
     # do as much renaming as you can
+    if state == "ACT":
+        list_data = list_data.rename(columns = {'category': 'cat'})
     sensitive_species = list_data.rename(columns=sensitive_columns_rename[state])
 
     # ensure the verbatimScientificName happens here
@@ -41,6 +43,7 @@ def create_sensitive_list(list_data=None, state=None):
     elif state == "ACT":
 
         extra_columns = ["kingdom", "genus"]
+        sensitive_species['generalisation'] = sensitive_species['generalisation'].str.replace(" ", "")
 
     # now, check NSW
     elif state == "NSW":
@@ -73,23 +76,6 @@ def create_sensitive_list(list_data=None, state=None):
         sensitive_species["generalisation"] = sensitive_species[
             "generalisation"
         ].replace(generalisation_categories)
-
-        # some last-minute changes for certain species
-        new = sensitive_species[
-            sensitive_species.scientificName == "Calyptorhynchus lathami lathami"
-        ].copy()
-        new[["scientificName"]] = "Calyptorhynchus lathami"  # replace the name
-        new[["vernacularName"]] = "Glossy Black-cockatoo"
-        new2 = new.copy()
-        for column in list(new2.columns):
-            new2[column] = ""
-        new2["generalisation"] = "10km"
-        new2["category"] = "Category 2"
-        new2["scientificName"] = "Liopholis whitii"
-        new2["vernacularName"] = "White's Skink"
-        new2["family"] = "Scincidae"
-        sensitive_species = pd.concat([sensitive_species, new, new2])
-        sensitive_species = sensitive_species.rename(columns={"taxonRank": "rank"})
 
     elif state == "QLD":
 
@@ -148,6 +134,7 @@ def create_sensitive_list(list_data=None, state=None):
 
     elif state == "BirdLife":
 
+        list_data["category"] = "EN"
         return list_data
 
     else:
