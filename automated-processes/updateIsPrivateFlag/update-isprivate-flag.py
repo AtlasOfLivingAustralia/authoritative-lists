@@ -325,7 +325,8 @@ class Update_flag:
         metadata_df = pd.DataFrame()
         for druid in self.upd_df["dataResourceUid"]:
             lUrl = self.collectory_url + druid
-            response = requests.get(lUrl, self.header_noauth)
+            # response = requests.get(lUrl, self.header_noauth)
+            response = requests.get(lUrl, self.header_auth)
             if response.status_code == 200:
                 metadata = None
                 try:
@@ -351,15 +352,15 @@ class Update_flag:
         # Get metadata (using API for now)
 
         for druid in self.upd_df["dataResourceUid"]:
-            # druid = "dr22810"
+            druid = "dr22810"
             print(f"Updating list metadata: {druid}")
             metadata_dict = json.loads(
                 self.list_meta_df.loc[
                     self.list_meta_df["dataResourceUid"] == druid, "metadata"
                 ].iloc[0]
             )
-            # metadata_dict["isPrivate"] = True
-            metadata_dict["isPrivate"] = False  # use for testing auth
+            metadata_dict["isPrivate"] = True
+            # metadata_dict["isPrivate"] = False  # use for testing auth
             payload = {
                 "query": self.mutation_query,
                 "operationName": "update",
@@ -368,6 +369,7 @@ class Update_flag:
             response = requests.post(
                 self.graphql_url, headers=self.header_auth, json=payload
             )
+            print(f"Metadata: \n {metadata_dict}")
             print(response.status_code, response.text)
             if response.status_code != 200:
                 print(f"Metadata: \n {metadata_dict}")
@@ -390,8 +392,10 @@ class Update_flag:
         :return str: Update request response code
         """
 
-        # drID = row['dataResourceUid']
+        # drID = row["dataResourceUid"]
+        # drID = row["uid"]
         drID = "dr22810"  # for testing
+        collectory_url = f"{collectory_url}/{drID}"
         jstr = row.to_dict()
         print("POST to %s", collectory_url)
         try:
@@ -410,6 +414,18 @@ class Update_flag:
 
     def run(self):
         args = self.parse_arguments()
+        # Using galah python
+        # {
+        #     "User-Agent": "galah-python 0.13.0",
+        #     "Authorization": "Bearer ****",
+        #     "client_id": "***",
+        # }
+        self.header_auth = {
+            "User-Agent": "galah-python 0.13.0",
+            "Authorization": "Bearer: ****",
+            "client_id": "***",
+        }
+
         # Get access token
         # self.accessToken = lfn.get_authentication_info(
         #     args=args, test=True
@@ -463,8 +479,9 @@ class Update_flag:
         # self.upd_df.to_csv(filterfile, encoding="utf-8", index=False)
 
         # Set up query for list metadata update via graphql
-        self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
-        self.update_list_metadata()
+        # self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
+        # self.update_list_metadata()
+        self.coll_df["isPrivate"] = True
         self.coll_df["upd_status_code"] = self.coll_df.apply(
             lambda row: self.update_collectory_dr(row, self.collectory_url), axis=1
         )
