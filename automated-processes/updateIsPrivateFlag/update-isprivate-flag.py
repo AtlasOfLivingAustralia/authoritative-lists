@@ -195,11 +195,6 @@ class Update_flag:
         else:
             print(f"Error downloading: {url} Status: {response.status_code}")
 
-        # df = pd.DataFrame(all_data)
-        df = pd.DataFrame(data)
-        # maybe do keys to keep here not in other function
-        # df = df[self.keys_to_keep]
-
         return df
 
     def filter_lists_prod(self, args):
@@ -416,10 +411,10 @@ class Update_flag:
     def run(self):
         args = self.parse_arguments()
         # Get access token
-        self.accessToken = lfn.get_authentication_info(
-            args=args, test=True
-        )  # doesn't always work
-        # self.accessToken = <token here>
+        # self.accessToken = lfn.get_authentication_info(
+        #     args=args, test=True
+        # )  # doesn't always work
+        self.accessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJjb2xsZWN0aW9uX2FkbWluIiwidXNlciIsImNvbGxlY3RvcnNfYWRtaW4iLCJhZG1pbiIsImRhdGFfcHVibGlzaGVyIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiI1ZDU2NDJlMS0wZmQ1LTQwNjktYmY5ZC1lMGFlMzNlNWU5NmEiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3NzQ4Mjg2MDEsImV4cCI6MTc3NDkxNTAwMSwiaWF0IjoxNzc0ODI4NjAxLCJqdGkiOiJjMGVmMTA3YS1iODY3LTRmMWUtYWYwNC1lZTA0ZWM5YTZkZjIiLCJ1c2VybmFtZSI6IjU2NTkyIn0.wEoxJwBTjA0BifnxzSfppW4EP6Rxah5oX4d8LK6pqvyKUfDyu5HNHbcs2CAnziG0OKs0OeA7XtnUsbFu97MgIKon_yVa59IBDRUhNUExhGuve_jPzHbhrC6HO7Gs5uM4HnY7sQmKimWXrSDtgiza6Gpm5jogtFLh_r63ijok6KNIji6fVdbNqLzMsUh7T4ThLElkNfv6TW8DaEC2KG8xLKQ9QboqK4-cQAz-PCyla5Xy4YtiqGpWBOE3vNRjAD6WCqWqg3-IIMJQnGfRP4KvxDhXLsFqyhOX8dBvyP82vAR8fcUDAsF2pKp-czj_Lm7z1O8QVhhzF6by2t2168r8Xg"
         authorization_jwt = f"Bearer {self.accessToken}"
         self.header_noauth = {
             "Content-Type": "application/json",
@@ -438,7 +433,7 @@ class Update_flag:
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
-            # self.coll_df = self.get_collectory_metadata()
+            self.coll_df = self.get_collectory_metadata()
             self.list_meta_df = self.get_list_metadata()
 
             # Write downloaded to CSV
