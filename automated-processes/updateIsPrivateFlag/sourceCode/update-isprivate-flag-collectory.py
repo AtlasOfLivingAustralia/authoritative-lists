@@ -1,25 +1,19 @@
 import argparse
 import json
-import sys
+import logging
 from pathlib import Path
 
-# import archive_functions as afn
 import pandas as pd
 import requests
-
-# import .collectory as collectory
 import upd_config as cfg
 
-sys.path.append("../../")
-import functions.list_functions as lfn
-
-# from functions.ingest_lists import ingest_lists
-# from functions.vocab import get_listsProd, get_listsTest
+log: logging.log = logging.getLogger("isPrivate flag")
+log.setLevel(logging.INFO)
 
 
 class Update_flag:
     """
-    Update_flag class to update isPrivate flag on list.
+    Update_flag class to update collectory isPrivate flag on list.
 
     Attributes:
 
@@ -35,19 +29,10 @@ class Update_flag:
     def __init__(self):
         self.input_path = None
         self.output_path = None
-        self.metadata = None
-        self.graphql_url = None
-        self.mutation_query = None
-        self.accessToken = None
         self.headers = None
-        self.all_df = pd.DataFrame()
-        self.upd_df = pd.DataFrame()
         self.coll_df = pd.DataFrame()
         self.collectory_url = cfg.collectory_url
-        self.list_url = cfg.list_url
-        self.list_info_url = cfg.list_info_url
-        self.graphql_url = cfg.graphql_url
-        self.graphql_keys_to_keep = cfg.graphql_keys_to_keep
+        self.collectory_api_key = cfg.collectory_api_key
 
     def parse_arguments(self):
         """
@@ -60,109 +45,113 @@ class Update_flag:
         parser = argparse.ArgumentParser()
         parser.add_argument("--input", required=True)
         parser.add_argument("--output", required=True)
-        parser.add_argument("--allfile", required=True)
-        parser.add_argument("--updfile", required=True)
         parser.add_argument("--colfile", required=True)
-        parser.add_argument("--list_metafile", required=True)
         parser.add_argument("--env", required=True)
-        parser.add_argument("--client_ids", required=True)
-        parser.add_argument("--getListInfo", required=True)
-        parser.add_argument("--authentication_test", required=True)
-        parser.add_argument("--authentication_prod", required=True)
         args = parser.parse_args()
 
         self.input_path = Path(args.input)
         self.input_path.mkdir(parents=True, exist_ok=True)
         self.output_path = Path(args.output)
         self.output_path.mkdir(parents=True, exist_ok=True)
+
         return args
-    
-    # def __init__(self, token_url="", client_id="", client_secret="") -> None:
-        #     if token_url:
-        #         self.token_url = token_url
-        #     if client_id:
-        #         self.client_id = client_id
-        #     if client_secret:
-        #         self.client_secret = client_secret
 
-    def get_collectory_access_token(self, scope: str) -> str:
-        response = requests.post(
-            self.token_url,
-            data={"grant_type": "client_credentials", "scope": scope},
-            auth=(self.client_id, self.client_secret),
-        )
-        if response.status_code == 200:
-            response_text = response.json()
-            if "access_token" in response_text:
-                log.info(f"Access token is acquired successfully from {self.token_url}, client id {self.client_id} ")
-                return response_text["access_token"]
+    def join_url(self, *url_fragments: str) -> str:
+        """
+        Joins multiple URL fragments into a single URL.
 
-        raise ValueError(f"Error in getting access token from {self.token_url}, client id {self.client_id} ")
+        :param url_fragments: URL fragments to be joined.
+        :return: A single URL string.
+        """
+        return "/".join(fragment.strip("/") for fragment in url_fragments)
 
-    
-    # def update_collectory_dr(self, uid: str) -> str:
-    #     import ast
+    def json_parse(
+        self, base_url: str, url_path: str, params=None, headers=None, method="GET"
+    ):
+        """
+        Calls the specified URL and returns the JSON response.
+        :param base_url: like https://collections.ala.org.au/ws
+        :param url_path: like /dataResource/dr000
+        :param params: is a dictionary of parameters to be passed to the API
+        :return: is the json response from the URL
+        """
 
-    #     """
-    #     Update an entity with some data
+        try:
+            full_url = self.join_url(base_url, url_path)
+            if method == "GET":
+                with requests.get(
+                    full_url, params, headers=headers, timeout=60
+                ) as response:
+                    response.raise_for_status()
+                    json_result = json.loads(response.content)
+                    return json_result
+            elif method == "POST":
+                with requests.post(
+                    full_url, json=params, headers=headers, timeout=60
+                ) as response:
+                    response.raise_for_status()
+                    return response.content
+        except requests.exceptions.HTTPError as err:
+            # logging.error(
+            logging.error(
+                "Error encountered during request %s with params %s",
+                full_url,
+                params,
+                exc_info=err,
+            )
+            raise IOError(err)
 
-    #     :param uid: The unique id of the entity being interrogated (eg dr1455)
-    #     :param **kwargs: The data to update, as a set of key=value pairs
-    #     """
-    #     uid = "dr22810"
-    #     vals = "{'isPrivate': True}"
-    #     kwargs = ast.literal_eval(vals)
-    #     kwargs = json.dumps(kwargs)
-    #     url = f"{self.collectory_url}/{uid}.json"
-    #     url = f"{self.collectory_url}/{uid}"
-    #     print("POST %s to %s", str(kwargs), url)
-    #     headers = {"Content-Type": "application/json"}
-    #     if self.auth_headers is not None:
-    #         headers = self.auth_headers
-    #     with requests.post(url, json=kwargs, headers=headers) as response:
-    #         if response.status_code != 200:
-    #             response.raise_for_status()
-    #         else:
-    #             return response.text
-            
-    def update_collectory_metadata(self, row):
-            print(f"Updating collectory metadata: {row['uid']}")
+    def update_registry_metadata(self, registry_base_url, uid, ala_api_key, metadata):
+        """
+        Updates metadata for a dataset in the registry (Collectory) using the API key.
 
-            # Update collectory metadata
-            print(f"Updating collectory metadata: {row['uid']}")
-            colUrl = self.collectory_url + row["uid"]
-            # colUrl = self.collectory_url + 'dr22810'
-            # crow = self.coll_df[self.coll_df["uid"] == row["uid"]]
-            # row["isPrivate"] = "True"
-            # row["isPrivate"] = "False"
-            jstr = row.to_json()
-            try:
-                with requests.post(colUrl, json=jstr, headers=self.auth_collectory) as response:
-                    if response.status_code == 200 or response.status_code == 201:
-                        return str(response.status_code)
-                    else:
-                        response.raise_for_status()
-            except Exception as e:
-                print("Error in creating %s: %s for %s", colUrl, jstr, e)
-                response.raise_for_status()
+        Args:
+            registry_base_url (str): The base URL of the registry (Collectory).
+            uid (str): The unique identifier of the dataset.
+            ala_api_key (str): The API key for authentication.
+            metadata (dict): The metadata to update.
 
-            print(f"Updated collectory isPrivate flag for list: {druid}")
+        Returns:
+            dict: The updated metadata of the dataset, or an error message if not found.
+        """
+        if uid.startswith("dr"):
+            resource_path = f"dataResource/{uid}"
+        elif uid.startswith("dp"):
+            resource_path = f"dataProvider/{uid}"
+        else:
+            raise ValueError("Not a valid dataset or data provider uid: %s", uid)
 
-            return ()
-   
+        try:
+            jresponse = self.json_parse(
+                registry_base_url,
+                resource_path,
+                headers={"Authorization": ala_api_key},
+                # method="GET",
+                method="POST",
+                params=metadata,
+            )
+            return jresponse
+        except Exception as e:
+            print(f"Error fetching metadata for {uid}: {str(e)}")
+
+    # end stuff from dag
+
     def run(self):
         args = self.parse_arguments()
-        self.colaccessToken = self.get_collectory_access_token(scope)
-        self.auth_collectory = {
-            "Content-Type": "application/json",
-            # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
-            "Authorization": "Bearer {}".format(self.colaccessToken),
-        }
-        self.coll_df = pd.read_csv(
-            args.colfile, encoding="utf-8", dtype="str"
-        ).fillna("")
-        self.coll_df["upd_status_code"] = self.coll_df.apply(
-            lambda row: self.update_collectory_metadata(row), axis=1
+        colfile = self.input_path / Path(args.colfile)
+        coll_df = pd.read_csv(colfile, encoding="utf-8", dtype="str").fillna("")
+        metadata = {"isPrivate": "True"}
+        # new_response = self.update_registry_metadata(
+        #     self.collectory_url, druid, self.collectory_api_key, metadata
+        # )
+        response = coll_df.apply(
+            lambda row: self.update_registry_metadata(
+                self.collectory_url,
+                row["dataResourceUid"],
+                self.collectory_api_key,
+                metadata,
+            ),
+            axis=1,
         )
         print(f"\n All lists and collectory dataresources updated")
 
