@@ -46,7 +46,7 @@ class Update_flag:
         self.list_info_url = cfg.list_info_url
         self.graphql_url = cfg.graphql_url
         self.keys_to_keep = cfg.keys_to_keep
-    
+
     def parse_arguments(self):
         """
         Parse configuration parameters
@@ -63,7 +63,6 @@ class Update_flag:
         parser.add_argument("--colfile", required=True)
         parser.add_argument("--list_metafile", required=True)
         parser.add_argument("--env", required=True)
-        parser.add_argument("--client_ids", required=True)
         parser.add_argument("--getListInfo", required=True)
         parser.add_argument("--authentication_test", required=True)
         parser.add_argument("--authentication_prod", required=True)
@@ -74,7 +73,7 @@ class Update_flag:
         self.output_path = Path(args.output)
         self.output_path.mkdir(parents=True, exist_ok=True)
         return args
-    
+
     def prepare_mutation_query(self):
         mutation_query = """
         mutation update(
@@ -264,37 +263,11 @@ class Update_flag:
 
         return ()
 
-    def update_collectory_metadata(self, row):
-        print(f"Updating collectory metadata: {row['uid']}")
-
-        # Update collectory metadata
-        print(f"Updating collectory metadata: {row['uid']}")
-        colUrl = self.collectory_url + row["uid"]
-        # colUrl = self.collectory_url + 'dr22810'
-        # crow = self.coll_df[self.coll_df["uid"] == row["uid"]]
-        # row["isPrivate"] = "True"
-        # row["isPrivate"] = "False"
-        jstr = row.to_json()
-        try:
-            with requests.post(colUrl, json=jstr, headers=self.auth_collectory) as response:
-                if response.status_code == 200 or response.status_code == 201:
-                    return str(response.status_code)
-                else:
-                    response.raise_for_status()
-        except Exception as e:
-            print("Error in creating %s: %s for %s", colUrl, jstr, e)
-            response.raise_for_status()
-
-        print(f"Updated collectory isPrivate flag for list: {druid}")
-
-        return ()
-
-   
     def run(self):
         args = self.parse_arguments()
         # Get access token
         # self.accessToken = lf.get_authentication_info(args=args, test=True)
-        self.listaccessToken ='eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJjb2xsZWN0aW9uX2FkbWluIiwidXNlciIsImNvbGxlY3RvcnNfYWRtaW4iLCJhZG1pbiIsImRhdGFfcHVibGlzaGVyIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiJlZmJhMTc1Yy1lYzU2LTRlMzctYTFiYi1kZjc1MDU5YmI5NjAiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3NzUwMjIyMjMsImV4cCI6MTc3NTEwODYyMywiaWF0IjoxNzc1MDIyMjIzLCJqdGkiOiIyMWNlZjhlNS1jOTc1LTQzNzUtODczYy04NzVjZTdhNDNmYmUiLCJ1c2VybmFtZSI6IjU2NTkyIn0.okcTh2bqRKasUmBG7HtM9Cq58WU3ya23pxkQvWotdcW527qn3u9R1vxbHY1OweZrZRfh8M5p0Tenrl9451SzMfryrSmmsKbjNctCEn6odXvbkHi2MitvTsiQppRUAaZY5YKLQh5Fj0SUMUBMBaob0sKTGleEn3TOYEAqFCit_Fed7H6PeSVpm74XH4DoMksyX-2WN-oUpJzYUte1_aoghV0QLPAIXHGuRWSe3BFfQodoGj4hp5MFvikvHlsU6dX2GMkoiqIl6I3xjeZ7d5LlefaYKTKK1cYwiLi2K_WQOi0Aki_GXBZTHia0tvKjX3Eqw8lqIKnyJwXOlui-t5OcvA'
+        self.listaccessToken = "<insert JWT Token here>"
         self.headers = {
             "Content-Type": "application/json",
             # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
@@ -308,7 +281,9 @@ class Update_flag:
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
-            self.coll_df = self.get_collectory_metadata()
+            self.coll_df = (
+                self.get_collectory_metadata()
+            )  # only for saving for use later
 
             # Write downloaded to CSV
             self.all_df.to_csv(args.allfile, encoding="utf-8", index=False)
@@ -317,12 +292,14 @@ class Update_flag:
         else:
             self.all_df = pd.read_csv(args.allfile, encoding="utf-8", dtype="str")
             self.upd_df = pd.read_csv(args.updfile, encoding="utf-8", dtype="str")
-            self.coll_df = pd.read_csv(args.colfile, encoding="utf-8", dtype="str")
+            self.coll_df = pd.read_csv(
+                args.colfile, encoding="utf-8", dtype="str"
+            )  # not needed for list updates
 
         # Set up query for list metadata update via graphql
         # self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
         # self.upd_df.apply(self.update_list_metadata, axis=1)
-        self.coll_df.apply(self.update_collectory_metadata, axis=1)
+        # self.coll_df.apply(self.update_collectory_metadata, axis=1)    -# not to be done here
 
         print(f"\n All lists and collectory dataresources updated")
 
