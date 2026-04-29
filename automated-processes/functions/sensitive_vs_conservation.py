@@ -28,9 +28,14 @@ def create_sensitive_list(list_data=None, state=None):
     sensitive_species = list_data.rename(columns=sensitive_columns_rename[state])
 
     # ensure the verbatimScientificName happens here
-    sensitive_species["verbatimScientificName"] = sensitive_species[
-        "scientificName"
-    ].copy()
+    if state == "QLD": # Added to deal with QLD data change - could be refactored.
+        sensitive_species["verbatimScientificName"] = sensitive_species[
+            "scientific_name"
+        ].copy()
+    else:
+        sensitive_species["verbatimScientificName"] = sensitive_species[
+            "scientificName"
+        ].copy()
 
     # set this just in case
     extra_columns = None
@@ -80,38 +85,41 @@ def create_sensitive_list(list_data=None, state=None):
     elif state == "QLD":
 
         # NO TAXON RANK AVAILABLE - WHERE TO GET THIS
-        extra_columns = ["WildNetTaxonID", "taxonID"]
-
-        # merge category column with code
-        sensitive_species = pd.merge(
-            sensitive_species,
-            conservation_codes,
-            left_on=["category"],
-            right_on=["Code"],
-            how="left",
-        )
+        # extra_columns = ["WildNetTaxonID", "taxonID"]
+        extra_columns = ["taxon_id"]
+        # # merge category column with code
+        # sensitive_species = pd.merge(
+        #     sensitive_species,
+        #     conservation_codes,
+        #     left_on=["category"],
+        #     right_on=["Code"],
+        #     how="left",
+        # )
 
         # add generalisation
         sensitive_species["generalisation"] = "2km"
-
+        sensitive_species.rename(columns={'scientific_name': 'scientificName'}, inplace=True)
+        sensitive_species.rename(columns={'family_name': 'family'}, inplace=True)
+        sensitive_species["vernacularName"] = ""
         # map sourceStatus to category and kingdom - also fill in category with 'UK' (unknown)
         # if not known
-        sensitive_species["kingdom"] = sensitive_species["kingdom"].replace(kingdomMap)
-        sensitive_species["category"] = sensitive_species["category"].replace(codeMap)
-        sensitive_species["category"] = sensitive_species["category"].fillna("UK")
-
+        sensitive_species["kingdom"] = sensitive_species["kingdom_name"].replace(kingdomMap)
+        # sensitive_species["category"] = sensitive_species["category"].replace(codeMap)
+        # sensitive_species["category"] = sensitive_species["category"].fillna("UK")
+        sensitive_species["category"] = ""
         # make the taxonID column
-        sensitive_species["taxonID"] = (
-            "https://apps.des.qld.gov.au/species-search/details/?id="
-            + sensitive_species["WildNetTaxonID"].astype(str)
-        )
+        # sensitive_species["taxonID"] = (
+        #     "https://apps.des.qld.gov.au/species-search/details/?id="
+        #     + sensitive_species["WildNetTaxonID"].astype(str)
+        # )
         sensitive_species["rank"] = ""
 
     elif state == "WA":
 
         # make sure the generalisation column is there
         sensitive_species["generalisation"] = "10km"
-        sensitive_species["category"] = sensitive_species["status"].copy()
+        # sensitive_species["category"] = sensitive_species["status"].copy()
+        sensitive_species["category"] = ""
         sensitive_species["rank"] = ""
 
         # Crendactylus tuberculatus instead of Crenadactylus tuberculatus
@@ -131,10 +139,13 @@ def create_sensitive_list(list_data=None, state=None):
         sensitive_species["rank"] = sensitive_species["TAXON_LEVEL_CDE"].replace(
             "spec", "species"
         )
+        sensitive_species["category"] = sensitive_species["RESTRICTED_FLAG"].replace(
+            "rest", "restricted"
+        )
 
     elif state == "BirdLife":
 
-        list_data["category"] = "EN"
+        list_data["category"] = ""
         return list_data
 
     else:

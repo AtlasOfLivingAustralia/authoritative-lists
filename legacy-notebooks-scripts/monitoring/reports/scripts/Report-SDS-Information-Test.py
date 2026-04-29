@@ -99,18 +99,18 @@ def get_sds_info(state, sName, drId):
     splUrl.url = splUrl.url.replace(urlprefix, lprefix)
     splCt = data["itemCount"][0]
 
-    apiPrefix = "https://api.test.ala.org.au/occurrences/occurrences"
+    apiPrefix = "https://biocache-ws.test.ala.org.au/ws/occurrences"
     bioPrefix = "https://biocache-test.ala.org.au/occurrence"
 
     # Total Occurrences
-    urlprefix = "https://api.test.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A"
+    urlprefix = "https://biocache-ws.test.ala.org.au/ws/occurrences/search?q=species_list_uid%3A"
     urlsuffix = "&fq=state%3A%22" + sName + "%22"
     data, tcUrl = download_url(urlprefix, urlsuffix, drId)
     tcUrl.url = tcUrl.url.replace(apiPrefix, bioPrefix)
     totCt = data["totalRecords"][0]
 
     # Generalised count
-    urlprefix = "https://api.test.ala.org.au/occurrences/occurrences/search?q=species_list_uid%3A"
+    urlprefix = "https://biocache-ws.test.ala.org.au/ws/occurrences/search?q=species_list_uid%3A"
     urlsuffix = "&fq=sensitive%3Ageneralised&fq=state%3A%22" + sName + "%22"
     data, gUrl = download_url(urlprefix, urlsuffix, drId)
     gUrl.url = gUrl.url.replace(apiPrefix, bioPrefix)
@@ -129,7 +129,7 @@ def get_sds_info(state, sName, drId):
     nsCt = data["totalRecords"][0]
 
     # Species count
-    urlprefix = "https://api.test.ala.org.au/occurrences/occurrences/facets?q=species_list_uid%3A"
+    urlprefix = "https://biocache-ws.test.ala.org.au/ws/occurrences/facets?q=species_list_uid%3A"
     urlsuffix = "&facets=species"
     data, spctUrl = download_url(urlprefix, urlsuffix, drId)
     spCt = data["count"][0]

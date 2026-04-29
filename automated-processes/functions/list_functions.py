@@ -219,6 +219,13 @@ def read_list_url(url=None, state=None):
         df = pd.DataFrame.from_records(
             response_json, index=[i for i in range(len(response_json))]
         )
+    elif "/api/" in url:
+        response = requests.get(url)
+        response_json = response.json()
+        df = pd.DataFrame.from_records(
+            response_json, index=[i for i in range(len(response_json))]
+        )
+        # df = pd.DataFrame(response_json[api_values[state]])
     elif "https" in url:
         return webscrape_list_url(url=url, state=state)
     else:
@@ -259,21 +266,42 @@ def get_conservation_codes(state=None):
 
     elif state == "QLD":
 
-        codes = pd.read_csv(
-            "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species-status-codes.csv"
-        )
+        # Commented out - file no longer served
+        # Use this API endpoint - https://wildnet-pub.science-data.qld.gov.au/api/v1/status-types
+        # returns an array of type for EPBC and QLD in the form
+        #   {
+        #     "stat_ext_code": "QLD",
+        #     "stat_ext_desc": "Taxon status within Queensland.",
+        #     "stat_cat_code": "LEG",
+        #     "stat_cat_desc": "Nature Conservation (Animals/Plants) Regulation 2020",
+        #     "stat_type_code": "PE",
+        #     "stat_type_desc": "Extinct in the wild"
+        #   },
+        #   {
+        #     "stat_ext_code": "QLD",
+        #     "stat_ext_desc": "Taxon status within Queensland.",
+        #     "stat_cat_code": "LEG",
+        #     "stat_cat_desc": "Nature Conservation (Animals/Plants) Regulation 2020",
+        #     "stat_type_code": "R",
+        #     "stat_type_desc": "Rare (omitted)"
+        #   },
+        # Need to contact James and find out what the appropriate stat_cat_code is for QLD conservation
 
-        # do something here...?
-        codes = codes[codes["Field"] == "NCA_status"][["Code", "Code_description"]]
-
-        # change code description to be capitalized
-        codes.loc[
-            codes["Code_description"] == "Critically endangered", "Code_description"
-        ] = "Critically Endangered"
-        codes.loc[
-            codes["Code_description"] == "Near threatened", "Code_description"
-        ] = "Near Threatened"
-
+        # codes = pd.read_csv(
+        #     "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species-status-codes.csv"
+        # )
+        #
+        # # do something here...?
+        # codes = codes[codes["Field"] == "NCA_status"][["Code", "Code_description"]]
+        #
+        # # change code description to be capitalized
+        # codes.loc[
+        #     codes["Code_description"] == "Critically endangered", "Code_description"
+        # ] = "Critically Endangered"
+        # codes.loc[
+        #     codes["Code_description"] == "Near threatened", "Code_description"
+        # ] = "Near Threatened"
+        codes = pd.DataFrame()
         return codes
 
     elif state == "WA":

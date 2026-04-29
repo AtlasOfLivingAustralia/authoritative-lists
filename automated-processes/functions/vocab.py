@@ -63,11 +63,11 @@ sensitive_list_urls = {
     "ACT": ["https://www.data.act.gov.au/resource/4wyh-vhce.json"],
     "NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
     "QLD": [
-        "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"
+        "https://wildnet-pub.science-data.qld.gov.au/api/v1/species-list?sensitive_species=1&page_size=5000&page_number=1"
     ],
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
-    "BirdLife": ["birdlifeList_Feb2026.csv"]
+    "BirdLife": ["data/birdlifeList_Feb2026.csv"]
 }
 
 # urls for all species in state/territory
