@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -75,9 +76,11 @@ class Update_flag:
         :param params: is a dictionary of parameters to be passed to the API
         :return: is the json response from the URL
         """
+        dr = url_path.rsplit("/", 1)[-1]
 
         try:
             full_url = self.join_url(base_url, url_path)
+            print(f"    {dr} - {full_url}")
             if method == "GET":
                 with requests.get(
                     full_url, params, headers=headers, timeout=60
@@ -138,12 +141,14 @@ class Update_flag:
 
     def run(self):
         args = self.parse_arguments()
-        colfile = self.input_path / Path(args.colfile)
+        colfile = Path(args.colfile)
+        # List of DataResources in collectory to update
         coll_df = pd.read_csv(colfile, encoding="utf-8", dtype="str").fillna("")
-        metadata = {"isPrivate": "True"}
+        metadata = {"isPrivate": "true"}
         # new_response = self.update_registry_metadata(
         #     self.collectory_url, druid, self.collectory_api_key, metadata
         # )
+        print(f"Updating {coll_df.shape[0]} collectory dataresources: ")
         response = coll_df.apply(
             lambda row: self.update_registry_metadata(
                 self.collectory_url,
@@ -153,9 +158,25 @@ class Update_flag:
             ),
             axis=1,
         )
-        print(f"\n All lists and collectory dataresources updated")
+        print(f"\n All collectory dataresources updated")
 
 
 if __name__ == "__main__":
+    start = time.perf_counter()
     Update_flag = Update_flag()
     Update_flag.run()
+    elapsed = time.perf_counter() - start
+
+    # Output Elapsed time information
+    hours, rem = divmod(elapsed, 3600)
+    minutes, seconds = divmod(rem, 60)
+
+    print(
+        f"\033[1mTime for Update Collectory isPrivate\n\033 flag script to run\033[0m"
+    )
+    print(
+        f"    \033[1m[1mElapsed time\033[0m - {int(hours):02}{int(minutes):02}{seconds:06.3f}"
+    )
+    print(
+        f"    \033[1mHH:\033[0m {int(hours):02}\n\033[1mMM:\033[0m {int(minutes):02}\n\033[1mSS:\033[0m {seconds:06.3f}"
+    )
