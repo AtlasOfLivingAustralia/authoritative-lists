@@ -66,6 +66,7 @@ def send_email(
     # set up email service
     email = EmailSender(host="smtp-relay.csiro.au", port=25)
 
+    print("sending email")
     email.send(
         sender="amanda.buyan@csiro.au",
         receivers=["authoritative-list-updates@ala.org.au"],
@@ -73,6 +74,7 @@ def send_email(
         html=html,
         attachments=attachments,
     )
+    print("email sent")
 
 
 def get_username_password(args=None):

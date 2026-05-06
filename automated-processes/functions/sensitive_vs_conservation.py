@@ -80,14 +80,14 @@ def create_sensitive_list(list_data=None, state=None):
     elif state == "QLD":
 
         # NO TAXON RANK AVAILABLE - WHERE TO GET THIS
-        extra_columns = ["WildNetTaxonID", "taxonID"]
+        extra_columns = ["taxon_id"]
 
         # merge category column with code
         sensitive_species = pd.merge(
             sensitive_species,
             conservation_codes,
-            left_on=["category"],
-            right_on=["Code"],
+            left_on=["category"], #category
+            right_on=["stat_type_code"],
             how="left",
         )
 
@@ -103,7 +103,7 @@ def create_sensitive_list(list_data=None, state=None):
         # make the taxonID column
         sensitive_species["taxonID"] = (
             "https://apps.des.qld.gov.au/species-search/details/?id="
-            + sensitive_species["WildNetTaxonID"].astype(str)
+            + sensitive_species["taxon_id"].astype(str)
         )
         sensitive_species["rank"] = ""
 
@@ -214,29 +214,30 @@ def create_conservation_list(list_data=None, state=None):
 
     elif state == "QLD":
 
-        extra_columns = ["WildNetTaxonID", "taxonID"]
+        extra_columns = ["taxon_id"]
 
         # get conservation list
         conservation_list = pd.merge(
             conservation_list,
             conservation_codes,
-            left_on=["NCA_status"],
-            right_on=["Code"],
+            left_on=["nca_code"],
+            right_on=["stat_type_code"],
             how="left",
         )
 
         # second rename
         conservation_list = conservation_list.rename(
-            columns={"Code_description": "sourceStatus"}
+            columns={"stat_type_desc": "sourceStatus"} # potentially change to nca_code if need short code
         )
 
         # only return things that we need?
         conservation_list["taxonID"] = (
             "https://apps.des.qld.gov.au/species-search/details/?id="
-            + conservation_list["WildNetTaxonID"].astype(str)
+            + conservation_list["taxon_id"].astype(str)
         )
 
-        # making sure we don't have NaNs in status and remove least concern species
+        # making sure we don't have NaNs in status and remove special least concern, 
+        # as well as least concern species
         conservation_list = conservation_list[
             (conservation_list["sourceStatus"].notna())
         ]
@@ -254,7 +255,6 @@ def create_conservation_list(list_data=None, state=None):
             conservation_list["scientificName"].isin(
                 [
                     "Cacatua leadbeateri leadbeateri",
-                    "Eclectus polychloros macgillivrayi",
                 ]
             )
         ]
@@ -262,17 +262,7 @@ def create_conservation_list(list_data=None, state=None):
             adds["scientificName"] == "Cacatua leadbeateri leadbeateri",
             "scientificName",
         ] = "Cacatua leadbeateri"
-        adds.loc[
-            adds["scientificName"] == "Eclectus polychloros macgillivrayi",
-            "scientificName",
-        ] = "Eclectus polychloros"
         conservation_list = pd.concat([conservation_list, adds])
-
-        # make the taxonID column
-        conservation_list["taxonID"] = (
-            "https://apps.des.qld.gov.au/species-search/details/?id="
-            + conservation_list["WildNetTaxonID"].astype(str)
-        )
 
         # add rank column
         conservation_list["rank"] = ""

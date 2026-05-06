@@ -212,8 +212,8 @@ def read_list_url(url=None, state=None):
                 )
     elif ".csv" in url:
         df = pd.read_csv(url)
-    elif ".json" in url:
-        # this is for only ACT?
+    elif any(x in url for x in ["json","/api/"]):
+        # this is for ACT and QLD
         response = requests.get(url)
         response_json = response.json()
         df = pd.DataFrame.from_records(
@@ -259,22 +259,17 @@ def get_conservation_codes(state=None):
 
     elif state == "QLD":
 
-        codes = pd.read_csv(
-            "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species-status-codes.csv"
-        )
+        # get codes form here and turn it into a dataframe
+        response = requests.get("https://wildnet-pub.science-data.qld.gov.au/api/v1/status-types")
+        all_codes = pd.DataFrame(response.json())
 
-        # do something here...?
-        codes = codes[codes["Field"] == "NCA_status"][["Code", "Code_description"]]
+        # only select Queensland codes and Legislation codes
+        temp = all_codes[all_codes["stat_ext_code"] == "QLD"]
+        qld_codes = temp[temp["stat_cat_code"] == "LEG"]
 
-        # change code description to be capitalized
-        codes.loc[
-            codes["Code_description"] == "Critically endangered", "Code_description"
-        ] = "Critically Endangered"
-        codes.loc[
-            codes["Code_description"] == "Near threatened", "Code_description"
-        ] = "Near Threatened"
-
-        return codes
+        # return Queensland codes
+        return qld_codes
+        # return pd.DataFrame()
 
     elif state == "WA":
 
