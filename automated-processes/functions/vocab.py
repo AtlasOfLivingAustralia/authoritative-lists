@@ -49,7 +49,9 @@ conservation_list_urls = {
         "https://ftp-dlrm.nt.gov.au/main.html?download&weblink=1e717d654034af5e5f840d2ba3fd9187&realfilename=NT_Species_List_Fauna.xlsx",  # fauna
         "https://ftp-dlrm.nt.gov.au/main.html?download&weblink=60088e77ecef6c6cbf515c299f07a420&realfilename=NT_Species_List_Flora.xlsx",
     ],  # flora
-    "QLD": ["https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"],
+    "QLD": [
+        "https://wildnet-pub.science-data.qld.gov.au/api/v1/species-list?page_size=100000&page_number=1" # try this
+    ], # "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/species.csv"
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
     "TAS": ["TasThreatSpecies.xlsx"],
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
@@ -63,7 +65,7 @@ sensitive_list_urls = {
     "ACT": ["https://www.data.act.gov.au/resource/4wyh-vhce.json"],
     "NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
     "QLD": [
-        "https://apps.des.qld.gov.au/data-sets/wildlife/wildnet/qld-confidential-species.csv"
+        "https://wildnet-pub.science-data.qld.gov.au/api/v1/species-list?sensitive_species=1&page_size=5000&page_number=1"
     ],
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
@@ -237,11 +239,13 @@ classMap = {
 # columns to rename for both sensitive and conservation lists
 conservation_columns_rename = {
     "QLD": {
-        "Scientific_name": "scientificName",
-        "Common_name": "vernacularName",
-        "Taxon_author": "scientificNameAuthorship",
-        "Family": "family",
-        "Taxon_Id": "WildNetTaxonID",
+        "scientific_name": "scientificName",
+        "accepted_common_name": "vernacularName",
+        "kingdom_name": "kingdom",
+        # "Taxon_author": "scientificNameAuthorship",
+        "family_name": "family",
+        "class_name": "class",
+        # "Taxon_Id": "WildNetTaxonID",
     },
     "NT": {
         "TERRITORY PARKS AND WILDLIFE ACT CLASSIFICATION": "status",
@@ -292,13 +296,14 @@ sensitive_columns_rename = {
         "taxonRank": "rank",
     },
     "QLD": {
-        "Scientific name": "scientificName",
-        "Common name": "vernacularName",
-        "NCA status": "category",
-        "Taxon Id": "WildNetTaxonID",
-        "Code_description": "status",
-        "Kingdom": "kingdom",
-        "Family": "family",
+        "scientific_name": "scientificName",
+        "accepted_common_name": "vernacularName",
+        "kingdom_name": "kingdom",
+        # "Taxon_author": "scientificNameAuthorship",
+        "family_name": "family",
+        "class_name": "class",
+        # "Taxon_Id": "WildNetTaxonID",
+        "nca_code": "category"
     },
     "VIC": {
         "FFG_ACT_STATUS": "category",  # NOT VIC_ADVISORY_STATUS
