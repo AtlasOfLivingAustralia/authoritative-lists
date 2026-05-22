@@ -40,11 +40,11 @@ class Update_flag:
         self.mutation_query = None
         self.accessToken = None
         self.list_headers = None  # Uses JWT Token
-        self.collectory_headers = None  # Uses API Key
+        # self.collectory_headers = None  # Uses API Key
         self.all_df = pd.DataFrame()
         self.upd_df = pd.DataFrame()
-        self.collectory_url = cfg.collectory_url
-        self.collectory_api_key = cfg.collectory_api_key
+        # self.collectory_url = cfg.collectory_url
+        # self.collectory_api_key = cfg.collectory_api_key
         self.list_url = cfg.list_url
         self.list_info_url = cfg.list_info_url
         self.graphql_url = cfg.graphql_url
@@ -63,8 +63,8 @@ class Update_flag:
         parser.add_argument("--output", required=True)
         parser.add_argument("--allfile", required=True)
         parser.add_argument("--updfile", required=True)
-        parser.add_argument("--colfile", required=True)
-        parser.add_argument("--list_metafile", required=True)
+        # parser.add_argument("--colfile", required=True)
+        # parser.add_argument("--list_metafile", required=True)
         parser.add_argument("--env", required=True)
         parser.add_argument("--getListInfo", required=True)
         parser.add_argument("--authentication_test", required=True)
@@ -131,9 +131,8 @@ class Update_flag:
         page = 1
         headers = {
             "Content-Type": "application/json",
-            # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
-            "Authorization": "Bearer {}".format(self.accessToken),
         }
+
         all_data = []
         print("Downloading list info: ")
         while True:
@@ -147,13 +146,12 @@ class Update_flag:
                     break
                 data = pd.json_normalize([data])  # If the response is JSON
                 all_data.extend(data["lists"][0])
-                page += limit
+                # page += limit
+                page += 1
             else:
                 print(f"Error downloading: {url} Status: {response.status_code}")
 
         df = pd.DataFrame(all_data)
-        # maybe do keys to keep here not in other function
-        # df = df[self.keys_to_keep]
 
         return df
 
@@ -167,9 +165,12 @@ class Update_flag:
         #    3. Lists marked with list type – “Test%”
         #    4. Lists with list name contains "test%"
 
-        notauthdf = self.all_df
+        notauthdf = self.all_df.copy()
         notauthdf["rowCount"] = pd.to_numeric(notauthdf["rowCount"], errors="coerce")
         # Archive non-authoritative records that meet rules criteria
+        # listtypedf = notauthdf["listType"].str.contains("test", case=False, na=False)
+        # titletestdf = notauthdf["title"].str.contains("test", case=False, na=False)
+        # rowcountdf = notauthdf["rowCount"] <= 1
         archivedf = notauthdf[
             (notauthdf["listType"].str.contains("test", case=False, na=False))
             | (notauthdf["title"].str.contains("test", case=False, na=False))
@@ -199,10 +200,11 @@ class Update_flag:
     def get_list_metadata(self, druid):
         # need to do this via API   - put the keys to keep in config
         lUrl = self.list_url + druid
-        # response = requests.get(lUrl, headers=self.headers)
-        response = requests.get(
-            lUrl, headers={"Authorization": self.collectory_api_key}, timeout=60
-        )
+        headers = {"Content-Type": "application/json"}
+        response = requests.get(lUrl, headers=headers)
+        # response = requests.get(
+        #     lUrl, headers={"Authorization": self.collectory_api_key}, timeout=60
+        # )
         if response.status_code == 200:
             metadata = response.json()
             for key in list(metadata.keys()):  # remove key values not used in update
@@ -215,42 +217,6 @@ class Update_flag:
                 f"List metadata request failed with status code {response.status_code}"
             )
         return metadata
-
-    # def get_collectory_metadata(self):
-    #     metadata = ""
-    #     metadata_df = pd.DataFrame()
-    #     for druid in self.upd_df["dataResourceUid"]:
-    #         lUrl = self.collectory_url + druid
-    #         try:
-    #             with requests.get(
-    #                 # lurl, params, headers=headers, timeout=60
-    #                 lUrl,
-    #                 headers={"Authorization": self.collectory_api_key},
-    #                 timeout=60,
-    #             ) as response:
-    #                 response.raise_for_status()
-    #                 json_result = json.loads(response.content)
-    #                 return json_result
-
-    #         except Exception as e:
-    #             print(f"Error fetching metadata for {uid}: {str(e)}")
-    #         # response = requests.get(
-    #         #     lUrl, headers={"Authorization": self.collectory_api_key}
-    #         # )
-    #         # response = requests.get(lUrl, headers=self.collectory_headers)
-    #         if response.status_code == 200:
-    #             metadata = response.json()
-    #             print(f"{druid} -  Collectory metadata extracted, {lUrl}")
-    #         else:
-    #             print(
-    #                 f"{druid} - Collectory metadata request for failed with status code {response.status_code}, {lUrl}"
-    #             )
-    #         # metadata_df.append(metadata)  # Append the returned DataFrame
-    #         metadata_df = pd.concat(
-    #             [metadata_df, pd.DataFrame([metadata])], ignore_index=True
-    #         )
-    #     # metadata_df = pd.concat(list_of_dfs, ignore_index=True)
-    #     return metadata_df
 
     def update_list_metadata(self, row):
         # Get metadata (using API for now)
@@ -290,45 +256,31 @@ class Update_flag:
         args = self.parse_arguments()
         # Get access token
         # self.accessToken = lf.get_authentication_info(args=args, test=True)
-        self.listaccessToken = "<insert JWT Token here>"
-        self.listaccessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIiwiZGF0YV9wdWJsaXNoZXIiLCJhZG1pbiIsImNvbGxlY3Rpb25fYWRtaW4iLCJjb2xsZWN0b3JzX2FkbWluIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiJkYjExODQ3NC03ZDMxLTRhNDItYjIzNS01OGUzY2EyOTExMDgiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3Nzc5NDY5MjUsImV4cCI6MTc3ODAzMzMyNSwiaWF0IjoxNzc3OTQ2OTI2LCJqdGkiOiIyNzY0MmExNC02ZDM4LTQ3OTctOTJmNi00MzA1MTljZDI5OTIiLCJ1c2VybmFtZSI6IjU2NTkyIn0.ucdbaK4MgVBloVwhrb9AN_EFM_aT69kb2O3hbSVjNu_NWahHOARD06xFPomKL6iM8iLRsx5-c3Bc2UiOQ2w4GALaDcTuNsJwx_BQ1V8uhxwPsDt0z3OqqBRD4RujC_5Zno8y7TUIf5jUQJT1x8EB9FxP2cJ688-qb4fDEp003t6ALYL3nEDT_B7iGAMmvD4E9qz9m2lWi0Q38NkcRCtx2pJP_gewh4Mq-Y9k_Sgfsh0Fkduil2dwjCjzxBLLYPGFH_z7rkQLjCatMShHwYTPZFyYuyA8_xZzsUiyvC2WcxNI_vSOGJeiDeNye3cGHzCqHODXmUqLKwk5DJqIsLAPYw"
+        self.listaccessToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIm9yZy5hcGVyZW8uY2FzLnNlcnZpY2VzLlJlZ2lzdGVyZWRTZXJ2aWNlIjoiMTcyNTUwMDE0MjE2MSIsImtpZCI6InNpZy0xNjU1OTU2NDkzIn0.eyJzdWIiOiJyb3NlbWFyeS5vY29ubm9yQGNzaXJvLmF1Iiwicm9sZSI6WyJST0xFX0FETUlOIiwiUk9MRV9DT0xMRUNUSU9OX0FETUlOIiwiUk9MRV9DT0xMRUNUSU9OX0VESVRPUiIsIlJPTEVfVVNFUiJdLCJvYXV0aENsaWVudElkIjoiZUNCZ0R3bm9FemROTHhKVFBiZ2lXQ3RkS3RHNFNMMFBoQk9uIiwiaXNzIjoiaHR0cHM6XC9cL2F1dGguYWxhLm9yZy5hdVwvY2FzXC9vaWRjIiwicHJlZmVycmVkX3VzZXJuYW1lIjoicm9zZW1hcnkub2Nvbm5vckBjc2lyby5hdSIsInVzZXJpZCI6IjEzNTk2MiIsImNsaWVudF9pZCI6ImVDQmdEd25vRXpkTkx4SlRQYmdpV0N0ZEt0RzRTTDBQaEJPbiIsInVwZGF0ZWRfYXQiOiIyMDIyLTAyLTIzIDE1OjM0OjM0IiwiZ3JhbnRfdHlwZSI6IkFVVEhPUklaQVRJT05fQ09ERSIsInNjb3BlIjpbImVtYWlsIiwib3BlbmlkIiwicHJvZmlsZSIsInJvbGVzIl0sInNlcnZlcklwQWRkcmVzcyI6IjEyNy4wLjAuMSIsImxvbmdUZXJtQXV0aGVudGljYXRpb25SZXF1ZXN0VG9rZW5Vc2VkIjpmYWxzZSwic3RhdGUiOiJlMWIwN2Q0MjFhYWU0ZTc5OWJmYTliNWNiOWFmNjA1NyIsImV4cCI6MTc4MjAwMjM0OCwiaWF0IjoxNzc5NDEwMzQ4LCJqdGkiOiJBVC0yMDI1LVByZmpqRHdWQmx3YllZQzhoTHFXRERYSEttVjQ3VXU2IiwiZW1haWwiOiJyb3NlbWFyeS5vY29ubm9yQGNzaXJvLmF1IiwiY2xpZW50SXBBZGRyZXNzIjoiMTQwLjI1My4yMzAuOTMiLCJpc0Zyb21OZXdMb2dpbiI6dHJ1ZSwiZW1haWxfdmVyaWZpZWQiOiIxIiwiYXV0aGVudGljYXRpb25EYXRlIjoiMjAyNi0wNS0yMlQwMDozOTowNy43NDkzMzdaIiwic3VjY2Vzc2Z1bEF1dGhlbnRpY2F0aW9uSGFuZGxlcnMiOiJRdWVyeURhdGFiYXNlQXV0aGVudGljYXRpb25IYW5kbGVyIiwidXNlckFnZW50IjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0OC4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsImdpdmVuX25hbWUiOiJSb3NlbWFyeSIsIm5vbmNlIjoiIiwiY3JlZGVudGlhbFR5cGUiOiJVc2VybmFtZVBhc3N3b3JkQ3JlZGVudGlhbCIsInNhbWxBdXRoZW50aWNhdGlvblN0YXRlbWVudEF1dGhNZXRob2QiOiJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjA6YW06cGFzc3dvcmQiLCJhdWQiOiJodHRwczpcL1wvdG9rZW5zLmFsYS5vcmcuYXVcL2xvZ2luIiwiYXV0aGVudGljYXRpb25NZXRob2QiOiJRdWVyeURhdGFiYXNlQXV0aGVudGljYXRpb25IYW5kbGVyIiwibmFtZSI6IlJvc2VtYXJ5IE8nQ29ubm9yIiwic2NvcGVzIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJyb2xlcyIsImVtYWlsIl0sImZhbWlseV9uYW1lIjoiTydDb25ub3IifQ.HFzyuY4-Bur5vexcd_O1Q4mLiEgV_qfLJ4o8wfG0kO1YiGehaWAMZ2Q4JKkAaiZbr0D1xqlMtTwwn8jk6UvD6KV_IVNVQB9AQ9JJKTnVwkDZMGG3wjDa6EwN2HoDJBTw360sMd_EuhkaKqq0ab_9GsV8Cc_cY0M2UmtAitD1U-F3NXVrRT8uU-SmyAEhiC7faexJetnGI_yoj4YWFulpuhWyObmD0OR2-n73NgBDCqMmFfk4Mn_G25jeg--fY59CnIhty-sBZoLbnNC72CLOsoEC0I2odhiFC18EQ8A_wHMHaqUXSIrsNkAFnU42Z1hD1pcsLinDvPxUels3s87HRg"  # Prod
+        # self.listaccessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIiwiZGF0YV9wdWJsaXNoZXIiLCJhZG1pbiIsImNvbGxlY3Rpb25fYWRtaW4iLCJjb2xsZWN0b3JzX2FkbWluIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiJkYjExODQ3NC03ZDMxLTRhNDItYjIzNS01OGUzY2EyOTExMDgiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3Nzc5NDY5MjUsImV4cCI6MTc3ODAzMzMyNSwiaWF0IjoxNzc3OTQ2OTI2LCJqdGkiOiIyNzY0MmExNC02ZDM4LTQ3OTctOTJmNi00MzA1MTljZDI5OTIiLCJ1c2VybmFtZSI6IjU2NTkyIn0.ucdbaK4MgVBloVwhrb9AN_EFM_aT69kb2O3hbSVjNu_NWahHOARD06xFPomKL6iM8iLRsx5-c3Bc2UiOQ2w4GALaDcTuNsJwx_BQ1V8uhxwPsDt0z3OqqBRD4RujC_5Zno8y7TUIf5jUQJT1x8EB9FxP2cJ688-qb4fDEp003t6ALYL3nEDT_B7iGAMmvD4E9qz9m2lWi0Q38NkcRCtx2pJP_gewh4Mq-Y9k_Sgfsh0Fkduil2dwjCjzxBLLYPGFH_z7rkQLjCatMShHwYTPZFyYuyA8_xZzsUiyvC2WcxNI_vSOGJeiDeNye3cGHzCqHODXmUqLKwk5DJqIsLAPYw"
         self.list_headers = {
             "Content-Type": "application/json",
             # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
             "Authorization": "Bearer {}".format(self.listaccessToken),
         }
-        # self.collectory_headers = {
-        #     "Content-Type": "application/json",
-        #     # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
-        #     "Authorization": "Bearer {}".format(self.listaccessToken),
-        # }
-        # Get lists to update or read file of lists to update
 
         if args.getListInfo == "True":
             self.all_df = (
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
-            # self.coll_df = (
-            #     self.get_collectory_metadata()
-            # )  # only for saving for use later
 
             # Write downloaded to CSV
             self.all_df.to_csv(args.allfile, encoding="utf-8", index=False)
             self.upd_df.to_csv(args.updfile, encoding="utf-8", index=False)
-            # self.coll_df.to_csv(args.colfile, encoding="utf-8", index=False)
         else:
             print("got to here ok to test time output")
-            self.all_df = pd.read_csv(args.allfile, encoding="utf-8", dtype="str")
+            # self.all_df = pd.read_csv(args.allfile, encoding="utf-8", dtype="str")
             self.upd_df = pd.read_csv(args.updfile, encoding="utf-8", dtype="str")
-            # self.coll_df = pd.read_csv(
-            #     args.colfile, encoding="utf-8", dtype="str"
-            # )  # not needed for list updates
 
         # Set up query for list metadata update via graphql
         self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
         self.upd_df.apply(self.update_list_metadata, axis=1)
-        # self.coll_df.apply(self.update_collectory_metadata, axis=1)    -# not to be done here
 
         print(f"\n Number of lists to update: {self.upd_df.shape[0]}")
         print(f"\n All lists and collectory dataresources updated successfully")

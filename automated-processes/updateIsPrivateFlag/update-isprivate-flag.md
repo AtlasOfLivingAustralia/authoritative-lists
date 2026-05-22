@@ -14,3 +14,8 @@ List must be `non-authoritative` and meet the following criteria:
    2. Lists with only 1 record
    3. Lists marked with list type – “Test%”
    4. Lists with list name contains "test%"
+
+
+# List implementation May 2026
+
+List Counts
