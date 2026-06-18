@@ -152,7 +152,7 @@ class Update_flag:
                 print(f"Error downloading: {url} Status: {response.status_code}")
 
         df = pd.DataFrame(all_data)
-
+        print(f"List info download complete: {len(df)} records downloaded")
         return df
 
     def filter_lists(self, args):
@@ -164,6 +164,7 @@ class Update_flag:
         #    2. Lists with only 1 record -rowCount
         #    3. Lists marked with list type – “Test%”
         #    4. Lists with list name contains "test%"
+        # Note: BioCollect DRs to be excluded from update
 
         notauthdf = self.all_df.copy()
         notauthdf["rowCount"] = pd.to_numeric(notauthdf["rowCount"], errors="coerce")
@@ -177,23 +178,29 @@ class Update_flag:
             | (notauthdf["rowCount"] <= 1)
         ]
 
-        archivedf["isPrivate"] = True  # set isPrivate flag to true for update
-
-        # output list record counts
+        # archivedf["isPrivate"] = True  # set isPrivate flag to true for update
+        archivedf.loc[:, "isPrivate"] = True
+        # Capture record counts
         nonauthct = len(notauthdf)
         lt1rec = (notauthdf["rowCount"] <= 1).sum()
         typetest = (
             notauthdf["listType"].str.contains("test", case=False, na=False)
         ).sum()
         nametest = (notauthdf["title"].str.contains("test", case=False, na=False)).sum()
-
+        numbc = archivedf["dataResourceUid"].isin(cfg.drExclude).sum()
+        bcfound = archivedf.loc[
+            archivedf["dataResourceUid"].isin(cfg.drExclude), "dataResourceUid"
+        ].unique()
+        # Exclude BioCollect dataResources
+        archivedf = archivedf[~archivedf["dataResourceUid"].isin(cfg.drExclude)]
         print("  ")
         print(f"Number non-authoritative lists: {nonauthct}")
         print(f"    - # Lists with less than 2 records: {lt1rec}")
         print(f"    - # List type value contains text test: {typetest}")
         print(f"    - # List name value contains text test: {nametest}")
-
+        print(f"    - # Biocollect lists found: {numbc}")
         print(f"Number of lists to archive: {len(archivedf)}")
+        print(f"Biocollect DRs found and excluded: {bcfound}")
 
         return archivedf
 
@@ -225,9 +232,10 @@ class Update_flag:
         # Change the isPrivate flag
         # self.metadata["isPrivate"] = True
         # Send the mutation using requests
-
+        self.rec_count += 1
         druid = row["dataResourceUid"]
-        print(f"Updating list metadata: {druid}")
+        print(f"Rec {self.rec_count}: updating {druid}")
+        # print(f"Updating list metadata: {druid}")
         metadata = self.get_list_metadata(druid)
         metadata["isPrivate"] = True
         # metadata["isPrivate"] = False
@@ -252,7 +260,47 @@ class Update_flag:
 
         return ()
 
+    class update_metadata:
+        # Get metadata (using API for now)
+        # Update list
+        # Set isPrivate flag to True
+        # Send the mutation using requests
+
+        def __init__(self):
+            self.rec_count = 0
+
+        def update_list_metadata(self, row):
+            self.rec_count += 1
+            druid = row["dataResourceUid"]
+            print(f"Rec {self.rec_count}: updating {druid}")
+            # print(f"Updating list metadata: {druid}")
+            metadata = self.get_list_metadata(druid)
+            metadata["isPrivate"] = True
+            # metadata["isPrivate"] = False
+            jsonStr = {
+                "query": self.mutation_query,
+                "operationName": "update",
+                "variables": metadata,
+            }
+            response = requests.post(
+                self.graphql_url, headers=self.list_headers, json=jsonStr
+            )
+            if response.status_code != 200:
+                print(f"Metadata: {metadata}")
+                raise Exception(
+                    f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata['id']}"
+                )
+            else:
+                data = response.json()
+                if "errors" in data:
+                    raise Exception(f"GraphQL query data error: " + str(data["errors"]))
+                print(f"Updated isPrivate flag for list: {druid}")
+
+            return ()
+
     def run(self):
+        # obj = update_metadata()
+
         args = self.parse_arguments()
         # Get access token
         # self.accessToken = lf.get_authentication_info(args=args, test=True)
@@ -263,27 +311,36 @@ class Update_flag:
             # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
             "Authorization": "Bearer {}".format(self.listaccessToken),
         }
-
+        print("Update species lists `isPrivate` flag")
+        print("List must be `non-authoritative`, and meet the following criteria:")
+        print("      1. Lists with zero records")
+        print("      2. Lists with only 1 record")
+        print("      3. Lists marked with list type – “Test”")
+        print('      4. Lists with list name contains "test"')
+        print("      5. Exclude BioCollect lists")
         if args.getListInfo == "True":
             self.all_df = (
                 self.download_list_info_ws()
             )  # get all non-authoritative, non-private lists
             self.upd_df = self.filter_lists(args)  # filter based on criteria
-
             # Write downloaded to CSV
+            print("\nWrite lists to file:")
             self.all_df.to_csv(args.allfile, encoding="utf-8", index=False)
             self.upd_df.to_csv(args.updfile, encoding="utf-8", index=False)
+            print(f" .... All lists written to: {args.allfile}")
+            print(f" .... Lists to update written to: {args.updfile}")
         else:
-            print("got to here ok to test time output")
-            # self.all_df = pd.read_csv(args.allfile, encoding="utf-8", dtype="str")
             self.upd_df = pd.read_csv(args.updfile, encoding="utf-8", dtype="str")
 
         # Set up query for list metadata update via graphql
-        self.mutation_query = self.prepare_mutation_query()  # Prepare mutation query
+        print(f"\n Number of lists to update: {len(self.upd_df)}")
+        print("    - Prepare mutation query")
+        self.mutation_query = self.prepare_mutation_query()
+        print("    - Updating lists")
         self.upd_df.apply(self.update_list_metadata, axis=1)
-
-        print(f"\n Number of lists to update: {self.upd_df.shape[0]}")
-        print(f"\n All lists and collectory dataresources updated successfully")
+        # self.upd_df = self.upd_df.apply(obj.update_metadata, axis=1)
+        # print(f"\n Number of lists updated: {self.upd_df.shape[0]}")
+        print(f"All lists and collectory dataresources updated successfully")
 
 
 if __name__ == "__main__":
