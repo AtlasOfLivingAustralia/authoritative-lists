@@ -129,7 +129,6 @@ class Update_flag:
                 registry_base_url,
                 resource_path,
                 headers={"Authorization": ala_api_key},
-                # method="GET",
                 method="POST",
                 params=metadata,
             )
@@ -137,17 +136,12 @@ class Update_flag:
         except Exception as e:
             print(f"Error fetching metadata for {uid}: {str(e)}")
 
-    # end stuff from dag
-
     def run(self):
         args = self.parse_arguments()
         colfile = Path(args.colfile)
         # List of DataResources in collectory to update
         coll_df = pd.read_csv(colfile, encoding="utf-8", dtype="str").fillna("")
         metadata = {"isPrivate": "true"}
-        # new_response = self.update_registry_metadata(
-        #     self.collectory_url, druid, self.collectory_api_key, metadata
-        # )
         print(f"Updating {coll_df.shape[0]} collectory dataresources: ")
         response = coll_df.apply(
             lambda row: self.update_registry_metadata(

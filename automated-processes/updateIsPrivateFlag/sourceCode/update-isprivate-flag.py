@@ -48,7 +48,7 @@ class Update_flag:
         self.list_url = cfg.list_url
         self.list_info_url = cfg.list_info_url
         self.graphql_url = cfg.graphql_url
-        self.keys_to_keep = cfg.keys_to_keep
+        self.keys_to_keep = cfg.graphql_keys_to_keep
 
     def parse_arguments(self):
         """
@@ -164,21 +164,17 @@ class Update_flag:
         #    2. Lists with only 1 record -rowCount
         #    3. Lists marked with list type – “Test%”
         #    4. Lists with list name contains "test%"
+        #    4. Lists with list name contains "My Species list"
         # Note: BioCollect DRs to be excluded from update
 
         notauthdf = self.all_df.copy()
         notauthdf["rowCount"] = pd.to_numeric(notauthdf["rowCount"], errors="coerce")
-        # Archive non-authoritative records that meet rules criteria
-        # listtypedf = notauthdf["listType"].str.contains("test", case=False, na=False)
-        # titletestdf = notauthdf["title"].str.contains("test", case=False, na=False)
-        # rowcountdf = notauthdf["rowCount"] <= 1
         archivedf = notauthdf[
             (notauthdf["listType"].str.contains("test", case=False, na=False))
             | (notauthdf["title"].str.contains("test", case=False, na=False))
+            | (notauthdf["title"].str.contains("My Species list", case=False, na=False))
             | (notauthdf["rowCount"] <= 1)
         ]
-
-        # archivedf["isPrivate"] = True  # set isPrivate flag to true for update
         archivedf.loc[:, "isPrivate"] = True
         # Capture record counts
         nonauthct = len(notauthdf)
@@ -187,6 +183,9 @@ class Update_flag:
             notauthdf["listType"].str.contains("test", case=False, na=False)
         ).sum()
         nametest = (notauthdf["title"].str.contains("test", case=False, na=False)).sum()
+        namemyspec = (
+            notauthdf["title"].str.contains("My Species list", case=False, na=False)
+        ).sum()
         numbc = archivedf["dataResourceUid"].isin(cfg.drExclude).sum()
         bcfound = archivedf.loc[
             archivedf["dataResourceUid"].isin(cfg.drExclude), "dataResourceUid"
@@ -198,67 +197,66 @@ class Update_flag:
         print(f"    - # Lists with less than 2 records: {lt1rec}")
         print(f"    - # List type value contains text test: {typetest}")
         print(f"    - # List name value contains text test: {nametest}")
+        print(f"    - # List name value contains text My Species list: {namemyspec}")
         print(f"    - # Biocollect lists found: {numbc}")
         print(f"Number of lists to archive: {len(archivedf)}")
         print(f"Biocollect DRs found and excluded: {bcfound}")
 
         return archivedf
 
-    def get_list_metadata(self, druid):
-        # need to do this via API   - put the keys to keep in config
-        lUrl = self.list_url + druid
-        headers = {"Content-Type": "application/json"}
-        response = requests.get(lUrl, headers=headers)
-        # response = requests.get(
-        #     lUrl, headers={"Authorization": self.collectory_api_key}, timeout=60
-        # )
-        if response.status_code == 200:
-            metadata = response.json()
-            for key in list(metadata.keys()):  # remove key values not used in update
-                if key not in self.keys_to_keep:
-                    metadata.pop(key)
-            # print(f"Extracted metadata {metadata}")
-            # print(f"Updated metadata: {metadata}")
-        else:
-            print(
-                f"List metadata request failed with status code {response.status_code}"
-            )
-        return metadata
+    # def get_list_metadata(self, druid):
+    #     # need to do this via API   - put the keys to keep in config
+    #     lUrl = self.list_url + druid
+    #     headers = {"Content-Type": "application/json"}
+    #     response = requests.get(lUrl, headers=headers)
+    #     # response = requests.get(
+    #     #     lUrl, headers={"Authorization": self.collectory_api_key}, timeout=60
+    #     # )
+    #     if response.status_code == 200:
+    #         metadata = response.json()
+    #         for key in list(metadata.keys()):  # remove key values not used in update
+    #             if key not in self.keys_to_keep:
+    #                 metadata.pop(key)
+    #         # print(f"Extracted metadata {metadata}")
+    #         # print(f"Updated metadata: {metadata}")
+    #     else:
+    #         print(
+    #             f"List metadata request failed with status code {response.status_code}"
+    #         )
+    #     return metadata
 
-    def update_list_metadata(self, row):
-        # Get metadata (using API for now)
-        # Update list
-        # self.metadata = self.get_metadata("dr22808")
-        # Change the isPrivate flag
-        # self.metadata["isPrivate"] = True
-        # Send the mutation using requests
-        self.rec_count += 1
-        druid = row["dataResourceUid"]
-        print(f"Rec {self.rec_count}: updating {druid}")
-        # print(f"Updating list metadata: {druid}")
-        metadata = self.get_list_metadata(druid)
-        metadata["isPrivate"] = True
-        # metadata["isPrivate"] = False
-        jsonStr = {
-            "query": self.mutation_query,
-            "operationName": "update",
-            "variables": metadata,
-        }
-        response = requests.post(
-            self.graphql_url, headers=self.list_headers, json=jsonStr
-        )
-        if response.status_code != 200:
-            print(f"Metadata: {metadata}")
-            raise Exception(
-                f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata['id']}"
-            )
-        else:
-            data = response.json()
-            if "errors" in data:
-                raise Exception(f"GraphQL query data error: " + str(data["errors"]))
-            print(f"Updated isPrivate flag for list: {druid}")
+    # def update_list_metadata(self, row):
+    #     # Get metadata (using API for now)
+    #     # Update list
+    #     # self.metadata = self.get_metadata("dr22808")
+    #     # Change the isPrivate flag
+    #     # self.metadata["isPrivate"] = True
+    #     # Send the mutation using requests
+    #     druid = row["dataResourceUid"]
+    #     print(f"... updating {druid}")
+    #     metadata = self.get_list_metadata(druid)
+    #     metadata["isPrivate"] = True
+    #     # metadata["isPrivate"] = False
+    #     jsonStr = {
+    #         "query": self.mutation_query,
+    #         "operationName": "update",
+    #         "variables": metadata,
+    #     }
+    #     response = requests.post(
+    #         self.graphql_url, headers=self.list_headers, json=jsonStr
+    #     )
+    #     if response.status_code != 200:
+    #         print(f"Metadata: {metadata}")
+    #         raise Exception(
+    #             f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata['id']}"
+    #         )
+    #     else:
+    #         data = response.json()
+    #         if "errors" in data:
+    #             raise Exception(f"GraphQL query data error: " + str(data["errors"]))
+    #         print(f"Updated isPrivate flag for list: {druid}")
 
-        return ()
+    #     return ()
 
     class update_metadata:
         # Get metadata (using API for now)
@@ -268,22 +266,46 @@ class Update_flag:
 
         def __init__(self):
             self.rec_count = 0
+            self.list_url = cfg.list_url
+            self.list_info_url = cfg.list_info_url
+            self.graphql_url = cfg.graphql_url
+            self.keys_to_keep = cfg.graphql_keys_to_keep
 
-        def update_list_metadata(self, row):
+        def get_list_metadata(self, druid):
+
+            lUrl = self.list_url + druid
+            headers = {"Content-Type": "application/json"}
+            response = requests.get(lUrl, headers=headers)
+            if response.status_code == 200:
+                metadata = response.json()
+                for key in list(
+                    metadata.keys()
+                ):  # remove key values not used in update
+                    if key not in self.keys_to_keep:
+                        metadata.pop(key)
+            else:
+                print(
+                    f"List metadata request failed with status code {response.status_code}"
+                )
+            return metadata
+
+        def update_list_metadata(self, row, mutation_query, list_headers):
+
             self.rec_count += 1
             druid = row["dataResourceUid"]
             print(f"Rec {self.rec_count}: updating {druid}")
-            # print(f"Updating list metadata: {druid}")
             metadata = self.get_list_metadata(druid)
             metadata["isPrivate"] = True
             # metadata["isPrivate"] = False
             jsonStr = {
-                "query": self.mutation_query,
+                "query": mutation_query,
                 "operationName": "update",
                 "variables": metadata,
             }
             response = requests.post(
-                self.graphql_url, headers=self.list_headers, json=jsonStr
+                self.graphql_url,
+                headers=list_headers,
+                json=jsonStr,
             )
             if response.status_code != 200:
                 print(f"Metadata: {metadata}")
@@ -299,7 +321,7 @@ class Update_flag:
             return ()
 
     def run(self):
-        # obj = update_metadata()
+        # obj = self.update_metadata()
 
         args = self.parse_arguments()
         # Get access token
@@ -335,11 +357,18 @@ class Update_flag:
         # Set up query for list metadata update via graphql
         print(f"\n Number of lists to update: {len(self.upd_df)}")
         print("    - Prepare mutation query")
-        self.mutation_query = self.prepare_mutation_query()
+        # self.mutation_query = self.prepare_mutation_query()
+        mutation_query = self.prepare_mutation_query()
         print("    - Updating lists")
-        self.upd_df.apply(self.update_list_metadata, axis=1)
-        # self.upd_df = self.upd_df.apply(obj.update_metadata, axis=1)
-        # print(f"\n Number of lists updated: {self.upd_df.shape[0]}")
+        # self.upd_df.apply(self.update_list_metadata, axis=1)
+        self.upd_df = self.upd_df.apply(
+            obj.update_list_metadata,
+            axis=1,
+            args=(mutation_query, self.list_headers)
+        )
+        self.upd_df = self.upd_df.apply(
+            obj.update_list_metadata(), axis=1
+        )
         print(f"All lists and collectory dataresources updated successfully")
 
 
