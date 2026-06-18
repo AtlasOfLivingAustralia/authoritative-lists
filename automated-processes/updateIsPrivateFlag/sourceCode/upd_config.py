@@ -5,14 +5,14 @@
 token_url: str = (
     "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth2/token"
 )
-client_id: str = "76n2kf3fa5f1ispatr436u9t96"
-client_secret: str = "9l7diuhf8uifenhc466n8c8bmgqnv98l88d8gbov8nm7nkf35c7"
+client_id: str = ""
+client_secret: str = ""
 
 # *************************************************************************************************************
 # Test
 # Collectory
 # collectory_url = "https://collections-test.ala.org.au/ws/"
-# collectory_api_key = "dba60c96-380f-4793-90c8-5dbc4764ca4b" # See airflow variable
+# collectory_api_key = "" # See airflow variable
 
 # Lists Service
 # list_url = "https://lists-ws.test.ala.org.au/v2/speciesList/"
@@ -23,7 +23,7 @@ client_secret: str = "9l7diuhf8uifenhc466n8c8bmgqnv98l88d8gbov8nm7nkf35c7"
 # Prod - New Lists tool
 # Collectory
 collectory_url = "https://collections.ala.org.au/ws/"
-collectory_api_key = "d58043a0-e589-4d3d-b547-b51651c9ec73"  # See airflow variable
+collectory_api_key = ""  # See airflow variable
 
 # Lists Service
 list_url = "https://lists-ws.ala.org.au/v2/speciesList/"

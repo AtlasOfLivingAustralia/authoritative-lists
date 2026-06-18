@@ -204,59 +204,6 @@ class Update_flag:
 
         return archivedf
 
-    # def get_list_metadata(self, druid):
-    #     # need to do this via API   - put the keys to keep in config
-    #     lUrl = self.list_url + druid
-    #     headers = {"Content-Type": "application/json"}
-    #     response = requests.get(lUrl, headers=headers)
-    #     # response = requests.get(
-    #     #     lUrl, headers={"Authorization": self.collectory_api_key}, timeout=60
-    #     # )
-    #     if response.status_code == 200:
-    #         metadata = response.json()
-    #         for key in list(metadata.keys()):  # remove key values not used in update
-    #             if key not in self.keys_to_keep:
-    #                 metadata.pop(key)
-    #         # print(f"Extracted metadata {metadata}")
-    #         # print(f"Updated metadata: {metadata}")
-    #     else:
-    #         print(
-    #             f"List metadata request failed with status code {response.status_code}"
-    #         )
-    #     return metadata
-
-    # def update_list_metadata(self, row):
-    #     # Get metadata (using API for now)
-    #     # Update list
-    #     # self.metadata = self.get_metadata("dr22808")
-    #     # Change the isPrivate flag
-    #     # self.metadata["isPrivate"] = True
-    #     # Send the mutation using requests
-    #     druid = row["dataResourceUid"]
-    #     print(f"... updating {druid}")
-    #     metadata = self.get_list_metadata(druid)
-    #     metadata["isPrivate"] = True
-    #     # metadata["isPrivate"] = False
-    #     jsonStr = {
-    #         "query": self.mutation_query,
-    #         "operationName": "update",
-    #         "variables": metadata,
-    #     }
-    #     response = requests.post(
-    #         self.graphql_url, headers=self.list_headers, json=jsonStr
-    #     )
-    #     if response.status_code != 200:
-    #         print(f"Metadata: {metadata}")
-    #         raise Exception(
-    #             f"GraphQL update query error: {response.status_code} for DR: {druid} - ID: {metadata['id']}"
-    #         )
-    #     else:
-    #         data = response.json()
-    #         if "errors" in data:
-    #             raise Exception(f"GraphQL query data error: " + str(data["errors"]))
-    #         print(f"Updated isPrivate flag for list: {druid}")
-
-    #     return ()
 
     class update_metadata:
         # Get metadata (using API for now)
@@ -321,13 +268,12 @@ class Update_flag:
             return ()
 
     def run(self):
-        # obj = self.update_metadata()
+        obj = self.update_metadata()
 
         args = self.parse_arguments()
-        # Get access token
+        # Get access token - needs further testing
         # self.accessToken = lf.get_authentication_info(args=args, test=True)
-        self.listaccessToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIm9yZy5hcGVyZW8uY2FzLnNlcnZpY2VzLlJlZ2lzdGVyZWRTZXJ2aWNlIjoiMTcyNTUwMDE0MjE2MSIsImtpZCI6InNpZy0xNjU1OTU2NDkzIn0.eyJzdWIiOiJyb3NlbWFyeS5vY29ubm9yQGNzaXJvLmF1Iiwicm9sZSI6WyJST0xFX0FETUlOIiwiUk9MRV9DT0xMRUNUSU9OX0FETUlOIiwiUk9MRV9DT0xMRUNUSU9OX0VESVRPUiIsIlJPTEVfVVNFUiJdLCJvYXV0aENsaWVudElkIjoiZUNCZ0R3bm9FemROTHhKVFBiZ2lXQ3RkS3RHNFNMMFBoQk9uIiwiaXNzIjoiaHR0cHM6XC9cL2F1dGguYWxhLm9yZy5hdVwvY2FzXC9vaWRjIiwicHJlZmVycmVkX3VzZXJuYW1lIjoicm9zZW1hcnkub2Nvbm5vckBjc2lyby5hdSIsInVzZXJpZCI6IjEzNTk2MiIsImNsaWVudF9pZCI6ImVDQmdEd25vRXpkTkx4SlRQYmdpV0N0ZEt0RzRTTDBQaEJPbiIsInVwZGF0ZWRfYXQiOiIyMDIyLTAyLTIzIDE1OjM0OjM0IiwiZ3JhbnRfdHlwZSI6IkFVVEhPUklaQVRJT05fQ09ERSIsInNjb3BlIjpbImVtYWlsIiwib3BlbmlkIiwicHJvZmlsZSIsInJvbGVzIl0sInNlcnZlcklwQWRkcmVzcyI6IjEyNy4wLjAuMSIsImxvbmdUZXJtQXV0aGVudGljYXRpb25SZXF1ZXN0VG9rZW5Vc2VkIjpmYWxzZSwic3RhdGUiOiJlMWIwN2Q0MjFhYWU0ZTc5OWJmYTliNWNiOWFmNjA1NyIsImV4cCI6MTc4MjAwMjM0OCwiaWF0IjoxNzc5NDEwMzQ4LCJqdGkiOiJBVC0yMDI1LVByZmpqRHdWQmx3YllZQzhoTHFXRERYSEttVjQ3VXU2IiwiZW1haWwiOiJyb3NlbWFyeS5vY29ubm9yQGNzaXJvLmF1IiwiY2xpZW50SXBBZGRyZXNzIjoiMTQwLjI1My4yMzAuOTMiLCJpc0Zyb21OZXdMb2dpbiI6dHJ1ZSwiZW1haWxfdmVyaWZpZWQiOiIxIiwiYXV0aGVudGljYXRpb25EYXRlIjoiMjAyNi0wNS0yMlQwMDozOTowNy43NDkzMzdaIiwic3VjY2Vzc2Z1bEF1dGhlbnRpY2F0aW9uSGFuZGxlcnMiOiJRdWVyeURhdGFiYXNlQXV0aGVudGljYXRpb25IYW5kbGVyIiwidXNlckFnZW50IjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0OC4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsImdpdmVuX25hbWUiOiJSb3NlbWFyeSIsIm5vbmNlIjoiIiwiY3JlZGVudGlhbFR5cGUiOiJVc2VybmFtZVBhc3N3b3JkQ3JlZGVudGlhbCIsInNhbWxBdXRoZW50aWNhdGlvblN0YXRlbWVudEF1dGhNZXRob2QiOiJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoxLjA6YW06cGFzc3dvcmQiLCJhdWQiOiJodHRwczpcL1wvdG9rZW5zLmFsYS5vcmcuYXVcL2xvZ2luIiwiYXV0aGVudGljYXRpb25NZXRob2QiOiJRdWVyeURhdGFiYXNlQXV0aGVudGljYXRpb25IYW5kbGVyIiwibmFtZSI6IlJvc2VtYXJ5IE8nQ29ubm9yIiwic2NvcGVzIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJyb2xlcyIsImVtYWlsIl0sImZhbWlseV9uYW1lIjoiTydDb25ub3IifQ.HFzyuY4-Bur5vexcd_O1Q4mLiEgV_qfLJ4o8wfG0kO1YiGehaWAMZ2Q4JKkAaiZbr0D1xqlMtTwwn8jk6UvD6KV_IVNVQB9AQ9JJKTnVwkDZMGG3wjDa6EwN2HoDJBTw360sMd_EuhkaKqq0ab_9GsV8Cc_cY0M2UmtAitD1U-F3NXVrRT8uU-SmyAEhiC7faexJetnGI_yoj4YWFulpuhWyObmD0OR2-n73NgBDCqMmFfk4Mn_G25jeg--fY59CnIhty-sBZoLbnNC72CLOsoEC0I2odhiFC18EQ8A_wHMHaqUXSIrsNkAFnU42Z1hD1pcsLinDvPxUels3s87HRg"  # Prod
-        # self.listaccessToken = "eyJraWQiOiI2UEpOaFwvdU5EYlBIWlk4Y2xmTHJvMnBKUnJhTFRXTnpaU0tOcVdka3Y0az0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MDJkYmE3Yy00YWFjLTQ2ZWMtOGY4Ni0xM2JkZGMxNzgyYjYiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIiwiZGF0YV9wdWJsaXNoZXIiLCJhZG1pbiIsImNvbGxlY3Rpb25fYWRtaW4iLCJjb2xsZWN0b3JzX2FkbWluIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9PT1hVOUdXMzkiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI0NjFodDJjOHBxdnVzMGVyNzNmcDBkMWlrMiIsIm9yaWdpbl9qdGkiOiJkYjExODQ3NC03ZDMxLTRhNDItYjIzNS01OGUzY2EyOTExMDgiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImFsYVwvcm9sZXMgb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE3Nzc5NDY5MjUsImV4cCI6MTc3ODAzMzMyNSwiaWF0IjoxNzc3OTQ2OTI2LCJqdGkiOiIyNzY0MmExNC02ZDM4LTQ3OTctOTJmNi00MzA1MTljZDI5OTIiLCJ1c2VybmFtZSI6IjU2NTkyIn0.ucdbaK4MgVBloVwhrb9AN_EFM_aT69kb2O3hbSVjNu_NWahHOARD06xFPomKL6iM8iLRsx5-c3Bc2UiOQ2w4GALaDcTuNsJwx_BQ1V8uhxwPsDt0z3OqqBRD4RujC_5Zno8y7TUIf5jUQJT1x8EB9FxP2cJ688-qb4fDEp003t6ALYL3nEDT_B7iGAMmvD4E9qz9m2lWi0Q38NkcRCtx2pJP_gewh4Mq-Y9k_Sgfsh0Fkduil2dwjCjzxBLLYPGFH_z7rkQLjCatMShHwYTPZFyYuyA8_xZzsUiyvC2WcxNI_vSOGJeiDeNye3cGHzCqHODXmUqLKwk5DJqIsLAPYw"
+        self.listaccessToken = "<hard code here if needed>"
         self.list_headers = {
             "Content-Type": "application/json",
             # "Authorization": "Bearer {}".format(self.accessToken["access_token"]),
@@ -357,17 +303,12 @@ class Update_flag:
         # Set up query for list metadata update via graphql
         print(f"\n Number of lists to update: {len(self.upd_df)}")
         print("    - Prepare mutation query")
-        # self.mutation_query = self.prepare_mutation_query()
         mutation_query = self.prepare_mutation_query()
         print("    - Updating lists")
-        # self.upd_df.apply(self.update_list_metadata, axis=1)
         self.upd_df = self.upd_df.apply(
             obj.update_list_metadata,
             axis=1,
             args=(mutation_query, self.list_headers)
-        )
-        self.upd_df = self.upd_df.apply(
-            obj.update_list_metadata(), axis=1
         )
         print(f"All lists and collectory dataresources updated successfully")
 
