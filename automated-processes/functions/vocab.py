@@ -13,19 +13,12 @@ authorize_url = (
 token_url = "https://auth-secure.auth.ap-southeast-2.amazoncognito.com/oauth2/token"
 
 # URLs for ALA lists for test and production
+# used to be lists-ws.test.ala.org.au
 get_listsProd = "https://api.ala.org.au/specieslist/ws/speciesListItems/"
-# get_listsTest = "https://lists.test.ala.org.au/ws/speciesListItems/"  # -ws.
-# upload_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/upload"
-# ingest_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/"
-# progress_listsTest = "https://lists-develop-ws.dev.ala.org.au/v2/ingest/{speciesListID}/progress"
-# get_listsTest = "https://lists-develop-ws.dev.ala.org.au/v1/speciesListItems/" # was v2
-#"""
 upload_listsTest = "https://lists-ws.test.ala.org.au/v2/upload"
 ingest_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/"
 progress_listsTest = "https://lists-ws.test.ala.org.au/v2/ingest/{speciesListID}/progress"
 get_listsTest = "https://lists-ws.test.ala.org.au/v2/download/{speciesListID}"
-# get_listsTest = "https://lists-ws.test.ala.org.au/v2/speciesListItems/"
-#"""
 urlSuffix = "?max=10000&includeKVP=true"
 
 state_abbreviations = {
@@ -42,7 +35,9 @@ state_abbreviations = {
 # urls for conservation lists
 conservation_list_urls = {
     "ACT": [
-        "https://www.data.act.gov.au/resource/9ikf-qahj.json"
+        "https://www.data.act.gov.au/api/v3/views/yh5m-n9q2/query.json"
+        # "ACT_NCA_Listed_Taxa.csv"
+        # "https://www.data.act.gov.au/resource/9ikf-qahj.json"
     ],  # or is this correct?
     "NSW": ["https://data.bionet.nsw.gov.au/biosvcapp/odata/SpeciesNames"],
     "NT": [
@@ -67,6 +62,7 @@ sensitive_list_urls = {
     "QLD": [
         "https://wildnet-pub.science-data.qld.gov.au/api/v1/species-list?sensitive_species=1&page_size=5000&page_number=1"
     ],
+    "TAS": ["TasSensitive.csv"],
     "VIC": ["https://vba.biodiversity.vic.gov.au/vba/downloadVSC.do"],
     "WA": ["https://www.dbca.wa.gov.au/management/threatened-species-and-communities"],
     "BirdLife": ["birdlifeList_Feb2026.csv"]
@@ -95,7 +91,7 @@ all_species_urls = {
 # all the state lists that are automatically checked every week
 conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
-sensitive_lists = ["ACT", "NSW", "QLD", "VIC", "WA", "BirdLife"]
+sensitive_lists = ["ACT", "NSW", "QLD", "TAS", "VIC", "WA", "BirdLife"]
 
 all_conservation_lists = ["ACT", "EPBC", "NSW", "NT", "QLD", "TAS", "VIC", "WA"]
 
@@ -146,8 +142,8 @@ list_ids_sensitive_test = {
     "VIC": "dr18669",
     "WA": "dr18406",
     "ACT": "dr2627",
-    "NT": "dr18690",
-    "TAS": "dr18692",
+    "NT": "dr492", # dr18690
+    "TAS": "dr491", # dr18692
     "BirdLife": "dr22224",
     "All": "dr23005",
 }
@@ -180,6 +176,7 @@ list_names_sensitive_test = {
     "ACT": "ACT Sensitive Species List",
     "NSW": "NSW Sensitive Species List",
     "QLD": "Queensland Confidential Species",
+    "TAS": "Tasmanian Restricted Species",
     "VIC": "Victorian Restricted Species List",
     "WA": "Western Australia: Sensitive Species",
     "All": "All Sensitive Australian Species",
@@ -259,7 +256,7 @@ conservation_columns_rename = {
     "ACT": {
         "scientificname": "scientificName",
         "vernacularname": "vernacularName",
-        "actconservationstatus": "sourceStatus",
+        "actConservationStatus": "sourceStatus", #actconservationstatus
         "taxonomicrank": "rank",
     },
     "TAS": {
@@ -305,6 +302,7 @@ sensitive_columns_rename = {
         # "Taxon_Id": "WildNetTaxonID",
         "nca_code": "category"
     },
+    "TAS": {},
     "VIC": {
         "FFG_ACT_STATUS": "category",  # NOT VIC_ADVISORY_STATUS
         "SCIENTIFIC_NAME": "scientificName",
@@ -319,12 +317,15 @@ api_values = {"New South Wales": "value"}
 
 statuses_rename = {
     "ACT": {
+        "Rare": "Conservation Dependent",
+        "Restricted Trade Species": "Conservation Dependent",
         "Extinct": "Extinct",
         "Extinct in the Wild": "Extinct in the Wild",
         "Critically Endangered ": "Critically Endangered",
         "Endangered": "Endangered",
         "Vulnerable": "Vulnerable",
         "Regionally Conservation Dependent": "Conservation Dependent",
+        "Data Deficient": "Data Deficient"
     },
     "EPBC": {
         "Extinct": "Extinct",
@@ -407,13 +408,13 @@ statuses_rename = {
         "CD": "Conservation Dependent",
         "CD & MI": "Conservation Dependent",
         "OS": "Other Specially Protected",
-        "P1": "Priority 1: Poorly-known species",
-        "P2": "Priority 2: Poorly-known species",
-        "P3": "Priority 3: Poorly-known species",
-        "P4": "Priority 4: Rare, Near Threatened",
-        "MI & P1": "Priority 1: Poorly-known species",
-        "MI & P3": "Priority 2: Poorly-known species",
-        "MI & P4": "Priority 4: Rare, Near Threatened",
+        "P1": "Data Deficient", # "Priority 1: Poorly-known species",
+        "P2": "Data Deficient", # "Priority 2: Poorly-known species",
+        "P3": "Data Deficient", # "Priority 3: Poorly-known species",
+        "P4": "Near Threatened", # "Priority 4: Rare, Near Threatened",
+        "MI & P1": "Data Deficient", # "Priority 1: Poorly-known species",
+        "MI & P3": "Data Deficient", # "Priority 2: Poorly-known species",
+        "MI & P4": "Near Threatened", # "Priority 4: Rare, Near Threatened",
     },
 }
 

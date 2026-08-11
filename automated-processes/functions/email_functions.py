@@ -53,9 +53,9 @@ def send_email(
     )
 
     # if we are adding the compiled lists, add them here
-    # if args.compile:
+    if args.compile:
     #     attachments, _ = add_attachments(list_type="allc", attachments=attachments)
-    #     attachments, _ = add_attachments(list_type="alls", attachments=attachments)
+        attachments, _ = add_attachments(list_type="alls", attachments=attachments)
 
     # add date and time to email
     html = html.replace("CONSERVATION_LIST_OF_CHANGES", conservation_list_changes)
@@ -66,9 +66,13 @@ def send_email(
     # set up email service
     email = EmailSender(host="smtp-relay.csiro.au", port=25)
 
-    print("sending email")
+    # get email
+    with open("email.txt","r") as f:
+        sender = f.read()
+
+    # send email
     email.send(
-        sender="amanda.buyan@csiro.au",
+        sender=sender,
         receivers=["authoritative-list-updates@ala.org.au"],
         subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
         html=html,

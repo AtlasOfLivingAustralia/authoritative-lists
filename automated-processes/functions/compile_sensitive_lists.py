@@ -21,9 +21,8 @@ def compile_sensitive_lists(args=None):
         "generalisation_{}".format(state) for state in all_sensitive_lists
     ]
     columns = (
-        ["verbatimScientificName", "scientificName"]
-        + generalisation
-        + ["family", "rank", "commonName"]
+        ["verbatimScientificName", "scientificName", "rank"]
+        + generalisation # was commonName and had family and , "vernacularName"
     )
     all_sensitive = pd.DataFrame(columns=columns)
 
@@ -31,27 +30,23 @@ def compile_sensitive_lists(args=None):
     columns_list_df = [
         "scientificName",
         "verbatimScientificName",
-        "family",
+        # "family",
         "rank",
-        "commonName",
+        # "vernacularName", # was commonName
     ]
 
     # loop over all sensitive lists
     for i, state in enumerate(all_sensitive_lists):
 
-        # download state/territory/birds sensitive
-        url = get_listsTest + list_ids_sensitive_test[state] + urlSuffix
-        kvps_sensitive = lf.download_ala_specieslist(url=url)
-        list_df = lf.kvp_to_columns(kvps_sensitive).reset_index(drop=True)
-        list_df = list_df[list_df["scientificName"].notna()].reset_index(drop=True)
+        print(state)
 
+        # download state/territory/birds sensitive
+        url = get_listsTest.replace("{speciesListID}",list_ids_sensitive_test[state]) #+ urlSuffix
+        list_df = pd.read_csv(url)
+        
         # add temporary change to change raw to verbatim; also check if there are supplied names
         if "verbatimScientificName" not in list_df.columns:
             list_df["verbatimScientificName"] = list_df["scientificName"].copy()
-
-        # add family column just in case
-        if "family" not in list_df.columns:
-            list_df["family"] = ""
 
         # rename columns for
         list_df = list_df.rename(
@@ -66,24 +61,32 @@ def compile_sensitive_lists(args=None):
         if state == "BirdLife":
             list_df["generalisation_BirdLife"] = "10km"
 
+        # drop duplicate columns
+        if 'family.1' in list_df.columns:
+            list_df = list_df.drop(columns=['family.1'])
+        if 'vernacularName.1' in list_df.columns:
+            list_df = list_df.drop(columns=['vernacularName.1'])
+
         # get matching and nonmatching rows
         if i != 0:
 
-            # get matching indices for the whole sensitive list
+            # get indices that match the new list for the whole sensitive list
             matching_indices_all_sensitive = all_sensitive[
                 all_sensitive["verbatimScientificName"].isin(
                     list_df["verbatimScientificName"]
                 )
             ].index.tolist()
 
-            # get matching rows with indices
+            # get row indices matching verbatimScientificName
             matching_indices_list_df = list_df[
                 list_df["verbatimScientificName"].isin(
                     all_sensitive["verbatimScientificName"]
                 )
             ].index.tolist()
-            matching_rows = list_df.iloc[matching_indices_list_df]
 
+            # get matching rows
+            matching_rows = list_df.iloc[matching_indices_list_df]
+            
             # get nonmatching rows to concatenate
             nonmatching_rows = list_df.drop(matching_indices_list_df)
 
@@ -98,10 +101,21 @@ def compile_sensitive_lists(args=None):
                         ][index]
                     )
 
+            # check to see if scientificNames match and sync their 
+            duplicate_names = list(all_sensitive[all_sensitive.duplicated(subset=["scientificName"])]["scientificName"])
+            for dn in duplicate_names:
+                dup_rows = all_sensitive[all_sensitive["scientificName"] == dn]
+                if not dup_rows[generalisation].duplicated().any():
+                    for state_gen in generalisation:
+                        if len(list(set(dup_rows[state_gen]))) > 1:
+                            null_index = dup_rows[dup_rows[state_gen].isnull().values].index[0]
+                            nonnull_index = dup_rows[~dup_rows[state_gen].isnull().values].index[0]
+                            all_sensitive.at[null_index,state_gen] = all_sensitive.at[nonnull_index,state_gen]
+            
         else:
 
             # otherwise, the list hasn't been initialised and we will concatenate all the species
-            nonmatching_rows = list_df
+            nonmatching_rows = list_df.drop_duplicates() # added drop_duplicates
 
         # concatenate the nonmatching rows onto the all_sensitive list
         all_sensitive = pd.concat(
@@ -113,16 +127,16 @@ def compile_sensitive_lists(args=None):
 
     # how to replace all NaNs with empty strings
     all_sensitive = all_sensitive.replace(math.nan, "")
-
-    # post list to test
-    # lf.post_list_to_test(
-    #     list_data=all_sensitive,
-    #     state=state,
-    #     druid=all_sensitive_druid_test,
-    #     list_type="S",
-    #     args=args,
-    # )
-
+    
     # write list to csv for upload (may change this later)
     temp_filename = "all-sensitive-{}.csv".format(datetime.now().strftime("%Y-%m-%d"))
     all_sensitive.to_csv("data/temp-new-lists/{}".format(temp_filename), index=False)
+
+    # post list to test
+    lf.post_list_to_test(
+        druid=all_sensitive_druid_test,
+        args=args,
+        filename = temp_filename
+    )
+
+    

@@ -36,7 +36,7 @@ def create_sensitive_list(list_data=None, state=None):
     extra_columns = None
 
     # first, check for states whose lists we won't be updating automatically
-    if state in ["SA", "NT", "TAS"]:
+    if state in ["SA", "NT"]:
 
         return None
     
@@ -330,12 +330,6 @@ def create_conservation_list(list_data=None, state=None):
                     "CURRENT_SPECIES_NAME"
                 ][i]
 
-        # get conservation codes
-        # conservation_list = pd.merge(conservation_list,conservation_codes,
-        #                              left_on=['status'],
-        #                              right_on=['Category code'],how="left")
-        # conservation_list['sourceStatus'] = conservation_list['Category'].copy()
-
         # remove empty statuses
         conservation_list = conservation_list[
             ~conservation_list["status"].isna()
@@ -355,10 +349,6 @@ def create_conservation_list(list_data=None, state=None):
         ].reset_index(drop=True)
 
         # separate conservation and sensitive species
-        # conservation_list = conservation_list[~conservation_list['RESTRICTED_FLAG'].isin([
-        #     'rest',
-        #     'breed'
-        # ])].reset_index(drop=True)
         conservation_list["RESTRICTED_FLAG"] = conservation_list[
             "RESTRICTED_FLAG"
         ].replace(math.nan, "")
@@ -391,7 +381,6 @@ def create_conservation_list(list_data=None, state=None):
         print(state)
         print(conservation_list.columns)
         import sys
-
         sys.exit()
 
     # remove nans from the status column
@@ -409,7 +398,7 @@ def create_conservation_list(list_data=None, state=None):
 
     # replace NaNs with empty string
     conservation_list = conservation_list.where((pd.notnull(conservation_list)), "")
-
+    
     # returned the cleaned conservation list
     if extra_columns:
         return conservation_list[

@@ -107,16 +107,18 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     oldVsNew = pd.merge(                                             # was just scientificName
         oldList, newList, how="left", left_on=["name_old"], right_on=["verbatimScientificName_new"]
     )
+
     # temp check before switching over
     if "verbatimScientificName_old" not in oldVsNew.columns:
         columns = ["name_old", "scientificName_old"]
     else:
         columns = ["verbatimScientificName_old", "scientificName_old"]
     
-    #
+    # add status_old for conservation list
     if ltype == "C":
         columns = columns + ["status_old"]
 
+    # add empty status
     removals = oldVsNew[oldVsNew["scientificName_new"].isna()][columns]
     if ltype == "C":
         removals["status_new"] = ""
