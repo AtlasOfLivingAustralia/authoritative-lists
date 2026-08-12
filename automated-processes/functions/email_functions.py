@@ -54,7 +54,7 @@ def send_email(
 
     # if we are adding the compiled lists, add them here
     if args.compile:
-    #     attachments, _ = add_attachments(list_type="allc", attachments=attachments)
+        #     attachments, _ = add_attachments(list_type="allc", attachments=attachments)
         attachments, _ = add_attachments(list_type="alls", attachments=attachments)
 
     # add date and time to email
@@ -67,7 +67,7 @@ def send_email(
     email = EmailSender(host="smtp-relay.csiro.au", port=25)
 
     # get email
-    with open("email.txt","r") as f:
+    with open("email.txt", "r") as f:
         sender = f.read()
 
     # send email

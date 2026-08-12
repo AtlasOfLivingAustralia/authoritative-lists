@@ -4,6 +4,8 @@ import json
 import ssl
 import time
 import urllib.request
+import json
+import io
 
 import certifi
 import pandas as pd
@@ -72,7 +74,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
 
     # get old and new list urls
     oldListUrl = get_listsProd + proddr + urlSuffix
-    newListUrl = get_listsTest.replace("{speciesListID}",testdr)
+    newListUrl = get_listsTest.replace("{speciesListID}", testdr)
 
     # download old list and turn it into pandas dataframe
     oldList = download_ala_specieslist(oldListUrl)
@@ -89,23 +91,32 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     newList = newList.add_suffix("_new")
     columns_to_strip = ["verbatimScientificName_new", "scientificName_new"]
     newList[columns_to_strip] = newList[columns_to_strip].apply(lambda x: x.str.strip())
+    newList = newList.fillna(value="")
 
     # check for new  and old names - left join new to old, drop any columns in names_old if they are na
     # conservation lists keep track of changes
-    newVsOld = pd.merge(                       # was just scientificName
-        newList, oldList, how="left", left_on=["verbatimScientificName_new"], right_on=["name_old"]
+    newVsOld = pd.merge(  # was just scientificName
+        newList,
+        oldList,
+        how="left",
+        left_on=["verbatimScientificName_new"],
+        right_on=["name_old"],
     )
     columns = ["verbatimScientificName_new", "scientificName_new"]
     if ltype == "C":
-        columns = columns + ["status_new"]
+        columns = columns + ["sourceStatus_new"] # was status_new
     additions = newVsOld[newVsOld["name_old"].isna()][columns]
     if ltype == "C":
-        additions["status_old"] = ""
+        additions["sourceStatus_old"] = "" # was status_old
     additions["listUpdate"] = "added"
 
     # removed names - left join old to new, drop na new
-    oldVsNew = pd.merge(                                             # was just scientificName
-        oldList, newList, how="left", left_on=["name_old"], right_on=["verbatimScientificName_new"]
+    oldVsNew = pd.merge(  # was just scientificName
+        oldList,
+        newList,
+        how="left",
+        left_on=["name_old"],
+        right_on=["verbatimScientificName_new"],
     )
 
     # temp check before switching over
@@ -113,7 +124,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
         columns = ["name_old", "scientificName_old"]
     else:
         columns = ["verbatimScientificName_old", "scientificName_old"]
-    
+
     # add status_old for conservation list
     if ltype == "C":
         columns = columns + ["status_old"]
@@ -121,7 +132,7 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
     # add empty status
     removals = oldVsNew[oldVsNew["scientificName_new"].isna()][columns]
     if ltype == "C":
-        removals["status_new"] = ""
+        removals["sourceStatus_new"] = "" # was status_new
     removals["listUpdate"] = "removed"
 
     # status changes - only check status changes for conservation list
@@ -131,31 +142,46 @@ def get_changelist(testdr: str, proddr: str, ltype: str):
             oldList,
             how="inner",
             left_on=["scientificName_new", "vernacularName_new"],
-            right_on=["name_old", "vernacularName_old"], # will be scientificName_old eventually
+            right_on=[
+                "name_old",
+                "vernacularName_old",
+            ],  # will be scientificName_old eventually
         )
         statusChanges = statusChanges[
-            statusChanges["status_new"] != statusChanges["status_old"]
+            statusChanges["sourceStatus_new"] != statusChanges["sourceStatus_old"] # status_new,status_old
         ][
             [
                 "scientificName_new",
                 "vernacularName_new",
-                "status_new",
-                "status_old",
+                "sourceStatus_new", # status_new
+                "sourceStatus_old", # status_old
             ]
         ]
         statusChanges["listUpdate"] = "status change"
 
     # union and display in alphabetical order and save locally
-    additions = additions.rename(columns = {'verbatimScientificName_new': 'verbatimScientificName',
-                                                 'scientificName_new': 'scientificName'})
-    
-    if 'verbatimScientificName_old' in removals.columns:
-        removals = removals.rename(columns = {'verbatimScientificName_old': 'verbatimScientificName',
-                                              'scientificName_old': 'scientificName'})
+    additions = additions.rename(
+        columns={
+            "verbatimScientificName_new": "verbatimScientificName",
+            "scientificName_new": "scientificName",
+        }
+    )
+
+    if "verbatimScientificName_old" in removals.columns:
+        removals = removals.rename(
+            columns={
+                "verbatimScientificName_old": "verbatimScientificName",
+                "scientificName_old": "scientificName",
+            }
+        )
     else:
-        removals = removals.rename(columns = {'name_old': 'verbatimScientificName',
-                                              'scientificName_old': 'scientificName'})
-        
+        removals = removals.rename(
+            columns={
+                "name_old": "verbatimScientificName",
+                "scientificName_old": "scientificName",
+            }
+        )
+
     if ltype == "C":
         changeList = pd.concat([additions, removals, statusChanges])
     else:
@@ -213,8 +239,12 @@ def read_list_url(url=None, state=None):
                     "{} not taken into account:\n\n{}\n".format(state, url)
                 )
     elif ".csv" in url:
+        # if state == "WA":
+        #     df = pd.read_csv(url,dtype=str) # dtype=str
+        #     df = format_statuses_WA(df=df)
+        # else:
         df = pd.read_csv(url)
-    elif any(x in url for x in ["json","/api/"]):
+    elif any(x in url for x in ["json", "/api/"]):
         # this is for ACT and QLD
         response = requests.get(url)
         response_json = response.json()
@@ -262,7 +292,9 @@ def get_conservation_codes(state=None):
     elif state == "QLD":
 
         # get codes form here and turn it into a dataframe
-        response = requests.get("https://wildnet-pub.science-data.qld.gov.au/api/v1/status-types")
+        response = requests.get(
+            "https://wildnet-pub.science-data.qld.gov.au/api/v1/status-types"
+        )
         all_codes = pd.DataFrame(response.json())
 
         # only select Queensland codes and Legislation codes
@@ -271,7 +303,6 @@ def get_conservation_codes(state=None):
 
         # return Queensland codes
         return qld_codes
-        # return pd.DataFrame()
 
     elif state == "WA":
 
@@ -281,32 +312,94 @@ def get_conservation_codes(state=None):
         # parse the html to get the spreadsheets
         soup = BeautifulSoup(response.text, "html.parser")
         strings = list(soup.find_all("a"))
-        test = list(set([str(s) for s in strings if ".xlsx" in str(s)]))
-        for url in test:
-            if "flora" in url.lower():
-                # read the excel file
-                if url.split('"')[1][0:6] == "/sites":
-                    xls = pd.ExcelFile(
-                        "https://www.dbca.wa.gov.au{}".format(url.split('"')[1])
-                    )
-                else:
-                    xls = pd.ExcelFile(url.split('"')[1])
-
-                df = pd.read_excel(
-                    xls,
-                    sheet_name=xls.sheet_names.index("Conservation Codes"),
-                    skiprows=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-                )[["Unnamed: 1", "Unnamed: 2"]]
-                df = df[~df["Unnamed: 2"].isna()]
-                return df.rename(
-                    columns={"Unnamed: 1": "Code", "Unnamed: 2": "Category"}
-                ).reset_index(drop=True)
-
-        return None
+        flora_urls = list(
+            set([str(s) for s in strings if "Threatened and Priority Flora" in str(s)])
+        )  # .xls
+        flora_url = flora_urls[0].split('"')[1]
+        flora_excel_data = requests.get(flora_url)
+        flora_excel = pd.ExcelFile(io.BytesIO(flora_excel_data.content))
+        df = pd.read_excel(
+            flora_excel,
+            sheet_name=flora_excel.sheet_names.index("Conservation Codes"),
+            skiprows=[1, 2, 3, 4, 5, 6, 7, 8, 9],
+        )[["Unnamed: 1", "Unnamed: 2"]]
+        df = df[~df["Unnamed: 2"].isna()]
+        return df.rename(
+            columns={"Unnamed: 1": "Code", "Unnamed: 2": "Category"}
+        ).reset_index(drop=True)
 
     else:
 
         return None
+
+
+def format_statuses_WA(df=None):
+
+    # remove all empty statuses
+    df = df[~df["conscodelist"].isna()].reset_index(drop=True)
+
+    # initialise sourceStatus column
+    df["sourceStatus"] = ""
+
+    # loop over all rows (change this to function and df.apply)
+    for i, row in df.iterrows():
+        statuses = row["conscodelist"].strip("[]").replace("'", '"')
+        if len(statuses.split("}, {")) > 1:
+            temp = statuses.split(", ")
+            first_status = ", ".join([temp[0], temp[1]])
+            second_status = ", ".join([temp[2], temp[3]])
+            first_status = json.loads(first_status)
+            second_status = json.loads(second_status)
+            print(f"first: {first_status}\tsecond: {second_status}")
+            if first_status["conscode"] != second_status["conscode"]:
+                if (
+                    first_status["authority"] == "State"
+                    and second_status["authority"] != "State"
+                ):
+                    df.at[i, "sourceStatus"] = first_status["conscode"]
+                elif (
+                    first_status["authority"] != "State"
+                    and second_status["authority"] == "State"
+                ):
+                    df.at[i, "sourceStatus"] = second_status["conscode"]
+                else:
+                    df.at[i, "sourceStatus"] = " & ".join(
+                        [first_status["conscode"], second_status["conscode"]]
+                    )
+            else:
+                df.at[i, "sourceStatus"] = first_status["conscode"]
+        else:
+            json_statuses = json.loads(statuses)
+            df.at[i, "sourceStatus"] = json_statuses["conscode"]
+
+    # get all statuses that species inherit from the parent
+    inherited_from_parent = df[df["sourceStatus"] == "Cons code inherited from parent"]
+    for i, row in inherited_from_parent.iterrows():
+
+        # get name to search by
+        canonical_name_array = row["canonical_name"].split(" ")
+        canonical_name_species = " ".join(canonical_name_array[:-1])
+
+        # get parent and replace status
+        parent = df[df["canonical_name"] == canonical_name_species]
+        if not parent.empty:
+            parent_index = parent.index[0]
+            if parent.shape[0] > 1:
+                print("yes, need to figure this out")
+                print(parent)
+                import sys
+
+                sys.exit()
+            else:
+                df.at[i, "sourceStatus"] = parent["sourceStatus"][parent_index]
+        else:
+            print(f"could not find {canonical_name_species}")
+
+    print(list(set(df["sourceStatus"])))
+    print()
+    import sys
+
+    sys.exit()
 
 
 def webscrape_list_url(url=None, state=None):
@@ -335,86 +428,83 @@ def webscrape_list_url(url=None, state=None):
         # parse the html to get the spreadsheets
         soup = BeautifulSoup(response.text, "html.parser")
         strings = list(soup.find_all("a"))
-        urls = list(set([str(s) for s in strings if ".xls" in str(s)]))
 
-        # initialise dataframe
+        # initialise WA dataframe
         df_wa = pd.DataFrame()
 
-        # loop over urls to find flora and fauna
-        for url in urls:
+        #####################
+        # process flora list
+        #####################
 
-            # read the excel file - amended if/elif/else statement to catch duplicates and lists we don't want
-            if url.split('"')[1][0:6] == "/sites" and "Threatened and Priority" in url:
-                xls = pd.ExcelFile(
-                    "https://www.dbca.wa.gov.au{}".format(url.split('"')[1])
-                )
-            elif "Threatened and Priority" in url:
-                xls = pd.ExcelFile(url.split('"')[1])
-            else:
-                continue
+        # get the urls and excel data
+        flora_urls = list(
+            set([str(s) for s in strings if "Threatened and Priority Flora" in str(s)])
+        )  # .xls
+        flora_url = flora_urls[0].split('"')[1]
+        flora_excel_data = requests.get(flora_url)
+        flora_excel = pd.ExcelFile(io.BytesIO(flora_excel_data.content))
 
-            # first check for fauna
-            if "fauna" in url.lower():
-                temp = pd.read_excel(xls, sheet_name=xls.sheet_names[0])
-                temp2 = temp.rename(
-                    columns={
-                        "Scientific name": "scientificName",
-                        "Common name": "vernacularName",
-                        "WA listing": "status",
-                        "WA listing.1": "sourceStatus",
-                    }
-                )
-                temp2["family"] = None
-                temp2["kingdom"] = "Animalia"
-                df_wa = pd.concat([df_wa, temp2]).reset_index(drop=True)
+        # read two sheets in the Excel file
+        temp_flora_df = pd.read_excel(
+            flora_excel, sheet_name=flora_excel.sheet_names[0], skiprows=[0, 1]
+        )[["Taxon", "Family", "WA Rank"]]
+        temp1_flora_df = pd.read_excel(
+            flora_excel, sheet_name=flora_excel.sheet_names[1], skiprows=[0, 1]
+        )[["Taxon", "Family", "WA Status"]]
 
-            # then check for flora
-            elif "flora" in url.lower():
-                # try this
-                temp = pd.read_excel(xls, sheet_name=xls.sheet_names[0])[
-                    ["Taxon", "Family", "WA Rank"]
-                ]
-                temp1 = pd.read_excel(xls, sheet_name=xls.sheet_names[1])[
-                    ["Taxon", "Family", "WA Status"]
-                ]
-                temp = temp.rename(columns={"WA Rank": "WA Status"})
-                temp = pd.concat([temp, temp1])
+        # rename columns and add empty columns
+        temp1_flora_df = temp1_flora_df.rename(columns={"WA Status": "WA Rank"})
+        flora = pd.concat([temp_flora_df, temp1_flora_df])
+        flora["status"] = flora["WA Rank"].copy()
+        flora["vernacularName"] = ""
+        flora = flora.rename(
+            columns={
+                "Family": "family",
+                "WA Rank": "sourceStatus",
+                "Taxon": "scientificName",
+            }
+        )
 
-                # get codes and ensure correct codes are in place
-                codes = get_conservation_codes(state=state)
-                codes = codes.replace({"Code": {1: "P1", 2: "P2", 3: "P3", 4: "P4"}})
+        # concatenate all flora to the overall dataframe
+        df_wa = pd.concat([df_wa, flora])
 
-                # replace numbers with correct codes
-                temp = temp.replace({"WA Status": {1: "P1", 2: "P2", 3: "P3", 4: "P4"}})
+        #####################
+        # process fauna list
+        #####################
 
-                # replace 'T' with WA Rank value
-                # temp['WA Status 2'] = [row[-1] if row[-2]=='T' else row[-2] for row in temp[['WA Status','WA Rank']].itertuples()]
+        # get the urls and excel data
+        fauna_urls = list(
+            set([str(s) for s in strings if "Threatened and Priority Fauna" in str(s)])
+        )  # .xls
+        fauna_url = fauna_urls[0].split('"')[1]
+        fauna_excel_data = requests.get(fauna_url)
+        fauna_excel = pd.ExcelFile(io.BytesIO(fauna_excel_data.content))
 
-                # merge codes and data
-                temp2 = pd.merge(temp, codes, left_on="WA Status", right_on="Code")
+        # read data from the Excel file
+        fauna_df = pd.read_excel(fauna_excel, sheet_name=fauna_excel.sheet_names[0])
 
-                # rename columns
-                temp2 = temp2.rename(
-                    columns={
-                        "Taxon": "scientificName",
-                        "Family": "family",
-                        "Code": "status",
-                        "Category": "sourceStatus",
-                    }
-                )
+        # rename columns and add empty columns
+        fauna_df["family"] = ""
+        fauna_df["status"] = fauna_df["WA listing"].copy()
+        fauna_df = fauna_df.rename(
+            columns={"WA listing": "sourceStatus", "Scientific name": "scientificName"}
+        )
 
-                # add a vernacular name column
-                temp2["vernacularName"] = None
-                temp2["kingdom"] = None
+        # concatenate all flora to the overall dataframe
+        df_wa = pd.concat([df_wa, fauna_df]).reset_index(drop=True)
 
-                # concat data
-                df_wa = pd.concat([df_wa, temp2]).reset_index(drop=True)
+        # get codes and ensure correct codes are in place
+        codes = get_conservation_codes(state=state)
+        codes = codes.replace({"Code": {1: "P1", 2: "P2", 3: "P3", 4: "P4"}})
 
+        # replace numbers with correct codes
+        df_wa = df_wa.replace({"status": {1: "P1", 2: "P2", 3: "P3", 4: "P4"}})
+
+        # return dataframe
         return df_wa[
             [
                 "scientificName",
                 "vernacularName",
-                "kingdom",
                 "family",
                 "status",
                 "sourceStatus",
@@ -517,30 +607,27 @@ def post_list_to_test(
 
     # format your data for posting to test
     auth = get_authentication_info(args=args, test=True)
-    #"""
-    
+    # """
+
     # format headers
-    headers = {#'X-ALA-userId': auth['profile']['email'],
-               'Authorization': 'Bearer {}'.format(auth['access_token']),
-               'Accept': 'application/json',
-               'user-agent': 'authoritative-lists/1.0.0'}
+    headers = {  #'X-ALA-userId': auth['profile']['email'],
+        "Authorization": "Bearer {}".format(auth["access_token"]),
+        "Accept": "application/json",
+        "user-agent": "authoritative-lists/1.0.0",
+    }
 
-    
     # create a binary string and data for file upload
-    with open('data/temp-new-lists/{}'.format(filename), 'rb') as f:
-        files = {
-            'file': (filename, f.read(), 'text/csv')
-        }
+    with open("data/temp-new-lists/{}".format(filename), "rb") as f:
+        files = {"file": (filename, f.read(), "text/csv")}
 
-        data = {
-			'description': 'CSV data upload',
-			'format': 'csv'
-		}
+        data = {"description": "CSV data upload", "format": "csv"}
 
     # first, upload the list
     try:
-        response_upload = requests.post(upload_listsTest,data=data,files=files,headers=headers) 
-    except requests.exceptions.RequestException as e:  
+        response_upload = requests.post(
+            upload_listsTest, data=data, files=files, headers=headers
+        )
+    except requests.exceptions.RequestException as e:
         print(e)
     finally:
         if response_upload.status_code != 200:
@@ -549,10 +636,13 @@ def post_list_to_test(
             print(response_upload.text)
 
     # second, trigger an ingestion of a list
-    upload_filename = response_upload.json()['localFile']
+    upload_filename = response_upload.json()["localFile"]
     try:
-        response_ingest = requests.post('{}{}?file={}'.format(ingest_listsTest,druid,upload_filename),headers=headers)
-    except requests.exceptions.RequestException as e:  
+        response_ingest = requests.post(
+            "{}{}?file={}".format(ingest_listsTest, druid, upload_filename),
+            headers=headers,
+        )
+    except requests.exceptions.RequestException as e:
         print(e)
     finally:
         if response_ingest.status_code != 200 and response_ingest.status_code != 201:
@@ -561,15 +651,23 @@ def post_list_to_test(
             print(response_ingest.text)
 
     # check progress of ingest; exit when done
-    id = response_ingest.json()['id']
-    response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
+    id = response_ingest.json()["id"]
+    response_test = requests.get(
+        progress_listsTest.replace("{speciesListID}", id), headers=headers
+    )
     if response_test.status_code != 200 and response_test.status_code != 201:
-        raise ValueError("There was an error posting the data.  Error code {}: {}".format(response_test.status_code,response_test.text))
-    completed = response_test.json()['completed']
+        raise ValueError(
+            "There was an error posting the data.  Error code {}: {}".format(
+                response_test.status_code, response_test.text
+            )
+        )
+    completed = response_test.json()["completed"]
     while not completed:
         time.sleep(15)
-        response_test = requests.get(progress_listsTest.replace('{speciesListID}',id),headers=headers)
-        completed = response_test.json()['completed']
+        response_test = requests.get(
+            progress_listsTest.replace("{speciesListID}", id), headers=headers
+        )
+        completed = response_test.json()["completed"]
     if response_test.status_code != 200 and response_test.status_code != 201:
         raise ValueError(
             "There was an error posting the data.  Error code {}: {}".format(
@@ -577,34 +675,6 @@ def post_list_to_test(
             )
         )
     return None
-    """
-    # format your data for posting to test
-    data_for_post = format_data_for_post(
-        list_data=list_data, state=state, list_type=list_type
-    )
-    auth = get_authentication_info(args=args, test=True)
-
-    # create headers with authentication
-    headers = {
-        "Content-Type": "application/json",
-        "X-ALA-userId": auth["profile"]["email"],  # unsure between this and userId
-        "Authorization": "Bearer {}".format(auth["access_token"]),
-    }
-
-    # post the data to test
-    response = requests.post(
-        "https://lists-test.ala.org.au/ws/speciesList/{}?".format(druid),
-        data=json.dumps(data_for_post),
-        headers=headers,
-    )
-    if response.status_code != 200 and response.status_code != 201:
-        raise ValueError(
-            "There was an error posting the data.  Error code {}: {}".format(
-                response.status_code, response.text
-            )
-        )
-    return None  # was response
-    """
 
 
 def get_authentication_info(args=None, test=False, prod=False):

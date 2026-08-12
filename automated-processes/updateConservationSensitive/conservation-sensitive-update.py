@@ -6,8 +6,9 @@ from functions import email_functions as ef
 from functions.all_args import create_parser
 from functions.ingest_lists import ingest_lists
 from functions.list_functions import set_bool_argument, set_lists_to_run
-from functions.compile_conservation_lists import compile_conservation_lists
-from functions.compile_sensitive_lists import compile_sensitive_lists
+from functions.compile_conservation_or_sensitive_lists import compile_conservation_or_sensitive_lists
+# from functions.compile_conservation_lists import compile_conservation_lists
+# from functions.compile_sensitive_lists import compile_sensitive_lists
 
 
 def main():
@@ -37,8 +38,8 @@ def main():
 
     # create the compiled sensitive lists
     if args.compile:
-    #     compile_conservation_lists(args=args)
-        compile_sensitive_lists(args=args)
+        compile_conservation_or_sensitive_lists(args=args,list_type="C")
+        compile_conservation_or_sensitive_lists(args=args,list_type="S")
 
     # check to see if we are sending an email
     if args.send_email:

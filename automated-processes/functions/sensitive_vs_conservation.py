@@ -9,7 +9,9 @@ from .vocab import (
     generalisation_categories,
     kingdomMap,
     sensitive_columns_rename,
-    statuses_rename,
+    iucn_statuses_rename,
+    state_statuses_rename
+    # statuses_rename,
 )
 
 
@@ -24,7 +26,7 @@ def create_sensitive_list(list_data=None, state=None):
 
     # do as much renaming as you can
     if state == "ACT":
-        list_data = list_data.rename(columns = {'category': 'cat'})
+        list_data = list_data.rename(columns={"category": "cat"})
     sensitive_species = list_data.rename(columns=sensitive_columns_rename[state])
 
     # ensure the verbatimScientificName happens here
@@ -39,11 +41,13 @@ def create_sensitive_list(list_data=None, state=None):
     if state in ["SA", "NT"]:
 
         return None
-    
+
     elif state == "ACT":
 
         extra_columns = ["kingdom", "genus"]
-        sensitive_species['generalisation'] = sensitive_species['generalisation'].str.replace(" ", "")
+        sensitive_species["generalisation"] = sensitive_species[
+            "generalisation"
+        ].str.replace(" ", "")
 
     # now, check NSW
     elif state == "NSW":
@@ -86,13 +90,13 @@ def create_sensitive_list(list_data=None, state=None):
         sensitive_species = pd.merge(
             sensitive_species,
             conservation_codes,
-            left_on=["category"], #category
+            left_on=["category"],  # category
             right_on=["stat_type_code"],
             how="left",
         )
 
         # add generalisation
-        sensitive_species["generalisation"] = "2km"
+        sensitive_species["generalisation"] = "10km"
 
         # map sourceStatus to category and kingdom - also fill in category with 'UK' (unknown)
         # if not known
@@ -144,9 +148,9 @@ def create_sensitive_list(list_data=None, state=None):
 
     # replace all the NaNs with an empty string
     if "vernacularName" in sensitive_species.columns:
-        sensitive_species["vernacularName"] = sensitive_species["vernacularName"].replace(
-            math.nan, ""
-        )
+        sensitive_species["vernacularName"] = sensitive_species[
+            "vernacularName"
+        ].replace(math.nan, "")
 
     # replace NaNs with empty string
     sensitive_species = sensitive_species.where((pd.notnull(sensitive_species)), "")
@@ -207,13 +211,14 @@ def create_conservation_list(list_data=None, state=None):
             (conservation_list["stateConservation"] != "Not Listed")
             & (conservation_list["isCurrent"] == "true")
         ].reset_index(drop=True)
-        conservation_list["status"] = conservation_list["stateConservation"]
+        conservation_list["status"] = conservation_list["stateConservation"].copy()
         conservation_list = conservation_list.rename(
             columns={"stateConservation": "sourceStatus", "taxonRank": "rank"}
         )
 
     elif state == "QLD":
 
+        # add this extra column for Queensland
         extra_columns = ["taxon_id"]
 
         # get conservation list
@@ -227,7 +232,10 @@ def create_conservation_list(list_data=None, state=None):
 
         # second rename
         conservation_list = conservation_list.rename(
-            columns={"stat_type_desc": "sourceStatus"} # potentially change to nca_code if need short code
+            columns={
+                "nca_code": "sourceStatus",
+                "stat_type_desc": "status"
+            } 
         )
 
         # only return things that we need?
@@ -236,18 +244,18 @@ def create_conservation_list(list_data=None, state=None):
             + conservation_list["taxon_id"].astype(str)
         )
 
-        # making sure we don't have NaNs in status and remove special least concern, 
+        # making sure we don't have NaNs in status and remove special least concern,
         # as well as least concern species
         conservation_list = conservation_list[
-            (conservation_list["sourceStatus"].notna())
+            (conservation_list["status"].notna())
         ]
         conservation_list = conservation_list[
-            ~conservation_list["sourceStatus"].str.contains(
+            ~conservation_list["status"].str.contains(
                 "Special least concern", case=False
             )
         ]
         conservation_list = conservation_list[
-            ~conservation_list["sourceStatus"].str.contains("Least concern", case=False)
+            ~conservation_list["status"].str.contains("Least concern", case=False)
         ]
 
         # manual additions
@@ -269,51 +277,29 @@ def create_conservation_list(list_data=None, state=None):
 
     elif state == "NT":
 
-        # edit some of the codes
-        conservation_list["status"] = conservation_list["status"].replace(
-            {
-                "CR-PE": "CR",
-                "EN-EXNT": "EN",
-                "EN-EWNT": "EN",
-                "VU-EXNT": "VU",
-            }
-        )
+        # make the sourceStatus a copy of the status column
+        conservation_list["sourceStatus"] = conservation_list["status"].copy()
 
         # remove the things we aren't concerned with
         conservation_list = conservation_list[
             ~conservation_list["status"].isin(
                 [
-                    "LC-EXNT",
-                    "LC",
-                    "NE",
-                    "(NL)",
-                    "(Int)",
-                    "INFRA",
-                    "NL",
-                    "DD",
-                    "NT",
+                    "LC-EXNT", 
+                    "LC", 
+                    "NE", 
+                    "(NL)", 
+                    "(Int)", 
+                    "INFRA", 
+                    "NL", 
+                    "DD", 
+                    "NT", 
                     math.nan,
                 ]
             )
         ].reset_index(drop=True)
 
-        # change classification to status and make sure they have correct capitalization
-        conservation_list = conservation_list.map(
-            lambda s: s.capitalize() if isinstance(s, str) else s
-        )
-        conservation_list["status"] = conservation_list["status"].str.upper()
-
-        # merge list with statuses
-        conservation_list = pd.merge(
-            conservation_list,
-            conservation_codes,
-            left_on=["status"],
-            right_on=["Code"],
-            how="left",
-        ).drop(["Code"], axis=1)
-        conservation_list = conservation_list.rename(
-            columns={"Categories for classification": "sourceStatus"}
-        )
+        # rename the values in the status column to be more readable
+        conservation_list["status"] = conservation_list["status"].replace(state_statuses_rename[state])
 
         # add taxon rank
         conservation_list["rank"] = ""
@@ -338,6 +324,10 @@ def create_conservation_list(list_data=None, state=None):
             ~conservation_list["status"].astype(str).str.contains("unofficial")
         ].reset_index(drop=True)
 
+        # add source status
+        conservation_list["sourceStatus"] = conservation_list["status"].copy()
+        conservation_list["status"] = conservation_list["status"].str.capitalize()
+
         # add rank
         conservation_list["rank"] = ""
 
@@ -347,6 +337,7 @@ def create_conservation_list(list_data=None, state=None):
         conservation_list = conservation_list[
             ~conservation_list["status"].isin([math.nan])
         ].reset_index(drop=True)
+        conservation_list["sourceStatus"] = conservation_list["status"].copy()
 
         # separate conservation and sensitive species
         conservation_list["RESTRICTED_FLAG"] = conservation_list[
@@ -364,6 +355,20 @@ def create_conservation_list(list_data=None, state=None):
 
     elif state == "WA":
 
+        # check for this empty status - not sure why it is happening
+        if any(conservation_list[conservation_list["status"].isna()]):
+            temp = conservation_list[conservation_list["status"].isna()]
+            for i,row in temp.iterrows():
+                if row["scientificName"] == "Darwinia divisa":
+                    conservation_list.at[i,"status"] = "Extinct"
+                    conservation_list.at[i,"sourceStatus"] = "EX"
+                else:
+                    raise ValueError(f"There needs to be another check\n\n{row}")
+
+        # rename the values in the status column to be more readable
+        conservation_list["status"] = conservation_list["status"].replace(state_statuses_rename[state])
+
+        # add a blank column for rank
         conservation_list["rank"] = ""
 
     elif state == "ACT":
@@ -381,6 +386,7 @@ def create_conservation_list(list_data=None, state=None):
         print(state)
         print(conservation_list.columns)
         import sys
+
         sys.exit()
 
     # remove nans from the status column
@@ -392,13 +398,13 @@ def create_conservation_list(list_data=None, state=None):
         conservation_list["sourceStatus"] = conservation_list["status"].copy()
 
     # make sure the statuses are IUCN compliant
-    conservation_list["status"] = conservation_list["status"].replace(
-        statuses_rename[state]
+    conservation_list["IUCN_equivalent_status"] = conservation_list["status"].replace(
+        iucn_statuses_rename[state]
     )
 
     # replace NaNs with empty string
     conservation_list = conservation_list.where((pd.notnull(conservation_list)), "")
-    
+
     # returned the cleaned conservation list
     if extra_columns:
         return conservation_list[
@@ -410,6 +416,7 @@ def create_conservation_list(list_data=None, state=None):
                 "vernacularName",
                 "status",
                 "sourceStatus",
+                "IUCN_equivalent_status"
             ]
             + extra_columns
         ]
@@ -423,5 +430,6 @@ def create_conservation_list(list_data=None, state=None):
                 "vernacularName",
                 "status",
                 "sourceStatus",
+                "IUCN_equivalent_status"
             ]
         ]

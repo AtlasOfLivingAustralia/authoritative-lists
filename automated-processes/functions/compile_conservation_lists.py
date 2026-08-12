@@ -30,18 +30,19 @@ def compile_conservation_lists(args=None):
     columns_list_df = [
         "scientificName",
         "verbatimScientificName",
-        "family",
+        # "family",
         "rank",
-        "commonName",
+        # "commonName",
     ]
 
     # loop over all conservation lists
     for i, state in enumerate(all_conservation_lists):
 
-        # download state/territory/birds conservation
-        url = get_listsTest + list_ids_conservation_test[state] + urlSuffix
-        kvps_conservation = lf.download_ala_specieslist(url=url)
-        list_df = lf.kvp_to_columns(kvps_conservation).reset_index(drop=True)
+        # download state/territory/birds sensitive
+        url = get_listsTest.replace(
+            "{speciesListID}", list_ids_conservation_test[state]
+        )  # + urlSuffix
+        list_df = pd.read_csv(url)
 
         # add temporary change to change raw to verbatim; also check if there are supplied names
         if "verbatimScientificName" not in list_df.columns:
@@ -55,6 +56,12 @@ def compile_conservation_lists(args=None):
         # add rank
         if "rank" not in list_df.columns:
             list_df["rank"] = ""
+
+        # drop duplicate columns
+        if "family.1" in list_df.columns:
+            list_df = list_df.drop(columns=["family.1"])
+        if "vernacularName.1" in list_df.columns:
+            list_df = list_df.drop(columns=["vernacularName.1"])
 
         # get matching and nonmatching rows
         if i != 0:
@@ -104,17 +111,12 @@ def compile_conservation_lists(args=None):
     # how to replace all NaNs with empty strings
     all_conservation = all_conservation.replace(math.nan, "")
 
-    # post list to test
-    # lf.post_list_to_test(
-    #     list_data=all_conservation,
-    #     state=state,
-    #     druid=all_conservation_druid_test,
-    #     list_type="C",
-    #     args=args,
-    # )
-
     # write list to csv for upload (may change this later)
     temp_filename = "all-conservation-{}.csv".format(
         datetime.now().strftime("%Y-%m-%d")
     )
     all_conservation.to_csv("data/temp-new-lists/{}".format(temp_filename), index=False)
+
+    lf.post_list_to_test(
+        druid=all_conservation_druid_test, args=args, filename=temp_filename
+    )

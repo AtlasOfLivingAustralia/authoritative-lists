@@ -83,11 +83,6 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 list_data=conservation_list_data, state=state
             ).reset_index(drop=True)
 
-            # add IUCN status
-            conservation_list["IUCN_equivalent_status"] = conservation_list[
-                "status"
-            ].copy()
-
             # trim whitespace at end of strings
             conservation_list = conservation_list.replace(r"^ +| +$", r"", regex=True)
 
@@ -97,7 +92,9 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
             )
 
             # replace NaNs with empty string
-            conservation_list = conservation_list.where((pd.notnull(conservation_list)), "")
+            conservation_list = conservation_list.where(
+                (pd.notnull(conservation_list)), ""
+            )
 
             # write conservation list to csv (may change this later)
             temp_filename = "{}-conservation-{}.csv".format(
@@ -116,7 +113,7 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 druid=list_ids_conservation_test[state],
                 list_type="C",
                 args=args,
-                filename=temp_filename
+                filename=temp_filename,
             )
 
             # get old and new list urls
@@ -143,9 +140,9 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
 
             # generate difference report for conservation list
             conservation_changelist = lf.get_changelist(
-                list_ids_conservation_test[state],
-                list_ids_conservation_prod[state],
-                "C",
+                testdr=list_ids_conservation_test[state],
+                proddr=list_ids_conservation_prod[state],
+                ltype="C",
             )
 
             # # if there are changes, write them out to a csv for emailing
@@ -208,12 +205,13 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
 
             # add this column for BirdLife manually
             if state == "BirdLife":
-                sensitive_list["verbatimScientificName"] = sensitive_list["scientificName"].copy()
+                sensitive_list["verbatimScientificName"] = sensitive_list[
+                    "scientificName"
+                ].copy()
 
             # trim whitespace at end of strings
             sensitive_list = sensitive_list.replace(r"^ +| +$", r"", regex=True)
 
-            
             # add, change or delete list values as appropriate
             sensitive_list = lf.add_change_delete_list_values(
                 list_type="Sensitive", list_data=sensitive_list, state=state
@@ -239,7 +237,7 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
                 druid=list_ids_sensitive_test[state],
                 list_type="S",
                 args=args,
-                filename=temp_filename
+                filename=temp_filename,
             )
 
             # get old and new list urls
