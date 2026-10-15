@@ -24,6 +24,7 @@ client_secret: str = ""
 # Collectory
 collectory_url = "https://collections.ala.org.au/ws/"
 collectory_api_key = ""  # See airflow variable
+collectory_api_key = "dba60c96-380f-4793-90c8-5dbc4764ca4b"
 
 # Lists Service
 list_url = "https://lists-ws.ala.org.au/v2/speciesList/"

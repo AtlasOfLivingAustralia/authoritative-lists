@@ -34,7 +34,6 @@ monthStr = datetime.datetime.now().strftime("%Y-%m-%d")
 
 def download_url(urlprefix: str, urlsuffix: str, drId: str):
     lUrl = urlprefix + drId + urlsuffix
-    print("download from: ", lUrl)
     with urllib.request.urlopen(
         lUrl, context=ssl.create_default_context(cafile=certifi.where())
     ) as lUrl:
@@ -95,6 +94,8 @@ def get_sds_info(state, sName, drId):
     lprefix = "https://lists.ala.org.au/speciesListItem/list/"
     urlprefix = "https://api.ala.org.au/specieslist/ws/speciesList/"
     urlsuffix = ""
+    prturl = urlprefix + drId + urlsuffix
+    print(f" .... {state} {drId} {prturl}")
     data, splUrl = download_url(urlprefix, urlsuffix, drId)
     splUrl.url = splUrl.url.replace(urlprefix, lprefix)
     splCt = data["itemCount"][0]
@@ -204,6 +205,7 @@ cols = [
 
 # Create dataframe of summary information
 summarydf = pd.DataFrame(columns=cols)
+print(f"Downloading state SDS information")
 for state, dr in drDict.items():
     sName = stateNames[state]
     row_data = get_sds_info(state, sName, dr)
