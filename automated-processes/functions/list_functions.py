@@ -6,6 +6,7 @@ import time
 import urllib.request
 import json
 import io
+import galah
 
 import certifi
 import pandas as pd
@@ -412,13 +413,13 @@ def webscrape_list_url(url=None, state=None):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "html.parser")
         strings = list(soup.stripped_strings)
-        test = list(set([s for s in strings if ".csv" in s]))
-        if len(test) > 1:
+        csv_list = list(set([s for s in strings if ".csv" in s]))
+        if len(csv_list) > 1:
             raise ValueError(
                 "There are more than one list - check that you have the correct one"
             )
         else:
-            return pd.read_csv(test[0])
+            return pd.read_csv(csv_list[0])
 
     elif state == "WA":
 
@@ -867,3 +868,32 @@ def set_lists_to_run(lists=None, C=False, S=False):
             return conservation_lists
         if S:
             return sensitive_lists
+
+def get_subspecies_from_ALA(species_list=None,args=None):
+
+    return species_list
+    # do authentication stuff here
+    # galah.galah_config(email=args.email,authenticate=True,auth_filename=args.authentication_prod) #,verbose=True)
+    # for taxa in species_list:
+    #     print(taxa)
+        # temp = galah.search_taxa(taxa=taxa)
+
+
+    # temp = galah.search_taxa(taxa=species_list) #,rank="subspecies")
+    # print(temp)
+    # import sys
+    # sys.exit()
+
+    # n=30
+    # temp_species_list = [species_list[i:i + 30] for i in range(0, len(species_list), 30)]
+
+    # import timeit
+    # start = timeit.timeit()
+    # subspecies = pd.DataFrame()
+    # for lst in temp_species_list:
+    #     temp = galah.atlas_species(taxa=lst,rank="subspecies")
+    #     if not temp.empty:
+    #         subspecies = pd.concat([subspecies,temp])
+    # end = timeit.timeit()
+    # print(f"total time: {(start - end)/60}")
+    # print(temp.shape)

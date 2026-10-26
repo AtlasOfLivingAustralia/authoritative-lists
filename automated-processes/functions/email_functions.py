@@ -66,13 +66,9 @@ def send_email(
     # set up email service
     email = EmailSender(host="smtp-relay.csiro.au", port=25)
 
-    # get email
-    with open("email.txt", "r") as f:
-        sender = f.read()
-
     # send email
     email.send(
-        sender=sender,
+        sender=args.email,
         receivers=["authoritative-list-updates@ala.org.au"],
         subject="Authoritative Species Lists Update Week of {}".format(datetime.now()),
         html=html,

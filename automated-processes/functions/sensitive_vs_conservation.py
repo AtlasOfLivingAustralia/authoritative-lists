@@ -183,7 +183,7 @@ def create_sensitive_list(list_data=None, state=None):
         ]
 
 
-def create_conservation_list(list_data=None, state=None):
+def create_conservation_list(list_data=None, state=None, args=None):
     """
     This function creates conservation lists, and makes sure that the correct information is
     returned, especially the status of species.
@@ -258,20 +258,6 @@ def create_conservation_list(list_data=None, state=None):
             ~conservation_list["status"].str.contains("Least concern", case=False)
         ]
 
-        # manual additions
-        adds = conservation_list[
-            conservation_list["scientificName"].isin(
-                [
-                    "Cacatua leadbeateri leadbeateri",
-                ]
-            )
-        ]
-        adds.loc[
-            adds["scientificName"] == "Cacatua leadbeateri leadbeateri",
-            "scientificName",
-        ] = "Cacatua leadbeateri"
-        conservation_list = pd.concat([conservation_list, adds])
-
         # add rank column
         conservation_list["rank"] = ""
 
@@ -297,9 +283,6 @@ def create_conservation_list(list_data=None, state=None):
                 ]
             )
         ].reset_index(drop=True)
-
-        # rename the values in the status column to be more readable
-        conservation_list["status"] = conservation_list["status"].replace(state_statuses_rename[state])
 
         # add taxon rank
         conservation_list["rank"] = ""
@@ -365,9 +348,6 @@ def create_conservation_list(list_data=None, state=None):
                 else:
                     raise ValueError(f"There needs to be another check\n\n{row}")
 
-        # rename the values in the status column to be more readable
-        conservation_list["status"] = conservation_list["status"].replace(state_statuses_rename[state])
-
         # add a blank column for rank
         conservation_list["rank"] = ""
 
@@ -376,7 +356,7 @@ def create_conservation_list(list_data=None, state=None):
         pass
 
     elif state == "EPBC":
-
+        
         extra_columns = ["genus"]
         conservation_list["rank"] = ""
 
@@ -396,6 +376,9 @@ def create_conservation_list(list_data=None, state=None):
         conservation_list["status"] = conservation_list["sourceStatus"].copy()
     if "status" in conservation_list and "sourceStatus" not in conservation_list:
         conservation_list["sourceStatus"] = conservation_list["status"].copy()
+
+    # rename the values in the status column to be more readable
+    conservation_list["status"] = conservation_list["status"].replace(state_statuses_rename[state])
 
     # make sure the statuses are IUCN compliant
     conservation_list["IUCN_equivalent_status"] = conservation_list["status"].replace(

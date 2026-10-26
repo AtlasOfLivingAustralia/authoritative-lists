@@ -32,10 +32,16 @@ def create_parser():
         default="auth-confidential-prod.json",
     )
     parser.add_argument(
-        "-eid",
-        "--email-id",
+        "-ef",
+        "--email-file",
         help="Filename with Username and password for email",
-        default="login.txt",
+        default="email.txt",
+    )
+    parser.add_argument(
+        "-em",
+        "--email",
+        help="User's email to send email and check subspecies",
+        default=None
     )
     parser.add_argument(
         "-cids",

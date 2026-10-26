@@ -1,4 +1,5 @@
 import sys
+import os
 
 sys.path.append("../")
 
@@ -21,6 +22,14 @@ def main():
     args.send_email = set_bool_argument(arg=args.send_email, name_arg="send_email")
     args.upload = set_bool_argument(arg=args.upload, name_arg="upload")
     args.compile = set_bool_argument(arg=args.compile, name_arg="compile")
+
+    if args.email is None:
+        if os.path.exists("email.txt"):
+            # now, check for email
+            email_file = open(args.email_file)
+            args.email = email_file.read()
+        else:
+            raise ValueError("You either need to have a file titled \"email.txt\" with your email in it, or provide your email with the argument -em")
 
     # set the lists we will check
     args.conservation_lists = set_lists_to_run(

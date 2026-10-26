@@ -80,7 +80,7 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
 
             # create conservation list from raw data
             conservation_list = create_conservation_list(
-                list_data=conservation_list_data, state=state
+                list_data=conservation_list_data, state=state, args=args
             ).reset_index(drop=True)
 
             # trim whitespace at end of strings
@@ -95,6 +95,10 @@ def ingest_lists(conservation_lists=None, sensitive_lists=None, upload=True, arg
             conservation_list = conservation_list.where(
                 (pd.notnull(conservation_list)), ""
             )
+
+            # try this here
+            # conservation_list = lf.get_subspecies_from_ALA(species_list=conservation_list["verbatimScientificName"].to_list(),
+            #                                                args=args)
 
             # write conservation list to csv (may change this later)
             temp_filename = "{}-conservation-{}.csv".format(

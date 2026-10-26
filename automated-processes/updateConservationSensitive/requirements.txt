@@ -5,3 +5,4 @@ requests>=2.32.5
 redmail>=0.6.0
 markdown>=3.10
 openpyxl>=3.1.5
+galah-python>=0.13.6
